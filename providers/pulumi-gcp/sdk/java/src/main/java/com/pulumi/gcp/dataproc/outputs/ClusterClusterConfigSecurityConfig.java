@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ClusterClusterConfigSecurityConfig {
     /**
-     * Kerberos Configuration
+     * @return Kerberos Configuration
      * 
      */
     private final ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig;
@@ -21,9 +21,9 @@ public final class ClusterClusterConfigSecurityConfig {
     }
 
     /**
-     * Kerberos Configuration
+     * @return Kerberos Configuration
      * 
-    */
+     */
     public ClusterClusterConfigSecurityConfigKerberosConfig kerberosConfig() {
         return this.kerberosConfig;
     }

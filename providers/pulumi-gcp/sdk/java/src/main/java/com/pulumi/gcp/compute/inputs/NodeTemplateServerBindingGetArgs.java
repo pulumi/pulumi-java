@@ -31,6 +31,21 @@ public final class NodeTemplateServerBindingGetArgs extends com.pulumi.resources
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+     * nodes using this template will restart on any physical server
+     * following a maintenance event.
+     * If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
+     * will restart on the same physical server following a maintenance
+     * event, instead of being live migrated to or restarted on a new
+     * physical server. This option may be useful if you are using
+     * software licenses tied to the underlying server characteristics
+     * such as physical sockets or cores, to avoid the need for
+     * additional licenses when maintenance occurs. However, VMs on such
+     * nodes will experience outages while maintenance is applied.
+     * Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -59,11 +74,45 @@ public final class NodeTemplateServerBindingGetArgs extends com.pulumi.resources
             $ = new NodeTemplateServerBindingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+         * nodes using this template will restart on any physical server
+         * following a maintenance event.
+         * If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
+         * will restart on the same physical server following a maintenance
+         * event, instead of being live migrated to or restarted on a new
+         * physical server. This option may be useful if you are using
+         * software licenses tied to the underlying server characteristics
+         * such as physical sockets or cores, to avoid the need for
+         * additional licenses when maintenance occurs. However, VMs on such
+         * nodes will experience outages while maintenance is applied.
+         * Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of server binding policy. If `RESTART_NODE_ON_ANY_SERVER`,
+         * nodes using this template will restart on any physical server
+         * following a maintenance event.
+         * If `RESTART_NODE_ON_MINIMAL_SERVER`, nodes using this template
+         * will restart on the same physical server following a maintenance
+         * event, instead of being live migrated to or restarted on a new
+         * physical server. This option may be useful if you are using
+         * software licenses tied to the underlying server characteristics
+         * such as physical sockets or cores, to avoid the need for
+         * additional licenses when maintenance occurs. However, VMs on such
+         * nodes will experience outages while maintenance is applied.
+         * Possible values are `RESTART_NODE_ON_ANY_SERVER` and `RESTART_NODE_ON_MINIMAL_SERVERS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

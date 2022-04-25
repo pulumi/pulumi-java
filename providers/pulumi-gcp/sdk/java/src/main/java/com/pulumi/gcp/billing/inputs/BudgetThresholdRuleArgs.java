@@ -26,6 +26,13 @@ public final class BudgetThresholdRuleArgs extends com.pulumi.resources.Resource
     @Import(name="spendBasis")
     private @Nullable Output<String> spendBasis;
 
+    /**
+     * @return The type of basis used to determine if spend has passed
+     * the threshold.
+     * Default value is `CURRENT_SPEND`.
+     * Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
+     * 
+     */
     public Optional<Output<String>> spendBasis() {
         return Optional.ofNullable(this.spendBasis);
     }
@@ -38,6 +45,11 @@ public final class BudgetThresholdRuleArgs extends com.pulumi.resources.Resource
     @Import(name="thresholdPercent", required=true)
     private Output<Double> thresholdPercent;
 
+    /**
+     * @return Send an alert when this threshold is exceeded. This is a
+     * 1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.
+     * 
+     */
     public Output<Double> thresholdPercent() {
         return this.thresholdPercent;
     }
@@ -67,20 +79,52 @@ public final class BudgetThresholdRuleArgs extends com.pulumi.resources.Resource
             $ = new BudgetThresholdRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param spendBasis The type of basis used to determine if spend has passed
+         * the threshold.
+         * Default value is `CURRENT_SPEND`.
+         * Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spendBasis(@Nullable Output<String> spendBasis) {
             $.spendBasis = spendBasis;
             return this;
         }
 
+        /**
+         * @param spendBasis The type of basis used to determine if spend has passed
+         * the threshold.
+         * Default value is `CURRENT_SPEND`.
+         * Possible values are `CURRENT_SPEND` and `FORECASTED_SPEND`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spendBasis(String spendBasis) {
             return spendBasis(Output.of(spendBasis));
         }
 
+        /**
+         * @param thresholdPercent Send an alert when this threshold is exceeded. This is a
+         * 1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdPercent(Output<Double> thresholdPercent) {
             $.thresholdPercent = thresholdPercent;
             return this;
         }
 
+        /**
+         * @param thresholdPercent Send an alert when this threshold is exceeded. This is a
+         * 1.0-based percentage, so 0.5 = 50%. Must be &gt;= 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thresholdPercent(Double thresholdPercent) {
             return thresholdPercent(Output.of(thresholdPercent));
         }

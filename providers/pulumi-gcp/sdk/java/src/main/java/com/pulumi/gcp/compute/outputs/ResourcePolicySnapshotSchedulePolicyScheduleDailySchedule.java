@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
     /**
-     * The number of days between snapshots.
+     * @return The number of days between snapshots.
      * 
      */
     private final Integer daysInCycle;
     /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
      * 
      */
     private final String startTime;
@@ -30,16 +30,16 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleDailySchedule {
     }
 
     /**
-     * The number of days between snapshots.
+     * @return The number of days between snapshots.
      * 
-    */
+     */
     public Integer daysInCycle() {
         return this.daysInCycle;
     }
     /**
-     * The start time of the schedule. The timestamp is an RFC3339 string.
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }

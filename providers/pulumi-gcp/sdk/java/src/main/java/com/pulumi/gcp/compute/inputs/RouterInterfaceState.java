@@ -25,6 +25,13 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     @Import(name="interconnectAttachment")
     private @Nullable Output<String> interconnectAttachment;
 
+    /**
+     * @return The name or resource link to the
+     * VLAN interconnect for this interface. Changing this forces a new interface to
+     * be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
+     * specified.
+     * 
+     */
     public Optional<Output<String>> interconnectAttachment() {
         return Optional.ofNullable(this.interconnectAttachment);
     }
@@ -37,6 +44,11 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     @Import(name="ipRange")
     private @Nullable Output<String> ipRange;
 
+    /**
+     * @return IP address and range of the interface. The IP range must be
+     * in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
+     * 
+     */
     public Optional<Output<String>> ipRange() {
         return Optional.ofNullable(this.ipRange);
     }
@@ -49,6 +61,11 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A unique name for the interface, required by GCE. Changing
+     * this forces a new interface to be created.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +78,11 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which this interface&#39;s router belongs. If it
+     * is not provided, the provider project is used. Changing this forces a new interface to be created.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -74,6 +96,12 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region this interface&#39;s router sits in. If not specified,
+     * the project region will be used. Changing this forces a new interface to be
+     * created.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -86,6 +114,11 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     @Import(name="router")
     private @Nullable Output<String> router;
 
+    /**
+     * @return The name of the router this interface will be attached to.
+     * Changing this forces a new interface to be created.
+     * 
+     */
     public Optional<Output<String>> router() {
         return Optional.ofNullable(this.router);
     }
@@ -99,6 +132,12 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
     @Import(name="vpnTunnel")
     private @Nullable Output<String> vpnTunnel;
 
+    /**
+     * @return The name or resource link to the VPN tunnel this
+     * interface will be linked to. Changing this forces a new interface to be created. Only
+     * one of `vpn_tunnel` and `interconnect_attachment` can be specified.
+     * 
+     */
     public Optional<Output<String>> vpnTunnel() {
         return Optional.ofNullable(this.vpnTunnel);
     }
@@ -133,65 +172,171 @@ public final class RouterInterfaceState extends com.pulumi.resources.ResourceArg
             $ = new RouterInterfaceState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param interconnectAttachment The name or resource link to the
+         * VLAN interconnect for this interface. Changing this forces a new interface to
+         * be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
+         * specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnectAttachment(@Nullable Output<String> interconnectAttachment) {
             $.interconnectAttachment = interconnectAttachment;
             return this;
         }
 
+        /**
+         * @param interconnectAttachment The name or resource link to the
+         * VLAN interconnect for this interface. Changing this forces a new interface to
+         * be created. Only one of `vpn_tunnel` and `interconnect_attachment` can be
+         * specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interconnectAttachment(String interconnectAttachment) {
             return interconnectAttachment(Output.of(interconnectAttachment));
         }
 
+        /**
+         * @param ipRange IP address and range of the interface. The IP range must be
+         * in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRange(@Nullable Output<String> ipRange) {
             $.ipRange = ipRange;
             return this;
         }
 
+        /**
+         * @param ipRange IP address and range of the interface. The IP range must be
+         * in the RFC3927 link-local IP space. Changing this forces a new interface to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRange(String ipRange) {
             return ipRange(Output.of(ipRange));
         }
 
+        /**
+         * @param name A unique name for the interface, required by GCE. Changing
+         * this forces a new interface to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A unique name for the interface, required by GCE. Changing
+         * this forces a new interface to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which this interface&#39;s router belongs. If it
+         * is not provided, the provider project is used. Changing this forces a new interface to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which this interface&#39;s router belongs. If it
+         * is not provided, the provider project is used. Changing this forces a new interface to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region this interface&#39;s router sits in. If not specified,
+         * the project region will be used. Changing this forces a new interface to be
+         * created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region this interface&#39;s router sits in. If not specified,
+         * the project region will be used. Changing this forces a new interface to be
+         * created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param router The name of the router this interface will be attached to.
+         * Changing this forces a new interface to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder router(@Nullable Output<String> router) {
             $.router = router;
             return this;
         }
 
+        /**
+         * @param router The name of the router this interface will be attached to.
+         * Changing this forces a new interface to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder router(String router) {
             return router(Output.of(router));
         }
 
+        /**
+         * @param vpnTunnel The name or resource link to the VPN tunnel this
+         * interface will be linked to. Changing this forces a new interface to be created. Only
+         * one of `vpn_tunnel` and `interconnect_attachment` can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnTunnel(@Nullable Output<String> vpnTunnel) {
             $.vpnTunnel = vpnTunnel;
             return this;
         }
 
+        /**
+         * @param vpnTunnel The name or resource link to the VPN tunnel this
+         * interface will be linked to. Changing this forces a new interface to be created. Only
+         * one of `vpn_tunnel` and `interconnect_attachment` can be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnTunnel(String vpnTunnel) {
             return vpnTunnel(Output.of(vpnTunnel));
         }

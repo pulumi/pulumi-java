@@ -22,6 +22,12 @@ public final class FlexibleAppVersionManualScalingArgs extends com.pulumi.resour
     @Import(name="instances", required=true)
     private Output<Integer> instances;
 
+    /**
+     * @return Number of instances to assign to the service at the start.
+     * **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+     * Modules API set_num_instances() you must use `lifecycle.ignore_changes = [&#34;manual_scaling&#34;[0].instances]` to prevent drift detection.
+     * 
+     */
     public Output<Integer> instances() {
         return this.instances;
     }
@@ -50,11 +56,27 @@ public final class FlexibleAppVersionManualScalingArgs extends com.pulumi.resour
             $ = new FlexibleAppVersionManualScalingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances Number of instances to assign to the service at the start.
+         * **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+         * Modules API set_num_instances() you must use `lifecycle.ignore_changes = [&#34;manual_scaling&#34;[0].instances]` to prevent drift detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(Output<Integer> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Number of instances to assign to the service at the start.
+         * **Note:** When managing the number of instances at runtime through the App Engine Admin API or the (now deprecated) Python 2
+         * Modules API set_num_instances() you must use `lifecycle.ignore_changes = [&#34;manual_scaling&#34;[0].instances]` to prevent drift detection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(Integer instances) {
             return instances(Output.of(instances));
         }

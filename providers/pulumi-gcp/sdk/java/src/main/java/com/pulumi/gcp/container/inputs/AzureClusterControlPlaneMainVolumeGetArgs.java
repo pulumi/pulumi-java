@@ -22,6 +22,10 @@ public final class AzureClusterControlPlaneMainVolumeGetArgs extends com.pulumi.
     @Import(name="sizeGib")
     private @Nullable Output<Integer> sizeGib;
 
+    /**
+     * @return Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+     * 
+     */
     public Optional<Output<Integer>> sizeGib() {
         return Optional.ofNullable(this.sizeGib);
     }
@@ -50,11 +54,23 @@ public final class AzureClusterControlPlaneMainVolumeGetArgs extends com.pulumi.
             $ = new AzureClusterControlPlaneMainVolumeGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sizeGib Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGib(@Nullable Output<Integer> sizeGib) {
             $.sizeGib = sizeGib;
             return this;
         }
 
+        /**
+         * @param sizeGib Optional. The size of the disk, in GiBs. When unspecified, a default value is provided. See the specific reference in the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeGib(Integer sizeGib) {
             return sizeGib(Output.of(sizeGib));
         }

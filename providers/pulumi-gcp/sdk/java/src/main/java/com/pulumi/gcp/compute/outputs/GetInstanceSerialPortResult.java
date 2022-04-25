@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceSerialPortResult {
     /**
-     * The output of the serial port. Serial port output is available only when the VM instance is running, and logs are limited to the most recent 1 MB of output per port.
+     * @return The output of the serial port. Serial port output is available only when the VM instance is running, and logs are limited to the most recent 1 MB of output per port.
      * 
      */
     private final String contents;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -42,16 +42,16 @@ public final class GetInstanceSerialPortResult {
     }
 
     /**
-     * The output of the serial port. Serial port output is available only when the VM instance is running, and logs are limited to the most recent 1 MB of output per port.
+     * @return The output of the serial port. Serial port output is available only when the VM instance is running, and logs are limited to the most recent 1 MB of output per port.
      * 
-    */
+     */
     public String contents() {
         return this.contents;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

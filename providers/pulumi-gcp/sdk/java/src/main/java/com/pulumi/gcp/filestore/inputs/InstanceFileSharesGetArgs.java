@@ -26,6 +26,11 @@ public final class InstanceFileSharesGetArgs extends com.pulumi.resources.Resour
     @Import(name="capacityGb", required=true)
     private Output<Integer> capacityGb;
 
+    /**
+     * @return File share capacity in GiB. This must be at least 1024 GiB
+     * for the standard tier, or 2560 GiB for the premium tier.
+     * 
+     */
     public Output<Integer> capacityGb() {
         return this.capacityGb;
     }
@@ -37,6 +42,10 @@ public final class InstanceFileSharesGetArgs extends com.pulumi.resources.Resour
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the fileshare (16 characters or less)
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -49,6 +58,11 @@ public final class InstanceFileSharesGetArgs extends com.pulumi.resources.Resour
     @Import(name="nfsExportOptions")
     private @Nullable Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions;
 
+    /**
+     * @return Nfs Export Options. There is a limit of 10 export options per file share.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<InstanceFileSharesNfsExportOptionGetArgs>>> nfsExportOptions() {
         return Optional.ofNullable(this.nfsExportOptions);
     }
@@ -79,33 +93,80 @@ public final class InstanceFileSharesGetArgs extends com.pulumi.resources.Resour
             $ = new InstanceFileSharesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityGb File share capacity in GiB. This must be at least 1024 GiB
+         * for the standard tier, or 2560 GiB for the premium tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityGb(Output<Integer> capacityGb) {
             $.capacityGb = capacityGb;
             return this;
         }
 
+        /**
+         * @param capacityGb File share capacity in GiB. This must be at least 1024 GiB
+         * for the standard tier, or 2560 GiB for the premium tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityGb(Integer capacityGb) {
             return capacityGb(Output.of(capacityGb));
         }
 
+        /**
+         * @param name The name of the fileshare (16 characters or less)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the fileshare (16 characters or less)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nfsExportOptions Nfs Export Options. There is a limit of 10 export options per file share.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExportOptions(@Nullable Output<List<InstanceFileSharesNfsExportOptionGetArgs>> nfsExportOptions) {
             $.nfsExportOptions = nfsExportOptions;
             return this;
         }
 
+        /**
+         * @param nfsExportOptions Nfs Export Options. There is a limit of 10 export options per file share.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExportOptions(List<InstanceFileSharesNfsExportOptionGetArgs> nfsExportOptions) {
             return nfsExportOptions(Output.of(nfsExportOptions));
         }
 
+        /**
+         * @param nfsExportOptions Nfs Export Options. There is a limit of 10 export options per file share.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExportOptions(InstanceFileSharesNfsExportOptionGetArgs... nfsExportOptions) {
             return nfsExportOptions(List.of(nfsExportOptions));
         }

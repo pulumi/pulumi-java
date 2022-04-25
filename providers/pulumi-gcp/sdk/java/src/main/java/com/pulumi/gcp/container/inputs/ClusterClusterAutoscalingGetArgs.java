@@ -27,6 +27,11 @@ public final class ClusterClusterAutoscalingGetArgs extends com.pulumi.resources
     @Import(name="autoProvisioningDefaults")
     private @Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults;
 
+    /**
+     * @return Contains defaults for a node pool created by NAP.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs>> autoProvisioningDefaults() {
         return Optional.ofNullable(this.autoProvisioningDefaults);
     }
@@ -41,6 +46,13 @@ public final class ClusterClusterAutoscalingGetArgs extends com.pulumi.resources
     @Import(name="autoscalingProfile")
     private @Nullable Output<String> autoscalingProfile;
 
+    /**
+     * @return ) Configuration
+     * options for the [Autoscaling profile](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles)
+     * feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+     * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
+     * 
+     */
     public Optional<Output<String>> autoscalingProfile() {
         return Optional.ofNullable(this.autoscalingProfile);
     }
@@ -53,6 +65,11 @@ public final class ClusterClusterAutoscalingGetArgs extends com.pulumi.resources
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -67,6 +84,13 @@ public final class ClusterClusterAutoscalingGetArgs extends com.pulumi.resources
     @Import(name="resourceLimits")
     private @Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits;
 
+    /**
+     * @return Global constraints for machine resources in the
+     * cluster. Configuring the `cpu` and `memory` types is required if node
+     * auto-provisioning is enabled. These limits will apply to node pool autoscaling
+     * in addition to node auto-provisioning. Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>>> resourceLimits() {
         return Optional.ofNullable(this.resourceLimits);
     }
@@ -98,42 +122,115 @@ public final class ClusterClusterAutoscalingGetArgs extends com.pulumi.resources
             $ = new ClusterClusterAutoscalingGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoProvisioningDefaults Contains defaults for a node pool created by NAP.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoProvisioningDefaults(@Nullable Output<ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs> autoProvisioningDefaults) {
             $.autoProvisioningDefaults = autoProvisioningDefaults;
             return this;
         }
 
+        /**
+         * @param autoProvisioningDefaults Contains defaults for a node pool created by NAP.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoProvisioningDefaults(ClusterClusterAutoscalingAutoProvisioningDefaultsGetArgs autoProvisioningDefaults) {
             return autoProvisioningDefaults(Output.of(autoProvisioningDefaults));
         }
 
+        /**
+         * @param autoscalingProfile ) Configuration
+         * options for the [Autoscaling profile](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles)
+         * feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+         * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingProfile(@Nullable Output<String> autoscalingProfile) {
             $.autoscalingProfile = autoscalingProfile;
             return this;
         }
 
+        /**
+         * @param autoscalingProfile ) Configuration
+         * options for the [Autoscaling profile](https://cloud.google.com/kubernetes-engine/docs/concepts/cluster-autoscaler#autoscaling_profiles)
+         * feature, which lets you choose whether the cluster autoscaler should optimize for resource utilization or resource availability
+         * when deciding to remove nodes from a cluster. Can be `BALANCED` or `OPTIMIZE_UTILIZATION`. Defaults to `BALANCED`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingProfile(String autoscalingProfile) {
             return autoscalingProfile(Output.of(autoscalingProfile));
         }
 
+        /**
+         * @param enabled Enable the PodSecurityPolicy controller for this cluster.
+         * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enable the PodSecurityPolicy controller for this cluster.
+         * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param resourceLimits Global constraints for machine resources in the
+         * cluster. Configuring the `cpu` and `memory` types is required if node
+         * auto-provisioning is enabled. These limits will apply to node pool autoscaling
+         * in addition to node auto-provisioning. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLimits(@Nullable Output<List<ClusterClusterAutoscalingResourceLimitGetArgs>> resourceLimits) {
             $.resourceLimits = resourceLimits;
             return this;
         }
 
+        /**
+         * @param resourceLimits Global constraints for machine resources in the
+         * cluster. Configuring the `cpu` and `memory` types is required if node
+         * auto-provisioning is enabled. These limits will apply to node pool autoscaling
+         * in addition to node auto-provisioning. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLimits(List<ClusterClusterAutoscalingResourceLimitGetArgs> resourceLimits) {
             return resourceLimits(Output.of(resourceLimits));
         }
 
+        /**
+         * @param resourceLimits Global constraints for machine resources in the
+         * cluster. Configuring the `cpu` and `memory` types is required if node
+         * auto-provisioning is enabled. These limits will apply to node pool autoscaling
+         * in addition to node auto-provisioning. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLimits(ClusterClusterAutoscalingResourceLimitGetArgs... resourceLimits) {
             return resourceLimits(List.of(resourceLimits));
         }

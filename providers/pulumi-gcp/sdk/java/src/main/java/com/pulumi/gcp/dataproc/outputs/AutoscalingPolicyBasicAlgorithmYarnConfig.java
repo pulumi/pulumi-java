@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
     /**
-     * Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+     * @return Timeout for YARN graceful decommissioning of Node Managers. Specifies the
      * duration to wait for jobs to complete before forcefully removing workers
      * (and potentially interrupting jobs). Only applicable to downscaling operations.
      * Bounds: [0s, 1d].
@@ -21,7 +21,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      */
     private final String gracefulDecommissionTimeout;
     /**
-     * Fraction of average pending memory in the last cooldown period for which to
+     * @return Fraction of average pending memory in the last cooldown period for which to
      * remove workers. A scale-down factor of 1 will result in scaling down so that there
      * is no available memory remaining after the update (more aggressive scaling).
      * A scale-down factor of 0 disables removing workers, which can be beneficial for
@@ -31,7 +31,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      */
     private final Double scaleDownFactor;
     /**
-     * Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+     * @return Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
      * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
      * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
      * means the autoscaler will scale down on any recommended change.
@@ -40,7 +40,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      */
     private final @Nullable Double scaleDownMinWorkerFraction;
     /**
-     * Fraction of average pending memory in the last cooldown period for which to
+     * @return Fraction of average pending memory in the last cooldown period for which to
      * add workers. A scale-up factor of 1.0 will result in scaling up so that there
      * is no pending memory remaining after the update (more aggressive scaling).
      * A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
@@ -50,7 +50,7 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
      */
     private final Double scaleUpFactor;
     /**
-     * Minimum scale-up threshold as a fraction of total cluster size before scaling
+     * @return Minimum scale-up threshold as a fraction of total cluster size before scaling
      * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
      * must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
      * 0 means the autoscaler will scale up on any recommended change.
@@ -74,58 +74,58 @@ public final class AutoscalingPolicyBasicAlgorithmYarnConfig {
     }
 
     /**
-     * Timeout for YARN graceful decommissioning of Node Managers. Specifies the
+     * @return Timeout for YARN graceful decommissioning of Node Managers. Specifies the
      * duration to wait for jobs to complete before forcefully removing workers
      * (and potentially interrupting jobs). Only applicable to downscaling operations.
      * Bounds: [0s, 1d].
      * 
-    */
+     */
     public String gracefulDecommissionTimeout() {
         return this.gracefulDecommissionTimeout;
     }
     /**
-     * Fraction of average pending memory in the last cooldown period for which to
+     * @return Fraction of average pending memory in the last cooldown period for which to
      * remove workers. A scale-down factor of 1 will result in scaling down so that there
      * is no available memory remaining after the update (more aggressive scaling).
      * A scale-down factor of 0 disables removing workers, which can be beneficial for
      * autoscaling a single job.
      * Bounds: [0.0, 1.0].
      * 
-    */
+     */
     public Double scaleDownFactor() {
         return this.scaleDownFactor;
     }
     /**
-     * Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
+     * @return Minimum scale-down threshold as a fraction of total cluster size before scaling occurs.
      * For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler must
      * recommend at least a 2 worker scale-down for the cluster to scale. A threshold of 0
      * means the autoscaler will scale down on any recommended change.
      * Bounds: [0.0, 1.0]. Default: 0.0.
      * 
-    */
+     */
     public Optional<Double> scaleDownMinWorkerFraction() {
         return Optional.ofNullable(this.scaleDownMinWorkerFraction);
     }
     /**
-     * Fraction of average pending memory in the last cooldown period for which to
+     * @return Fraction of average pending memory in the last cooldown period for which to
      * add workers. A scale-up factor of 1.0 will result in scaling up so that there
      * is no pending memory remaining after the update (more aggressive scaling).
      * A scale-up factor closer to 0 will result in a smaller magnitude of scaling up
      * (less aggressive scaling).
      * Bounds: [0.0, 1.0].
      * 
-    */
+     */
     public Double scaleUpFactor() {
         return this.scaleUpFactor;
     }
     /**
-     * Minimum scale-up threshold as a fraction of total cluster size before scaling
+     * @return Minimum scale-up threshold as a fraction of total cluster size before scaling
      * occurs. For example, in a 20-worker cluster, a threshold of 0.1 means the autoscaler
      * must recommend at least a 2-worker scale-up for the cluster to scale. A threshold of
      * 0 means the autoscaler will scale up on any recommended change.
      * Bounds: [0.0, 1.0]. Default: 0.0.
      * 
-    */
+     */
     public Optional<Double> scaleUpMinWorkerFraction() {
         return Optional.ofNullable(this.scaleUpMinWorkerFraction);
     }

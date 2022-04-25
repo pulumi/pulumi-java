@@ -21,6 +21,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends com.
     @Import(name="infoTypeTransformations", required=true)
     private Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations;
 
+    /**
+     * @return Specifies free-text based transformations to be applied to the dataset.
+     * Structure is documented below.
+     * 
+     */
     public Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations() {
         return this.infoTypeTransformations;
     }
@@ -49,11 +54,25 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigArgs extends com.
             $ = new PreventionDeidentifyTemplateDeidentifyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infoTypeTransformations Specifies free-text based transformations to be applied to the dataset.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypeTransformations(Output<PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs> infoTypeTransformations) {
             $.infoTypeTransformations = infoTypeTransformations;
             return this;
         }
 
+        /**
+         * @param infoTypeTransformations Specifies free-text based transformations to be applied to the dataset.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infoTypeTransformations(PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsArgs infoTypeTransformations) {
             return infoTypeTransformations(Output.of(infoTypeTransformations));
         }

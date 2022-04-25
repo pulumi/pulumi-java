@@ -22,6 +22,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
     @Import(name="bucket", required=true)
     private String bucket;
 
+    /**
+     * @return The name of the bucket to read the object from
+     * 
+     */
     public String bucket() {
         return this.bucket;
     }
@@ -35,6 +39,12 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
     @Import(name="contentMd5")
     private @Nullable String contentMd5;
 
+    /**
+     * @return The [MD5 digest](https://cloud.google.com/storage/docs/hashes-etags#_MD5) value in Base64.
+     * Typically retrieved from `google_storage_bucket_object.object.md5hash` attribute.
+     * If you provide this in the datasource, the client (e.g. browser, curl) must provide the `Content-MD5` HTTP header with this same value in its request.
+     * 
+     */
     public Optional<String> contentMd5() {
         return Optional.ofNullable(this.contentMd5);
     }
@@ -46,6 +56,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
     @Import(name="contentType")
     private @Nullable String contentType;
 
+    /**
+     * @return If you specify this in the datasource, the client must provide the `Content-Type` HTTP header with the same value in its request.
+     * 
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -58,6 +72,11 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
     @Import(name="credentials")
     private @Nullable String credentials;
 
+    /**
+     * @return What Google service account credentials json should be used to sign the URL.
+     * This data source checks the following locations for credentials, in order of preference: data source `credentials` attribute, provider `credentials` attribute and finally the GOOGLE_APPLICATION_CREDENTIALS environment variable.
+     * 
+     */
     public Optional<String> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -70,6 +89,11 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
     @Import(name="duration")
     private @Nullable String duration;
 
+    /**
+     * @return For how long shall the signed URL be valid (defaults to 1 hour - i.e. `1h`).
+     * See [here](https://golang.org/pkg/time/#ParseDuration) for info on valid duration formats.
+     * 
+     */
     public Optional<String> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -82,6 +106,11 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
     @Import(name="extensionHeaders")
     private @Nullable Map<String,String> extensionHeaders;
 
+    /**
+     * @return As needed. The server checks to make sure that the client provides matching values in requests using the signed URL.
+     * Any header starting with `x-goog-` is accepted but see the [Google Docs](https://cloud.google.com/storage/docs/xml-api/reference-headers) for list of headers that are supported by Google.
+     * 
+     */
     public Optional<Map<String,String>> extensionHeaders() {
         return Optional.ofNullable(this.extensionHeaders);
     }
@@ -93,6 +122,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
     @Import(name="httpMethod")
     private @Nullable String httpMethod;
 
+    /**
+     * @return What HTTP Method will the signed URL allow (defaults to `GET`)
+     * 
+     */
     public Optional<String> httpMethod() {
         return Optional.ofNullable(this.httpMethod);
     }
@@ -104,6 +137,10 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
     @Import(name="path", required=true)
     private String path;
 
+    /**
+     * @return The full path to the object inside the bucket
+     * 
+     */
     public String path() {
         return this.path;
     }
@@ -139,41 +176,94 @@ public final class GetObjectSignedUrlArgs extends com.pulumi.resources.InvokeArg
             $ = new GetObjectSignedUrlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the bucket to read the object from
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param contentMd5 The [MD5 digest](https://cloud.google.com/storage/docs/hashes-etags#_MD5) value in Base64.
+         * Typically retrieved from `google_storage_bucket_object.object.md5hash` attribute.
+         * If you provide this in the datasource, the client (e.g. browser, curl) must provide the `Content-MD5` HTTP header with this same value in its request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentMd5(@Nullable String contentMd5) {
             $.contentMd5 = contentMd5;
             return this;
         }
 
+        /**
+         * @param contentType If you specify this in the datasource, the client must provide the `Content-Type` HTTP header with the same value in its request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable String contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param credentials What Google service account credentials json should be used to sign the URL.
+         * This data source checks the following locations for credentials, in order of preference: data source `credentials` attribute, provider `credentials` attribute and finally the GOOGLE_APPLICATION_CREDENTIALS environment variable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable String credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param duration For how long shall the signed URL be valid (defaults to 1 hour - i.e. `1h`).
+         * See [here](https://golang.org/pkg/time/#ParseDuration) for info on valid duration formats.
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable String duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param extensionHeaders As needed. The server checks to make sure that the client provides matching values in requests using the signed URL.
+         * Any header starting with `x-goog-` is accepted but see the [Google Docs](https://cloud.google.com/storage/docs/xml-api/reference-headers) for list of headers that are supported by Google.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extensionHeaders(@Nullable Map<String,String> extensionHeaders) {
             $.extensionHeaders = extensionHeaders;
             return this;
         }
 
+        /**
+         * @param httpMethod What HTTP Method will the signed URL allow (defaults to `GET`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpMethod(@Nullable String httpMethod) {
             $.httpMethod = httpMethod;
             return this;
         }
 
+        /**
+         * @param path The full path to the object inside the bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             $.path = path;
             return this;

@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class GetPeeredDnsDomainResult {
     private final String dnsSuffix;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -43,9 +43,9 @@ public final class GetPeeredDnsDomainResult {
         return this.dnsSuffix;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

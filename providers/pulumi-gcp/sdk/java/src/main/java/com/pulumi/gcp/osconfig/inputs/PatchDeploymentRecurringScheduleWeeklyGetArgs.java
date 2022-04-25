@@ -21,6 +21,11 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends com.pul
     @Import(name="dayOfWeek", required=true)
     private Output<String> dayOfWeek;
 
+    /**
+     * @return A day of the week.
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     public Output<String> dayOfWeek() {
         return this.dayOfWeek;
     }
@@ -49,11 +54,25 @@ public final class PatchDeploymentRecurringScheduleWeeklyGetArgs extends com.pul
             $ = new PatchDeploymentRecurringScheduleWeeklyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeek A day of the week.
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(Output<String> dayOfWeek) {
             $.dayOfWeek = dayOfWeek;
             return this;
         }
 
+        /**
+         * @param dayOfWeek A day of the week.
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeek(String dayOfWeek) {
             return dayOfWeek(Output.of(dayOfWeek));
         }

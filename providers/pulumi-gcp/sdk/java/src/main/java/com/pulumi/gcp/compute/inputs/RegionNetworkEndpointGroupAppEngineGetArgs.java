@@ -24,6 +24,12 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends com.pulumi
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return Optional serving service.
+     * The service name must be 1-63 characters long, and comply with RFC1035.
+     * Example value: &#34;default&#34;, &#34;my-service&#34;.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -40,6 +46,15 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends com.pulumi
     @Import(name="urlMask")
     private @Nullable Output<String> urlMask;
 
+    /**
+     * @return A template to parse function field from a request URL. URL mask allows
+     * for routing to multiple Cloud Functions without having to create
+     * multiple Network Endpoint Groups and backend services.
+     * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+     * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+     * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+     * 
+     */
     public Optional<Output<String>> urlMask() {
         return Optional.ofNullable(this.urlMask);
     }
@@ -53,6 +68,12 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends com.pulumi
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Optional serving version.
+     * The version must be 1-63 characters long, and comply with RFC1035.
+     * Example value: &#34;v1&#34;, &#34;v2&#34;.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -83,29 +104,83 @@ public final class RegionNetworkEndpointGroupAppEngineGetArgs extends com.pulumi
             $ = new RegionNetworkEndpointGroupAppEngineGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param service Optional serving service.
+         * The service name must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;default&#34;, &#34;my-service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service Optional serving service.
+         * The service name must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;default&#34;, &#34;my-service&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param urlMask A template to parse function field from a request URL. URL mask allows
+         * for routing to multiple Cloud Functions without having to create
+         * multiple Network Endpoint Groups and backend services.
+         * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+         * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+         * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(@Nullable Output<String> urlMask) {
             $.urlMask = urlMask;
             return this;
         }
 
+        /**
+         * @param urlMask A template to parse function field from a request URL. URL mask allows
+         * for routing to multiple Cloud Functions without having to create
+         * multiple Network Endpoint Groups and backend services.
+         * For example, request URLs &#34;mydomain.com/function1&#34; and &#34;mydomain.com/function2&#34;
+         * can be backed by the same Serverless NEG with URL mask &#34;/&#34;. The URL mask
+         * will parse them to { function = &#34;function1&#34; } and { function = &#34;function2&#34; } respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlMask(String urlMask) {
             return urlMask(Output.of(urlMask));
         }
 
+        /**
+         * @param version Optional serving version.
+         * The version must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;v1&#34;, &#34;v2&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Optional serving version.
+         * The version must be 1-63 characters long, and comply with RFC1035.
+         * Example value: &#34;v1&#34;, &#34;v2&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

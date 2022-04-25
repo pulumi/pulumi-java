@@ -24,6 +24,11 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends com.
     @Import(name="keyUsages")
     private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages;
 
+    /**
+     * @return Indicates the intended use for keys that correspond to a certificate.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>>> keyUsages() {
         return Optional.ofNullable(this.keyUsages);
     }
@@ -52,15 +57,36 @@ public final class CertificateCertificateDescriptionConfigValueArgs extends com.
             $ = new CertificateCertificateDescriptionConfigValueArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyUsages Indicates the intended use for keys that correspond to a certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageArgs>> keyUsages) {
             $.keyUsages = keyUsages;
             return this;
         }
 
+        /**
+         * @param keyUsages Indicates the intended use for keys that correspond to a certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsages(List<CertificateCertificateDescriptionConfigValueKeyUsageArgs> keyUsages) {
             return keyUsages(Output.of(keyUsages));
         }
 
+        /**
+         * @param keyUsages Indicates the intended use for keys that correspond to a certificate.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyUsages(CertificateCertificateDescriptionConfigValueKeyUsageArgs... keyUsages) {
             return keyUsages(List.of(keyUsages));
         }

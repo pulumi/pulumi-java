@@ -24,6 +24,11 @@ public final class GetInstanceScheduling extends com.pulumi.resources.InvokeArgs
     @Import(name="automaticRestart", required=true)
     private Boolean automaticRestart;
 
+    /**
+     * @return Specifies if the instance should be
+     * restarted if it was terminated by Compute Engine (not a user).
+     * 
+     */
     public Boolean automaticRestart() {
         return this.automaticRestart;
     }
@@ -51,6 +56,12 @@ public final class GetInstanceScheduling extends com.pulumi.resources.InvokeArgs
     @Import(name="onHostMaintenance", required=true)
     private String onHostMaintenance;
 
+    /**
+     * @return Describes maintenance behavior for the
+     * instance. One of `MIGRATE` or `TERMINATE`, for more info, read
+     * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
+     * 
+     */
     public String onHostMaintenance() {
         return this.onHostMaintenance;
     }
@@ -62,6 +73,10 @@ public final class GetInstanceScheduling extends com.pulumi.resources.InvokeArgs
     @Import(name="preemptible", required=true)
     private Boolean preemptible;
 
+    /**
+     * @return Whether the instance is preemptible.
+     * 
+     */
     public Boolean preemptible() {
         return this.preemptible;
     }
@@ -94,6 +109,13 @@ public final class GetInstanceScheduling extends com.pulumi.resources.InvokeArgs
             $ = new GetInstanceScheduling(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automaticRestart Specifies if the instance should be
+         * restarted if it was terminated by Compute Engine (not a user).
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRestart(Boolean automaticRestart) {
             $.automaticRestart = automaticRestart;
             return this;
@@ -113,11 +135,25 @@ public final class GetInstanceScheduling extends com.pulumi.resources.InvokeArgs
             return nodeAffinities(List.of(nodeAffinities));
         }
 
+        /**
+         * @param onHostMaintenance Describes maintenance behavior for the
+         * instance. One of `MIGRATE` or `TERMINATE`, for more info, read
+         * [here](https://cloud.google.com/compute/docs/instances/setting-instance-scheduling-options)
+         * 
+         * @return builder
+         * 
+         */
         public Builder onHostMaintenance(String onHostMaintenance) {
             $.onHostMaintenance = onHostMaintenance;
             return this;
         }
 
+        /**
+         * @param preemptible Whether the instance is preemptible.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preemptible(Boolean preemptible) {
             $.preemptible = preemptible;
             return this;

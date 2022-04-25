@@ -35,6 +35,10 @@ public final class GetBackendServiceBackend extends com.pulumi.resources.InvokeA
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Textual description for the Backend Service.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -139,6 +143,12 @@ public final class GetBackendServiceBackend extends com.pulumi.resources.InvokeA
             return this;
         }
 
+        /**
+         * @param description Textual description for the Backend Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;

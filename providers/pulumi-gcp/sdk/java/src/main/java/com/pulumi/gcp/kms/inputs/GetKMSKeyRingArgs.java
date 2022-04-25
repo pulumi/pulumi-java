@@ -22,6 +22,11 @@ public final class GetKMSKeyRingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return The Google Cloud Platform location for the KeyRing.
+     * A full list of valid locations can be found by running `gcloud kms locations list`.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -34,6 +39,11 @@ public final class GetKMSKeyRingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The KeyRing&#39;s name.
+     * A KeyRing name must exist within the provided location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -46,6 +56,11 @@ public final class GetKMSKeyRingArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -76,16 +91,37 @@ public final class GetKMSKeyRingArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKMSKeyRingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The Google Cloud Platform location for the KeyRing.
+         * A full list of valid locations can be found by running `gcloud kms locations list`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The KeyRing&#39;s name.
+         * A KeyRing name must exist within the provided location and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

@@ -23,6 +23,11 @@ public final class JobHttpTargetOidcTokenGetArgs extends com.pulumi.resources.Re
     @Import(name="audience")
     private @Nullable Output<String> audience;
 
+    /**
+     * @return Audience to be used when generating OIDC token. If not specified,
+     * the URI specified in target will be used.
+     * 
+     */
     public Optional<Output<String>> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -35,6 +40,11 @@ public final class JobHttpTargetOidcTokenGetArgs extends com.pulumi.resources.Re
     @Import(name="serviceAccountEmail", required=true)
     private Output<String> serviceAccountEmail;
 
+    /**
+     * @return Service account email to be used for generating OAuth token.
+     * The service account must be within the same project as the job.
+     * 
+     */
     public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -64,20 +74,48 @@ public final class JobHttpTargetOidcTokenGetArgs extends com.pulumi.resources.Re
             $ = new JobHttpTargetOidcTokenGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Audience to be used when generating OIDC token. If not specified,
+         * the URI specified in target will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable Output<String> audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param audience Audience to be used when generating OIDC token. If not specified,
+         * the URI specified in target will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             return audience(Output.of(audience));
         }
 
+        /**
+         * @param serviceAccountEmail Service account email to be used for generating OAuth token.
+         * The service account must be within the same project as the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail Service account email to be used for generating OAuth token.
+         * The service account must be within the same project as the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             return serviceAccountEmail(Output.of(serviceAccountEmail));
         }

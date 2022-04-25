@@ -25,6 +25,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="adaptiveProtectionConfig")
     private @Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig;
 
+    /**
+     * @return Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+     * 
+     */
     public Optional<Output<SecurityPolicyAdaptiveProtectionConfigArgs>> adaptiveProtectionConfig() {
         return Optional.ofNullable(this.adaptiveProtectionConfig);
     }
@@ -36,6 +40,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this rule. Max size is 64.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the security policy.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,11 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -72,6 +89,12 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="rules")
     private @Nullable Output<List<SecurityPolicyRuleArgs>> rules;
 
+    /**
+     * @return The set of rules that belong to this policy. There must always be a default
+     * rule (rule with priority 2147483647 and match &#34;\*&#34;). If no rules are provided when creating a
+     * security policy, a default rule with action &#34;allow&#34; will be added. Structure is documented below.
+     * 
+     */
     public Optional<Output<List<SecurityPolicyRuleArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -104,51 +127,125 @@ public final class SecurityPolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SecurityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adaptiveProtectionConfig Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adaptiveProtectionConfig(@Nullable Output<SecurityPolicyAdaptiveProtectionConfigArgs> adaptiveProtectionConfig) {
             $.adaptiveProtectionConfig = adaptiveProtectionConfig;
             return this;
         }
 
+        /**
+         * @param adaptiveProtectionConfig Configuration for [Google Cloud Armor Adaptive Protection](https://cloud.google.com/armor/docs/adaptive-protection-overview?hl=en). Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adaptiveProtectionConfig(SecurityPolicyAdaptiveProtectionConfigArgs adaptiveProtectionConfig) {
             return adaptiveProtectionConfig(Output.of(adaptiveProtectionConfig));
         }
 
+        /**
+         * @param description An optional description of this rule. Max size is 64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this rule. Max size is 64.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the security policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the security policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param rules The set of rules that belong to this policy. There must always be a default
+         * rule (rule with priority 2147483647 and match &#34;\*&#34;). If no rules are provided when creating a
+         * security policy, a default rule with action &#34;allow&#34; will be added. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<SecurityPolicyRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules The set of rules that belong to this policy. There must always be a default
+         * rule (rule with priority 2147483647 and match &#34;\*&#34;). If no rules are provided when creating a
+         * security policy, a default rule with action &#34;allow&#34; will be added. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<SecurityPolicyRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules The set of rules that belong to this policy. There must always be a default
+         * rule (rule with priority 2147483647 and match &#34;\*&#34;). If no rules are provided when creating a
+         * security policy, a default rule with action &#34;allow&#34; will be added. Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(SecurityPolicyRuleArgs... rules) {
             return rules(List.of(rules));
         }

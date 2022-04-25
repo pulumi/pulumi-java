@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RegionBackendServiceConnectionTrackingPolicy {
     /**
-     * Specifies connection persistence when backends are unhealthy.
+     * @return Specifies connection persistence when backends are unhealthy.
      * If set to `DEFAULT_FOR_PROTOCOL`, the existing connections persist on
      * unhealthy backends only for connection-oriented protocols (TCP and SCTP)
      * and only if the Tracking Mode is PER_CONNECTION (default tracking mode)
@@ -32,7 +32,7 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      */
     private final @Nullable String connectionPersistenceOnUnhealthyBackends;
     /**
-     * Specifies how long to keep a Connection Tracking entry while there is
+     * @return Specifies how long to keep a Connection Tracking entry while there is
      * no matching traffic (in seconds).
      * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
      * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
@@ -40,7 +40,7 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      */
     private final @Nullable Integer idleTimeoutSec;
     /**
-     * Specifies the key used for connection tracking. There are two options:
+     * @return Specifies the key used for connection tracking. There are two options:
      * `PER_CONNECTION`: The Connection Tracking is performed as per the
      * Connection Key (default Hash Method) for the specific protocol.
      * `PER_SESSION`: The Connection Tracking is performed as per the
@@ -62,7 +62,7 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
     }
 
     /**
-     * Specifies connection persistence when backends are unhealthy.
+     * @return Specifies connection persistence when backends are unhealthy.
      * If set to `DEFAULT_FOR_PROTOCOL`, the existing connections persist on
      * unhealthy backends only for connection-oriented protocols (TCP and SCTP)
      * and only if the Tracking Mode is PER_CONNECTION (default tracking mode)
@@ -78,22 +78,22 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      * Default value is `DEFAULT_FOR_PROTOCOL`.
      * Possible values are `DEFAULT_FOR_PROTOCOL`, `NEVER_PERSIST`, and `ALWAYS_PERSIST`.
      * 
-    */
+     */
     public Optional<String> connectionPersistenceOnUnhealthyBackends() {
         return Optional.ofNullable(this.connectionPersistenceOnUnhealthyBackends);
     }
     /**
-     * Specifies how long to keep a Connection Tracking entry while there is
+     * @return Specifies how long to keep a Connection Tracking entry while there is
      * no matching traffic (in seconds).
      * For L4 ILB the minimum(default) is 10 minutes and maximum is 16 hours.
      * For NLB the minimum(default) is 60 seconds and the maximum is 16 hours.
      * 
-    */
+     */
     public Optional<Integer> idleTimeoutSec() {
         return Optional.ofNullable(this.idleTimeoutSec);
     }
     /**
-     * Specifies the key used for connection tracking. There are two options:
+     * @return Specifies the key used for connection tracking. There are two options:
      * `PER_CONNECTION`: The Connection Tracking is performed as per the
      * Connection Key (default Hash Method) for the specific protocol.
      * `PER_SESSION`: The Connection Tracking is performed as per the
@@ -101,7 +101,7 @@ public final class RegionBackendServiceConnectionTrackingPolicy {
      * Default value is `PER_CONNECTION`.
      * Possible values are `PER_CONNECTION` and `PER_SESSION`.
      * 
-    */
+     */
     public Optional<String> trackingMode() {
         return Optional.ofNullable(this.trackingMode);
     }

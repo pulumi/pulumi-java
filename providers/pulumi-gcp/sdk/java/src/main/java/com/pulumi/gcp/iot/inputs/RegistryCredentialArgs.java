@@ -22,6 +22,10 @@ public final class RegistryCredentialArgs extends com.pulumi.resources.ResourceA
     @Import(name="publicKeyCertificate", required=true)
     private Output<Map<String,Object>> publicKeyCertificate;
 
+    /**
+     * @return A public key certificate format and data.
+     * 
+     */
     public Output<Map<String,Object>> publicKeyCertificate() {
         return this.publicKeyCertificate;
     }
@@ -50,11 +54,23 @@ public final class RegistryCredentialArgs extends com.pulumi.resources.ResourceA
             $ = new RegistryCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publicKeyCertificate A public key certificate format and data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyCertificate(Output<Map<String,Object>> publicKeyCertificate) {
             $.publicKeyCertificate = publicKeyCertificate;
             return this;
         }
 
+        /**
+         * @param publicKeyCertificate A public key certificate format and data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicKeyCertificate(Map<String,Object> publicKeyCertificate) {
             return publicKeyCertificate(Output.of(publicKeyCertificate));
         }

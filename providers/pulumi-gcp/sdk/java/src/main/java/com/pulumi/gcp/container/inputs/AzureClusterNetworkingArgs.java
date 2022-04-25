@@ -21,6 +21,10 @@ public final class AzureClusterNetworkingArgs extends com.pulumi.resources.Resou
     @Import(name="podAddressCidrBlocks", required=true)
     private Output<List<String>> podAddressCidrBlocks;
 
+    /**
+     * @return Required. The IP address range of the pods in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All pods in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+     * 
+     */
     public Output<List<String>> podAddressCidrBlocks() {
         return this.podAddressCidrBlocks;
     }
@@ -32,6 +36,10 @@ public final class AzureClusterNetworkingArgs extends com.pulumi.resources.Resou
     @Import(name="serviceAddressCidrBlocks", required=true)
     private Output<List<String>> serviceAddressCidrBlocks;
 
+    /**
+     * @return Required. The IP address range for services in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All services in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creating a cluster.
+     * 
+     */
     public Output<List<String>> serviceAddressCidrBlocks() {
         return this.serviceAddressCidrBlocks;
     }
@@ -43,6 +51,10 @@ public final class AzureClusterNetworkingArgs extends com.pulumi.resources.Resou
     @Import(name="virtualNetworkId", required=true)
     private Output<String> virtualNetworkId;
 
+    /**
+     * @return Required. The Azure Resource Manager (ARM) ID of the VNet associated with your cluster. All components in the cluster (i.e. control plane and node pools) run on a single VNet. Example: `/subscriptions/*{@literal /}resourceGroups/*{@literal /}providers/Microsoft.Network/virtualNetworks/*` This field cannot be changed after creation.
+     * 
+     */
     public Output<String> virtualNetworkId() {
         return this.virtualNetworkId;
     }
@@ -73,37 +85,85 @@ public final class AzureClusterNetworkingArgs extends com.pulumi.resources.Resou
             $ = new AzureClusterNetworkingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param podAddressCidrBlocks Required. The IP address range of the pods in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All pods in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAddressCidrBlocks(Output<List<String>> podAddressCidrBlocks) {
             $.podAddressCidrBlocks = podAddressCidrBlocks;
             return this;
         }
 
+        /**
+         * @param podAddressCidrBlocks Required. The IP address range of the pods in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All pods in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAddressCidrBlocks(List<String> podAddressCidrBlocks) {
             return podAddressCidrBlocks(Output.of(podAddressCidrBlocks));
         }
 
+        /**
+         * @param podAddressCidrBlocks Required. The IP address range of the pods in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All pods in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podAddressCidrBlocks(String... podAddressCidrBlocks) {
             return podAddressCidrBlocks(List.of(podAddressCidrBlocks));
         }
 
+        /**
+         * @param serviceAddressCidrBlocks Required. The IP address range for services in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All services in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creating a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAddressCidrBlocks(Output<List<String>> serviceAddressCidrBlocks) {
             $.serviceAddressCidrBlocks = serviceAddressCidrBlocks;
             return this;
         }
 
+        /**
+         * @param serviceAddressCidrBlocks Required. The IP address range for services in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All services in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creating a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAddressCidrBlocks(List<String> serviceAddressCidrBlocks) {
             return serviceAddressCidrBlocks(Output.of(serviceAddressCidrBlocks));
         }
 
+        /**
+         * @param serviceAddressCidrBlocks Required. The IP address range for services in this cluster, in CIDR notation (e.g. `10.96.0.0/14`). All services in the cluster get assigned a unique RFC1918 IPv4 address from these ranges. Only a single range is supported. This field cannot be changed after creating a cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAddressCidrBlocks(String... serviceAddressCidrBlocks) {
             return serviceAddressCidrBlocks(List.of(serviceAddressCidrBlocks));
         }
 
+        /**
+         * @param virtualNetworkId Required. The Azure Resource Manager (ARM) ID of the VNet associated with your cluster. All components in the cluster (i.e. control plane and node pools) run on a single VNet. Example: `/subscriptions/*{@literal /}resourceGroups/*{@literal /}providers/Microsoft.Network/virtualNetworks/*` This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkId(Output<String> virtualNetworkId) {
             $.virtualNetworkId = virtualNetworkId;
             return this;
         }
 
+        /**
+         * @param virtualNetworkId Required. The Azure Resource Manager (ARM) ID of the VNet associated with your cluster. All components in the cluster (i.e. control plane and node pools) run on a single VNet. Example: `/subscriptions/*{@literal /}resourceGroups/*{@literal /}providers/Microsoft.Network/virtualNetworks/*` This field cannot be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkId(String virtualNetworkId) {
             return virtualNetworkId(Output.of(virtualNetworkId));
         }

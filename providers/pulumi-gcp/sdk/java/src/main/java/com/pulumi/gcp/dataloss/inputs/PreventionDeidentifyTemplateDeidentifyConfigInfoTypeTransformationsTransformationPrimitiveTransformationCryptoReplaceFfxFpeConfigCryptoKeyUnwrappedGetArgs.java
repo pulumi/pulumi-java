@@ -21,6 +21,11 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
     @Import(name="key", required=true)
     private Output<String> key;
 
+    /**
+     * @return A 128/192/256 bit key.
+     * A base64-encoded string.
+     * 
+     */
     public Output<String> key() {
         return this.key;
     }
@@ -49,11 +54,25 @@ public final class PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransform
             $ = new PreventionDeidentifyTemplateDeidentifyConfigInfoTypeTransformationsTransformationPrimitiveTransformationCryptoReplaceFfxFpeConfigCryptoKeyUnwrappedGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key A 128/192/256 bit key.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key A 128/192/256 bit key.
+         * A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

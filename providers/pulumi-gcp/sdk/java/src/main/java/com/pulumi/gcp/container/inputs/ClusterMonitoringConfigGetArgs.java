@@ -21,6 +21,10 @@ public final class ClusterMonitoringConfigGetArgs extends com.pulumi.resources.R
     @Import(name="enableComponents", required=true)
     private Output<List<String>> enableComponents;
 
+    /**
+     * @return The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+     * 
+     */
     public Output<List<String>> enableComponents() {
         return this.enableComponents;
     }
@@ -49,15 +53,33 @@ public final class ClusterMonitoringConfigGetArgs extends com.pulumi.resources.R
             $ = new ClusterMonitoringConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableComponents The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComponents(Output<List<String>> enableComponents) {
             $.enableComponents = enableComponents;
             return this;
         }
 
+        /**
+         * @param enableComponents The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComponents(List<String> enableComponents) {
             return enableComponents(Output.of(enableComponents));
         }
 
+        /**
+         * @param enableComponents The GKE components exposing logs. `SYSTEM_COMPONENTS` and in beta provider, both `SYSTEM_COMPONENTS` and `WORKLOADS` are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComponents(String... enableComponents) {
             return enableComponents(List.of(enableComponents));
         }

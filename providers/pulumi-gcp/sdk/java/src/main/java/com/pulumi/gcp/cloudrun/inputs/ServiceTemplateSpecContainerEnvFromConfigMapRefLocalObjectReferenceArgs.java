@@ -20,6 +20,10 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Volume&#39;s name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,11 +52,23 @@ public final class ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectRef
             $ = new ServiceTemplateSpecContainerEnvFromConfigMapRefLocalObjectReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Volume&#39;s name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

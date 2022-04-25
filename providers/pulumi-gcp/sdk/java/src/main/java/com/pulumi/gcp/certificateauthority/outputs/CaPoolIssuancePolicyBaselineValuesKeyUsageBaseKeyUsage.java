@@ -12,47 +12,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage {
     /**
-     * The key may be used to sign certificates.
+     * @return The key may be used to sign certificates.
      * 
      */
     private final @Nullable Boolean certSign;
     /**
-     * The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
+     * @return The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
      * 
      */
     private final @Nullable Boolean contentCommitment;
     /**
-     * The key may be used sign certificate revocation lists.
+     * @return The key may be used sign certificate revocation lists.
      * 
      */
     private final @Nullable Boolean crlSign;
     /**
-     * The key may be used to encipher data.
+     * @return The key may be used to encipher data.
      * 
      */
     private final @Nullable Boolean dataEncipherment;
     /**
-     * The key may be used to decipher only.
+     * @return The key may be used to decipher only.
      * 
      */
     private final @Nullable Boolean decipherOnly;
     /**
-     * The key may be used for digital signatures.
+     * @return The key may be used for digital signatures.
      * 
      */
     private final @Nullable Boolean digitalSignature;
     /**
-     * The key may be used to encipher only.
+     * @return The key may be used to encipher only.
      * 
      */
     private final @Nullable Boolean encipherOnly;
     /**
-     * The key may be used in a key agreement protocol.
+     * @return The key may be used in a key agreement protocol.
      * 
      */
     private final @Nullable Boolean keyAgreement;
     /**
-     * The key may be used to encipher other keys.
+     * @return The key may be used to encipher other keys.
      * 
      */
     private final @Nullable Boolean keyEncipherment;
@@ -80,65 +80,65 @@ public final class CaPoolIssuancePolicyBaselineValuesKeyUsageBaseKeyUsage {
     }
 
     /**
-     * The key may be used to sign certificates.
+     * @return The key may be used to sign certificates.
      * 
-    */
+     */
     public Optional<Boolean> certSign() {
         return Optional.ofNullable(this.certSign);
     }
     /**
-     * The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
+     * @return The key may be used for cryptographic commitments. Note that this may also be referred to as &#34;non-repudiation&#34;.
      * 
-    */
+     */
     public Optional<Boolean> contentCommitment() {
         return Optional.ofNullable(this.contentCommitment);
     }
     /**
-     * The key may be used sign certificate revocation lists.
+     * @return The key may be used sign certificate revocation lists.
      * 
-    */
+     */
     public Optional<Boolean> crlSign() {
         return Optional.ofNullable(this.crlSign);
     }
     /**
-     * The key may be used to encipher data.
+     * @return The key may be used to encipher data.
      * 
-    */
+     */
     public Optional<Boolean> dataEncipherment() {
         return Optional.ofNullable(this.dataEncipherment);
     }
     /**
-     * The key may be used to decipher only.
+     * @return The key may be used to decipher only.
      * 
-    */
+     */
     public Optional<Boolean> decipherOnly() {
         return Optional.ofNullable(this.decipherOnly);
     }
     /**
-     * The key may be used for digital signatures.
+     * @return The key may be used for digital signatures.
      * 
-    */
+     */
     public Optional<Boolean> digitalSignature() {
         return Optional.ofNullable(this.digitalSignature);
     }
     /**
-     * The key may be used to encipher only.
+     * @return The key may be used to encipher only.
      * 
-    */
+     */
     public Optional<Boolean> encipherOnly() {
         return Optional.ofNullable(this.encipherOnly);
     }
     /**
-     * The key may be used in a key agreement protocol.
+     * @return The key may be used in a key agreement protocol.
      * 
-    */
+     */
     public Optional<Boolean> keyAgreement() {
         return Optional.ofNullable(this.keyAgreement);
     }
     /**
-     * The key may be used to encipher other keys.
+     * @return The key may be used to encipher other keys.
      * 
-    */
+     */
     public Optional<Boolean> keyEncipherment() {
         return Optional.ofNullable(this.keyEncipherment);
     }

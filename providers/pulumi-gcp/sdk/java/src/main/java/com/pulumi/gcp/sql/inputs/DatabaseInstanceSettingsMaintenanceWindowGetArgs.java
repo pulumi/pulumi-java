@@ -23,6 +23,10 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends com.
     @Import(name="day")
     private @Nullable Output<Integer> day;
 
+    /**
+     * @return Day of week (`1-7`), starting on Monday
+     * 
+     */
     public Optional<Output<Integer>> day() {
         return Optional.ofNullable(this.day);
     }
@@ -34,6 +38,10 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends com.
     @Import(name="hour")
     private @Nullable Output<Integer> hour;
 
+    /**
+     * @return Hour of day (`0-23`), ignored if `day` not set
+     * 
+     */
     public Optional<Output<Integer>> hour() {
         return Optional.ofNullable(this.hour);
     }
@@ -46,6 +54,11 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends com.
     @Import(name="updateTrack")
     private @Nullable Output<String> updateTrack;
 
+    /**
+     * @return Receive updates earlier (`canary`) or later
+     * (`stable`)
+     * 
+     */
     public Optional<Output<String>> updateTrack() {
         return Optional.ofNullable(this.updateTrack);
     }
@@ -76,29 +89,67 @@ public final class DatabaseInstanceSettingsMaintenanceWindowGetArgs extends com.
             $ = new DatabaseInstanceSettingsMaintenanceWindowGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day Day of week (`1-7`), starting on Monday
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable Output<Integer> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day Day of week (`1-7`), starting on Monday
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Integer day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param hour Hour of day (`0-23`), ignored if `day` not set
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(@Nullable Output<Integer> hour) {
             $.hour = hour;
             return this;
         }
 
+        /**
+         * @param hour Hour of day (`0-23`), ignored if `day` not set
+         * 
+         * @return builder
+         * 
+         */
         public Builder hour(Integer hour) {
             return hour(Output.of(hour));
         }
 
+        /**
+         * @param updateTrack Receive updates earlier (`canary`) or later
+         * (`stable`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTrack(@Nullable Output<String> updateTrack) {
             $.updateTrack = updateTrack;
             return this;
         }
 
+        /**
+         * @param updateTrack Receive updates earlier (`canary`) or later
+         * (`stable`)
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTrack(String updateTrack) {
             return updateTrack(Output.of(updateTrack));
         }

@@ -23,6 +23,10 @@ public final class RegionBackendServiceLogConfigArgs extends com.pulumi.resource
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Whether to enable logging for the load balancer traffic served by this backend service.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -37,6 +41,13 @@ public final class RegionBackendServiceLogConfigArgs extends com.pulumi.resource
     @Import(name="sampleRate")
     private @Nullable Output<Double> sampleRate;
 
+    /**
+     * @return This field can only be specified if logging is enabled for this backend service. The value of
+     * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
+     * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
+     * The default value is 1.0.
+     * 
+     */
     public Optional<Output<Double>> sampleRate() {
         return Optional.ofNullable(this.sampleRate);
     }
@@ -66,20 +77,50 @@ public final class RegionBackendServiceLogConfigArgs extends com.pulumi.resource
             $ = new RegionBackendServiceLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable Whether to enable logging for the load balancer traffic served by this backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Whether to enable logging for the load balancer traffic served by this backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param sampleRate This field can only be specified if logging is enabled for this backend service. The value of
+         * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
+         * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
+         * The default value is 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRate(@Nullable Output<Double> sampleRate) {
             $.sampleRate = sampleRate;
             return this;
         }
 
+        /**
+         * @param sampleRate This field can only be specified if logging is enabled for this backend service. The value of
+         * the field must be in [0, 1]. This configures the sampling rate of requests to the load balancer
+         * where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported.
+         * The default value is 1.0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRate(Double sampleRate) {
             return sampleRate(Output.of(sampleRate));
         }

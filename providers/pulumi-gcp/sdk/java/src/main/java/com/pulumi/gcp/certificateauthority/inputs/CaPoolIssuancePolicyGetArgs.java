@@ -28,6 +28,11 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
     @Import(name="allowedIssuanceModes")
     private @Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes;
 
+    /**
+     * @return IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs>> allowedIssuanceModes() {
         return Optional.ofNullable(this.allowedIssuanceModes);
     }
@@ -41,6 +46,12 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
     @Import(name="allowedKeyTypes")
     private @Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes;
 
+    /**
+     * @return If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here.
+     * Otherwise, any key may be used.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>>> allowedKeyTypes() {
         return Optional.ofNullable(this.allowedKeyTypes);
     }
@@ -56,6 +67,14 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
     @Import(name="baselineValues")
     private @Nullable Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues;
 
+    /**
+     * @return A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request
+     * includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate
+     * request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate
+     * issuance request will fail.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CaPoolIssuancePolicyBaselineValuesGetArgs>> baselineValues() {
         return Optional.ofNullable(this.baselineValues);
     }
@@ -69,6 +88,12 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
     @Import(name="identityConstraints")
     private @Nullable Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints;
 
+    /**
+     * @return Describes constraints on identities that may appear in Certificates issued through this CaPool.
+     * If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs>> identityConstraints() {
         return Optional.ofNullable(this.identityConstraints);
     }
@@ -81,6 +106,11 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
     @Import(name="maximumLifetime")
     private @Nullable Output<String> maximumLifetime;
 
+    /**
+     * @return The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority
+     * expires before a Certificate&#39;s requested maximumLifetime, the effective lifetime will be explicitly truncated to match it.
+     * 
+     */
     public Optional<Output<String>> maximumLifetime() {
         return Optional.ofNullable(this.maximumLifetime);
     }
@@ -113,51 +143,139 @@ public final class CaPoolIssuancePolicyGetArgs extends com.pulumi.resources.Reso
             $ = new CaPoolIssuancePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedIssuanceModes IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIssuanceModes(@Nullable Output<CaPoolIssuancePolicyAllowedIssuanceModesGetArgs> allowedIssuanceModes) {
             $.allowedIssuanceModes = allowedIssuanceModes;
             return this;
         }
 
+        /**
+         * @param allowedIssuanceModes IssuanceModes specifies the allowed ways in which Certificates may be requested from this CaPool.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedIssuanceModes(CaPoolIssuancePolicyAllowedIssuanceModesGetArgs allowedIssuanceModes) {
             return allowedIssuanceModes(Output.of(allowedIssuanceModes));
         }
 
+        /**
+         * @param allowedKeyTypes If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here.
+         * Otherwise, any key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedKeyTypes(@Nullable Output<List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs>> allowedKeyTypes) {
             $.allowedKeyTypes = allowedKeyTypes;
             return this;
         }
 
+        /**
+         * @param allowedKeyTypes If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here.
+         * Otherwise, any key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedKeyTypes(List<CaPoolIssuancePolicyAllowedKeyTypeGetArgs> allowedKeyTypes) {
             return allowedKeyTypes(Output.of(allowedKeyTypes));
         }
 
+        /**
+         * @param allowedKeyTypes If any AllowedKeyType is specified, then the certificate request&#39;s public key must match one of the key types listed here.
+         * Otherwise, any key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedKeyTypes(CaPoolIssuancePolicyAllowedKeyTypeGetArgs... allowedKeyTypes) {
             return allowedKeyTypes(List.of(allowedKeyTypes));
         }
 
+        /**
+         * @param baselineValues A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request
+         * includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate
+         * request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate
+         * issuance request will fail.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baselineValues(@Nullable Output<CaPoolIssuancePolicyBaselineValuesGetArgs> baselineValues) {
             $.baselineValues = baselineValues;
             return this;
         }
 
+        /**
+         * @param baselineValues A set of X.509 values that will be applied to all certificates issued through this CaPool. If a certificate request
+         * includes conflicting values for the same properties, they will be overwritten by the values defined here. If a certificate
+         * request uses a CertificateTemplate that defines conflicting predefinedValues for the same properties, the certificate
+         * issuance request will fail.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baselineValues(CaPoolIssuancePolicyBaselineValuesGetArgs baselineValues) {
             return baselineValues(Output.of(baselineValues));
         }
 
+        /**
+         * @param identityConstraints Describes constraints on identities that may appear in Certificates issued through this CaPool.
+         * If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityConstraints(@Nullable Output<CaPoolIssuancePolicyIdentityConstraintsGetArgs> identityConstraints) {
             $.identityConstraints = identityConstraints;
             return this;
         }
 
+        /**
+         * @param identityConstraints Describes constraints on identities that may appear in Certificates issued through this CaPool.
+         * If this is omitted, then this CaPool will not add restrictions on a certificate&#39;s identity.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityConstraints(CaPoolIssuancePolicyIdentityConstraintsGetArgs identityConstraints) {
             return identityConstraints(Output.of(identityConstraints));
         }
 
+        /**
+         * @param maximumLifetime The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority
+         * expires before a Certificate&#39;s requested maximumLifetime, the effective lifetime will be explicitly truncated to match it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumLifetime(@Nullable Output<String> maximumLifetime) {
             $.maximumLifetime = maximumLifetime;
             return this;
         }
 
+        /**
+         * @param maximumLifetime The maximum lifetime allowed for issued Certificates. Note that if the issuing CertificateAuthority
+         * expires before a Certificate&#39;s requested maximumLifetime, the effective lifetime will be explicitly truncated to match it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maximumLifetime(String maximumLifetime) {
             return maximumLifetime(Output.of(maximumLifetime));
         }

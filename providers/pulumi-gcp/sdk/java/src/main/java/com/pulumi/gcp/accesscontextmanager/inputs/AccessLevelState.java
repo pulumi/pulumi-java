@@ -25,6 +25,11 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="basic")
     private @Nullable Output<AccessLevelBasicGetArgs> basic;
 
+    /**
+     * @return A set of predefined conditions for the access level and a combining function.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AccessLevelBasicGetArgs>> basic() {
         return Optional.ofNullable(this.basic);
     }
@@ -38,6 +43,12 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="custom")
     private @Nullable Output<AccessLevelCustomGetArgs> custom;
 
+    /**
+     * @return Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+     * See CEL spec at: https://github.com/google/cel-spec.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AccessLevelCustomGetArgs>> custom() {
         return Optional.ofNullable(this.custom);
     }
@@ -49,6 +60,10 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the expression
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +77,12 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name for the Access Level. The short_name component must begin
+     * with a letter and only include alphanumeric and &#39;_&#39;.
+     * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +95,11 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The AccessPolicy this AccessLevel lives in.
+     * Format: accessPolicies/{policy_id}
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -85,6 +111,10 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return Title for the expression, i.e. a short string describing its purpose.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -118,56 +148,140 @@ public final class AccessLevelState extends com.pulumi.resources.ResourceArgs {
             $ = new AccessLevelState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param basic A set of predefined conditions for the access level and a combining function.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basic(@Nullable Output<AccessLevelBasicGetArgs> basic) {
             $.basic = basic;
             return this;
         }
 
+        /**
+         * @param basic A set of predefined conditions for the access level and a combining function.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder basic(AccessLevelBasicGetArgs basic) {
             return basic(Output.of(basic));
         }
 
+        /**
+         * @param custom Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+         * See CEL spec at: https://github.com/google/cel-spec.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(@Nullable Output<AccessLevelCustomGetArgs> custom) {
             $.custom = custom;
             return this;
         }
 
+        /**
+         * @param custom Custom access level conditions are set using the Cloud Common Expression Language to represent the necessary conditions for the level to apply to a request.
+         * See CEL spec at: https://github.com/google/cel-spec.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder custom(AccessLevelCustomGetArgs custom) {
             return custom(Output.of(custom));
         }
 
+        /**
+         * @param description Description of the expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the expression
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name Resource name for the Access Level. The short_name component must begin
+         * with a letter and only include alphanumeric and &#39;_&#39;.
+         * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name for the Access Level. The short_name component must begin
+         * with a letter and only include alphanumeric and &#39;_&#39;.
+         * Format: accessPolicies/{policy_id}/accessLevels/{short_name}
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent The AccessPolicy this AccessLevel lives in.
+         * Format: accessPolicies/{policy_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The AccessPolicy this AccessLevel lives in.
+         * Format: accessPolicies/{policy_id}
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }
 
+        /**
+         * @param title Title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title Title for the expression, i.e. a short string describing its purpose.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

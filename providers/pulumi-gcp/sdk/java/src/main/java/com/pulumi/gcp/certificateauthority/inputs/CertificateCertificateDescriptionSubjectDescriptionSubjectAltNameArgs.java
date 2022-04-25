@@ -31,6 +31,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="dnsNames")
     private @Nullable Output<List<String>> dnsNames;
 
+    /**
+     * @return Contains only valid, fully-qualified host names.
+     * 
+     */
     public Optional<Output<List<String>>> dnsNames() {
         return Optional.ofNullable(this.dnsNames);
     }
@@ -42,6 +46,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="emailAddresses")
     private @Nullable Output<List<String>> emailAddresses;
 
+    /**
+     * @return Contains only valid RFC 2822 E-mail addresses.
+     * 
+     */
     public Optional<Output<List<String>>> emailAddresses() {
         return Optional.ofNullable(this.emailAddresses);
     }
@@ -53,6 +61,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="ipAddresses")
     private @Nullable Output<List<String>> ipAddresses;
 
+    /**
+     * @return Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+     * 
+     */
     public Optional<Output<List<String>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -64,6 +76,10 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
     @Import(name="uris")
     private @Nullable Output<List<String>> uris;
 
+    /**
+     * @return Contains only valid RFC 3986 URIs.
+     * 
+     */
     public Optional<Output<List<String>>> uris() {
         return Optional.ofNullable(this.uris);
     }
@@ -109,54 +125,126 @@ public final class CertificateCertificateDescriptionSubjectDescriptionSubjectAlt
             return customSans(List.of(customSans));
         }
 
+        /**
+         * @param dnsNames Contains only valid, fully-qualified host names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNames(@Nullable Output<List<String>> dnsNames) {
             $.dnsNames = dnsNames;
             return this;
         }
 
+        /**
+         * @param dnsNames Contains only valid, fully-qualified host names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNames(List<String> dnsNames) {
             return dnsNames(Output.of(dnsNames));
         }
 
+        /**
+         * @param dnsNames Contains only valid, fully-qualified host names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNames(String... dnsNames) {
             return dnsNames(List.of(dnsNames));
         }
 
+        /**
+         * @param emailAddresses Contains only valid RFC 2822 E-mail addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddresses(@Nullable Output<List<String>> emailAddresses) {
             $.emailAddresses = emailAddresses;
             return this;
         }
 
+        /**
+         * @param emailAddresses Contains only valid RFC 2822 E-mail addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddresses(List<String> emailAddresses) {
             return emailAddresses(Output.of(emailAddresses));
         }
 
+        /**
+         * @param emailAddresses Contains only valid RFC 2822 E-mail addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddresses(String... emailAddresses) {
             return emailAddresses(List.of(emailAddresses));
         }
 
+        /**
+         * @param ipAddresses Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses Contains only valid 32-bit IPv4 addresses or RFC 4291 IPv6 addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param uris Contains only valid RFC 3986 URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(@Nullable Output<List<String>> uris) {
             $.uris = uris;
             return this;
         }
 
+        /**
+         * @param uris Contains only valid RFC 3986 URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(List<String> uris) {
             return uris(Output.of(uris));
         }
 
+        /**
+         * @param uris Contains only valid RFC 3986 URIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uris(String... uris) {
             return uris(List.of(uris));
         }

@@ -39,6 +39,11 @@ public final class SubscriptionIAMBindingArgs extends com.pulumi.resources.Resou
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -52,6 +57,12 @@ public final class SubscriptionIAMBindingArgs extends com.pulumi.resources.Resou
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.pubsub.SubscriptionIAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -63,6 +74,10 @@ public final class SubscriptionIAMBindingArgs extends com.pulumi.resources.Resou
     @Import(name="subscription", required=true)
     private Output<String> subscription;
 
+    /**
+     * @return The subscription name or id to bind to attach IAM policy to.
+     * 
+     */
     public Output<String> subscription() {
         return this.subscription;
     }
@@ -117,29 +132,71 @@ public final class SubscriptionIAMBindingArgs extends com.pulumi.resources.Resou
             return members(List.of(members));
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.pubsub.SubscriptionIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.pubsub.SubscriptionIAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }
 
+        /**
+         * @param subscription The subscription name or id to bind to attach IAM policy to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(Output<String> subscription) {
             $.subscription = subscription;
             return this;
         }
 
+        /**
+         * @param subscription The subscription name or id to bind to attach IAM policy to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscription(String subscription) {
             return subscription(Output.of(subscription));
         }

@@ -14,13 +14,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PerInstanceConfigPreservedState {
     /**
-     * Stateful disks for the instance.
+     * @return Stateful disks for the instance.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<PerInstanceConfigPreservedStateDisk> disks;
     /**
-     * Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
+     * @return Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
      * 
      */
     private final @Nullable Map<String,String> metadata;
@@ -34,17 +34,17 @@ public final class PerInstanceConfigPreservedState {
     }
 
     /**
-     * Stateful disks for the instance.
+     * @return Stateful disks for the instance.
      * Structure is documented below.
      * 
-    */
+     */
     public List<PerInstanceConfigPreservedStateDisk> disks() {
         return this.disks == null ? List.of() : this.disks;
     }
     /**
-     * Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
+     * @return Preserved metadata defined for this instance. This is a list of key-&gt;value pairs.
      * 
-    */
+     */
     public Map<String,String> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }

@@ -24,6 +24,11 @@ public final class AuthorityConfigSubjectConfigGetArgs extends com.pulumi.resour
     @Import(name="subject", required=true)
     private Output<AuthorityConfigSubjectConfigSubjectGetArgs> subject;
 
+    /**
+     * @return Contains distinguished name fields such as the location and organization.
+     * Structure is documented below.
+     * 
+     */
     public Output<AuthorityConfigSubjectConfigSubjectGetArgs> subject() {
         return this.subject;
     }
@@ -36,6 +41,11 @@ public final class AuthorityConfigSubjectConfigGetArgs extends com.pulumi.resour
     @Import(name="subjectAltName")
     private @Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName;
 
+    /**
+     * @return The subject alternative name fields.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AuthorityConfigSubjectConfigSubjectAltNameGetArgs>> subjectAltName() {
         return Optional.ofNullable(this.subjectAltName);
     }
@@ -65,20 +75,48 @@ public final class AuthorityConfigSubjectConfigGetArgs extends com.pulumi.resour
             $ = new AuthorityConfigSubjectConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subject Contains distinguished name fields such as the location and organization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(Output<AuthorityConfigSubjectConfigSubjectGetArgs> subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param subject Contains distinguished name fields such as the location and organization.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(AuthorityConfigSubjectConfigSubjectGetArgs subject) {
             return subject(Output.of(subject));
         }
 
+        /**
+         * @param subjectAltName The subject alternative name fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltName(@Nullable Output<AuthorityConfigSubjectConfigSubjectAltNameGetArgs> subjectAltName) {
             $.subjectAltName = subjectAltName;
             return this;
         }
 
+        /**
+         * @param subjectAltName The subject alternative name fields.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjectAltName(AuthorityConfigSubjectConfigSubjectAltNameGetArgs subjectAltName) {
             return subjectAltName(Output.of(subjectAltName));
         }

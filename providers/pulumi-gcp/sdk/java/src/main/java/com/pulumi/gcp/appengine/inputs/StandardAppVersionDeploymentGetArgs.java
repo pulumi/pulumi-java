@@ -26,6 +26,12 @@ public final class StandardAppVersionDeploymentGetArgs extends com.pulumi.resour
     @Import(name="files")
     private @Nullable Output<List<StandardAppVersionDeploymentFileGetArgs>> files;
 
+    /**
+     * @return Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * All files must be readable using the credentials supplied with this call.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<StandardAppVersionDeploymentFileGetArgs>>> files() {
         return Optional.ofNullable(this.files);
     }
@@ -38,6 +44,11 @@ public final class StandardAppVersionDeploymentGetArgs extends com.pulumi.resour
     @Import(name="zip")
     private @Nullable Output<StandardAppVersionDeploymentZipGetArgs> zip;
 
+    /**
+     * @return Zip File
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<StandardAppVersionDeploymentZipGetArgs>> zip() {
         return Optional.ofNullable(this.zip);
     }
@@ -67,24 +78,62 @@ public final class StandardAppVersionDeploymentGetArgs extends com.pulumi.resour
             $ = new StandardAppVersionDeploymentGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+         * All files must be readable using the credentials supplied with this call.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(@Nullable Output<List<StandardAppVersionDeploymentFileGetArgs>> files) {
             $.files = files;
             return this;
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+         * All files must be readable using the credentials supplied with this call.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(List<StandardAppVersionDeploymentFileGetArgs> files) {
             return files(Output.of(files));
         }
 
+        /**
+         * @param files Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+         * All files must be readable using the credentials supplied with this call.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(StandardAppVersionDeploymentFileGetArgs... files) {
             return files(List.of(files));
         }
 
+        /**
+         * @param zip Zip File
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zip(@Nullable Output<StandardAppVersionDeploymentZipGetArgs> zip) {
             $.zip = zip;
             return this;
         }
 
+        /**
+         * @param zip Zip File
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zip(StandardAppVersionDeploymentZipGetArgs zip) {
             return zip(Output.of(zip));
         }

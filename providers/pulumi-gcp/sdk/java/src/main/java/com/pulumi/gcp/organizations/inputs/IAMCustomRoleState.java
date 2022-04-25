@@ -24,6 +24,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
     @Import(name="deleted")
     private @Nullable Output<Boolean> deleted;
 
+    /**
+     * @return (Optional) The current deleted state of the role.
+     * 
+     */
     public Optional<Output<Boolean>> deleted() {
         return Optional.ofNullable(this.deleted);
     }
@@ -35,6 +39,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A human-readable description for the role.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +54,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
     @Import(name="orgId")
     private @Nullable Output<String> orgId;
 
+    /**
+     * @return The numeric ID of the organization in which you want to create a custom role.
+     * 
+     */
     public Optional<Output<String>> orgId() {
         return Optional.ofNullable(this.orgId);
     }
@@ -68,6 +84,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
     @Import(name="permissions")
     private @Nullable Output<List<String>> permissions;
 
+    /**
+     * @return The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
+     * 
+     */
     public Optional<Output<List<String>>> permissions() {
         return Optional.ofNullable(this.permissions);
     }
@@ -79,6 +99,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
     @Import(name="roleId")
     private @Nullable Output<String> roleId;
 
+    /**
+     * @return The role id to use for this role.
+     * 
+     */
     public Optional<Output<String>> roleId() {
         return Optional.ofNullable(this.roleId);
     }
@@ -92,6 +116,12 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
     @Import(name="stage")
     private @Nullable Output<String> stage;
 
+    /**
+     * @return The current launch stage of the role.
+     * Defaults to `GA`.
+     * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
+     * 
+     */
     public Optional<Output<String>> stage() {
         return Optional.ofNullable(this.stage);
     }
@@ -103,6 +133,10 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return A human-readable title for the role.
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -138,78 +172,184 @@ public final class IAMCustomRoleState extends com.pulumi.resources.ResourceArgs 
             $ = new IAMCustomRoleState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deleted (Optional) The current deleted state of the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleted(@Nullable Output<Boolean> deleted) {
             $.deleted = deleted;
             return this;
         }
 
+        /**
+         * @param deleted (Optional) The current deleted state of the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleted(Boolean deleted) {
             return deleted(Output.of(deleted));
         }
 
+        /**
+         * @param description A human-readable description for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A human-readable description for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the role in the format `organizations/{{org_id}}/roles/{{role_id}}`. Like `id`, this field can be used as a reference in other resources such as IAM role bindings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to create a custom role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(@Nullable Output<String> orgId) {
             $.orgId = orgId;
             return this;
         }
 
+        /**
+         * @param orgId The numeric ID of the organization in which you want to create a custom role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(String orgId) {
             return orgId(Output.of(orgId));
         }
 
+        /**
+         * @param permissions The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(@Nullable Output<List<String>> permissions) {
             $.permissions = permissions;
             return this;
         }
 
+        /**
+         * @param permissions The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(List<String> permissions) {
             return permissions(Output.of(permissions));
         }
 
+        /**
+         * @param permissions The names of the permissions this role grants when bound in an IAM policy. At least one permission must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder permissions(String... permissions) {
             return permissions(List.of(permissions));
         }
 
+        /**
+         * @param roleId The role id to use for this role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleId(@Nullable Output<String> roleId) {
             $.roleId = roleId;
             return this;
         }
 
+        /**
+         * @param roleId The role id to use for this role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleId(String roleId) {
             return roleId(Output.of(roleId));
         }
 
+        /**
+         * @param stage The current launch stage of the role.
+         * Defaults to `GA`.
+         * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(@Nullable Output<String> stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param stage The current launch stage of the role.
+         * Defaults to `GA`.
+         * List of possible stages is [here](https://cloud.google.com/iam/reference/rest/v1/organizations.roles#Role.RoleLaunchStage).
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             return stage(Output.of(stage));
         }
 
+        /**
+         * @param title A human-readable title for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title A human-readable title for the role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

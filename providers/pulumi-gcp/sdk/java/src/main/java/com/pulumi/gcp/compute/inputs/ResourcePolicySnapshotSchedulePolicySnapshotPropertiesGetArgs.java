@@ -24,6 +24,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
     @Import(name="guestFlush")
     private @Nullable Output<Boolean> guestFlush;
 
+    /**
+     * @return Whether to perform a &#39;guest aware&#39; snapshot.
+     * 
+     */
     public Optional<Output<Boolean>> guestFlush() {
         return Optional.ofNullable(this.guestFlush);
     }
@@ -35,6 +39,10 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key-value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -47,6 +55,11 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
     @Import(name="storageLocations")
     private @Nullable Output<String> storageLocations;
 
+    /**
+     * @return Cloud Storage bucket location to store the auto snapshot
+     * (regional or multi-regional)
+     * 
+     */
     public Optional<Output<String>> storageLocations() {
         return Optional.ofNullable(this.storageLocations);
     }
@@ -77,29 +90,67 @@ public final class ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs
             $ = new ResourcePolicySnapshotSchedulePolicySnapshotPropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param guestFlush Whether to perform a &#39;guest aware&#39; snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(@Nullable Output<Boolean> guestFlush) {
             $.guestFlush = guestFlush;
             return this;
         }
 
+        /**
+         * @param guestFlush Whether to perform a &#39;guest aware&#39; snapshot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestFlush(Boolean guestFlush) {
             return guestFlush(Output.of(guestFlush));
         }
 
+        /**
+         * @param labels A set of key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key-value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket location to store the auto snapshot
+         * (regional or multi-regional)
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(@Nullable Output<String> storageLocations) {
             $.storageLocations = storageLocations;
             return this;
         }
 
+        /**
+         * @param storageLocations Cloud Storage bucket location to store the auto snapshot
+         * (regional or multi-regional)
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageLocations(String storageLocations) {
             return storageLocations(Output.of(storageLocations));
         }

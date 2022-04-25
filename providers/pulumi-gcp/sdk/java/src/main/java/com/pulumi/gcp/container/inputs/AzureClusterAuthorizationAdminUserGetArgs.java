@@ -20,6 +20,10 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends com.pulumi.
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -48,11 +52,23 @@ public final class AzureClusterAuthorizationAdminUserGetArgs extends com.pulumi.
             $ = new AzureClusterAuthorizationAdminUserGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param username Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Required. The name of the user, e.g. `my-gcp-id@gmail.com`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

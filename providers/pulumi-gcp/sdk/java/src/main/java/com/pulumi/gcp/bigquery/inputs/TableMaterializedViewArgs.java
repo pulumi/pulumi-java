@@ -25,6 +25,11 @@ public final class TableMaterializedViewArgs extends com.pulumi.resources.Resour
     @Import(name="enableRefresh")
     private @Nullable Output<Boolean> enableRefresh;
 
+    /**
+     * @return Specifies whether to use BigQuery&#39;s automatic refresh for this materialized view when the base table is updated.
+     * The default value is true.
+     * 
+     */
     public Optional<Output<Boolean>> enableRefresh() {
         return Optional.ofNullable(this.enableRefresh);
     }
@@ -36,6 +41,10 @@ public final class TableMaterializedViewArgs extends com.pulumi.resources.Resour
     @Import(name="query", required=true)
     private Output<String> query;
 
+    /**
+     * @return A query whose result is persisted.
+     * 
+     */
     public Output<String> query() {
         return this.query;
     }
@@ -48,6 +57,11 @@ public final class TableMaterializedViewArgs extends com.pulumi.resources.Resour
     @Import(name="refreshIntervalMs")
     private @Nullable Output<Integer> refreshIntervalMs;
 
+    /**
+     * @return The maximum frequency at which this materialized view will be refreshed.
+     * The default value is 1800000
+     * 
+     */
     public Optional<Output<Integer>> refreshIntervalMs() {
         return Optional.ofNullable(this.refreshIntervalMs);
     }
@@ -78,29 +92,69 @@ public final class TableMaterializedViewArgs extends com.pulumi.resources.Resour
             $ = new TableMaterializedViewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableRefresh Specifies whether to use BigQuery&#39;s automatic refresh for this materialized view when the base table is updated.
+         * The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRefresh(@Nullable Output<Boolean> enableRefresh) {
             $.enableRefresh = enableRefresh;
             return this;
         }
 
+        /**
+         * @param enableRefresh Specifies whether to use BigQuery&#39;s automatic refresh for this materialized view when the base table is updated.
+         * The default value is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRefresh(Boolean enableRefresh) {
             return enableRefresh(Output.of(enableRefresh));
         }
 
+        /**
+         * @param query A query whose result is persisted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query A query whose result is persisted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param refreshIntervalMs The maximum frequency at which this materialized view will be refreshed.
+         * The default value is 1800000
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshIntervalMs(@Nullable Output<Integer> refreshIntervalMs) {
             $.refreshIntervalMs = refreshIntervalMs;
             return this;
         }
 
+        /**
+         * @param refreshIntervalMs The maximum frequency at which this materialized view will be refreshed.
+         * The default value is 1800000
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshIntervalMs(Integer refreshIntervalMs) {
             return refreshIntervalMs(Output.of(refreshIntervalMs));
         }

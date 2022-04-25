@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceTemplateNetworkPerformanceConfig {
     /**
-     * The egress bandwidth tier for the instance.
+     * @return The egress bandwidth tier for the instance.
      * 
      */
     private final String totalEgressBandwidthTier;
@@ -21,9 +21,9 @@ public final class GetInstanceTemplateNetworkPerformanceConfig {
     }
 
     /**
-     * The egress bandwidth tier for the instance.
+     * @return The egress bandwidth tier for the instance.
      * 
-    */
+     */
     public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }

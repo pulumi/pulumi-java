@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class URLMapTest {
     /**
-     * Description of this test case.
+     * @return Description of this test case.
      * 
      */
     private final @Nullable String description;
     /**
-     * Host portion of the URL.
+     * @return Host portion of the URL.
      * 
      */
     private final String host;
     /**
-     * Path portion of the URL.
+     * @return Path portion of the URL.
      * 
      */
     private final String path;
     /**
-     * The backend service or backend bucket link that should be matched by this test.
+     * @return The backend service or backend bucket link that should be matched by this test.
      * 
      */
     private final String service;
@@ -45,30 +45,30 @@ public final class URLMapTest {
     }
 
     /**
-     * Description of this test case.
+     * @return Description of this test case.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Host portion of the URL.
+     * @return Host portion of the URL.
      * 
-    */
+     */
     public String host() {
         return this.host;
     }
     /**
-     * Path portion of the URL.
+     * @return Path portion of the URL.
      * 
-    */
+     */
     public String path() {
         return this.path;
     }
     /**
-     * The backend service or backend bucket link that should be matched by this test.
+     * @return The backend service or backend bucket link that should be matched by this test.
      * 
-    */
+     */
     public String service() {
         return this.service;
     }

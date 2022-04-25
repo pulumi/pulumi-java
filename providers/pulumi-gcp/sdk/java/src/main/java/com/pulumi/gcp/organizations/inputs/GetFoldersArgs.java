@@ -19,6 +19,10 @@ public final class GetFoldersArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentId", required=true)
     private String parentId;
 
+    /**
+     * @return A string parent as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v3/folders/list#query-parameters).
+     * 
+     */
     public String parentId() {
         return this.parentId;
     }
@@ -47,6 +51,12 @@ public final class GetFoldersArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetFoldersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parentId A string parent as defined in the [REST API](https://cloud.google.com/resource-manager/reference/rest/v3/folders/list#query-parameters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentId(String parentId) {
             $.parentId = parentId;
             return this;

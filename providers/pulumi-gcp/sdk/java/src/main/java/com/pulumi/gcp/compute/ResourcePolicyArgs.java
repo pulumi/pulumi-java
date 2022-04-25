@@ -25,6 +25,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource. Provide this property when you create the resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,11 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="groupPlacementPolicy")
     private @Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy;
 
+    /**
+     * @return Resource policy for instances used for placement configuration.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ResourcePolicyGroupPlacementPolicyArgs>> groupPlacementPolicy() {
         return Optional.ofNullable(this.groupPlacementPolicy);
     }
@@ -49,6 +58,11 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="instanceSchedulePolicy")
     private @Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy;
 
+    /**
+     * @return Resource policy for scheduling instance operations.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ResourcePolicyInstanceSchedulePolicyArgs>> instanceSchedulePolicy() {
         return Optional.ofNullable(this.instanceSchedulePolicy);
     }
@@ -66,6 +80,16 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource, provided by the client when initially creating
+     * the resource. The resource name must be 1-63 characters long, and comply
+     * with RFC1035. Specifically, the name must be 1-63 characters long and
+     * match the regular expression `a-z`? which means the
+     * first character must be a lowercase letter, and all following characters
+     * must be a dash, lowercase letter, or digit, except the last character,
+     * which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,6 +102,11 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -89,6 +118,10 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region where resource policy resides.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -101,6 +134,11 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="snapshotSchedulePolicy")
     private @Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy;
 
+    /**
+     * @return Policy for creating snapshots of persistent disks.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ResourcePolicySnapshotSchedulePolicyArgs>> snapshotSchedulePolicy() {
         return Optional.ofNullable(this.snapshotSchedulePolicy);
     }
@@ -135,65 +173,169 @@ public final class ResourcePolicyArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ResourcePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource. Provide this property when you create the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param groupPlacementPolicy Resource policy for instances used for placement configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupPlacementPolicy(@Nullable Output<ResourcePolicyGroupPlacementPolicyArgs> groupPlacementPolicy) {
             $.groupPlacementPolicy = groupPlacementPolicy;
             return this;
         }
 
+        /**
+         * @param groupPlacementPolicy Resource policy for instances used for placement configuration.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupPlacementPolicy(ResourcePolicyGroupPlacementPolicyArgs groupPlacementPolicy) {
             return groupPlacementPolicy(Output.of(groupPlacementPolicy));
         }
 
+        /**
+         * @param instanceSchedulePolicy Resource policy for scheduling instance operations.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSchedulePolicy(@Nullable Output<ResourcePolicyInstanceSchedulePolicyArgs> instanceSchedulePolicy) {
             $.instanceSchedulePolicy = instanceSchedulePolicy;
             return this;
         }
 
+        /**
+         * @param instanceSchedulePolicy Resource policy for scheduling instance operations.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceSchedulePolicy(ResourcePolicyInstanceSchedulePolicyArgs instanceSchedulePolicy) {
             return instanceSchedulePolicy(Output.of(instanceSchedulePolicy));
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating
+         * the resource. The resource name must be 1-63 characters long, and comply
+         * with RFC1035. Specifically, the name must be 1-63 characters long and
+         * match the regular expression `a-z`? which means the
+         * first character must be a lowercase letter, and all following characters
+         * must be a dash, lowercase letter, or digit, except the last character,
+         * which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource, provided by the client when initially creating
+         * the resource. The resource name must be 1-63 characters long, and comply
+         * with RFC1035. Specifically, the name must be 1-63 characters long and
+         * match the regular expression `a-z`? which means the
+         * first character must be a lowercase letter, and all following characters
+         * must be a dash, lowercase letter, or digit, except the last character,
+         * which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region Region where resource policy resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region where resource policy resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param snapshotSchedulePolicy Policy for creating snapshots of persistent disks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotSchedulePolicy(@Nullable Output<ResourcePolicySnapshotSchedulePolicyArgs> snapshotSchedulePolicy) {
             $.snapshotSchedulePolicy = snapshotSchedulePolicy;
             return this;
         }
 
+        /**
+         * @param snapshotSchedulePolicy Policy for creating snapshots of persistent disks.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotSchedulePolicy(ResourcePolicySnapshotSchedulePolicyArgs snapshotSchedulePolicy) {
             return snapshotSchedulePolicy(Output.of(snapshotSchedulePolicy));
         }

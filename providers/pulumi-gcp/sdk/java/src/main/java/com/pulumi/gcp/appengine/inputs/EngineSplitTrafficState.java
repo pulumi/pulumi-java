@@ -24,6 +24,10 @@ public final class EngineSplitTrafficState extends com.pulumi.resources.Resource
     @Import(name="migrateTraffic")
     private @Nullable Output<Boolean> migrateTraffic;
 
+    /**
+     * @return If set to true traffic will be migrated to this version.
+     * 
+     */
     public Optional<Output<Boolean>> migrateTraffic() {
         return Optional.ofNullable(this.migrateTraffic);
     }
@@ -36,6 +40,11 @@ public final class EngineSplitTrafficState extends com.pulumi.resources.Resource
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -47,6 +56,10 @@ public final class EngineSplitTrafficState extends com.pulumi.resources.Resource
     @Import(name="service")
     private @Nullable Output<String> service;
 
+    /**
+     * @return The name of the service these settings apply to.
+     * 
+     */
     public Optional<Output<String>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -59,6 +72,11 @@ public final class EngineSplitTrafficState extends com.pulumi.resources.Resource
     @Import(name="split")
     private @Nullable Output<EngineSplitTrafficSplitGetArgs> split;
 
+    /**
+     * @return Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<EngineSplitTrafficSplitGetArgs>> split() {
         return Optional.ofNullable(this.split);
     }
@@ -90,38 +108,90 @@ public final class EngineSplitTrafficState extends com.pulumi.resources.Resource
             $ = new EngineSplitTrafficState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrateTraffic If set to true traffic will be migrated to this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrateTraffic(@Nullable Output<Boolean> migrateTraffic) {
             $.migrateTraffic = migrateTraffic;
             return this;
         }
 
+        /**
+         * @param migrateTraffic If set to true traffic will be migrated to this version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrateTraffic(Boolean migrateTraffic) {
             return migrateTraffic(Output.of(migrateTraffic));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param service The name of the service these settings apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<String> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The name of the service these settings apply to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(String service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param split Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder split(@Nullable Output<EngineSplitTrafficSplitGetArgs> split) {
             $.split = split;
             return this;
         }
 
+        /**
+         * @param split Mapping that defines fractional HTTP traffic diversion to different versions within the service.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder split(EngineSplitTrafficSplitGetArgs split) {
             return split(Output.of(split));
         }

@@ -22,6 +22,10 @@ public final class AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs exte
     @Import(name="clientAuth")
     private @Nullable Output<Boolean> clientAuth;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as &#34;TLS WWW client authentication&#34;, though regularly used for non-WWW TLS.
+     * 
+     */
     public Optional<Output<Boolean>> clientAuth() {
         return Optional.ofNullable(this.clientAuth);
     }
@@ -33,6 +37,10 @@ public final class AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs exte
     @Import(name="codeSigning")
     private @Nullable Output<Boolean> codeSigning;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as &#34;Signing of downloadable executable code client authentication&#34;.
+     * 
+     */
     public Optional<Output<Boolean>> codeSigning() {
         return Optional.ofNullable(this.codeSigning);
     }
@@ -44,6 +52,10 @@ public final class AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs exte
     @Import(name="emailProtection")
     private @Nullable Output<Boolean> emailProtection;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as &#34;Email protection&#34;.
+     * 
+     */
     public Optional<Output<Boolean>> emailProtection() {
         return Optional.ofNullable(this.emailProtection);
     }
@@ -55,6 +67,10 @@ public final class AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs exte
     @Import(name="ocspSigning")
     private @Nullable Output<Boolean> ocspSigning;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as &#34;Signing OCSP responses&#34;.
+     * 
+     */
     public Optional<Output<Boolean>> ocspSigning() {
         return Optional.ofNullable(this.ocspSigning);
     }
@@ -66,6 +82,10 @@ public final class AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs exte
     @Import(name="serverAuth")
     private @Nullable Output<Boolean> serverAuth;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as &#34;TLS WWW server authentication&#34;, though regularly used for non-WWW TLS.
+     * 
+     */
     public Optional<Output<Boolean>> serverAuth() {
         return Optional.ofNullable(this.serverAuth);
     }
@@ -77,6 +97,10 @@ public final class AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs exte
     @Import(name="timeStamping")
     private @Nullable Output<Boolean> timeStamping;
 
+    /**
+     * @return Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as &#34;Binding the hash of an object to a time&#34;.
+     * 
+     */
     public Optional<Output<Boolean>> timeStamping() {
         return Optional.ofNullable(this.timeStamping);
     }
@@ -110,56 +134,128 @@ public final class AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs exte
             $ = new AuthorityConfigX509ConfigKeyUsageExtendedKeyUsageGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientAuth Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as &#34;TLS WWW client authentication&#34;, though regularly used for non-WWW TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuth(@Nullable Output<Boolean> clientAuth) {
             $.clientAuth = clientAuth;
             return this;
         }
 
+        /**
+         * @param clientAuth Corresponds to OID 1.3.6.1.5.5.7.3.2. Officially described as &#34;TLS WWW client authentication&#34;, though regularly used for non-WWW TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientAuth(Boolean clientAuth) {
             return clientAuth(Output.of(clientAuth));
         }
 
+        /**
+         * @param codeSigning Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as &#34;Signing of downloadable executable code client authentication&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeSigning(@Nullable Output<Boolean> codeSigning) {
             $.codeSigning = codeSigning;
             return this;
         }
 
+        /**
+         * @param codeSigning Corresponds to OID 1.3.6.1.5.5.7.3.3. Officially described as &#34;Signing of downloadable executable code client authentication&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeSigning(Boolean codeSigning) {
             return codeSigning(Output.of(codeSigning));
         }
 
+        /**
+         * @param emailProtection Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as &#34;Email protection&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailProtection(@Nullable Output<Boolean> emailProtection) {
             $.emailProtection = emailProtection;
             return this;
         }
 
+        /**
+         * @param emailProtection Corresponds to OID 1.3.6.1.5.5.7.3.4. Officially described as &#34;Email protection&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailProtection(Boolean emailProtection) {
             return emailProtection(Output.of(emailProtection));
         }
 
+        /**
+         * @param ocspSigning Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as &#34;Signing OCSP responses&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ocspSigning(@Nullable Output<Boolean> ocspSigning) {
             $.ocspSigning = ocspSigning;
             return this;
         }
 
+        /**
+         * @param ocspSigning Corresponds to OID 1.3.6.1.5.5.7.3.9. Officially described as &#34;Signing OCSP responses&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ocspSigning(Boolean ocspSigning) {
             return ocspSigning(Output.of(ocspSigning));
         }
 
+        /**
+         * @param serverAuth Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as &#34;TLS WWW server authentication&#34;, though regularly used for non-WWW TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverAuth(@Nullable Output<Boolean> serverAuth) {
             $.serverAuth = serverAuth;
             return this;
         }
 
+        /**
+         * @param serverAuth Corresponds to OID 1.3.6.1.5.5.7.3.1. Officially described as &#34;TLS WWW server authentication&#34;, though regularly used for non-WWW TLS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverAuth(Boolean serverAuth) {
             return serverAuth(Output.of(serverAuth));
         }
 
+        /**
+         * @param timeStamping Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as &#34;Binding the hash of an object to a time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeStamping(@Nullable Output<Boolean> timeStamping) {
             $.timeStamping = timeStamping;
             return this;
         }
 
+        /**
+         * @param timeStamping Corresponds to OID 1.3.6.1.5.5.7.3.8. Officially described as &#34;Binding the hash of an object to a time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeStamping(Boolean timeStamping) {
             return timeStamping(Output.of(timeStamping));
         }

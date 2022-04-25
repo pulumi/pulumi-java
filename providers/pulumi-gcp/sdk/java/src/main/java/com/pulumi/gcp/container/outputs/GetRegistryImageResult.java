@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class GetRegistryImageResult {
     private final @Nullable String digest;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -45,9 +45,9 @@ public final class GetRegistryImageResult {
         return Optional.ofNullable(this.digest);
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

@@ -20,6 +20,10 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFie
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name describing the field.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,11 +52,23 @@ public final class PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFie
             $ = new PreventionStoredInfoTypeLargeCustomDictionaryBigQueryFieldFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name describing the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name describing the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

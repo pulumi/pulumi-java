@@ -22,6 +22,10 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
     @Import(name="autoDelete", required=true)
     private Boolean autoDelete;
 
+    /**
+     * @return Whether the disk will be auto-deleted when the instance is deleted.
+     * 
+     */
     public Boolean autoDelete() {
         return this.autoDelete;
     }
@@ -34,6 +38,11 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceName", required=true)
     private String deviceName;
 
+    /**
+     * @return Name with which the attached disk is accessible
+     * under `/dev/disk/by-id/`
+     * 
+     */
     public String deviceName() {
         return this.deviceName;
     }
@@ -60,6 +69,11 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
     @Import(name="initializeParams", required=true)
     private List<GetInstanceBootDiskInitializeParam> initializeParams;
 
+    /**
+     * @return Parameters with which a disk was created alongside the instance.
+     * Structure is documented below.
+     * 
+     */
     public List<GetInstanceBootDiskInitializeParam> initializeParams() {
         return this.initializeParams;
     }
@@ -78,6 +92,10 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
     @Import(name="mode", required=true)
     private String mode;
 
+    /**
+     * @return Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
+     * 
+     */
     public String mode() {
         return this.mode;
     }
@@ -89,6 +107,10 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return The name or self_link of the disk attached to this instance.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -124,11 +146,24 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
             $ = new GetInstanceBootDisk(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoDelete Whether the disk will be auto-deleted when the instance is deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoDelete(Boolean autoDelete) {
             $.autoDelete = autoDelete;
             return this;
         }
 
+        /**
+         * @param deviceName Name with which the attached disk is accessible
+         * under `/dev/disk/by-id/`
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             $.deviceName = deviceName;
             return this;
@@ -144,11 +179,25 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param initializeParams Parameters with which a disk was created alongside the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializeParams(List<GetInstanceBootDiskInitializeParam> initializeParams) {
             $.initializeParams = initializeParams;
             return this;
         }
 
+        /**
+         * @param initializeParams Parameters with which a disk was created alongside the instance.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initializeParams(GetInstanceBootDiskInitializeParam... initializeParams) {
             return initializeParams(List.of(initializeParams));
         }
@@ -158,11 +207,23 @@ public final class GetInstanceBootDisk extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param mode Read/write mode for the disk. One of `&#34;READ_ONLY&#34;` or `&#34;READ_WRITE&#34;`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param source The name or self_link of the disk attached to this instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;

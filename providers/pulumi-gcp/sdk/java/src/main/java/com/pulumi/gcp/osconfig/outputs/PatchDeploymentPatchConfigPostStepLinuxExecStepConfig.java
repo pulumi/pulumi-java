@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
     /**
-     * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+     * @return Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
      * 
      */
     private final @Nullable List<Integer> allowedSuccessCodes;
     /**
-     * A Cloud Storage object containing the executable.
+     * @return A Cloud Storage object containing the executable.
      * Structure is documented below.
      * 
      */
     private final @Nullable PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject gcsObject;
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script will
+     * @return The script interpreter to use to run the script. If no interpreter is specified the script will
      * be executed directly, which will likely only succeed for scripts with shebang lines.
      * Possible values are `SHELL` and `POWERSHELL`.
      * 
      */
     private final @Nullable String interpreter;
     /**
-     * An absolute path to the executable on the VM.
+     * @return An absolute path to the executable on the VM.
      * 
      */
     private final @Nullable String localPath;
@@ -51,33 +51,33 @@ public final class PatchDeploymentPatchConfigPostStepLinuxExecStepConfig {
     }
 
     /**
-     * Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
+     * @return Defaults to [0]. A list of possible return values that the execution can return to indicate a success.
      * 
-    */
+     */
     public List<Integer> allowedSuccessCodes() {
         return this.allowedSuccessCodes == null ? List.of() : this.allowedSuccessCodes;
     }
     /**
-     * A Cloud Storage object containing the executable.
+     * @return A Cloud Storage object containing the executable.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PatchDeploymentPatchConfigPostStepLinuxExecStepConfigGcsObject> gcsObject() {
         return Optional.ofNullable(this.gcsObject);
     }
     /**
-     * The script interpreter to use to run the script. If no interpreter is specified the script will
+     * @return The script interpreter to use to run the script. If no interpreter is specified the script will
      * be executed directly, which will likely only succeed for scripts with shebang lines.
      * Possible values are `SHELL` and `POWERSHELL`.
      * 
-    */
+     */
     public Optional<String> interpreter() {
         return Optional.ofNullable(this.interpreter);
     }
     /**
-     * An absolute path to the executable on the VM.
+     * @return An absolute path to the executable on the VM.
      * 
-    */
+     */
     public Optional<String> localPath() {
         return Optional.ofNullable(this.localPath);
     }

@@ -21,6 +21,11 @@ public final class ClusterAddonsConfigConfigConnectorConfigArgs extends com.pulu
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -49,11 +54,25 @@ public final class ClusterAddonsConfigConfigConnectorConfigArgs extends com.pulu
             $ = new ClusterAddonsConfigConfigConnectorConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable the PodSecurityPolicy controller for this cluster.
+         * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enable the PodSecurityPolicy controller for this cluster.
+         * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

@@ -13,22 +13,22 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceBootDiskInitializeParam {
     /**
-     * The image from which this disk was initialised.
+     * @return The image from which this disk was initialised.
      * 
      */
     private final String image;
     /**
-     * A set of key/value label pairs assigned to the instance.
+     * @return A set of key/value label pairs assigned to the instance.
      * 
      */
     private final Map<String,Object> labels;
     /**
-     * The size of the image in gigabytes.
+     * @return The size of the image in gigabytes.
      * 
      */
     private final Integer size;
     /**
-     * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+     * @return The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
      * 
      */
     private final String type;
@@ -46,30 +46,30 @@ public final class GetInstanceBootDiskInitializeParam {
     }
 
     /**
-     * The image from which this disk was initialised.
+     * @return The image from which this disk was initialised.
      * 
-    */
+     */
     public String image() {
         return this.image;
     }
     /**
-     * A set of key/value label pairs assigned to the instance.
+     * @return A set of key/value label pairs assigned to the instance.
      * 
-    */
+     */
     public Map<String,Object> labels() {
         return this.labels;
     }
     /**
-     * The size of the image in gigabytes.
+     * @return The size of the image in gigabytes.
      * 
-    */
+     */
     public Integer size() {
         return this.size;
     }
     /**
-     * The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
+     * @return The accelerator type resource exposed to this instance. E.g. `nvidia-tesla-k80`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

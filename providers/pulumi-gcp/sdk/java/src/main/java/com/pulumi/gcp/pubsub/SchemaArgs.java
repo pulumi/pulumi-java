@@ -24,6 +24,12 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="definition")
     private @Nullable Output<String> definition;
 
+    /**
+     * @return The definition of the schema.
+     * This should contain a string representing the full definition of the schema
+     * that is a valid schema definition of the type specified in type.
+     * 
+     */
     public Optional<Output<String>> definition() {
         return Optional.ofNullable(this.definition);
     }
@@ -35,6 +41,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +57,11 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -60,6 +75,12 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return The type of the schema definition
+     * Default value is `TYPE_UNSPECIFIED`.
+     * Possible values are `TYPE_UNSPECIFIED`, `PROTOCOL_BUFFER`, and `AVRO`.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -91,38 +112,96 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition The definition of the schema.
+         * This should contain a string representing the full definition of the schema
+         * that is a valid schema definition of the type specified in type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(@Nullable Output<String> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition The definition of the schema.
+         * This should contain a string representing the full definition of the schema
+         * that is a valid schema definition of the type specified in type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(String definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param name The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The ID to use for the schema, which will become the final component of the schema&#39;s resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param type The type of the schema definition
+         * Default value is `TYPE_UNSPECIFIED`.
+         * Possible values are `TYPE_UNSPECIFIED`, `PROTOCOL_BUFFER`, and `AVRO`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the schema definition
+         * Default value is `TYPE_UNSPECIFIED`.
+         * Possible values are `TYPE_UNSPECIFIED`, `PROTOCOL_BUFFER`, and `AVRO`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

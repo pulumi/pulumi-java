@@ -27,6 +27,15 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends com.pulumi.res
     @Import(name="audience")
     private @Nullable Output<String> audience;
 
+    /**
+     * @return Audience to be used when generating OIDC token. The audience claim
+     * identifies the recipients that the JWT is intended for. The audience
+     * value is a single case-sensitive string. Having multiple values (array)
+     * for the audience field is not supported. More info about the OIDC JWT
+     * token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
+     * Note: if not specified, the Push endpoint URL will be used.
+     * 
+     */
     public Optional<Output<String>> audience() {
         return Optional.ofNullable(this.audience);
     }
@@ -41,6 +50,13 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends com.pulumi.res
     @Import(name="serviceAccountEmail", required=true)
     private Output<String> serviceAccountEmail;
 
+    /**
+     * @return Service account email to be used for generating the OIDC token.
+     * The caller (for subscriptions.create, subscriptions.patch, and
+     * subscriptions.modifyPushConfig RPCs) must have the
+     * iam.serviceAccounts.actAs permission for the service account.
+     * 
+     */
     public Output<String> serviceAccountEmail() {
         return this.serviceAccountEmail;
     }
@@ -70,20 +86,60 @@ public final class SubscriptionPushConfigOidcTokenGetArgs extends com.pulumi.res
             $ = new SubscriptionPushConfigOidcTokenGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audience Audience to be used when generating OIDC token. The audience claim
+         * identifies the recipients that the JWT is intended for. The audience
+         * value is a single case-sensitive string. Having multiple values (array)
+         * for the audience field is not supported. More info about the OIDC JWT
+         * token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
+         * Note: if not specified, the Push endpoint URL will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(@Nullable Output<String> audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param audience Audience to be used when generating OIDC token. The audience claim
+         * identifies the recipients that the JWT is intended for. The audience
+         * value is a single case-sensitive string. Having multiple values (array)
+         * for the audience field is not supported. More info about the OIDC JWT
+         * token audience here: https://tools.ietf.org/html/rfc7519#section-4.1.3
+         * Note: if not specified, the Push endpoint URL will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             return audience(Output.of(audience));
         }
 
+        /**
+         * @param serviceAccountEmail Service account email to be used for generating the OIDC token.
+         * The caller (for subscriptions.create, subscriptions.patch, and
+         * subscriptions.modifyPushConfig RPCs) must have the
+         * iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(Output<String> serviceAccountEmail) {
             $.serviceAccountEmail = serviceAccountEmail;
             return this;
         }
 
+        /**
+         * @param serviceAccountEmail Service account email to be used for generating the OIDC token.
+         * The caller (for subscriptions.create, subscriptions.patch, and
+         * subscriptions.modifyPushConfig RPCs) must have the
+         * iam.serviceAccounts.actAs permission for the service account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceAccountEmail(String serviceAccountEmail) {
             return serviceAccountEmail(Output.of(serviceAccountEmail));
         }

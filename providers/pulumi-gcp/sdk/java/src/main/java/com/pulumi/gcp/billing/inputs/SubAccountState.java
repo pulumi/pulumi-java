@@ -23,6 +23,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="billingAccountId")
     private @Nullable Output<String> billingAccountId;
 
+    /**
+     * @return The billing account id.
+     * 
+     */
     public Optional<Output<String>> billingAccountId() {
         return Optional.ofNullable(this.billingAccountId);
     }
@@ -36,6 +40,12 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletionPolicy")
     private @Nullable Output<String> deletionPolicy;
 
+    /**
+     * @return If set to &#34;RENAME_ON_DESTROY&#34; the billing account display_name
+     * will be changed to &#34;Destroyed&#34; along with a timestamp.  If set to &#34;&#34; this will not occur.
+     * Default is &#34;&#34;.
+     * 
+     */
     public Optional<Output<String>> deletionPolicy() {
         return Optional.ofNullable(this.deletionPolicy);
     }
@@ -47,6 +57,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the billing account.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -59,6 +73,11 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="masterBillingAccount")
     private @Nullable Output<String> masterBillingAccount;
 
+    /**
+     * @return The name of the master billing account that the subaccount
+     * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+     * 
+     */
     public Optional<Output<String>> masterBillingAccount() {
         return Optional.ofNullable(this.masterBillingAccount);
     }
@@ -70,6 +89,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +104,10 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
     @Import(name="open")
     private @Nullable Output<Boolean> open;
 
+    /**
+     * @return `true` if the billing account is open, `false` if the billing account is closed.
+     * 
+     */
     public Optional<Output<Boolean>> open() {
         return Optional.ofNullable(this.open);
     }
@@ -114,56 +141,134 @@ public final class SubAccountState extends com.pulumi.resources.ResourceArgs {
             $ = new SubAccountState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountId The billing account id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(@Nullable Output<String> billingAccountId) {
             $.billingAccountId = billingAccountId;
             return this;
         }
 
+        /**
+         * @param billingAccountId The billing account id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountId(String billingAccountId) {
             return billingAccountId(Output.of(billingAccountId));
         }
 
+        /**
+         * @param deletionPolicy If set to &#34;RENAME_ON_DESTROY&#34; the billing account display_name
+         * will be changed to &#34;Destroyed&#34; along with a timestamp.  If set to &#34;&#34; this will not occur.
+         * Default is &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionPolicy(@Nullable Output<String> deletionPolicy) {
             $.deletionPolicy = deletionPolicy;
             return this;
         }
 
+        /**
+         * @param deletionPolicy If set to &#34;RENAME_ON_DESTROY&#34; the billing account display_name
+         * will be changed to &#34;Destroyed&#34; along with a timestamp.  If set to &#34;&#34; this will not occur.
+         * Default is &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletionPolicy(String deletionPolicy) {
             return deletionPolicy(Output.of(deletionPolicy));
         }
 
+        /**
+         * @param displayName The display name of the billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param masterBillingAccount The name of the master billing account that the subaccount
+         * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterBillingAccount(@Nullable Output<String> masterBillingAccount) {
             $.masterBillingAccount = masterBillingAccount;
             return this;
         }
 
+        /**
+         * @param masterBillingAccount The name of the master billing account that the subaccount
+         * will be created under in the form `{billing_account_id}` or `billingAccounts/{billing_account_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterBillingAccount(String masterBillingAccount) {
             return masterBillingAccount(Output.of(masterBillingAccount));
         }
 
+        /**
+         * @param name The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the billing account in the form `billingAccounts/{billing_account_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param open `true` if the billing account is open, `false` if the billing account is closed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder open(@Nullable Output<Boolean> open) {
             $.open = open;
             return this;
         }
 
+        /**
+         * @param open `true` if the billing account is open, `false` if the billing account is closed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder open(Boolean open) {
             return open(Output.of(open));
         }

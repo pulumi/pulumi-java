@@ -21,7 +21,7 @@ public final class GetBackendBucketResult {
     private final String description;
     private final Boolean enableCdn;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -72,9 +72,9 @@ public final class GetBackendBucketResult {
         return this.enableCdn;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

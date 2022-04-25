@@ -22,6 +22,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
     @Import(name="dayOfWeeks", required=true)
     private Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks;
 
+    /**
+     * @return May contain up to seven (one for each day of the week) snapshot times.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks() {
         return this.dayOfWeeks;
     }
@@ -50,15 +55,36 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGet
             $ = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dayOfWeeks May contain up to seven (one for each day of the week) snapshot times.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(Output<List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs>> dayOfWeeks) {
             $.dayOfWeeks = dayOfWeeks;
             return this;
         }
 
+        /**
+         * @param dayOfWeeks May contain up to seven (one for each day of the week) snapshot times.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(List<ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs> dayOfWeeks) {
             return dayOfWeeks(Output.of(dayOfWeeks));
         }
 
+        /**
+         * @param dayOfWeeks May contain up to seven (one for each day of the week) snapshot times.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dayOfWeeks(ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekGetArgs... dayOfWeeks) {
             return dayOfWeeks(List.of(dayOfWeeks));
         }

@@ -23,6 +23,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs ext
     @Import(name="pullDeps")
     private @Nullable Output<Boolean> pullDeps;
 
+    /**
+     * @return Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+     * 
+     */
     public Optional<Output<Boolean>> pullDeps() {
         return Optional.ofNullable(this.pullDeps);
     }
@@ -34,6 +38,10 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs ext
     @Import(name="source", required=true)
     private Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> source;
 
+    /**
+     * @return Required. An rpm package.
+     * 
+     */
     public Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> source() {
         return this.source;
     }
@@ -63,20 +71,44 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs ext
             $ = new OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pullDeps Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDeps(@Nullable Output<Boolean> pullDeps) {
             $.pullDeps = pullDeps;
             return this;
         }
 
+        /**
+         * @param pullDeps Whether dependencies should also be installed. - install when false: `rpm --upgrade --replacepkgs package.rpm` - install when true: `yum -y install package.rpm` or `zypper -y install package.rpm`
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullDeps(Boolean pullDeps) {
             return pullDeps(Output.of(pullDeps));
         }
 
+        /**
+         * @param source Required. An rpm package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Required. An rpm package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpmSourceArgs source) {
             return source(Output.of(source));
         }

@@ -21,6 +21,11 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The folder’s display name.
+     * A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -33,6 +38,11 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parent", required=true)
     private Output<String> parent;
 
+    /**
+     * @return The resource name of the parent Folder or Organization.
+     * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+     * 
+     */
     public Output<String> parent() {
         return this.parent;
     }
@@ -62,20 +72,48 @@ public final class FolderArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FolderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The folder’s display name.
+         * A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The folder’s display name.
+         * A folder’s display name must be unique amongst its siblings, e.g. no two folders with the same parent can share the same display name. The display name must start and end with a letter or digit, may contain letters, digits, spaces, hyphens and underscores and can be no longer than 30 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param parent The resource name of the parent Folder or Organization.
+         * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The resource name of the parent Folder or Organization.
+         * Must be of the form `folders/{folder_id}` or `organizations/{org_id}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

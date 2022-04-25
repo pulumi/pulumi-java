@@ -25,6 +25,11 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends c
     @Import(name="maxFindingsPerInfoTypes")
     private @Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> maxFindingsPerInfoTypes;
 
+    /**
+     * @return Configuration of findings limit given for specified infoTypes.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>>> maxFindingsPerInfoTypes() {
         return Optional.ofNullable(this.maxFindingsPerInfoTypes);
     }
@@ -36,6 +41,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends c
     @Import(name="maxFindingsPerItem", required=true)
     private Output<Integer> maxFindingsPerItem;
 
+    /**
+     * @return Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
+     * 
+     */
     public Output<Integer> maxFindingsPerItem() {
         return this.maxFindingsPerItem;
     }
@@ -47,6 +56,10 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends c
     @Import(name="maxFindingsPerRequest", required=true)
     private Output<Integer> maxFindingsPerRequest;
 
+    /**
+     * @return Max number of findings that will be returned per request/job. The maximum returned is 2000.
+     * 
+     */
     public Output<Integer> maxFindingsPerRequest() {
         return this.maxFindingsPerRequest;
     }
@@ -77,33 +90,78 @@ public final class PreventionInspectTemplateInspectConfigLimitsGetArgs extends c
             $ = new PreventionInspectTemplateInspectConfigLimitsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxFindingsPerInfoTypes Configuration of findings limit given for specified infoTypes.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerInfoTypes(@Nullable Output<List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs>> maxFindingsPerInfoTypes) {
             $.maxFindingsPerInfoTypes = maxFindingsPerInfoTypes;
             return this;
         }
 
+        /**
+         * @param maxFindingsPerInfoTypes Configuration of findings limit given for specified infoTypes.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerInfoTypes(List<PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs> maxFindingsPerInfoTypes) {
             return maxFindingsPerInfoTypes(Output.of(maxFindingsPerInfoTypes));
         }
 
+        /**
+         * @param maxFindingsPerInfoTypes Configuration of findings limit given for specified infoTypes.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerInfoTypes(PreventionInspectTemplateInspectConfigLimitsMaxFindingsPerInfoTypeGetArgs... maxFindingsPerInfoTypes) {
             return maxFindingsPerInfoTypes(List.of(maxFindingsPerInfoTypes));
         }
 
+        /**
+         * @param maxFindingsPerItem Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerItem(Output<Integer> maxFindingsPerItem) {
             $.maxFindingsPerItem = maxFindingsPerItem;
             return this;
         }
 
+        /**
+         * @param maxFindingsPerItem Max number of findings that will be returned for each item scanned. The maximum returned is 2000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerItem(Integer maxFindingsPerItem) {
             return maxFindingsPerItem(Output.of(maxFindingsPerItem));
         }
 
+        /**
+         * @param maxFindingsPerRequest Max number of findings that will be returned per request/job. The maximum returned is 2000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerRequest(Output<Integer> maxFindingsPerRequest) {
             $.maxFindingsPerRequest = maxFindingsPerRequest;
             return this;
         }
 
+        /**
+         * @param maxFindingsPerRequest Max number of findings that will be returned per request/job. The maximum returned is 2000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxFindingsPerRequest(Integer maxFindingsPerRequest) {
             return maxFindingsPerRequest(Output.of(maxFindingsPerRequest));
         }

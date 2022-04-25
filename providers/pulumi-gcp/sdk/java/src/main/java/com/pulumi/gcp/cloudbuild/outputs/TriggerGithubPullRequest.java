@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerGithubPullRequest {
     /**
-     * Regex of branches to match.  Specify only one of branch or tag.
+     * @return Regex of branches to match.  Specify only one of branch or tag.
      * 
      */
     private final String branch;
     /**
-     * Whether to block builds on a &#34;/gcbrun&#34; comment from a repository owner or collaborator.
+     * @return Whether to block builds on a &#34;/gcbrun&#34; comment from a repository owner or collaborator.
      * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
      * 
      */
     private final @Nullable String commentControl;
     /**
-     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
      * 
      */
     private final @Nullable Boolean invertRegex;
@@ -40,24 +40,24 @@ public final class TriggerGithubPullRequest {
     }
 
     /**
-     * Regex of branches to match.  Specify only one of branch or tag.
+     * @return Regex of branches to match.  Specify only one of branch or tag.
      * 
-    */
+     */
     public String branch() {
         return this.branch;
     }
     /**
-     * Whether to block builds on a &#34;/gcbrun&#34; comment from a repository owner or collaborator.
+     * @return Whether to block builds on a &#34;/gcbrun&#34; comment from a repository owner or collaborator.
      * Possible values are `COMMENTS_DISABLED`, `COMMENTS_ENABLED`, and `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY`.
      * 
-    */
+     */
     public Optional<String> commentControl() {
         return Optional.ofNullable(this.commentControl);
     }
     /**
-     * Only trigger a build if the revision regex does NOT match the revision regex.
+     * @return Only trigger a build if the revision regex does NOT match the revision regex.
      * 
-    */
+     */
     public Optional<Boolean> invertRegex() {
         return Optional.ofNullable(this.invertRegex);
     }

@@ -21,6 +21,10 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="managedZone", required=true)
     private String managedZone;
 
+    /**
+     * @return The name or id of the Cloud DNS managed zone.
+     * 
+     */
     public String managedZone() {
         return this.managedZone;
     }
@@ -32,6 +36,10 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -61,11 +69,23 @@ public final class GetKeysArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedZone The name or id of the Cloud DNS managed zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedZone(String managedZone) {
             $.managedZone = managedZone;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If `project` is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

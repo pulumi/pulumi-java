@@ -19,6 +19,10 @@ public final class GetInstanceNetworkPerformanceConfig extends com.pulumi.resour
     @Import(name="totalEgressBandwidthTier", required=true)
     private String totalEgressBandwidthTier;
 
+    /**
+     * @return The egress bandwidth tier for the instance.
+     * 
+     */
     public String totalEgressBandwidthTier() {
         return this.totalEgressBandwidthTier;
     }
@@ -47,6 +51,12 @@ public final class GetInstanceNetworkPerformanceConfig extends com.pulumi.resour
             $ = new GetInstanceNetworkPerformanceConfig(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param totalEgressBandwidthTier The egress bandwidth tier for the instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalEgressBandwidthTier(String totalEgressBandwidthTier) {
             $.totalEgressBandwidthTier = totalEgressBandwidthTier;
             return this;

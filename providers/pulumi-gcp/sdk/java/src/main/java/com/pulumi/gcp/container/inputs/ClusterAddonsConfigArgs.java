@@ -31,6 +31,10 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="cloudrunConfig")
     private @Nullable Output<ClusterAddonsConfigCloudrunConfigArgs> cloudrunConfig;
 
+    /**
+     * @return . Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigCloudrunConfigArgs>> cloudrunConfig() {
         return Optional.ofNullable(this.cloudrunConfig);
     }
@@ -43,6 +47,11 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="configConnectorConfig")
     private @Nullable Output<ClusterAddonsConfigConfigConnectorConfigArgs> configConnectorConfig;
 
+    /**
+     * @return .
+     * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigConfigConnectorConfigArgs>> configConnectorConfig() {
         return Optional.ofNullable(this.configConnectorConfig);
     }
@@ -56,6 +65,12 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="dnsCacheConfig")
     private @Nullable Output<ClusterAddonsConfigDnsCacheConfigArgs> dnsCacheConfig;
 
+    /**
+     * @return .
+     * The status of the NodeLocal DNSCache addon. It is disabled by default.
+     * Set `enabled = true` to enable.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigDnsCacheConfigArgs>> dnsCacheConfig() {
         return Optional.ofNullable(this.dnsCacheConfig);
     }
@@ -68,6 +83,11 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="gcePersistentDiskCsiDriverConfig")
     private @Nullable Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig;
 
+    /**
+     * @return .
+     * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs>> gcePersistentDiskCsiDriverConfig() {
         return Optional.ofNullable(this.gcePersistentDiskCsiDriverConfig);
     }
@@ -81,6 +101,12 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="gcpFilestoreCsiDriverConfig")
     private @Nullable Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig;
 
+    /**
+     * @return The status of the Filestore CSI driver addon,
+     * which allows the usage of filestore instance as volumes.
+     * It is disbaled by default; set `enabled = true` to enable.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs>> gcpFilestoreCsiDriverConfig() {
         return Optional.ofNullable(this.gcpFilestoreCsiDriverConfig);
     }
@@ -96,6 +122,14 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="horizontalPodAutoscaling")
     private @Nullable Output<ClusterAddonsConfigHorizontalPodAutoscalingArgs> horizontalPodAutoscaling;
 
+    /**
+     * @return The status of the Horizontal Pod Autoscaling
+     * addon, which increases or decreases the number of replica pods a replication controller
+     * has based on the resource usage of the existing pods.
+     * It is enabled by default;
+     * set `disabled = true` to disable.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigHorizontalPodAutoscalingArgs>> horizontalPodAutoscaling() {
         return Optional.ofNullable(this.horizontalPodAutoscaling);
     }
@@ -109,6 +143,12 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="httpLoadBalancing")
     private @Nullable Output<ClusterAddonsConfigHttpLoadBalancingArgs> httpLoadBalancing;
 
+    /**
+     * @return The status of the HTTP (L7) load balancing
+     * controller addon, which makes it easy to set up HTTP load balancers for services in a
+     * cluster. It is enabled by default; set `disabled = true` to disable.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigHttpLoadBalancingArgs>> httpLoadBalancing() {
         return Optional.ofNullable(this.httpLoadBalancing);
     }
@@ -121,6 +161,11 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="istioConfig")
     private @Nullable Output<ClusterAddonsConfigIstioConfigArgs> istioConfig;
 
+    /**
+     * @return .
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigIstioConfigArgs>> istioConfig() {
         return Optional.ofNullable(this.istioConfig);
     }
@@ -133,6 +178,11 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="kalmConfig")
     private @Nullable Output<ClusterAddonsConfigKalmConfigArgs> kalmConfig;
 
+    /**
+     * @return .
+     * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigKalmConfigArgs>> kalmConfig() {
         return Optional.ofNullable(this.kalmConfig);
     }
@@ -149,6 +199,15 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
     @Import(name="networkPolicyConfig")
     private @Nullable Output<ClusterAddonsConfigNetworkPolicyConfigArgs> networkPolicyConfig;
 
+    /**
+     * @return Whether we should enable the network policy addon
+     * for the master.  This must be enabled in order to enable network policy for the nodes.
+     * To enable this, you must also define a `network_policy` block,
+     * otherwise nothing will happen.
+     * It can only be disabled if the nodes already do not have network policies enabled.
+     * Defaults to disabled; set `disabled = false` to enable.
+     * 
+     */
     public Optional<Output<ClusterAddonsConfigNetworkPolicyConfigArgs>> networkPolicyConfig() {
         return Optional.ofNullable(this.networkPolicyConfig);
     }
@@ -186,92 +245,250 @@ public final class ClusterAddonsConfigArgs extends com.pulumi.resources.Resource
             $ = new ClusterAddonsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudrunConfig . Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudrunConfig(@Nullable Output<ClusterAddonsConfigCloudrunConfigArgs> cloudrunConfig) {
             $.cloudrunConfig = cloudrunConfig;
             return this;
         }
 
+        /**
+         * @param cloudrunConfig . Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudrunConfig(ClusterAddonsConfigCloudrunConfigArgs cloudrunConfig) {
             return cloudrunConfig(Output.of(cloudrunConfig));
         }
 
+        /**
+         * @param configConnectorConfig .
+         * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configConnectorConfig(@Nullable Output<ClusterAddonsConfigConfigConnectorConfigArgs> configConnectorConfig) {
             $.configConnectorConfig = configConnectorConfig;
             return this;
         }
 
+        /**
+         * @param configConnectorConfig .
+         * The status of the ConfigConnector addon. It is disabled by default; Set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configConnectorConfig(ClusterAddonsConfigConfigConnectorConfigArgs configConnectorConfig) {
             return configConnectorConfig(Output.of(configConnectorConfig));
         }
 
+        /**
+         * @param dnsCacheConfig .
+         * The status of the NodeLocal DNSCache addon. It is disabled by default.
+         * Set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsCacheConfig(@Nullable Output<ClusterAddonsConfigDnsCacheConfigArgs> dnsCacheConfig) {
             $.dnsCacheConfig = dnsCacheConfig;
             return this;
         }
 
+        /**
+         * @param dnsCacheConfig .
+         * The status of the NodeLocal DNSCache addon. It is disabled by default.
+         * Set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsCacheConfig(ClusterAddonsConfigDnsCacheConfigArgs dnsCacheConfig) {
             return dnsCacheConfig(Output.of(dnsCacheConfig));
         }
 
+        /**
+         * @param gcePersistentDiskCsiDriverConfig .
+         * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcePersistentDiskCsiDriverConfig(@Nullable Output<ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs> gcePersistentDiskCsiDriverConfig) {
             $.gcePersistentDiskCsiDriverConfig = gcePersistentDiskCsiDriverConfig;
             return this;
         }
 
+        /**
+         * @param gcePersistentDiskCsiDriverConfig .
+         * Whether this cluster should enable the Google Compute Engine Persistent Disk Container Storage Interface (CSI) Driver. Defaults to disabled; set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcePersistentDiskCsiDriverConfig(ClusterAddonsConfigGcePersistentDiskCsiDriverConfigArgs gcePersistentDiskCsiDriverConfig) {
             return gcePersistentDiskCsiDriverConfig(Output.of(gcePersistentDiskCsiDriverConfig));
         }
 
+        /**
+         * @param gcpFilestoreCsiDriverConfig The status of the Filestore CSI driver addon,
+         * which allows the usage of filestore instance as volumes.
+         * It is disbaled by default; set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcpFilestoreCsiDriverConfig(@Nullable Output<ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs> gcpFilestoreCsiDriverConfig) {
             $.gcpFilestoreCsiDriverConfig = gcpFilestoreCsiDriverConfig;
             return this;
         }
 
+        /**
+         * @param gcpFilestoreCsiDriverConfig The status of the Filestore CSI driver addon,
+         * which allows the usage of filestore instance as volumes.
+         * It is disbaled by default; set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcpFilestoreCsiDriverConfig(ClusterAddonsConfigGcpFilestoreCsiDriverConfigArgs gcpFilestoreCsiDriverConfig) {
             return gcpFilestoreCsiDriverConfig(Output.of(gcpFilestoreCsiDriverConfig));
         }
 
+        /**
+         * @param horizontalPodAutoscaling The status of the Horizontal Pod Autoscaling
+         * addon, which increases or decreases the number of replica pods a replication controller
+         * has based on the resource usage of the existing pods.
+         * It is enabled by default;
+         * set `disabled = true` to disable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder horizontalPodAutoscaling(@Nullable Output<ClusterAddonsConfigHorizontalPodAutoscalingArgs> horizontalPodAutoscaling) {
             $.horizontalPodAutoscaling = horizontalPodAutoscaling;
             return this;
         }
 
+        /**
+         * @param horizontalPodAutoscaling The status of the Horizontal Pod Autoscaling
+         * addon, which increases or decreases the number of replica pods a replication controller
+         * has based on the resource usage of the existing pods.
+         * It is enabled by default;
+         * set `disabled = true` to disable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder horizontalPodAutoscaling(ClusterAddonsConfigHorizontalPodAutoscalingArgs horizontalPodAutoscaling) {
             return horizontalPodAutoscaling(Output.of(horizontalPodAutoscaling));
         }
 
+        /**
+         * @param httpLoadBalancing The status of the HTTP (L7) load balancing
+         * controller addon, which makes it easy to set up HTTP load balancers for services in a
+         * cluster. It is enabled by default; set `disabled = true` to disable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpLoadBalancing(@Nullable Output<ClusterAddonsConfigHttpLoadBalancingArgs> httpLoadBalancing) {
             $.httpLoadBalancing = httpLoadBalancing;
             return this;
         }
 
+        /**
+         * @param httpLoadBalancing The status of the HTTP (L7) load balancing
+         * controller addon, which makes it easy to set up HTTP load balancers for services in a
+         * cluster. It is enabled by default; set `disabled = true` to disable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpLoadBalancing(ClusterAddonsConfigHttpLoadBalancingArgs httpLoadBalancing) {
             return httpLoadBalancing(Output.of(httpLoadBalancing));
         }
 
+        /**
+         * @param istioConfig .
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder istioConfig(@Nullable Output<ClusterAddonsConfigIstioConfigArgs> istioConfig) {
             $.istioConfig = istioConfig;
             return this;
         }
 
+        /**
+         * @param istioConfig .
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder istioConfig(ClusterAddonsConfigIstioConfigArgs istioConfig) {
             return istioConfig(Output.of(istioConfig));
         }
 
+        /**
+         * @param kalmConfig .
+         * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kalmConfig(@Nullable Output<ClusterAddonsConfigKalmConfigArgs> kalmConfig) {
             $.kalmConfig = kalmConfig;
             return this;
         }
 
+        /**
+         * @param kalmConfig .
+         * Configuration for the KALM addon, which manages the lifecycle of k8s. It is disabled by default; Set `enabled = true` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kalmConfig(ClusterAddonsConfigKalmConfigArgs kalmConfig) {
             return kalmConfig(Output.of(kalmConfig));
         }
 
+        /**
+         * @param networkPolicyConfig Whether we should enable the network policy addon
+         * for the master.  This must be enabled in order to enable network policy for the nodes.
+         * To enable this, you must also define a `network_policy` block,
+         * otherwise nothing will happen.
+         * It can only be disabled if the nodes already do not have network policies enabled.
+         * Defaults to disabled; set `disabled = false` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicyConfig(@Nullable Output<ClusterAddonsConfigNetworkPolicyConfigArgs> networkPolicyConfig) {
             $.networkPolicyConfig = networkPolicyConfig;
             return this;
         }
 
+        /**
+         * @param networkPolicyConfig Whether we should enable the network policy addon
+         * for the master.  This must be enabled in order to enable network policy for the nodes.
+         * To enable this, you must also define a `network_policy` block,
+         * otherwise nothing will happen.
+         * It can only be disabled if the nodes already do not have network policies enabled.
+         * Defaults to disabled; set `disabled = false` to enable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkPolicyConfig(ClusterAddonsConfigNetworkPolicyConfigArgs networkPolicyConfig) {
             return networkPolicyConfig(Output.of(networkPolicyConfig));
         }

@@ -26,6 +26,12 @@ public final class SecurityPolicyRuleMatchGetArgs extends com.pulumi.resources.R
     @Import(name="config")
     private @Nullable Output<SecurityPolicyRuleMatchConfigGetArgs> config;
 
+    /**
+     * @return The configuration options available when specifying `versioned_expr`.
+     * This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SecurityPolicyRuleMatchConfigGetArgs>> config() {
         return Optional.ofNullable(this.config);
     }
@@ -39,6 +45,12 @@ public final class SecurityPolicyRuleMatchGetArgs extends com.pulumi.resources.R
     @Import(name="expr")
     private @Nullable Output<SecurityPolicyRuleMatchExprGetArgs> expr;
 
+    /**
+     * @return User defined CEVAL expression. A CEVAL expression is used to specify match criteria
+     * such as origin.ip, source.region_code and contents in the request header.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<SecurityPolicyRuleMatchExprGetArgs>> expr() {
         return Optional.ofNullable(this.expr);
     }
@@ -52,6 +64,12 @@ public final class SecurityPolicyRuleMatchGetArgs extends com.pulumi.resources.R
     @Import(name="versionedExpr")
     private @Nullable Output<String> versionedExpr;
 
+    /**
+     * @return Predefined rule expression. If this field is specified, `config` must also be specified.
+     * Available options:
+     * * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
+     * 
+     */
     public Optional<Output<String>> versionedExpr() {
         return Optional.ofNullable(this.versionedExpr);
     }
@@ -82,29 +100,77 @@ public final class SecurityPolicyRuleMatchGetArgs extends com.pulumi.resources.R
             $ = new SecurityPolicyRuleMatchGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param config The configuration options available when specifying `versioned_expr`.
+         * This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(@Nullable Output<SecurityPolicyRuleMatchConfigGetArgs> config) {
             $.config = config;
             return this;
         }
 
+        /**
+         * @param config The configuration options available when specifying `versioned_expr`.
+         * This field must be specified if `versioned_expr` is specified and cannot be specified if `versioned_expr` is not specified.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder config(SecurityPolicyRuleMatchConfigGetArgs config) {
             return config(Output.of(config));
         }
 
+        /**
+         * @param expr User defined CEVAL expression. A CEVAL expression is used to specify match criteria
+         * such as origin.ip, source.region_code and contents in the request header.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expr(@Nullable Output<SecurityPolicyRuleMatchExprGetArgs> expr) {
             $.expr = expr;
             return this;
         }
 
+        /**
+         * @param expr User defined CEVAL expression. A CEVAL expression is used to specify match criteria
+         * such as origin.ip, source.region_code and contents in the request header.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expr(SecurityPolicyRuleMatchExprGetArgs expr) {
             return expr(Output.of(expr));
         }
 
+        /**
+         * @param versionedExpr Predefined rule expression. If this field is specified, `config` must also be specified.
+         * Available options:
+         * * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionedExpr(@Nullable Output<String> versionedExpr) {
             $.versionedExpr = versionedExpr;
             return this;
         }
 
+        /**
+         * @param versionedExpr Predefined rule expression. If this field is specified, `config` must also be specified.
+         * Available options:
+         * * SRC_IPS_V1: Must specify the corresponding `src_ip_ranges` field in `config`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionedExpr(String versionedExpr) {
             return versionedExpr(Output.of(versionedExpr));
         }

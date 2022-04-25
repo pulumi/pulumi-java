@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ProjectFeedFeedOutputConfig {
     /**
-     * Destination on Cloud Pubsub.
+     * @return Destination on Cloud Pubsub.
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class ProjectFeedFeedOutputConfig {
     }
 
     /**
-     * Destination on Cloud Pubsub.
+     * @return Destination on Cloud Pubsub.
      * Structure is documented below.
      * 
-    */
+     */
     public ProjectFeedFeedOutputConfigPubsubDestination pubsubDestination() {
         return this.pubsubDestination;
     }

@@ -20,6 +20,10 @@ public final class SharedVPCHostProjectArgs extends com.pulumi.resources.Resourc
     @Import(name="project", required=true)
     private Output<String> project;
 
+    /**
+     * @return The ID of the project that will serve as a Shared VPC host project
+     * 
+     */
     public Output<String> project() {
         return this.project;
     }
@@ -48,11 +52,23 @@ public final class SharedVPCHostProjectArgs extends com.pulumi.resources.Resourc
             $ = new SharedVPCHostProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The ID of the project that will serve as a Shared VPC host project
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project that will serve as a Shared VPC host project
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

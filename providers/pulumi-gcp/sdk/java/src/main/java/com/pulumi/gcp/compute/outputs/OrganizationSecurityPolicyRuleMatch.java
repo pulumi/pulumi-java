@@ -13,18 +13,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrganizationSecurityPolicyRuleMatch {
     /**
-     * The configuration options for matching the rule.
+     * @return The configuration options for matching the rule.
      * Structure is documented below.
      * 
      */
     private final OrganizationSecurityPolicyRuleMatchConfig config;
     /**
-     * A description of the rule.
+     * @return A description of the rule.
      * 
      */
     private final @Nullable String description;
     /**
-     * Preconfigured versioned expression. For organization security policy rules,
+     * @return Preconfigured versioned expression. For organization security policy rules,
      * the only supported type is &#34;FIREWALL&#34;.
      * Default value is `FIREWALL`.
      * Possible values are `FIREWALL`.
@@ -43,27 +43,27 @@ public final class OrganizationSecurityPolicyRuleMatch {
     }
 
     /**
-     * The configuration options for matching the rule.
+     * @return The configuration options for matching the rule.
      * Structure is documented below.
      * 
-    */
+     */
     public OrganizationSecurityPolicyRuleMatchConfig config() {
         return this.config;
     }
     /**
-     * A description of the rule.
+     * @return A description of the rule.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Preconfigured versioned expression. For organization security policy rules,
+     * @return Preconfigured versioned expression. For organization security policy rules,
      * the only supported type is &#34;FIREWALL&#34;.
      * Default value is `FIREWALL`.
      * Possible values are `FIREWALL`.
      * 
-    */
+     */
     public Optional<String> versionedExpr() {
         return Optional.ofNullable(this.versionedExpr);
     }

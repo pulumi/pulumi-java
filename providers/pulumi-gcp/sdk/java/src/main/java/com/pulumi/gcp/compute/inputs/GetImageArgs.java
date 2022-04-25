@@ -21,6 +21,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="family")
     private @Nullable String family;
 
+    /**
+     * @return The family name of the image.
+     * 
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
@@ -39,6 +43,10 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the image.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -52,6 +60,12 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The project in which the resource belongs. If it is not
+     * provided, the provider project is used. If you are using a
+     * [public base image][pubimg], be sure to specify the correct Image Project.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -83,6 +97,12 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param family The family name of the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable String family) {
             $.family = family;
             return this;
@@ -93,11 +113,25 @@ public final class GetImageArgs extends com.pulumi.resources.InvokeArgs {
             return this;
         }
 
+        /**
+         * @param name The name of the image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The project in which the resource belongs. If it is not
+         * provided, the provider project is used. If you are using a
+         * [public base image][pubimg], be sure to specify the correct Image Project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;

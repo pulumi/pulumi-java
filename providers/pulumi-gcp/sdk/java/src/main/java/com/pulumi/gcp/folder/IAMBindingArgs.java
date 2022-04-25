@@ -31,6 +31,10 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="folder", required=true)
     private Output<String> folder;
 
+    /**
+     * @return The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+     * 
+     */
     public Output<String> folder() {
         return this.folder;
     }
@@ -48,6 +52,16 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="members", required=true)
     private Output<List<String>> members;
 
+    /**
+     * @return An array of identities that will be granted the privilege in the `role`.
+     * Each entry can have one of the following values:
+     * * **user:{emailid}**: An email address that is associated with a specific Google account. For example, alice@gmail.com.
+     * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+     * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+     * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+     * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+     * 
+     */
     public Output<List<String>> members() {
         return this.members;
     }
@@ -61,6 +75,12 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role", required=true)
     private Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.folder.IAMBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+     * 
+     */
     public Output<String> role() {
         return this.role;
     }
@@ -101,33 +121,97 @@ public final class IAMBindingArgs extends com.pulumi.resources.ResourceArgs {
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param folder The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(Output<String> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The resource name of the folder the policy is attached to. Its format is folders/{folder_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(String folder) {
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param members An array of identities that will be granted the privilege in the `role`.
+         * Each entry can have one of the following values:
+         * * **user:{emailid}**: An email address that is associated with a specific Google account. For example, alice@gmail.com.
+         * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+         * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+         * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+         * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(Output<List<String>> members) {
             $.members = members;
             return this;
         }
 
+        /**
+         * @param members An array of identities that will be granted the privilege in the `role`.
+         * Each entry can have one of the following values:
+         * * **user:{emailid}**: An email address that is associated with a specific Google account. For example, alice@gmail.com.
+         * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+         * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+         * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+         * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(List<String> members) {
             return members(Output.of(members));
         }
 
+        /**
+         * @param members An array of identities that will be granted the privilege in the `role`.
+         * Each entry can have one of the following values:
+         * * **user:{emailid}**: An email address that is associated with a specific Google account. For example, alice@gmail.com.
+         * * **serviceAccount:{emailid}**: An email address that represents a service account. For example, my-other-app@appspot.gserviceaccount.com.
+         * * **group:{emailid}**: An email address that represents a Google group. For example, admins@example.com.
+         * * **domain:{domain}**: A G Suite domain (primary, instead of alias) name that represents all the users of that domain. For example, google.com or example.com.
+         * * For more details on format and restrictions see https://cloud.google.com/billing/reference/rest/v1/Policy#Binding
+         * 
+         * @return builder
+         * 
+         */
         public Builder members(String... members) {
             return members(List.of(members));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.folder.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.folder.IAMBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

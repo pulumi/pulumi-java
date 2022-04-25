@@ -14,14 +14,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StandardAppVersionDeployment {
     /**
-     * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * @return Manifest of the files stored in Google Cloud Storage that are included as part of this version.
      * All files must be readable using the credentials supplied with this call.
      * Structure is documented below.
      * 
      */
     private final @Nullable List<StandardAppVersionDeploymentFile> files;
     /**
-     * Zip File
+     * @return Zip File
      * Structure is documented below.
      * 
      */
@@ -36,19 +36,19 @@ public final class StandardAppVersionDeployment {
     }
 
     /**
-     * Manifest of the files stored in Google Cloud Storage that are included as part of this version.
+     * @return Manifest of the files stored in Google Cloud Storage that are included as part of this version.
      * All files must be readable using the credentials supplied with this call.
      * Structure is documented below.
      * 
-    */
+     */
     public List<StandardAppVersionDeploymentFile> files() {
         return this.files == null ? List.of() : this.files;
     }
     /**
-     * Zip File
+     * @return Zip File
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<StandardAppVersionDeploymentZip> zip() {
         return Optional.ofNullable(this.zip);
     }

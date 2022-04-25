@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRule {
     /**
-     * Dictionary which defines the rule.
+     * @return Dictionary which defines the rule.
      * Structure is documented below.
      * 
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary dictionary;
     /**
-     * Set of infoTypes for which findings would affect this rule.
+     * @return Set of infoTypes for which findings would affect this rule.
      * Structure is documented below.
      * 
      */
     private final @Nullable PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes excludeInfoTypes;
     /**
-     * How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
+     * @return How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
      * Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
      * 
      */
     private final String matchingType;
     /**
-     * Regular expression which defines the rule.
+     * @return Regular expression which defines the rule.
      * Structure is documented below.
      * 
      */
@@ -52,34 +52,34 @@ public final class PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRul
     }
 
     /**
-     * Dictionary which defines the rule.
+     * @return Dictionary which defines the rule.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleDictionary> dictionary() {
         return Optional.ofNullable(this.dictionary);
     }
     /**
-     * Set of infoTypes for which findings would affect this rule.
+     * @return Set of infoTypes for which findings would affect this rule.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleExcludeInfoTypes> excludeInfoTypes() {
         return Optional.ofNullable(this.excludeInfoTypes);
     }
     /**
-     * How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
+     * @return How the rule is applied. See the documentation for more information: https://cloud.google.com/dlp/docs/reference/rest/v2/InspectConfig#MatchingType
      * Possible values are `MATCHING_TYPE_FULL_MATCH`, `MATCHING_TYPE_PARTIAL_MATCH`, and `MATCHING_TYPE_INVERSE_MATCH`.
      * 
-    */
+     */
     public String matchingType() {
         return this.matchingType;
     }
     /**
-     * Regular expression which defines the rule.
+     * @return Regular expression which defines the rule.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<PreventionInspectTemplateInspectConfigRuleSetRuleExclusionRuleRegex> regex() {
         return Optional.ofNullable(this.regex);
     }

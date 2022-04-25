@@ -23,6 +23,10 @@ public final class SecurityScanConfigScheduleArgs extends com.pulumi.resources.R
     @Import(name="intervalDurationDays", required=true)
     private Output<Integer> intervalDurationDays;
 
+    /**
+     * @return The duration of time between executions in days
+     * 
+     */
     public Output<Integer> intervalDurationDays() {
         return this.intervalDurationDays;
     }
@@ -36,6 +40,12 @@ public final class SecurityScanConfigScheduleArgs extends com.pulumi.resources.R
     @Import(name="scheduleTime")
     private @Nullable Output<String> scheduleTime;
 
+    /**
+     * @return A timestamp indicates when the next run will be scheduled. The value is refreshed
+     * by the server after each run. If unspecified, it will default to current server time,
+     * which means the scan will be scheduled to start immediately.
+     * 
+     */
     public Optional<Output<String>> scheduleTime() {
         return Optional.ofNullable(this.scheduleTime);
     }
@@ -65,20 +75,48 @@ public final class SecurityScanConfigScheduleArgs extends com.pulumi.resources.R
             $ = new SecurityScanConfigScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param intervalDurationDays The duration of time between executions in days
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalDurationDays(Output<Integer> intervalDurationDays) {
             $.intervalDurationDays = intervalDurationDays;
             return this;
         }
 
+        /**
+         * @param intervalDurationDays The duration of time between executions in days
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalDurationDays(Integer intervalDurationDays) {
             return intervalDurationDays(Output.of(intervalDurationDays));
         }
 
+        /**
+         * @param scheduleTime A timestamp indicates when the next run will be scheduled. The value is refreshed
+         * by the server after each run. If unspecified, it will default to current server time,
+         * which means the scan will be scheduled to start immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTime(@Nullable Output<String> scheduleTime) {
             $.scheduleTime = scheduleTime;
             return this;
         }
 
+        /**
+         * @param scheduleTime A timestamp indicates when the next run will be scheduled. The value is refreshed
+         * by the server after each run. If unspecified, it will default to current server time,
+         * which means the scan will be scheduled to start immediately.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleTime(String scheduleTime) {
             return scheduleTime(Output.of(scheduleTime));
         }

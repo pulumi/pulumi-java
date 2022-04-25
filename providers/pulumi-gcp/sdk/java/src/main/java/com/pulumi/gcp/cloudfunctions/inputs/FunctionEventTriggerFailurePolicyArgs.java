@@ -20,6 +20,10 @@ public final class FunctionEventTriggerFailurePolicyArgs extends com.pulumi.reso
     @Import(name="retry", required=true)
     private Output<Boolean> retry;
 
+    /**
+     * @return Whether the function should be retried on failure. Defaults to `false`.
+     * 
+     */
     public Output<Boolean> retry() {
         return this.retry;
     }
@@ -48,11 +52,23 @@ public final class FunctionEventTriggerFailurePolicyArgs extends com.pulumi.reso
             $ = new FunctionEventTriggerFailurePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retry Whether the function should be retried on failure. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retry(Output<Boolean> retry) {
             $.retry = retry;
             return this;
         }
 
+        /**
+         * @param retry Whether the function should be retried on failure. Defaults to `false`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retry(Boolean retry) {
             return retry(Output.of(retry));
         }

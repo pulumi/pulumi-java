@@ -23,6 +23,10 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends com.pulumi.resourc
     @Import(name="testingChallenge")
     private @Nullable Output<String> testingChallenge;
 
+    /**
+     * @return For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
+     * 
+     */
     public Optional<Output<String>> testingChallenge() {
         return Optional.ofNullable(this.testingChallenge);
     }
@@ -34,6 +38,10 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends com.pulumi.resourc
     @Import(name="testingScore")
     private @Nullable Output<Double> testingScore;
 
+    /**
+     * @return All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+     * 
+     */
     public Optional<Output<Double>> testingScore() {
         return Optional.ofNullable(this.testingScore);
     }
@@ -63,20 +71,44 @@ public final class EnterpriseKeyTestingOptionsGetArgs extends com.pulumi.resourc
             $ = new EnterpriseKeyTestingOptionsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param testingChallenge For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingChallenge(@Nullable Output<String> testingChallenge) {
             $.testingChallenge = testingChallenge;
             return this;
         }
 
+        /**
+         * @param testingChallenge For challenge-based keys only (CHECKBOX, INVISIBLE), all challenge requests for this site will return nocaptcha if NOCAPTCHA, or an unsolvable challenge if UNSOLVABLE_CHALLENGE. Possible values: TESTING_CHALLENGE_UNSPECIFIED, NOCAPTCHA, UNSOLVABLE_CHALLENGE
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingChallenge(String testingChallenge) {
             return testingChallenge(Output.of(testingChallenge));
         }
 
+        /**
+         * @param testingScore All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingScore(@Nullable Output<Double> testingScore) {
             $.testingScore = testingScore;
             return this;
         }
 
+        /**
+         * @param testingScore All assessments for this Key will return this score. Must be between 0 (likely not legitimate) and 1 (likely legitimate) inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testingScore(Double testingScore) {
             return testingScore(Output.of(testingScore));
         }

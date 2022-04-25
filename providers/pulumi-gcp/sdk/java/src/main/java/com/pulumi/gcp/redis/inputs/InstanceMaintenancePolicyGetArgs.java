@@ -27,6 +27,13 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return -
+     * Output only. The time when the policy was created.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -40,6 +47,12 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of what this policy is for.
+     * Create/Update methods return INVALID_ARGUMENT if the
+     * length is greater than 512.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -54,6 +67,13 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return -
+     * Output only. The time when the policy was last updated.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+     * resolution and up to nine fractional digits.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -68,6 +88,13 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
     @Import(name="weeklyMaintenanceWindows")
     private @Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows;
 
+    /**
+     * @return Optional. Maintenance window that is applied to resources covered by this policy.
+     * Minimum 1. For the current version, the maximum number
+     * of weekly_window is expected to be one.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>>> weeklyMaintenanceWindows() {
         return Optional.ofNullable(this.weeklyMaintenanceWindows);
     }
@@ -99,42 +126,121 @@ public final class InstanceMaintenancePolicyGetArgs extends com.pulumi.resources
             $ = new InstanceMaintenancePolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime -
+         * Output only. The time when the policy was created.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime -
+         * Output only. The time when the policy was created.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param description Optional. Description of what this policy is for.
+         * Create/Update methods return INVALID_ARGUMENT if the
+         * length is greater than 512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of what this policy is for.
+         * Create/Update methods return INVALID_ARGUMENT if the
+         * length is greater than 512.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param updateTime -
+         * Output only. The time when the policy was last updated.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime -
+         * Output only. The time when the policy was last updated.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, with nanosecond
+         * resolution and up to nine fractional digits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }
 
+        /**
+         * @param weeklyMaintenanceWindows Optional. Maintenance window that is applied to resources covered by this policy.
+         * Minimum 1. For the current version, the maximum number
+         * of weekly_window is expected to be one.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceWindows(@Nullable Output<List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs>> weeklyMaintenanceWindows) {
             $.weeklyMaintenanceWindows = weeklyMaintenanceWindows;
             return this;
         }
 
+        /**
+         * @param weeklyMaintenanceWindows Optional. Maintenance window that is applied to resources covered by this policy.
+         * Minimum 1. For the current version, the maximum number
+         * of weekly_window is expected to be one.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceWindows(List<InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs> weeklyMaintenanceWindows) {
             return weeklyMaintenanceWindows(Output.of(weeklyMaintenanceWindows));
         }
 
+        /**
+         * @param weeklyMaintenanceWindows Optional. Maintenance window that is applied to resources covered by this policy.
+         * Minimum 1. For the current version, the maximum number
+         * of weekly_window is expected to be one.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weeklyMaintenanceWindows(InstanceMaintenancePolicyWeeklyMaintenanceWindowGetArgs... weeklyMaintenanceWindows) {
             return weeklyMaintenanceWindows(List.of(weeklyMaintenanceWindows));
         }

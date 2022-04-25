@@ -11,7 +11,7 @@ import java.util.Objects;
 public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
     private final String key;
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
      */
     private final String name;
@@ -28,9 +28,9 @@ public final class GetServiceTemplateSpecContainerEnvValueFromSecretKeyRef {
         return this.key;
     }
     /**
-     * The name of the Cloud Run Service.
+     * @return The name of the Cloud Run Service.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

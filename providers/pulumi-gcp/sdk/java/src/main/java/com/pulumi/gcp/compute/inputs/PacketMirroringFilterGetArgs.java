@@ -24,6 +24,11 @@ public final class PacketMirroringFilterGetArgs extends com.pulumi.resources.Res
     @Import(name="cidrRanges")
     private @Nullable Output<List<String>> cidrRanges;
 
+    /**
+     * @return IP CIDR ranges that apply as a filter on the source (ingress) or
+     * destination (egress) IP in the IP header. Only IPv4 is supported.
+     * 
+     */
     public Optional<Output<List<String>>> cidrRanges() {
         return Optional.ofNullable(this.cidrRanges);
     }
@@ -37,6 +42,12 @@ public final class PacketMirroringFilterGetArgs extends com.pulumi.resources.Res
     @Import(name="direction")
     private @Nullable Output<String> direction;
 
+    /**
+     * @return Direction of traffic to mirror.
+     * Default value is `BOTH`.
+     * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+     * 
+     */
     public Optional<Output<String>> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -49,6 +60,11 @@ public final class PacketMirroringFilterGetArgs extends com.pulumi.resources.Res
     @Import(name="ipProtocols")
     private @Nullable Output<List<String>> ipProtocols;
 
+    /**
+     * @return Protocols that apply as a filter on mirrored traffic.
+     * Each value may be one of `tcp`, `udp`, and `icmp`.
+     * 
+     */
     public Optional<Output<List<String>>> ipProtocols() {
         return Optional.ofNullable(this.ipProtocols);
     }
@@ -79,37 +95,95 @@ public final class PacketMirroringFilterGetArgs extends com.pulumi.resources.Res
             $ = new PacketMirroringFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cidrRanges IP CIDR ranges that apply as a filter on the source (ingress) or
+         * destination (egress) IP in the IP header. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrRanges(@Nullable Output<List<String>> cidrRanges) {
             $.cidrRanges = cidrRanges;
             return this;
         }
 
+        /**
+         * @param cidrRanges IP CIDR ranges that apply as a filter on the source (ingress) or
+         * destination (egress) IP in the IP header. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrRanges(List<String> cidrRanges) {
             return cidrRanges(Output.of(cidrRanges));
         }
 
+        /**
+         * @param cidrRanges IP CIDR ranges that apply as a filter on the source (ingress) or
+         * destination (egress) IP in the IP header. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cidrRanges(String... cidrRanges) {
             return cidrRanges(List.of(cidrRanges));
         }
 
+        /**
+         * @param direction Direction of traffic to mirror.
+         * Default value is `BOTH`.
+         * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Output<String> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction Direction of traffic to mirror.
+         * Default value is `BOTH`.
+         * Possible values are `INGRESS`, `EGRESS`, and `BOTH`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param ipProtocols Protocols that apply as a filter on mirrored traffic.
+         * Each value may be one of `tcp`, `udp`, and `icmp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(@Nullable Output<List<String>> ipProtocols) {
             $.ipProtocols = ipProtocols;
             return this;
         }
 
+        /**
+         * @param ipProtocols Protocols that apply as a filter on mirrored traffic.
+         * Each value may be one of `tcp`, `udp`, and `icmp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(List<String> ipProtocols) {
             return ipProtocols(Output.of(ipProtocols));
         }
 
+        /**
+         * @param ipProtocols Protocols that apply as a filter on mirrored traffic.
+         * Each value may be one of `tcp`, `udp`, and `icmp`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipProtocols(String... ipProtocols) {
             return ipProtocols(List.of(ipProtocols));
         }

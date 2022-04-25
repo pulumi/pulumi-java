@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay {
     /**
-     * Specifies the value of the fixed delay interval.
+     * @return Specifies the value of the fixed delay interval.
      * Structure is documented below.
      * 
      */
     private final URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay;
     /**
-     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * @return The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
      * The value must be between 0.0 and 100.0 inclusive.
      * 
      */
@@ -32,18 +32,18 @@ public final class URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelay
     }
 
     /**
-     * Specifies the value of the fixed delay interval.
+     * @return Specifies the value of the fixed delay interval.
      * Structure is documented below.
      * 
-    */
+     */
     public URLMapPathMatcherPathRuleRouteActionFaultInjectionPolicyDelayFixedDelay fixedDelay() {
         return this.fixedDelay;
     }
     /**
-     * The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
+     * @return The percentage of traffic (connections/operations/requests) which will be aborted as part of fault injection.
      * The value must be between 0.0 and 100.0 inclusive.
      * 
-    */
+     */
     public Double percentage() {
         return this.percentage;
     }

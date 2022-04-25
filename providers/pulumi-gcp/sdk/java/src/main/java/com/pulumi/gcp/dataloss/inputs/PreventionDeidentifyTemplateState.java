@@ -24,6 +24,11 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
     @Import(name="deidentifyConfig")
     private @Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> deidentifyConfig;
 
+    /**
+     * @return Configuration of the deidentify template
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionDeidentifyTemplateDeidentifyConfigGetArgs>> deidentifyConfig() {
         return Optional.ofNullable(this.deidentifyConfig);
     }
@@ -35,6 +40,10 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the template.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -46,6 +55,10 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return User set display name of the template.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -57,6 +70,10 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +89,14 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
     @Import(name="parent")
     private @Nullable Output<String> parent;
 
+    /**
+     * @return The parent of the template in any of the following formats:
+     * * `projects/{{project}}`
+     * * `projects/{{project}}/locations/{{location}}`
+     * * `organizations/{{organization_id}}`
+     * * `organizations/{{organization_id}}/locations/{{location}}`
+     * 
+     */
     public Optional<Output<String>> parent() {
         return Optional.ofNullable(this.parent);
     }
@@ -104,47 +129,117 @@ public final class PreventionDeidentifyTemplateState extends com.pulumi.resource
             $ = new PreventionDeidentifyTemplateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deidentifyConfig Configuration of the deidentify template
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deidentifyConfig(@Nullable Output<PreventionDeidentifyTemplateDeidentifyConfigGetArgs> deidentifyConfig) {
             $.deidentifyConfig = deidentifyConfig;
             return this;
         }
 
+        /**
+         * @param deidentifyConfig Configuration of the deidentify template
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deidentifyConfig(PreventionDeidentifyTemplateDeidentifyConfigGetArgs deidentifyConfig) {
             return deidentifyConfig(Output.of(deidentifyConfig));
         }
 
+        /**
+         * @param description A description of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName User set display name of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User set display name of the template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the information type. Either a name of your choosing when creating a CustomInfoType, or one of the names listed at [https://cloud.google.com/dlp/docs/infotypes-reference](https://cloud.google.com/dlp/docs/infotypes-reference) when specifying a built-in type. When sending Cloud DLP results to Data Catalog, infoType names should conform to the pattern `[A-Za-z0-9$-_]{1,64}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parent The parent of the template in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(@Nullable Output<String> parent) {
             $.parent = parent;
             return this;
         }
 
+        /**
+         * @param parent The parent of the template in any of the following formats:
+         * * `projects/{{project}}`
+         * * `projects/{{project}}/locations/{{location}}`
+         * * `organizations/{{organization_id}}`
+         * * `organizations/{{organization_id}}/locations/{{location}}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder parent(String parent) {
             return parent(Output.of(parent));
         }

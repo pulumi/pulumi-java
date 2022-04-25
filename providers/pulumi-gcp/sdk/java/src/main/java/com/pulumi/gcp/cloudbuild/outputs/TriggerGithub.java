@@ -14,26 +14,26 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TriggerGithub {
     /**
-     * Name of the volume to mount.
+     * @return Name of the volume to mount.
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
      */
     private final @Nullable String name;
     /**
-     * Owner of the repository. For example: The owner for
+     * @return Owner of the repository. For example: The owner for
      * https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
      */
     private final @Nullable String owner;
     /**
-     * filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
+     * @return filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
      * Structure is documented below.
      * 
      */
     private final @Nullable TriggerGithubPullRequest pullRequest;
     /**
-     * filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
+     * @return filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
      * Structure is documented below.
      * 
      */
@@ -52,35 +52,35 @@ public final class TriggerGithub {
     }
 
     /**
-     * Name of the volume to mount.
+     * @return Name of the volume to mount.
      * Volume names must be unique per build step and must be valid names for Docker volumes.
      * Each named volume must be used by at least two build steps.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Owner of the repository. For example: The owner for
+     * @return Owner of the repository. For example: The owner for
      * https://github.com/googlecloudplatform/cloud-builders is &#34;googlecloudplatform&#34;.
      * 
-    */
+     */
     public Optional<String> owner() {
         return Optional.ofNullable(this.owner);
     }
     /**
-     * filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
+     * @return filter to match changes in pull requests. Specify only one of `pull_request` or `push`.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerGithubPullRequest> pullRequest() {
         return Optional.ofNullable(this.pullRequest);
     }
     /**
-     * filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
+     * @return filter to match changes in refs, like branches or tags. Specify only one of `pull_request` or `push`.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<TriggerGithubPush> push() {
         return Optional.ofNullable(this.push);
     }

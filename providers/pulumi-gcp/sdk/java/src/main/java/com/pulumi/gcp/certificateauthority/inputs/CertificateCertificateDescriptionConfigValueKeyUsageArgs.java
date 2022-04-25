@@ -26,6 +26,11 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageArgs exte
     @Import(name="baseKeyUsages")
     private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs>> baseKeyUsages;
 
+    /**
+     * @return Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs>>> baseKeyUsages() {
         return Optional.ofNullable(this.baseKeyUsages);
     }
@@ -38,6 +43,11 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageArgs exte
     @Import(name="extendedKeyUsages")
     private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs>> extendedKeyUsages;
 
+    /**
+     * @return Describes high-level ways in which a key may be used.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs>>> extendedKeyUsages() {
         return Optional.ofNullable(this.extendedKeyUsages);
     }
@@ -50,6 +60,11 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageArgs exte
     @Import(name="unknownExtendedKeyUsages")
     private @Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages;
 
+    /**
+     * @return An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs>>> unknownExtendedKeyUsages() {
         return Optional.ofNullable(this.unknownExtendedKeyUsages);
     }
@@ -80,41 +95,104 @@ public final class CertificateCertificateDescriptionConfigValueKeyUsageArgs exte
             $ = new CertificateCertificateDescriptionConfigValueKeyUsageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseKeyUsages Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseKeyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs>> baseKeyUsages) {
             $.baseKeyUsages = baseKeyUsages;
             return this;
         }
 
+        /**
+         * @param baseKeyUsages Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseKeyUsages(List<CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs> baseKeyUsages) {
             return baseKeyUsages(Output.of(baseKeyUsages));
         }
 
+        /**
+         * @param baseKeyUsages Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageBaseKeyUsageArgs... baseKeyUsages) {
             return baseKeyUsages(List.of(baseKeyUsages));
         }
 
+        /**
+         * @param extendedKeyUsages Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedKeyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs>> extendedKeyUsages) {
             $.extendedKeyUsages = extendedKeyUsages;
             return this;
         }
 
+        /**
+         * @param extendedKeyUsages Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedKeyUsages(List<CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs> extendedKeyUsages) {
             return extendedKeyUsages(Output.of(extendedKeyUsages));
         }
 
+        /**
+         * @param extendedKeyUsages Describes high-level ways in which a key may be used.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageExtendedKeyUsageArgs... extendedKeyUsages) {
             return extendedKeyUsages(List.of(extendedKeyUsages));
         }
 
+        /**
+         * @param unknownExtendedKeyUsages An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknownExtendedKeyUsages(@Nullable Output<List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs>> unknownExtendedKeyUsages) {
             $.unknownExtendedKeyUsages = unknownExtendedKeyUsages;
             return this;
         }
 
+        /**
+         * @param unknownExtendedKeyUsages An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknownExtendedKeyUsages(List<CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs> unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(Output.of(unknownExtendedKeyUsages));
         }
 
+        /**
+         * @param unknownExtendedKeyUsages An ObjectId specifies an object identifier (OID). These provide context and describe types in ASN.1 messages.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unknownExtendedKeyUsages(CertificateCertificateDescriptionConfigValueKeyUsageUnknownExtendedKeyUsageArgs... unknownExtendedKeyUsages) {
             return unknownExtendedKeyUsages(List.of(unknownExtendedKeyUsages));
         }

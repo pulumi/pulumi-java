@@ -19,6 +19,10 @@ public final class GetGroupMembershipsArgs extends com.pulumi.resources.InvokeAr
     @Import(name="group", required=true)
     private String group;
 
+    /**
+     * @return The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+     * 
+     */
     public String group() {
         return this.group;
     }
@@ -47,6 +51,12 @@ public final class GetGroupMembershipsArgs extends com.pulumi.resources.InvokeAr
             $ = new GetGroupMembershipsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param group The parent Group resource under which to lookup the Membership names. Must be of the form groups/{group_id}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             $.group = group;
             return this;

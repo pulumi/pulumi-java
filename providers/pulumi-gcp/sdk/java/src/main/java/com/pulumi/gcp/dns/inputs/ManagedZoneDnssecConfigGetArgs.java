@@ -28,6 +28,14 @@ public final class ManagedZoneDnssecConfigGetArgs extends com.pulumi.resources.R
     @Import(name="defaultKeySpecs")
     private @Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs>> defaultKeySpecs;
 
+    /**
+     * @return Specifies parameters that will be used for generating initial DnsKeys
+     * for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
+     * you must also provide one for the other.
+     * default_key_specs can only be updated when the state is `off`.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs>>> defaultKeySpecs() {
         return Optional.ofNullable(this.defaultKeySpecs);
     }
@@ -39,6 +47,10 @@ public final class ManagedZoneDnssecConfigGetArgs extends com.pulumi.resources.R
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Identifies what kind of resource this is
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -52,6 +64,12 @@ public final class ManagedZoneDnssecConfigGetArgs extends com.pulumi.resources.R
     @Import(name="nonExistence")
     private @Nullable Output<String> nonExistence;
 
+    /**
+     * @return Specifies the mechanism used to provide authenticated denial-of-existence responses.
+     * non_existence can only be updated when the state is `off`.
+     * Possible values are `nsec` and `nsec3`.
+     * 
+     */
     public Optional<Output<String>> nonExistence() {
         return Optional.ofNullable(this.nonExistence);
     }
@@ -64,6 +82,11 @@ public final class ManagedZoneDnssecConfigGetArgs extends com.pulumi.resources.R
     @Import(name="state")
     private @Nullable Output<String> state;
 
+    /**
+     * @return Specifies whether DNSSEC is enabled, and what mode it is in
+     * Possible values are `off`, `on`, and `transfer`.
+     * 
+     */
     public Optional<Output<String>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -95,42 +118,114 @@ public final class ManagedZoneDnssecConfigGetArgs extends com.pulumi.resources.R
             $ = new ManagedZoneDnssecConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultKeySpecs Specifies parameters that will be used for generating initial DnsKeys
+         * for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
+         * you must also provide one for the other.
+         * default_key_specs can only be updated when the state is `off`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKeySpecs(@Nullable Output<List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs>> defaultKeySpecs) {
             $.defaultKeySpecs = defaultKeySpecs;
             return this;
         }
 
+        /**
+         * @param defaultKeySpecs Specifies parameters that will be used for generating initial DnsKeys
+         * for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
+         * you must also provide one for the other.
+         * default_key_specs can only be updated when the state is `off`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKeySpecs(List<ManagedZoneDnssecConfigDefaultKeySpecGetArgs> defaultKeySpecs) {
             return defaultKeySpecs(Output.of(defaultKeySpecs));
         }
 
+        /**
+         * @param defaultKeySpecs Specifies parameters that will be used for generating initial DnsKeys
+         * for this ManagedZone. If you provide a spec for keySigning or zoneSigning,
+         * you must also provide one for the other.
+         * default_key_specs can only be updated when the state is `off`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultKeySpecs(ManagedZoneDnssecConfigDefaultKeySpecGetArgs... defaultKeySpecs) {
             return defaultKeySpecs(List.of(defaultKeySpecs));
         }
 
+        /**
+         * @param kind Identifies what kind of resource this is
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Identifies what kind of resource this is
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param nonExistence Specifies the mechanism used to provide authenticated denial-of-existence responses.
+         * non_existence can only be updated when the state is `off`.
+         * Possible values are `nsec` and `nsec3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonExistence(@Nullable Output<String> nonExistence) {
             $.nonExistence = nonExistence;
             return this;
         }
 
+        /**
+         * @param nonExistence Specifies the mechanism used to provide authenticated denial-of-existence responses.
+         * non_existence can only be updated when the state is `off`.
+         * Possible values are `nsec` and `nsec3`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonExistence(String nonExistence) {
             return nonExistence(Output.of(nonExistence));
         }
 
+        /**
+         * @param state Specifies whether DNSSEC is enabled, and what mode it is in
+         * Possible values are `off`, `on`, and `transfer`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Specifies whether DNSSEC is enabled, and what mode it is in
+         * Possible values are `off`, `on`, and `transfer`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

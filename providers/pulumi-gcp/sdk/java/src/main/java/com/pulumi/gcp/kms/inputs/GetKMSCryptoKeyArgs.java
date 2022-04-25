@@ -19,6 +19,10 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyRing", required=true)
     private String keyRing;
 
+    /**
+     * @return The `id` of the Google Cloud Platform KeyRing to which the key belongs.
+     * 
+     */
     public String keyRing() {
         return this.keyRing;
     }
@@ -31,6 +35,11 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The CryptoKey&#39;s name.
+     * A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -60,11 +69,24 @@ public final class GetKMSCryptoKeyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetKMSCryptoKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyRing The `id` of the Google Cloud Platform KeyRing to which the key belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRing(String keyRing) {
             $.keyRing = keyRing;
             return this;
         }
 
+        /**
+         * @param name The CryptoKey&#39;s name.
+         * A CryptoKey’s name belonging to the specified Google Cloud Platform KeyRing and match the regular expression `[a-zA-Z0-9_-]{1,63}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

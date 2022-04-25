@@ -24,6 +24,11 @@ public final class ClusterNetworkPolicyGetArgs extends com.pulumi.resources.Reso
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Enable the PodSecurityPolicy controller for this cluster.
+     * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -35,6 +40,10 @@ public final class ClusterNetworkPolicyGetArgs extends com.pulumi.resources.Reso
     @Import(name="provider")
     private @Nullable Output<String> provider;
 
+    /**
+     * @return The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
+     * 
+     */
     public Optional<Output<String>> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -64,20 +73,46 @@ public final class ClusterNetworkPolicyGetArgs extends com.pulumi.resources.Reso
             $ = new ClusterNetworkPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Enable the PodSecurityPolicy controller for this cluster.
+         * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Enable the PodSecurityPolicy controller for this cluster.
+         * If enabled, pods must be valid under a PodSecurityPolicy to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param provider The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable Output<String> provider) {
             $.provider = provider;
             return this;
         }
 
+        /**
+         * @param provider The selected network policy provider. Defaults to PROVIDER_UNSPECIFIED.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(String provider) {
             return provider(Output.of(provider));
         }

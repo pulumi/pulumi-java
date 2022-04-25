@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GetGroupsResult {
     /**
-     * The list of groups under the provided customer or namespace. Structure is documented below.
+     * @return The list of groups under the provided customer or namespace. Structure is documented below.
      * 
      */
     private final List<GetGroupsGroup> groups;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -34,16 +34,16 @@ public final class GetGroupsResult {
     }
 
     /**
-     * The list of groups under the provided customer or namespace. Structure is documented below.
+     * @return The list of groups under the provided customer or namespace. Structure is documented below.
      * 
-    */
+     */
     public List<GetGroupsGroup> groups() {
         return this.groups;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

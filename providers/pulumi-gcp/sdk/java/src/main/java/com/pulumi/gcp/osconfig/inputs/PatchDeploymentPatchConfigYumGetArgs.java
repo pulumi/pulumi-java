@@ -24,6 +24,10 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends com.pulumi.resou
     @Import(name="excludes")
     private @Nullable Output<List<String>> excludes;
 
+    /**
+     * @return List of KBs to exclude from update.
+     * 
+     */
     public Optional<Output<List<String>>> excludes() {
         return Optional.ofNullable(this.excludes);
     }
@@ -37,6 +41,12 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends com.pulumi.resou
     @Import(name="exclusivePackages")
     private @Nullable Output<List<String>> exclusivePackages;
 
+    /**
+     * @return An exclusive list of packages to be updated. These are the only packages that will be updated.
+     * If these packages are not installed, they will be ignored. This field cannot be specified with
+     * any other patch configuration fields.
+     * 
+     */
     public Optional<Output<List<String>>> exclusivePackages() {
         return Optional.ofNullable(this.exclusivePackages);
     }
@@ -48,6 +58,10 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends com.pulumi.resou
     @Import(name="minimal")
     private @Nullable Output<Boolean> minimal;
 
+    /**
+     * @return Will cause patch to run yum update-minimal instead.
+     * 
+     */
     public Optional<Output<Boolean>> minimal() {
         return Optional.ofNullable(this.minimal);
     }
@@ -59,6 +73,10 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends com.pulumi.resou
     @Import(name="security")
     private @Nullable Output<Boolean> security;
 
+    /**
+     * @return Adds the --security flag to yum update. Not supported on all platforms.
+     * 
+     */
     public Optional<Output<Boolean>> security() {
         return Optional.ofNullable(this.security);
     }
@@ -90,46 +108,112 @@ public final class PatchDeploymentPatchConfigYumGetArgs extends com.pulumi.resou
             $ = new PatchDeploymentPatchConfigYumGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludes List of KBs to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(@Nullable Output<List<String>> excludes) {
             $.excludes = excludes;
             return this;
         }
 
+        /**
+         * @param excludes List of KBs to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(List<String> excludes) {
             return excludes(Output.of(excludes));
         }
 
+        /**
+         * @param excludes List of KBs to exclude from update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludes(String... excludes) {
             return excludes(List.of(excludes));
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated.
+         * If these packages are not installed, they will be ignored. This field cannot be specified with
+         * any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(@Nullable Output<List<String>> exclusivePackages) {
             $.exclusivePackages = exclusivePackages;
             return this;
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated.
+         * If these packages are not installed, they will be ignored. This field cannot be specified with
+         * any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(List<String> exclusivePackages) {
             return exclusivePackages(Output.of(exclusivePackages));
         }
 
+        /**
+         * @param exclusivePackages An exclusive list of packages to be updated. These are the only packages that will be updated.
+         * If these packages are not installed, they will be ignored. This field cannot be specified with
+         * any other patch configuration fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusivePackages(String... exclusivePackages) {
             return exclusivePackages(List.of(exclusivePackages));
         }
 
+        /**
+         * @param minimal Will cause patch to run yum update-minimal instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimal(@Nullable Output<Boolean> minimal) {
             $.minimal = minimal;
             return this;
         }
 
+        /**
+         * @param minimal Will cause patch to run yum update-minimal instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimal(Boolean minimal) {
             return minimal(Output.of(minimal));
         }
 
+        /**
+         * @param security Adds the --security flag to yum update. Not supported on all platforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder security(@Nullable Output<Boolean> security) {
             $.security = security;
             return this;
         }
 
+        /**
+         * @param security Adds the --security flag to yum update. Not supported on all platforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder security(Boolean security) {
             return security(Output.of(security));
         }

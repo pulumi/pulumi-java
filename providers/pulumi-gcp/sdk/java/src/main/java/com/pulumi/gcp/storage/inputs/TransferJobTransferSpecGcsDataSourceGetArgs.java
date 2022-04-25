@@ -22,6 +22,10 @@ public final class TransferJobTransferSpecGcsDataSourceGetArgs extends com.pulum
     @Import(name="bucketName", required=true)
     private Output<String> bucketName;
 
+    /**
+     * @return S3 Bucket name.
+     * 
+     */
     public Output<String> bucketName() {
         return this.bucketName;
     }
@@ -33,6 +37,10 @@ public final class TransferJobTransferSpecGcsDataSourceGetArgs extends com.pulum
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -62,20 +70,44 @@ public final class TransferJobTransferSpecGcsDataSourceGetArgs extends com.pulum
             $ = new TransferJobTransferSpecGcsDataSourceGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName S3 Bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Output<String> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName S3 Bucket name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(String bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param path Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Root path to transfer objects. Must be an empty string or full path name that ends with a &#39;/&#39;. This field is treated as an object prefix. As such, it should generally not begin with a &#39;/&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }

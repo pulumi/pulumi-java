@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class DicomStoreStreamConfig {
     /**
-     * BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+     * @return BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
      * Structure is documented below.
      * 
      */
@@ -22,10 +22,10 @@ public final class DicomStoreStreamConfig {
     }
 
     /**
-     * BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
+     * @return BigQueryDestination to include a fully qualified BigQuery table URI where DICOM instance metadata will be streamed.
      * Structure is documented below.
      * 
-    */
+     */
     public DicomStoreStreamConfigBigqueryDestination bigqueryDestination() {
         return this.bigqueryDestination;
     }

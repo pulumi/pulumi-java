@@ -23,6 +23,10 @@ public final class ClusterResourceUsageExportConfigArgs extends com.pulumi.resou
     @Import(name="bigqueryDestination", required=true)
     private Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination;
 
+    /**
+     * @return Parameters for using BigQuery as the destination of resource usage export.
+     * 
+     */
     public Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination() {
         return this.bigqueryDestination;
     }
@@ -35,6 +39,11 @@ public final class ClusterResourceUsageExportConfigArgs extends com.pulumi.resou
     @Import(name="enableNetworkEgressMetering")
     private @Nullable Output<Boolean> enableNetworkEgressMetering;
 
+    /**
+     * @return Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+     * in the cluster to meter network egress traffic.
+     * 
+     */
     public Optional<Output<Boolean>> enableNetworkEgressMetering() {
         return Optional.ofNullable(this.enableNetworkEgressMetering);
     }
@@ -50,6 +59,14 @@ public final class ClusterResourceUsageExportConfigArgs extends com.pulumi.resou
     @Import(name="enableResourceConsumptionMetering")
     private @Nullable Output<Boolean> enableResourceConsumptionMetering;
 
+    /**
+     * @return Whether to enable resource
+     * consumption metering on this cluster. When enabled, a table will be created in
+     * the resource export BigQuery dataset to store resource consumption data. The
+     * resulting table can be joined with the resource usage table or with BigQuery
+     * billing export. Defaults to `true`.
+     * 
+     */
     public Optional<Output<Boolean>> enableResourceConsumptionMetering() {
         return Optional.ofNullable(this.enableResourceConsumptionMetering);
     }
@@ -80,29 +97,75 @@ public final class ClusterResourceUsageExportConfigArgs extends com.pulumi.resou
             $ = new ClusterResourceUsageExportConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bigqueryDestination Parameters for using BigQuery as the destination of resource usage export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDestination(Output<ClusterResourceUsageExportConfigBigqueryDestinationArgs> bigqueryDestination) {
             $.bigqueryDestination = bigqueryDestination;
             return this;
         }
 
+        /**
+         * @param bigqueryDestination Parameters for using BigQuery as the destination of resource usage export.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bigqueryDestination(ClusterResourceUsageExportConfigBigqueryDestinationArgs bigqueryDestination) {
             return bigqueryDestination(Output.of(bigqueryDestination));
         }
 
+        /**
+         * @param enableNetworkEgressMetering Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+         * in the cluster to meter network egress traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNetworkEgressMetering(@Nullable Output<Boolean> enableNetworkEgressMetering) {
             $.enableNetworkEgressMetering = enableNetworkEgressMetering;
             return this;
         }
 
+        /**
+         * @param enableNetworkEgressMetering Whether to enable network egress metering for this cluster. If enabled, a daemonset will be created
+         * in the cluster to meter network egress traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNetworkEgressMetering(Boolean enableNetworkEgressMetering) {
             return enableNetworkEgressMetering(Output.of(enableNetworkEgressMetering));
         }
 
+        /**
+         * @param enableResourceConsumptionMetering Whether to enable resource
+         * consumption metering on this cluster. When enabled, a table will be created in
+         * the resource export BigQuery dataset to store resource consumption data. The
+         * resulting table can be joined with the resource usage table or with BigQuery
+         * billing export. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableResourceConsumptionMetering(@Nullable Output<Boolean> enableResourceConsumptionMetering) {
             $.enableResourceConsumptionMetering = enableResourceConsumptionMetering;
             return this;
         }
 
+        /**
+         * @param enableResourceConsumptionMetering Whether to enable resource
+         * consumption metering on this cluster. When enabled, a table will be created in
+         * the resource export BigQuery dataset to store resource consumption data. The
+         * resulting table can be joined with the resource usage table or with BigQuery
+         * billing export. Defaults to `true`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableResourceConsumptionMetering(Boolean enableResourceConsumptionMetering) {
             return enableResourceConsumptionMetering(Output.of(enableResourceConsumptionMetering));
         }

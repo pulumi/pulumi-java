@@ -31,6 +31,10 @@ public final class InstanceIamBindingState extends com.pulumi.resources.Resource
     @Import(name="etag")
     private @Nullable Output<String> etag;
 
+    /**
+     * @return (Computed) The etag of the instances&#39;s IAM policy.
+     * 
+     */
     public Optional<Output<String>> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -42,6 +46,10 @@ public final class InstanceIamBindingState extends com.pulumi.resources.Resource
     @Import(name="instance")
     private @Nullable Output<String> instance;
 
+    /**
+     * @return The name or relative resource id of the instance to manage IAM policies for.
+     * 
+     */
     public Optional<Output<String>> instance() {
         return Optional.ofNullable(this.instance);
     }
@@ -61,6 +69,11 @@ public final class InstanceIamBindingState extends com.pulumi.resources.Resource
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project in which the instance belongs. If it
+     * is not provided, a default will be supplied.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -74,6 +87,12 @@ public final class InstanceIamBindingState extends com.pulumi.resources.Resource
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role that should be applied. Only one
+     * `gcp.bigtable.InstanceIamBinding` can be used per role. Note that custom roles must be of the format
+     * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -116,20 +135,44 @@ public final class InstanceIamBindingState extends com.pulumi.resources.Resource
             return condition(Output.of(condition));
         }
 
+        /**
+         * @param etag (Computed) The etag of the instances&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable Output<String> etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param etag (Computed) The etag of the instances&#39;s IAM policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             return etag(Output.of(etag));
         }
 
+        /**
+         * @param instance The name or relative resource id of the instance to manage IAM policies for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(@Nullable Output<String> instance) {
             $.instance = instance;
             return this;
         }
 
+        /**
+         * @param instance The name or relative resource id of the instance to manage IAM policies for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instance(String instance) {
             return instance(Output.of(instance));
         }
@@ -147,20 +190,50 @@ public final class InstanceIamBindingState extends com.pulumi.resources.Resource
             return members(List.of(members));
         }
 
+        /**
+         * @param project The project in which the instance belongs. If it
+         * is not provided, a default will be supplied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project in which the instance belongs. If it
+         * is not provided, a default will be supplied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.bigtable.InstanceIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role that should be applied. Only one
+         * `gcp.bigtable.InstanceIamBinding` can be used per role. Note that custom roles must be of the format
+         * `[projects|organizations]/{parent-name}/roles/{role-name}`. Read more about roles [here](https://cloud.google.com/bigtable/docs/access-control#roles).
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

@@ -25,6 +25,13 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArg
     @Import(name="filterLabels", required=true)
     private Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels;
 
+    /**
+     * @return The list of label value pairs that must match labels in the provided metadata
+     * based on filterMatchCriteria  This list must not be empty and can have at the
+     * most 64 entries.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels() {
         return this.filterLabels;
     }
@@ -42,6 +49,16 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArg
     @Import(name="filterMatchCriteria", required=true)
     private Output<String> filterMatchCriteria;
 
+    /**
+     * @return Specifies how individual filterLabel matches within the list of filterLabels
+     * contribute towards the overall metadataFilter match. Supported values are:
+     * * MATCH_ANY: At least one of the filterLabels must have a matching label in the
+     *   provided metadata.
+     * * MATCH_ALL: All filterLabels must have matching labels in
+     *   the provided metadata.
+     *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
+     * 
+     */
     public Output<String> filterMatchCriteria() {
         return this.filterMatchCriteria;
     }
@@ -71,24 +88,75 @@ public final class RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArg
             $ = new RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param filterLabels The list of label value pairs that must match labels in the provided metadata
+         * based on filterMatchCriteria  This list must not be empty and can have at the
+         * most 64 entries.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterLabels(Output<List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs>> filterLabels) {
             $.filterLabels = filterLabels;
             return this;
         }
 
+        /**
+         * @param filterLabels The list of label value pairs that must match labels in the provided metadata
+         * based on filterMatchCriteria  This list must not be empty and can have at the
+         * most 64 entries.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterLabels(List<RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs> filterLabels) {
             return filterLabels(Output.of(filterLabels));
         }
 
+        /**
+         * @param filterLabels The list of label value pairs that must match labels in the provided metadata
+         * based on filterMatchCriteria  This list must not be empty and can have at the
+         * most 64 entries.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterLabels(RegionUrlMapPathMatcherRouteRuleMatchRuleMetadataFilterFilterLabelGetArgs... filterLabels) {
             return filterLabels(List.of(filterLabels));
         }
 
+        /**
+         * @param filterMatchCriteria Specifies how individual filterLabel matches within the list of filterLabels
+         * contribute towards the overall metadataFilter match. Supported values are:
+         * * MATCH_ANY: At least one of the filterLabels must have a matching label in the
+         *   provided metadata.
+         * * MATCH_ALL: All filterLabels must have matching labels in
+         *   the provided metadata.
+         *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterMatchCriteria(Output<String> filterMatchCriteria) {
             $.filterMatchCriteria = filterMatchCriteria;
             return this;
         }
 
+        /**
+         * @param filterMatchCriteria Specifies how individual filterLabel matches within the list of filterLabels
+         * contribute towards the overall metadataFilter match. Supported values are:
+         * * MATCH_ANY: At least one of the filterLabels must have a matching label in the
+         *   provided metadata.
+         * * MATCH_ALL: All filterLabels must have matching labels in
+         *   the provided metadata.
+         *   Possible values are `MATCH_ALL` and `MATCH_ANY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterMatchCriteria(String filterMatchCriteria) {
             return filterMatchCriteria(Output.of(filterMatchCriteria));
         }

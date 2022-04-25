@@ -23,6 +23,11 @@ public final class CryptoKeyVersionTemplateArgs extends com.pulumi.resources.Res
     @Import(name="algorithm", required=true)
     private Output<String> algorithm;
 
+    /**
+     * @return The algorithm to use when creating a version based on this template.
+     * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
+     * 
+     */
     public Output<String> algorithm() {
         return this.algorithm;
     }
@@ -34,6 +39,10 @@ public final class CryptoKeyVersionTemplateArgs extends com.pulumi.resources.Res
     @Import(name="protectionLevel")
     private @Nullable Output<String> protectionLevel;
 
+    /**
+     * @return The protection level to use when creating a version based on this template. Possible values include &#34;SOFTWARE&#34;, &#34;HSM&#34;, &#34;EXTERNAL&#34;. Defaults to &#34;SOFTWARE&#34;.
+     * 
+     */
     public Optional<Output<String>> protectionLevel() {
         return Optional.ofNullable(this.protectionLevel);
     }
@@ -63,20 +72,46 @@ public final class CryptoKeyVersionTemplateArgs extends com.pulumi.resources.Res
             $ = new CryptoKeyVersionTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The algorithm to use when creating a version based on this template.
+         * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Output<String> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm The algorithm to use when creating a version based on this template.
+         * See the [algorithm reference](https://cloud.google.com/kms/docs/reference/rest/v1/CryptoKeyVersionAlgorithm) for possible inputs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(String algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param protectionLevel The protection level to use when creating a version based on this template. Possible values include &#34;SOFTWARE&#34;, &#34;HSM&#34;, &#34;EXTERNAL&#34;. Defaults to &#34;SOFTWARE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(@Nullable Output<String> protectionLevel) {
             $.protectionLevel = protectionLevel;
             return this;
         }
 
+        /**
+         * @param protectionLevel The protection level to use when creating a version based on this template. Possible values include &#34;SOFTWARE&#34;, &#34;HSM&#34;, &#34;EXTERNAL&#34;. Defaults to &#34;SOFTWARE&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionLevel(String protectionLevel) {
             return protectionLevel(Output.of(protectionLevel));
         }

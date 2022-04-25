@@ -22,6 +22,11 @@ public final class GetWebAppConfigArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project in which the resource belongs. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -33,6 +38,10 @@ public final class GetWebAppConfigArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="webAppId", required=true)
     private String webAppId;
 
+    /**
+     * @return the id of the firebase web app
+     * 
+     */
     public String webAppId() {
         return this.webAppId;
     }
@@ -62,11 +71,24 @@ public final class GetWebAppConfigArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWebAppConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param webAppId the id of the firebase web app
+         * 
+         * @return builder
+         * 
+         */
         public Builder webAppId(String webAppId) {
             $.webAppId = webAppId;
             return this;

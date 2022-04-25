@@ -23,6 +23,11 @@ public final class EnvGroupAttachmentState extends com.pulumi.resources.Resource
     @Import(name="envgroupId")
     private @Nullable Output<String> envgroupId;
 
+    /**
+     * @return The Apigee environment group associated with the Apigee environment,
+     * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
+     * 
+     */
     public Optional<Output<String>> envgroupId() {
         return Optional.ofNullable(this.envgroupId);
     }
@@ -34,6 +39,10 @@ public final class EnvGroupAttachmentState extends com.pulumi.resources.Resource
     @Import(name="environment")
     private @Nullable Output<String> environment;
 
+    /**
+     * @return The resource ID of the environment.
+     * 
+     */
     public Optional<Output<String>> environment() {
         return Optional.ofNullable(this.environment);
     }
@@ -45,6 +54,10 @@ public final class EnvGroupAttachmentState extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the newly created attachment (output parameter).
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -75,29 +88,67 @@ public final class EnvGroupAttachmentState extends com.pulumi.resources.Resource
             $ = new EnvGroupAttachmentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param envgroupId The Apigee environment group associated with the Apigee environment,
+         * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envgroupId(@Nullable Output<String> envgroupId) {
             $.envgroupId = envgroupId;
             return this;
         }
 
+        /**
+         * @param envgroupId The Apigee environment group associated with the Apigee environment,
+         * in the format `organizations/{{org_name}}/envgroups/{{envgroup_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder envgroupId(String envgroupId) {
             return envgroupId(Output.of(envgroupId));
         }
 
+        /**
+         * @param environment The resource ID of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(@Nullable Output<String> environment) {
             $.environment = environment;
             return this;
         }
 
+        /**
+         * @param environment The resource ID of the environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environment(String environment) {
             return environment(Output.of(environment));
         }
 
+        /**
+         * @param name The name of the newly created attachment (output parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the newly created attachment (output parameter).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

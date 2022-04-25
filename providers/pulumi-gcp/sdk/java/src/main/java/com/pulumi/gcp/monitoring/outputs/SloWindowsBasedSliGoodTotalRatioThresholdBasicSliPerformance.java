@@ -15,19 +15,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance {
     /**
-     * Availability based SLI, dervied from count of requests made to this service that return successfully.
+     * @return Availability based SLI, dervied from count of requests made to this service that return successfully.
      * Structure is documented below.
      * 
      */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability availability;
     /**
-     * Parameters for a latency threshold SLI.
+     * @return Parameters for a latency threshold SLI.
      * Structure is documented below.
      * 
      */
     private final @Nullable SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency latency;
     /**
-     * An optional set of locations to which this SLI is relevant.
+     * @return An optional set of locations to which this SLI is relevant.
      * Telemetry from other locations will not be used to calculate
      * performance for this SLI. If omitted, this SLI applies to all
      * locations in which the Service has activity. For service types
@@ -37,7 +37,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
      */
     private final @Nullable List<String> locations;
     /**
-     * An optional set of RPCs to which this SLI is relevant.
+     * @return An optional set of RPCs to which this SLI is relevant.
      * Telemetry from other methods will not be used to calculate
      * performance for this SLI. If omitted, this SLI applies to all
      * the Service&#39;s methods. For service types that don&#39;t support
@@ -47,7 +47,7 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
      */
     private final @Nullable List<String> methods;
     /**
-     * The set of API versions to which this SLI is relevant.
+     * @return The set of API versions to which this SLI is relevant.
      * Telemetry from other API versions will not be used to
      * calculate performance for this SLI. If omitted,
      * this SLI applies to all API versions. For service types
@@ -72,54 +72,54 @@ public final class SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformance 
     }
 
     /**
-     * Availability based SLI, dervied from count of requests made to this service that return successfully.
+     * @return Availability based SLI, dervied from count of requests made to this service that return successfully.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceAvailability> availability() {
         return Optional.ofNullable(this.availability);
     }
     /**
-     * Parameters for a latency threshold SLI.
+     * @return Parameters for a latency threshold SLI.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SloWindowsBasedSliGoodTotalRatioThresholdBasicSliPerformanceLatency> latency() {
         return Optional.ofNullable(this.latency);
     }
     /**
-     * An optional set of locations to which this SLI is relevant.
+     * @return An optional set of locations to which this SLI is relevant.
      * Telemetry from other locations will not be used to calculate
      * performance for this SLI. If omitted, this SLI applies to all
      * locations in which the Service has activity. For service types
      * that don&#39;t support breaking down by location, setting this
      * field will result in an error.
      * 
-    */
+     */
     public List<String> locations() {
         return this.locations == null ? List.of() : this.locations;
     }
     /**
-     * An optional set of RPCs to which this SLI is relevant.
+     * @return An optional set of RPCs to which this SLI is relevant.
      * Telemetry from other methods will not be used to calculate
      * performance for this SLI. If omitted, this SLI applies to all
      * the Service&#39;s methods. For service types that don&#39;t support
      * breaking down by method, setting this field will result in an
      * error.
      * 
-    */
+     */
     public List<String> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
     /**
-     * The set of API versions to which this SLI is relevant.
+     * @return The set of API versions to which this SLI is relevant.
      * Telemetry from other API versions will not be used to
      * calculate performance for this SLI. If omitted,
      * this SLI applies to all API versions. For service types
      * that don&#39;t support breaking down by version, setting this
      * field will result in an error.
      * 
-    */
+     */
     public List<String> versions() {
         return this.versions == null ? List.of() : this.versions;
     }

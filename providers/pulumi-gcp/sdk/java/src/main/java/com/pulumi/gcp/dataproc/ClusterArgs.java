@@ -25,6 +25,11 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterConfig")
     private @Nullable Output<ClusterClusterConfigArgs> clusterConfig;
 
+    /**
+     * @return Allows you to configure various aspects of the cluster.
+     * Structure defined below.
+     * 
+     */
     public Optional<Output<ClusterClusterConfigArgs>> clusterConfig() {
         return Optional.ofNullable(this.clusterConfig);
     }
@@ -37,6 +42,11 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="gracefulDecommissionTimeout")
     private @Nullable Output<String> gracefulDecommissionTimeout;
 
+    /**
+     * @return The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+     * terraform apply
+     * 
+     */
     public Optional<Output<String>> gracefulDecommissionTimeout() {
         return Optional.ofNullable(this.gracefulDecommissionTimeout);
     }
@@ -50,6 +60,12 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return The list of labels (key/value pairs) to be applied to
+     * instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
+     * which is the name of the cluster.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -62,6 +78,11 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the cluster, unique within the project and
+     * zone.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -74,6 +95,11 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the `cluster` will exist. If it
+     * is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -86,6 +112,11 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region in which the cluster and associated nodes will be created in.
+     * Defaults to `global`.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -119,56 +150,142 @@ public final class ClusterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterConfig Allows you to configure various aspects of the cluster.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfig(@Nullable Output<ClusterClusterConfigArgs> clusterConfig) {
             $.clusterConfig = clusterConfig;
             return this;
         }
 
+        /**
+         * @param clusterConfig Allows you to configure various aspects of the cluster.
+         * Structure defined below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterConfig(ClusterClusterConfigArgs clusterConfig) {
             return clusterConfig(Output.of(clusterConfig));
         }
 
+        /**
+         * @param gracefulDecommissionTimeout The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+         * terraform apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracefulDecommissionTimeout(@Nullable Output<String> gracefulDecommissionTimeout) {
             $.gracefulDecommissionTimeout = gracefulDecommissionTimeout;
             return this;
         }
 
+        /**
+         * @param gracefulDecommissionTimeout The timeout duration which allows graceful decomissioning when you change the number of worker nodes directly through a
+         * terraform apply
+         * 
+         * @return builder
+         * 
+         */
         public Builder gracefulDecommissionTimeout(String gracefulDecommissionTimeout) {
             return gracefulDecommissionTimeout(Output.of(gracefulDecommissionTimeout));
         }
 
+        /**
+         * @param labels The list of labels (key/value pairs) to be applied to
+         * instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
+         * which is the name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels The list of labels (key/value pairs) to be applied to
+         * instances in the cluster. GCP generates some itself including `goog-dataproc-cluster-name`
+         * which is the name of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param name The name of the cluster, unique within the project and
+         * zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the cluster, unique within the project and
+         * zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the `cluster` will exist. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the `cluster` will exist. If it
+         * is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region in which the cluster and associated nodes will be created in.
+         * Defaults to `global`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region in which the cluster and associated nodes will be created in.
+         * Defaults to `global`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

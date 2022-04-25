@@ -22,6 +22,10 @@ public final class CxIntentTrainingPhrasePartGetArgs extends com.pulumi.resource
     @Import(name="parameterId")
     private @Nullable Output<String> parameterId;
 
+    /**
+     * @return The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+     * 
+     */
     public Optional<Output<String>> parameterId() {
         return Optional.ofNullable(this.parameterId);
     }
@@ -33,6 +37,10 @@ public final class CxIntentTrainingPhrasePartGetArgs extends com.pulumi.resource
     @Import(name="text", required=true)
     private Output<String> text;
 
+    /**
+     * @return The text for this part.
+     * 
+     */
     public Output<String> text() {
         return this.text;
     }
@@ -62,20 +70,44 @@ public final class CxIntentTrainingPhrasePartGetArgs extends com.pulumi.resource
             $ = new CxIntentTrainingPhrasePartGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameterId The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterId(@Nullable Output<String> parameterId) {
             $.parameterId = parameterId;
             return this;
         }
 
+        /**
+         * @param parameterId The parameter used to annotate this part of the training phrase. This field is required for annotated parts of the training phrase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterId(String parameterId) {
             return parameterId(Output.of(parameterId));
         }
 
+        /**
+         * @param text The text for this part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(Output<String> text) {
             $.text = text;
             return this;
         }
 
+        /**
+         * @param text The text for this part.
+         * 
+         * @return builder
+         * 
+         */
         public Builder text(String text) {
             return text(Output.of(text));
         }

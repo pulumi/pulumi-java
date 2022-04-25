@@ -24,6 +24,10 @@ public final class OrganizationPolicyListPolicyAllowGetArgs extends com.pulumi.r
     @Import(name="all")
     private @Nullable Output<Boolean> all;
 
+    /**
+     * @return The policy allows or denies all values.
+     * 
+     */
     public Optional<Output<Boolean>> all() {
         return Optional.ofNullable(this.all);
     }
@@ -35,6 +39,10 @@ public final class OrganizationPolicyListPolicyAllowGetArgs extends com.pulumi.r
     @Import(name="values")
     private @Nullable Output<List<String>> values;
 
+    /**
+     * @return The policy can define specific values that are allowed or denied.
+     * 
+     */
     public Optional<Output<List<String>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -64,24 +72,54 @@ public final class OrganizationPolicyListPolicyAllowGetArgs extends com.pulumi.r
             $ = new OrganizationPolicyListPolicyAllowGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param all The policy allows or denies all values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(@Nullable Output<Boolean> all) {
             $.all = all;
             return this;
         }
 
+        /**
+         * @param all The policy allows or denies all values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder all(Boolean all) {
             return all(Output.of(all));
         }
 
+        /**
+         * @param values The policy can define specific values that are allowed or denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<List<String>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The policy can define specific values that are allowed or denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param values The policy can define specific values that are allowed or denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -16,27 +16,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
     /**
-     * Exec resource
+     * @return Exec resource
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceExec exec;
     /**
-     * A remote or local source.
+     * @return A remote or local source.
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceFile file;
     /**
-     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * @return Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
      * 
      */
     private final String id;
     /**
-     * Package resource
+     * @return Package resource
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkg pkg;
     /**
-     * Package repository resource
+     * @return Package repository resource
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourceRepository repository;
@@ -56,37 +56,37 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResource {
     }
 
     /**
-     * Exec resource
+     * @return Exec resource
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceExec> exec() {
         return Optional.ofNullable(this.exec);
     }
     /**
-     * A remote or local source.
+     * @return A remote or local source.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceFile> file() {
         return Optional.ofNullable(this.file);
     }
     /**
-     * Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
+     * @return Required. A one word, unique name for this repository. This is the `repo id` in the zypper config file and also the `display_name` if `display_name` is omitted. This id is also used as the unique identifier when checking for GuestPolicy conflicts.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Package resource
+     * @return Package resource
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkg> pkg() {
         return Optional.ofNullable(this.pkg);
     }
     /**
-     * Package repository resource
+     * @return Package repository resource
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourceRepository> repository() {
         return Optional.ofNullable(this.repository);
     }

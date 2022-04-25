@@ -15,49 +15,49 @@ import java.util.Objects;
 @CustomType
 public final class GetInstanceTemplateDisk {
     /**
-     * Whether or not the disk should be auto-deleted.
+     * @return Whether or not the disk should be auto-deleted.
      * This defaults to true.
      * 
      */
     private final Boolean autoDelete;
     /**
-     * Indicates that this is a boot disk.
+     * @return Indicates that this is a boot disk.
      * 
      */
     private final Boolean boot;
     /**
-     * A unique device name that is reflected into the
+     * @return A unique device name that is reflected into the
      * /dev/  tree of a Linux operating system running within the instance. If not
      * specified, the server chooses a default device name to apply to this disk.
      * 
      */
     private final String deviceName;
     /**
-     * Encrypts or decrypts a disk using a customer-supplied encryption key.
+     * @return Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
      */
     private final List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys;
     /**
-     * Name of the disk. When not provided, this defaults
+     * @return Name of the disk. When not provided, this defaults
      * to the name of the instance.
      * 
      */
     private final String diskName;
     /**
-     * The size of the image in gigabytes. If not
+     * @return The size of the image in gigabytes. If not
      * specified, it will inherit the size of its base image. For SCRATCH disks,
      * the size must be exactly 375GB.
      * 
      */
     private final Integer diskSizeGb;
     /**
-     * The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
+     * @return The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
      * `&#34;local-ssd&#34;`, `&#34;pd-balanced&#34;` or `&#34;pd-standard&#34;`.
      * 
      */
     private final String diskType;
     /**
-     * Specifies the disk interface to use for attaching this disk,
+     * @return Specifies the disk interface to use for attaching this disk,
      * which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
      * and the request will fail if you attempt to attach a persistent disk in any other format
      * than SCSI. Local SSDs can use either NVME or SCSI.
@@ -65,13 +65,13 @@ public final class GetInstanceTemplateDisk {
      */
     private final String interface_;
     /**
-     * (Optional) A set of ket/value label pairs to assign to disk created from
+     * @return (Optional) A set of ket/value label pairs to assign to disk created from
      * this template
      * 
      */
     private final Map<String,String> labels;
     /**
-     * The mode in which to attach this disk, either READ_WRITE
+     * @return The mode in which to attach this disk, either READ_WRITE
      * or READ_ONLY. If you are attaching or creating a boot disk, this must
      * read-write mode.
      * 
@@ -79,14 +79,14 @@ public final class GetInstanceTemplateDisk {
     private final String mode;
     private final List<String> resourcePolicies;
     /**
-     * The name (**not self_link**)
+     * @return The name (**not self_link**)
      * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
      * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
      */
     private final String source;
     /**
-     * The image from which to
+     * @return The image from which to
      * initialize this disk. This can be one of: the image&#39;s `self_link`,
      * `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
@@ -97,7 +97,7 @@ public final class GetInstanceTemplateDisk {
      */
     private final String sourceImage;
     /**
-     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * @return The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
      */
     private final String type;
@@ -135,85 +135,85 @@ public final class GetInstanceTemplateDisk {
     }
 
     /**
-     * Whether or not the disk should be auto-deleted.
+     * @return Whether or not the disk should be auto-deleted.
      * This defaults to true.
      * 
-    */
+     */
     public Boolean autoDelete() {
         return this.autoDelete;
     }
     /**
-     * Indicates that this is a boot disk.
+     * @return Indicates that this is a boot disk.
      * 
-    */
+     */
     public Boolean boot() {
         return this.boot;
     }
     /**
-     * A unique device name that is reflected into the
+     * @return A unique device name that is reflected into the
      * /dev/  tree of a Linux operating system running within the instance. If not
      * specified, the server chooses a default device name to apply to this disk.
      * 
-    */
+     */
     public String deviceName() {
         return this.deviceName;
     }
     /**
-     * Encrypts or decrypts a disk using a customer-supplied encryption key.
+     * @return Encrypts or decrypts a disk using a customer-supplied encryption key.
      * 
-    */
+     */
     public List<GetInstanceTemplateDiskDiskEncryptionKey> diskEncryptionKeys() {
         return this.diskEncryptionKeys;
     }
     /**
-     * Name of the disk. When not provided, this defaults
+     * @return Name of the disk. When not provided, this defaults
      * to the name of the instance.
      * 
-    */
+     */
     public String diskName() {
         return this.diskName;
     }
     /**
-     * The size of the image in gigabytes. If not
+     * @return The size of the image in gigabytes. If not
      * specified, it will inherit the size of its base image. For SCRATCH disks,
      * the size must be exactly 375GB.
      * 
-    */
+     */
     public Integer diskSizeGb() {
         return this.diskSizeGb;
     }
     /**
-     * The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
+     * @return The GCE disk type. Can be either `&#34;pd-ssd&#34;`,
      * `&#34;local-ssd&#34;`, `&#34;pd-balanced&#34;` or `&#34;pd-standard&#34;`.
      * 
-    */
+     */
     public String diskType() {
         return this.diskType;
     }
     /**
-     * Specifies the disk interface to use for attaching this disk,
+     * @return Specifies the disk interface to use for attaching this disk,
      * which is either SCSI or NVME. The default is SCSI. Persistent disks must always use SCSI
      * and the request will fail if you attempt to attach a persistent disk in any other format
      * than SCSI. Local SSDs can use either NVME or SCSI.
      * 
-    */
+     */
     public String interface_() {
         return this.interface_;
     }
     /**
-     * (Optional) A set of ket/value label pairs to assign to disk created from
+     * @return (Optional) A set of ket/value label pairs to assign to disk created from
      * this template
      * 
-    */
+     */
     public Map<String,String> labels() {
         return this.labels;
     }
     /**
-     * The mode in which to attach this disk, either READ_WRITE
+     * @return The mode in which to attach this disk, either READ_WRITE
      * or READ_ONLY. If you are attaching or creating a boot disk, this must
      * read-write mode.
      * 
-    */
+     */
     public String mode() {
         return this.mode;
     }
@@ -221,16 +221,16 @@ public final class GetInstanceTemplateDisk {
         return this.resourcePolicies;
     }
     /**
-     * The name (**not self_link**)
+     * @return The name (**not self_link**)
      * of the disk (such as those managed by `gcp.compute.Disk`) to attach.
      * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * The image from which to
+     * @return The image from which to
      * initialize this disk. This can be one of: the image&#39;s `self_link`,
      * `projects/{project}/global/images/{image}`,
      * `projects/{project}/global/images/family/{family}`, `global/images/{image}`,
@@ -238,14 +238,14 @@ public final class GetInstanceTemplateDisk {
      * `{project}/{image}`, `{family}`, or `{image}`.
      * &gt; **Note:** Either `source` or `source_image` is **required** in a disk block unless the disk type is `local-ssd`. Check the API [docs](https://cloud.google.com/compute/docs/reference/rest/v1/instanceTemplates/insert) for details.
      * 
-    */
+     */
     public String sourceImage() {
         return this.sourceImage;
     }
     /**
-     * The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
+     * @return The accelerator type resource to expose to this instance. E.g. `nvidia-tesla-k80`.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

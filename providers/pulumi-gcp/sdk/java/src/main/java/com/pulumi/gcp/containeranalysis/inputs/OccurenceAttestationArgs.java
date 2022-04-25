@@ -23,6 +23,11 @@ public final class OccurenceAttestationArgs extends com.pulumi.resources.Resourc
     @Import(name="serializedPayload", required=true)
     private Output<String> serializedPayload;
 
+    /**
+     * @return The serialized payload that is verified by one or
+     * more signatures. A base64-encoded string.
+     * 
+     */
     public Output<String> serializedPayload() {
         return this.serializedPayload;
     }
@@ -39,6 +44,15 @@ public final class OccurenceAttestationArgs extends com.pulumi.resources.Resourc
     @Import(name="signatures", required=true)
     private Output<List<OccurenceAttestationSignatureArgs>> signatures;
 
+    /**
+     * @return One or more signatures over serializedPayload.
+     * Verifier implementations should consider this attestation
+     * message verified if at least one signature verifies
+     * serializedPayload. See Signature in common.proto for more
+     * details on signature structure and verification.
+     * Structure is documented below.
+     * 
+     */
     public Output<List<OccurenceAttestationSignatureArgs>> signatures() {
         return this.signatures;
     }
@@ -68,24 +82,71 @@ public final class OccurenceAttestationArgs extends com.pulumi.resources.Resourc
             $ = new OccurenceAttestationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param serializedPayload The serialized payload that is verified by one or
+         * more signatures. A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializedPayload(Output<String> serializedPayload) {
             $.serializedPayload = serializedPayload;
             return this;
         }
 
+        /**
+         * @param serializedPayload The serialized payload that is verified by one or
+         * more signatures. A base64-encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serializedPayload(String serializedPayload) {
             return serializedPayload(Output.of(serializedPayload));
         }
 
+        /**
+         * @param signatures One or more signatures over serializedPayload.
+         * Verifier implementations should consider this attestation
+         * message verified if at least one signature verifies
+         * serializedPayload. See Signature in common.proto for more
+         * details on signature structure and verification.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(Output<List<OccurenceAttestationSignatureArgs>> signatures) {
             $.signatures = signatures;
             return this;
         }
 
+        /**
+         * @param signatures One or more signatures over serializedPayload.
+         * Verifier implementations should consider this attestation
+         * message verified if at least one signature verifies
+         * serializedPayload. See Signature in common.proto for more
+         * details on signature structure and verification.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(List<OccurenceAttestationSignatureArgs> signatures) {
             return signatures(Output.of(signatures));
         }
 
+        /**
+         * @param signatures One or more signatures over serializedPayload.
+         * Verifier implementations should consider this attestation
+         * message verified if at least one signature verifies
+         * serializedPayload. See Signature in common.proto for more
+         * details on signature structure and verification.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatures(OccurenceAttestationSignatureArgs... signatures) {
             return signatures(List.of(signatures));
         }

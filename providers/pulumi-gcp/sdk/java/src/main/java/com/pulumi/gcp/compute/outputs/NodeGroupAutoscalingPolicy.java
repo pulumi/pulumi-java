@@ -13,19 +13,19 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NodeGroupAutoscalingPolicy {
     /**
-     * Maximum size of the node group. Set to a value less than or equal
+     * @return Maximum size of the node group. Set to a value less than or equal
      * to 100 and greater than or equal to min-nodes.
      * 
      */
     private final @Nullable Integer maxNodes;
     /**
-     * Minimum size of the node group. Must be less
+     * @return Minimum size of the node group. Must be less
      * than or equal to max-nodes. The default value is 0.
      * 
      */
     private final @Nullable Integer minNodes;
     /**
-     * The autoscaling mode. Set to one of the following:
+     * @return The autoscaling mode. Set to one of the following:
      * - OFF: Disables the autoscaler.
      * - ON: Enables scaling in and scaling out.
      * - ONLY_SCALE_OUT: Enables only scaling out.
@@ -47,23 +47,23 @@ public final class NodeGroupAutoscalingPolicy {
     }
 
     /**
-     * Maximum size of the node group. Set to a value less than or equal
+     * @return Maximum size of the node group. Set to a value less than or equal
      * to 100 and greater than or equal to min-nodes.
      * 
-    */
+     */
     public Optional<Integer> maxNodes() {
         return Optional.ofNullable(this.maxNodes);
     }
     /**
-     * Minimum size of the node group. Must be less
+     * @return Minimum size of the node group. Must be less
      * than or equal to max-nodes. The default value is 0.
      * 
-    */
+     */
     public Optional<Integer> minNodes() {
         return Optional.ofNullable(this.minNodes);
     }
     /**
-     * The autoscaling mode. Set to one of the following:
+     * @return The autoscaling mode. Set to one of the following:
      * - OFF: Disables the autoscaler.
      * - ON: Enables scaling in and scaling out.
      * - ONLY_SCALE_OUT: Enables only scaling out.
@@ -71,7 +71,7 @@ public final class NodeGroupAutoscalingPolicy {
      *   restart their hosted VMs on minimal servers.
      *   Possible values are `OFF`, `ON`, and `ONLY_SCALE_OUT`.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }

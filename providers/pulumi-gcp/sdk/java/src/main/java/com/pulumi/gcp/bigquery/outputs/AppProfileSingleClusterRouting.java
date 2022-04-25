@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AppProfileSingleClusterRouting {
     /**
-     * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+     * @return If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
      * It is unsafe to send these requests to the same table/row/column in multiple clusters.
      * 
      */
     private final @Nullable Boolean allowTransactionalWrites;
     /**
-     * The cluster to which read/write requests should be routed.
+     * @return The cluster to which read/write requests should be routed.
      * 
      */
     private final String clusterId;
@@ -33,17 +33,17 @@ public final class AppProfileSingleClusterRouting {
     }
 
     /**
-     * If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
+     * @return If true, CheckAndMutateRow and ReadModifyWriteRow requests are allowed by this app profile.
      * It is unsafe to send these requests to the same table/row/column in multiple clusters.
      * 
-    */
+     */
     public Optional<Boolean> allowTransactionalWrites() {
         return Optional.ofNullable(this.allowTransactionalWrites);
     }
     /**
-     * The cluster to which read/write requests should be routed.
+     * @return The cluster to which read/write requests should be routed.
      * 
-    */
+     */
     public String clusterId() {
         return this.clusterId;
     }

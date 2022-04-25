@@ -24,6 +24,11 @@ public final class CxPageFormGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<List<CxPageFormParameterGetArgs>> parameters;
 
+    /**
+     * @return Parameters to collect from the user.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<CxPageFormParameterGetArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -52,15 +57,36 @@ public final class CxPageFormGetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CxPageFormGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Parameters to collect from the user.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<CxPageFormParameterGetArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters to collect from the user.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<CxPageFormParameterGetArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Parameters to collect from the user.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(CxPageFormParameterGetArgs... parameters) {
             return parameters(List.of(parameters));
         }

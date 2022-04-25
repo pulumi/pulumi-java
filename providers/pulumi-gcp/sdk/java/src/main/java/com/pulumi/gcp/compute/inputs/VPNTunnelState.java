@@ -25,6 +25,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="creationTimestamp")
     private @Nullable Output<String> creationTimestamp;
 
+    /**
+     * @return Creation timestamp in RFC3339 text format.
+     * 
+     */
     public Optional<Output<String>> creationTimestamp() {
         return Optional.ofNullable(this.creationTimestamp);
     }
@@ -36,6 +40,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="detailedStatus")
     private @Nullable Output<String> detailedStatus;
 
+    /**
+     * @return Detailed status message for the VPN tunnel.
+     * 
+     */
     public Optional<Output<String>> detailedStatus() {
         return Optional.ofNullable(this.detailedStatus);
     }
@@ -60,6 +72,12 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="ikeVersion")
     private @Nullable Output<Integer> ikeVersion;
 
+    /**
+     * @return IKE protocol version to use when establishing the VPN tunnel with
+     * peer VPN gateway.
+     * Acceptable IKE versions are 1 or 2. Default version is 2.
+     * 
+     */
     public Optional<Output<Integer>> ikeVersion() {
         return Optional.ofNullable(this.ikeVersion);
     }
@@ -71,6 +89,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labelFingerprint")
     private @Nullable Output<String> labelFingerprint;
 
+    /**
+     * @return The fingerprint used for optimistic locking of this resource. Used internally during updates.
+     * 
+     */
     public Optional<Output<String>> labelFingerprint() {
         return Optional.ofNullable(this.labelFingerprint);
     }
@@ -82,6 +104,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this VpnTunnel.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -96,6 +122,13 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="localTrafficSelectors")
     private @Nullable Output<List<String>> localTrafficSelectors;
 
+    /**
+     * @return Local traffic selector to use when establishing the VPN tunnel with
+     * peer VPN gateway. The value should be a CIDR formatted string,
+     * for example `192.168.0.0/16`. The ranges should be disjoint.
+     * Only IPv4 is supported.
+     * 
+     */
     public Optional<Output<List<String>>> localTrafficSelectors() {
         return Optional.ofNullable(this.localTrafficSelectors);
     }
@@ -113,6 +146,16 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the resource. The name must be 1-63 characters long, and
+     * comply with RFC1035. Specifically, the name must be 1-63
+     * characters long and match the regular expression
+     * `a-z?` which means the first character
+     * must be a lowercase letter, and all following characters must
+     * be a dash, lowercase letter, or digit,
+     * except the last character, which cannot be a dash.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -124,6 +167,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerExternalGateway")
     private @Nullable Output<String> peerExternalGateway;
 
+    /**
+     * @return URL of the peer side external VPN gateway to which this VPN tunnel is connected.
+     * 
+     */
     public Optional<Output<String>> peerExternalGateway() {
         return Optional.ofNullable(this.peerExternalGateway);
     }
@@ -135,6 +182,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerExternalGatewayInterface")
     private @Nullable Output<Integer> peerExternalGatewayInterface;
 
+    /**
+     * @return The interface ID of the external VPN gateway to which this VPN tunnel is connected.
+     * 
+     */
     public Optional<Output<Integer>> peerExternalGatewayInterface() {
         return Optional.ofNullable(this.peerExternalGatewayInterface);
     }
@@ -149,6 +200,13 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerGcpGateway")
     private @Nullable Output<String> peerGcpGateway;
 
+    /**
+     * @return URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+     * If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+     * ID in the peer GCP VPN gateway.
+     * This field must reference a `gcp.compute.HaVpnGateway` resource.
+     * 
+     */
     public Optional<Output<String>> peerGcpGateway() {
         return Optional.ofNullable(this.peerGcpGateway);
     }
@@ -160,6 +218,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="peerIp")
     private @Nullable Output<String> peerIp;
 
+    /**
+     * @return IP address of the peer VPN gateway. Only IPv4 is supported.
+     * 
+     */
     public Optional<Output<String>> peerIp() {
         return Optional.ofNullable(this.peerIp);
     }
@@ -172,6 +234,11 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -183,6 +250,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -197,6 +268,13 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="remoteTrafficSelectors")
     private @Nullable Output<List<String>> remoteTrafficSelectors;
 
+    /**
+     * @return Remote traffic selector to use when establishing the VPN tunnel with
+     * peer VPN gateway. The value should be a CIDR formatted string,
+     * for example `192.168.0.0/16`. The ranges should be disjoint.
+     * Only IPv4 is supported.
+     * 
+     */
     public Optional<Output<List<String>>> remoteTrafficSelectors() {
         return Optional.ofNullable(this.remoteTrafficSelectors);
     }
@@ -208,6 +286,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="router")
     private @Nullable Output<String> router;
 
+    /**
+     * @return URL of router resource to be used for dynamic routing.
+     * 
+     */
     public Optional<Output<String>> router() {
         return Optional.ofNullable(this.router);
     }
@@ -219,6 +301,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="selfLink")
     private @Nullable Output<String> selfLink;
 
+    /**
+     * @return The URI of the created resource.
+     * 
+     */
     public Optional<Output<String>> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -232,6 +318,12 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sharedSecret")
     private @Nullable Output<String> sharedSecret;
 
+    /**
+     * @return Shared secret used to set the secure session between the Cloud VPN
+     * gateway and the peer VPN gateway.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> sharedSecret() {
         return Optional.ofNullable(this.sharedSecret);
     }
@@ -243,6 +335,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="sharedSecretHash")
     private @Nullable Output<String> sharedSecretHash;
 
+    /**
+     * @return Hash of the shared secret.
+     * 
+     */
     public Optional<Output<String>> sharedSecretHash() {
         return Optional.ofNullable(this.sharedSecretHash);
     }
@@ -255,6 +351,11 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="targetVpnGateway")
     private @Nullable Output<String> targetVpnGateway;
 
+    /**
+     * @return URL of the Target VPN gateway with which this VPN tunnel is
+     * associated.
+     * 
+     */
     public Optional<Output<String>> targetVpnGateway() {
         return Optional.ofNullable(this.targetVpnGateway);
     }
@@ -266,6 +367,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="tunnelId")
     private @Nullable Output<String> tunnelId;
 
+    /**
+     * @return The unique identifier for the resource. This identifier is defined by the server.
+     * 
+     */
     public Optional<Output<String>> tunnelId() {
         return Optional.ofNullable(this.tunnelId);
     }
@@ -279,6 +384,12 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpnGateway")
     private @Nullable Output<String> vpnGateway;
 
+    /**
+     * @return URL of the VPN gateway with which this VPN tunnel is associated.
+     * This must be used if a High Availability VPN gateway resource is created.
+     * This field must reference a `gcp.compute.HaVpnGateway` resource.
+     * 
+     */
     public Optional<Output<String>> vpnGateway() {
         return Optional.ofNullable(this.vpnGateway);
     }
@@ -290,6 +401,10 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
     @Import(name="vpnGatewayInterface")
     private @Nullable Output<Integer> vpnGatewayInterface;
 
+    /**
+     * @return The interface ID of the VPN gateway with which this VPN tunnel is associated.
+     * 
+     */
     public Optional<Output<Integer>> vpnGatewayInterface() {
         return Optional.ofNullable(this.vpnGatewayInterface);
     }
@@ -340,217 +455,557 @@ public final class VPNTunnelState extends com.pulumi.resources.ResourceArgs {
             $ = new VPNTunnelState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(@Nullable Output<String> creationTimestamp) {
             $.creationTimestamp = creationTimestamp;
             return this;
         }
 
+        /**
+         * @param creationTimestamp Creation timestamp in RFC3339 text format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder creationTimestamp(String creationTimestamp) {
             return creationTimestamp(Output.of(creationTimestamp));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param detailedStatus Detailed status message for the VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedStatus(@Nullable Output<String> detailedStatus) {
             $.detailedStatus = detailedStatus;
             return this;
         }
 
+        /**
+         * @param detailedStatus Detailed status message for the VPN tunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailedStatus(String detailedStatus) {
             return detailedStatus(Output.of(detailedStatus));
         }
 
+        /**
+         * @param ikeVersion IKE protocol version to use when establishing the VPN tunnel with
+         * peer VPN gateway.
+         * Acceptable IKE versions are 1 or 2. Default version is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeVersion(@Nullable Output<Integer> ikeVersion) {
             $.ikeVersion = ikeVersion;
             return this;
         }
 
+        /**
+         * @param ikeVersion IKE protocol version to use when establishing the VPN tunnel with
+         * peer VPN gateway.
+         * Acceptable IKE versions are 1 or 2. Default version is 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ikeVersion(Integer ikeVersion) {
             return ikeVersion(Output.of(ikeVersion));
         }
 
+        /**
+         * @param labelFingerprint The fingerprint used for optimistic locking of this resource. Used internally during updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelFingerprint(@Nullable Output<String> labelFingerprint) {
             $.labelFingerprint = labelFingerprint;
             return this;
         }
 
+        /**
+         * @param labelFingerprint The fingerprint used for optimistic locking of this resource. Used internally during updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labelFingerprint(String labelFingerprint) {
             return labelFingerprint(Output.of(labelFingerprint));
         }
 
+        /**
+         * @param labels Labels to apply to this VpnTunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this VpnTunnel.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param localTrafficSelectors Local traffic selector to use when establishing the VPN tunnel with
+         * peer VPN gateway. The value should be a CIDR formatted string,
+         * for example `192.168.0.0/16`. The ranges should be disjoint.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localTrafficSelectors(@Nullable Output<List<String>> localTrafficSelectors) {
             $.localTrafficSelectors = localTrafficSelectors;
             return this;
         }
 
+        /**
+         * @param localTrafficSelectors Local traffic selector to use when establishing the VPN tunnel with
+         * peer VPN gateway. The value should be a CIDR formatted string,
+         * for example `192.168.0.0/16`. The ranges should be disjoint.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localTrafficSelectors(List<String> localTrafficSelectors) {
             return localTrafficSelectors(Output.of(localTrafficSelectors));
         }
 
+        /**
+         * @param localTrafficSelectors Local traffic selector to use when establishing the VPN tunnel with
+         * peer VPN gateway. The value should be a CIDR formatted string,
+         * for example `192.168.0.0/16`. The ranges should be disjoint.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localTrafficSelectors(String... localTrafficSelectors) {
             return localTrafficSelectors(List.of(localTrafficSelectors));
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63
+         * characters long and match the regular expression
+         * `a-z?` which means the first character
+         * must be a lowercase letter, and all following characters must
+         * be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the resource. The name must be 1-63 characters long, and
+         * comply with RFC1035. Specifically, the name must be 1-63
+         * characters long and match the regular expression
+         * `a-z?` which means the first character
+         * must be a lowercase letter, and all following characters must
+         * be a dash, lowercase letter, or digit,
+         * except the last character, which cannot be a dash.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param peerExternalGateway URL of the peer side external VPN gateway to which this VPN tunnel is connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerExternalGateway(@Nullable Output<String> peerExternalGateway) {
             $.peerExternalGateway = peerExternalGateway;
             return this;
         }
 
+        /**
+         * @param peerExternalGateway URL of the peer side external VPN gateway to which this VPN tunnel is connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerExternalGateway(String peerExternalGateway) {
             return peerExternalGateway(Output.of(peerExternalGateway));
         }
 
+        /**
+         * @param peerExternalGatewayInterface The interface ID of the external VPN gateway to which this VPN tunnel is connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerExternalGatewayInterface(@Nullable Output<Integer> peerExternalGatewayInterface) {
             $.peerExternalGatewayInterface = peerExternalGatewayInterface;
             return this;
         }
 
+        /**
+         * @param peerExternalGatewayInterface The interface ID of the external VPN gateway to which this VPN tunnel is connected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerExternalGatewayInterface(Integer peerExternalGatewayInterface) {
             return peerExternalGatewayInterface(Output.of(peerExternalGatewayInterface));
         }
 
+        /**
+         * @param peerGcpGateway URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+         * If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+         * ID in the peer GCP VPN gateway.
+         * This field must reference a `gcp.compute.HaVpnGateway` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerGcpGateway(@Nullable Output<String> peerGcpGateway) {
             $.peerGcpGateway = peerGcpGateway;
             return this;
         }
 
+        /**
+         * @param peerGcpGateway URL of the peer side HA GCP VPN gateway to which this VPN tunnel is connected.
+         * If provided, the VPN tunnel will automatically use the same vpn_gateway_interface
+         * ID in the peer GCP VPN gateway.
+         * This field must reference a `gcp.compute.HaVpnGateway` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerGcpGateway(String peerGcpGateway) {
             return peerGcpGateway(Output.of(peerGcpGateway));
         }
 
+        /**
+         * @param peerIp IP address of the peer VPN gateway. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIp(@Nullable Output<String> peerIp) {
             $.peerIp = peerIp;
             return this;
         }
 
+        /**
+         * @param peerIp IP address of the peer VPN gateway. Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peerIp(String peerIp) {
             return peerIp(Output.of(peerIp));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region where the tunnel is located. If unset, is set to the region of `target_vpn_gateway`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param remoteTrafficSelectors Remote traffic selector to use when establishing the VPN tunnel with
+         * peer VPN gateway. The value should be a CIDR formatted string,
+         * for example `192.168.0.0/16`. The ranges should be disjoint.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteTrafficSelectors(@Nullable Output<List<String>> remoteTrafficSelectors) {
             $.remoteTrafficSelectors = remoteTrafficSelectors;
             return this;
         }
 
+        /**
+         * @param remoteTrafficSelectors Remote traffic selector to use when establishing the VPN tunnel with
+         * peer VPN gateway. The value should be a CIDR formatted string,
+         * for example `192.168.0.0/16`. The ranges should be disjoint.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteTrafficSelectors(List<String> remoteTrafficSelectors) {
             return remoteTrafficSelectors(Output.of(remoteTrafficSelectors));
         }
 
+        /**
+         * @param remoteTrafficSelectors Remote traffic selector to use when establishing the VPN tunnel with
+         * peer VPN gateway. The value should be a CIDR formatted string,
+         * for example `192.168.0.0/16`. The ranges should be disjoint.
+         * Only IPv4 is supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteTrafficSelectors(String... remoteTrafficSelectors) {
             return remoteTrafficSelectors(List.of(remoteTrafficSelectors));
         }
 
+        /**
+         * @param router URL of router resource to be used for dynamic routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder router(@Nullable Output<String> router) {
             $.router = router;
             return this;
         }
 
+        /**
+         * @param router URL of router resource to be used for dynamic routing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder router(String router) {
             return router(Output.of(router));
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable Output<String> selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param selfLink The URI of the created resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(String selfLink) {
             return selfLink(Output.of(selfLink));
         }
 
+        /**
+         * @param sharedSecret Shared secret used to set the secure session between the Cloud VPN
+         * gateway and the peer VPN gateway.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedSecret(@Nullable Output<String> sharedSecret) {
             $.sharedSecret = sharedSecret;
             return this;
         }
 
+        /**
+         * @param sharedSecret Shared secret used to set the secure session between the Cloud VPN
+         * gateway and the peer VPN gateway.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedSecret(String sharedSecret) {
             return sharedSecret(Output.of(sharedSecret));
         }
 
+        /**
+         * @param sharedSecretHash Hash of the shared secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedSecretHash(@Nullable Output<String> sharedSecretHash) {
             $.sharedSecretHash = sharedSecretHash;
             return this;
         }
 
+        /**
+         * @param sharedSecretHash Hash of the shared secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedSecretHash(String sharedSecretHash) {
             return sharedSecretHash(Output.of(sharedSecretHash));
         }
 
+        /**
+         * @param targetVpnGateway URL of the Target VPN gateway with which this VPN tunnel is
+         * associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpnGateway(@Nullable Output<String> targetVpnGateway) {
             $.targetVpnGateway = targetVpnGateway;
             return this;
         }
 
+        /**
+         * @param targetVpnGateway URL of the Target VPN gateway with which this VPN tunnel is
+         * associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVpnGateway(String targetVpnGateway) {
             return targetVpnGateway(Output.of(targetVpnGateway));
         }
 
+        /**
+         * @param tunnelId The unique identifier for the resource. This identifier is defined by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnelId(@Nullable Output<String> tunnelId) {
             $.tunnelId = tunnelId;
             return this;
         }
 
+        /**
+         * @param tunnelId The unique identifier for the resource. This identifier is defined by the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tunnelId(String tunnelId) {
             return tunnelId(Output.of(tunnelId));
         }
 
+        /**
+         * @param vpnGateway URL of the VPN gateway with which this VPN tunnel is associated.
+         * This must be used if a High Availability VPN gateway resource is created.
+         * This field must reference a `gcp.compute.HaVpnGateway` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGateway(@Nullable Output<String> vpnGateway) {
             $.vpnGateway = vpnGateway;
             return this;
         }
 
+        /**
+         * @param vpnGateway URL of the VPN gateway with which this VPN tunnel is associated.
+         * This must be used if a High Availability VPN gateway resource is created.
+         * This field must reference a `gcp.compute.HaVpnGateway` resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGateway(String vpnGateway) {
             return vpnGateway(Output.of(vpnGateway));
         }
 
+        /**
+         * @param vpnGatewayInterface The interface ID of the VPN gateway with which this VPN tunnel is associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayInterface(@Nullable Output<Integer> vpnGatewayInterface) {
             $.vpnGatewayInterface = vpnGatewayInterface;
             return this;
         }
 
+        /**
+         * @param vpnGatewayInterface The interface ID of the VPN gateway with which this VPN tunnel is associated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpnGatewayInterface(Integer vpnGatewayInterface) {
             return vpnGatewayInterface(Output.of(vpnGatewayInterface));
         }

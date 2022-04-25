@@ -22,6 +22,11 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The Network Endpoint Group name.
+     * Provide either this or a `self_link`.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -34,6 +39,11 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return The ID of the project to list versions in.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -45,6 +55,10 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
     @Import(name="selfLink")
     private @Nullable String selfLink;
 
+    /**
+     * @return The Network Endpoint Group self\_link.
+     * 
+     */
     public Optional<String> selfLink() {
         return Optional.ofNullable(this.selfLink);
     }
@@ -56,6 +70,10 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
     @Import(name="zone")
     private @Nullable String zone;
 
+    /**
+     * @return The Network Endpoint Group availability zone.
+     * 
+     */
     public Optional<String> zone() {
         return Optional.ofNullable(this.zone);
     }
@@ -87,21 +105,47 @@ public final class GetNetworkEndpointGroupArgs extends com.pulumi.resources.Invo
             $ = new GetNetworkEndpointGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The Network Endpoint Group name.
+         * Provide either this or a `self_link`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param project The ID of the project to list versions in.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param selfLink The Network Endpoint Group self\_link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selfLink(@Nullable String selfLink) {
             $.selfLink = selfLink;
             return this;
         }
 
+        /**
+         * @param zone The Network Endpoint Group availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(@Nullable String zone) {
             $.zone = zone;
             return this;

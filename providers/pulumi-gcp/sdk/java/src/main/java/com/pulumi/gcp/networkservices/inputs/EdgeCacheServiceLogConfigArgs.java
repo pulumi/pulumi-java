@@ -23,6 +23,10 @@ public final class EdgeCacheServiceLogConfigArgs extends com.pulumi.resources.Re
     @Import(name="enable")
     private @Nullable Output<Boolean> enable;
 
+    /**
+     * @return Specifies whether to enable logging for traffic served by this service.
+     * 
+     */
     public Optional<Output<Boolean>> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -35,6 +39,11 @@ public final class EdgeCacheServiceLogConfigArgs extends com.pulumi.resources.Re
     @Import(name="sampleRate")
     private @Nullable Output<Double> sampleRate;
 
+    /**
+     * @return Configures the sampling rate of requests, where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0, and the value of the field must be in [0, 1].
+     * This field can only be specified if logging is enabled for this service.
+     * 
+     */
     public Optional<Output<Double>> sampleRate() {
         return Optional.ofNullable(this.sampleRate);
     }
@@ -64,20 +73,46 @@ public final class EdgeCacheServiceLogConfigArgs extends com.pulumi.resources.Re
             $ = new EdgeCacheServiceLogConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enable Specifies whether to enable logging for traffic served by this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Output<Boolean> enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param enable Specifies whether to enable logging for traffic served by this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(Boolean enable) {
             return enable(Output.of(enable));
         }
 
+        /**
+         * @param sampleRate Configures the sampling rate of requests, where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0, and the value of the field must be in [0, 1].
+         * This field can only be specified if logging is enabled for this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRate(@Nullable Output<Double> sampleRate) {
             $.sampleRate = sampleRate;
             return this;
         }
 
+        /**
+         * @param sampleRate Configures the sampling rate of requests, where 1.0 means all logged requests are reported and 0.0 means no logged requests are reported. The default value is 1.0, and the value of the field must be in [0, 1].
+         * This field can only be specified if logging is enabled for this service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleRate(Double sampleRate) {
             return sampleRate(Output.of(sampleRate));
         }

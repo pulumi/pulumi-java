@@ -22,6 +22,10 @@ public final class ClusterDatabaseEncryptionGetArgs extends com.pulumi.resources
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -33,6 +37,10 @@ public final class ClusterDatabaseEncryptionGetArgs extends com.pulumi.resources
     @Import(name="state", required=true)
     private Output<String> state;
 
+    /**
+     * @return `ENCRYPTED` or `DECRYPTED`
+     * 
+     */
     public Output<String> state() {
         return this.state;
     }
@@ -62,20 +70,44 @@ public final class ClusterDatabaseEncryptionGetArgs extends com.pulumi.resources
             $ = new ClusterDatabaseEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName the key to use to encrypt/decrypt secrets.  See the [DatabaseEncryption definition](https://cloud.google.com/kubernetes-engine/docs/reference/rest/v1beta1/projects.locations.clusters#Cluster.DatabaseEncryption) for more information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param state `ENCRYPTED` or `DECRYPTED`
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<String> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state `ENCRYPTED` or `DECRYPTED`
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Output.of(state));
         }

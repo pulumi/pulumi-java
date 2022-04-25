@@ -20,6 +20,10 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends com.pulumi.res
     @Import(name="enforced", required=true)
     private Output<Boolean> enforced;
 
+    /**
+     * @return If true, then the Policy is enforced. If false, then any configuration is acceptable.
+     * 
+     */
     public Output<Boolean> enforced() {
         return this.enforced;
     }
@@ -48,11 +52,23 @@ public final class OrganizationPolicyBooleanPolicyGetArgs extends com.pulumi.res
             $ = new OrganizationPolicyBooleanPolicyGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enforced If true, then the Policy is enforced. If false, then any configuration is acceptable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforced(Output<Boolean> enforced) {
             $.enforced = enforced;
             return this;
         }
 
+        /**
+         * @param enforced If true, then the Policy is enforced. If false, then any configuration is acceptable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforced(Boolean enforced) {
             return enforced(Output.of(enforced));
         }

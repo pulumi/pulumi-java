@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Hl7StoreNotificationConfigs {
     /**
-     * Restricts notifications sent for messages matching a filter. If this is empty, all messages
+     * @return Restricts notifications sent for messages matching a filter. If this is empty, all messages
      * are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
      * Fields/functions available for filtering are:
      * * messageType, from the MSH-9.1 field. For example, NOT messageType = &#34;ADT&#34;.
@@ -25,7 +25,7 @@ public final class Hl7StoreNotificationConfigs {
      */
     private final @Nullable String filter;
     /**
-     * The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+     * @return The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
      * PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
      * It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
      * was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
@@ -44,7 +44,7 @@ public final class Hl7StoreNotificationConfigs {
     }
 
     /**
-     * Restricts notifications sent for messages matching a filter. If this is empty, all messages
+     * @return Restricts notifications sent for messages matching a filter. If this is empty, all messages
      * are matched. Syntax: https://cloud.google.com/appengine/docs/standard/python/search/query_strings
      * Fields/functions available for filtering are:
      * * messageType, from the MSH-9.1 field. For example, NOT messageType = &#34;ADT&#34;.
@@ -54,19 +54,19 @@ public final class Hl7StoreNotificationConfigs {
      * * PatientId(value, type), which matches if the message lists a patient having an ID of the given value and type in the PID-2, PID-3, or PID-4 segments. For example, PatientId(&#34;123456&#34;, &#34;MRN&#34;).
      * * labels.x, a string value of the label with key x as set using the Message.labels map. For example, labels.&#34;priority&#34;=&#34;high&#34;. The operator :* can be used to assert the existence of a label. For example, labels.&#34;priority&#34;:*.
      * 
-    */
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
+     * @return The Cloud Pub/Sub topic that notifications of changes are published on. Supplied by the client.
      * PubsubMessage.Data will contain the resource name. PubsubMessage.MessageId is the ID of this message.
      * It is guaranteed to be unique within the topic. PubsubMessage.PublishTime is the time at which the message
      * was published. Notifications are only sent if the topic is non-empty. Topic names must be scoped to a
      * project. service-PROJECT_NUMBER@gcp-sa-healthcare.iam.gserviceaccount.com must have publisher permissions on the given
      * Cloud Pub/Sub topic. Not having adequate permissions will cause the calls that send notifications to fail.
      * 
-    */
+     */
     public String pubsubTopic() {
         return this.pubsubTopic;
     }

@@ -13,13 +13,13 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterAddonsConfigCloudrunConfig {
     /**
-     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * @return The status of the Istio addon, which makes it easy to set up Istio for services in a
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
      */
     private final Boolean disabled;
     /**
-     * The load balancer type of CloudRun ingress service. It is external load balancer by default.
+     * @return The load balancer type of CloudRun ingress service. It is external load balancer by default.
      * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
      * 
      */
@@ -34,18 +34,18 @@ public final class ClusterAddonsConfigCloudrunConfig {
     }
 
     /**
-     * The status of the Istio addon, which makes it easy to set up Istio for services in a
+     * @return The status of the Istio addon, which makes it easy to set up Istio for services in a
      * cluster. It is disabled by default. Set `disabled = false` to enable.
      * 
-    */
+     */
     public Boolean disabled() {
         return this.disabled;
     }
     /**
-     * The load balancer type of CloudRun ingress service. It is external load balancer by default.
+     * @return The load balancer type of CloudRun ingress service. It is external load balancer by default.
      * Set `load_balancer_type=LOAD_BALANCER_TYPE_INTERNAL` to configure it as internal load balancer.
      * 
-    */
+     */
     public Optional<String> loadBalancerType() {
         return Optional.ofNullable(this.loadBalancerType);
     }

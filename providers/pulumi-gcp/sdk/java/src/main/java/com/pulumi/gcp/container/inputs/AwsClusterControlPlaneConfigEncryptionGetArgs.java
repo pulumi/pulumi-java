@@ -20,6 +20,10 @@ public final class AwsClusterControlPlaneConfigEncryptionGetArgs extends com.pul
     @Import(name="kmsKeyArn", required=true)
     private Output<String> kmsKeyArn;
 
+    /**
+     * @return Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
+     * 
+     */
     public Output<String> kmsKeyArn() {
         return this.kmsKeyArn;
     }
@@ -48,11 +52,23 @@ public final class AwsClusterControlPlaneConfigEncryptionGetArgs extends com.pul
             $ = new AwsClusterControlPlaneConfigEncryptionGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kmsKeyArn Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(Output<String> kmsKeyArn) {
             $.kmsKeyArn = kmsKeyArn;
             return this;
         }
 
+        /**
+         * @param kmsKeyArn Optional. The Amazon Resource Name (ARN) of the Customer Managed Key (CMK) used to encrypt AWS EBS volumes. If not specified, the default Amazon managed key associated to the AWS region where this cluster runs will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyArn(String kmsKeyArn) {
             return kmsKeyArn(Output.of(kmsKeyArn));
         }

@@ -24,6 +24,11 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     @Import(name="cloudStoragePath")
     private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath;
 
+    /**
+     * @return Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs>> cloudStoragePath() {
         return Optional.ofNullable(this.cloudStoragePath);
     }
@@ -36,6 +41,11 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
     @Import(name="wordList")
     private @Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList;
 
+    /**
+     * @return List of words or phrases to search for.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs>> wordList() {
         return Optional.ofNullable(this.wordList);
     }
@@ -65,20 +75,48 @@ public final class PreventionInspectTemplateInspectConfigCustomInfoTypeDictionar
             $ = new PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudStoragePath Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStoragePath(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs> cloudStoragePath) {
             $.cloudStoragePath = cloudStoragePath;
             return this;
         }
 
+        /**
+         * @param cloudStoragePath Newline-delimited file of words in Cloud Storage. Only a single file is accepted.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudStoragePath(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryCloudStoragePathArgs cloudStoragePath) {
             return cloudStoragePath(Output.of(cloudStoragePath));
         }
 
+        /**
+         * @param wordList List of words or phrases to search for.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordList(@Nullable Output<PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs> wordList) {
             $.wordList = wordList;
             return this;
         }
 
+        /**
+         * @param wordList List of words or phrases to search for.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wordList(PreventionInspectTemplateInspectConfigCustomInfoTypeDictionaryWordListArgs wordList) {
             return wordList(Output.of(wordList));
         }

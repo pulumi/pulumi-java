@@ -28,6 +28,14 @@ public final class ServicePerimeterSpecIngressPolicyIngressToOperationArgs exten
     @Import(name="methodSelectors")
     private @Nullable Output<List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs>> methodSelectors;
 
+    /**
+     * @return API methods or permissions to allow. Method or permission must belong
+     * to the service specified by `serviceName` field. A single MethodSelector
+     * entry with `*` specified for the `method` field will allow all methods
+     * AND permissions for the service specified in `serviceName`.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs>>> methodSelectors() {
         return Optional.ofNullable(this.methodSelectors);
     }
@@ -41,6 +49,12 @@ public final class ServicePerimeterSpecIngressPolicyIngressToOperationArgs exten
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return The name of the API whose methods or permissions the `IngressPolicy` or
+     * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
+     * field set to `*` will allow all methods AND permissions for all services.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -70,24 +84,70 @@ public final class ServicePerimeterSpecIngressPolicyIngressToOperationArgs exten
             $ = new ServicePerimeterSpecIngressPolicyIngressToOperationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param methodSelectors API methods or permissions to allow. Method or permission must belong
+         * to the service specified by `serviceName` field. A single MethodSelector
+         * entry with `*` specified for the `method` field will allow all methods
+         * AND permissions for the service specified in `serviceName`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSelectors(@Nullable Output<List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs>> methodSelectors) {
             $.methodSelectors = methodSelectors;
             return this;
         }
 
+        /**
+         * @param methodSelectors API methods or permissions to allow. Method or permission must belong
+         * to the service specified by `serviceName` field. A single MethodSelector
+         * entry with `*` specified for the `method` field will allow all methods
+         * AND permissions for the service specified in `serviceName`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSelectors(List<ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs> methodSelectors) {
             return methodSelectors(Output.of(methodSelectors));
         }
 
+        /**
+         * @param methodSelectors API methods or permissions to allow. Method or permission must belong
+         * to the service specified by `serviceName` field. A single MethodSelector
+         * entry with `*` specified for the `method` field will allow all methods
+         * AND permissions for the service specified in `serviceName`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methodSelectors(ServicePerimeterSpecIngressPolicyIngressToOperationMethodSelectorArgs... methodSelectors) {
             return methodSelectors(List.of(methodSelectors));
         }
 
+        /**
+         * @param serviceName The name of the API whose methods or permissions the `IngressPolicy` or
+         * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
+         * field set to `*` will allow all methods AND permissions for all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API whose methods or permissions the `IngressPolicy` or
+         * `EgressPolicy` want to allow. A single `ApiOperation` with serviceName
+         * field set to `*` will allow all methods AND permissions for all services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

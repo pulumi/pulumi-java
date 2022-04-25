@@ -21,6 +21,10 @@ public final class GetServiceTemplateSpecVolume extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the Cloud Run Service.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -57,6 +61,12 @@ public final class GetServiceTemplateSpecVolume extends com.pulumi.resources.Inv
             $ = new GetServiceTemplateSpecVolume(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the Cloud Run Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

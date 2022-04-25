@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateConfigSubjectConfigSubject {
     /**
-     * The common name of the distinguished name.
+     * @return The common name of the distinguished name.
      * 
      */
     private final String commonName;
     /**
-     * The country code of the subject.
+     * @return The country code of the subject.
      * 
      */
     private final @Nullable String countryCode;
     /**
-     * The locality or city of the subject.
+     * @return The locality or city of the subject.
      * 
      */
     private final @Nullable String locality;
     /**
-     * The organization of the subject.
+     * @return The organization of the subject.
      * 
      */
     private final String organization;
     /**
-     * The organizational unit of the subject.
+     * @return The organizational unit of the subject.
      * 
      */
     private final @Nullable String organizationalUnit;
     /**
-     * The postal code of the subject.
+     * @return The postal code of the subject.
      * 
      */
     private final @Nullable String postalCode;
     /**
-     * The province, territory, or regional state of the subject.
+     * @return The province, territory, or regional state of the subject.
      * 
      */
     private final @Nullable String province;
     /**
-     * The street address of the subject.
+     * @return The street address of the subject.
      * 
      */
     private final @Nullable String streetAddress;
@@ -73,58 +73,58 @@ public final class CertificateConfigSubjectConfigSubject {
     }
 
     /**
-     * The common name of the distinguished name.
+     * @return The common name of the distinguished name.
      * 
-    */
+     */
     public String commonName() {
         return this.commonName;
     }
     /**
-     * The country code of the subject.
+     * @return The country code of the subject.
      * 
-    */
+     */
     public Optional<String> countryCode() {
         return Optional.ofNullable(this.countryCode);
     }
     /**
-     * The locality or city of the subject.
+     * @return The locality or city of the subject.
      * 
-    */
+     */
     public Optional<String> locality() {
         return Optional.ofNullable(this.locality);
     }
     /**
-     * The organization of the subject.
+     * @return The organization of the subject.
      * 
-    */
+     */
     public String organization() {
         return this.organization;
     }
     /**
-     * The organizational unit of the subject.
+     * @return The organizational unit of the subject.
      * 
-    */
+     */
     public Optional<String> organizationalUnit() {
         return Optional.ofNullable(this.organizationalUnit);
     }
     /**
-     * The postal code of the subject.
+     * @return The postal code of the subject.
      * 
-    */
+     */
     public Optional<String> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
     /**
-     * The province, territory, or regional state of the subject.
+     * @return The province, territory, or regional state of the subject.
      * 
-    */
+     */
     public Optional<String> province() {
         return Optional.ofNullable(this.province);
     }
     /**
-     * The street address of the subject.
+     * @return The street address of the subject.
      * 
-    */
+     */
     public Optional<String> streetAddress() {
         return Optional.ofNullable(this.streetAddress);
     }

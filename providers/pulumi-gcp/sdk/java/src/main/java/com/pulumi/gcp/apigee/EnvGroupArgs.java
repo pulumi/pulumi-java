@@ -23,6 +23,10 @@ public final class EnvGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostnames")
     private @Nullable Output<List<String>> hostnames;
 
+    /**
+     * @return Hostnames of the environment group.
+     * 
+     */
     public Optional<Output<List<String>>> hostnames() {
         return Optional.ofNullable(this.hostnames);
     }
@@ -34,6 +38,10 @@ public final class EnvGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource ID of the environment group.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -46,6 +54,11 @@ public final class EnvGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="orgId", required=true)
     private Output<String> orgId;
 
+    /**
+     * @return The Apigee Organization associated with the Apigee environment group,
+     * in the format `organizations/{{org_name}}`.
+     * 
+     */
     public Output<String> orgId() {
         return this.orgId;
     }
@@ -76,33 +89,77 @@ public final class EnvGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostnames Hostnames of the environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(@Nullable Output<List<String>> hostnames) {
             $.hostnames = hostnames;
             return this;
         }
 
+        /**
+         * @param hostnames Hostnames of the environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(List<String> hostnames) {
             return hostnames(Output.of(hostnames));
         }
 
+        /**
+         * @param hostnames Hostnames of the environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnames(String... hostnames) {
             return hostnames(List.of(hostnames));
         }
 
+        /**
+         * @param name The resource ID of the environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource ID of the environment group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param orgId The Apigee Organization associated with the Apigee environment group,
+         * in the format `organizations/{{org_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(Output<String> orgId) {
             $.orgId = orgId;
             return this;
         }
 
+        /**
+         * @param orgId The Apigee Organization associated with the Apigee environment group,
+         * in the format `organizations/{{org_name}}`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orgId(String orgId) {
             return orgId(Output.of(orgId));
         }

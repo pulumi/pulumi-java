@@ -26,6 +26,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bucket", required=true)
     private Output<String> bucket;
 
+    /**
+     * @return The name of the containing bucket.
+     * 
+     */
     public Output<String> bucket() {
         return this.bucket;
     }
@@ -38,6 +42,11 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheControl")
     private @Nullable Output<String> cacheControl;
 
+    /**
+     * @return [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
+     * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
+     * 
+     */
     public Optional<Output<String>> cacheControl() {
         return Optional.ofNullable(this.cacheControl);
     }
@@ -49,6 +58,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -60,6 +73,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentDisposition")
     private @Nullable Output<String> contentDisposition;
 
+    /**
+     * @return [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
+     * 
+     */
     public Optional<Output<String>> contentDisposition() {
         return Optional.ofNullable(this.contentDisposition);
     }
@@ -71,6 +88,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentEncoding")
     private @Nullable Output<String> contentEncoding;
 
+    /**
+     * @return [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
+     * 
+     */
     public Optional<Output<String>> contentEncoding() {
         return Optional.ofNullable(this.contentEncoding);
     }
@@ -82,6 +103,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentLanguage")
     private @Nullable Output<String> contentLanguage;
 
+    /**
+     * @return [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
+     * 
+     */
     public Optional<Output<String>> contentLanguage() {
         return Optional.ofNullable(this.contentLanguage);
     }
@@ -93,6 +118,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -105,6 +134,11 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerEncryption")
     private @Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption;
 
+    /**
+     * @return Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<BucketObjectCustomerEncryptionArgs>> customerEncryption() {
         return Optional.ofNullable(this.customerEncryption);
     }
@@ -125,6 +159,12 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eventBasedHold")
     private @Nullable Output<Boolean> eventBasedHold;
 
+    /**
+     * @return Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+     * signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects
+     * will be subject to bucket-level retention (if any).
+     * 
+     */
     public Optional<Output<Boolean>> eventBasedHold() {
         return Optional.ofNullable(this.eventBasedHold);
     }
@@ -136,6 +176,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kmsKeyName")
     private @Nullable Output<String> kmsKeyName;
 
+    /**
+     * @return The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
+     * 
+     */
     public Optional<Output<String>> kmsKeyName() {
         return Optional.ofNullable(this.kmsKeyName);
     }
@@ -147,6 +191,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return User-provided metadata, in key/value pairs.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -158,6 +206,10 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the object. If you&#39;re interpolating the name of this object, see `output_name` instead.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -170,6 +222,11 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<AssetOrArchive> source;
 
+    /**
+     * @return A path to the data you want to upload. Must be defined
+     * if `content` is not.
+     * 
+     */
     public Optional<Output<AssetOrArchive>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -183,6 +240,12 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageClass")
     private @Nullable Output<String> storageClass;
 
+    /**
+     * @return The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
+     * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
+     * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+     * 
+     */
     public Optional<Output<String>> storageClass() {
         return Optional.ofNullable(this.storageClass);
     }
@@ -195,6 +258,11 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="temporaryHold")
     private @Nullable Output<Boolean> temporaryHold;
 
+    /**
+     * @return Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+     * overwrites.
+     * 
+     */
     public Optional<Output<Boolean>> temporaryHold() {
         return Optional.ofNullable(this.temporaryHold);
     }
@@ -238,74 +306,174 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BucketObjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucket The name of the containing bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(Output<String> bucket) {
             $.bucket = bucket;
             return this;
         }
 
+        /**
+         * @param bucket The name of the containing bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucket(String bucket) {
             return bucket(Output.of(bucket));
         }
 
+        /**
+         * @param cacheControl [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
+         * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheControl(@Nullable Output<String> cacheControl) {
             $.cacheControl = cacheControl;
             return this;
         }
 
+        /**
+         * @param cacheControl [Cache-Control](https://tools.ietf.org/html/rfc7234#section-5.2)
+         * directive to specify caching behavior of object data. If omitted and object is accessible to all anonymous users, the default will be public, max-age=3600
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheControl(String cacheControl) {
             return cacheControl(Output.of(cacheControl));
         }
 
+        /**
+         * @param content Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content Data as `string` to be uploaded. Must be defined if `source` is not. **Note**: The `content` field is marked as sensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param contentDisposition [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentDisposition(@Nullable Output<String> contentDisposition) {
             $.contentDisposition = contentDisposition;
             return this;
         }
 
+        /**
+         * @param contentDisposition [Content-Disposition](https://tools.ietf.org/html/rfc6266) of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentDisposition(String contentDisposition) {
             return contentDisposition(Output.of(contentDisposition));
         }
 
+        /**
+         * @param contentEncoding [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentEncoding(@Nullable Output<String> contentEncoding) {
             $.contentEncoding = contentEncoding;
             return this;
         }
 
+        /**
+         * @param contentEncoding [Content-Encoding](https://tools.ietf.org/html/rfc7231#section-3.1.2.2) of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentEncoding(String contentEncoding) {
             return contentEncoding(Output.of(contentEncoding));
         }
 
+        /**
+         * @param contentLanguage [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLanguage(@Nullable Output<String> contentLanguage) {
             $.contentLanguage = contentLanguage;
             return this;
         }
 
+        /**
+         * @param contentLanguage [Content-Language](https://tools.ietf.org/html/rfc7231#section-3.1.3.2) of the object data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLanguage(String contentLanguage) {
             return contentLanguage(Output.of(contentLanguage));
         }
 
+        /**
+         * @param contentType [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType [Content-Type](https://tools.ietf.org/html/rfc7231#section-3.1.1.5) of the object data. Defaults to &#34;application/octet-stream&#34; or &#34;text/plain; charset=utf-8&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param customerEncryption Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerEncryption(@Nullable Output<BucketObjectCustomerEncryptionArgs> customerEncryption) {
             $.customerEncryption = customerEncryption;
             return this;
         }
 
+        /**
+         * @param customerEncryption Enables object encryption with Customer-Supplied Encryption Key (CSEK). Google [documentation about CSEK.](https://cloud.google.com/storage/docs/encryption/customer-supplied-keys)
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerEncryption(BucketObjectCustomerEncryptionArgs customerEncryption) {
             return customerEncryption(Output.of(customerEncryption));
         }
@@ -319,65 +487,161 @@ public final class BucketObjectArgs extends com.pulumi.resources.ResourceArgs {
             return detectMd5hash(Output.of(detectMd5hash));
         }
 
+        /**
+         * @param eventBasedHold Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+         * signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects
+         * will be subject to bucket-level retention (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBasedHold(@Nullable Output<Boolean> eventBasedHold) {
             $.eventBasedHold = eventBasedHold;
             return this;
         }
 
+        /**
+         * @param eventBasedHold Whether an object is under event-based hold. Event-based hold is a way to retain objects until an event occurs, which is
+         * signified by the hold&#39;s release (i.e. this value is set to false). After being released (set to false), such objects
+         * will be subject to bucket-level retention (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventBasedHold(Boolean eventBasedHold) {
             return eventBasedHold(Output.of(eventBasedHold));
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(@Nullable Output<String> kmsKeyName) {
             $.kmsKeyName = kmsKeyName;
             return this;
         }
 
+        /**
+         * @param kmsKeyName The resource name of the Cloud KMS key that will be used to [encrypt](https://cloud.google.com/storage/docs/encryption/using-customer-managed-keys) the object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kmsKeyName(String kmsKeyName) {
             return kmsKeyName(Output.of(kmsKeyName));
         }
 
+        /**
+         * @param metadata User-provided metadata, in key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata User-provided metadata, in key/value pairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param name The name of the object. If you&#39;re interpolating the name of this object, see `output_name` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the object. If you&#39;re interpolating the name of this object, see `output_name` instead.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param source A path to the data you want to upload. Must be defined
+         * if `content` is not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<AssetOrArchive> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source A path to the data you want to upload. Must be defined
+         * if `content` is not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(AssetOrArchive source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param storageClass The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
+         * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
+         * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(@Nullable Output<String> storageClass) {
             $.storageClass = storageClass;
             return this;
         }
 
+        /**
+         * @param storageClass The [StorageClass](https://cloud.google.com/storage/docs/storage-classes) of the new bucket object.
+         * Supported values include: `MULTI_REGIONAL`, `REGIONAL`, `NEARLINE`, `COLDLINE`, `ARCHIVE`. If not provided, this defaults to the bucket&#39;s default
+         * storage class or to a [standard](https://cloud.google.com/storage/docs/storage-classes#standard) class.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageClass(String storageClass) {
             return storageClass(Output.of(storageClass));
         }
 
+        /**
+         * @param temporaryHold Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+         * overwrites.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryHold(@Nullable Output<Boolean> temporaryHold) {
             $.temporaryHold = temporaryHold;
             return this;
         }
 
+        /**
+         * @param temporaryHold Whether an object is under temporary hold. While this flag is set to true, the object is protected against deletion and
+         * overwrites.
+         * 
+         * @return builder
+         * 
+         */
         public Builder temporaryHold(Boolean temporaryHold) {
             return temporaryHold(Output.of(temporaryHold));
         }

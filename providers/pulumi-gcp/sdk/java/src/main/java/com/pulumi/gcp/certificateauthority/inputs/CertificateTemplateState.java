@@ -26,6 +26,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Output only. The time at which this CertificateTemplate was created.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -37,6 +41,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="identityConstraints")
     private @Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints;
 
+    /**
+     * @return Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate&#39;s identity.
+     * 
+     */
     public Optional<Output<CertificateTemplateIdentityConstraintsGetArgs>> identityConstraints() {
         return Optional.ofNullable(this.identityConstraints);
     }
@@ -59,6 +71,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Optional. Labels with user-defined metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -70,6 +86,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +101,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,6 +116,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="passthroughExtensions")
     private @Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions;
 
+    /**
+     * @return Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool&#39;s IssuancePolicy defines baseline_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate&#39;s predefined_values.
+     * 
+     */
     public Optional<Output<CertificateTemplatePassthroughExtensionsGetArgs>> passthroughExtensions() {
         return Optional.ofNullable(this.passthroughExtensions);
     }
@@ -103,6 +131,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="predefinedValues")
     private @Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues;
 
+    /**
+     * @return Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool&#39;s IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+     * 
+     */
     public Optional<Output<CertificateTemplatePredefinedValuesGetArgs>> predefinedValues() {
         return Optional.ofNullable(this.predefinedValues);
     }
@@ -114,6 +146,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project for the resource
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -125,6 +161,10 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return Output only. The time at which this CertificateTemplate was updated.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -162,92 +202,212 @@ public final class CertificateTemplateState extends com.pulumi.resources.Resourc
             $ = new CertificateTemplateState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Output only. The time at which this CertificateTemplate was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Output only. The time at which this CertificateTemplate was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param description Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. Description of the expression. This is a longer text which describes the expression, e.g. when hovered over it in a UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param identityConstraints Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate&#39;s identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityConstraints(@Nullable Output<CertificateTemplateIdentityConstraintsGetArgs> identityConstraints) {
             $.identityConstraints = identityConstraints;
             return this;
         }
 
+        /**
+         * @param identityConstraints Optional. Describes constraints on identities that may be appear in Certificates issued using this template. If this is omitted, then this template will not add restrictions on a certificate&#39;s identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityConstraints(CertificateTemplateIdentityConstraintsGetArgs identityConstraints) {
             return identityConstraints(Output.of(identityConstraints));
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Optional. Labels with user-defined metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param location Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Optional. String indicating the location of the expression for error reporting, e.g. a file name and a position in the file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name for this CertificateTemplate in the format `projects/*{@literal /}locations/*{@literal /}certificateTemplates/*`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param passthroughExtensions Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool&#39;s IssuancePolicy defines baseline_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate&#39;s predefined_values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passthroughExtensions(@Nullable Output<CertificateTemplatePassthroughExtensionsGetArgs> passthroughExtensions) {
             $.passthroughExtensions = passthroughExtensions;
             return this;
         }
 
+        /**
+         * @param passthroughExtensions Optional. Describes the set of X.509 extensions that may appear in a Certificate issued using this CertificateTemplate. If a certificate request sets extensions that don&#39;t appear in the passthrough_extensions, those extensions will be dropped. If the issuing CaPool&#39;s IssuancePolicy defines baseline_values that don&#39;t appear here, the certificate issuance request will fail. If this is omitted, then this template will not add restrictions on a certificate&#39;s X.509 extensions. These constraints do not apply to X.509 extensions set in this CertificateTemplate&#39;s predefined_values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder passthroughExtensions(CertificateTemplatePassthroughExtensionsGetArgs passthroughExtensions) {
             return passthroughExtensions(Output.of(passthroughExtensions));
         }
 
+        /**
+         * @param predefinedValues Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool&#39;s IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedValues(@Nullable Output<CertificateTemplatePredefinedValuesGetArgs> predefinedValues) {
             $.predefinedValues = predefinedValues;
             return this;
         }
 
+        /**
+         * @param predefinedValues Optional. A set of X.509 values that will be applied to all issued certificates that use this template. If the certificate request includes conflicting values for the same properties, they will be overwritten by the values defined here. If the issuing CaPool&#39;s IssuancePolicy defines conflicting baseline_values for the same properties, the certificate issuance request will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder predefinedValues(CertificateTemplatePredefinedValuesGetArgs predefinedValues) {
             return predefinedValues(Output.of(predefinedValues));
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project for the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param updateTime Output only. The time at which this CertificateTemplate was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime Output only. The time at which this CertificateTemplate was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

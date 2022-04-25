@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CxEntityTypeExcludedPhrase {
     /**
-     * The word or phrase to be excluded.
+     * @return The word or phrase to be excluded.
      * 
      */
     private final @Nullable String value;
@@ -23,9 +23,9 @@ public final class CxEntityTypeExcludedPhrase {
     }
 
     /**
-     * The word or phrase to be excluded.
+     * @return The word or phrase to be excluded.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

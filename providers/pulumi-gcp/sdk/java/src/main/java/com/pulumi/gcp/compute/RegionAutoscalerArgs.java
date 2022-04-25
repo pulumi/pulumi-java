@@ -28,6 +28,15 @@ public final class RegionAutoscalerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="autoscalingPolicy", required=true)
     private Output<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy;
 
+    /**
+     * @return The configuration parameters for the autoscaling algorithm. You can
+     * define one or more of the policies for an autoscaler: cpuUtilization,
+     * customMetricUtilizations, and loadBalancingUtilization.
+     * If none of these are specified, the default will be to autoscale based
+     * on cpuUtilization to 0.6 or 60%.
+     * Structure is documented below.
+     * 
+     */
     public Output<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy() {
         return this.autoscalingPolicy;
     }
@@ -39,6 +48,10 @@ public final class RegionAutoscalerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return An optional description of this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -50,6 +63,10 @@ public final class RegionAutoscalerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The identifier for this object. Format specified above.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -62,6 +79,11 @@ public final class RegionAutoscalerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -73,6 +95,10 @@ public final class RegionAutoscalerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return URL of the region where the instance group resides.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -86,6 +112,12 @@ public final class RegionAutoscalerArgs extends com.pulumi.resources.ResourceArg
     @Import(name="target", required=true)
     private Output<String> target;
 
+    /**
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
+     * balancing configuration) that autoscaler should maintain. Must
+     * be a positive float value. If not defined, the default is 0.8.
+     * 
+     */
     public Output<String> target() {
         return this.target;
     }
@@ -119,56 +151,144 @@ public final class RegionAutoscalerArgs extends com.pulumi.resources.ResourceArg
             $ = new RegionAutoscalerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoscalingPolicy The configuration parameters for the autoscaling algorithm. You can
+         * define one or more of the policies for an autoscaler: cpuUtilization,
+         * customMetricUtilizations, and loadBalancingUtilization.
+         * If none of these are specified, the default will be to autoscale based
+         * on cpuUtilization to 0.6 or 60%.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(Output<RegionAutoscalerAutoscalingPolicyArgs> autoscalingPolicy) {
             $.autoscalingPolicy = autoscalingPolicy;
             return this;
         }
 
+        /**
+         * @param autoscalingPolicy The configuration parameters for the autoscaling algorithm. You can
+         * define one or more of the policies for an autoscaler: cpuUtilization,
+         * customMetricUtilizations, and loadBalancingUtilization.
+         * If none of these are specified, the default will be to autoscale based
+         * on cpuUtilization to 0.6 or 60%.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoscalingPolicy(RegionAutoscalerAutoscalingPolicyArgs autoscalingPolicy) {
             return autoscalingPolicy(Output.of(autoscalingPolicy));
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description An optional description of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param name The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The identifier for this object. Format specified above.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region URL of the region where the instance group resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region URL of the region where the instance group resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param target Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }

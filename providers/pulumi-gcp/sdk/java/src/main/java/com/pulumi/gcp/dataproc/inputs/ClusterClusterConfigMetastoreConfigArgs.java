@@ -20,6 +20,10 @@ public final class ClusterClusterConfigMetastoreConfigArgs extends com.pulumi.re
     @Import(name="dataprocMetastoreService", required=true)
     private Output<String> dataprocMetastoreService;
 
+    /**
+     * @return Resource name of an existing Dataproc Metastore service.
+     * 
+     */
     public Output<String> dataprocMetastoreService() {
         return this.dataprocMetastoreService;
     }
@@ -48,11 +52,23 @@ public final class ClusterClusterConfigMetastoreConfigArgs extends com.pulumi.re
             $ = new ClusterClusterConfigMetastoreConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataprocMetastoreService Resource name of an existing Dataproc Metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocMetastoreService(Output<String> dataprocMetastoreService) {
             $.dataprocMetastoreService = dataprocMetastoreService;
             return this;
         }
 
+        /**
+         * @param dataprocMetastoreService Resource name of an existing Dataproc Metastore service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataprocMetastoreService(String dataprocMetastoreService) {
             return dataprocMetastoreService(Output.of(dataprocMetastoreService));
         }

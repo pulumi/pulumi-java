@@ -23,6 +23,10 @@ public final class ProjectBucketConfigState extends com.pulumi.resources.Resourc
     @Import(name="bucketId")
     private @Nullable Output<String> bucketId;
 
+    /**
+     * @return The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+     * 
+     */
     public Optional<Output<String>> bucketId() {
         return Optional.ofNullable(this.bucketId);
     }
@@ -34,6 +38,10 @@ public final class ProjectBucketConfigState extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Describes this bucket.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -45,6 +53,10 @@ public final class ProjectBucketConfigState extends com.pulumi.resources.Resourc
     @Import(name="lifecycleState")
     private @Nullable Output<String> lifecycleState;
 
+    /**
+     * @return The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+     * 
+     */
     public Optional<Output<String>> lifecycleState() {
         return Optional.ofNullable(this.lifecycleState);
     }
@@ -56,6 +68,10 @@ public final class ProjectBucketConfigState extends com.pulumi.resources.Resourc
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the bucket.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -67,6 +83,10 @@ public final class ProjectBucketConfigState extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The resource name of the bucket. For example: &#34;projects/my-project-id/locations/my-location/buckets/my-bucket-id&#34;
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -78,6 +98,10 @@ public final class ProjectBucketConfigState extends com.pulumi.resources.Resourc
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The parent resource that contains the logging bucket.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -89,6 +113,10 @@ public final class ProjectBucketConfigState extends com.pulumi.resources.Resourc
     @Import(name="retentionDays")
     private @Nullable Output<Integer> retentionDays;
 
+    /**
+     * @return Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
+     * 
+     */
     public Optional<Output<Integer>> retentionDays() {
         return Optional.ofNullable(this.retentionDays);
     }
@@ -123,65 +151,149 @@ public final class ProjectBucketConfigState extends com.pulumi.resources.Resourc
             $ = new ProjectBucketConfigState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketId The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketId(@Nullable Output<String> bucketId) {
             $.bucketId = bucketId;
             return this;
         }
 
+        /**
+         * @param bucketId The name of the logging bucket. Logging automatically creates two log buckets: `_Required` and `_Default`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketId(String bucketId) {
             return bucketId(Output.of(bucketId));
         }
 
+        /**
+         * @param description Describes this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Describes this bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param lifecycleState The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleState(@Nullable Output<String> lifecycleState) {
             $.lifecycleState = lifecycleState;
             return this;
         }
 
+        /**
+         * @param lifecycleState The bucket&#39;s lifecycle such as active or deleted. See [LifecycleState](https://cloud.google.com/logging/docs/reference/v2/rest/v2/billingAccounts.buckets#LogBucket.LifecycleState).
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleState(String lifecycleState) {
             return lifecycleState(Output.of(lifecycleState));
         }
 
+        /**
+         * @param location The location of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name The resource name of the bucket. For example: &#34;projects/my-project-id/locations/my-location/buckets/my-bucket-id&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The resource name of the bucket. For example: &#34;projects/my-project-id/locations/my-location/buckets/my-bucket-id&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The parent resource that contains the logging bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The parent resource that contains the logging bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param retentionDays Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(@Nullable Output<Integer> retentionDays) {
             $.retentionDays = retentionDays;
             return this;
         }
 
+        /**
+         * @param retentionDays Logs will be retained by default for this amount of time, after which they will automatically be deleted. The minimum retention period is 1 day. If this value is set to zero at bucket creation time, the default time of 30 days will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDays(Integer retentionDays) {
             return retentionDays(Output.of(retentionDays));
         }

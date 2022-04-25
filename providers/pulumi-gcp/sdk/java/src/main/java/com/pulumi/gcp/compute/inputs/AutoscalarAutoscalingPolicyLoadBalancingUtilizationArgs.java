@@ -22,6 +22,12 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs exten
     @Import(name="target", required=true)
     private Output<Double> target;
 
+    /**
+     * @return Fraction of backend capacity utilization (set in HTTP(s) load
+     * balancing configuration) that autoscaler should maintain. Must
+     * be a positive float value. If not defined, the default is 0.8.
+     * 
+     */
     public Output<Double> target() {
         return this.target;
     }
@@ -50,11 +56,27 @@ public final class AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs exten
             $ = new AutoscalarAutoscalingPolicyLoadBalancingUtilizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<Double> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Fraction of backend capacity utilization (set in HTTP(s) load
+         * balancing configuration) that autoscaler should maintain. Must
+         * be a positive float value. If not defined, the default is 0.8.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Double target) {
             return target(Output.of(target));
         }

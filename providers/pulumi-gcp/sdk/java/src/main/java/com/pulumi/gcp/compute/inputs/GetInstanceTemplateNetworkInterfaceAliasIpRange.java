@@ -23,6 +23,14 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends com.p
     @Import(name="ipCidrRange", required=true)
     private String ipCidrRange;
 
+    /**
+     * @return The IP CIDR range represented by this alias IP range. This IP CIDR range
+     * must belong to the specified subnetwork and cannot contain IP addresses reserved by
+     * system or used by other network interfaces. At the time of writing only a
+     * netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
+     * error.
+     * 
+     */
     public String ipCidrRange() {
         return this.ipCidrRange;
     }
@@ -36,6 +44,12 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends com.p
     @Import(name="subnetworkRangeName", required=true)
     private String subnetworkRangeName;
 
+    /**
+     * @return The subnetwork secondary range name specifying
+     * the secondary range from which to allocate the IP CIDR range for this alias IP
+     * range. If left unspecified, the primary range of the subnetwork will be used.
+     * 
+     */
     public String subnetworkRangeName() {
         return this.subnetworkRangeName;
     }
@@ -65,11 +79,29 @@ public final class GetInstanceTemplateNetworkInterfaceAliasIpRange extends com.p
             $ = new GetInstanceTemplateNetworkInterfaceAliasIpRange(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipCidrRange The IP CIDR range represented by this alias IP range. This IP CIDR range
+         * must belong to the specified subnetwork and cannot contain IP addresses reserved by
+         * system or used by other network interfaces. At the time of writing only a
+         * netmask (e.g. /24) may be supplied, with a CIDR format resulting in an API
+         * error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param subnetworkRangeName The subnetwork secondary range name specifying
+         * the secondary range from which to allocate the IP CIDR range for this alias IP
+         * range. If left unspecified, the primary range of the subnetwork will be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetworkRangeName(String subnetworkRangeName) {
             $.subnetworkRangeName = subnetworkRangeName;
             return this;

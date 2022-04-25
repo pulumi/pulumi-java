@@ -26,6 +26,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="appId")
     private @Nullable Output<String> appId;
 
+    /**
+     * @return Identifier of the app, usually `{PROJECT_ID}`
+     * 
+     */
     public Optional<Output<String>> appId() {
         return Optional.ofNullable(this.appId);
     }
@@ -37,6 +41,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authDomain")
     private @Nullable Output<String> authDomain;
 
+    /**
+     * @return The domain to authenticate users with when using App Engine&#39;s User API.
+     * 
+     */
     public Optional<Output<String>> authDomain() {
         return Optional.ofNullable(this.authDomain);
     }
@@ -48,6 +56,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="codeBucket")
     private @Nullable Output<String> codeBucket;
 
+    /**
+     * @return The GCS bucket code is being stored in for this app.
+     * 
+     */
     public Optional<Output<String>> codeBucket() {
         return Optional.ofNullable(this.codeBucket);
     }
@@ -62,6 +74,13 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseType")
     private @Nullable Output<String> databaseType;
 
+    /**
+     * @return The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+     * Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
+     * instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
+     * by the provider, but will be rejected by the API.
+     * 
+     */
     public Optional<Output<String>> databaseType() {
         return Optional.ofNullable(this.databaseType);
     }
@@ -73,6 +92,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultBucket")
     private @Nullable Output<String> defaultBucket;
 
+    /**
+     * @return The GCS bucket content is being stored in for this app.
+     * 
+     */
     public Optional<Output<String>> defaultBucket() {
         return Optional.ofNullable(this.defaultBucket);
     }
@@ -84,6 +107,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultHostname")
     private @Nullable Output<String> defaultHostname;
 
+    /**
+     * @return The default hostname for this app.
+     * 
+     */
     public Optional<Output<String>> defaultHostname() {
         return Optional.ofNullable(this.defaultHostname);
     }
@@ -95,6 +122,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="featureSettings")
     private @Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings;
 
+    /**
+     * @return A block of optional settings to configure specific App Engine features:
+     * 
+     */
     public Optional<Output<ApplicationFeatureSettingsGetArgs>> featureSettings() {
         return Optional.ofNullable(this.featureSettings);
     }
@@ -106,6 +137,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="gcrDomain")
     private @Nullable Output<String> gcrDomain;
 
+    /**
+     * @return The GCR domain used for storing managed Docker images for this app.
+     * 
+     */
     public Optional<Output<String>> gcrDomain() {
         return Optional.ofNullable(this.gcrDomain);
     }
@@ -117,6 +152,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="iap")
     private @Nullable Output<ApplicationIapGetArgs> iap;
 
+    /**
+     * @return Settings for enabling Cloud Identity Aware Proxy
+     * 
+     */
     public Optional<Output<ApplicationIapGetArgs>> iap() {
         return Optional.ofNullable(this.iap);
     }
@@ -129,6 +168,11 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="locationId")
     private @Nullable Output<String> locationId;
 
+    /**
+     * @return The [location](https://cloud.google.com/appengine/docs/locations)
+     * to serve the app from.
+     * 
+     */
     public Optional<Output<String>> locationId() {
         return Optional.ofNullable(this.locationId);
     }
@@ -140,6 +184,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name of the app, usually `apps/{PROJECT_ID}`
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -153,6 +201,12 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The project ID to create the application under.
+     * ~&gt;**NOTE:** GCP only accepts project ID, not project number. If you are using number,
+     * you may get a &#34;Permission denied&#34; error.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -164,6 +218,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="servingStatus")
     private @Nullable Output<String> servingStatus;
 
+    /**
+     * @return The serving status of the app.
+     * 
+     */
     public Optional<Output<String>> servingStatus() {
         return Optional.ofNullable(this.servingStatus);
     }
@@ -175,6 +233,10 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
     @Import(name="urlDispatchRules")
     private @Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules;
 
+    /**
+     * @return A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
+     * 
+     */
     public Optional<Output<List<ApplicationUrlDispatchRuleGetArgs>>> urlDispatchRules() {
         return Optional.ofNullable(this.urlDispatchRules);
     }
@@ -216,132 +278,318 @@ public final class ApplicationState extends com.pulumi.resources.ResourceArgs {
             $ = new ApplicationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appId Identifier of the app, usually `{PROJECT_ID}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(@Nullable Output<String> appId) {
             $.appId = appId;
             return this;
         }
 
+        /**
+         * @param appId Identifier of the app, usually `{PROJECT_ID}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder appId(String appId) {
             return appId(Output.of(appId));
         }
 
+        /**
+         * @param authDomain The domain to authenticate users with when using App Engine&#39;s User API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authDomain(@Nullable Output<String> authDomain) {
             $.authDomain = authDomain;
             return this;
         }
 
+        /**
+         * @param authDomain The domain to authenticate users with when using App Engine&#39;s User API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authDomain(String authDomain) {
             return authDomain(Output.of(authDomain));
         }
 
+        /**
+         * @param codeBucket The GCS bucket code is being stored in for this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeBucket(@Nullable Output<String> codeBucket) {
             $.codeBucket = codeBucket;
             return this;
         }
 
+        /**
+         * @param codeBucket The GCS bucket code is being stored in for this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeBucket(String codeBucket) {
             return codeBucket(Output.of(codeBucket));
         }
 
+        /**
+         * @param databaseType The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+         * Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
+         * instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
+         * by the provider, but will be rejected by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(@Nullable Output<String> databaseType) {
             $.databaseType = databaseType;
             return this;
         }
 
+        /**
+         * @param databaseType The type of the Cloud Firestore or Cloud Datastore database associated with this application.
+         * Can be `CLOUD_FIRESTORE` or `CLOUD_DATASTORE_COMPATIBILITY` for new
+         * instances.  To support old instances, the value `CLOUD_DATASTORE` is accepted
+         * by the provider, but will be rejected by the API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseType(String databaseType) {
             return databaseType(Output.of(databaseType));
         }
 
+        /**
+         * @param defaultBucket The GCS bucket content is being stored in for this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBucket(@Nullable Output<String> defaultBucket) {
             $.defaultBucket = defaultBucket;
             return this;
         }
 
+        /**
+         * @param defaultBucket The GCS bucket content is being stored in for this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBucket(String defaultBucket) {
             return defaultBucket(Output.of(defaultBucket));
         }
 
+        /**
+         * @param defaultHostname The default hostname for this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultHostname(@Nullable Output<String> defaultHostname) {
             $.defaultHostname = defaultHostname;
             return this;
         }
 
+        /**
+         * @param defaultHostname The default hostname for this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultHostname(String defaultHostname) {
             return defaultHostname(Output.of(defaultHostname));
         }
 
+        /**
+         * @param featureSettings A block of optional settings to configure specific App Engine features:
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureSettings(@Nullable Output<ApplicationFeatureSettingsGetArgs> featureSettings) {
             $.featureSettings = featureSettings;
             return this;
         }
 
+        /**
+         * @param featureSettings A block of optional settings to configure specific App Engine features:
+         * 
+         * @return builder
+         * 
+         */
         public Builder featureSettings(ApplicationFeatureSettingsGetArgs featureSettings) {
             return featureSettings(Output.of(featureSettings));
         }
 
+        /**
+         * @param gcrDomain The GCR domain used for storing managed Docker images for this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcrDomain(@Nullable Output<String> gcrDomain) {
             $.gcrDomain = gcrDomain;
             return this;
         }
 
+        /**
+         * @param gcrDomain The GCR domain used for storing managed Docker images for this app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcrDomain(String gcrDomain) {
             return gcrDomain(Output.of(gcrDomain));
         }
 
+        /**
+         * @param iap Settings for enabling Cloud Identity Aware Proxy
+         * 
+         * @return builder
+         * 
+         */
         public Builder iap(@Nullable Output<ApplicationIapGetArgs> iap) {
             $.iap = iap;
             return this;
         }
 
+        /**
+         * @param iap Settings for enabling Cloud Identity Aware Proxy
+         * 
+         * @return builder
+         * 
+         */
         public Builder iap(ApplicationIapGetArgs iap) {
             return iap(Output.of(iap));
         }
 
+        /**
+         * @param locationId The [location](https://cloud.google.com/appengine/docs/locations)
+         * to serve the app from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationId(@Nullable Output<String> locationId) {
             $.locationId = locationId;
             return this;
         }
 
+        /**
+         * @param locationId The [location](https://cloud.google.com/appengine/docs/locations)
+         * to serve the app from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationId(String locationId) {
             return locationId(Output.of(locationId));
         }
 
+        /**
+         * @param name Unique name of the app, usually `apps/{PROJECT_ID}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name of the app, usually `apps/{PROJECT_ID}`
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The project ID to create the application under.
+         * ~&gt;**NOTE:** GCP only accepts project ID, not project number. If you are using number,
+         * you may get a &#34;Permission denied&#34; error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The project ID to create the application under.
+         * ~&gt;**NOTE:** GCP only accepts project ID, not project number. If you are using number,
+         * you may get a &#34;Permission denied&#34; error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param servingStatus The serving status of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servingStatus(@Nullable Output<String> servingStatus) {
             $.servingStatus = servingStatus;
             return this;
         }
 
+        /**
+         * @param servingStatus The serving status of the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servingStatus(String servingStatus) {
             return servingStatus(Output.of(servingStatus));
         }
 
+        /**
+         * @param urlDispatchRules A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlDispatchRules(@Nullable Output<List<ApplicationUrlDispatchRuleGetArgs>> urlDispatchRules) {
             $.urlDispatchRules = urlDispatchRules;
             return this;
         }
 
+        /**
+         * @param urlDispatchRules A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlDispatchRules(List<ApplicationUrlDispatchRuleGetArgs> urlDispatchRules) {
             return urlDispatchRules(Output.of(urlDispatchRules));
         }
 
+        /**
+         * @param urlDispatchRules A list of dispatch rule blocks. Each block has a `domain`, `path`, and `service` field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder urlDispatchRules(ApplicationUrlDispatchRuleGetArgs... urlDispatchRules) {
             return urlDispatchRules(List.of(urlDispatchRules));
         }

@@ -24,6 +24,11 @@ public final class ApplicationIapArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+     * (default is false)
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -35,6 +40,10 @@ public final class ApplicationIapArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="oauth2ClientId", required=true)
     private Output<String> oauth2ClientId;
 
+    /**
+     * @return OAuth2 client ID to use for the authentication flow.
+     * 
+     */
     public Output<String> oauth2ClientId() {
         return this.oauth2ClientId;
     }
@@ -47,6 +56,11 @@ public final class ApplicationIapArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="oauth2ClientSecret", required=true)
     private Output<String> oauth2ClientSecret;
 
+    /**
+     * @return OAuth2 client secret to use for the authentication flow.
+     * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+     * 
+     */
     public Output<String> oauth2ClientSecret() {
         return this.oauth2ClientSecret;
     }
@@ -58,6 +72,10 @@ public final class ApplicationIapArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="oauth2ClientSecretSha256")
     private @Nullable Output<String> oauth2ClientSecretSha256;
 
+    /**
+     * @return Hex-encoded SHA-256 hash of the client secret.
+     * 
+     */
     public Optional<Output<String>> oauth2ClientSecretSha256() {
         return Optional.ofNullable(this.oauth2ClientSecretSha256);
     }
@@ -89,38 +107,90 @@ public final class ApplicationIapArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ApplicationIapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+         * (default is false)
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled (Optional) Whether the serving infrastructure will authenticate and authorize all incoming requests.
+         * (default is false)
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param oauth2ClientId OAuth2 client ID to use for the authentication flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientId(Output<String> oauth2ClientId) {
             $.oauth2ClientId = oauth2ClientId;
             return this;
         }
 
+        /**
+         * @param oauth2ClientId OAuth2 client ID to use for the authentication flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientId(String oauth2ClientId) {
             return oauth2ClientId(Output.of(oauth2ClientId));
         }
 
+        /**
+         * @param oauth2ClientSecret OAuth2 client secret to use for the authentication flow.
+         * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecret(Output<String> oauth2ClientSecret) {
             $.oauth2ClientSecret = oauth2ClientSecret;
             return this;
         }
 
+        /**
+         * @param oauth2ClientSecret OAuth2 client secret to use for the authentication flow.
+         * The SHA-256 hash of the value is returned in the oauth2ClientSecretSha256 field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecret(String oauth2ClientSecret) {
             return oauth2ClientSecret(Output.of(oauth2ClientSecret));
         }
 
+        /**
+         * @param oauth2ClientSecretSha256 Hex-encoded SHA-256 hash of the client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecretSha256(@Nullable Output<String> oauth2ClientSecretSha256) {
             $.oauth2ClientSecretSha256 = oauth2ClientSecretSha256;
             return this;
         }
 
+        /**
+         * @param oauth2ClientSecretSha256 Hex-encoded SHA-256 hash of the client secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oauth2ClientSecretSha256(String oauth2ClientSecretSha256) {
             return oauth2ClientSecretSha256(Output.of(oauth2ClientSecretSha256));
         }

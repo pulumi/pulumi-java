@@ -19,42 +19,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
     /**
-     * An Apt Repository.
+     * @return An Apt Repository.
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt apt;
     /**
-     * A deb package file.
+     * @return A deb package file.
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb deb;
     /**
-     * Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
+     * @return Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
      * 
      */
     private final String desiredState;
     /**
-     * A package managed by GooGet.
+     * @return A package managed by GooGet.
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget googet;
     /**
-     * An MSI package.
+     * @return An MSI package.
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi msi;
     /**
-     * An rpm package file.
+     * @return An rpm package file.
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm rpm;
     /**
-     * A Yum Repository.
+     * @return A Yum Repository.
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum yum;
     /**
-     * A Zypper Repository.
+     * @return A Zypper Repository.
      * 
      */
     private final @Nullable OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper zypper;
@@ -80,58 +80,58 @@ public final class OsPolicyAssignmentOsPolicyResourceGroupResourcePkg {
     }
 
     /**
-     * An Apt Repository.
+     * @return An Apt Repository.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgApt> apt() {
         return Optional.ofNullable(this.apt);
     }
     /**
-     * A deb package file.
+     * @return A deb package file.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgDeb> deb() {
         return Optional.ofNullable(this.deb);
     }
     /**
-     * Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
+     * @return Required. The desired state the agent should maintain for this package. Possible values: DESIRED_STATE_UNSPECIFIED, INSTALLED, REMOVED
      * 
-    */
+     */
     public String desiredState() {
         return this.desiredState;
     }
     /**
-     * A package managed by GooGet.
+     * @return A package managed by GooGet.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgGooget> googet() {
         return Optional.ofNullable(this.googet);
     }
     /**
-     * An MSI package.
+     * @return An MSI package.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgMsi> msi() {
         return Optional.ofNullable(this.msi);
     }
     /**
-     * An rpm package file.
+     * @return An rpm package file.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgRpm> rpm() {
         return Optional.ofNullable(this.rpm);
     }
     /**
-     * A Yum Repository.
+     * @return A Yum Repository.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgYum> yum() {
         return Optional.ofNullable(this.yum);
     }
     /**
-     * A Zypper Repository.
+     * @return A Zypper Repository.
      * 
-    */
+     */
     public Optional<OsPolicyAssignmentOsPolicyResourceGroupResourcePkgZypper> zypper() {
         return Optional.ofNullable(this.zypper);
     }

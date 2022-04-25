@@ -24,6 +24,12 @@ public final class IndexFieldGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="arrayConfig")
     private @Nullable Output<String> arrayConfig;
 
+    /**
+     * @return Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+     * be specified.
+     * Possible values are `CONTAINS`.
+     * 
+     */
     public Optional<Output<String>> arrayConfig() {
         return Optional.ofNullable(this.arrayConfig);
     }
@@ -35,6 +41,10 @@ public final class IndexFieldGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fieldPath")
     private @Nullable Output<String> fieldPath;
 
+    /**
+     * @return Name of the field.
+     * 
+     */
     public Optional<Output<String>> fieldPath() {
         return Optional.ofNullable(this.fieldPath);
     }
@@ -48,6 +58,12 @@ public final class IndexFieldGetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="order")
     private @Nullable Output<String> order;
 
+    /**
+     * @return Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+     * Only one of `order` and `arrayConfig` can be specified.
+     * Possible values are `ASCENDING` and `DESCENDING`.
+     * 
+     */
     public Optional<Output<String>> order() {
         return Optional.ofNullable(this.order);
     }
@@ -78,29 +94,73 @@ public final class IndexFieldGetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IndexFieldGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arrayConfig Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+         * be specified.
+         * Possible values are `CONTAINS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayConfig(@Nullable Output<String> arrayConfig) {
             $.arrayConfig = arrayConfig;
             return this;
         }
 
+        /**
+         * @param arrayConfig Indicates that this field supports operations on arrayValues. Only one of `order` and `arrayConfig` can
+         * be specified.
+         * Possible values are `CONTAINS`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arrayConfig(String arrayConfig) {
             return arrayConfig(Output.of(arrayConfig));
         }
 
+        /**
+         * @param fieldPath Name of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(@Nullable Output<String> fieldPath) {
             $.fieldPath = fieldPath;
             return this;
         }
 
+        /**
+         * @param fieldPath Name of the field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldPath(String fieldPath) {
             return fieldPath(Output.of(fieldPath));
         }
 
+        /**
+         * @param order Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+         * Only one of `order` and `arrayConfig` can be specified.
+         * Possible values are `ASCENDING` and `DESCENDING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(@Nullable Output<String> order) {
             $.order = order;
             return this;
         }
 
+        /**
+         * @param order Indicates that this field supports ordering by the specified order or comparing using =, &lt;, &lt;=, &gt;, &gt;=.
+         * Only one of `order` and `arrayConfig` can be specified.
+         * Possible values are `ASCENDING` and `DESCENDING`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder order(String order) {
             return order(Output.of(order));
         }

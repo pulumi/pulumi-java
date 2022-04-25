@@ -20,6 +20,11 @@ public final class GetSubnetworkSecondaryIpRange extends com.pulumi.resources.In
     @Import(name="ipCidrRange", required=true)
     private String ipCidrRange;
 
+    /**
+     * @return The range of IP addresses belonging to this subnetwork
+     * secondary range.
+     * 
+     */
     public String ipCidrRange() {
         return this.ipCidrRange;
     }
@@ -32,6 +37,11 @@ public final class GetSubnetworkSecondaryIpRange extends com.pulumi.resources.In
     @Import(name="rangeName", required=true)
     private String rangeName;
 
+    /**
+     * @return The name associated with this subnetwork secondary range, used
+     * when adding an alias IP range to a VM instance.
+     * 
+     */
     public String rangeName() {
         return this.rangeName;
     }
@@ -61,11 +71,25 @@ public final class GetSubnetworkSecondaryIpRange extends com.pulumi.resources.In
             $ = new GetSubnetworkSecondaryIpRange(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipCidrRange The range of IP addresses belonging to this subnetwork
+         * secondary range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipCidrRange(String ipCidrRange) {
             $.ipCidrRange = ipCidrRange;
             return this;
         }
 
+        /**
+         * @param rangeName The name associated with this subnetwork secondary range, used
+         * when adding an alias IP range to a VM instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rangeName(String rangeName) {
             $.rangeName = rangeName;
             return this;

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InstanceTemplateScheduling {
     /**
-     * Specifies whether the instance should be
+     * @return Specifies whether the instance should be
      * automatically restarted if it is terminated by Compute Engine (not
      * terminated by a user). This defaults to true.
      * 
@@ -24,7 +24,7 @@ public final class InstanceTemplateScheduling {
     private final @Nullable Boolean automaticRestart;
     private final @Nullable Integer minNodeCpus;
     /**
-     * Specifies node affinities or anti-affinities
+     * @return Specifies node affinities or anti-affinities
      * to determine which sole-tenant nodes your instances and managed instance
      * groups will use as host systems. Read more on sole-tenant node creation
      * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
@@ -33,13 +33,13 @@ public final class InstanceTemplateScheduling {
      */
     private final @Nullable List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities;
     /**
-     * Defines the maintenance behavior for this
+     * @return Defines the maintenance behavior for this
      * instance.
      * 
      */
     private final @Nullable String onHostMaintenance;
     /**
-     * Allows instance to be preempted. This defaults to
+     * @return Allows instance to be preempted. This defaults to
      * false. Read more on this
      * [here](https://cloud.google.com/compute/docs/instances/preemptible).
      * 
@@ -61,11 +61,11 @@ public final class InstanceTemplateScheduling {
     }
 
     /**
-     * Specifies whether the instance should be
+     * @return Specifies whether the instance should be
      * automatically restarted if it is terminated by Compute Engine (not
      * terminated by a user). This defaults to true.
      * 
-    */
+     */
     public Optional<Boolean> automaticRestart() {
         return Optional.ofNullable(this.automaticRestart);
     }
@@ -73,30 +73,30 @@ public final class InstanceTemplateScheduling {
         return Optional.ofNullable(this.minNodeCpus);
     }
     /**
-     * Specifies node affinities or anti-affinities
+     * @return Specifies node affinities or anti-affinities
      * to determine which sole-tenant nodes your instances and managed instance
      * groups will use as host systems. Read more on sole-tenant node creation
      * [here](https://cloud.google.com/compute/docs/nodes/create-nodes).
      * Structure documented below.
      * 
-    */
+     */
     public List<InstanceTemplateSchedulingNodeAffinity> nodeAffinities() {
         return this.nodeAffinities == null ? List.of() : this.nodeAffinities;
     }
     /**
-     * Defines the maintenance behavior for this
+     * @return Defines the maintenance behavior for this
      * instance.
      * 
-    */
+     */
     public Optional<String> onHostMaintenance() {
         return Optional.ofNullable(this.onHostMaintenance);
     }
     /**
-     * Allows instance to be preempted. This defaults to
+     * @return Allows instance to be preempted. This defaults to
      * false. Read more on this
      * [here](https://cloud.google.com/compute/docs/instances/preemptible).
      * 
-    */
+     */
     public Optional<Boolean> preemptible() {
         return Optional.ofNullable(this.preemptible);
     }

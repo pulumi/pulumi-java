@@ -26,6 +26,11 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     @Import(name="guestAccelerators")
     private @Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators;
 
+    /**
+     * @return Guest accelerator type and count.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>>> guestAccelerators() {
         return Optional.ofNullable(this.guestAccelerators);
     }
@@ -39,6 +44,12 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     @Import(name="localSsds")
     private @Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds;
 
+    /**
+     * @return The amount of local ssd to reserve with each instance. This
+     * reserves disks of type `local-ssd`.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>>> localSsds() {
         return Optional.ofNullable(this.localSsds);
     }
@@ -50,6 +61,10 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     @Import(name="machineType", required=true)
     private Output<String> machineType;
 
+    /**
+     * @return The name of the machine type to reserve.
+     * 
+     */
     public Output<String> machineType() {
         return this.machineType;
     }
@@ -64,6 +79,13 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
     @Import(name="minCpuPlatform")
     private @Nullable Output<String> minCpuPlatform;
 
+    /**
+     * @return The minimum CPU platform for the reservation. For example,
+     * `&#34;Intel Skylake&#34;`. See
+     * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+     * for information on available CPU platforms.
+     * 
+     */
     public Optional<Output<String>> minCpuPlatform() {
         return Optional.ofNullable(this.minCpuPlatform);
     }
@@ -95,46 +117,121 @@ public final class ReservationSpecificReservationInstancePropertiesGetArgs exten
             $ = new ReservationSpecificReservationInstancePropertiesGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param guestAccelerators Guest accelerator type and count.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(@Nullable Output<List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs>> guestAccelerators) {
             $.guestAccelerators = guestAccelerators;
             return this;
         }
 
+        /**
+         * @param guestAccelerators Guest accelerator type and count.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(List<ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs> guestAccelerators) {
             return guestAccelerators(Output.of(guestAccelerators));
         }
 
+        /**
+         * @param guestAccelerators Guest accelerator type and count.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder guestAccelerators(ReservationSpecificReservationInstancePropertiesGuestAcceleratorGetArgs... guestAccelerators) {
             return guestAccelerators(List.of(guestAccelerators));
         }
 
+        /**
+         * @param localSsds The amount of local ssd to reserve with each instance. This
+         * reserves disks of type `local-ssd`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsds(@Nullable Output<List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs>> localSsds) {
             $.localSsds = localSsds;
             return this;
         }
 
+        /**
+         * @param localSsds The amount of local ssd to reserve with each instance. This
+         * reserves disks of type `local-ssd`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsds(List<ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs> localSsds) {
             return localSsds(Output.of(localSsds));
         }
 
+        /**
+         * @param localSsds The amount of local ssd to reserve with each instance. This
+         * reserves disks of type `local-ssd`.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localSsds(ReservationSpecificReservationInstancePropertiesLocalSsdGetArgs... localSsds) {
             return localSsds(List.of(localSsds));
         }
 
+        /**
+         * @param machineType The name of the machine type to reserve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(Output<String> machineType) {
             $.machineType = machineType;
             return this;
         }
 
+        /**
+         * @param machineType The name of the machine type to reserve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineType(String machineType) {
             return machineType(Output.of(machineType));
         }
 
+        /**
+         * @param minCpuPlatform The minimum CPU platform for the reservation. For example,
+         * `&#34;Intel Skylake&#34;`. See
+         * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+         * for information on available CPU platforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(@Nullable Output<String> minCpuPlatform) {
             $.minCpuPlatform = minCpuPlatform;
             return this;
         }
 
+        /**
+         * @param minCpuPlatform The minimum CPU platform for the reservation. For example,
+         * `&#34;Intel Skylake&#34;`. See
+         * the CPU platform availability reference](https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform#availablezones)
+         * for information on available CPU platforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCpuPlatform(String minCpuPlatform) {
             return minCpuPlatform(Output.of(minCpuPlatform));
         }

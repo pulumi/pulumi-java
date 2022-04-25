@@ -21,6 +21,10 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return Project from which to list available zones. Defaults to project declared in the provider.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -32,6 +36,10 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="region")
     private @Nullable String region;
 
+    /**
+     * @return Region from which to list available zones. Defaults to region declared in the provider.
+     * 
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }
@@ -44,6 +52,11 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Allows to filter list of zones based on their current status. Status can be either `UP` or `DOWN`.
+     * Defaults to no filtering (all available zones - both `UP` and `DOWN`).
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -74,16 +87,35 @@ public final class GetZonesArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetZonesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project Project from which to list available zones. Defaults to project declared in the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param region Region from which to list available zones. Defaults to region declared in the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable String region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param status Allows to filter list of zones based on their current status. Status can be either `UP` or `DOWN`.
+         * Defaults to no filtering (all available zones - both `UP` and `DOWN`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

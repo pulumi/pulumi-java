@@ -24,6 +24,12 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends com.pulu
     @Import(name="ingressTrafficAllowed")
     private @Nullable Output<String> ingressTrafficAllowed;
 
+    /**
+     * @return The ingress settings for version or service.
+     * Default value is `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`.
+     * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
+     * 
+     */
     public Optional<Output<String>> ingressTrafficAllowed() {
         return Optional.ofNullable(this.ingressTrafficAllowed);
     }
@@ -52,11 +58,27 @@ public final class ServiceNetworkSettingsNetworkSettingsGetArgs extends com.pulu
             $ = new ServiceNetworkSettingsNetworkSettingsGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ingressTrafficAllowed The ingress settings for version or service.
+         * Default value is `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`.
+         * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressTrafficAllowed(@Nullable Output<String> ingressTrafficAllowed) {
             $.ingressTrafficAllowed = ingressTrafficAllowed;
             return this;
         }
 
+        /**
+         * @param ingressTrafficAllowed The ingress settings for version or service.
+         * Default value is `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`.
+         * Possible values are `INGRESS_TRAFFIC_ALLOWED_UNSPECIFIED`, `INGRESS_TRAFFIC_ALLOWED_ALL`, `INGRESS_TRAFFIC_ALLOWED_INTERNAL_ONLY`, and `INGRESS_TRAFFIC_ALLOWED_INTERNAL_AND_LB`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ingressTrafficAllowed(String ingressTrafficAllowed) {
             return ingressTrafficAllowed(Output.of(ingressTrafficAllowed));
         }

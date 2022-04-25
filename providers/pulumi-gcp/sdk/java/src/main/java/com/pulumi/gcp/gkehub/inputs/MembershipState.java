@@ -28,6 +28,13 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="authority")
     private @Nullable Output<MembershipAuthorityGetArgs> authority;
 
+    /**
+     * @return Authority encodes how Google will recognize identities from this Membership.
+     * See the workload identity documentation for more details:
+     * https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MembershipAuthorityGetArgs>> authority() {
         return Optional.ofNullable(this.authority);
     }
@@ -43,6 +50,13 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
+     * 
+     * @deprecated
+     * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
+     * 
+     */
     @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
@@ -56,6 +70,11 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="endpoint")
     private @Nullable Output<MembershipEndpointGetArgs> endpoint;
 
+    /**
+     * @return If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<MembershipEndpointGetArgs>> endpoint() {
         return Optional.ofNullable(this.endpoint);
     }
@@ -67,6 +86,10 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return Labels to apply to this membership.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -78,6 +101,10 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="membershipId")
     private @Nullable Output<String> membershipId;
 
+    /**
+     * @return The client-provided identifier of the membership.
+     * 
+     */
     public Optional<Output<String>> membershipId() {
         return Optional.ofNullable(this.membershipId);
     }
@@ -89,6 +116,10 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The unique identifier of the membership.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -101,6 +132,11 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -135,65 +171,167 @@ public final class MembershipState extends com.pulumi.resources.ResourceArgs {
             $ = new MembershipState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authority Authority encodes how Google will recognize identities from this Membership.
+         * See the workload identity documentation for more details:
+         * https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(@Nullable Output<MembershipAuthorityGetArgs> authority) {
             $.authority = authority;
             return this;
         }
 
+        /**
+         * @param authority Authority encodes how Google will recognize identities from this Membership.
+         * See the workload identity documentation for more details:
+         * https://cloud.google.com/kubernetes-engine/docs/how-to/workload-identity
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authority(MembershipAuthorityGetArgs authority) {
             return authority(Output.of(authority));
         }
 
+        /**
+         * @param description The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
+         * 
+         */
+        @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The name of this entity type to be displayed on the console. This field is unavailable in v1 of the API.
+         * 
+         * @return builder
+         * 
+         * @deprecated
+         * This field is unavailable in the GA provider and will be removed from the beta provider in a future release.
+         * 
+         */
+        @Deprecated /* This field is unavailable in the GA provider and will be removed from the beta provider in a future release. */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param endpoint If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(@Nullable Output<MembershipEndpointGetArgs> endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param endpoint If this Membership is a Kubernetes API server hosted on GKE, this is a self link to its GCP resource.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(MembershipEndpointGetArgs endpoint) {
             return endpoint(Output.of(endpoint));
         }
 
+        /**
+         * @param labels Labels to apply to this membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Labels to apply to this membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param membershipId The client-provided identifier of the membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipId(@Nullable Output<String> membershipId) {
             $.membershipId = membershipId;
             return this;
         }
 
+        /**
+         * @param membershipId The client-provided identifier of the membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipId(String membershipId) {
             return membershipId(Output.of(membershipId));
         }
 
+        /**
+         * @param name The unique identifier of the membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The unique identifier of the membership.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

@@ -32,6 +32,16 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createPolicy")
     private @Nullable Output<String> createPolicy;
 
+    /**
+     * @return Set the policy to use for creating new resources. Only used on
+     * create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+     * `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+     * the deployment will fail. Note that updating this field does not
+     * actually affect the deployment, just how it is updated.
+     * Default value is `CREATE_OR_ACQUIRE`.
+     * Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
+     * 
+     */
     public Optional<Output<String>> createPolicy() {
         return Optional.ofNullable(this.createPolicy);
     }
@@ -50,6 +60,17 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deletePolicy")
     private @Nullable Output<String> deletePolicy;
 
+    /**
+     * @return Set the policy to use for deleting new resources on update/delete.
+     * Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+     * resource is deleted after removal from Deployment Manager. If
+     * `ABANDON`, the resource is only removed from Deployment Manager
+     * and is not actually deleted. Note that updating this field does not
+     * actually change the deployment, just how it is updated.
+     * Default value is `DELETE`.
+     * Possible values are `ABANDON` and `DELETE`.
+     * 
+     */
     public Optional<Output<String>> deletePolicy() {
         return Optional.ofNullable(this.deletePolicy);
     }
@@ -61,6 +82,10 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional user-provided description of deployment.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -73,6 +98,11 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<List<DeploymentLabelArgs>> labels;
 
+    /**
+     * @return Key-value pairs to apply to this labels.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<List<DeploymentLabelArgs>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -85,6 +115,11 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the template to import, as declared in the YAML
+     * configuration.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +138,17 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preview")
     private @Nullable Output<Boolean> preview;
 
+    /**
+     * @return If set to true, a deployment is created with &#34;shell&#34; resources
+     * that are not actually instantiated. This allows you to preview a
+     * deployment. It can be updated to false to actually deploy
+     * with real resources.
+     * ~&gt;**NOTE:** Deployment Manager does not allow update
+     * of a deployment in preview (unless updating to preview=false). Thus,
+     * the provider will force-recreate deployments if either preview is updated
+     * to true or if other fields are updated while preview is true.
+     * 
+     */
     public Optional<Output<Boolean>> preview() {
         return Optional.ofNullable(this.preview);
     }
@@ -115,6 +161,11 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -128,6 +179,12 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="target", required=true)
     private Output<DeploymentTargetArgs> target;
 
+    /**
+     * @return Parameters that define your deployment, including the deployment
+     * configuration and relevant templates.
+     * Structure is documented below.
+     * 
+     */
     public Output<DeploymentTargetArgs> target() {
         return this.target;
     }
@@ -163,78 +220,231 @@ public final class DeploymentArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeploymentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createPolicy Set the policy to use for creating new resources. Only used on
+         * create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+         * `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+         * the deployment will fail. Note that updating this field does not
+         * actually affect the deployment, just how it is updated.
+         * Default value is `CREATE_OR_ACQUIRE`.
+         * Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createPolicy(@Nullable Output<String> createPolicy) {
             $.createPolicy = createPolicy;
             return this;
         }
 
+        /**
+         * @param createPolicy Set the policy to use for creating new resources. Only used on
+         * create and update. Valid values are `CREATE_OR_ACQUIRE` (default) or
+         * `ACQUIRE`. If set to `ACQUIRE` and resources do not already exist,
+         * the deployment will fail. Note that updating this field does not
+         * actually affect the deployment, just how it is updated.
+         * Default value is `CREATE_OR_ACQUIRE`.
+         * Possible values are `ACQUIRE` and `CREATE_OR_ACQUIRE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createPolicy(String createPolicy) {
             return createPolicy(Output.of(createPolicy));
         }
 
+        /**
+         * @param deletePolicy Set the policy to use for deleting new resources on update/delete.
+         * Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+         * resource is deleted after removal from Deployment Manager. If
+         * `ABANDON`, the resource is only removed from Deployment Manager
+         * and is not actually deleted. Note that updating this field does not
+         * actually change the deployment, just how it is updated.
+         * Default value is `DELETE`.
+         * Possible values are `ABANDON` and `DELETE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletePolicy(@Nullable Output<String> deletePolicy) {
             $.deletePolicy = deletePolicy;
             return this;
         }
 
+        /**
+         * @param deletePolicy Set the policy to use for deleting new resources on update/delete.
+         * Valid values are `DELETE` (default) or `ABANDON`. If `DELETE`,
+         * resource is deleted after removal from Deployment Manager. If
+         * `ABANDON`, the resource is only removed from Deployment Manager
+         * and is not actually deleted. Note that updating this field does not
+         * actually change the deployment, just how it is updated.
+         * Default value is `DELETE`.
+         * Possible values are `ABANDON` and `DELETE`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deletePolicy(String deletePolicy) {
             return deletePolicy(Output.of(deletePolicy));
         }
 
+        /**
+         * @param description Optional user-provided description of deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional user-provided description of deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param labels Key-value pairs to apply to this labels.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<List<DeploymentLabelArgs>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Key-value pairs to apply to this labels.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<DeploymentLabelArgs> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param labels Key-value pairs to apply to this labels.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(DeploymentLabelArgs... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param name The name of the template to import, as declared in the YAML
+         * configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the template to import, as declared in the YAML
+         * configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param preview If set to true, a deployment is created with &#34;shell&#34; resources
+         * that are not actually instantiated. This allows you to preview a
+         * deployment. It can be updated to false to actually deploy
+         * with real resources.
+         * ~&gt;**NOTE:** Deployment Manager does not allow update
+         * of a deployment in preview (unless updating to preview=false). Thus,
+         * the provider will force-recreate deployments if either preview is updated
+         * to true or if other fields are updated while preview is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(@Nullable Output<Boolean> preview) {
             $.preview = preview;
             return this;
         }
 
+        /**
+         * @param preview If set to true, a deployment is created with &#34;shell&#34; resources
+         * that are not actually instantiated. This allows you to preview a
+         * deployment. It can be updated to false to actually deploy
+         * with real resources.
+         * ~&gt;**NOTE:** Deployment Manager does not allow update
+         * of a deployment in preview (unless updating to preview=false). Thus,
+         * the provider will force-recreate deployments if either preview is updated
+         * to true or if other fields are updated while preview is true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(Boolean preview) {
             return preview(Output.of(preview));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param target Parameters that define your deployment, including the deployment
+         * configuration and relevant templates.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<DeploymentTargetArgs> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Parameters that define your deployment, including the deployment
+         * configuration and relevant templates.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(DeploymentTargetArgs target) {
             return target(Output.of(target));
         }

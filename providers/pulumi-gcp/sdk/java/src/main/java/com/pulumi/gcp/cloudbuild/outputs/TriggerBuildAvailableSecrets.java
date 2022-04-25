@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class TriggerBuildAvailableSecrets {
     /**
-     * Pairs a secret environment variable with a SecretVersion in Secret Manager.
+     * @return Pairs a secret environment variable with a SecretVersion in Secret Manager.
      * Structure is documented below.
      * 
      */
@@ -23,10 +23,10 @@ public final class TriggerBuildAvailableSecrets {
     }
 
     /**
-     * Pairs a secret environment variable with a SecretVersion in Secret Manager.
+     * @return Pairs a secret environment variable with a SecretVersion in Secret Manager.
      * Structure is documented below.
      * 
-    */
+     */
     public List<TriggerBuildAvailableSecretsSecretManager> secretManagers() {
         return this.secretManagers;
     }

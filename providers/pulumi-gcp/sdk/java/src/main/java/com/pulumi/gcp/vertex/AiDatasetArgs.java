@@ -24,6 +24,10 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -36,6 +40,11 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encryptionSpec")
     private @Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec;
 
+    /**
+     * @return Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<AiDatasetEncryptionSpecArgs>> encryptionSpec() {
         return Optional.ofNullable(this.encryptionSpec);
     }
@@ -47,6 +56,10 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labels")
     private @Nullable Output<Map<String,String>> labels;
 
+    /**
+     * @return A set of key/value label pairs to assign to this Workflow.
+     * 
+     */
     public Optional<Output<Map<String,String>>> labels() {
         return Optional.ofNullable(this.labels);
     }
@@ -58,6 +71,10 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadataSchemaUri", required=true)
     private Output<String> metadataSchemaUri;
 
+    /**
+     * @return Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+     * 
+     */
     public Output<String> metadataSchemaUri() {
         return this.metadataSchemaUri;
     }
@@ -70,6 +87,11 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -81,6 +103,10 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return The region of the dataset. eg us-central1
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -114,56 +140,132 @@ public final class AiDatasetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AiDatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The user-defined name of the Dataset. The name can be up to 128 characters long and can be consist of any UTF-8 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param encryptionSpec Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSpec(@Nullable Output<AiDatasetEncryptionSpecArgs> encryptionSpec) {
             $.encryptionSpec = encryptionSpec;
             return this;
         }
 
+        /**
+         * @param encryptionSpec Customer-managed encryption key spec for a Dataset. If set, this Dataset and all sub-resources of this Dataset will be secured by this key.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSpec(AiDatasetEncryptionSpecArgs encryptionSpec) {
             return encryptionSpec(Output.of(encryptionSpec));
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this Workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(@Nullable Output<Map<String,String>> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels A set of key/value label pairs to assign to this Workflow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(Map<String,String> labels) {
             return labels(Output.of(labels));
         }
 
+        /**
+         * @param metadataSchemaUri Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataSchemaUri(Output<String> metadataSchemaUri) {
             $.metadataSchemaUri = metadataSchemaUri;
             return this;
         }
 
+        /**
+         * @param metadataSchemaUri Points to a YAML file stored on Google Cloud Storage describing additional information about the Dataset. The schema is defined as an OpenAPI 3.0.2 Schema Object. The schema files that can be used here are found in gs://google-cloud-aiplatform/schema/dataset/metadata/.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadataSchemaUri(String metadataSchemaUri) {
             return metadataSchemaUri(Output.of(metadataSchemaUri));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param region The region of the dataset. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region The region of the dataset. eg us-central1
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }

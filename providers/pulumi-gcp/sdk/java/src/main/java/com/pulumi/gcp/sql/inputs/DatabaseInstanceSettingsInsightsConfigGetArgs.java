@@ -23,6 +23,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
     @Import(name="queryInsightsEnabled")
     private @Nullable Output<Boolean> queryInsightsEnabled;
 
+    /**
+     * @return True if Query Insights feature is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> queryInsightsEnabled() {
         return Optional.ofNullable(this.queryInsightsEnabled);
     }
@@ -34,6 +38,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
     @Import(name="queryStringLength")
     private @Nullable Output<Integer> queryStringLength;
 
+    /**
+     * @return Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+     * 
+     */
     public Optional<Output<Integer>> queryStringLength() {
         return Optional.ofNullable(this.queryStringLength);
     }
@@ -45,6 +53,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
     @Import(name="recordApplicationTags")
     private @Nullable Output<Boolean> recordApplicationTags;
 
+    /**
+     * @return True if Query Insights will record application tags from query when enabled.
+     * 
+     */
     public Optional<Output<Boolean>> recordApplicationTags() {
         return Optional.ofNullable(this.recordApplicationTags);
     }
@@ -56,6 +68,10 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
     @Import(name="recordClientAddress")
     private @Nullable Output<Boolean> recordClientAddress;
 
+    /**
+     * @return True if Query Insights will record client address when enabled.
+     * 
+     */
     public Optional<Output<Boolean>> recordClientAddress() {
         return Optional.ofNullable(this.recordClientAddress);
     }
@@ -87,38 +103,86 @@ public final class DatabaseInstanceSettingsInsightsConfigGetArgs extends com.pul
             $ = new DatabaseInstanceSettingsInsightsConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryInsightsEnabled True if Query Insights feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryInsightsEnabled(@Nullable Output<Boolean> queryInsightsEnabled) {
             $.queryInsightsEnabled = queryInsightsEnabled;
             return this;
         }
 
+        /**
+         * @param queryInsightsEnabled True if Query Insights feature is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryInsightsEnabled(Boolean queryInsightsEnabled) {
             return queryInsightsEnabled(Output.of(queryInsightsEnabled));
         }
 
+        /**
+         * @param queryStringLength Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringLength(@Nullable Output<Integer> queryStringLength) {
             $.queryStringLength = queryStringLength;
             return this;
         }
 
+        /**
+         * @param queryStringLength Maximum query length stored in bytes. Between 256 and 4500. Default to 1024.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryStringLength(Integer queryStringLength) {
             return queryStringLength(Output.of(queryStringLength));
         }
 
+        /**
+         * @param recordApplicationTags True if Query Insights will record application tags from query when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordApplicationTags(@Nullable Output<Boolean> recordApplicationTags) {
             $.recordApplicationTags = recordApplicationTags;
             return this;
         }
 
+        /**
+         * @param recordApplicationTags True if Query Insights will record application tags from query when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordApplicationTags(Boolean recordApplicationTags) {
             return recordApplicationTags(Output.of(recordApplicationTags));
         }
 
+        /**
+         * @param recordClientAddress True if Query Insights will record client address when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordClientAddress(@Nullable Output<Boolean> recordClientAddress) {
             $.recordClientAddress = recordClientAddress;
             return this;
         }
 
+        /**
+         * @param recordClientAddress True if Query Insights will record client address when enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordClientAddress(Boolean recordClientAddress) {
             return recordClientAddress(Output.of(recordClientAddress));
         }

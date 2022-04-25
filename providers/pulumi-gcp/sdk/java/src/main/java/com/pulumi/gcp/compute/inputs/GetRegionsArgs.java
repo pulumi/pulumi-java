@@ -21,6 +21,10 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="project")
     private @Nullable String project;
 
+    /**
+     * @return Project from which to list available regions. Defaults to project declared in the provider.
+     * 
+     */
     public Optional<String> project() {
         return Optional.ofNullable(this.project);
     }
@@ -33,6 +37,11 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Allows to filter list of regions based on their current status. Status can be either `UP` or `DOWN`.
+     * Defaults to no filtering (all available regions - both `UP` and `DOWN`).
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -62,11 +71,24 @@ public final class GetRegionsArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRegionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param project Project from which to list available regions. Defaults to project declared in the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable String project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param status Allows to filter list of regions based on their current status. Status can be either `UP` or `DOWN`.
+         * Defaults to no filtering (all available regions - both `UP` and `DOWN`).
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

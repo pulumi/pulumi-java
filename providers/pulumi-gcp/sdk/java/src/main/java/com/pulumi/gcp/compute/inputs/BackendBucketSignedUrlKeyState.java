@@ -22,6 +22,10 @@ public final class BackendBucketSignedUrlKeyState extends com.pulumi.resources.R
     @Import(name="backendBucket")
     private @Nullable Output<String> backendBucket;
 
+    /**
+     * @return The backend bucket this signed URL key belongs.
+     * 
+     */
     public Optional<Output<String>> backendBucket() {
         return Optional.ofNullable(this.backendBucket);
     }
@@ -35,6 +39,12 @@ public final class BackendBucketSignedUrlKeyState extends com.pulumi.resources.R
     @Import(name="keyValue")
     private @Nullable Output<String> keyValue;
 
+    /**
+     * @return 128-bit key value used for signing the URL. The key value must be a
+     * valid RFC 4648 Section 5 base64url encoded string.
+     * **Note**: This property is sensitive and will not be displayed in the plan.
+     * 
+     */
     public Optional<Output<String>> keyValue() {
         return Optional.ofNullable(this.keyValue);
     }
@@ -46,6 +56,10 @@ public final class BackendBucketSignedUrlKeyState extends com.pulumi.resources.R
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the signed URL key.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -58,6 +72,11 @@ public final class BackendBucketSignedUrlKeyState extends com.pulumi.resources.R
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -89,38 +108,92 @@ public final class BackendBucketSignedUrlKeyState extends com.pulumi.resources.R
             $ = new BackendBucketSignedUrlKeyState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendBucket The backend bucket this signed URL key belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendBucket(@Nullable Output<String> backendBucket) {
             $.backendBucket = backendBucket;
             return this;
         }
 
+        /**
+         * @param backendBucket The backend bucket this signed URL key belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendBucket(String backendBucket) {
             return backendBucket(Output.of(backendBucket));
         }
 
+        /**
+         * @param keyValue 128-bit key value used for signing the URL. The key value must be a
+         * valid RFC 4648 Section 5 base64url encoded string.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValue(@Nullable Output<String> keyValue) {
             $.keyValue = keyValue;
             return this;
         }
 
+        /**
+         * @param keyValue 128-bit key value used for signing the URL. The key value must be a
+         * valid RFC 4648 Section 5 base64url encoded string.
+         * **Note**: This property is sensitive and will not be displayed in the plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValue(String keyValue) {
             return keyValue(Output.of(keyValue));
         }
 
+        /**
+         * @param name Name of the signed URL key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the signed URL key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }

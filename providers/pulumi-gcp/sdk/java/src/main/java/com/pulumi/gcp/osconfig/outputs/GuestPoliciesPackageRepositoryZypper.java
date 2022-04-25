@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestPoliciesPackageRepositoryZypper {
     /**
-     * The location of the repository directory.
+     * @return The location of the repository directory.
      * 
      */
     private final String baseUrl;
     /**
-     * The display name of the repository.
+     * @return The display name of the repository.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * URIs of GPG keys.
+     * @return URIs of GPG keys.
      * 
      */
     private final @Nullable List<String> gpgKeys;
     /**
-     * Id of the artifact, which the installation and update steps of this recipe can reference.
+     * @return Id of the artifact, which the installation and update steps of this recipe can reference.
      * Artifacts in a recipe cannot have the same id.
      * 
      */
@@ -47,31 +47,31 @@ public final class GuestPoliciesPackageRepositoryZypper {
     }
 
     /**
-     * The location of the repository directory.
+     * @return The location of the repository directory.
      * 
-    */
+     */
     public String baseUrl() {
         return this.baseUrl;
     }
     /**
-     * The display name of the repository.
+     * @return The display name of the repository.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * URIs of GPG keys.
+     * @return URIs of GPG keys.
      * 
-    */
+     */
     public List<String> gpgKeys() {
         return this.gpgKeys == null ? List.of() : this.gpgKeys;
     }
     /**
-     * Id of the artifact, which the installation and update steps of this recipe can reference.
+     * @return Id of the artifact, which the installation and update steps of this recipe can reference.
      * Artifacts in a recipe cannot have the same id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

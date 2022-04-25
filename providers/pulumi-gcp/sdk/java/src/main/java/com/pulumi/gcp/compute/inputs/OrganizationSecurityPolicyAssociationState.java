@@ -22,6 +22,10 @@ public final class OrganizationSecurityPolicyAssociationState extends com.pulumi
     @Import(name="attachmentId")
     private @Nullable Output<String> attachmentId;
 
+    /**
+     * @return The resource that the security policy is attached to.
+     * 
+     */
     public Optional<Output<String>> attachmentId() {
         return Optional.ofNullable(this.attachmentId);
     }
@@ -33,6 +37,10 @@ public final class OrganizationSecurityPolicyAssociationState extends com.pulumi
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name of the security policy of the association.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -44,6 +52,10 @@ public final class OrganizationSecurityPolicyAssociationState extends com.pulumi
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name for an association.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -55,6 +67,10 @@ public final class OrganizationSecurityPolicyAssociationState extends com.pulumi
     @Import(name="policyId")
     private @Nullable Output<String> policyId;
 
+    /**
+     * @return The security policy ID of the association.
+     * 
+     */
     public Optional<Output<String>> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -86,38 +102,86 @@ public final class OrganizationSecurityPolicyAssociationState extends com.pulumi
             $ = new OrganizationSecurityPolicyAssociationState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attachmentId The resource that the security policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentId(@Nullable Output<String> attachmentId) {
             $.attachmentId = attachmentId;
             return this;
         }
 
+        /**
+         * @param attachmentId The resource that the security policy is attached to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attachmentId(String attachmentId) {
             return attachmentId(Output.of(attachmentId));
         }
 
+        /**
+         * @param displayName The display name of the security policy of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the security policy of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name for an association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param policyId The security policy ID of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable Output<String> policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyId The security policy ID of the association.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(String policyId) {
             return policyId(Output.of(policyId));
         }

@@ -13,24 +13,24 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Hl7StoreParserConfig {
     /**
-     * Determines whether messages with no header are allowed.
+     * @return Determines whether messages with no header are allowed.
      * 
      */
     private final @Nullable Boolean allowNullHeader;
     /**
-     * JSON encoded string for schemas used to parse messages in this
+     * @return JSON encoded string for schemas used to parse messages in this
      * store if schematized parsing is desired.
      * 
      */
     private final @Nullable String schema;
     /**
-     * Byte(s) to be used as the segment terminator. If this is unset, &#39;\r&#39; will be used as segment terminator.
+     * @return Byte(s) to be used as the segment terminator. If this is unset, &#39;\r&#39; will be used as segment terminator.
      * A base64-encoded string.
      * 
      */
     private final @Nullable String segmentTerminator;
     /**
-     * The version of the unschematized parser to be used when a custom `schema` is not set.
+     * @return The version of the unschematized parser to be used when a custom `schema` is not set.
      * Default value is `V1`.
      * Possible values are `V1` and `V2`.
      * 
@@ -50,34 +50,34 @@ public final class Hl7StoreParserConfig {
     }
 
     /**
-     * Determines whether messages with no header are allowed.
+     * @return Determines whether messages with no header are allowed.
      * 
-    */
+     */
     public Optional<Boolean> allowNullHeader() {
         return Optional.ofNullable(this.allowNullHeader);
     }
     /**
-     * JSON encoded string for schemas used to parse messages in this
+     * @return JSON encoded string for schemas used to parse messages in this
      * store if schematized parsing is desired.
      * 
-    */
+     */
     public Optional<String> schema() {
         return Optional.ofNullable(this.schema);
     }
     /**
-     * Byte(s) to be used as the segment terminator. If this is unset, &#39;\r&#39; will be used as segment terminator.
+     * @return Byte(s) to be used as the segment terminator. If this is unset, &#39;\r&#39; will be used as segment terminator.
      * A base64-encoded string.
      * 
-    */
+     */
     public Optional<String> segmentTerminator() {
         return Optional.ofNullable(this.segmentTerminator);
     }
     /**
-     * The version of the unschematized parser to be used when a custom `schema` is not set.
+     * @return The version of the unschematized parser to be used when a custom `schema` is not set.
      * Default value is `V1`.
      * Possible values are `V1` and `V2`.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

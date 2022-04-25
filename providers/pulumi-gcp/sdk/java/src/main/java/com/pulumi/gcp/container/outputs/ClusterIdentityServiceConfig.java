@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ClusterIdentityServiceConfig {
     /**
-     * Enable the PodSecurityPolicy controller for this cluster.
+     * @return Enable the PodSecurityPolicy controller for this cluster.
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
      */
@@ -24,10 +24,10 @@ public final class ClusterIdentityServiceConfig {
     }
 
     /**
-     * Enable the PodSecurityPolicy controller for this cluster.
+     * @return Enable the PodSecurityPolicy controller for this cluster.
      * If enabled, pods must be valid under a PodSecurityPolicy to be created.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }

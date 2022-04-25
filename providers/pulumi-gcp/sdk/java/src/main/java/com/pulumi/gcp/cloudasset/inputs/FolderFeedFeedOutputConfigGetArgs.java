@@ -21,6 +21,11 @@ public final class FolderFeedFeedOutputConfigGetArgs extends com.pulumi.resource
     @Import(name="pubsubDestination", required=true)
     private Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination;
 
+    /**
+     * @return Destination on Cloud Pubsub.
+     * Structure is documented below.
+     * 
+     */
     public Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination() {
         return this.pubsubDestination;
     }
@@ -49,11 +54,25 @@ public final class FolderFeedFeedOutputConfigGetArgs extends com.pulumi.resource
             $ = new FolderFeedFeedOutputConfigGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param pubsubDestination Destination on Cloud Pubsub.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(Output<FolderFeedFeedOutputConfigPubsubDestinationGetArgs> pubsubDestination) {
             $.pubsubDestination = pubsubDestination;
             return this;
         }
 
+        /**
+         * @param pubsubDestination Destination on Cloud Pubsub.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pubsubDestination(FolderFeedFeedOutputConfigPubsubDestinationGetArgs pubsubDestination) {
             return pubsubDestination(Output.of(pubsubDestination));
         }

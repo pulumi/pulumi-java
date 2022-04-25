@@ -12,14 +12,14 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GuestPoliciesRecipeArtifactRemote {
     /**
-     * Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
+     * @return Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
      * If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any
      * of the steps.
      * 
      */
     private final @Nullable String checkSum;
     /**
-     * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+     * @return URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
      */
     private final @Nullable String uri;
@@ -33,18 +33,18 @@ public final class GuestPoliciesRecipeArtifactRemote {
     }
 
     /**
-     * Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
+     * @return Must be provided if allowInsecure is false. SHA256 checksum in hex format, to compare to the checksum of the artifact.
      * If the checksum is not empty and it doesn&#39;t match the artifact then the recipe installation fails before running any
      * of the steps.
      * 
-    */
+     */
     public Optional<String> checkSum() {
         return Optional.ofNullable(this.checkSum);
     }
     /**
-     * URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
+     * @return URI from which to fetch the object. It should contain both the protocol and path following the format {protocol}://{location}.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

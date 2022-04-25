@@ -28,6 +28,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="createTime")
     private @Nullable Output<String> createTime;
 
+    /**
+     * @return Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+     * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> createTime() {
         return Optional.ofNullable(this.createTime);
     }
@@ -39,6 +44,10 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the patch deployment. Length of the description is limited to 1024 characters.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +60,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="duration")
     private @Nullable Output<String> duration;
 
+    /**
+     * @return Duration of the patch. After the duration ends, the patch times out.
+     * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
+     * 
+     */
     public Optional<Output<String>> duration() {
         return Optional.ofNullable(this.duration);
     }
@@ -63,6 +77,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="instanceFilter")
     private @Nullable Output<PatchDeploymentInstanceFilterGetArgs> instanceFilter;
 
+    /**
+     * @return VM instances to patch.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentInstanceFilterGetArgs>> instanceFilter() {
         return Optional.ofNullable(this.instanceFilter);
     }
@@ -76,6 +95,12 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="lastExecuteTime")
     private @Nullable Output<String> lastExecuteTime;
 
+    /**
+     * @return -
+     * The time the last patch job ran successfully.
+     * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> lastExecuteTime() {
         return Optional.ofNullable(this.lastExecuteTime);
     }
@@ -88,6 +113,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
+     * projects/{project_id}/patchDeployments/{patchDeploymentId}.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -100,6 +130,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="oneTimeSchedule")
     private @Nullable Output<PatchDeploymentOneTimeScheduleGetArgs> oneTimeSchedule;
 
+    /**
+     * @return Schedule a one-time execution.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentOneTimeScheduleGetArgs>> oneTimeSchedule() {
         return Optional.ofNullable(this.oneTimeSchedule);
     }
@@ -112,6 +147,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="patchConfig")
     private @Nullable Output<PatchDeploymentPatchConfigGetArgs> patchConfig;
 
+    /**
+     * @return Patch configuration that is applied.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentPatchConfigGetArgs>> patchConfig() {
         return Optional.ofNullable(this.patchConfig);
     }
@@ -128,6 +168,15 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="patchDeploymentId")
     private @Nullable Output<String> patchDeploymentId;
 
+    /**
+     * @return A name for the patch deployment in the project. When creating a name the following rules apply:
+     * * Must contain only lowercase letters, numbers, and hyphens.
+     * * Must start with a letter.
+     * * Must be between 1-63 characters.
+     * * Must end with a number or a letter.
+     * * Must be unique within the project.
+     * 
+     */
     public Optional<Output<String>> patchDeploymentId() {
         return Optional.ofNullable(this.patchDeploymentId);
     }
@@ -140,6 +189,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="project")
     private @Nullable Output<String> project;
 
+    /**
+     * @return The ID of the project in which the resource belongs.
+     * If it is not provided, the provider project is used.
+     * 
+     */
     public Optional<Output<String>> project() {
         return Optional.ofNullable(this.project);
     }
@@ -152,6 +206,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="recurringSchedule")
     private @Nullable Output<PatchDeploymentRecurringScheduleGetArgs> recurringSchedule;
 
+    /**
+     * @return Schedule recurring executions.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentRecurringScheduleGetArgs>> recurringSchedule() {
         return Optional.ofNullable(this.recurringSchedule);
     }
@@ -164,6 +223,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="rollout")
     private @Nullable Output<PatchDeploymentRolloutGetArgs> rollout;
 
+    /**
+     * @return Rollout strategy of the patch job.
+     * Structure is documented below.
+     * 
+     */
     public Optional<Output<PatchDeploymentRolloutGetArgs>> rollout() {
         return Optional.ofNullable(this.rollout);
     }
@@ -176,6 +240,11 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
     @Import(name="updateTime")
     private @Nullable Output<String> updateTime;
 
+    /**
+     * @return Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34;
+     * format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+     * 
+     */
     public Optional<Output<String>> updateTime() {
         return Optional.ofNullable(this.updateTime);
     }
@@ -216,119 +285,309 @@ public final class PatchDeploymentState extends com.pulumi.resources.ResourceArg
             $ = new PatchDeploymentState(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createTime Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+         * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(@Nullable Output<String> createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param createTime Time the patch deployment was created. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34; format,
+         * accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             return createTime(Output.of(createTime));
         }
 
+        /**
+         * @param description Description of the patch deployment. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the patch deployment. Length of the description is limited to 1024 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param duration Duration of the patch. After the duration ends, the patch times out.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(@Nullable Output<String> duration) {
             $.duration = duration;
             return this;
         }
 
+        /**
+         * @param duration Duration of the patch. After the duration ends, the patch times out.
+         * A duration in seconds with up to nine fractional digits, terminated by &#39;s&#39;. Example: &#34;3.5s&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder duration(String duration) {
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param instanceFilter VM instances to patch.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(@Nullable Output<PatchDeploymentInstanceFilterGetArgs> instanceFilter) {
             $.instanceFilter = instanceFilter;
             return this;
         }
 
+        /**
+         * @param instanceFilter VM instances to patch.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceFilter(PatchDeploymentInstanceFilterGetArgs instanceFilter) {
             return instanceFilter(Output.of(instanceFilter));
         }
 
+        /**
+         * @param lastExecuteTime -
+         * The time the last patch job ran successfully.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExecuteTime(@Nullable Output<String> lastExecuteTime) {
             $.lastExecuteTime = lastExecuteTime;
             return this;
         }
 
+        /**
+         * @param lastExecuteTime -
+         * The time the last patch job ran successfully.
+         * A timestamp in RFC3339 UTC &#34;Zulu&#34; format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExecuteTime(String lastExecuteTime) {
             return lastExecuteTime(Output.of(lastExecuteTime));
         }
 
+        /**
+         * @param name Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
+         * projects/{project_id}/patchDeployments/{patchDeploymentId}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Unique name for the patch deployment resource in a project. The patch deployment name is in the form:
+         * projects/{project_id}/patchDeployments/{patchDeploymentId}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param oneTimeSchedule Schedule a one-time execution.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneTimeSchedule(@Nullable Output<PatchDeploymentOneTimeScheduleGetArgs> oneTimeSchedule) {
             $.oneTimeSchedule = oneTimeSchedule;
             return this;
         }
 
+        /**
+         * @param oneTimeSchedule Schedule a one-time execution.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oneTimeSchedule(PatchDeploymentOneTimeScheduleGetArgs oneTimeSchedule) {
             return oneTimeSchedule(Output.of(oneTimeSchedule));
         }
 
+        /**
+         * @param patchConfig Patch configuration that is applied.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchConfig(@Nullable Output<PatchDeploymentPatchConfigGetArgs> patchConfig) {
             $.patchConfig = patchConfig;
             return this;
         }
 
+        /**
+         * @param patchConfig Patch configuration that is applied.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchConfig(PatchDeploymentPatchConfigGetArgs patchConfig) {
             return patchConfig(Output.of(patchConfig));
         }
 
+        /**
+         * @param patchDeploymentId A name for the patch deployment in the project. When creating a name the following rules apply:
+         * * Must contain only lowercase letters, numbers, and hyphens.
+         * * Must start with a letter.
+         * * Must be between 1-63 characters.
+         * * Must end with a number or a letter.
+         * * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchDeploymentId(@Nullable Output<String> patchDeploymentId) {
             $.patchDeploymentId = patchDeploymentId;
             return this;
         }
 
+        /**
+         * @param patchDeploymentId A name for the patch deployment in the project. When creating a name the following rules apply:
+         * * Must contain only lowercase letters, numbers, and hyphens.
+         * * Must start with a letter.
+         * * Must be between 1-63 characters.
+         * * Must end with a number or a letter.
+         * * Must be unique within the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder patchDeploymentId(String patchDeploymentId) {
             return patchDeploymentId(Output.of(patchDeploymentId));
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(@Nullable Output<String> project) {
             $.project = project;
             return this;
         }
 
+        /**
+         * @param project The ID of the project in which the resource belongs.
+         * If it is not provided, the provider project is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder project(String project) {
             return project(Output.of(project));
         }
 
+        /**
+         * @param recurringSchedule Schedule recurring executions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringSchedule(@Nullable Output<PatchDeploymentRecurringScheduleGetArgs> recurringSchedule) {
             $.recurringSchedule = recurringSchedule;
             return this;
         }
 
+        /**
+         * @param recurringSchedule Schedule recurring executions.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recurringSchedule(PatchDeploymentRecurringScheduleGetArgs recurringSchedule) {
             return recurringSchedule(Output.of(recurringSchedule));
         }
 
+        /**
+         * @param rollout Rollout strategy of the patch job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(@Nullable Output<PatchDeploymentRolloutGetArgs> rollout) {
             $.rollout = rollout;
             return this;
         }
 
+        /**
+         * @param rollout Rollout strategy of the patch job.
+         * Structure is documented below.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rollout(PatchDeploymentRolloutGetArgs rollout) {
             return rollout(Output.of(rollout));
         }
 
+        /**
+         * @param updateTime Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34;
+         * format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(@Nullable Output<String> updateTime) {
             $.updateTime = updateTime;
             return this;
         }
 
+        /**
+         * @param updateTime Time the patch deployment was last updated. Timestamp is in RFC3339 text format. A timestamp in RFC3339 UTC &#34;Zulu&#34;
+         * format, accurate to nanoseconds. Example: &#34;2014-10-02T15:01:23.045123456Z&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTime(String updateTime) {
             return updateTime(Output.of(updateTime));
         }

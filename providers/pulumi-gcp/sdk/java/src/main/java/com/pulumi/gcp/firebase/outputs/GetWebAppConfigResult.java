@@ -15,7 +15,7 @@ public final class GetWebAppConfigResult {
     private final String authDomain;
     private final String databaseUrl;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -60,9 +60,9 @@ public final class GetWebAppConfigResult {
         return this.databaseUrl;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

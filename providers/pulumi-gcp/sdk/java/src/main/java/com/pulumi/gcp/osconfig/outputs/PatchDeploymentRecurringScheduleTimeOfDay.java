@@ -12,23 +12,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PatchDeploymentRecurringScheduleTimeOfDay {
     /**
-     * Hours of day in 24 hour format. Should be from 0 to 23.
+     * @return Hours of day in 24 hour format. Should be from 0 to 23.
      * An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time.
      * 
      */
     private final @Nullable Integer hours;
     /**
-     * Minutes of hour of day. Must be from 0 to 59.
+     * @return Minutes of hour of day. Must be from 0 to 59.
      * 
      */
     private final @Nullable Integer minutes;
     /**
-     * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+     * @return Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
      * 
      */
     private final @Nullable Integer nanos;
     /**
-     * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
+     * @return Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
      * 
      */
     private final @Nullable Integer seconds;
@@ -46,31 +46,31 @@ public final class PatchDeploymentRecurringScheduleTimeOfDay {
     }
 
     /**
-     * Hours of day in 24 hour format. Should be from 0 to 23.
+     * @return Hours of day in 24 hour format. Should be from 0 to 23.
      * An API may choose to allow the value &#34;24:00:00&#34; for scenarios like business closing time.
      * 
-    */
+     */
     public Optional<Integer> hours() {
         return Optional.ofNullable(this.hours);
     }
     /**
-     * Minutes of hour of day. Must be from 0 to 59.
+     * @return Minutes of hour of day. Must be from 0 to 59.
      * 
-    */
+     */
     public Optional<Integer> minutes() {
         return Optional.ofNullable(this.minutes);
     }
     /**
-     * Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
+     * @return Fractions of seconds in nanoseconds. Must be from 0 to 999,999,999.
      * 
-    */
+     */
     public Optional<Integer> nanos() {
         return Optional.ofNullable(this.nanos);
     }
     /**
-     * Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
+     * @return Seconds of minutes of the time. Must normally be from 0 to 59. An API may allow the value 60 if it allows leap-seconds.
      * 
-    */
+     */
     public Optional<Integer> seconds() {
         return Optional.ofNullable(this.seconds);
     }

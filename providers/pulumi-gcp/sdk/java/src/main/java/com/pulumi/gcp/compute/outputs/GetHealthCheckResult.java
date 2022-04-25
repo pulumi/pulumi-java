@@ -29,7 +29,7 @@ public final class GetHealthCheckResult {
     private final List<GetHealthCheckHttpHealthCheck> httpHealthChecks;
     private final List<GetHealthCheckHttpsHealthCheck> httpsHealthChecks;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
@@ -108,9 +108,9 @@ public final class GetHealthCheckResult {
         return this.httpsHealthChecks;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

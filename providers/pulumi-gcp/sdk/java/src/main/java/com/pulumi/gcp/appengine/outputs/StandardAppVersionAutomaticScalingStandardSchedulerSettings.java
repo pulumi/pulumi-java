@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
     /**
-     * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+     * @return Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
      * 
      */
     private final @Nullable Integer maxInstances;
     /**
-     * Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+     * @return Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
      * 
      */
     private final @Nullable Integer minInstances;
     /**
-     * Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * @return Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
      * 
      */
     private final @Nullable Double targetCpuUtilization;
     /**
-     * Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * @return Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
      * 
      */
     private final @Nullable Double targetThroughputUtilization;
@@ -46,30 +46,30 @@ public final class StandardAppVersionAutomaticScalingStandardSchedulerSettings {
     }
 
     /**
-     * Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
+     * @return Maximum number of instances to create for this version. Must be in the range [1.0, 200.0].
      * 
-    */
+     */
     public Optional<Integer> maxInstances() {
         return Optional.ofNullable(this.maxInstances);
     }
     /**
-     * Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
+     * @return Minimum number of instances to run for this version. Set to zero to disable minInstances configuration.
      * 
-    */
+     */
     public Optional<Integer> minInstances() {
         return Optional.ofNullable(this.minInstances);
     }
     /**
-     * Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * @return Target CPU utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
      * 
-    */
+     */
     public Optional<Double> targetCpuUtilization() {
         return Optional.ofNullable(this.targetCpuUtilization);
     }
     /**
-     * Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
+     * @return Target throughput utilization ratio to maintain when scaling. Should be a value in the range [0.50, 0.95], zero, or a negative value.
      * 
-    */
+     */
     public Optional<Double> targetThroughputUtilization() {
         return Optional.ofNullable(this.targetThroughputUtilization);
     }

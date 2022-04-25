@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SecretReplication {
     /**
-     * The Secret will automatically be replicated without any restrictions.
+     * @return The Secret will automatically be replicated without any restrictions.
      * 
      */
     private final @Nullable Boolean automatic;
     /**
-     * The Secret will automatically be replicated without any restrictions.
+     * @return The Secret will automatically be replicated without any restrictions.
      * Structure is documented below.
      * 
      */
@@ -33,17 +33,17 @@ public final class SecretReplication {
     }
 
     /**
-     * The Secret will automatically be replicated without any restrictions.
+     * @return The Secret will automatically be replicated without any restrictions.
      * 
-    */
+     */
     public Optional<Boolean> automatic() {
         return Optional.ofNullable(this.automatic);
     }
     /**
-     * The Secret will automatically be replicated without any restrictions.
+     * @return The Secret will automatically be replicated without any restrictions.
      * Structure is documented below.
      * 
-    */
+     */
     public Optional<SecretReplicationUserManaged> userManaged() {
         return Optional.ofNullable(this.userManaged);
     }

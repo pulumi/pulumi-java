@@ -15,25 +15,25 @@ import javax.annotation.Nullable;
 public final class GetBackupRunResult {
     private final Integer backupId;
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
      */
     private final String id;
     private final String instance;
     /**
-     * Location of the backups.
+     * @return Location of the backups.
      * 
      */
     private final String location;
     private final @Nullable Boolean mostRecent;
     /**
-     * The time the backup operation actually started in UTC timezone in RFC 3339 format, for
+     * @return The time the backup operation actually started in UTC timezone in RFC 3339 format, for
      * example 2012-11-15T16:19:00.094Z.
      * 
      */
     private final String startTime;
     /**
-     * The status of this run. Refer to [API reference](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns#SqlBackupRunStatus) for possible status values.
+     * @return The status of this run. Refer to [API reference](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns#SqlBackupRunStatus) for possible status values.
      * 
      */
     private final String status;
@@ -60,9 +60,9 @@ public final class GetBackupRunResult {
         return this.backupId;
     }
     /**
-     * The provider-assigned unique ID for this managed resource.
+     * @return The provider-assigned unique ID for this managed resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -70,9 +70,9 @@ public final class GetBackupRunResult {
         return this.instance;
     }
     /**
-     * Location of the backups.
+     * @return Location of the backups.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
@@ -80,17 +80,17 @@ public final class GetBackupRunResult {
         return Optional.ofNullable(this.mostRecent);
     }
     /**
-     * The time the backup operation actually started in UTC timezone in RFC 3339 format, for
+     * @return The time the backup operation actually started in UTC timezone in RFC 3339 format, for
      * example 2012-11-15T16:19:00.094Z.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * The status of this run. Refer to [API reference](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns#SqlBackupRunStatus) for possible status values.
+     * @return The status of this run. Refer to [API reference](https://cloud.google.com/sql/docs/mysql/admin-api/rest/v1beta4/backupRuns#SqlBackupRunStatus) for possible status values.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

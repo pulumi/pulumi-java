@@ -21,6 +21,11 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     @Import(name="day", required=true)
     private Output<String> day;
 
+    /**
+     * @return The day of the week to create the snapshot. e.g. MONDAY
+     * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+     * 
+     */
     public Output<String> day() {
         return this.day;
     }
@@ -32,6 +37,10 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return The start time of the schedule. The timestamp is an RFC3339 string.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -61,20 +70,46 @@ public final class ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDay
             $ = new ResourcePolicySnapshotSchedulePolicyScheduleWeeklyScheduleDayOfWeekArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day The day of the week to create the snapshot. e.g. MONDAY
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(Output<String> day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param day The day of the week to create the snapshot. e.g. MONDAY
+         * Possible values are `MONDAY`, `TUESDAY`, `WEDNESDAY`, `THURSDAY`, `FRIDAY`, `SATURDAY`, and `SUNDAY`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(String day) {
             return day(Output.of(day));
         }
 
+        /**
+         * @param startTime The start time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the schedule. The timestamp is an RFC3339 string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }
