@@ -11,10 +11,10 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class GetWebAppSlotResult {
-    /**
-     * Configuration of the app.
-     * 
-     */
+        /**
+         * @return Configuration of the app.
+         * 
+         */
     private final @Nullable SiteConfigResponse siteConfig;
 
     @CustomType.Constructor
@@ -23,9 +23,9 @@ public final class GetWebAppSlotResult {
     }
 
     /**
-     * Configuration of the app.
+     * @return Configuration of the app.
      * 
-    */
+     */
     public Optional<SiteConfigResponse> siteConfig() {
         return Optional.ofNullable(this.siteConfig);
     }

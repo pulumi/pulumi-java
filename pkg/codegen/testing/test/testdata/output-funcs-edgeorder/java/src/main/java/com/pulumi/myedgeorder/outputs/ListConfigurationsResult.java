@@ -13,15 +13,15 @@ import javax.annotation.Nullable;
 
 @CustomType
 public final class ListConfigurationsResult {
-    /**
-     * Link for the next set of configurations.
-     * 
-     */
+        /**
+         * @return Link for the next set of configurations.
+         * 
+         */
     private final @Nullable String nextLink;
-    /**
-     * List of configurations.
-     * 
-     */
+        /**
+         * @return List of configurations.
+         * 
+         */
     private final List<ConfigurationResponse> value;
 
     @CustomType.Constructor
@@ -33,16 +33,16 @@ public final class ListConfigurationsResult {
     }
 
     /**
-     * Link for the next set of configurations.
+     * @return Link for the next set of configurations.
      * 
-    */
+     */
     public Optional<String> nextLink() {
         return Optional.ofNullable(this.nextLink);
     }
     /**
-     * List of configurations.
+     * @return List of configurations.
      * 
-    */
+     */
     public List<ConfigurationResponse> value() {
         return this.value;
     }

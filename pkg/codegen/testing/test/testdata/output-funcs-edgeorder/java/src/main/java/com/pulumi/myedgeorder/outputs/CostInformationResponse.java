@@ -11,15 +11,15 @@ import java.util.Objects;
 
 @CustomType
 public final class CostInformationResponse {
-    /**
-     * Default url to display billing information
-     * 
-     */
+        /**
+         * @return Default url to display billing information
+         * 
+         */
     private final String billingInfoUrl;
-    /**
-     * Details on the various billing aspects for the product system.
-     * 
-     */
+        /**
+         * @return Details on the various billing aspects for the product system.
+         * 
+         */
     private final List<BillingMeterDetailsResponse> billingMeterDetails;
 
     @CustomType.Constructor
@@ -31,16 +31,16 @@ public final class CostInformationResponse {
     }
 
     /**
-     * Default url to display billing information
+     * @return Default url to display billing information
      * 
-    */
+     */
     public String billingInfoUrl() {
         return this.billingInfoUrl;
     }
     /**
-     * Details on the various billing aspects for the product system.
+     * @return Details on the various billing aspects for the product system.
      * 
-    */
+     */
     public List<BillingMeterDetailsResponse> billingMeterDetails() {
         return this.billingMeterDetails;
     }

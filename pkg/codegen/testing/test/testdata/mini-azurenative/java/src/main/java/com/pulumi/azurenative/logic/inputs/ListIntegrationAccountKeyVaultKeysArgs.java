@@ -22,6 +22,10 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     @Import(name="integrationAccountName", required=true)
     private String integrationAccountName;
 
+    /**
+     * @return The integration account name.
+     * 
+     */
     public String integrationAccountName() {
         return this.integrationAccountName;
     }
@@ -33,6 +37,10 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     @Import(name="keyVault", required=true)
     private KeyVaultReference keyVault;
 
+    /**
+     * @return The key vault reference.
+     * 
+     */
     public KeyVaultReference keyVault() {
         return this.keyVault;
     }
@@ -44,6 +52,10 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -55,6 +67,10 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return The skip token.
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -86,21 +102,45 @@ public final class ListIntegrationAccountKeyVaultKeysArgs extends com.pulumi.res
             $ = new ListIntegrationAccountKeyVaultKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param integrationAccountName The integration account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationAccountName(String integrationAccountName) {
             $.integrationAccountName = integrationAccountName;
             return this;
         }
 
+        /**
+         * @param keyVault The key vault reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(KeyVaultReference keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param skipToken The skip token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;

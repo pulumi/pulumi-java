@@ -17,45 +17,45 @@ import java.util.Objects;
 
 @CustomType
 public final class ProductFamilyResponse {
-    /**
-     * Availability information of the product system.
-     * 
-     */
+        /**
+         * @return Availability information of the product system.
+         * 
+         */
     private final AvailabilityInformationResponse availabilityInformation;
-    /**
-     * Cost information for the product system.
-     * 
-     */
+        /**
+         * @return Cost information for the product system.
+         * 
+         */
     private final CostInformationResponse costInformation;
-    /**
-     * Description related to the product system.
-     * 
-     */
+        /**
+         * @return Description related to the product system.
+         * 
+         */
     private final DescriptionResponse description;
-    /**
-     * Display Name for the product system.
-     * 
-     */
+        /**
+         * @return Display Name for the product system.
+         * 
+         */
     private final String displayName;
-    /**
-     * list of filters supported for a product
-     * 
-     */
+        /**
+         * @return list of filters supported for a product
+         * 
+         */
     private final List<FilterablePropertyResponse> filterableProperties;
-    /**
-     * Hierarchy information of a product.
-     * 
-     */
+        /**
+         * @return Hierarchy information of a product.
+         * 
+         */
     private final HierarchyInformationResponse hierarchyInformation;
-    /**
-     * Image information for the product system.
-     * 
-     */
+        /**
+         * @return Image information for the product system.
+         * 
+         */
     private final List<ImageInformationResponse> imageInformation;
-    /**
-     * List of product lines supported in the product family
-     * 
-     */
+        /**
+         * @return List of product lines supported in the product family
+         * 
+         */
     private final List<ProductLineResponse> productLines;
 
     @CustomType.Constructor
@@ -79,58 +79,58 @@ public final class ProductFamilyResponse {
     }
 
     /**
-     * Availability information of the product system.
+     * @return Availability information of the product system.
      * 
-    */
+     */
     public AvailabilityInformationResponse availabilityInformation() {
         return this.availabilityInformation;
     }
     /**
-     * Cost information for the product system.
+     * @return Cost information for the product system.
      * 
-    */
+     */
     public CostInformationResponse costInformation() {
         return this.costInformation;
     }
     /**
-     * Description related to the product system.
+     * @return Description related to the product system.
      * 
-    */
+     */
     public DescriptionResponse description() {
         return this.description;
     }
     /**
-     * Display Name for the product system.
+     * @return Display Name for the product system.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * list of filters supported for a product
+     * @return list of filters supported for a product
      * 
-    */
+     */
     public List<FilterablePropertyResponse> filterableProperties() {
         return this.filterableProperties;
     }
     /**
-     * Hierarchy information of a product.
+     * @return Hierarchy information of a product.
      * 
-    */
+     */
     public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
-     * Image information for the product system.
+     * @return Image information for the product system.
      * 
-    */
+     */
     public List<ImageInformationResponse> imageInformation() {
         return this.imageInformation;
     }
     /**
-     * List of product lines supported in the product family
+     * @return List of product lines supported in the product family
      * 
-    */
+     */
     public List<ProductLineResponse> productLines() {
         return this.productLines;
     }
