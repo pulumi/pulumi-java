@@ -28,6 +28,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="podExecutionRoleArn")
     private @Nullable Output<String> podExecutionRoleArn;
 
+    /**
+     * @return Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.
+     * 
+     */
     public Optional<Output<String>> podExecutionRoleArn() {
         return Optional.ofNullable(this.podExecutionRoleArn);
     }
@@ -39,6 +43,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="selectors")
     private @Nullable Output<List<FargateProfileSelectorArgs>> selectors;
 
+    /**
+     * @return Specify the namespace and label selectors to use for launching pods into Fargate.
+     * 
+     */
     public Optional<Output<List<FargateProfileSelectorArgs>>> selectors() {
         return Optional.ofNullable(this.selectors);
     }
@@ -50,6 +58,10 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="subnetIds")
     private @Nullable Output<List<String>> subnetIds;
 
+    /**
+     * @return Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.
+     * 
+     */
     public Optional<Output<List<String>>> subnetIds() {
         return Optional.ofNullable(this.subnetIds);
     }
@@ -80,37 +92,85 @@ public final class FargateProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new FargateProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param podExecutionRoleArn Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podExecutionRoleArn(@Nullable Output<String> podExecutionRoleArn) {
             $.podExecutionRoleArn = podExecutionRoleArn;
             return this;
         }
 
+        /**
+         * @param podExecutionRoleArn Specify a custom role to use for executing pods in Fargate. Defaults to creating a new role with the `arn:aws:iam::aws:policy/AmazonEKSFargatePodExecutionRolePolicy` policy attached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podExecutionRoleArn(String podExecutionRoleArn) {
             return podExecutionRoleArn(Output.of(podExecutionRoleArn));
         }
 
+        /**
+         * @param selectors Specify the namespace and label selectors to use for launching pods into Fargate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(@Nullable Output<List<FargateProfileSelectorArgs>> selectors) {
             $.selectors = selectors;
             return this;
         }
 
+        /**
+         * @param selectors Specify the namespace and label selectors to use for launching pods into Fargate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(List<FargateProfileSelectorArgs> selectors) {
             return selectors(Output.of(selectors));
         }
 
+        /**
+         * @param selectors Specify the namespace and label selectors to use for launching pods into Fargate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectors(FargateProfileSelectorArgs... selectors) {
             return selectors(List.of(selectors));
         }
 
+        /**
+         * @param subnetIds Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(@Nullable Output<List<String>> subnetIds) {
             $.subnetIds = subnetIds;
             return this;
         }
 
+        /**
+         * @param subnetIds Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(List<String> subnetIds) {
             return subnetIds(Output.of(subnetIds));
         }
 
+        /**
+         * @param subnetIds Specify the subnets in which to execute Fargate tasks for pods. Defaults to the private subnets associated with the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetIds(String... subnetIds) {
             return subnetIds(List.of(subnetIds));
         }

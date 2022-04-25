@@ -12,25 +12,25 @@ import java.util.Objects;
 
 @CustomType
 public final class NodeGroupData {
-    /**
-     * The AutoScalingGroup name for the node group.
-     * 
-     */
+        /**
+         * @return The AutoScalingGroup name for the node group.
+         * 
+         */
     private final String autoScalingGroupName;
-    /**
-     * The CloudFormation Stack which defines the Node AutoScalingGroup.
-     * 
-     */
+        /**
+         * @return The CloudFormation Stack which defines the Node AutoScalingGroup.
+         * 
+         */
     private final Stack cfnStack;
-    /**
-     * The additional security groups for the node group that captures user-specific rules.
-     * 
-     */
+        /**
+         * @return The additional security groups for the node group that captures user-specific rules.
+         * 
+         */
     private final List<SecurityGroup> extraNodeSecurityGroups;
-    /**
-     * The security group for the node group to communicate with the cluster.
-     * 
-     */
+        /**
+         * @return The security group for the node group to communicate with the cluster.
+         * 
+         */
     private final SecurityGroup nodeSecurityGroup;
 
     @CustomType.Constructor
@@ -46,30 +46,30 @@ public final class NodeGroupData {
     }
 
     /**
-     * The AutoScalingGroup name for the node group.
+     * @return The AutoScalingGroup name for the node group.
      * 
-    */
+     */
     public String autoScalingGroupName() {
         return this.autoScalingGroupName;
     }
     /**
-     * The CloudFormation Stack which defines the Node AutoScalingGroup.
+     * @return The CloudFormation Stack which defines the Node AutoScalingGroup.
      * 
-    */
+     */
     public Stack cfnStack() {
         return this.cfnStack;
     }
     /**
-     * The additional security groups for the node group that captures user-specific rules.
+     * @return The additional security groups for the node group that captures user-specific rules.
      * 
-    */
+     */
     public List<SecurityGroup> extraNodeSecurityGroups() {
         return this.extraNodeSecurityGroups;
     }
     /**
-     * The security group for the node group to communicate with the cluster.
+     * @return The security group for the node group to communicate with the cluster.
      * 
-    */
+     */
     public SecurityGroup nodeSecurityGroup() {
         return this.nodeSecurityGroup;
     }

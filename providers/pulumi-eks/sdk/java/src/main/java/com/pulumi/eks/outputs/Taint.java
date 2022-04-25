@@ -9,15 +9,15 @@ import java.util.Objects;
 
 @CustomType
 public final class Taint {
-    /**
-     * The effect of the taint.
-     * 
-     */
+        /**
+         * @return The effect of the taint.
+         * 
+         */
     private final String effect;
-    /**
-     * The value of the taint.
-     * 
-     */
+        /**
+         * @return The value of the taint.
+         * 
+         */
     private final String value;
 
     @CustomType.Constructor
@@ -29,16 +29,16 @@ public final class Taint {
     }
 
     /**
-     * The effect of the taint.
+     * @return The effect of the taint.
      * 
-    */
+     */
     public String effect() {
         return this.effect;
     }
     /**
-     * The value of the taint.
+     * @return The value of the taint.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

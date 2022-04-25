@@ -25,6 +25,10 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
     @Import(name="clusterSecurityGroup", required=true)
     private Output<SecurityGroup> clusterSecurityGroup;
 
+    /**
+     * @return The security group associated with the EKS cluster.
+     * 
+     */
     public Output<SecurityGroup> clusterSecurityGroup() {
         return this.clusterSecurityGroup;
     }
@@ -36,6 +40,10 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
     @Import(name="eksCluster", required=true)
     private Output<Cluster> eksCluster;
 
+    /**
+     * @return The EKS cluster associated with the worker node group
+     * 
+     */
     public Output<Cluster> eksCluster() {
         return this.eksCluster;
     }
@@ -47,6 +55,10 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Key-value mapping of tags to apply to this security group.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -58,6 +70,10 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
     @Import(name="vpcId", required=true)
     private Output<String> vpcId;
 
+    /**
+     * @return The VPC in which to create the worker node group.
+     * 
+     */
     public Output<String> vpcId() {
         return this.vpcId;
     }
@@ -89,38 +105,86 @@ public final class NodeGroupSecurityGroupArgs extends com.pulumi.resources.Resou
             $ = new NodeGroupSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterSecurityGroup The security group associated with the EKS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroup(Output<SecurityGroup> clusterSecurityGroup) {
             $.clusterSecurityGroup = clusterSecurityGroup;
             return this;
         }
 
+        /**
+         * @param clusterSecurityGroup The security group associated with the EKS cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSecurityGroup(SecurityGroup clusterSecurityGroup) {
             return clusterSecurityGroup(Output.of(clusterSecurityGroup));
         }
 
+        /**
+         * @param eksCluster The EKS cluster associated with the worker node group
+         * 
+         * @return builder
+         * 
+         */
         public Builder eksCluster(Output<Cluster> eksCluster) {
             $.eksCluster = eksCluster;
             return this;
         }
 
+        /**
+         * @param eksCluster The EKS cluster associated with the worker node group
+         * 
+         * @return builder
+         * 
+         */
         public Builder eksCluster(Cluster eksCluster) {
             return eksCluster(Output.of(eksCluster));
         }
 
+        /**
+         * @param tags Key-value mapping of tags to apply to this security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Key-value mapping of tags to apply to this security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vpcId The VPC in which to create the worker node group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(Output<String> vpcId) {
             $.vpcId = vpcId;
             return this;
         }
 
+        /**
+         * @param vpcId The VPC in which to create the worker node group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vpcId(String vpcId) {
             return vpcId(Output.of(vpcId));
         }
