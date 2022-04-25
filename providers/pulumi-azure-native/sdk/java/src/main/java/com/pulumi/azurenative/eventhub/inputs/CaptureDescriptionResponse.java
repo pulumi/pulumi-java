@@ -28,6 +28,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="destination")
     private @Nullable DestinationResponse destination;
 
+    /**
+     * @return Properties of Destination where capture will be stored. (Storage Account, Blob Names)
+     * 
+     */
     public Optional<DestinationResponse> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -39,6 +43,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return A value that indicates whether capture description is enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -50,6 +58,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="encoding")
     private @Nullable String encoding;
 
+    /**
+     * @return Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
+     * 
+     */
     public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -61,6 +73,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="intervalInSeconds")
     private @Nullable Integer intervalInSeconds;
 
+    /**
+     * @return The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+     * 
+     */
     public Optional<Integer> intervalInSeconds() {
         return Optional.ofNullable(this.intervalInSeconds);
     }
@@ -72,6 +88,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="sizeLimitInBytes")
     private @Nullable Integer sizeLimitInBytes;
 
+    /**
+     * @return The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+     * 
+     */
     public Optional<Integer> sizeLimitInBytes() {
         return Optional.ofNullable(this.sizeLimitInBytes);
     }
@@ -83,6 +103,10 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
     @Import(name="skipEmptyArchives")
     private @Nullable Boolean skipEmptyArchives;
 
+    /**
+     * @return A value that indicates whether to Skip Empty Archives
+     * 
+     */
     public Optional<Boolean> skipEmptyArchives() {
         return Optional.ofNullable(this.skipEmptyArchives);
     }
@@ -116,31 +140,67 @@ public final class CaptureDescriptionResponse extends com.pulumi.resources.Invok
             $ = new CaptureDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Properties of Destination where capture will be stored. (Storage Account, Blob Names)
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable DestinationResponse destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param enabled A value that indicates whether capture description is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param encoding Enumerates the possible values for the encoding format of capture description. Note: &#39;AvroDeflate&#39; will be deprecated in New API Version
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable String encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param intervalInSeconds The time window allows you to set the frequency with which the capture to Azure Blobs will happen, value should between 60 to 900 seconds
+         * 
+         * @return builder
+         * 
+         */
         public Builder intervalInSeconds(@Nullable Integer intervalInSeconds) {
             $.intervalInSeconds = intervalInSeconds;
             return this;
         }
 
+        /**
+         * @param sizeLimitInBytes The size window defines the amount of data built up in your Event Hub before an capture operation, value should be between 10485760 to 524288000 bytes
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeLimitInBytes(@Nullable Integer sizeLimitInBytes) {
             $.sizeLimitInBytes = sizeLimitInBytes;
             return this;
         }
 
+        /**
+         * @param skipEmptyArchives A value that indicates whether to Skip Empty Archives
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipEmptyArchives(@Nullable Boolean skipEmptyArchives) {
             $.skipEmptyArchives = skipEmptyArchives;
             return this;

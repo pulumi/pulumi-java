@@ -28,6 +28,10 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
     @Import(name="analyticalStorageTtl")
     private @Nullable Output<Integer> analyticalStorageTtl;
 
+    /**
+     * @return Analytical TTL.
+     * 
+     */
     public Optional<Output<Integer>> analyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
@@ -39,6 +43,10 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
     @Import(name="defaultTtl")
     private @Nullable Output<Integer> defaultTtl;
 
+    /**
+     * @return Time to live of the Cosmos DB Cassandra table
+     * 
+     */
     public Optional<Output<Integer>> defaultTtl() {
         return Optional.ofNullable(this.defaultTtl);
     }
@@ -50,6 +58,10 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Name of the Cosmos DB Cassandra table
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -61,6 +73,10 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
     @Import(name="schema")
     private @Nullable Output<CassandraSchemaArgs> schema;
 
+    /**
+     * @return Schema of the Cosmos DB Cassandra table
+     * 
+     */
     public Optional<Output<CassandraSchemaArgs>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -92,38 +108,86 @@ public final class CassandraTableResourceArgs extends com.pulumi.resources.Resou
             $ = new CassandraTableResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyticalStorageTtl Analytical TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyticalStorageTtl(@Nullable Output<Integer> analyticalStorageTtl) {
             $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
+        /**
+         * @param analyticalStorageTtl Analytical TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyticalStorageTtl(Integer analyticalStorageTtl) {
             return analyticalStorageTtl(Output.of(analyticalStorageTtl));
         }
 
+        /**
+         * @param defaultTtl Time to live of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtl(@Nullable Output<Integer> defaultTtl) {
             $.defaultTtl = defaultTtl;
             return this;
         }
 
+        /**
+         * @param defaultTtl Time to live of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultTtl(Integer defaultTtl) {
             return defaultTtl(Output.of(defaultTtl));
         }
 
+        /**
+         * @param id Name of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param schema Schema of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<CassandraSchemaArgs> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema Schema of the Cosmos DB Cassandra table
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(CassandraSchemaArgs schema) {
             return schema(Output.of(schema));
         }

@@ -26,6 +26,10 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="cmk")
     private @Nullable CustomerManagedKeyDetailsResponse cmk;
 
+    /**
+     * @return Customer Managed Key Details
+     * 
+     */
     public Optional<CustomerManagedKeyDetailsResponse> cmk() {
         return Optional.ofNullable(this.cmk);
     }
@@ -37,6 +41,10 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="doubleEncryptionEnabled", required=true)
     private Boolean doubleEncryptionEnabled;
 
+    /**
+     * @return Double Encryption enabled
+     * 
+     */
     public Boolean doubleEncryptionEnabled() {
         return this.doubleEncryptionEnabled;
     }
@@ -66,11 +74,23 @@ public final class EncryptionDetailsResponse extends com.pulumi.resources.Invoke
             $ = new EncryptionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cmk Customer Managed Key Details
+         * 
+         * @return builder
+         * 
+         */
         public Builder cmk(@Nullable CustomerManagedKeyDetailsResponse cmk) {
             $.cmk = cmk;
             return this;
         }
 
+        /**
+         * @param doubleEncryptionEnabled Double Encryption enabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder doubleEncryptionEnabled(Boolean doubleEncryptionEnabled) {
             $.doubleEncryptionEnabled = doubleEncryptionEnabled;
             return this;

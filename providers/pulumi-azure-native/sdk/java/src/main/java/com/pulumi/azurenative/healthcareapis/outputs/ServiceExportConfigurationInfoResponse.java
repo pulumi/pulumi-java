@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceExportConfigurationInfoResponse {
     /**
-     * The name of the default export storage account.
+     * @return The name of the default export storage account.
      * 
      */
     private final @Nullable String storageAccountName;
@@ -23,9 +23,9 @@ public final class ServiceExportConfigurationInfoResponse {
     }
 
     /**
-     * The name of the default export storage account.
+     * @return The name of the default export storage account.
      * 
-    */
+     */
     public Optional<String> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }

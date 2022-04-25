@@ -29,6 +29,10 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
     @Import(name="cakSecretIdentifier")
     private @Nullable Output<String> cakSecretIdentifier;
 
+    /**
+     * @return Keyvault Secret Identifier URL containing Mac security CAK key.
+     * 
+     */
     public Optional<Output<String>> cakSecretIdentifier() {
         return Optional.ofNullable(this.cakSecretIdentifier);
     }
@@ -40,6 +44,10 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
     @Import(name="cipher")
     private @Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher;
 
+    /**
+     * @return Mac security cipher.
+     * 
+     */
     public Optional<Output<Either<String,ExpressRouteLinkMacSecCipher>>> cipher() {
         return Optional.ofNullable(this.cipher);
     }
@@ -51,6 +59,10 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
     @Import(name="cknSecretIdentifier")
     private @Nullable Output<String> cknSecretIdentifier;
 
+    /**
+     * @return Keyvault Secret Identifier URL containing Mac security CKN key.
+     * 
+     */
     public Optional<Output<String>> cknSecretIdentifier() {
         return Optional.ofNullable(this.cknSecretIdentifier);
     }
@@ -62,6 +74,10 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
     @Import(name="sciState")
     private @Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState;
 
+    /**
+     * @return Sci mode enabled/disabled.
+     * 
+     */
     public Optional<Output<Either<String,ExpressRouteLinkMacSecSciState>>> sciState() {
         return Optional.ofNullable(this.sciState);
     }
@@ -93,54 +109,126 @@ public final class ExpressRouteLinkMacSecConfigArgs extends com.pulumi.resources
             $ = new ExpressRouteLinkMacSecConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cakSecretIdentifier Keyvault Secret Identifier URL containing Mac security CAK key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cakSecretIdentifier(@Nullable Output<String> cakSecretIdentifier) {
             $.cakSecretIdentifier = cakSecretIdentifier;
             return this;
         }
 
+        /**
+         * @param cakSecretIdentifier Keyvault Secret Identifier URL containing Mac security CAK key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cakSecretIdentifier(String cakSecretIdentifier) {
             return cakSecretIdentifier(Output.of(cakSecretIdentifier));
         }
 
+        /**
+         * @param cipher Mac security cipher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipher(@Nullable Output<Either<String,ExpressRouteLinkMacSecCipher>> cipher) {
             $.cipher = cipher;
             return this;
         }
 
+        /**
+         * @param cipher Mac security cipher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipher(Either<String,ExpressRouteLinkMacSecCipher> cipher) {
             return cipher(Output.of(cipher));
         }
 
+        /**
+         * @param cipher Mac security cipher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipher(String cipher) {
             return cipher(Either.ofLeft(cipher));
         }
 
+        /**
+         * @param cipher Mac security cipher.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipher(ExpressRouteLinkMacSecCipher cipher) {
             return cipher(Either.ofRight(cipher));
         }
 
+        /**
+         * @param cknSecretIdentifier Keyvault Secret Identifier URL containing Mac security CKN key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cknSecretIdentifier(@Nullable Output<String> cknSecretIdentifier) {
             $.cknSecretIdentifier = cknSecretIdentifier;
             return this;
         }
 
+        /**
+         * @param cknSecretIdentifier Keyvault Secret Identifier URL containing Mac security CKN key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cknSecretIdentifier(String cknSecretIdentifier) {
             return cknSecretIdentifier(Output.of(cknSecretIdentifier));
         }
 
+        /**
+         * @param sciState Sci mode enabled/disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sciState(@Nullable Output<Either<String,ExpressRouteLinkMacSecSciState>> sciState) {
             $.sciState = sciState;
             return this;
         }
 
+        /**
+         * @param sciState Sci mode enabled/disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sciState(Either<String,ExpressRouteLinkMacSecSciState> sciState) {
             return sciState(Output.of(sciState));
         }
 
+        /**
+         * @param sciState Sci mode enabled/disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sciState(String sciState) {
             return sciState(Either.ofLeft(sciState));
         }
 
+        /**
+         * @param sciState Sci mode enabled/disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sciState(ExpressRouteLinkMacSecSciState sciState) {
             return sciState(Either.ofRight(sciState));
         }

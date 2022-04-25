@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class AzureBackupParamsResponse {
     /**
-     * BackupType ; Full/Incremental etc
+     * @return BackupType ; Full/Incremental etc
      * 
      */
     private final String backupType;
     /**
-     * Type of the specific object - used for deserializing
+     * @return Type of the specific object - used for deserializing
      * Expected value is &#39;AzureBackupParams&#39;.
      * 
      */
@@ -30,17 +30,17 @@ public final class AzureBackupParamsResponse {
     }
 
     /**
-     * BackupType ; Full/Incremental etc
+     * @return BackupType ; Full/Incremental etc
      * 
-    */
+     */
     public String backupType() {
         return this.backupType;
     }
     /**
-     * Type of the specific object - used for deserializing
+     * @return Type of the specific object - used for deserializing
      * Expected value is &#39;AzureBackupParams&#39;.
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }

@@ -24,6 +24,10 @@ public final class ClientCertificateThumbprintResponse extends com.pulumi.resour
     @Import(name="certificateThumbprint", required=true)
     private String certificateThumbprint;
 
+    /**
+     * @return The thumbprint of the client certificate.
+     * 
+     */
     public String certificateThumbprint() {
         return this.certificateThumbprint;
     }
@@ -35,6 +39,10 @@ public final class ClientCertificateThumbprintResponse extends com.pulumi.resour
     @Import(name="isAdmin", required=true)
     private Boolean isAdmin;
 
+    /**
+     * @return Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+     * 
+     */
     public Boolean isAdmin() {
         return this.isAdmin;
     }
@@ -64,11 +72,23 @@ public final class ClientCertificateThumbprintResponse extends com.pulumi.resour
             $ = new ClientCertificateThumbprintResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateThumbprint The thumbprint of the client certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(String certificateThumbprint) {
             $.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
+        /**
+         * @param isAdmin Indicates if the client certificate has admin access to the cluster. Non admin clients can perform only read only operations on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAdmin(Boolean isAdmin) {
             $.isAdmin = isAdmin;
             return this;

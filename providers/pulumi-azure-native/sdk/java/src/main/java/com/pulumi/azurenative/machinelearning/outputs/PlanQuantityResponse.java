@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class PlanQuantityResponse {
     /**
-     * The quantity added to the commitment plan at an interval specified by its allowance frequency.
+     * @return The quantity added to the commitment plan at an interval specified by its allowance frequency.
      * 
      */
     private final Double allowance;
     /**
-     * The quantity available to the plan the last time usage was calculated.
+     * @return The quantity available to the plan the last time usage was calculated.
      * 
      */
     private final Double amount;
     /**
-     * The Azure meter for usage against included quantities.
+     * @return The Azure meter for usage against included quantities.
      * 
      */
     private final String includedQuantityMeter;
     /**
-     * The Azure meter for usage which exceeds included quantities.
+     * @return The Azure meter for usage which exceeds included quantities.
      * 
      */
     private final String overageMeter;
@@ -44,30 +44,30 @@ public final class PlanQuantityResponse {
     }
 
     /**
-     * The quantity added to the commitment plan at an interval specified by its allowance frequency.
+     * @return The quantity added to the commitment plan at an interval specified by its allowance frequency.
      * 
-    */
+     */
     public Double allowance() {
         return this.allowance;
     }
     /**
-     * The quantity available to the plan the last time usage was calculated.
+     * @return The quantity available to the plan the last time usage was calculated.
      * 
-    */
+     */
     public Double amount() {
         return this.amount;
     }
     /**
-     * The Azure meter for usage against included quantities.
+     * @return The Azure meter for usage against included quantities.
      * 
-    */
+     */
     public String includedQuantityMeter() {
         return this.includedQuantityMeter;
     }
     /**
-     * The Azure meter for usage which exceeds included quantities.
+     * @return The Azure meter for usage which exceeds included quantities.
      * 
-    */
+     */
     public String overageMeter() {
         return this.overageMeter;
     }

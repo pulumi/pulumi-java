@@ -28,6 +28,10 @@ public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArg
     @Import(name="expirationTime")
     private @Nullable Output<String> expirationTime;
 
+    /**
+     * @return Expiration time of registration token.
+     * 
+     */
     public Optional<Output<String>> expirationTime() {
         return Optional.ofNullable(this.expirationTime);
     }
@@ -39,6 +43,10 @@ public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArg
     @Import(name="registrationTokenOperation")
     private @Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation;
 
+    /**
+     * @return The type of resetting the token.
+     * 
+     */
     public Optional<Output<Either<String,RegistrationTokenOperation>>> registrationTokenOperation() {
         return Optional.ofNullable(this.registrationTokenOperation);
     }
@@ -50,6 +58,10 @@ public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArg
     @Import(name="token")
     private @Nullable Output<String> token;
 
+    /**
+     * @return The registration token base64 encoded string.
+     * 
+     */
     public Optional<Output<String>> token() {
         return Optional.ofNullable(this.token);
     }
@@ -80,37 +92,85 @@ public final class RegistrationInfoArgs extends com.pulumi.resources.ResourceArg
             $ = new RegistrationInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationTime Expiration time of registration token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(@Nullable Output<String> expirationTime) {
             $.expirationTime = expirationTime;
             return this;
         }
 
+        /**
+         * @param expirationTime Expiration time of registration token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationTime(String expirationTime) {
             return expirationTime(Output.of(expirationTime));
         }
 
+        /**
+         * @param registrationTokenOperation The type of resetting the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationTokenOperation(@Nullable Output<Either<String,RegistrationTokenOperation>> registrationTokenOperation) {
             $.registrationTokenOperation = registrationTokenOperation;
             return this;
         }
 
+        /**
+         * @param registrationTokenOperation The type of resetting the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationTokenOperation(Either<String,RegistrationTokenOperation> registrationTokenOperation) {
             return registrationTokenOperation(Output.of(registrationTokenOperation));
         }
 
+        /**
+         * @param registrationTokenOperation The type of resetting the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationTokenOperation(String registrationTokenOperation) {
             return registrationTokenOperation(Either.ofLeft(registrationTokenOperation));
         }
 
+        /**
+         * @param registrationTokenOperation The type of resetting the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationTokenOperation(RegistrationTokenOperation registrationTokenOperation) {
             return registrationTokenOperation(Either.ofRight(registrationTokenOperation));
         }
 
+        /**
+         * @param token The registration token base64 encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(@Nullable Output<String> token) {
             $.token = token;
             return this;
         }
 
+        /**
+         * @param token The registration token base64 encoded string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(String token) {
             return token(Output.of(token));
         }

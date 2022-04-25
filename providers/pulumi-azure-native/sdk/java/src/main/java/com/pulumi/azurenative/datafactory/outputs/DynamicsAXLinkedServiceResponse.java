@@ -20,58 +20,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DynamicsAXLinkedServiceResponse {
     /**
-     * Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
+     * @return Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
      * 
      */
     private final Object aadResourceId;
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+     * @return Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
      */
     private final Object servicePrincipalId;
     /**
-     * Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+     * @return Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
      * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
     /**
-     * Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
+     * @return Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
      * 
      */
     private final Object tenant;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;DynamicsAX&#39;.
      * 
      */
     private final String type;
     /**
-     * The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
+     * @return The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
      * 
      */
     private final Object url;
@@ -103,80 +103,80 @@ public final class DynamicsAXLinkedServiceResponse {
     }
 
     /**
-     * Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
+     * @return Specify the resource you are requesting authorization. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object aadResourceId() {
         return this.aadResourceId;
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
+     * @return Specify the application&#39;s client ID. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object servicePrincipalId() {
         return this.servicePrincipalId;
     }
     /**
-     * Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
+     * @return Specify the application&#39;s key. Mark this field as a SecureString to store it securely in Data Factory, or reference a secret stored in Azure Key Vault. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey() {
         return this.servicePrincipalKey;
     }
     /**
-     * Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
+     * @return Specify the tenant information (domain name or tenant ID) under which your application resides. Retrieve it by hovering the mouse in the top-right corner of the Azure portal. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object tenant() {
         return this.tenant;
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;DynamicsAX&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
+     * @return The Dynamics AX (or Dynamics 365 Finance and Operations) instance OData endpoint.
      * 
-    */
+     */
     public Object url() {
         return this.url;
     }

@@ -28,6 +28,11 @@ public final class PyTorchResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="distributionType", required=true)
     private String distributionType;
 
+    /**
+     * @return Enum to determine the job distribution type.
+     * Expected value is &#39;PyTorch&#39;.
+     * 
+     */
     public String distributionType() {
         return this.distributionType;
     }
@@ -39,6 +44,10 @@ public final class PyTorchResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="processCount")
     private @Nullable Integer processCount;
 
+    /**
+     * @return Total process count for the distributed job.
+     * 
+     */
     public Optional<Integer> processCount() {
         return Optional.ofNullable(this.processCount);
     }
@@ -68,11 +77,24 @@ public final class PyTorchResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PyTorchResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param distributionType Enum to determine the job distribution type.
+         * Expected value is &#39;PyTorch&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distributionType(String distributionType) {
             $.distributionType = distributionType;
             return this;
         }
 
+        /**
+         * @param processCount Total process count for the distributed job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processCount(@Nullable Integer processCount) {
             $.processCount = processCount;
             return this;

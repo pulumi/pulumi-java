@@ -26,6 +26,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return The count of the event.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -37,6 +41,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="firstTimestamp")
     private @Nullable String firstTimestamp;
 
+    /**
+     * @return Date/time of the first event.
+     * 
+     */
     public Optional<String> firstTimestamp() {
         return Optional.ofNullable(this.firstTimestamp);
     }
@@ -48,6 +56,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="lastTimestamp")
     private @Nullable String lastTimestamp;
 
+    /**
+     * @return Date/time of the last event.
+     * 
+     */
     public Optional<String> lastTimestamp() {
         return Optional.ofNullable(this.lastTimestamp);
     }
@@ -59,6 +71,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return The event message
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -70,6 +86,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the container event.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -81,6 +101,10 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The event type.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -114,31 +138,67 @@ public final class ContainerEventResponse extends com.pulumi.resources.InvokeArg
             $ = new ContainerEventResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count The count of the event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param firstTimestamp Date/time of the first event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstTimestamp(@Nullable String firstTimestamp) {
             $.firstTimestamp = firstTimestamp;
             return this;
         }
 
+        /**
+         * @param lastTimestamp Date/time of the last event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastTimestamp(@Nullable String lastTimestamp) {
             $.lastTimestamp = lastTimestamp;
             return this;
         }
 
+        /**
+         * @param message The event message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param name The name of the container event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The event type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

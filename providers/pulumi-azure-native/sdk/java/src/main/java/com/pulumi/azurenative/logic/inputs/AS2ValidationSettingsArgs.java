@@ -31,6 +31,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="checkCertificateRevocationListOnReceive", required=true)
     private Output<Boolean> checkCertificateRevocationListOnReceive;
 
+    /**
+     * @return The value indicating whether to check for certificate revocation list on receive.
+     * 
+     */
     public Output<Boolean> checkCertificateRevocationListOnReceive() {
         return this.checkCertificateRevocationListOnReceive;
     }
@@ -42,6 +46,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="checkCertificateRevocationListOnSend", required=true)
     private Output<Boolean> checkCertificateRevocationListOnSend;
 
+    /**
+     * @return The value indicating whether to check for certificate revocation list on send.
+     * 
+     */
     public Output<Boolean> checkCertificateRevocationListOnSend() {
         return this.checkCertificateRevocationListOnSend;
     }
@@ -53,6 +61,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="checkDuplicateMessage", required=true)
     private Output<Boolean> checkDuplicateMessage;
 
+    /**
+     * @return The value indicating whether to check for duplicate message.
+     * 
+     */
     public Output<Boolean> checkDuplicateMessage() {
         return this.checkDuplicateMessage;
     }
@@ -64,6 +76,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="compressMessage", required=true)
     private Output<Boolean> compressMessage;
 
+    /**
+     * @return The value indicating whether the message has to be compressed.
+     * 
+     */
     public Output<Boolean> compressMessage() {
         return this.compressMessage;
     }
@@ -75,6 +91,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="encryptMessage", required=true)
     private Output<Boolean> encryptMessage;
 
+    /**
+     * @return The value indicating whether the message has to be encrypted.
+     * 
+     */
     public Output<Boolean> encryptMessage() {
         return this.encryptMessage;
     }
@@ -86,6 +106,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="encryptionAlgorithm", required=true)
     private Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm;
 
+    /**
+     * @return The encryption algorithm.
+     * 
+     */
     public Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm() {
         return this.encryptionAlgorithm;
     }
@@ -97,6 +121,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="interchangeDuplicatesValidityDays", required=true)
     private Output<Integer> interchangeDuplicatesValidityDays;
 
+    /**
+     * @return The number of days to look back for duplicate interchange.
+     * 
+     */
     public Output<Integer> interchangeDuplicatesValidityDays() {
         return this.interchangeDuplicatesValidityDays;
     }
@@ -108,6 +136,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="overrideMessageProperties", required=true)
     private Output<Boolean> overrideMessageProperties;
 
+    /**
+     * @return The value indicating whether to override incoming message properties with those in agreement.
+     * 
+     */
     public Output<Boolean> overrideMessageProperties() {
         return this.overrideMessageProperties;
     }
@@ -119,6 +151,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="signMessage", required=true)
     private Output<Boolean> signMessage;
 
+    /**
+     * @return The value indicating whether the message has to be signed.
+     * 
+     */
     public Output<Boolean> signMessage() {
         return this.signMessage;
     }
@@ -130,6 +166,10 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
     @Import(name="signingAlgorithm")
     private @Nullable Output<Either<String,SigningAlgorithm>> signingAlgorithm;
 
+    /**
+     * @return The signing algorithm.
+     * 
+     */
     public Optional<Output<Either<String,SigningAlgorithm>>> signingAlgorithm() {
         return Optional.ofNullable(this.signingAlgorithm);
     }
@@ -167,108 +207,252 @@ public final class AS2ValidationSettingsArgs extends com.pulumi.resources.Resour
             $ = new AS2ValidationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param checkCertificateRevocationListOnReceive The value indicating whether to check for certificate revocation list on receive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkCertificateRevocationListOnReceive(Output<Boolean> checkCertificateRevocationListOnReceive) {
             $.checkCertificateRevocationListOnReceive = checkCertificateRevocationListOnReceive;
             return this;
         }
 
+        /**
+         * @param checkCertificateRevocationListOnReceive The value indicating whether to check for certificate revocation list on receive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkCertificateRevocationListOnReceive(Boolean checkCertificateRevocationListOnReceive) {
             return checkCertificateRevocationListOnReceive(Output.of(checkCertificateRevocationListOnReceive));
         }
 
+        /**
+         * @param checkCertificateRevocationListOnSend The value indicating whether to check for certificate revocation list on send.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkCertificateRevocationListOnSend(Output<Boolean> checkCertificateRevocationListOnSend) {
             $.checkCertificateRevocationListOnSend = checkCertificateRevocationListOnSend;
             return this;
         }
 
+        /**
+         * @param checkCertificateRevocationListOnSend The value indicating whether to check for certificate revocation list on send.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkCertificateRevocationListOnSend(Boolean checkCertificateRevocationListOnSend) {
             return checkCertificateRevocationListOnSend(Output.of(checkCertificateRevocationListOnSend));
         }
 
+        /**
+         * @param checkDuplicateMessage The value indicating whether to check for duplicate message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateMessage(Output<Boolean> checkDuplicateMessage) {
             $.checkDuplicateMessage = checkDuplicateMessage;
             return this;
         }
 
+        /**
+         * @param checkDuplicateMessage The value indicating whether to check for duplicate message.
+         * 
+         * @return builder
+         * 
+         */
         public Builder checkDuplicateMessage(Boolean checkDuplicateMessage) {
             return checkDuplicateMessage(Output.of(checkDuplicateMessage));
         }
 
+        /**
+         * @param compressMessage The value indicating whether the message has to be compressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressMessage(Output<Boolean> compressMessage) {
             $.compressMessage = compressMessage;
             return this;
         }
 
+        /**
+         * @param compressMessage The value indicating whether the message has to be compressed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressMessage(Boolean compressMessage) {
             return compressMessage(Output.of(compressMessage));
         }
 
+        /**
+         * @param encryptMessage The value indicating whether the message has to be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptMessage(Output<Boolean> encryptMessage) {
             $.encryptMessage = encryptMessage;
             return this;
         }
 
+        /**
+         * @param encryptMessage The value indicating whether the message has to be encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptMessage(Boolean encryptMessage) {
             return encryptMessage(Output.of(encryptMessage));
         }
 
+        /**
+         * @param encryptionAlgorithm The encryption algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(Output<Either<String,EncryptionAlgorithm>> encryptionAlgorithm) {
             $.encryptionAlgorithm = encryptionAlgorithm;
             return this;
         }
 
+        /**
+         * @param encryptionAlgorithm The encryption algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(Either<String,EncryptionAlgorithm> encryptionAlgorithm) {
             return encryptionAlgorithm(Output.of(encryptionAlgorithm));
         }
 
+        /**
+         * @param encryptionAlgorithm The encryption algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(String encryptionAlgorithm) {
             return encryptionAlgorithm(Either.ofLeft(encryptionAlgorithm));
         }
 
+        /**
+         * @param encryptionAlgorithm The encryption algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionAlgorithm(EncryptionAlgorithm encryptionAlgorithm) {
             return encryptionAlgorithm(Either.ofRight(encryptionAlgorithm));
         }
 
+        /**
+         * @param interchangeDuplicatesValidityDays The number of days to look back for duplicate interchange.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeDuplicatesValidityDays(Output<Integer> interchangeDuplicatesValidityDays) {
             $.interchangeDuplicatesValidityDays = interchangeDuplicatesValidityDays;
             return this;
         }
 
+        /**
+         * @param interchangeDuplicatesValidityDays The number of days to look back for duplicate interchange.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeDuplicatesValidityDays(Integer interchangeDuplicatesValidityDays) {
             return interchangeDuplicatesValidityDays(Output.of(interchangeDuplicatesValidityDays));
         }
 
+        /**
+         * @param overrideMessageProperties The value indicating whether to override incoming message properties with those in agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideMessageProperties(Output<Boolean> overrideMessageProperties) {
             $.overrideMessageProperties = overrideMessageProperties;
             return this;
         }
 
+        /**
+         * @param overrideMessageProperties The value indicating whether to override incoming message properties with those in agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideMessageProperties(Boolean overrideMessageProperties) {
             return overrideMessageProperties(Output.of(overrideMessageProperties));
         }
 
+        /**
+         * @param signMessage The value indicating whether the message has to be signed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signMessage(Output<Boolean> signMessage) {
             $.signMessage = signMessage;
             return this;
         }
 
+        /**
+         * @param signMessage The value indicating whether the message has to be signed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signMessage(Boolean signMessage) {
             return signMessage(Output.of(signMessage));
         }
 
+        /**
+         * @param signingAlgorithm The signing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(@Nullable Output<Either<String,SigningAlgorithm>> signingAlgorithm) {
             $.signingAlgorithm = signingAlgorithm;
             return this;
         }
 
+        /**
+         * @param signingAlgorithm The signing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(Either<String,SigningAlgorithm> signingAlgorithm) {
             return signingAlgorithm(Output.of(signingAlgorithm));
         }
 
+        /**
+         * @param signingAlgorithm The signing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(String signingAlgorithm) {
             return signingAlgorithm(Either.ofLeft(signingAlgorithm));
         }
 
+        /**
+         * @param signingAlgorithm The signing algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingAlgorithm(SigningAlgorithm signingAlgorithm) {
             return signingAlgorithm(Either.ofRight(signingAlgorithm));
         }

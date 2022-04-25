@@ -31,6 +31,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="host")
     private @Nullable Output<String> host;
 
+    /**
+     * @return Host name to send the probe to.
+     * 
+     */
     public Optional<Output<String>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -42,6 +46,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +61,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
+    /**
+     * @return The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
+     * 
+     */
     public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -64,6 +76,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="match")
     private @Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match;
 
+    /**
+     * @return Criterion for classifying a healthy probe response.
+     * 
+     */
     public Optional<Output<ApplicationGatewayProbeHealthResponseMatchArgs>> match() {
         return Optional.ofNullable(this.match);
     }
@@ -75,6 +91,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="minServers")
     private @Nullable Output<Integer> minServers;
 
+    /**
+     * @return Minimum number of servers that are always marked healthy. Default value is 0.
+     * 
+     */
     public Optional<Output<Integer>> minServers() {
         return Optional.ofNullable(this.minServers);
     }
@@ -86,6 +106,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the probe that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -97,6 +121,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -108,6 +136,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="pickHostNameFromBackendHttpSettings")
     private @Nullable Output<Boolean> pickHostNameFromBackendHttpSettings;
 
+    /**
+     * @return Whether the host header should be picked from the backend http settings. Default value is false.
+     * 
+     */
     public Optional<Output<Boolean>> pickHostNameFromBackendHttpSettings() {
         return Optional.ofNullable(this.pickHostNameFromBackendHttpSettings);
     }
@@ -119,6 +151,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -130,6 +166,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="protocol")
     private @Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol;
 
+    /**
+     * @return The protocol used for the probe.
+     * 
+     */
     public Optional<Output<Either<String,ApplicationGatewayProtocol>>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -141,6 +181,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
+    /**
+     * @return The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
+     * 
+     */
     public Optional<Output<Integer>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -152,6 +196,10 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
     @Import(name="unhealthyThreshold")
     private @Nullable Output<Integer> unhealthyThreshold;
 
+    /**
+     * @return The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
+     * 
+     */
     public Optional<Output<Integer>> unhealthyThreshold() {
         return Optional.ofNullable(this.unhealthyThreshold);
     }
@@ -191,118 +239,274 @@ public final class ApplicationGatewayProbeArgs extends com.pulumi.resources.Reso
             $ = new ApplicationGatewayProbeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param host Host name to send the probe to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<String> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Host name to send the probe to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(String host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param interval The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The probing interval in seconds. This is the time interval between two consecutive probes. Acceptable values are from 1 second to 86400 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param match Criterion for classifying a healthy probe response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(@Nullable Output<ApplicationGatewayProbeHealthResponseMatchArgs> match) {
             $.match = match;
             return this;
         }
 
+        /**
+         * @param match Criterion for classifying a healthy probe response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder match(ApplicationGatewayProbeHealthResponseMatchArgs match) {
             return match(Output.of(match));
         }
 
+        /**
+         * @param minServers Minimum number of servers that are always marked healthy. Default value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minServers(@Nullable Output<Integer> minServers) {
             $.minServers = minServers;
             return this;
         }
 
+        /**
+         * @param minServers Minimum number of servers that are always marked healthy. Default value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minServers(Integer minServers) {
             return minServers(Output.of(minServers));
         }
 
+        /**
+         * @param name Name of the probe that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the probe that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param path Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Relative path of probe. Valid path starts from &#39;/&#39;. Probe is sent to &lt;Protocol&gt;://&lt;host&gt;:&lt;port&gt;&lt;path&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param pickHostNameFromBackendHttpSettings Whether the host header should be picked from the backend http settings. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pickHostNameFromBackendHttpSettings(@Nullable Output<Boolean> pickHostNameFromBackendHttpSettings) {
             $.pickHostNameFromBackendHttpSettings = pickHostNameFromBackendHttpSettings;
             return this;
         }
 
+        /**
+         * @param pickHostNameFromBackendHttpSettings Whether the host header should be picked from the backend http settings. Default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pickHostNameFromBackendHttpSettings(Boolean pickHostNameFromBackendHttpSettings) {
             return pickHostNameFromBackendHttpSettings(Output.of(pickHostNameFromBackendHttpSettings));
         }
 
+        /**
+         * @param port Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Custom port which will be used for probing the backend servers. The valid value ranges from 1 to 65535. In case not set, port from http settings will be used. This property is valid for Standard_v2 and WAF_v2 only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol The protocol used for the probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<Either<String,ApplicationGatewayProtocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol used for the probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,ApplicationGatewayProtocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol The protocol used for the probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol The protocol used for the probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(ApplicationGatewayProtocol protocol) {
             return protocol(Either.ofRight(protocol));
         }
 
+        /**
+         * @param timeout The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout The probe timeout in seconds. Probe marked as failed if valid response is not received with this timeout period. Acceptable values are from 1 second to 86400 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Integer timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param unhealthyThreshold The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(@Nullable Output<Integer> unhealthyThreshold) {
             $.unhealthyThreshold = unhealthyThreshold;
             return this;
         }
 
+        /**
+         * @param unhealthyThreshold The probe retry count. Backend server is marked down after consecutive probe failure count reaches UnhealthyThreshold. Acceptable values are from 1 second to 20.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unhealthyThreshold(Integer unhealthyThreshold) {
             return unhealthyThreshold(Output.of(unhealthyThreshold));
         }

@@ -25,6 +25,10 @@ public final class X509CertificateNameResponse extends com.pulumi.resources.Invo
     @Import(name="issuerCertificateThumbprint")
     private @Nullable String issuerCertificateThumbprint;
 
+    /**
+     * @return Thumbprint for the Issuer of the Certificate.
+     * 
+     */
     public Optional<String> issuerCertificateThumbprint() {
         return Optional.ofNullable(this.issuerCertificateThumbprint);
     }
@@ -36,6 +40,10 @@ public final class X509CertificateNameResponse extends com.pulumi.resources.Invo
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Common Name of the Certificate.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class X509CertificateNameResponse extends com.pulumi.resources.Invo
             $ = new X509CertificateNameResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issuerCertificateThumbprint Thumbprint for the Issuer of the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerCertificateThumbprint(@Nullable String issuerCertificateThumbprint) {
             $.issuerCertificateThumbprint = issuerCertificateThumbprint;
             return this;
         }
 
+        /**
+         * @param name Common Name of the Certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

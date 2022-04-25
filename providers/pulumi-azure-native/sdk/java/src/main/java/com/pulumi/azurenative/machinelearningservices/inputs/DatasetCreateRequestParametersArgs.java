@@ -29,6 +29,10 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
     @Import(name="header")
     private @Nullable Output<Either<String,Header>> header;
 
+    /**
+     * @return Header type.
+     * 
+     */
     public Optional<Output<Either<String,Header>>> header() {
         return Optional.ofNullable(this.header);
     }
@@ -40,6 +44,10 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
     @Import(name="includePath")
     private @Nullable Output<Boolean> includePath;
 
+    /**
+     * @return Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
+     * 
+     */
     public Optional<Output<Boolean>> includePath() {
         return Optional.ofNullable(this.includePath);
     }
@@ -51,6 +59,10 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
     @Import(name="partitionFormat")
     private @Nullable Output<String> partitionFormat;
 
+    /**
+     * @return The partition information of each path will be extracted into columns based on the specified format. Format part &#39;{column_name}&#39; creates string column, and &#39;{column_name:yyyy/MM/dd/HH/mm/ss}&#39; creates datetime column, where &#39;yyyy&#39;, &#39;MM&#39;, &#39;dd&#39;, &#39;HH&#39;, &#39;mm&#39; and &#39;ss&#39; are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path &#39;../USA/2019/01/01/data.parquet&#39; where the partition is by country/region and time, partition_format=&#39;/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv&#39; creates a string column &#39;CountryOrRegion&#39; with the value &#39;USA&#39; and a datetime column &#39;PartitionDate&#39; with the value &#39;2019-01-01
+     * 
+     */
     public Optional<Output<String>> partitionFormat() {
         return Optional.ofNullable(this.partitionFormat);
     }
@@ -76,6 +88,10 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
     @Import(name="separator")
     private @Nullable Output<String> separator;
 
+    /**
+     * @return The separator used to split columns for &#39;delimited_files&#39; sourceType.
+     * 
+     */
     public Optional<Output<String>> separator() {
         return Optional.ofNullable(this.separator);
     }
@@ -87,6 +103,10 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
     @Import(name="sourceType")
     private @Nullable Output<Either<String,SourceType>> sourceType;
 
+    /**
+     * @return Data source type.
+     * 
+     */
     public Optional<Output<Either<String,SourceType>>> sourceType() {
         return Optional.ofNullable(this.sourceType);
     }
@@ -121,37 +141,85 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
             $ = new DatasetCreateRequestParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header Header type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(@Nullable Output<Either<String,Header>> header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param header Header type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(Either<String,Header> header) {
             return header(Output.of(header));
         }
 
+        /**
+         * @param header Header type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(String header) {
             return header(Either.ofLeft(header));
         }
 
+        /**
+         * @param header Header type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(Header header) {
             return header(Either.ofRight(header));
         }
 
+        /**
+         * @param includePath Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePath(@Nullable Output<Boolean> includePath) {
             $.includePath = includePath;
             return this;
         }
 
+        /**
+         * @param includePath Boolean to keep path information as column in the dataset. Defaults to False. This is useful when reading multiple files, and want to know which file a particular record originated from, or to keep useful information in file path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includePath(Boolean includePath) {
             return includePath(Output.of(includePath));
         }
 
+        /**
+         * @param partitionFormat The partition information of each path will be extracted into columns based on the specified format. Format part &#39;{column_name}&#39; creates string column, and &#39;{column_name:yyyy/MM/dd/HH/mm/ss}&#39; creates datetime column, where &#39;yyyy&#39;, &#39;MM&#39;, &#39;dd&#39;, &#39;HH&#39;, &#39;mm&#39; and &#39;ss&#39; are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path &#39;../USA/2019/01/01/data.parquet&#39; where the partition is by country/region and time, partition_format=&#39;/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv&#39; creates a string column &#39;CountryOrRegion&#39; with the value &#39;USA&#39; and a datetime column &#39;PartitionDate&#39; with the value &#39;2019-01-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionFormat(@Nullable Output<String> partitionFormat) {
             $.partitionFormat = partitionFormat;
             return this;
         }
 
+        /**
+         * @param partitionFormat The partition information of each path will be extracted into columns based on the specified format. Format part &#39;{column_name}&#39; creates string column, and &#39;{column_name:yyyy/MM/dd/HH/mm/ss}&#39; creates datetime column, where &#39;yyyy&#39;, &#39;MM&#39;, &#39;dd&#39;, &#39;HH&#39;, &#39;mm&#39; and &#39;ss&#39; are used to extract year, month, day, hour, minute and second for the datetime type. The format should start from the position of first partition key until the end of file path. For example, given the path &#39;../USA/2019/01/01/data.parquet&#39; where the partition is by country/region and time, partition_format=&#39;/{CountryOrRegion}/{PartitionDate:yyyy/MM/dd}/data.csv&#39; creates a string column &#39;CountryOrRegion&#39; with the value &#39;USA&#39; and a datetime column &#39;PartitionDate&#39; with the value &#39;2019-01-01
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionFormat(String partitionFormat) {
             return partitionFormat(Output.of(partitionFormat));
         }
@@ -174,28 +242,64 @@ public final class DatasetCreateRequestParametersArgs extends com.pulumi.resourc
             return query(Output.of(query));
         }
 
+        /**
+         * @param separator The separator used to split columns for &#39;delimited_files&#39; sourceType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder separator(@Nullable Output<String> separator) {
             $.separator = separator;
             return this;
         }
 
+        /**
+         * @param separator The separator used to split columns for &#39;delimited_files&#39; sourceType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder separator(String separator) {
             return separator(Output.of(separator));
         }
 
+        /**
+         * @param sourceType Data source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(@Nullable Output<Either<String,SourceType>> sourceType) {
             $.sourceType = sourceType;
             return this;
         }
 
+        /**
+         * @param sourceType Data source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(Either<String,SourceType> sourceType) {
             return sourceType(Output.of(sourceType));
         }
 
+        /**
+         * @param sourceType Data source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(String sourceType) {
             return sourceType(Either.ofLeft(sourceType));
         }
 
+        /**
+         * @param sourceType Data source type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceType(SourceType sourceType) {
             return sourceType(Either.ofRight(sourceType));
         }

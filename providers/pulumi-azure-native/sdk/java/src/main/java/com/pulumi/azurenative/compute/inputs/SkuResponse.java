@@ -26,6 +26,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Double capacity;
 
+    /**
+     * @return Specifies the number of virtual machines in the scale set.
+     * 
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Specifies the tier of virtual machines in a scale set.&lt;br /&gt;&lt;br /&gt; Possible Values:&lt;br /&gt;&lt;br /&gt; **Standard**&lt;br /&gt;&lt;br /&gt; **Basic**
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -78,16 +90,34 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Specifies the number of virtual machines in the scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Double capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier Specifies the tier of virtual machines in a scale set.&lt;br /&gt;&lt;br /&gt; Possible Values:&lt;br /&gt;&lt;br /&gt; **Standard**&lt;br /&gt;&lt;br /&gt; **Basic**
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

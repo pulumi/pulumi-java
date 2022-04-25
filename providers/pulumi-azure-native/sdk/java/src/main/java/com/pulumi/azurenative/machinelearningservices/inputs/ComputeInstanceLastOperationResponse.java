@@ -25,6 +25,10 @@ public final class ComputeInstanceLastOperationResponse extends com.pulumi.resou
     @Import(name="operationName")
     private @Nullable String operationName;
 
+    /**
+     * @return Name of the last operation.
+     * 
+     */
     public Optional<String> operationName() {
         return Optional.ofNullable(this.operationName);
     }
@@ -36,6 +40,10 @@ public final class ComputeInstanceLastOperationResponse extends com.pulumi.resou
     @Import(name="operationStatus")
     private @Nullable String operationStatus;
 
+    /**
+     * @return Operation status.
+     * 
+     */
     public Optional<String> operationStatus() {
         return Optional.ofNullable(this.operationStatus);
     }
@@ -47,6 +55,10 @@ public final class ComputeInstanceLastOperationResponse extends com.pulumi.resou
     @Import(name="operationTime")
     private @Nullable String operationTime;
 
+    /**
+     * @return Time of the last operation.
+     * 
+     */
     public Optional<String> operationTime() {
         return Optional.ofNullable(this.operationTime);
     }
@@ -77,16 +89,34 @@ public final class ComputeInstanceLastOperationResponse extends com.pulumi.resou
             $ = new ComputeInstanceLastOperationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operationName Name of the last operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationName(@Nullable String operationName) {
             $.operationName = operationName;
             return this;
         }
 
+        /**
+         * @param operationStatus Operation status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationStatus(@Nullable String operationStatus) {
             $.operationStatus = operationStatus;
             return this;
         }
 
+        /**
+         * @param operationTime Time of the last operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationTime(@Nullable String operationTime) {
             $.operationTime = operationTime;
             return this;

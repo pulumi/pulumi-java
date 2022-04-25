@@ -25,6 +25,10 @@ public final class EnvironmentVarResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Environment variable name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class EnvironmentVarResponse extends com.pulumi.resources.InvokeArg
     @Import(name="secretRef")
     private @Nullable String secretRef;
 
+    /**
+     * @return Name of the Container App secret from which to pull the environment variable value.
+     * 
+     */
     public Optional<String> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -47,6 +55,10 @@ public final class EnvironmentVarResponse extends com.pulumi.resources.InvokeArg
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Non-secret environment variable value.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -77,16 +89,34 @@ public final class EnvironmentVarResponse extends com.pulumi.resources.InvokeArg
             $ = new EnvironmentVarResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Environment variable name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param secretRef Name of the Container App secret from which to pull the environment variable value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable String secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param value Non-secret environment variable value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

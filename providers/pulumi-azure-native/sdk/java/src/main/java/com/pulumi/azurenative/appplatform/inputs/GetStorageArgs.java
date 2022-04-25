@@ -19,6 +19,10 @@ public final class GetStorageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetStorageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the Service resource.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -41,6 +49,10 @@ public final class GetStorageArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageName", required=true)
     private String storageName;
 
+    /**
+     * @return The name of the storage resource.
+     * 
+     */
     public String storageName() {
         return this.storageName;
     }
@@ -71,16 +83,34 @@ public final class GetStorageArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetStorageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the Service resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param storageName The name of the storage resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageName(String storageName) {
             $.storageName = storageName;
             return this;

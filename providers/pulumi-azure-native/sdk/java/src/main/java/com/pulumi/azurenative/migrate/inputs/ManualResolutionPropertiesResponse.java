@@ -25,6 +25,10 @@ public final class ManualResolutionPropertiesResponse extends com.pulumi.resourc
     @Import(name="targetId")
     private @Nullable String targetId;
 
+    /**
+     * @return Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.
+     * 
+     */
     public Optional<String> targetId() {
         return Optional.ofNullable(this.targetId);
     }
@@ -53,6 +57,12 @@ public final class ManualResolutionPropertiesResponse extends com.pulumi.resourc
             $ = new ManualResolutionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetId Gets or sets the target resource ARM ID of the dependent resource if the resource type is Manual.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(@Nullable String targetId) {
             $.targetId = targetId;
             return this;

@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WarmStorageEnvironmentStatusResponse {
     /**
-     * A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
+     * @return A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
      * 
      */
     private final @Nullable Integer currentCount;
     /**
-     * A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
+     * @return A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
      * 
      */
     private final @Nullable Integer maxCount;
     /**
-     * This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
+     * @return This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
      * 
      */
     private final @Nullable String state;
@@ -39,23 +39,23 @@ public final class WarmStorageEnvironmentStatusResponse {
     }
 
     /**
-     * A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
+     * @return A value that represents the number of properties used by the environment for S1/S2 SKU and number of properties used by Warm Store for PAYG SKU
      * 
-    */
+     */
     public Optional<Integer> currentCount() {
         return Optional.ofNullable(this.currentCount);
     }
     /**
-     * A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
+     * @return A value that represents the maximum number of properties used allowed by the environment for S1/S2 SKU and maximum number of properties allowed by Warm Store for PAYG SKU.
      * 
-    */
+     */
     public Optional<Integer> maxCount() {
         return Optional.ofNullable(this.maxCount);
     }
     /**
-     * This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
+     * @return This string represents the state of warm storage properties usage. It can be &#34;Ok&#34;, &#34;Error&#34;, &#34;Unknown&#34;.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

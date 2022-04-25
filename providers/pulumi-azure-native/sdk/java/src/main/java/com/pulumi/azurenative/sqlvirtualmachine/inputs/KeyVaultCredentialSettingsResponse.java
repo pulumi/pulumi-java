@@ -26,6 +26,10 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
     @Import(name="azureKeyVaultUrl")
     private @Nullable String azureKeyVaultUrl;
 
+    /**
+     * @return Azure Key Vault url.
+     * 
+     */
     public Optional<String> azureKeyVaultUrl() {
         return Optional.ofNullable(this.azureKeyVaultUrl);
     }
@@ -37,6 +41,10 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
     @Import(name="credentialName")
     private @Nullable String credentialName;
 
+    /**
+     * @return Credential name.
+     * 
+     */
     public Optional<String> credentialName() {
         return Optional.ofNullable(this.credentialName);
     }
@@ -48,6 +56,10 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
     @Import(name="enable")
     private @Nullable Boolean enable;
 
+    /**
+     * @return Enable or disable key vault credential setting.
+     * 
+     */
     public Optional<Boolean> enable() {
         return Optional.ofNullable(this.enable);
     }
@@ -59,6 +71,10 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
     @Import(name="servicePrincipalName")
     private @Nullable String servicePrincipalName;
 
+    /**
+     * @return Service principal name to access key vault.
+     * 
+     */
     public Optional<String> servicePrincipalName() {
         return Optional.ofNullable(this.servicePrincipalName);
     }
@@ -90,21 +106,45 @@ public final class KeyVaultCredentialSettingsResponse extends com.pulumi.resourc
             $ = new KeyVaultCredentialSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureKeyVaultUrl Azure Key Vault url.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureKeyVaultUrl(@Nullable String azureKeyVaultUrl) {
             $.azureKeyVaultUrl = azureKeyVaultUrl;
             return this;
         }
 
+        /**
+         * @param credentialName Credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialName(@Nullable String credentialName) {
             $.credentialName = credentialName;
             return this;
         }
 
+        /**
+         * @param enable Enable or disable key vault credential setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enable(@Nullable Boolean enable) {
             $.enable = enable;
             return this;
         }
 
+        /**
+         * @param servicePrincipalName Service principal name to access key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalName(@Nullable String servicePrincipalName) {
             $.servicePrincipalName = servicePrincipalName;
             return this;

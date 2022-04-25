@@ -25,6 +25,11 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -36,6 +41,10 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
     @Import(name="password", required=true)
     private String password;
 
+    /**
+     * @return Password for a username/password pair.
+     * 
+     */
     public String password() {
         return this.password;
     }
@@ -47,6 +56,10 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
     @Import(name="username", required=true)
     private String username;
 
+    /**
+     * @return Username for a username/password pair.
+     * 
+     */
     public String username() {
         return this.username;
     }
@@ -77,16 +90,35 @@ public final class MediaGraphUsernamePasswordCredentialsResponse extends com.pul
             $ = new MediaGraphUsernamePasswordCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param password Password for a username/password pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param username Username for a username/password pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             $.username = username;
             return this;

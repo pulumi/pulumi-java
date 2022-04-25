@@ -25,6 +25,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="keyName", required=true)
     private String keyName;
 
+    /**
+     * @return Name of the key.
+     * 
+     */
     public String keyName() {
         return this.keyName;
     }
@@ -36,6 +40,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="primaryKey")
     private @Nullable String primaryKey;
 
+    /**
+     * @return Primary SAS key value.
+     * 
+     */
     public Optional<String> primaryKey() {
         return Optional.ofNullable(this.primaryKey);
     }
@@ -47,6 +55,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="rights", required=true)
     private String rights;
 
+    /**
+     * @return Rights that this key has.
+     * 
+     */
     public String rights() {
         return this.rights;
     }
@@ -58,6 +70,10 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
     @Import(name="secondaryKey")
     private @Nullable String secondaryKey;
 
+    /**
+     * @return Secondary SAS key value.
+     * 
+     */
     public Optional<String> secondaryKey() {
         return Optional.ofNullable(this.secondaryKey);
     }
@@ -89,21 +105,45 @@ public final class SharedAccessSignatureAuthorizationRuleAccessRightsDescription
             $ = new SharedAccessSignatureAuthorizationRuleAccessRightsDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName Name of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param primaryKey Primary SAS key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(@Nullable String primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param rights Rights that this key has.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rights(String rights) {
             $.rights = rights;
             return this;
         }
 
+        /**
+         * @param secondaryKey Secondary SAS key value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(@Nullable String secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;

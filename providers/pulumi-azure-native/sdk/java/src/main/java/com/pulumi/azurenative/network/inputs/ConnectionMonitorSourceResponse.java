@@ -26,6 +26,10 @@ public final class ConnectionMonitorSourceResponse extends com.pulumi.resources.
     @Import(name="port")
     private @Nullable Integer port;
 
+    /**
+     * @return The source port used by connection monitor.
+     * 
+     */
     public Optional<Integer> port() {
         return Optional.ofNullable(this.port);
     }
@@ -37,6 +41,10 @@ public final class ConnectionMonitorSourceResponse extends com.pulumi.resources.
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The ID of the resource used as the source by connection monitor.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -66,11 +74,23 @@ public final class ConnectionMonitorSourceResponse extends com.pulumi.resources.
             $ = new ConnectionMonitorSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param port The source port used by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param resourceId The ID of the resource used as the source by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

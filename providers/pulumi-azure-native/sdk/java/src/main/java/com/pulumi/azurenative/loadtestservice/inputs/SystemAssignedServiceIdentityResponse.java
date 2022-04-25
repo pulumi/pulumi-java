@@ -23,6 +23,10 @@ public final class SystemAssignedServiceIdentityResponse extends com.pulumi.reso
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -34,6 +38,10 @@ public final class SystemAssignedServiceIdentityResponse extends com.pulumi.reso
     @Import(name="tenantId", required=true)
     private String tenantId;
 
+    /**
+     * @return The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+     * 
+     */
     public String tenantId() {
         return this.tenantId;
     }
@@ -45,6 +53,10 @@ public final class SystemAssignedServiceIdentityResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of managed service identity (either system assigned, or none).
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -75,16 +87,34 @@ public final class SystemAssignedServiceIdentityResponse extends com.pulumi.reso
             $ = new SystemAssignedServiceIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The service principal ID of the system assigned identity. This property will only be provided for a system assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant ID of the system assigned identity. This property will only be provided for a system assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Type of managed service identity (either system assigned, or none).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

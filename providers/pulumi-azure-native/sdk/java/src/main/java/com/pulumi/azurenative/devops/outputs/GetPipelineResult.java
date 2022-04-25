@@ -16,47 +16,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPipelineResult {
     /**
-     * Configuration used to bootstrap the Pipeline.
+     * @return Configuration used to bootstrap the Pipeline.
      * 
      */
     private final BootstrapConfigurationResponse bootstrapConfiguration;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource Location
+     * @return Resource Location
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource Name
+     * @return Resource Name
      * 
      */
     private final String name;
     /**
-     * Unique identifier of the Pipeline
+     * @return Unique identifier of the Pipeline
      * 
      */
     private final Integer pipelineId;
     /**
-     * Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
+     * @return Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
      * 
      */
     private final String pipelineType;
     /**
-     * The system metadata pertaining to this resource.
+     * @return The system metadata pertaining to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource Tags
+     * @return Resource Tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource Type
+     * @return Resource Type
      * 
      */
     private final String type;
@@ -84,65 +84,65 @@ public final class GetPipelineResult {
     }
 
     /**
-     * Configuration used to bootstrap the Pipeline.
+     * @return Configuration used to bootstrap the Pipeline.
      * 
-    */
+     */
     public BootstrapConfigurationResponse bootstrapConfiguration() {
         return this.bootstrapConfiguration;
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource Location
+     * @return Resource Location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource Name
+     * @return Resource Name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Unique identifier of the Pipeline
+     * @return Unique identifier of the Pipeline
      * 
-    */
+     */
     public Integer pipelineId() {
         return this.pipelineId;
     }
     /**
-     * Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
+     * @return Specifies which CI/CD provider to use. Valid options are &#39;azurePipeline&#39;, &#39;githubWorkflow&#39;.
      * 
-    */
+     */
     public String pipelineType() {
         return this.pipelineType;
     }
     /**
-     * The system metadata pertaining to this resource.
+     * @return The system metadata pertaining to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource Tags
+     * @return Resource Tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource Type
+     * @return Resource Type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

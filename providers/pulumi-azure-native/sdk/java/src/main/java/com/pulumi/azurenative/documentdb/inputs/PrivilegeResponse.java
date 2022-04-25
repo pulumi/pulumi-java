@@ -27,6 +27,10 @@ public final class PrivilegeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="actions")
     private @Nullable List<String> actions;
 
+    /**
+     * @return An array of actions that are allowed.
+     * 
+     */
     public Optional<List<String>> actions() {
         return Optional.ofNullable(this.actions);
     }
@@ -38,6 +42,10 @@ public final class PrivilegeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resource")
     private @Nullable PrivilegeResponseResource resource;
 
+    /**
+     * @return An Azure Cosmos DB Mongo DB Resource.
+     * 
+     */
     public Optional<PrivilegeResponseResource> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -67,15 +75,33 @@ public final class PrivilegeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PrivilegeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actions An array of actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(@Nullable List<String> actions) {
             $.actions = actions;
             return this;
         }
 
+        /**
+         * @param actions An array of actions that are allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actions(String... actions) {
             return actions(List.of(actions));
         }
 
+        /**
+         * @param resource An Azure Cosmos DB Mongo DB Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(@Nullable PrivilegeResponseResource resource) {
             $.resource = resource;
             return this;

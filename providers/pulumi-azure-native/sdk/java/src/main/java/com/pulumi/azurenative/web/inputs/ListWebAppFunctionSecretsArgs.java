@@ -19,6 +19,10 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
     @Import(name="functionName", required=true)
     private String functionName;
 
+    /**
+     * @return Function name.
+     * 
+     */
     public String functionName() {
         return this.functionName;
     }
@@ -30,6 +34,10 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Site name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -41,6 +49,10 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class ListWebAppFunctionSecretsArgs extends com.pulumi.resources.In
             $ = new ListWebAppFunctionSecretsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionName Function name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param name Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

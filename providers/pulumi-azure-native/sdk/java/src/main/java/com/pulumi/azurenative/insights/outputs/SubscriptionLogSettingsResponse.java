@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SubscriptionLogSettingsResponse {
     /**
-     * Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+     * @return Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
      * 
      */
     private final @Nullable String category;
     /**
-     * a value indicating whether this log is enabled.
+     * @return a value indicating whether this log is enabled.
      * 
      */
     private final Boolean enabled;
@@ -32,16 +32,16 @@ public final class SubscriptionLogSettingsResponse {
     }
 
     /**
-     * Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
+     * @return Name of a Subscription Diagnostic Log category for a resource type this setting is applied to.
      * 
-    */
+     */
     public Optional<String> category() {
         return Optional.ofNullable(this.category);
     }
     /**
-     * a value indicating whether this log is enabled.
+     * @return a value indicating whether this log is enabled.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }

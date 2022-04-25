@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class FilterTrackSelectionResponse {
     /**
-     * The track selections.
+     * @return The track selections.
      * 
      */
     private final List<FilterTrackPropertyConditionResponse> trackSelections;
@@ -22,9 +22,9 @@ public final class FilterTrackSelectionResponse {
     }
 
     /**
-     * The track selections.
+     * @return The track selections.
      * 
-    */
+     */
     public List<FilterTrackPropertyConditionResponse> trackSelections() {
         return this.trackSelections;
     }

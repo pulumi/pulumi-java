@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MachinePropertiesResponseOsProfile {
     /**
-     * Specifies the host OS name of the hybrid machine.
+     * @return Specifies the host OS name of the hybrid machine.
      * 
      */
     private final String computerName;
@@ -21,9 +21,9 @@ public final class MachinePropertiesResponseOsProfile {
     }
 
     /**
-     * Specifies the host OS name of the hybrid machine.
+     * @return Specifies the host OS name of the hybrid machine.
      * 
-    */
+     */
     public String computerName() {
         return this.computerName;
     }

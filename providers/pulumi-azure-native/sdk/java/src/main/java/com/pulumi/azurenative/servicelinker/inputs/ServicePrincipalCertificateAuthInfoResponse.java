@@ -25,6 +25,11 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
     @Import(name="authType", required=true)
     private String authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;servicePrincipalCertificate&#39;.
+     * 
+     */
     public String authType() {
         return this.authType;
     }
@@ -36,6 +41,10 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
     @Import(name="certificate", required=true)
     private String certificate;
 
+    /**
+     * @return ServicePrincipal certificate for servicePrincipal auth.
+     * 
+     */
     public String certificate() {
         return this.certificate;
     }
@@ -47,6 +56,10 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return Application clientId for servicePrincipal auth.
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -58,6 +71,10 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
     @Import(name="principalId", required=true)
     private String principalId;
 
+    /**
+     * @return Principal Id for servicePrincipal auth.
+     * 
+     */
     public String principalId() {
         return this.principalId;
     }
@@ -89,21 +106,46 @@ public final class ServicePrincipalCertificateAuthInfoResponse extends com.pulum
             $ = new ServicePrincipalCertificateAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;servicePrincipalCertificate&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param certificate ServicePrincipal certificate for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificate(String certificate) {
             $.certificate = certificate;
             return this;
         }
 
+        /**
+         * @param clientId Application clientId for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param principalId Principal Id for servicePrincipal auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             $.principalId = principalId;
             return this;

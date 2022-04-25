@@ -25,6 +25,10 @@ public final class ClfsTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return Resource ID of storage container.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -53,6 +57,12 @@ public final class ClfsTargetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClfsTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param target Resource ID of storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

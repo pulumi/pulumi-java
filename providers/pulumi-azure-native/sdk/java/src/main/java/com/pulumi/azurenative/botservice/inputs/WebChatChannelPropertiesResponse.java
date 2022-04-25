@@ -27,6 +27,10 @@ public final class WebChatChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="sites")
     private @Nullable List<WebChatSiteResponse> sites;
 
+    /**
+     * @return The list of Web Chat sites
+     * 
+     */
     public Optional<List<WebChatSiteResponse>> sites() {
         return Optional.ofNullable(this.sites);
     }
@@ -38,6 +42,10 @@ public final class WebChatChannelPropertiesResponse extends com.pulumi.resources
     @Import(name="webChatEmbedCode", required=true)
     private String webChatEmbedCode;
 
+    /**
+     * @return Web chat control embed code
+     * 
+     */
     public String webChatEmbedCode() {
         return this.webChatEmbedCode;
     }
@@ -67,15 +75,33 @@ public final class WebChatChannelPropertiesResponse extends com.pulumi.resources
             $ = new WebChatChannelPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sites The list of Web Chat sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(@Nullable List<WebChatSiteResponse> sites) {
             $.sites = sites;
             return this;
         }
 
+        /**
+         * @param sites The list of Web Chat sites
+         * 
+         * @return builder
+         * 
+         */
         public Builder sites(WebChatSiteResponse... sites) {
             return sites(List.of(sites));
         }
 
+        /**
+         * @param webChatEmbedCode Web chat control embed code
+         * 
+         * @return builder
+         * 
+         */
         public Builder webChatEmbedCode(String webChatEmbedCode) {
             $.webChatEmbedCode = webChatEmbedCode;
             return this;

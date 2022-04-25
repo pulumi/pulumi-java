@@ -26,6 +26,10 @@ public final class CertificatePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="certVersion")
     private @Nullable Output<String> certVersion;
 
+    /**
+     * @return The certificate version of key vault.
+     * 
+     */
     public Optional<Output<String>> certVersion() {
         return Optional.ofNullable(this.certVersion);
     }
@@ -37,6 +41,10 @@ public final class CertificatePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="keyVaultCertName", required=true)
     private Output<String> keyVaultCertName;
 
+    /**
+     * @return The certificate name of key vault.
+     * 
+     */
     public Output<String> keyVaultCertName() {
         return this.keyVaultCertName;
     }
@@ -48,6 +56,10 @@ public final class CertificatePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="vaultUri", required=true)
     private Output<String> vaultUri;
 
+    /**
+     * @return The vault uri of user key vault.
+     * 
+     */
     public Output<String> vaultUri() {
         return this.vaultUri;
     }
@@ -78,29 +90,65 @@ public final class CertificatePropertiesArgs extends com.pulumi.resources.Resour
             $ = new CertificatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certVersion The certificate version of key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certVersion(@Nullable Output<String> certVersion) {
             $.certVersion = certVersion;
             return this;
         }
 
+        /**
+         * @param certVersion The certificate version of key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certVersion(String certVersion) {
             return certVersion(Output.of(certVersion));
         }
 
+        /**
+         * @param keyVaultCertName The certificate name of key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultCertName(Output<String> keyVaultCertName) {
             $.keyVaultCertName = keyVaultCertName;
             return this;
         }
 
+        /**
+         * @param keyVaultCertName The certificate name of key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultCertName(String keyVaultCertName) {
             return keyVaultCertName(Output.of(keyVaultCertName));
         }
 
+        /**
+         * @param vaultUri The vault uri of user key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultUri(Output<String> vaultUri) {
             $.vaultUri = vaultUri;
             return this;
         }
 
+        /**
+         * @param vaultUri The vault uri of user key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultUri(String vaultUri) {
             return vaultUri(Output.of(vaultUri));
         }

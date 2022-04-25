@@ -26,6 +26,10 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
     @Import(name="aadAudience")
     private @Nullable Output<String> aadAudience;
 
+    /**
+     * @return AAD Vpn authentication parameter AAD audience.
+     * 
+     */
     public Optional<Output<String>> aadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
@@ -37,6 +41,10 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
     @Import(name="aadIssuer")
     private @Nullable Output<String> aadIssuer;
 
+    /**
+     * @return AAD Vpn authentication parameter AAD issuer.
+     * 
+     */
     public Optional<Output<String>> aadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
@@ -48,6 +56,10 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
     @Import(name="aadTenant")
     private @Nullable Output<String> aadTenant;
 
+    /**
+     * @return AAD Vpn authentication parameter AAD tenant.
+     * 
+     */
     public Optional<Output<String>> aadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }
@@ -78,29 +90,65 @@ public final class AadAuthenticationParametersArgs extends com.pulumi.resources.
             $ = new AadAuthenticationParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadAudience AAD Vpn authentication parameter AAD audience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAudience(@Nullable Output<String> aadAudience) {
             $.aadAudience = aadAudience;
             return this;
         }
 
+        /**
+         * @param aadAudience AAD Vpn authentication parameter AAD audience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAudience(String aadAudience) {
             return aadAudience(Output.of(aadAudience));
         }
 
+        /**
+         * @param aadIssuer AAD Vpn authentication parameter AAD issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadIssuer(@Nullable Output<String> aadIssuer) {
             $.aadIssuer = aadIssuer;
             return this;
         }
 
+        /**
+         * @param aadIssuer AAD Vpn authentication parameter AAD issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadIssuer(String aadIssuer) {
             return aadIssuer(Output.of(aadIssuer));
         }
 
+        /**
+         * @param aadTenant AAD Vpn authentication parameter AAD tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadTenant(@Nullable Output<String> aadTenant) {
             $.aadTenant = aadTenant;
             return this;
         }
 
+        /**
+         * @param aadTenant AAD Vpn authentication parameter AAD tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadTenant(String aadTenant) {
             return aadTenant(Output.of(aadTenant));
         }

@@ -25,6 +25,10 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
     @Import(name="computeSubnetId")
     private @Nullable String computeSubnetId;
 
+    /**
+     * @return Subnet ID used for computes in workspace
+     * 
+     */
     public Optional<String> computeSubnetId() {
         return Optional.ofNullable(this.computeSubnetId);
     }
@@ -53,6 +57,12 @@ public final class VirtualNetworkProfileResponse extends com.pulumi.resources.In
             $ = new VirtualNetworkProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeSubnetId Subnet ID used for computes in workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeSubnetId(@Nullable String computeSubnetId) {
             $.computeSubnetId = computeSubnetId;
             return this;

@@ -23,6 +23,10 @@ public final class MachineLearningWorkspaceResponse extends com.pulumi.resources
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Specifies the workspace ID of the machine learning workspace associated with the web service
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class MachineLearningWorkspaceResponse extends com.pulumi.resources
             $ = new MachineLearningWorkspaceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Specifies the workspace ID of the machine learning workspace associated with the web service
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

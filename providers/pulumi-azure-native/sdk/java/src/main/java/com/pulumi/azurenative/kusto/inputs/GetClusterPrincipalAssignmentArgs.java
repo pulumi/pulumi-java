@@ -19,6 +19,10 @@ public final class GetClusterPrincipalAssignmentArgs extends com.pulumi.resource
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetClusterPrincipalAssignmentArgs extends com.pulumi.resource
     @Import(name="principalAssignmentName", required=true)
     private String principalAssignmentName;
 
+    /**
+     * @return The name of the Kusto principalAssignment.
+     * 
+     */
     public String principalAssignmentName() {
         return this.principalAssignmentName;
     }
@@ -41,6 +49,10 @@ public final class GetClusterPrincipalAssignmentArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetClusterPrincipalAssignmentArgs extends com.pulumi.resource
             $ = new GetClusterPrincipalAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param principalAssignmentName The name of the Kusto principalAssignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalAssignmentName(String principalAssignmentName) {
             $.principalAssignmentName = principalAssignmentName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

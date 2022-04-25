@@ -28,6 +28,10 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
     @Import(name="agentPoolName")
     private @Nullable String agentPoolName;
 
+    /**
+     * @return The dedicated agent pool for the run.
+     * 
+     */
     public Optional<String> agentPoolName() {
         return Optional.ofNullable(this.agentPoolName);
     }
@@ -39,6 +43,10 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
     @Import(name="isArchiveEnabled")
     private @Nullable Boolean isArchiveEnabled;
 
+    /**
+     * @return The value that indicates whether archiving is enabled for the run or not.
+     * 
+     */
     public Optional<Boolean> isArchiveEnabled() {
         return Optional.ofNullable(this.isArchiveEnabled);
     }
@@ -50,6 +58,10 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
     @Import(name="logTemplate")
     private @Nullable String logTemplate;
 
+    /**
+     * @return The template that describes the repository and tag information for run log artifact.
+     * 
+     */
     public Optional<String> logTemplate() {
         return Optional.ofNullable(this.logTemplate);
     }
@@ -61,6 +73,10 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
     @Import(name="overrideTaskStepProperties")
     private @Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties;
 
+    /**
+     * @return Set of overridable parameters that can be passed when running a Task.
+     * 
+     */
     public Optional<OverrideTaskStepPropertiesResponse> overrideTaskStepProperties() {
         return Optional.ofNullable(this.overrideTaskStepProperties);
     }
@@ -72,6 +88,10 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
     @Import(name="taskId", required=true)
     private String taskId;
 
+    /**
+     * @return The resource ID of task against which run has to be queued.
+     * 
+     */
     public String taskId() {
         return this.taskId;
     }
@@ -84,6 +104,11 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the run request.
+     * Expected value is &#39;TaskRunRequest&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -117,31 +142,68 @@ public final class TaskRunRequestResponse extends com.pulumi.resources.InvokeArg
             $ = new TaskRunRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentPoolName The dedicated agent pool for the run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentPoolName(@Nullable String agentPoolName) {
             $.agentPoolName = agentPoolName;
             return this;
         }
 
+        /**
+         * @param isArchiveEnabled The value that indicates whether archiving is enabled for the run or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isArchiveEnabled(@Nullable Boolean isArchiveEnabled) {
             $.isArchiveEnabled = isArchiveEnabled;
             return this;
         }
 
+        /**
+         * @param logTemplate The template that describes the repository and tag information for run log artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logTemplate(@Nullable String logTemplate) {
             $.logTemplate = logTemplate;
             return this;
         }
 
+        /**
+         * @param overrideTaskStepProperties Set of overridable parameters that can be passed when running a Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overrideTaskStepProperties(@Nullable OverrideTaskStepPropertiesResponse overrideTaskStepProperties) {
             $.overrideTaskStepProperties = overrideTaskStepProperties;
             return this;
         }
 
+        /**
+         * @param taskId The resource ID of task against which run has to be queued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskId(String taskId) {
             $.taskId = taskId;
             return this;
         }
 
+        /**
+         * @param type The type of the run request.
+         * Expected value is &#39;TaskRunRequest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

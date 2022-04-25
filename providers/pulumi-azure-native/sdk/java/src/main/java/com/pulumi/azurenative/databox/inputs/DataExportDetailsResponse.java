@@ -30,6 +30,10 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="accountDetails", required=true)
     private Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails;
 
+    /**
+     * @return Account details of the data to be transferred
+     * 
+     */
     public Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails() {
         return this.accountDetails;
     }
@@ -41,6 +45,10 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="logCollectionLevel")
     private @Nullable String logCollectionLevel;
 
+    /**
+     * @return Level of the logs to be collected.
+     * 
+     */
     public Optional<String> logCollectionLevel() {
         return Optional.ofNullable(this.logCollectionLevel);
     }
@@ -52,6 +60,10 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
     @Import(name="transferConfiguration", required=true)
     private TransferConfigurationResponse transferConfiguration;
 
+    /**
+     * @return Configuration for the data transfer.
+     * 
+     */
     public TransferConfigurationResponse transferConfiguration() {
         return this.transferConfiguration;
     }
@@ -82,24 +94,54 @@ public final class DataExportDetailsResponse extends com.pulumi.resources.Invoke
             $ = new DataExportDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(Either<ManagedDiskDetailsResponse,StorageAccountDetailsResponse> accountDetails) {
             $.accountDetails = accountDetails;
             return this;
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(ManagedDiskDetailsResponse accountDetails) {
             return accountDetails(Either.ofLeft(accountDetails));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(StorageAccountDetailsResponse accountDetails) {
             return accountDetails(Either.ofRight(accountDetails));
         }
 
+        /**
+         * @param logCollectionLevel Level of the logs to be collected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logCollectionLevel(@Nullable String logCollectionLevel) {
             $.logCollectionLevel = logCollectionLevel;
             return this;
         }
 
+        /**
+         * @param transferConfiguration Configuration for the data transfer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transferConfiguration(TransferConfigurationResponse transferConfiguration) {
             $.transferConfiguration = transferConfiguration;
             return this;

@@ -28,6 +28,10 @@ public final class IntegrationServiceEnvironmentAccessEndpointArgs extends com.p
     @Import(name="type")
     private @Nullable Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type;
 
+    /**
+     * @return The access endpoint type.
+     * 
+     */
     public Optional<Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -56,19 +60,43 @@ public final class IntegrationServiceEnvironmentAccessEndpointArgs extends com.p
             $ = new IntegrationServiceEnvironmentAccessEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The access endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,IntegrationServiceEnvironmentAccessEndpointType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The access endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,IntegrationServiceEnvironmentAccessEndpointType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The access endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The access endpoint type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(IntegrationServiceEnvironmentAccessEndpointType type) {
             return type(Either.ofRight(type));
         }

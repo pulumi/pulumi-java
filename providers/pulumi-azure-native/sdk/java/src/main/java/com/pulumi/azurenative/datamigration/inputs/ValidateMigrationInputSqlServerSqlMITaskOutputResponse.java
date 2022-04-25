@@ -28,6 +28,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="backupFolderErrors", required=true)
     private List<ReportableExceptionResponse> backupFolderErrors;
 
+    /**
+     * @return Errors associated with the BackupFolder path
+     * 
+     */
     public List<ReportableExceptionResponse> backupFolderErrors() {
         return this.backupFolderErrors;
     }
@@ -39,6 +43,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="backupShareCredentialsErrors", required=true)
     private List<ReportableExceptionResponse> backupShareCredentialsErrors;
 
+    /**
+     * @return Errors associated with backup share user name and password credentials
+     * 
+     */
     public List<ReportableExceptionResponse> backupShareCredentialsErrors() {
         return this.backupShareCredentialsErrors;
     }
@@ -50,6 +58,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="backupStorageAccountErrors", required=true)
     private List<ReportableExceptionResponse> backupStorageAccountErrors;
 
+    /**
+     * @return Errors associated with the storage account provided.
+     * 
+     */
     public List<ReportableExceptionResponse> backupStorageAccountErrors() {
         return this.backupStorageAccountErrors;
     }
@@ -61,6 +73,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="databaseBackupInfo")
     private @Nullable DatabaseBackupInfoResponse databaseBackupInfo;
 
+    /**
+     * @return Information about backup files when existing backup mode is used.
+     * 
+     */
     public Optional<DatabaseBackupInfoResponse> databaseBackupInfo() {
         return Optional.ofNullable(this.databaseBackupInfo);
     }
@@ -72,6 +88,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="existingBackupErrors", required=true)
     private List<ReportableExceptionResponse> existingBackupErrors;
 
+    /**
+     * @return Errors associated with existing backup files.
+     * 
+     */
     public List<ReportableExceptionResponse> existingBackupErrors() {
         return this.existingBackupErrors;
     }
@@ -83,6 +103,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -94,6 +118,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of database
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -105,6 +133,10 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
     @Import(name="restoreDatabaseNameErrors", required=true)
     private List<ReportableExceptionResponse> restoreDatabaseNameErrors;
 
+    /**
+     * @return Errors associated with the RestoreDatabaseName
+     * 
+     */
     public List<ReportableExceptionResponse> restoreDatabaseNameErrors() {
         return this.restoreDatabaseNameErrors;
     }
@@ -140,62 +172,140 @@ public final class ValidateMigrationInputSqlServerSqlMITaskOutputResponse extend
             $ = new ValidateMigrationInputSqlServerSqlMITaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupFolderErrors Errors associated with the BackupFolder path
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFolderErrors(List<ReportableExceptionResponse> backupFolderErrors) {
             $.backupFolderErrors = backupFolderErrors;
             return this;
         }
 
+        /**
+         * @param backupFolderErrors Errors associated with the BackupFolder path
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFolderErrors(ReportableExceptionResponse... backupFolderErrors) {
             return backupFolderErrors(List.of(backupFolderErrors));
         }
 
+        /**
+         * @param backupShareCredentialsErrors Errors associated with backup share user name and password credentials
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupShareCredentialsErrors(List<ReportableExceptionResponse> backupShareCredentialsErrors) {
             $.backupShareCredentialsErrors = backupShareCredentialsErrors;
             return this;
         }
 
+        /**
+         * @param backupShareCredentialsErrors Errors associated with backup share user name and password credentials
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupShareCredentialsErrors(ReportableExceptionResponse... backupShareCredentialsErrors) {
             return backupShareCredentialsErrors(List.of(backupShareCredentialsErrors));
         }
 
+        /**
+         * @param backupStorageAccountErrors Errors associated with the storage account provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupStorageAccountErrors(List<ReportableExceptionResponse> backupStorageAccountErrors) {
             $.backupStorageAccountErrors = backupStorageAccountErrors;
             return this;
         }
 
+        /**
+         * @param backupStorageAccountErrors Errors associated with the storage account provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupStorageAccountErrors(ReportableExceptionResponse... backupStorageAccountErrors) {
             return backupStorageAccountErrors(List.of(backupStorageAccountErrors));
         }
 
+        /**
+         * @param databaseBackupInfo Information about backup files when existing backup mode is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseBackupInfo(@Nullable DatabaseBackupInfoResponse databaseBackupInfo) {
             $.databaseBackupInfo = databaseBackupInfo;
             return this;
         }
 
+        /**
+         * @param existingBackupErrors Errors associated with existing backup files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingBackupErrors(List<ReportableExceptionResponse> existingBackupErrors) {
             $.existingBackupErrors = existingBackupErrors;
             return this;
         }
 
+        /**
+         * @param existingBackupErrors Errors associated with existing backup files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingBackupErrors(ReportableExceptionResponse... existingBackupErrors) {
             return existingBackupErrors(List.of(existingBackupErrors));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param restoreDatabaseNameErrors Errors associated with the RestoreDatabaseName
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreDatabaseNameErrors(List<ReportableExceptionResponse> restoreDatabaseNameErrors) {
             $.restoreDatabaseNameErrors = restoreDatabaseNameErrors;
             return this;
         }
 
+        /**
+         * @param restoreDatabaseNameErrors Errors associated with the RestoreDatabaseName
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoreDatabaseNameErrors(ReportableExceptionResponse... restoreDatabaseNameErrors) {
             return restoreDatabaseNameErrors(List.of(restoreDatabaseNameErrors));
         }

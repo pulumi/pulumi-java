@@ -26,6 +26,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="eTag")
     private @Nullable String eTag;
 
+    /**
+     * @return For optimistic concurrency control.
+     * 
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -37,6 +41,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -48,6 +56,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the private endpoint endpoint connection.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,6 +71,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="properties", required=true)
     private PrivateEndpointConnectionPropertiesResponse properties;
 
+    /**
+     * @return Properties of the private endpoint endpoint connection.
+     * 
+     */
     public PrivateEndpointConnectionPropertiesResponse properties() {
         return this.properties;
     }
@@ -70,6 +86,10 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -102,26 +122,56 @@ public final class PrivateEndpointConnectionResponse extends com.pulumi.resource
             $ = new PrivateEndpointConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag For optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable String eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param id Path reference to this private endpoint endpoint connection. /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Migrate/assessmentProjects/{projectName}/privateEndpointConnections/{privateEndpointConnectionName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the private endpoint endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param properties Properties of the private endpoint endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PrivateEndpointConnectionPropertiesResponse properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param type Type of the object = [Microsoft.Migrate/assessmentProjects/privateEndpointConnections].
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

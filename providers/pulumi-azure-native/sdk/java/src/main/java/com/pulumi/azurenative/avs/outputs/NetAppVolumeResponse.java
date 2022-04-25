@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetAppVolumeResponse {
     /**
-     * File path through which the NFS volume is exposed by the provider
+     * @return File path through which the NFS volume is exposed by the provider
      * 
      */
     private final @Nullable String nfsFilePath;
     /**
-     * IP address of the NFS provider
+     * @return IP address of the NFS provider
      * 
      */
     private final @Nullable String nfsProviderIp;
@@ -31,16 +31,16 @@ public final class NetAppVolumeResponse {
     }
 
     /**
-     * File path through which the NFS volume is exposed by the provider
+     * @return File path through which the NFS volume is exposed by the provider
      * 
-    */
+     */
     public Optional<String> nfsFilePath() {
         return Optional.ofNullable(this.nfsFilePath);
     }
     /**
-     * IP address of the NFS provider
+     * @return IP address of the NFS provider
      * 
-    */
+     */
     public Optional<String> nfsProviderIp() {
         return Optional.ofNullable(this.nfsProviderIp);
     }

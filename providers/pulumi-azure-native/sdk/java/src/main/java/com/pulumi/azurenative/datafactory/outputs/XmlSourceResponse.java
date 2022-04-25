@@ -27,42 +27,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class XmlSourceResponse {
     /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
      */
     private final @Nullable Object additionalColumns;
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * Xml format settings.
+     * @return Xml format settings.
      * 
      */
     private final @Nullable XmlReadSettingsResponse formatSettings;
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object sourceRetryCount;
     /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object sourceRetryWait;
     /**
-     * Xml store settings.
+     * @return Xml store settings.
      * 
      */
     private final @Nullable Object storeSettings;
     /**
-     * Copy source type.
+     * @return Copy source type.
      * Expected value is &#39;XmlSource&#39;.
      * 
      */
@@ -89,59 +89,59 @@ public final class XmlSourceResponse {
     }
 
     /**
-     * Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
      * 
-    */
+     */
     public Optional<Object> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * Xml format settings.
+     * @return Xml format settings.
      * 
-    */
+     */
     public Optional<XmlReadSettingsResponse> formatSettings() {
         return Optional.ofNullable(this.formatSettings);
     }
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
-     * Xml store settings.
+     * @return Xml store settings.
      * 
-    */
+     */
     public Optional<Object> storeSettings() {
         return Optional.ofNullable(this.storeSettings);
     }
     /**
-     * Copy source type.
+     * @return Copy source type.
      * Expected value is &#39;XmlSource&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

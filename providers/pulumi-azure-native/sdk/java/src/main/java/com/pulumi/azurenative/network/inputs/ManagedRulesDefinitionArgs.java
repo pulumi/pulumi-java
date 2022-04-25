@@ -28,6 +28,10 @@ public final class ManagedRulesDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="exclusions")
     private @Nullable Output<List<OwaspCrsExclusionEntryArgs>> exclusions;
 
+    /**
+     * @return The Exclusions that are applied on the policy.
+     * 
+     */
     public Optional<Output<List<OwaspCrsExclusionEntryArgs>>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
@@ -39,6 +43,10 @@ public final class ManagedRulesDefinitionArgs extends com.pulumi.resources.Resou
     @Import(name="managedRuleSets", required=true)
     private Output<List<ManagedRuleSetArgs>> managedRuleSets;
 
+    /**
+     * @return The managed rule sets that are associated with the policy.
+     * 
+     */
     public Output<List<ManagedRuleSetArgs>> managedRuleSets() {
         return this.managedRuleSets;
     }
@@ -68,28 +76,64 @@ public final class ManagedRulesDefinitionArgs extends com.pulumi.resources.Resou
             $ = new ManagedRulesDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclusions The Exclusions that are applied on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(@Nullable Output<List<OwaspCrsExclusionEntryArgs>> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
 
+        /**
+         * @param exclusions The Exclusions that are applied on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(List<OwaspCrsExclusionEntryArgs> exclusions) {
             return exclusions(Output.of(exclusions));
         }
 
+        /**
+         * @param exclusions The Exclusions that are applied on the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(OwaspCrsExclusionEntryArgs... exclusions) {
             return exclusions(List.of(exclusions));
         }
 
+        /**
+         * @param managedRuleSets The managed rule sets that are associated with the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRuleSets(Output<List<ManagedRuleSetArgs>> managedRuleSets) {
             $.managedRuleSets = managedRuleSets;
             return this;
         }
 
+        /**
+         * @param managedRuleSets The managed rule sets that are associated with the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRuleSets(List<ManagedRuleSetArgs> managedRuleSets) {
             return managedRuleSets(Output.of(managedRuleSets));
         }
 
+        /**
+         * @param managedRuleSets The managed rule sets that are associated with the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedRuleSets(ManagedRuleSetArgs... managedRuleSets) {
             return managedRuleSets(List.of(managedRuleSets));
         }

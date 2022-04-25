@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class PrePostStepResponse {
     /**
-     * The resource Id of the step to be run.
+     * @return The resource Id of the step to be run.
      * 
      */
     private final String stepId;
@@ -21,9 +21,9 @@ public final class PrePostStepResponse {
     }
 
     /**
-     * The resource Id of the step to be run.
+     * @return The resource Id of the step to be run.
      * 
-    */
+     */
     public String stepId() {
         return this.stepId;
     }

@@ -36,6 +36,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
     @Import(name="catalogInfo")
     private @Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo;
 
+    /**
+     * @return Catalog information for managed dedicated integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeSsisCatalogInfoResponse> catalogInfo() {
         return Optional.ofNullable(this.catalogInfo);
     }
@@ -47,6 +51,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
     @Import(name="credential")
     private @Nullable CredentialReferenceResponse credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -58,6 +66,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
     @Import(name="customSetupScriptProperties")
     private @Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties;
 
+    /**
+     * @return Custom setup script properties for a managed dedicated integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeCustomSetupScriptPropertiesResponse> customSetupScriptProperties() {
         return Optional.ofNullable(this.customSetupScriptProperties);
     }
@@ -69,6 +81,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
     @Import(name="dataProxyProperties")
     private @Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties;
 
+    /**
+     * @return Data proxy properties for a managed dedicated integration runtime.
+     * 
+     */
     public Optional<IntegrationRuntimeDataProxyPropertiesResponse> dataProxyProperties() {
         return Optional.ofNullable(this.dataProxyProperties);
     }
@@ -80,6 +96,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
     @Import(name="edition")
     private @Nullable String edition;
 
+    /**
+     * @return The edition for the SSIS Integration Runtime
+     * 
+     */
     public Optional<String> edition() {
         return Optional.ofNullable(this.edition);
     }
@@ -91,6 +111,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
     @Import(name="expressCustomSetupProperties")
     private @Nullable List<Object> expressCustomSetupProperties;
 
+    /**
+     * @return Custom setup without script properties for a SSIS integration runtime.
+     * 
+     */
     public Optional<List<Object>> expressCustomSetupProperties() {
         return Optional.ofNullable(this.expressCustomSetupProperties);
     }
@@ -102,6 +126,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
     @Import(name="licenseType")
     private @Nullable String licenseType;
 
+    /**
+     * @return License type for bringing your own license scenario.
+     * 
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -113,6 +141,10 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
     @Import(name="packageStores")
     private @Nullable List<PackageStoreResponse> packageStores;
 
+    /**
+     * @return Package stores for the SSIS Integration Runtime.
+     * 
+     */
     public Optional<List<PackageStoreResponse>> packageStores() {
         return Optional.ofNullable(this.packageStores);
     }
@@ -148,50 +180,110 @@ public final class IntegrationRuntimeSsisPropertiesResponse extends com.pulumi.r
             $ = new IntegrationRuntimeSsisPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogInfo Catalog information for managed dedicated integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogInfo(@Nullable IntegrationRuntimeSsisCatalogInfoResponse catalogInfo) {
             $.catalogInfo = catalogInfo;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param customSetupScriptProperties Custom setup script properties for a managed dedicated integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSetupScriptProperties(@Nullable IntegrationRuntimeCustomSetupScriptPropertiesResponse customSetupScriptProperties) {
             $.customSetupScriptProperties = customSetupScriptProperties;
             return this;
         }
 
+        /**
+         * @param dataProxyProperties Data proxy properties for a managed dedicated integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataProxyProperties(@Nullable IntegrationRuntimeDataProxyPropertiesResponse dataProxyProperties) {
             $.dataProxyProperties = dataProxyProperties;
             return this;
         }
 
+        /**
+         * @param edition The edition for the SSIS Integration Runtime
+         * 
+         * @return builder
+         * 
+         */
         public Builder edition(@Nullable String edition) {
             $.edition = edition;
             return this;
         }
 
+        /**
+         * @param expressCustomSetupProperties Custom setup without script properties for a SSIS integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressCustomSetupProperties(@Nullable List<Object> expressCustomSetupProperties) {
             $.expressCustomSetupProperties = expressCustomSetupProperties;
             return this;
         }
 
+        /**
+         * @param expressCustomSetupProperties Custom setup without script properties for a SSIS integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressCustomSetupProperties(Object... expressCustomSetupProperties) {
             return expressCustomSetupProperties(List.of(expressCustomSetupProperties));
         }
 
+        /**
+         * @param licenseType License type for bringing your own license scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param packageStores Package stores for the SSIS Integration Runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageStores(@Nullable List<PackageStoreResponse> packageStores) {
             $.packageStores = packageStores;
             return this;
         }
 
+        /**
+         * @param packageStores Package stores for the SSIS Integration Runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageStores(PackageStoreResponse... packageStores) {
             return packageStores(List.of(packageStores));
         }

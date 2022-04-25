@@ -24,6 +24,10 @@ public final class ConfigurationServiceResourceRequestsResponse extends com.pulu
     @Import(name="cpu", required=true)
     private String cpu;
 
+    /**
+     * @return Cpu allocated to each Application Configuration Service instance
+     * 
+     */
     public String cpu() {
         return this.cpu;
     }
@@ -35,6 +39,10 @@ public final class ConfigurationServiceResourceRequestsResponse extends com.pulu
     @Import(name="instanceCount", required=true)
     private Integer instanceCount;
 
+    /**
+     * @return Instance count of the Application Configuration Service
+     * 
+     */
     public Integer instanceCount() {
         return this.instanceCount;
     }
@@ -46,6 +54,10 @@ public final class ConfigurationServiceResourceRequestsResponse extends com.pulu
     @Import(name="memory", required=true)
     private String memory;
 
+    /**
+     * @return Memory allocated to each Application Configuration Service instance
+     * 
+     */
     public String memory() {
         return this.memory;
     }
@@ -76,16 +88,34 @@ public final class ConfigurationServiceResourceRequestsResponse extends com.pulu
             $ = new ConfigurationServiceResourceRequestsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Cpu allocated to each Application Configuration Service instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(String cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param instanceCount Instance count of the Application Configuration Service
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceCount(Integer instanceCount) {
             $.instanceCount = instanceCount;
             return this;
         }
 
+        /**
+         * @param memory Memory allocated to each Application Configuration Service instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(String memory) {
             $.memory = memory;
             return this;

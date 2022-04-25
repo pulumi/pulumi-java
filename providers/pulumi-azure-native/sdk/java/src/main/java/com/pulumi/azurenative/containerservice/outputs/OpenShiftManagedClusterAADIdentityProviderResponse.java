@@ -12,28 +12,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OpenShiftManagedClusterAADIdentityProviderResponse {
     /**
-     * The clientId password associated with the provider.
+     * @return The clientId password associated with the provider.
      * 
      */
     private final @Nullable String clientId;
     /**
-     * The groupId to be granted cluster admin role.
+     * @return The groupId to be granted cluster admin role.
      * 
      */
     private final @Nullable String customerAdminGroupId;
     /**
-     * The kind of the provider.
+     * @return The kind of the provider.
      * Expected value is &#39;AADIdentityProvider&#39;.
      * 
      */
     private final String kind;
     /**
-     * The secret password associated with the provider.
+     * @return The secret password associated with the provider.
      * 
      */
     private final @Nullable String secret;
     /**
-     * The tenantId associated with the provider.
+     * @return The tenantId associated with the provider.
      * 
      */
     private final @Nullable String tenantId;
@@ -53,38 +53,38 @@ public final class OpenShiftManagedClusterAADIdentityProviderResponse {
     }
 
     /**
-     * The clientId password associated with the provider.
+     * @return The clientId password associated with the provider.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The groupId to be granted cluster admin role.
+     * @return The groupId to be granted cluster admin role.
      * 
-    */
+     */
     public Optional<String> customerAdminGroupId() {
         return Optional.ofNullable(this.customerAdminGroupId);
     }
     /**
-     * The kind of the provider.
+     * @return The kind of the provider.
      * Expected value is &#39;AADIdentityProvider&#39;.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The secret password associated with the provider.
+     * @return The secret password associated with the provider.
      * 
-    */
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
     /**
-     * The tenantId associated with the provider.
+     * @return The tenantId associated with the provider.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }

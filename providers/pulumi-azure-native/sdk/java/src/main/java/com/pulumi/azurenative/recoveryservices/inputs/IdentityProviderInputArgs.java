@@ -24,6 +24,10 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="aadAuthority", required=true)
     private Output<String> aadAuthority;
 
+    /**
+     * @return The base authority for Azure Active Directory authentication.
+     * 
+     */
     public Output<String> aadAuthority() {
         return this.aadAuthority;
     }
@@ -35,6 +39,10 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="applicationId", required=true)
     private Output<String> applicationId;
 
+    /**
+     * @return The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Output<String> applicationId() {
         return this.applicationId;
     }
@@ -46,6 +54,10 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="audience", required=true)
     private Output<String> audience;
 
+    /**
+     * @return The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Output<String> audience() {
         return this.audience;
     }
@@ -57,6 +69,10 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="objectId", required=true)
     private Output<String> objectId;
 
+    /**
+     * @return The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Output<String> objectId() {
         return this.objectId;
     }
@@ -68,6 +84,10 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
     @Import(name="tenantId", required=true)
     private Output<String> tenantId;
 
+    /**
+     * @return The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+     * 
+     */
     public Output<String> tenantId() {
         return this.tenantId;
     }
@@ -100,47 +120,107 @@ public final class IdentityProviderInputArgs extends com.pulumi.resources.Resour
             $ = new IdentityProviderInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadAuthority The base authority for Azure Active Directory authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAuthority(Output<String> aadAuthority) {
             $.aadAuthority = aadAuthority;
             return this;
         }
 
+        /**
+         * @param aadAuthority The base authority for Azure Active Directory authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAuthority(String aadAuthority) {
             return aadAuthority(Output.of(aadAuthority));
         }
 
+        /**
+         * @param applicationId The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(Output<String> applicationId) {
             $.applicationId = applicationId;
             return this;
         }
 
+        /**
+         * @param applicationId The application/client Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationId(String applicationId) {
             return applicationId(Output.of(applicationId));
         }
 
+        /**
+         * @param audience The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(Output<String> audience) {
             $.audience = audience;
             return this;
         }
 
+        /**
+         * @param audience The intended Audience of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audience(String audience) {
             return audience(Output.of(audience));
         }
 
+        /**
+         * @param objectId The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId The object Id of the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param tenantId The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant Id for the service principal with which the on-premise management/data plane components would communicate with our Azure services.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

@@ -30,6 +30,10 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -41,6 +45,10 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +60,10 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="errorCode", required=true)
     private Object errorCode;
 
+    /**
+     * @return The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object errorCode() {
         return this.errorCode;
     }
@@ -63,6 +75,10 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="message", required=true)
     private Object message;
 
+    /**
+     * @return The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * 
+     */
     public Object message() {
         return this.message;
     }
@@ -74,6 +90,10 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -86,6 +106,11 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Fail&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -97,6 +122,10 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -131,45 +160,100 @@ public final class FailActivityResponse extends com.pulumi.resources.InvokeArgs 
             $ = new FailActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param errorCode The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(Object errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param message The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(Object message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Fail&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

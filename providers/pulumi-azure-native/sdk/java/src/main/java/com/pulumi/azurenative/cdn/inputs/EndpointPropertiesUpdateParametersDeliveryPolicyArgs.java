@@ -28,6 +28,10 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return User-friendly description of the policy.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
     @Import(name="rules", required=true)
     private Output<List<DeliveryRuleArgs>> rules;
 
+    /**
+     * @return A list of the delivery rules.
+     * 
+     */
     public Output<List<DeliveryRuleArgs>> rules() {
         return this.rules;
     }
@@ -68,24 +76,54 @@ public final class EndpointPropertiesUpdateParametersDeliveryPolicyArgs extends 
             $ = new EndpointPropertiesUpdateParametersDeliveryPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-friendly description of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description User-friendly description of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param rules A list of the delivery rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Output<List<DeliveryRuleArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of the delivery rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<DeliveryRuleArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules A list of the delivery rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(DeliveryRuleArgs... rules) {
             return rules(List.of(rules));
         }

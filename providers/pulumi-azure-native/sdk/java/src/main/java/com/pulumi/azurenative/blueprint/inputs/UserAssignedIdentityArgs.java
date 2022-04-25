@@ -26,6 +26,10 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return Client App Id associated with this identity.
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -37,6 +41,10 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return Azure Active Directory principal ID associated with this Identity.
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -66,20 +74,44 @@ public final class UserAssignedIdentityArgs extends com.pulumi.resources.Resourc
             $ = new UserAssignedIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Client App Id associated with this identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId Client App Id associated with this identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param principalId Azure Active Directory principal ID associated with this Identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId Azure Active Directory principal ID associated with this Identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }

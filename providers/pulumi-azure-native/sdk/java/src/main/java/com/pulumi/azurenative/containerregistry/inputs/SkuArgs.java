@@ -26,6 +26,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,SkuName>> name;
 
+    /**
+     * @return The SKU name of the container registry. Required for registry creation.
+     * 
+     */
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
@@ -54,19 +58,43 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The SKU name of the container registry. Required for registry creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The SKU name of the container registry. Required for registry creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The SKU name of the container registry. Required for registry creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The SKU name of the container registry. Required for registry creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Either.ofRight(name));
         }

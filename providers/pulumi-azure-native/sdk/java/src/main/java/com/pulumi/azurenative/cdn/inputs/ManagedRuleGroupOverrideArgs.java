@@ -28,6 +28,10 @@ public final class ManagedRuleGroupOverrideArgs extends com.pulumi.resources.Res
     @Import(name="ruleGroupName", required=true)
     private Output<String> ruleGroupName;
 
+    /**
+     * @return Describes the managed rule group within the rule set to override
+     * 
+     */
     public Output<String> ruleGroupName() {
         return this.ruleGroupName;
     }
@@ -39,6 +43,10 @@ public final class ManagedRuleGroupOverrideArgs extends com.pulumi.resources.Res
     @Import(name="rules")
     private @Nullable Output<List<ManagedRuleOverrideArgs>> rules;
 
+    /**
+     * @return List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+     * 
+     */
     public Optional<Output<List<ManagedRuleOverrideArgs>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -68,24 +76,54 @@ public final class ManagedRuleGroupOverrideArgs extends com.pulumi.resources.Res
             $ = new ManagedRuleGroupOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ruleGroupName Describes the managed rule group within the rule set to override
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(Output<String> ruleGroupName) {
             $.ruleGroupName = ruleGroupName;
             return this;
         }
 
+        /**
+         * @param ruleGroupName Describes the managed rule group within the rule set to override
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(String ruleGroupName) {
             return ruleGroupName(Output.of(ruleGroupName));
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<ManagedRuleOverrideArgs>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<ManagedRuleOverrideArgs> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(ManagedRuleOverrideArgs... rules) {
             return rules(List.of(rules));
         }

@@ -25,6 +25,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="allowPublicIp")
     private @Nullable String allowPublicIp;
 
+    /**
+     * @return The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+     * 
+     */
     public Optional<String> allowPublicIp() {
         return Optional.ofNullable(this.allowPublicIp);
     }
@@ -36,6 +40,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="labSubnetName")
     private @Nullable String labSubnetName;
 
+    /**
+     * @return The name of the subnet as seen in the lab.
+     * 
+     */
     public Optional<String> labSubnetName() {
         return Optional.ofNullable(this.labSubnetName);
     }
@@ -47,6 +55,10 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The resource ID of the subnet.
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -77,16 +89,34 @@ public final class SubnetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SubnetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowPublicIp The permission policy of the subnet for allowing public IP addresses (i.e. Allow, Deny)).
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowPublicIp(@Nullable String allowPublicIp) {
             $.allowPublicIp = allowPublicIp;
             return this;
         }
 
+        /**
+         * @param labSubnetName The name of the subnet as seen in the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labSubnetName(@Nullable String labSubnetName) {
             $.labSubnetName = labSubnetName;
             return this;
         }
 
+        /**
+         * @param resourceId The resource ID of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

@@ -19,6 +19,10 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="deviceGroupName", required=true)
     private String deviceGroupName;
 
+    /**
+     * @return Device group name
+     * 
+     */
     public String deviceGroupName() {
         return this.deviceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="iotDefenderLocation", required=true)
     private String iotDefenderLocation;
 
+    /**
+     * @return Defender for IoT location
+     * 
+     */
     public String iotDefenderLocation() {
         return this.iotDefenderLocation;
     }
@@ -59,11 +67,23 @@ public final class GetDeviceGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetDeviceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceGroupName Device group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceGroupName(String deviceGroupName) {
             $.deviceGroupName = deviceGroupName;
             return this;
         }
 
+        /**
+         * @param iotDefenderLocation Defender for IoT location
+         * 
+         * @return builder
+         * 
+         */
         public Builder iotDefenderLocation(String iotDefenderLocation) {
             $.iotDefenderLocation = iotDefenderLocation;
             return this;

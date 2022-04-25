@@ -19,6 +19,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the Batch account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="applicationName", required=true)
     private String applicationName;
 
+    /**
+     * @return The name of the application. This must be unique within the account.
+     * 
+     */
     public String applicationName() {
         return this.applicationName;
     }
@@ -41,6 +49,10 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the Batch account.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetApplicationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param applicationName The name of the application. This must be unique within the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationName(String applicationName) {
             $.applicationName = applicationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

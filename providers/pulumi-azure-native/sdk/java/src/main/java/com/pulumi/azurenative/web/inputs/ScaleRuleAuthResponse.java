@@ -25,6 +25,10 @@ public final class ScaleRuleAuthResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secretRef")
     private @Nullable String secretRef;
 
+    /**
+     * @return Name of the Container App secret from which to pull the auth params.
+     * 
+     */
     public Optional<String> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -36,6 +40,10 @@ public final class ScaleRuleAuthResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="triggerParameter")
     private @Nullable String triggerParameter;
 
+    /**
+     * @return Trigger Parameter that uses the secret
+     * 
+     */
     public Optional<String> triggerParameter() {
         return Optional.ofNullable(this.triggerParameter);
     }
@@ -65,11 +73,23 @@ public final class ScaleRuleAuthResponse extends com.pulumi.resources.InvokeArgs
             $ = new ScaleRuleAuthResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param secretRef Name of the Container App secret from which to pull the auth params.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable String secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param triggerParameter Trigger Parameter that uses the secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerParameter(@Nullable String triggerParameter) {
             $.triggerParameter = triggerParameter;
             return this;

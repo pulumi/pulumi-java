@@ -25,6 +25,10 @@ public final class WnsCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="packageSid")
     private @Nullable String packageSid;
 
+    /**
+     * @return The package ID for this credential.
+     * 
+     */
     public Optional<String> packageSid() {
         return Optional.ofNullable(this.packageSid);
     }
@@ -36,6 +40,10 @@ public final class WnsCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secretKey")
     private @Nullable String secretKey;
 
+    /**
+     * @return The secret key.
+     * 
+     */
     public Optional<String> secretKey() {
         return Optional.ofNullable(this.secretKey);
     }
@@ -47,6 +55,10 @@ public final class WnsCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="windowsLiveEndpoint")
     private @Nullable String windowsLiveEndpoint;
 
+    /**
+     * @return The Windows Live endpoint.
+     * 
+     */
     public Optional<String> windowsLiveEndpoint() {
         return Optional.ofNullable(this.windowsLiveEndpoint);
     }
@@ -77,16 +89,34 @@ public final class WnsCredentialResponse extends com.pulumi.resources.InvokeArgs
             $ = new WnsCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param packageSid The package ID for this credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageSid(@Nullable String packageSid) {
             $.packageSid = packageSid;
             return this;
         }
 
+        /**
+         * @param secretKey The secret key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretKey(@Nullable String secretKey) {
             $.secretKey = secretKey;
             return this;
         }
 
+        /**
+         * @param windowsLiveEndpoint The Windows Live endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsLiveEndpoint(@Nullable String windowsLiveEndpoint) {
             $.windowsLiveEndpoint = windowsLiveEndpoint;
             return this;

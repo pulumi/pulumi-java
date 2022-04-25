@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ClusterJobResponse {
     /**
-     * Resource ID of the streaming job.
+     * @return Resource ID of the streaming job.
      * 
      */
     private final String id;
     /**
-     * The current execution state of the streaming job.
+     * @return The current execution state of the streaming job.
      * 
      */
     private final String jobState;
     /**
-     * The number of streaming units that are used by the streaming job.
+     * @return The number of streaming units that are used by the streaming job.
      * 
      */
     private final Integer streamingUnits;
@@ -37,23 +37,23 @@ public final class ClusterJobResponse {
     }
 
     /**
-     * Resource ID of the streaming job.
+     * @return Resource ID of the streaming job.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The current execution state of the streaming job.
+     * @return The current execution state of the streaming job.
      * 
-    */
+     */
     public String jobState() {
         return this.jobState;
     }
     /**
-     * The number of streaming units that are used by the streaming job.
+     * @return The number of streaming units that are used by the streaming job.
      * 
-    */
+     */
     public Integer streamingUnits() {
         return this.streamingUnits;
     }

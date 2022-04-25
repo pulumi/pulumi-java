@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SkuResponse {
     /**
-     * The capacity of the SKU
+     * @return The capacity of the SKU
      * 
      */
     private final @Nullable String capacity;
     /**
-     * dedicatedCloudNode example: 8 x Ten-Core Intel® Xeon® Processor E5-2640 v4 2.40GHz 25MB Cache (90W); 12 x 64GB PC4-19200 2400MHz DDR4 ECC Registered DIMM, ...
+     * @return dedicatedCloudNode example: 8 x Ten-Core Intel® Xeon® Processor E5-2640 v4 2.40GHz 25MB Cache (90W); 12 x 64GB PC4-19200 2400MHz DDR4 ECC Registered DIMM, ...
      * 
      */
     private final @Nullable String description;
     /**
-     * If the service has different generations of hardware, for the same SKU, then that can be captured here
+     * @return If the service has different generations of hardware, for the same SKU, then that can be captured here
      * 
      */
     private final @Nullable String family;
     /**
-     * The name of the SKU for VMWare CloudSimple Node
+     * @return The name of the SKU for VMWare CloudSimple Node
      * 
      */
     private final String name;
     /**
-     * The tier of the SKU
+     * @return The tier of the SKU
      * 
      */
     private final @Nullable String tier;
@@ -52,37 +52,37 @@ public final class SkuResponse {
     }
 
     /**
-     * The capacity of the SKU
+     * @return The capacity of the SKU
      * 
-    */
+     */
     public Optional<String> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * dedicatedCloudNode example: 8 x Ten-Core Intel® Xeon® Processor E5-2640 v4 2.40GHz 25MB Cache (90W); 12 x 64GB PC4-19200 2400MHz DDR4 ECC Registered DIMM, ...
+     * @return dedicatedCloudNode example: 8 x Ten-Core Intel® Xeon® Processor E5-2640 v4 2.40GHz 25MB Cache (90W); 12 x 64GB PC4-19200 2400MHz DDR4 ECC Registered DIMM, ...
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * If the service has different generations of hardware, for the same SKU, then that can be captured here
+     * @return If the service has different generations of hardware, for the same SKU, then that can be captured here
      * 
-    */
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
     /**
-     * The name of the SKU for VMWare CloudSimple Node
+     * @return The name of the SKU for VMWare CloudSimple Node
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The tier of the SKU
+     * @return The tier of the SKU
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

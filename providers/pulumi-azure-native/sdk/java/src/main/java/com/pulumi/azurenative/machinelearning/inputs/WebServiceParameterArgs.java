@@ -27,6 +27,10 @@ public final class WebServiceParameterArgs extends com.pulumi.resources.Resource
     @Import(name="certificateThumbprint")
     private @Nullable Output<String> certificateThumbprint;
 
+    /**
+     * @return If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
+     * 
+     */
     public Optional<Output<String>> certificateThumbprint() {
         return Optional.ofNullable(this.certificateThumbprint);
     }
@@ -38,6 +42,10 @@ public final class WebServiceParameterArgs extends com.pulumi.resources.Resource
     @Import(name="value")
     private @Nullable Output<Object> value;
 
+    /**
+     * @return The parameter value
+     * 
+     */
     public Optional<Output<Object>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -67,20 +75,44 @@ public final class WebServiceParameterArgs extends com.pulumi.resources.Resource
             $ = new WebServiceParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateThumbprint If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(@Nullable Output<String> certificateThumbprint) {
             $.certificateThumbprint = certificateThumbprint;
             return this;
         }
 
+        /**
+         * @param certificateThumbprint If the parameter value in &#39;value&#39; field is encrypted, the thumbprint of the certificate should be put here.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateThumbprint(String certificateThumbprint) {
             return certificateThumbprint(Output.of(certificateThumbprint));
         }
 
+        /**
+         * @param value The parameter value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<Object> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The parameter value
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Object value) {
             return value(Output.of(value));
         }

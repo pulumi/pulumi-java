@@ -26,6 +26,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
     @Import(name="additionalLatencyMilliseconds")
     private @Nullable Integer additionalLatencyMilliseconds;
 
+    /**
+     * @return The additional latency in milliseconds for probes to fall into the lowest latency bucket
+     * 
+     */
     public Optional<Integer> additionalLatencyMilliseconds() {
         return Optional.ofNullable(this.additionalLatencyMilliseconds);
     }
@@ -37,6 +41,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -48,6 +56,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
     @Import(name="resourceState", required=true)
     private String resourceState;
 
+    /**
+     * @return Resource status.
+     * 
+     */
     public String resourceState() {
         return this.resourceState;
     }
@@ -70,6 +86,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
     @Import(name="sampleSize")
     private @Nullable Integer sampleSize;
 
+    /**
+     * @return The number of samples to consider for load balancing decisions
+     * 
+     */
     public Optional<Integer> sampleSize() {
         return Optional.ofNullable(this.sampleSize);
     }
@@ -81,6 +101,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
     @Import(name="successfulSamplesRequired")
     private @Nullable Integer successfulSamplesRequired;
 
+    /**
+     * @return The number of samples within the sample period that must succeed
+     * 
+     */
     public Optional<Integer> successfulSamplesRequired() {
         return Optional.ofNullable(this.successfulSamplesRequired);
     }
@@ -92,6 +116,10 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -126,36 +154,78 @@ public final class LoadBalancingSettingsModelResponse extends com.pulumi.resourc
             $ = new LoadBalancingSettingsModelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalLatencyMilliseconds The additional latency in milliseconds for probes to fall into the lowest latency bucket
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLatencyMilliseconds(@Nullable Integer additionalLatencyMilliseconds) {
             $.additionalLatencyMilliseconds = additionalLatencyMilliseconds;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceState Resource status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceState(String resourceState) {
             $.resourceState = resourceState;
             return this;
         }
 
+        /**
+         * @param sampleSize The number of samples to consider for load balancing decisions
+         * 
+         * @return builder
+         * 
+         */
         public Builder sampleSize(@Nullable Integer sampleSize) {
             $.sampleSize = sampleSize;
             return this;
         }
 
+        /**
+         * @param successfulSamplesRequired The number of samples within the sample period that must succeed
+         * 
+         * @return builder
+         * 
+         */
         public Builder successfulSamplesRequired(@Nullable Integer successfulSamplesRequired) {
             $.successfulSamplesRequired = successfulSamplesRequired;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -27,6 +27,10 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
     @Import(name="delete")
     private @Nullable Output<DateAfterModificationArgs> delete;
 
+    /**
+     * @return The function to delete the blob
+     * 
+     */
     public Optional<Output<DateAfterModificationArgs>> delete() {
         return Optional.ofNullable(this.delete);
     }
@@ -38,6 +42,10 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
     @Import(name="enableAutoTierToHotFromCool")
     private @Nullable Output<Boolean> enableAutoTierToHotFromCool;
 
+    /**
+     * @return This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
+     * 
+     */
     public Optional<Output<Boolean>> enableAutoTierToHotFromCool() {
         return Optional.ofNullable(this.enableAutoTierToHotFromCool);
     }
@@ -49,6 +57,10 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
     @Import(name="tierToArchive")
     private @Nullable Output<DateAfterModificationArgs> tierToArchive;
 
+    /**
+     * @return The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
+     * 
+     */
     public Optional<Output<DateAfterModificationArgs>> tierToArchive() {
         return Optional.ofNullable(this.tierToArchive);
     }
@@ -60,6 +72,10 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
     @Import(name="tierToCool")
     private @Nullable Output<DateAfterModificationArgs> tierToCool;
 
+    /**
+     * @return The function to tier blobs to cool storage. Support blobs currently at Hot tier
+     * 
+     */
     public Optional<Output<DateAfterModificationArgs>> tierToCool() {
         return Optional.ofNullable(this.tierToCool);
     }
@@ -91,38 +107,86 @@ public final class ManagementPolicyBaseBlobArgs extends com.pulumi.resources.Res
             $ = new ManagementPolicyBaseBlobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param delete The function to delete the blob
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(@Nullable Output<DateAfterModificationArgs> delete) {
             $.delete = delete;
             return this;
         }
 
+        /**
+         * @param delete The function to delete the blob
+         * 
+         * @return builder
+         * 
+         */
         public Builder delete(DateAfterModificationArgs delete) {
             return delete(Output.of(delete));
         }
 
+        /**
+         * @param enableAutoTierToHotFromCool This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoTierToHotFromCool(@Nullable Output<Boolean> enableAutoTierToHotFromCool) {
             $.enableAutoTierToHotFromCool = enableAutoTierToHotFromCool;
             return this;
         }
 
+        /**
+         * @param enableAutoTierToHotFromCool This property enables auto tiering of a blob from cool to hot on a blob access. This property requires tierToCool.daysAfterLastAccessTimeGreaterThan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoTierToHotFromCool(Boolean enableAutoTierToHotFromCool) {
             return enableAutoTierToHotFromCool(Output.of(enableAutoTierToHotFromCool));
         }
 
+        /**
+         * @param tierToArchive The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToArchive(@Nullable Output<DateAfterModificationArgs> tierToArchive) {
             $.tierToArchive = tierToArchive;
             return this;
         }
 
+        /**
+         * @param tierToArchive The function to tier blobs to archive storage. Support blobs currently at Hot or Cool tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToArchive(DateAfterModificationArgs tierToArchive) {
             return tierToArchive(Output.of(tierToArchive));
         }
 
+        /**
+         * @param tierToCool The function to tier blobs to cool storage. Support blobs currently at Hot tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToCool(@Nullable Output<DateAfterModificationArgs> tierToCool) {
             $.tierToCool = tierToCool;
             return this;
         }
 
+        /**
+         * @param tierToCool The function to tier blobs to cool storage. Support blobs currently at Hot tier
+         * 
+         * @return builder
+         * 
+         */
         public Builder tierToCool(DateAfterModificationArgs tierToCool) {
             return tierToCool(Output.of(tierToCool));
         }

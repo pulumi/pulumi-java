@@ -28,6 +28,10 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="type")
     private @Nullable Output<Either<String,ManagedIdentityTypes>> type;
 
+    /**
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+     * 
+     */
     public Optional<Output<Either<String,ManagedIdentityTypes>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -56,19 +60,43 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
             $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ManagedIdentityTypes>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ManagedIdentityTypes> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedIdentityTypes type) {
             return type(Either.ofRight(type));
         }

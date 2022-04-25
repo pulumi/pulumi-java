@@ -28,6 +28,10 @@ public final class TargetIpFilterRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="action", required=true)
     private Output<IpFilterActionType> action;
 
+    /**
+     * @return The desired action for requests captured by this rule.
+     * 
+     */
     public Output<IpFilterActionType> action() {
         return this.action;
     }
@@ -39,6 +43,10 @@ public final class TargetIpFilterRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="filterName", required=true)
     private Output<String> filterName;
 
+    /**
+     * @return The name of the IP filter rule.
+     * 
+     */
     public Output<String> filterName() {
         return this.filterName;
     }
@@ -50,6 +58,10 @@ public final class TargetIpFilterRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="ipMask", required=true)
     private Output<String> ipMask;
 
+    /**
+     * @return A string that contains the IP address range in CIDR notation for the rule.
+     * 
+     */
     public Output<String> ipMask() {
         return this.ipMask;
     }
@@ -61,6 +73,10 @@ public final class TargetIpFilterRuleArgs extends com.pulumi.resources.ResourceA
     @Import(name="target")
     private @Nullable Output<IpFilterTargetType> target;
 
+    /**
+     * @return Target for requests captured by this rule.
+     * 
+     */
     public Optional<Output<IpFilterTargetType>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -92,38 +108,86 @@ public final class TargetIpFilterRuleArgs extends com.pulumi.resources.ResourceA
             $ = new TargetIpFilterRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The desired action for requests captured by this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(Output<IpFilterActionType> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The desired action for requests captured by this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(IpFilterActionType action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param filterName The name of the IP filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(Output<String> filterName) {
             $.filterName = filterName;
             return this;
         }
 
+        /**
+         * @param filterName The name of the IP filter rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filterName(String filterName) {
             return filterName(Output.of(filterName));
         }
 
+        /**
+         * @param ipMask A string that contains the IP address range in CIDR notation for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(Output<String> ipMask) {
             $.ipMask = ipMask;
             return this;
         }
 
+        /**
+         * @param ipMask A string that contains the IP address range in CIDR notation for the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipMask(String ipMask) {
             return ipMask(Output.of(ipMask));
         }
 
+        /**
+         * @param target Target for requests captured by this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<IpFilterTargetType> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Target for requests captured by this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(IpFilterTargetType target) {
             return target(Output.of(target));
         }

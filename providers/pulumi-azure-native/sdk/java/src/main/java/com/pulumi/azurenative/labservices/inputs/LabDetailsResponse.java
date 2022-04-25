@@ -25,6 +25,10 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The Id of the lab.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the lab
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The provisioning state of the lab.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -58,6 +70,10 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="usageQuota", required=true)
     private String usageQuota;
 
+    /**
+     * @return The maximum duration a user can use a VM in this lab.
+     * 
+     */
     public String usageQuota() {
         return this.usageQuota;
     }
@@ -89,21 +105,45 @@ public final class LabDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LabDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The Id of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param usageQuota The maximum duration a user can use a VM in this lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageQuota(String usageQuota) {
             $.usageQuota = usageQuota;
             return this;

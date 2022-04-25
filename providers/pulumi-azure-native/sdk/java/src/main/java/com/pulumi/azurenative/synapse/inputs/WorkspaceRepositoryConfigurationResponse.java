@@ -25,6 +25,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="accountName")
     private @Nullable String accountName;
 
+    /**
+     * @return Account name
+     * 
+     */
     public Optional<String> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -36,6 +40,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="collaborationBranch")
     private @Nullable String collaborationBranch;
 
+    /**
+     * @return Collaboration branch
+     * 
+     */
     public Optional<String> collaborationBranch() {
         return Optional.ofNullable(this.collaborationBranch);
     }
@@ -47,6 +55,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="hostName")
     private @Nullable String hostName;
 
+    /**
+     * @return GitHub Enterprise host name. For example: https://github.mydomain.com
+     * 
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -58,6 +70,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="lastCommitId")
     private @Nullable String lastCommitId;
 
+    /**
+     * @return The last commit ID
+     * 
+     */
     public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
@@ -69,6 +85,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="projectName")
     private @Nullable String projectName;
 
+    /**
+     * @return VSTS project name
+     * 
+     */
     public Optional<String> projectName() {
         return Optional.ofNullable(this.projectName);
     }
@@ -80,6 +100,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="repositoryName")
     private @Nullable String repositoryName;
 
+    /**
+     * @return Repository name
+     * 
+     */
     public Optional<String> repositoryName() {
         return Optional.ofNullable(this.repositoryName);
     }
@@ -91,6 +115,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="rootFolder")
     private @Nullable String rootFolder;
 
+    /**
+     * @return Root folder to use in the repository
+     * 
+     */
     public Optional<String> rootFolder() {
         return Optional.ofNullable(this.rootFolder);
     }
@@ -102,6 +130,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return The VSTS tenant ID
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -113,6 +145,10 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -149,46 +185,100 @@ public final class WorkspaceRepositoryConfigurationResponse extends com.pulumi.r
             $ = new WorkspaceRepositoryConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param collaborationBranch Collaboration branch
+         * 
+         * @return builder
+         * 
+         */
         public Builder collaborationBranch(@Nullable String collaborationBranch) {
             $.collaborationBranch = collaborationBranch;
             return this;
         }
 
+        /**
+         * @param hostName GitHub Enterprise host name. For example: https://github.mydomain.com
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param lastCommitId The last commit ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastCommitId(@Nullable String lastCommitId) {
             $.lastCommitId = lastCommitId;
             return this;
         }
 
+        /**
+         * @param projectName VSTS project name
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(@Nullable String projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param repositoryName Repository name
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(@Nullable String repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param rootFolder Root folder to use in the repository
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootFolder(@Nullable String rootFolder) {
             $.rootFolder = rootFolder;
             return this;
         }
 
+        /**
+         * @param tenantId The VSTS tenant ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Type of workspace repositoryID configuration. Example WorkspaceVSTSConfiguration, WorkspaceGitHubConfiguration
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

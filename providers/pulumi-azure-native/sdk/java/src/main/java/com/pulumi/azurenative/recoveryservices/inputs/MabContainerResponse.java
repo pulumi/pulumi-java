@@ -31,6 +31,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return Agent version of this container.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -42,6 +46,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="backupManagementType")
     private @Nullable String backupManagementType;
 
+    /**
+     * @return Type of backup management for the container.
+     * 
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -53,6 +61,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="canReRegister")
     private @Nullable Boolean canReRegister;
 
+    /**
+     * @return Can the container be registered one more time.
+     * 
+     */
     public Optional<Boolean> canReRegister() {
         return Optional.ofNullable(this.canReRegister);
     }
@@ -64,6 +76,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="containerHealthState")
     private @Nullable String containerHealthState;
 
+    /**
+     * @return Health state of mab container.
+     * 
+     */
     public Optional<String> containerHealthState() {
         return Optional.ofNullable(this.containerHealthState);
     }
@@ -75,6 +91,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="containerId")
     private @Nullable Double containerId;
 
+    /**
+     * @return ContainerID represents the container.
+     * 
+     */
     public Optional<Double> containerId() {
         return Optional.ofNullable(this.containerId);
     }
@@ -90,6 +110,14 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="containerType", required=true)
     private String containerType;
 
+    /**
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is &#39;Windows&#39;.
+     * 
+     */
     public String containerType() {
         return this.containerType;
     }
@@ -101,6 +129,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="extendedInfo")
     private @Nullable MabContainerExtendedInfoResponse extendedInfo;
 
+    /**
+     * @return Additional information for this container
+     * 
+     */
     public Optional<MabContainerExtendedInfoResponse> extendedInfo() {
         return Optional.ofNullable(this.extendedInfo);
     }
@@ -112,6 +144,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the container.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -123,6 +159,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="healthStatus")
     private @Nullable String healthStatus;
 
+    /**
+     * @return Status of health of the container.
+     * 
+     */
     public Optional<String> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
@@ -134,6 +174,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="mabContainerHealthDetails")
     private @Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails;
 
+    /**
+     * @return Health details on this mab container.
+     * 
+     */
     public Optional<List<MABContainerHealthDetailsResponse>> mabContainerHealthDetails() {
         return Optional.ofNullable(this.mabContainerHealthDetails);
     }
@@ -145,6 +189,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="protectedItemCount")
     private @Nullable Double protectedItemCount;
 
+    /**
+     * @return Number of items backed up in this container.
+     * 
+     */
     public Optional<Double> protectedItemCount() {
         return Optional.ofNullable(this.protectedItemCount);
     }
@@ -156,6 +204,10 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="registrationStatus")
     private @Nullable String registrationStatus;
 
+    /**
+     * @return Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     public Optional<String> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -195,65 +247,147 @@ public final class MabContainerResponse extends com.pulumi.resources.InvokeArgs 
             $ = new MabContainerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion Agent version of this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param canReRegister Can the container be registered one more time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder canReRegister(@Nullable Boolean canReRegister) {
             $.canReRegister = canReRegister;
             return this;
         }
 
+        /**
+         * @param containerHealthState Health state of mab container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerHealthState(@Nullable String containerHealthState) {
             $.containerHealthState = containerHealthState;
             return this;
         }
 
+        /**
+         * @param containerId ContainerID represents the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerId(@Nullable Double containerId) {
             $.containerId = containerId;
             return this;
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;Windows&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param extendedInfo Additional information for this container
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedInfo(@Nullable MabContainerExtendedInfoResponse extendedInfo) {
             $.extendedInfo = extendedInfo;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(@Nullable String healthStatus) {
             $.healthStatus = healthStatus;
             return this;
         }
 
+        /**
+         * @param mabContainerHealthDetails Health details on this mab container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mabContainerHealthDetails(@Nullable List<MABContainerHealthDetailsResponse> mabContainerHealthDetails) {
             $.mabContainerHealthDetails = mabContainerHealthDetails;
             return this;
         }
 
+        /**
+         * @param mabContainerHealthDetails Health details on this mab container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mabContainerHealthDetails(MABContainerHealthDetailsResponse... mabContainerHealthDetails) {
             return mabContainerHealthDetails(List.of(mabContainerHealthDetails));
         }
 
+        /**
+         * @param protectedItemCount Number of items backed up in this container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemCount(@Nullable Double protectedItemCount) {
             $.protectedItemCount = protectedItemCount;
             return this;
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(@Nullable String registrationStatus) {
             $.registrationStatus = registrationStatus;
             return this;

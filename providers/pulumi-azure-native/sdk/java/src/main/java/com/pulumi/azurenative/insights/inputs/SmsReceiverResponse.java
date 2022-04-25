@@ -23,6 +23,10 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="countryCode", required=true)
     private String countryCode;
 
+    /**
+     * @return The country code of the SMS receiver.
+     * 
+     */
     public String countryCode() {
         return this.countryCode;
     }
@@ -34,6 +38,10 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the SMS receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="phoneNumber", required=true)
     private String phoneNumber;
 
+    /**
+     * @return The phone number of the SMS receiver.
+     * 
+     */
     public String phoneNumber() {
         return this.phoneNumber;
     }
@@ -56,6 +68,10 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The status of the receiver.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -87,21 +103,45 @@ public final class SmsReceiverResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SmsReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param countryCode The country code of the SMS receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder countryCode(String countryCode) {
             $.countryCode = countryCode;
             return this;
         }
 
+        /**
+         * @param name The name of the SMS receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param phoneNumber The phone number of the SMS receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;
         }
 
+        /**
+         * @param status The status of the receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

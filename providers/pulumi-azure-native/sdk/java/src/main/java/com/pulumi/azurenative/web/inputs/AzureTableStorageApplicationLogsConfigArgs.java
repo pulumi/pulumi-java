@@ -27,6 +27,10 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends com.pulumi
     @Import(name="level")
     private @Nullable Output<LogLevel> level;
 
+    /**
+     * @return Log level.
+     * 
+     */
     public Optional<Output<LogLevel>> level() {
         return Optional.ofNullable(this.level);
     }
@@ -38,6 +42,10 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends com.pulumi
     @Import(name="sasUrl", required=true)
     private Output<String> sasUrl;
 
+    /**
+     * @return SAS URL to an Azure table with add/query/delete permissions.
+     * 
+     */
     public Output<String> sasUrl() {
         return this.sasUrl;
     }
@@ -67,20 +75,44 @@ public final class AzureTableStorageApplicationLogsConfigArgs extends com.pulumi
             $ = new AzureTableStorageApplicationLogsConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(@Nullable Output<LogLevel> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level Log level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(LogLevel level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param sasUrl SAS URL to an Azure table with add/query/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(Output<String> sasUrl) {
             $.sasUrl = sasUrl;
             return this;
         }
 
+        /**
+         * @param sasUrl SAS URL to an Azure table with add/query/delete permissions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUrl(String sasUrl) {
             return sasUrl(Output.of(sasUrl));
         }

@@ -20,67 +20,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TumblingWindowTriggerResponse {
     /**
-     * List of tags that can be used for describing the trigger.
+     * @return List of tags that can be used for describing the trigger.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object delay;
     /**
-     * Triggers that this trigger depends on. Only tumbling window triggers are supported.
+     * @return Triggers that this trigger depends on. Only tumbling window triggers are supported.
      * 
      */
     private final @Nullable List<Object> dependsOn;
     /**
-     * Trigger description.
+     * @return Trigger description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+     * @return The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
      */
     private final @Nullable String endTime;
     /**
-     * The frequency of the time windows.
+     * @return The frequency of the time windows.
      * 
      */
     private final String frequency;
     /**
-     * The interval of the time windows. The minimum interval allowed is 15 Minutes.
+     * @return The interval of the time windows. The minimum interval allowed is 15 Minutes.
      * 
      */
     private final Integer interval;
     /**
-     * The max number of parallel time windows (ready for execution) for which a new run is triggered.
+     * @return The max number of parallel time windows (ready for execution) for which a new run is triggered.
      * 
      */
     private final Integer maxConcurrency;
     /**
-     * Pipeline for which runs are created when an event is fired for trigger window that is ready.
+     * @return Pipeline for which runs are created when an event is fired for trigger window that is ready.
      * 
      */
     private final TriggerPipelineReferenceResponse pipeline;
     /**
-     * Retry policy that will be applied for failed pipeline runs.
+     * @return Retry policy that will be applied for failed pipeline runs.
      * 
      */
     private final @Nullable RetryPolicyResponse retryPolicy;
     /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
      */
     private final String runtimeState;
     /**
-     * The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+     * @return The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
      */
     private final String startTime;
     /**
-     * Trigger type.
+     * @return Trigger type.
      * Expected value is &#39;TumblingWindowTrigger&#39;.
      * 
      */
@@ -117,94 +117,94 @@ public final class TumblingWindowTriggerResponse {
     }
 
     /**
-     * List of tags that can be used for describing the trigger.
+     * @return List of tags that can be used for describing the trigger.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Specifies how long the trigger waits past due time before triggering new run. It doesn&#39;t alter window start and end time. The default is 0. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> delay() {
         return Optional.ofNullable(this.delay);
     }
     /**
-     * Triggers that this trigger depends on. Only tumbling window triggers are supported.
+     * @return Triggers that this trigger depends on. Only tumbling window triggers are supported.
      * 
-    */
+     */
     public List<Object> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Trigger description.
+     * @return Trigger description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+     * @return The end time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
-    */
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
     /**
-     * The frequency of the time windows.
+     * @return The frequency of the time windows.
      * 
-    */
+     */
     public String frequency() {
         return this.frequency;
     }
     /**
-     * The interval of the time windows. The minimum interval allowed is 15 Minutes.
+     * @return The interval of the time windows. The minimum interval allowed is 15 Minutes.
      * 
-    */
+     */
     public Integer interval() {
         return this.interval;
     }
     /**
-     * The max number of parallel time windows (ready for execution) for which a new run is triggered.
+     * @return The max number of parallel time windows (ready for execution) for which a new run is triggered.
      * 
-    */
+     */
     public Integer maxConcurrency() {
         return this.maxConcurrency;
     }
     /**
-     * Pipeline for which runs are created when an event is fired for trigger window that is ready.
+     * @return Pipeline for which runs are created when an event is fired for trigger window that is ready.
      * 
-    */
+     */
     public TriggerPipelineReferenceResponse pipeline() {
         return this.pipeline;
     }
     /**
-     * Retry policy that will be applied for failed pipeline runs.
+     * @return Retry policy that will be applied for failed pipeline runs.
      * 
-    */
+     */
     public Optional<RetryPolicyResponse> retryPolicy() {
         return Optional.ofNullable(this.retryPolicy);
     }
     /**
-     * Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
+     * @return Indicates if trigger is running or not. Updated when Start/Stop APIs are called on the Trigger.
      * 
-    */
+     */
     public String runtimeState() {
         return this.runtimeState;
     }
     /**
-     * The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
+     * @return The start time for the time period for the trigger during which events are fired for windows that are ready. Only UTC time is currently supported.
      * 
-    */
+     */
     public String startTime() {
         return this.startTime;
     }
     /**
-     * Trigger type.
+     * @return Trigger type.
      * Expected value is &#39;TumblingWindowTrigger&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

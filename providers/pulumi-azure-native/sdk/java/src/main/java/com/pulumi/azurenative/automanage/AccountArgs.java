@@ -24,6 +24,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return Name of the Automanage account.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -35,6 +39,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<AccountIdentityArgs> identity;
 
+    /**
+     * @return The identity of the Automanage account.
+     * 
+     */
     public Optional<Output<AccountIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -46,6 +54,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -100,47 +120,107 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Name of the Automanage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Name of the Automanage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param identity The identity of the Automanage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<AccountIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the Automanage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(AccountIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

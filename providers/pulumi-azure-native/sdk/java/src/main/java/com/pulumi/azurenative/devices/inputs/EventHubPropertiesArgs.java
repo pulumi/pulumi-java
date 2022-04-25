@@ -27,6 +27,10 @@ public final class EventHubPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="partitionCount")
     private @Nullable Output<Integer> partitionCount;
 
+    /**
+     * @return The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
+     * 
+     */
     public Optional<Output<Integer>> partitionCount() {
         return Optional.ofNullable(this.partitionCount);
     }
@@ -38,6 +42,10 @@ public final class EventHubPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="retentionTimeInDays")
     private @Nullable Output<Double> retentionTimeInDays;
 
+    /**
+     * @return The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
+     * 
+     */
     public Optional<Output<Double>> retentionTimeInDays() {
         return Optional.ofNullable(this.retentionTimeInDays);
     }
@@ -67,20 +75,44 @@ public final class EventHubPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new EventHubPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partitionCount The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionCount(@Nullable Output<Integer> partitionCount) {
             $.partitionCount = partitionCount;
             return this;
         }
 
+        /**
+         * @param partitionCount The number of partitions for receiving device-to-cloud messages in the Event Hub-compatible endpoint. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionCount(Integer partitionCount) {
             return partitionCount(Output.of(partitionCount));
         }
 
+        /**
+         * @param retentionTimeInDays The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimeInDays(@Nullable Output<Double> retentionTimeInDays) {
             $.retentionTimeInDays = retentionTimeInDays;
             return this;
         }
 
+        /**
+         * @param retentionTimeInDays The retention time for device-to-cloud messages in days. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#device-to-cloud-messages
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionTimeInDays(Double retentionTimeInDays) {
             return retentionTimeInDays(Output.of(retentionTimeInDays));
         }

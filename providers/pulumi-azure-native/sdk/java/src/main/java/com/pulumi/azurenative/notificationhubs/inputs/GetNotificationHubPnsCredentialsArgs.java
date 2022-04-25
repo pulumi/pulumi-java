@@ -19,6 +19,10 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The namespace name.
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -30,6 +34,10 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
     @Import(name="notificationHubName", required=true)
     private String notificationHubName;
 
+    /**
+     * @return The notification hub name.
+     * 
+     */
     public String notificationHubName() {
         return this.notificationHubName;
     }
@@ -41,6 +49,10 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetNotificationHubPnsCredentialsArgs extends com.pulumi.resou
             $ = new GetNotificationHubPnsCredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param notificationHubName The notification hub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationHubName(String notificationHubName) {
             $.notificationHubName = notificationHubName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

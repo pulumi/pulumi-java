@@ -24,6 +24,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return Identity for the resource.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -35,6 +39,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkName")
     private @Nullable Output<String> linkName;
 
+    /**
+     * @return Friendly name of the linked workspace
+     * 
+     */
     public Optional<Output<String>> linkName() {
         return Optional.ofNullable(this.linkName);
     }
@@ -46,6 +54,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return location of the linked service.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Friendly name of the linked service
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<LinkedServicePropsArgs> properties;
 
+    /**
+     * @return LinkedService specific properties.
+     * 
+     */
     public Optional<Output<LinkedServicePropsArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -79,6 +99,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -90,6 +114,10 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -124,65 +152,149 @@ public final class LinkedServiceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity for the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param linkName Friendly name of the linked workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkName(@Nullable Output<String> linkName) {
             $.linkName = linkName;
             return this;
         }
 
+        /**
+         * @param linkName Friendly name of the linked workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkName(String linkName) {
             return linkName(Output.of(linkName));
         }
 
+        /**
+         * @param location location of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location location of the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param name Friendly name of the linked service
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Friendly name of the linked service
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties LinkedService specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<LinkedServicePropsArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties LinkedService specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(LinkedServicePropsArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

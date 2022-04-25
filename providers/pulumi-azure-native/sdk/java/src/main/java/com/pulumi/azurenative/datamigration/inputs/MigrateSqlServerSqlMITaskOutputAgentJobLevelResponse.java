@@ -23,6 +23,10 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -34,6 +38,10 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="exceptionsAndWarnings", required=true)
     private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
+    /**
+     * @return Migration errors and warnings per job
+     * 
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
@@ -45,6 +53,10 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -56,6 +68,10 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return The state of the original Agent Job.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -67,6 +83,10 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Migration progress message
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -78,6 +98,10 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Agent Job name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -90,6 +114,11 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;AgentJobLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -101,6 +130,10 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -112,6 +145,10 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of migration
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -148,50 +185,111 @@ public final class MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse extends 
             $ = new MigrateSqlServerSqlMITaskOutputAgentJobLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endedOn Migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration errors and warnings per job
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Migration errors and warnings per job
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isEnabled The state of the original Agent Job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param message Migration progress message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param name Agent Job name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;AgentJobLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param startedOn Migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param state Current state of migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

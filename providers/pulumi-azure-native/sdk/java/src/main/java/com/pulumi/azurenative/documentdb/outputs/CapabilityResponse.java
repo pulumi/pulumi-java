@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CapabilityResponse {
     /**
-     * Name of the Cosmos DB capability. For example, &#34;name&#34;: &#34;EnableCassandra&#34;. Current values also include &#34;EnableTable&#34; and &#34;EnableGremlin&#34;.
+     * @return Name of the Cosmos DB capability. For example, &#34;name&#34;: &#34;EnableCassandra&#34;. Current values also include &#34;EnableTable&#34; and &#34;EnableGremlin&#34;.
      * 
      */
     private final @Nullable String name;
@@ -23,9 +23,9 @@ public final class CapabilityResponse {
     }
 
     /**
-     * Name of the Cosmos DB capability. For example, &#34;name&#34;: &#34;EnableCassandra&#34;. Current values also include &#34;EnableTable&#34; and &#34;EnableGremlin&#34;.
+     * @return Name of the Cosmos DB capability. For example, &#34;name&#34;: &#34;EnableCassandra&#34;. Current values also include &#34;EnableTable&#34; and &#34;EnableGremlin&#34;.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

@@ -23,6 +23,10 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
     @Import(name="ddosProtectionPlanName")
     private @Nullable Output<String> ddosProtectionPlanName;
 
+    /**
+     * @return The name of the DDoS protection plan.
+     * 
+     */
     public Optional<Output<String>> ddosProtectionPlanName() {
         return Optional.ofNullable(this.ddosProtectionPlanName);
     }
@@ -34,6 +38,10 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -45,6 +53,10 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -87,38 +103,86 @@ public final class DdosProtectionPlanArgs extends com.pulumi.resources.ResourceA
             $ = new DdosProtectionPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ddosProtectionPlanName The name of the DDoS protection plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosProtectionPlanName(@Nullable Output<String> ddosProtectionPlanName) {
             $.ddosProtectionPlanName = ddosProtectionPlanName;
             return this;
         }
 
+        /**
+         * @param ddosProtectionPlanName The name of the DDoS protection plan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosProtectionPlanName(String ddosProtectionPlanName) {
             return ddosProtectionPlanName(Output.of(ddosProtectionPlanName));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

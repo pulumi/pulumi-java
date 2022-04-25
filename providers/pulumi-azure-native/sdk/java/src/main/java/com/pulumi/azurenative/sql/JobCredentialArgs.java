@@ -22,6 +22,10 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentialName")
     private @Nullable Output<String> credentialName;
 
+    /**
+     * @return The name of the credential.
+     * 
+     */
     public Optional<Output<String>> credentialName() {
         return Optional.ofNullable(this.credentialName);
     }
@@ -33,6 +37,10 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobAgentName", required=true)
     private Output<String> jobAgentName;
 
+    /**
+     * @return The name of the job agent.
+     * 
+     */
     public Output<String> jobAgentName() {
         return this.jobAgentName;
     }
@@ -44,6 +52,10 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="password", required=true)
     private Output<String> password;
 
+    /**
+     * @return The credential password.
+     * 
+     */
     public Output<String> password() {
         return this.password;
     }
@@ -55,6 +67,10 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serverName", required=true)
     private Output<String> serverName;
 
+    /**
+     * @return The name of the server.
+     * 
+     */
     public Output<String> serverName() {
         return this.serverName;
     }
@@ -77,6 +97,10 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="username", required=true)
     private Output<String> username;
 
+    /**
+     * @return The credential user name.
+     * 
+     */
     public Output<String> username() {
         return this.username;
     }
@@ -110,56 +134,128 @@ public final class JobCredentialArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentialName The name of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialName(@Nullable Output<String> credentialName) {
             $.credentialName = credentialName;
             return this;
         }
 
+        /**
+         * @param credentialName The name of the credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentialName(String credentialName) {
             return credentialName(Output.of(credentialName));
         }
 
+        /**
+         * @param jobAgentName The name of the job agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(Output<String> jobAgentName) {
             $.jobAgentName = jobAgentName;
             return this;
         }
 
+        /**
+         * @param jobAgentName The name of the job agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobAgentName(String jobAgentName) {
             return jobAgentName(Output.of(jobAgentName));
         }
 
+        /**
+         * @param password The credential password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The credential password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(Output<String> serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param serverName The name of the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(String serverName) {
             return serverName(Output.of(serverName));
         }
 
+        /**
+         * @param username The credential user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username The credential user name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

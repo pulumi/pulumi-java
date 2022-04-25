@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DaprMetadataResponse {
     /**
-     * Metadata property name.
+     * @return Metadata property name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Name of the Container App secret from which to pull the metadata property value.
+     * @return Name of the Container App secret from which to pull the metadata property value.
      * 
      */
     private final @Nullable String secretRef;
     /**
-     * Metadata property value.
+     * @return Metadata property value.
      * 
      */
     private final @Nullable String value;
@@ -38,23 +38,23 @@ public final class DaprMetadataResponse {
     }
 
     /**
-     * Metadata property name.
+     * @return Metadata property name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Name of the Container App secret from which to pull the metadata property value.
+     * @return Name of the Container App secret from which to pull the metadata property value.
      * 
-    */
+     */
     public Optional<String> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
     /**
-     * Metadata property value.
+     * @return Metadata property value.
      * 
-    */
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }

@@ -28,6 +28,10 @@ public final class LogicAppReceiverArgs extends com.pulumi.resources.ResourceArg
     @Import(name="callbackUrl", required=true)
     private Output<String> callbackUrl;
 
+    /**
+     * @return The callback url where http request sent to.
+     * 
+     */
     public Output<String> callbackUrl() {
         return this.callbackUrl;
     }
@@ -39,6 +43,10 @@ public final class LogicAppReceiverArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the logic app receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -50,6 +58,10 @@ public final class LogicAppReceiverArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceId", required=true)
     private Output<String> resourceId;
 
+    /**
+     * @return The azure resource id of the logic app receiver.
+     * 
+     */
     public Output<String> resourceId() {
         return this.resourceId;
     }
@@ -61,6 +73,10 @@ public final class LogicAppReceiverArgs extends com.pulumi.resources.ResourceArg
     @Import(name="useCommonAlertSchema")
     private @Nullable Output<Boolean> useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Output<Boolean>> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -92,38 +108,86 @@ public final class LogicAppReceiverArgs extends com.pulumi.resources.ResourceArg
             $ = new LogicAppReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param callbackUrl The callback url where http request sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUrl(Output<String> callbackUrl) {
             $.callbackUrl = callbackUrl;
             return this;
         }
 
+        /**
+         * @param callbackUrl The callback url where http request sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder callbackUrl(String callbackUrl) {
             return callbackUrl(Output.of(callbackUrl));
         }
 
+        /**
+         * @param name The name of the logic app receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the logic app receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceId The azure resource id of the logic app receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The azure resource id of the logic app receiver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
             return useCommonAlertSchema(Output.of(useCommonAlertSchema));
         }

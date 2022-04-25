@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class CurrentSpendResponse {
     /**
-     * The total amount of cost which is being tracked by the budget.
+     * @return The total amount of cost which is being tracked by the budget.
      * 
      */
     private final Double amount;
     /**
-     * The unit of measure for the budget amount.
+     * @return The unit of measure for the budget amount.
      * 
      */
     private final String unit;
@@ -30,16 +30,16 @@ public final class CurrentSpendResponse {
     }
 
     /**
-     * The total amount of cost which is being tracked by the budget.
+     * @return The total amount of cost which is being tracked by the budget.
      * 
-    */
+     */
     public Double amount() {
         return this.amount;
     }
     /**
-     * The unit of measure for the budget amount.
+     * @return The unit of measure for the budget amount.
      * 
-    */
+     */
     public String unit() {
         return this.unit;
     }

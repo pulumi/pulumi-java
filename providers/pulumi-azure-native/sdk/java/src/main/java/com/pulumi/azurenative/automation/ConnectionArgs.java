@@ -24,6 +24,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -35,6 +39,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionName")
     private @Nullable Output<String> connectionName;
 
+    /**
+     * @return The parameters supplied to the create or update connection operation.
+     * 
+     */
     public Optional<Output<String>> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
@@ -46,6 +54,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionType", required=true)
     private Output<ConnectionTypeAssociationPropertyArgs> connectionType;
 
+    /**
+     * @return Gets or sets the connectionType of the connection.
+     * 
+     */
     public Output<ConnectionTypeAssociationPropertyArgs> connectionType() {
         return this.connectionType;
     }
@@ -57,6 +69,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Gets or sets the description of the connection.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +84,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fieldDefinitionValues")
     private @Nullable Output<Map<String,String>> fieldDefinitionValues;
 
+    /**
+     * @return Gets or sets the field definition properties of the connection.
+     * 
+     */
     public Optional<Output<Map<String,String>>> fieldDefinitionValues() {
         return Optional.ofNullable(this.fieldDefinitionValues);
     }
@@ -79,6 +99,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the connection.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -90,6 +114,10 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -124,65 +152,149 @@ public final class ConnectionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param connectionName The parameters supplied to the create or update connection operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(@Nullable Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName The parameters supplied to the create or update connection operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param connectionType Gets or sets the connectionType of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(Output<ConnectionTypeAssociationPropertyArgs> connectionType) {
             $.connectionType = connectionType;
             return this;
         }
 
+        /**
+         * @param connectionType Gets or sets the connectionType of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionType(ConnectionTypeAssociationPropertyArgs connectionType) {
             return connectionType(Output.of(connectionType));
         }
 
+        /**
+         * @param description Gets or sets the description of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Gets or sets the description of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param fieldDefinitionValues Gets or sets the field definition properties of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDefinitionValues(@Nullable Output<Map<String,String>> fieldDefinitionValues) {
             $.fieldDefinitionValues = fieldDefinitionValues;
             return this;
         }
 
+        /**
+         * @param fieldDefinitionValues Gets or sets the field definition properties of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDefinitionValues(Map<String,String> fieldDefinitionValues) {
             return fieldDefinitionValues(Output.of(fieldDefinitionValues));
         }
 
+        /**
+         * @param name Gets or sets the name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

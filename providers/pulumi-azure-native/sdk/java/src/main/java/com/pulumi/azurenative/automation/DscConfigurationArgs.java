@@ -26,6 +26,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -37,6 +41,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="configurationName")
     private @Nullable Output<String> configurationName;
 
+    /**
+     * @return The create or update parameters for configuration.
+     * 
+     */
     public Optional<Output<String>> configurationName() {
         return Optional.ofNullable(this.configurationName);
     }
@@ -48,6 +56,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Gets or sets the description of the configuration.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -59,6 +71,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Gets or sets the location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -70,6 +86,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="logProgress")
     private @Nullable Output<Boolean> logProgress;
 
+    /**
+     * @return Gets or sets progress log option.
+     * 
+     */
     public Optional<Output<Boolean>> logProgress() {
         return Optional.ofNullable(this.logProgress);
     }
@@ -81,6 +101,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="logVerbose")
     private @Nullable Output<Boolean> logVerbose;
 
+    /**
+     * @return Gets or sets verbose log option.
+     * 
+     */
     public Optional<Output<Boolean>> logVerbose() {
         return Optional.ofNullable(this.logVerbose);
     }
@@ -92,6 +116,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets name of the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +131,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameters")
     private @Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters;
 
+    /**
+     * @return Gets or sets the configuration parameters.
+     * 
+     */
     public Optional<Output<Map<String,DscConfigurationParameterArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -114,6 +146,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -125,6 +161,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="source", required=true)
     private Output<ContentSourceArgs> source;
 
+    /**
+     * @return Gets or sets the source.
+     * 
+     */
     public Output<ContentSourceArgs> source() {
         return this.source;
     }
@@ -136,6 +176,10 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the tags attached to the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -174,101 +218,233 @@ public final class DscConfigurationArgs extends com.pulumi.resources.ResourceArg
             $ = new DscConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param configurationName The create or update parameters for configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(@Nullable Output<String> configurationName) {
             $.configurationName = configurationName;
             return this;
         }
 
+        /**
+         * @param configurationName The create or update parameters for configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(String configurationName) {
             return configurationName(Output.of(configurationName));
         }
 
+        /**
+         * @param description Gets or sets the description of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Gets or sets the description of the configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param location Gets or sets the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Gets or sets the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param logProgress Gets or sets progress log option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logProgress(@Nullable Output<Boolean> logProgress) {
             $.logProgress = logProgress;
             return this;
         }
 
+        /**
+         * @param logProgress Gets or sets progress log option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logProgress(Boolean logProgress) {
             return logProgress(Output.of(logProgress));
         }
 
+        /**
+         * @param logVerbose Gets or sets verbose log option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logVerbose(@Nullable Output<Boolean> logVerbose) {
             $.logVerbose = logVerbose;
             return this;
         }
 
+        /**
+         * @param logVerbose Gets or sets verbose log option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logVerbose(Boolean logVerbose) {
             return logVerbose(Output.of(logVerbose));
         }
 
+        /**
+         * @param name Gets or sets name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Gets or sets the configuration parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,DscConfigurationParameterArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Gets or sets the configuration parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,DscConfigurationParameterArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source Gets or sets the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Output<ContentSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Gets or sets the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(ContentSourceArgs source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param tags Gets or sets the tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets the tags attached to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -23,6 +23,10 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addonName")
     private @Nullable Output<String> addonName;
 
+    /**
+     * @return The addon name.
+     * 
+     */
     public Optional<Output<String>> addonName() {
         return Optional.ofNullable(this.addonName);
     }
@@ -34,6 +38,10 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -46,6 +54,11 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Addon type.
+     * Expected value is &#39;ArcForKubernetes&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -57,6 +70,10 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +85,10 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceLocation", required=true)
     private Output<String> resourceLocation;
 
+    /**
+     * @return Arc resource location
+     * 
+     */
     public Output<String> resourceLocation() {
         return this.resourceLocation;
     }
@@ -79,6 +100,10 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return Arc resource Name
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -90,6 +115,10 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roleName", required=true)
     private Output<String> roleName;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Output<String> roleName() {
         return this.roleName;
     }
@@ -101,6 +130,10 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subscriptionId", required=true)
     private Output<String> subscriptionId;
 
+    /**
+     * @return Arc resource subscription Id
+     * 
+     */
     public Output<String> subscriptionId() {
         return this.subscriptionId;
     }
@@ -136,74 +169,172 @@ public final class ArcAddonArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ArcAddonArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addonName The addon name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(@Nullable Output<String> addonName) {
             $.addonName = addonName;
             return this;
         }
 
+        /**
+         * @param addonName The addon name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addonName(String addonName) {
             return addonName(Output.of(addonName));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param kind Addon type.
+         * Expected value is &#39;ArcForKubernetes&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Addon type.
+         * Expected value is &#39;ArcForKubernetes&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceLocation Arc resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLocation(Output<String> resourceLocation) {
             $.resourceLocation = resourceLocation;
             return this;
         }
 
+        /**
+         * @param resourceLocation Arc resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLocation(String resourceLocation) {
             return resourceLocation(Output.of(resourceLocation));
         }
 
+        /**
+         * @param resourceName Arc resource Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName Arc resource Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }
 
+        /**
+         * @param subscriptionId Arc resource subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Output<String> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Arc resource subscription Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(String subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }

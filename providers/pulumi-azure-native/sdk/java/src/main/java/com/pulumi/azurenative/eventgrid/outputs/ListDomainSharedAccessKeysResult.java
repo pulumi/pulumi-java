@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListDomainSharedAccessKeysResult {
     /**
-     * Shared access key1 for the domain.
+     * @return Shared access key1 for the domain.
      * 
      */
     private final @Nullable String key1;
     /**
-     * Shared access key2 for the domain.
+     * @return Shared access key2 for the domain.
      * 
      */
     private final @Nullable String key2;
@@ -31,16 +31,16 @@ public final class ListDomainSharedAccessKeysResult {
     }
 
     /**
-     * Shared access key1 for the domain.
+     * @return Shared access key1 for the domain.
      * 
-    */
+     */
     public Optional<String> key1() {
         return Optional.ofNullable(this.key1);
     }
     /**
-     * Shared access key2 for the domain.
+     * @return Shared access key2 for the domain.
      * 
-    */
+     */
     public Optional<String> key2() {
         return Optional.ofNullable(this.key2);
     }

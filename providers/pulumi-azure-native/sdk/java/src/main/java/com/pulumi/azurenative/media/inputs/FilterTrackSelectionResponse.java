@@ -24,6 +24,10 @@ public final class FilterTrackSelectionResponse extends com.pulumi.resources.Inv
     @Import(name="trackSelections", required=true)
     private List<FilterTrackPropertyConditionResponse> trackSelections;
 
+    /**
+     * @return The track selections.
+     * 
+     */
     public List<FilterTrackPropertyConditionResponse> trackSelections() {
         return this.trackSelections;
     }
@@ -52,11 +56,23 @@ public final class FilterTrackSelectionResponse extends com.pulumi.resources.Inv
             $ = new FilterTrackSelectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param trackSelections The track selections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackSelections(List<FilterTrackPropertyConditionResponse> trackSelections) {
             $.trackSelections = trackSelections;
             return this;
         }
 
+        /**
+         * @param trackSelections The track selections.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackSelections(FilterTrackPropertyConditionResponse... trackSelections) {
             return trackSelections(List.of(trackSelections));
         }

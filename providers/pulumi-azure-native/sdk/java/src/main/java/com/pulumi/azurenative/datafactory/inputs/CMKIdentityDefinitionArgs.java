@@ -26,6 +26,10 @@ public final class CMKIdentityDefinitionArgs extends com.pulumi.resources.Resour
     @Import(name="userAssignedIdentity")
     private @Nullable Output<String> userAssignedIdentity;
 
+    /**
+     * @return The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
+     * 
+     */
     public Optional<Output<String>> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
@@ -54,11 +58,23 @@ public final class CMKIdentityDefinitionArgs extends com.pulumi.resources.Resour
             $ = new CMKIdentityDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userAssignedIdentity The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(@Nullable Output<String> userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentity The resource id of the user assigned identity to authenticate to customer&#39;s key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             return userAssignedIdentity(Output.of(userAssignedIdentity));
         }

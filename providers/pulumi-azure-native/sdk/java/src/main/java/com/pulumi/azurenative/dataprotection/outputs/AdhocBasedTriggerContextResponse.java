@@ -11,13 +11,13 @@ import java.util.Objects;
 @CustomType
 public final class AdhocBasedTriggerContextResponse {
     /**
-     * Type of the specific object - used for deserializing
+     * @return Type of the specific object - used for deserializing
      * Expected value is &#39;AdhocBasedTriggerContext&#39;.
      * 
      */
     private final String objectType;
     /**
-     * Tagging Criteria containing retention tag for adhoc backup.
+     * @return Tagging Criteria containing retention tag for adhoc backup.
      * 
      */
     private final AdhocBasedTaggingCriteriaResponse taggingCriteria;
@@ -31,17 +31,17 @@ public final class AdhocBasedTriggerContextResponse {
     }
 
     /**
-     * Type of the specific object - used for deserializing
+     * @return Type of the specific object - used for deserializing
      * Expected value is &#39;AdhocBasedTriggerContext&#39;.
      * 
-    */
+     */
     public String objectType() {
         return this.objectType;
     }
     /**
-     * Tagging Criteria containing retention tag for adhoc backup.
+     * @return Tagging Criteria containing retention tag for adhoc backup.
      * 
-    */
+     */
     public AdhocBasedTaggingCriteriaResponse taggingCriteria() {
         return this.taggingCriteria;
     }

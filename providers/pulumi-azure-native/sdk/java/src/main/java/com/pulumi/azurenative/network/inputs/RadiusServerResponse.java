@@ -26,6 +26,10 @@ public final class RadiusServerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="radiusServerAddress", required=true)
     private String radiusServerAddress;
 
+    /**
+     * @return The address of this radius server.
+     * 
+     */
     public String radiusServerAddress() {
         return this.radiusServerAddress;
     }
@@ -37,6 +41,10 @@ public final class RadiusServerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="radiusServerScore")
     private @Nullable Double radiusServerScore;
 
+    /**
+     * @return The initial score assigned to this radius server.
+     * 
+     */
     public Optional<Double> radiusServerScore() {
         return Optional.ofNullable(this.radiusServerScore);
     }
@@ -48,6 +56,10 @@ public final class RadiusServerResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="radiusServerSecret")
     private @Nullable String radiusServerSecret;
 
+    /**
+     * @return The secret used for this radius server.
+     * 
+     */
     public Optional<String> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
@@ -78,16 +90,34 @@ public final class RadiusServerResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RadiusServerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param radiusServerAddress The address of this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerAddress(String radiusServerAddress) {
             $.radiusServerAddress = radiusServerAddress;
             return this;
         }
 
+        /**
+         * @param radiusServerScore The initial score assigned to this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerScore(@Nullable Double radiusServerScore) {
             $.radiusServerScore = radiusServerScore;
             return this;
         }
 
+        /**
+         * @param radiusServerSecret The secret used for this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerSecret(@Nullable String radiusServerSecret) {
             $.radiusServerSecret = radiusServerSecret;
             return this;

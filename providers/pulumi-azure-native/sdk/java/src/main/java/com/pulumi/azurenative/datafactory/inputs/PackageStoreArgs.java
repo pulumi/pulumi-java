@@ -25,6 +25,10 @@ public final class PackageStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the package store
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class PackageStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packageStoreLinkedService", required=true)
     private Output<EntityReferenceArgs> packageStoreLinkedService;
 
+    /**
+     * @return The package store linked service reference.
+     * 
+     */
     public Output<EntityReferenceArgs> packageStoreLinkedService() {
         return this.packageStoreLinkedService;
     }
@@ -65,20 +73,44 @@ public final class PackageStoreArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PackageStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the package store
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the package store
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param packageStoreLinkedService The package store linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageStoreLinkedService(Output<EntityReferenceArgs> packageStoreLinkedService) {
             $.packageStoreLinkedService = packageStoreLinkedService;
             return this;
         }
 
+        /**
+         * @param packageStoreLinkedService The package store linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageStoreLinkedService(EntityReferenceArgs packageStoreLinkedService) {
             return packageStoreLinkedService(Output.of(packageStoreLinkedService));
         }

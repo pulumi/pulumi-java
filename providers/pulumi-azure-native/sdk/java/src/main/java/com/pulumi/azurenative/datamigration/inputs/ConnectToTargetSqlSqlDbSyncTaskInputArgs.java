@@ -24,6 +24,10 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends com.pulumi.r
     @Import(name="sourceConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source SQL Server
+     * 
+     */
     public Output<SqlConnectionInfoArgs> sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -35,6 +39,10 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends com.pulumi.r
     @Import(name="targetConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Connection information for target SQL DB
+     * 
+     */
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -64,20 +72,44 @@ public final class ConnectToTargetSqlSqlDbSyncTaskInputArgs extends com.pulumi.r
             $ = new ConnectToTargetSqlSqlDbSyncTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(Output<SqlConnectionInfoArgs> sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(SqlConnectionInfoArgs sourceConnectionInfo) {
             return sourceConnectionInfo(Output.of(sourceConnectionInfo));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target SQL DB
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target SQL DB
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

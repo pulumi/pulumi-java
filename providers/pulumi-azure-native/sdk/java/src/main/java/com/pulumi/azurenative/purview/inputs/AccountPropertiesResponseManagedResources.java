@@ -23,6 +23,10 @@ public final class AccountPropertiesResponseManagedResources extends com.pulumi.
     @Import(name="eventHubNamespace", required=true)
     private String eventHubNamespace;
 
+    /**
+     * @return Gets the managed event hub namespace resource identifier.
+     * 
+     */
     public String eventHubNamespace() {
         return this.eventHubNamespace;
     }
@@ -34,6 +38,10 @@ public final class AccountPropertiesResponseManagedResources extends com.pulumi.
     @Import(name="resourceGroup", required=true)
     private String resourceGroup;
 
+    /**
+     * @return Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
+     * 
+     */
     public String resourceGroup() {
         return this.resourceGroup;
     }
@@ -45,6 +53,10 @@ public final class AccountPropertiesResponseManagedResources extends com.pulumi.
     @Import(name="storageAccount", required=true)
     private String storageAccount;
 
+    /**
+     * @return Gets the managed storage account resource identifier.
+     * 
+     */
     public String storageAccount() {
         return this.storageAccount;
     }
@@ -75,16 +87,34 @@ public final class AccountPropertiesResponseManagedResources extends com.pulumi.
             $ = new AccountPropertiesResponseManagedResources(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHubNamespace Gets the managed event hub namespace resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubNamespace(String eventHubNamespace) {
             $.eventHubNamespace = eventHubNamespace;
             return this;
         }
 
+        /**
+         * @param resourceGroup Gets the managed resource group resource identifier. This resource group will host resource dependencies for the account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param storageAccount Gets the managed storage account resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(String storageAccount) {
             $.storageAccount = storageAccount;
             return this;

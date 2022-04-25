@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class CognitiveServicesAccountSkuChangeInfoResponse {
     /**
-     * Gets the count of downgrades.
+     * @return Gets the count of downgrades.
      * 
      */
     private final Double countOfDowngrades;
     /**
-     * Gets the count of upgrades after downgrades.
+     * @return Gets the count of upgrades after downgrades.
      * 
      */
     private final Double countOfUpgradesAfterDowngrades;
     /**
-     * Gets the last change date.
+     * @return Gets the last change date.
      * 
      */
     private final String lastChangeDate;
@@ -37,23 +37,23 @@ public final class CognitiveServicesAccountSkuChangeInfoResponse {
     }
 
     /**
-     * Gets the count of downgrades.
+     * @return Gets the count of downgrades.
      * 
-    */
+     */
     public Double countOfDowngrades() {
         return this.countOfDowngrades;
     }
     /**
-     * Gets the count of upgrades after downgrades.
+     * @return Gets the count of upgrades after downgrades.
      * 
-    */
+     */
     public Double countOfUpgradesAfterDowngrades() {
         return this.countOfUpgradesAfterDowngrades;
     }
     /**
-     * Gets the last change date.
+     * @return Gets the last change date.
      * 
-    */
+     */
     public String lastChangeDate() {
         return this.lastChangeDate;
     }

@@ -21,6 +21,10 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
     @Import(name="networkGroupName", required=true)
     private String networkGroupName;
 
+    /**
+     * @return The name of the network group to get.
+     * 
+     */
     public String networkGroupName() {
         return this.networkGroupName;
     }
@@ -32,6 +36,10 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
     @Import(name="networkManagerName", required=true)
     private String networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public String networkManagerName() {
         return this.networkManagerName;
     }
@@ -43,6 +51,10 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -54,6 +66,10 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -85,21 +101,45 @@ public final class ListEffectiveVirtualNetworkByNetworkGroupArgs extends com.pul
             $ = new ListEffectiveVirtualNetworkByNetworkGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkGroupName The name of the network group to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkGroupName(String networkGroupName) {
             $.networkGroupName = networkGroupName;
             return this;
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param skipToken When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;

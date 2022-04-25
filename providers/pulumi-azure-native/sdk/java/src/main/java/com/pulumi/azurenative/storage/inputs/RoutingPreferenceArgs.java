@@ -29,6 +29,10 @@ public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publishInternetEndpoints")
     private @Nullable Output<Boolean> publishInternetEndpoints;
 
+    /**
+     * @return A boolean flag which indicates whether internet routing storage endpoints are to be published
+     * 
+     */
     public Optional<Output<Boolean>> publishInternetEndpoints() {
         return Optional.ofNullable(this.publishInternetEndpoints);
     }
@@ -40,6 +44,10 @@ public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="publishMicrosoftEndpoints")
     private @Nullable Output<Boolean> publishMicrosoftEndpoints;
 
+    /**
+     * @return A boolean flag which indicates whether microsoft routing storage endpoints are to be published
+     * 
+     */
     public Optional<Output<Boolean>> publishMicrosoftEndpoints() {
         return Optional.ofNullable(this.publishMicrosoftEndpoints);
     }
@@ -51,6 +59,10 @@ public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="routingChoice")
     private @Nullable Output<Either<String,RoutingChoice>> routingChoice;
 
+    /**
+     * @return Routing Choice defines the kind of network routing opted by the user.
+     * 
+     */
     public Optional<Output<Either<String,RoutingChoice>>> routingChoice() {
         return Optional.ofNullable(this.routingChoice);
     }
@@ -81,37 +93,85 @@ public final class RoutingPreferenceArgs extends com.pulumi.resources.ResourceAr
             $ = new RoutingPreferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param publishInternetEndpoints A boolean flag which indicates whether internet routing storage endpoints are to be published
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishInternetEndpoints(@Nullable Output<Boolean> publishInternetEndpoints) {
             $.publishInternetEndpoints = publishInternetEndpoints;
             return this;
         }
 
+        /**
+         * @param publishInternetEndpoints A boolean flag which indicates whether internet routing storage endpoints are to be published
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishInternetEndpoints(Boolean publishInternetEndpoints) {
             return publishInternetEndpoints(Output.of(publishInternetEndpoints));
         }
 
+        /**
+         * @param publishMicrosoftEndpoints A boolean flag which indicates whether microsoft routing storage endpoints are to be published
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishMicrosoftEndpoints(@Nullable Output<Boolean> publishMicrosoftEndpoints) {
             $.publishMicrosoftEndpoints = publishMicrosoftEndpoints;
             return this;
         }
 
+        /**
+         * @param publishMicrosoftEndpoints A boolean flag which indicates whether microsoft routing storage endpoints are to be published
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishMicrosoftEndpoints(Boolean publishMicrosoftEndpoints) {
             return publishMicrosoftEndpoints(Output.of(publishMicrosoftEndpoints));
         }
 
+        /**
+         * @param routingChoice Routing Choice defines the kind of network routing opted by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingChoice(@Nullable Output<Either<String,RoutingChoice>> routingChoice) {
             $.routingChoice = routingChoice;
             return this;
         }
 
+        /**
+         * @param routingChoice Routing Choice defines the kind of network routing opted by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingChoice(Either<String,RoutingChoice> routingChoice) {
             return routingChoice(Output.of(routingChoice));
         }
 
+        /**
+         * @param routingChoice Routing Choice defines the kind of network routing opted by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingChoice(String routingChoice) {
             return routingChoice(Either.ofLeft(routingChoice));
         }
 
+        /**
+         * @param routingChoice Routing Choice defines the kind of network routing opted by the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routingChoice(RoutingChoice routingChoice) {
             return routingChoice(Either.ofRight(routingChoice));
         }

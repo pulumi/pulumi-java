@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PlanResponse {
     /**
-     * The plan ID.
+     * @return The plan ID.
      * 
      */
     private final @Nullable String name;
     /**
-     * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+     * @return Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
      * 
      */
     private final @Nullable String product;
     /**
-     * The promotion code.
+     * @return The promotion code.
      * 
      */
     private final @Nullable String promotionCode;
     /**
-     * The publisher ID.
+     * @return The publisher ID.
      * 
      */
     private final @Nullable String publisher;
@@ -45,30 +45,30 @@ public final class PlanResponse {
     }
 
     /**
-     * The plan ID.
+     * @return The plan ID.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
+     * @return Specifies the product of the image from the marketplace. This is the same value as Offer under the imageReference element.
      * 
-    */
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
-     * The promotion code.
+     * @return The promotion code.
      * 
-    */
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
-     * The publisher ID.
+     * @return The publisher ID.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }

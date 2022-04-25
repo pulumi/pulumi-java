@@ -45,6 +45,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="dependsOn", required=true)
     private List<MoveResourceDependencyResponse> dependsOn;
 
+    /**
+     * @return Gets or sets the move resource dependencies.
+     * 
+     */
     public List<MoveResourceDependencyResponse> dependsOn() {
         return this.dependsOn;
     }
@@ -56,6 +60,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="dependsOnOverrides")
     private @Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides;
 
+    /**
+     * @return Gets or sets the move resource dependencies overrides.
+     * 
+     */
     public Optional<List<MoveResourceDependencyOverrideResponse>> dependsOnOverrides() {
         return Optional.ofNullable(this.dependsOnOverrides);
     }
@@ -67,6 +75,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="errors", required=true)
     private MoveResourcePropertiesResponseErrors errors;
 
+    /**
+     * @return Defines the move resource errors.
+     * 
+     */
     public MoveResourcePropertiesResponseErrors errors() {
         return this.errors;
     }
@@ -78,6 +90,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="existingTargetId")
     private @Nullable String existingTargetId;
 
+    /**
+     * @return Gets or sets the existing target ARM Id of the resource.
+     * 
+     */
     public Optional<String> existingTargetId() {
         return Optional.ofNullable(this.existingTargetId);
     }
@@ -89,6 +105,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="isResolveRequired", required=true)
     private Boolean isResolveRequired;
 
+    /**
+     * @return Gets a value indicating whether the resolve action is required over the move collection.
+     * 
+     */
     public Boolean isResolveRequired() {
         return this.isResolveRequired;
     }
@@ -100,6 +120,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="moveStatus", required=true)
     private MoveResourcePropertiesResponseMoveStatus moveStatus;
 
+    /**
+     * @return Defines the move resource status.
+     * 
+     */
     public MoveResourcePropertiesResponseMoveStatus moveStatus() {
         return this.moveStatus;
     }
@@ -111,6 +135,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Defines the provisioning states.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -122,6 +150,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="resourceSettings")
     private @Nullable Object resourceSettings;
 
+    /**
+     * @return Gets or sets the resource settings.
+     * 
+     */
     public Optional<Object> resourceSettings() {
         return Optional.ofNullable(this.resourceSettings);
     }
@@ -133,6 +165,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="sourceId", required=true)
     private String sourceId;
 
+    /**
+     * @return Gets or sets the Source ARM Id of the resource.
+     * 
+     */
     public String sourceId() {
         return this.sourceId;
     }
@@ -144,6 +180,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="sourceResourceSettings", required=true)
     private Object sourceResourceSettings;
 
+    /**
+     * @return Gets or sets the source resource settings.
+     * 
+     */
     public Object sourceResourceSettings() {
         return this.sourceResourceSettings;
     }
@@ -155,6 +195,10 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
     @Import(name="targetId", required=true)
     private String targetId;
 
+    /**
+     * @return Gets or sets the Target ARM Id of the resource.
+     * 
+     */
     public String targetId() {
         return this.targetId;
     }
@@ -193,64 +237,142 @@ public final class MoveResourcePropertiesResponse extends com.pulumi.resources.I
             $ = new MoveResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dependsOn Gets or sets the move resource dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<MoveResourceDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Gets or sets the move resource dependencies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(MoveResourceDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param dependsOnOverrides Gets or sets the move resource dependencies overrides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOnOverrides(@Nullable List<MoveResourceDependencyOverrideResponse> dependsOnOverrides) {
             $.dependsOnOverrides = dependsOnOverrides;
             return this;
         }
 
+        /**
+         * @param dependsOnOverrides Gets or sets the move resource dependencies overrides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOnOverrides(MoveResourceDependencyOverrideResponse... dependsOnOverrides) {
             return dependsOnOverrides(List.of(dependsOnOverrides));
         }
 
+        /**
+         * @param errors Defines the move resource errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(MoveResourcePropertiesResponseErrors errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param existingTargetId Gets or sets the existing target ARM Id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder existingTargetId(@Nullable String existingTargetId) {
             $.existingTargetId = existingTargetId;
             return this;
         }
 
+        /**
+         * @param isResolveRequired Gets a value indicating whether the resolve action is required over the move collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isResolveRequired(Boolean isResolveRequired) {
             $.isResolveRequired = isResolveRequired;
             return this;
         }
 
+        /**
+         * @param moveStatus Defines the move resource status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveStatus(MoveResourcePropertiesResponseMoveStatus moveStatus) {
             $.moveStatus = moveStatus;
             return this;
         }
 
+        /**
+         * @param provisioningState Defines the provisioning states.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceSettings Gets or sets the resource settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceSettings(@Nullable Object resourceSettings) {
             $.resourceSettings = resourceSettings;
             return this;
         }
 
+        /**
+         * @param sourceId Gets or sets the Source ARM Id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceId(String sourceId) {
             $.sourceId = sourceId;
             return this;
         }
 
+        /**
+         * @param sourceResourceSettings Gets or sets the source resource settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceSettings(Object sourceResourceSettings) {
             $.sourceResourceSettings = sourceResourceSettings;
             return this;
         }
 
+        /**
+         * @param targetId Gets or sets the Target ARM Id of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetId(String targetId) {
             $.targetId = targetId;
             return this;

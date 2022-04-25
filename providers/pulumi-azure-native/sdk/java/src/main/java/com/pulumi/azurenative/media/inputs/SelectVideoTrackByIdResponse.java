@@ -26,6 +26,11 @@ public final class SelectVideoTrackByIdResponse extends com.pulumi.resources.Inv
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.SelectVideoTrackById&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -37,6 +42,10 @@ public final class SelectVideoTrackByIdResponse extends com.pulumi.resources.Inv
     @Import(name="trackId", required=true)
     private Double trackId;
 
+    /**
+     * @return Track identifier to select
+     * 
+     */
     public Double trackId() {
         return this.trackId;
     }
@@ -66,11 +75,24 @@ public final class SelectVideoTrackByIdResponse extends com.pulumi.resources.Inv
             $ = new SelectVideoTrackByIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.SelectVideoTrackById&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param trackId Track identifier to select
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackId(Double trackId) {
             $.trackId = trackId;
             return this;

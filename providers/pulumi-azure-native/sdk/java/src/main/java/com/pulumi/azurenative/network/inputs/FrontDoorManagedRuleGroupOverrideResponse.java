@@ -28,6 +28,10 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
     @Import(name="exclusions")
     private @Nullable List<ManagedRuleExclusionResponse> exclusions;
 
+    /**
+     * @return Describes the exclusions that are applied to all rules in the group.
+     * 
+     */
     public Optional<List<ManagedRuleExclusionResponse>> exclusions() {
         return Optional.ofNullable(this.exclusions);
     }
@@ -39,6 +43,10 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
     @Import(name="ruleGroupName", required=true)
     private String ruleGroupName;
 
+    /**
+     * @return Describes the managed rule group to override.
+     * 
+     */
     public String ruleGroupName() {
         return this.ruleGroupName;
     }
@@ -50,6 +58,10 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
     @Import(name="rules")
     private @Nullable List<FrontDoorManagedRuleOverrideResponse> rules;
 
+    /**
+     * @return List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+     * 
+     */
     public Optional<List<FrontDoorManagedRuleOverrideResponse>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -80,25 +92,55 @@ public final class FrontDoorManagedRuleGroupOverrideResponse extends com.pulumi.
             $ = new FrontDoorManagedRuleGroupOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to all rules in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(@Nullable List<ManagedRuleExclusionResponse> exclusions) {
             $.exclusions = exclusions;
             return this;
         }
 
+        /**
+         * @param exclusions Describes the exclusions that are applied to all rules in the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclusions(ManagedRuleExclusionResponse... exclusions) {
             return exclusions(List.of(exclusions));
         }
 
+        /**
+         * @param ruleGroupName Describes the managed rule group to override.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleGroupName(String ruleGroupName) {
             $.ruleGroupName = ruleGroupName;
             return this;
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable List<FrontDoorManagedRuleOverrideResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules that will be disabled. If none specified, all rules in the group will be disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(FrontDoorManagedRuleOverrideResponse... rules) {
             return rules(List.of(rules));
         }

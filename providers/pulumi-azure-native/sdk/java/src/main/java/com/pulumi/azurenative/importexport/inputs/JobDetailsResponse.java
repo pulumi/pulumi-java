@@ -37,6 +37,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="backupDriveManifest")
     private @Nullable Boolean backupDriveManifest;
 
+    /**
+     * @return Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.
+     * 
+     */
     public Optional<Boolean> backupDriveManifest() {
         return Optional.ofNullable(this.backupDriveManifest);
     }
@@ -48,6 +52,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="cancelRequested")
     private @Nullable Boolean cancelRequested;
 
+    /**
+     * @return Indicates whether a request has been submitted to cancel the job.
+     * 
+     */
     public Optional<Boolean> cancelRequested() {
         return Optional.ofNullable(this.cancelRequested);
     }
@@ -59,6 +67,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deliveryPackage")
     private @Nullable DeliveryPackageInformationResponse deliveryPackage;
 
+    /**
+     * @return Contains information about the package being shipped by the customer to the Microsoft data center.
+     * 
+     */
     public Optional<DeliveryPackageInformationResponse> deliveryPackage() {
         return Optional.ofNullable(this.deliveryPackage);
     }
@@ -70,6 +82,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="diagnosticsPath")
     private @Nullable String diagnosticsPath;
 
+    /**
+     * @return The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.
+     * 
+     */
     public Optional<String> diagnosticsPath() {
         return Optional.ofNullable(this.diagnosticsPath);
     }
@@ -81,6 +97,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="driveList")
     private @Nullable List<DriveStatusResponse> driveList;
 
+    /**
+     * @return List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
+     * 
+     */
     public Optional<List<DriveStatusResponse>> driveList() {
         return Optional.ofNullable(this.driveList);
     }
@@ -92,6 +112,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="encryptionKey")
     private @Nullable EncryptionKeyDetailsResponse encryptionKey;
 
+    /**
+     * @return Contains information about the encryption key.
+     * 
+     */
     public Optional<EncryptionKeyDetailsResponse> encryptionKey() {
         return Optional.ofNullable(this.encryptionKey);
     }
@@ -103,6 +127,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="export")
     private @Nullable ExportResponse export;
 
+    /**
+     * @return A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.
+     * 
+     */
     public Optional<ExportResponse> export() {
         return Optional.ofNullable(this.export);
     }
@@ -114,6 +142,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="incompleteBlobListUri")
     private @Nullable String incompleteBlobListUri;
 
+    /**
+     * @return A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.
+     * 
+     */
     public Optional<String> incompleteBlobListUri() {
         return Optional.ofNullable(this.incompleteBlobListUri);
     }
@@ -125,6 +157,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobType")
     private @Nullable String jobType;
 
+    /**
+     * @return The type of job
+     * 
+     */
     public Optional<String> jobType() {
         return Optional.ofNullable(this.jobType);
     }
@@ -136,6 +172,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="logLevel")
     private @Nullable String logLevel;
 
+    /**
+     * @return Default value is Error. Indicates whether error logging or verbose logging will be enabled.
+     * 
+     */
     public Optional<String> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -147,6 +187,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="percentComplete")
     private @Nullable Integer percentComplete;
 
+    /**
+     * @return Overall percentage completed for the job.
+     * 
+     */
     public Optional<Integer> percentComplete() {
         return Optional.ofNullable(this.percentComplete);
     }
@@ -158,6 +202,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Specifies the provisioning state of the job.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -169,6 +217,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="returnAddress")
     private @Nullable ReturnAddressResponse returnAddress;
 
+    /**
+     * @return Specifies the return address information for the job.
+     * 
+     */
     public Optional<ReturnAddressResponse> returnAddress() {
         return Optional.ofNullable(this.returnAddress);
     }
@@ -180,6 +232,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="returnPackage")
     private @Nullable PackageInformationResponse returnPackage;
 
+    /**
+     * @return Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned.
+     * 
+     */
     public Optional<PackageInformationResponse> returnPackage() {
         return Optional.ofNullable(this.returnPackage);
     }
@@ -191,6 +247,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="returnShipping")
     private @Nullable ReturnShippingResponse returnShipping;
 
+    /**
+     * @return Specifies the return carrier and customer&#39;s account with the carrier.
+     * 
+     */
     public Optional<ReturnShippingResponse> returnShipping() {
         return Optional.ofNullable(this.returnShipping);
     }
@@ -202,6 +262,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shippingInformation")
     private @Nullable ShippingInformationResponse shippingInformation;
 
+    /**
+     * @return Contains information about the Microsoft datacenter to which the drives should be shipped.
+     * 
+     */
     public Optional<ShippingInformationResponse> shippingInformation() {
         return Optional.ofNullable(this.shippingInformation);
     }
@@ -213,6 +277,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Current state of the job.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -224,6 +292,10 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageAccountId")
     private @Nullable String storageAccountId;
 
+    /**
+     * @return The resource identifier of the storage account where data will be imported to or exported from.
+     * 
+     */
     public Optional<String> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
@@ -269,95 +341,209 @@ public final class JobDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupDriveManifest Default value is false. Indicates whether the manifest files on the drives should be copied to block blobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupDriveManifest(@Nullable Boolean backupDriveManifest) {
             $.backupDriveManifest = backupDriveManifest;
             return this;
         }
 
+        /**
+         * @param cancelRequested Indicates whether a request has been submitted to cancel the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cancelRequested(@Nullable Boolean cancelRequested) {
             $.cancelRequested = cancelRequested;
             return this;
         }
 
+        /**
+         * @param deliveryPackage Contains information about the package being shipped by the customer to the Microsoft data center.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deliveryPackage(@Nullable DeliveryPackageInformationResponse deliveryPackage) {
             $.deliveryPackage = deliveryPackage;
             return this;
         }
 
+        /**
+         * @param diagnosticsPath The virtual blob directory to which the copy logs and backups of drive manifest files (if enabled) will be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticsPath(@Nullable String diagnosticsPath) {
             $.diagnosticsPath = diagnosticsPath;
             return this;
         }
 
+        /**
+         * @param driveList List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveList(@Nullable List<DriveStatusResponse> driveList) {
             $.driveList = driveList;
             return this;
         }
 
+        /**
+         * @param driveList List of up to ten drives that comprise the job. The drive list is a required element for an import job; it is not specified for export jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driveList(DriveStatusResponse... driveList) {
             return driveList(List.of(driveList));
         }
 
+        /**
+         * @param encryptionKey Contains information about the encryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionKey(@Nullable EncryptionKeyDetailsResponse encryptionKey) {
             $.encryptionKey = encryptionKey;
             return this;
         }
 
+        /**
+         * @param export A property containing information about the blobs to be exported for an export job. This property is included for export jobs only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder export(@Nullable ExportResponse export) {
             $.export = export;
             return this;
         }
 
+        /**
+         * @param incompleteBlobListUri A blob path that points to a block blob containing a list of blob names that were not exported due to insufficient drive space. If all blobs were exported successfully, then this element is not included in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder incompleteBlobListUri(@Nullable String incompleteBlobListUri) {
             $.incompleteBlobListUri = incompleteBlobListUri;
             return this;
         }
 
+        /**
+         * @param jobType The type of job
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(@Nullable String jobType) {
             $.jobType = jobType;
             return this;
         }
 
+        /**
+         * @param logLevel Default value is Error. Indicates whether error logging or verbose logging will be enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable String logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param percentComplete Overall percentage completed for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder percentComplete(@Nullable Integer percentComplete) {
             $.percentComplete = percentComplete;
             return this;
         }
 
+        /**
+         * @param provisioningState Specifies the provisioning state of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param returnAddress Specifies the return address information for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnAddress(@Nullable ReturnAddressResponse returnAddress) {
             $.returnAddress = returnAddress;
             return this;
         }
 
+        /**
+         * @param returnPackage Contains information about the package being shipped from the Microsoft data center to the customer to return the drives. The format is the same as the deliveryPackage property above. This property is not included if the drives have not yet been returned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnPackage(@Nullable PackageInformationResponse returnPackage) {
             $.returnPackage = returnPackage;
             return this;
         }
 
+        /**
+         * @param returnShipping Specifies the return carrier and customer&#39;s account with the carrier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnShipping(@Nullable ReturnShippingResponse returnShipping) {
             $.returnShipping = returnShipping;
             return this;
         }
 
+        /**
+         * @param shippingInformation Contains information about the Microsoft datacenter to which the drives should be shipped.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shippingInformation(@Nullable ShippingInformationResponse shippingInformation) {
             $.shippingInformation = shippingInformation;
             return this;
         }
 
+        /**
+         * @param state Current state of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param storageAccountId The resource identifier of the storage account where data will be imported to or exported from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(@Nullable String storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;

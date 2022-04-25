@@ -26,6 +26,10 @@ public final class ContainerExecResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="command")
     private @Nullable List<String> command;
 
+    /**
+     * @return The commands to execute within the container.
+     * 
+     */
     public Optional<List<String>> command() {
         return Optional.ofNullable(this.command);
     }
@@ -54,11 +58,23 @@ public final class ContainerExecResponse extends com.pulumi.resources.InvokeArgs
             $ = new ContainerExecResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param command The commands to execute within the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(@Nullable List<String> command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param command The commands to execute within the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String... command) {
             return command(List.of(command));
         }

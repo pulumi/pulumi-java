@@ -27,6 +27,10 @@ public final class StaticRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="addressPrefixes")
     private @Nullable Output<List<String>> addressPrefixes;
 
+    /**
+     * @return List of all address prefixes.
+     * 
+     */
     public Optional<Output<List<String>>> addressPrefixes() {
         return Optional.ofNullable(this.addressPrefixes);
     }
@@ -38,6 +42,10 @@ public final class StaticRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the StaticRoute that is unique within a VnetRoute.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class StaticRouteArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="nextHopIpAddress")
     private @Nullable Output<String> nextHopIpAddress;
 
+    /**
+     * @return The ip address of the next hop.
+     * 
+     */
     public Optional<Output<String>> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }
@@ -79,33 +91,75 @@ public final class StaticRouteArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StaticRouteArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefixes List of all address prefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(@Nullable Output<List<String>> addressPrefixes) {
             $.addressPrefixes = addressPrefixes;
             return this;
         }
 
+        /**
+         * @param addressPrefixes List of all address prefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(List<String> addressPrefixes) {
             return addressPrefixes(Output.of(addressPrefixes));
         }
 
+        /**
+         * @param addressPrefixes List of all address prefixes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefixes(String... addressPrefixes) {
             return addressPrefixes(List.of(addressPrefixes));
         }
 
+        /**
+         * @param name The name of the StaticRoute that is unique within a VnetRoute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the StaticRoute that is unique within a VnetRoute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param nextHopIpAddress The ip address of the next hop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(@Nullable Output<String> nextHopIpAddress) {
             $.nextHopIpAddress = nextHopIpAddress;
             return this;
         }
 
+        /**
+         * @param nextHopIpAddress The ip address of the next hop.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nextHopIpAddress(String nextHopIpAddress) {
             return nextHopIpAddress(Output.of(nextHopIpAddress));
         }

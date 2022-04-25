@@ -26,6 +26,10 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
     @Import(name="computeType")
     private @Nullable String computeType;
 
+    /**
+     * @return Compute type of the cluster which will execute data flow job.
+     * 
+     */
     public Optional<String> computeType() {
         return Optional.ofNullable(this.computeType);
     }
@@ -37,6 +41,10 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
     @Import(name="coreCount")
     private @Nullable Integer coreCount;
 
+    /**
+     * @return Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
+     * 
+     */
     public Optional<Integer> coreCount() {
         return Optional.ofNullable(this.coreCount);
     }
@@ -48,6 +56,10 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
     @Import(name="timeToLive")
     private @Nullable Integer timeToLive;
 
+    /**
+     * @return Time to live (in minutes) setting of the cluster which will execute data flow job.
+     * 
+     */
     public Optional<Integer> timeToLive() {
         return Optional.ofNullable(this.timeToLive);
     }
@@ -78,16 +90,34 @@ public final class IntegrationRuntimeDataFlowPropertiesResponse extends com.pulu
             $ = new IntegrationRuntimeDataFlowPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeType Compute type of the cluster which will execute data flow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(@Nullable String computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param coreCount Core count of the cluster which will execute data flow job. Supported values are: 8, 16, 32, 48, 80, 144 and 272.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(@Nullable Integer coreCount) {
             $.coreCount = coreCount;
             return this;
         }
 
+        /**
+         * @param timeToLive Time to live (in minutes) setting of the cluster which will execute data flow job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToLive(@Nullable Integer timeToLive) {
             $.timeToLive = timeToLive;
             return this;

@@ -25,6 +25,10 @@ public final class IpAddressRangeResponse extends com.pulumi.resources.InvokeArg
     @Import(name="addressRange")
     private @Nullable String addressRange;
 
+    /**
+     * @return The IP address range.
+     * 
+     */
     public Optional<String> addressRange() {
         return Optional.ofNullable(this.addressRange);
     }
@@ -53,6 +57,12 @@ public final class IpAddressRangeResponse extends com.pulumi.resources.InvokeArg
             $ = new IpAddressRangeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressRange The IP address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressRange(@Nullable String addressRange) {
             $.addressRange = addressRange;
             return this;

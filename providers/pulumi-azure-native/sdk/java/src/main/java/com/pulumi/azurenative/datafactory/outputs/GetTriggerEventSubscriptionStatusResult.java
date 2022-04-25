@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class GetTriggerEventSubscriptionStatusResult {
     /**
-     * Event Subscription Status.
+     * @return Event Subscription Status.
      * 
      */
     private final String status;
     /**
-     * Trigger name.
+     * @return Trigger name.
      * 
      */
     private final String triggerName;
@@ -29,16 +29,16 @@ public final class GetTriggerEventSubscriptionStatusResult {
     }
 
     /**
-     * Event Subscription Status.
+     * @return Event Subscription Status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Trigger name.
+     * @return Trigger name.
      * 
-    */
+     */
     public String triggerName() {
         return this.triggerName;
     }

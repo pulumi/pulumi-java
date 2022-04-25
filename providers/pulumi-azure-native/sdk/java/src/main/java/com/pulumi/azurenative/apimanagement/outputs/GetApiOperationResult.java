@@ -16,57 +16,57 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApiOperationResult {
     /**
-     * Description of the operation. May include HTML formatting tags.
+     * @return Description of the operation. May include HTML formatting tags.
      * 
      */
     private final @Nullable String description;
     /**
-     * Operation Name.
+     * @return Operation Name.
      * 
      */
     private final String displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+     * @return A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
      * 
      */
     private final String method;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Operation Policies
+     * @return Operation Policies
      * 
      */
     private final @Nullable String policies;
     /**
-     * An entity containing request details.
+     * @return An entity containing request details.
      * 
      */
     private final @Nullable RequestContractResponse request;
     /**
-     * Array of Operation responses.
+     * @return Array of Operation responses.
      * 
      */
     private final @Nullable List<ResponseContractResponse> responses;
     /**
-     * Collection of URL template parameters.
+     * @return Collection of URL template parameters.
      * 
      */
     private final @Nullable List<ParameterContractResponse> templateParameters;
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
      */
     private final String type;
     /**
-     * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+     * @return Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
      * 
      */
     private final String urlTemplate;
@@ -98,79 +98,79 @@ public final class GetApiOperationResult {
     }
 
     /**
-     * Description of the operation. May include HTML formatting tags.
+     * @return Description of the operation. May include HTML formatting tags.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Operation Name.
+     * @return Operation Name.
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
+     * @return A Valid HTTP Operation Method. Typical Http Methods like GET, PUT, POST but not limited by only them.
      * 
-    */
+     */
     public String method() {
         return this.method;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Operation Policies
+     * @return Operation Policies
      * 
-    */
+     */
     public Optional<String> policies() {
         return Optional.ofNullable(this.policies);
     }
     /**
-     * An entity containing request details.
+     * @return An entity containing request details.
      * 
-    */
+     */
     public Optional<RequestContractResponse> request() {
         return Optional.ofNullable(this.request);
     }
     /**
-     * Array of Operation responses.
+     * @return Array of Operation responses.
      * 
-    */
+     */
     public List<ResponseContractResponse> responses() {
         return this.responses == null ? List.of() : this.responses;
     }
     /**
-     * Collection of URL template parameters.
+     * @return Collection of URL template parameters.
      * 
-    */
+     */
     public List<ParameterContractResponse> templateParameters() {
         return this.templateParameters == null ? List.of() : this.templateParameters;
     }
     /**
-     * Resource type for API Management resource.
+     * @return Resource type for API Management resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
+     * @return Relative URL template identifying the target resource for this operation. May include parameters. Example: /customers/{cid}/orders/{oid}/?date={date}
      * 
-    */
+     */
     public String urlTemplate() {
         return this.urlTemplate;
     }

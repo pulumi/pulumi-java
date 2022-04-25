@@ -25,6 +25,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="applicationPassword")
     private @Nullable String applicationPassword;
 
+    /**
+     * @return The application password.
+     * 
+     */
     public Optional<String> applicationPassword() {
         return Optional.ofNullable(this.applicationPassword);
     }
@@ -36,6 +40,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="associationAssignedCode")
     private @Nullable String associationAssignedCode;
 
+    /**
+     * @return The association assigned code.
+     * 
+     */
     public Optional<String> associationAssignedCode() {
         return Optional.ofNullable(this.associationAssignedCode);
     }
@@ -47,6 +55,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="controllingAgencyCode")
     private @Nullable String controllingAgencyCode;
 
+    /**
+     * @return The controlling agency code.
+     * 
+     */
     public Optional<String> controllingAgencyCode() {
         return Optional.ofNullable(this.controllingAgencyCode);
     }
@@ -58,6 +70,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="functionalGroupId")
     private @Nullable String functionalGroupId;
 
+    /**
+     * @return The functional group id.
+     * 
+     */
     public Optional<String> functionalGroupId() {
         return Optional.ofNullable(this.functionalGroupId);
     }
@@ -69,6 +85,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="groupHeaderMessageRelease")
     private @Nullable String groupHeaderMessageRelease;
 
+    /**
+     * @return The group header message release.
+     * 
+     */
     public Optional<String> groupHeaderMessageRelease() {
         return Optional.ofNullable(this.groupHeaderMessageRelease);
     }
@@ -80,6 +100,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="groupHeaderMessageVersion")
     private @Nullable String groupHeaderMessageVersion;
 
+    /**
+     * @return The group header message version.
+     * 
+     */
     public Optional<String> groupHeaderMessageVersion() {
         return Optional.ofNullable(this.groupHeaderMessageVersion);
     }
@@ -91,6 +115,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="messageAssociationAssignedCode")
     private @Nullable String messageAssociationAssignedCode;
 
+    /**
+     * @return The message association assigned code.
+     * 
+     */
     public Optional<String> messageAssociationAssignedCode() {
         return Optional.ofNullable(this.messageAssociationAssignedCode);
     }
@@ -102,6 +130,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="messageId")
     private @Nullable String messageId;
 
+    /**
+     * @return The message id on which this envelope settings has to be applied.
+     * 
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
@@ -113,6 +145,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="messageRelease")
     private @Nullable String messageRelease;
 
+    /**
+     * @return The message release version on which this envelope settings has to be applied.
+     * 
+     */
     public Optional<String> messageRelease() {
         return Optional.ofNullable(this.messageRelease);
     }
@@ -124,6 +160,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="messageVersion")
     private @Nullable String messageVersion;
 
+    /**
+     * @return The message version on which this envelope settings has to be applied.
+     * 
+     */
     public Optional<String> messageVersion() {
         return Optional.ofNullable(this.messageVersion);
     }
@@ -135,6 +175,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="receiverApplicationId")
     private @Nullable String receiverApplicationId;
 
+    /**
+     * @return The receiver application id.
+     * 
+     */
     public Optional<String> receiverApplicationId() {
         return Optional.ofNullable(this.receiverApplicationId);
     }
@@ -146,6 +190,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="receiverApplicationQualifier")
     private @Nullable String receiverApplicationQualifier;
 
+    /**
+     * @return The receiver application qualifier.
+     * 
+     */
     public Optional<String> receiverApplicationQualifier() {
         return Optional.ofNullable(this.receiverApplicationQualifier);
     }
@@ -157,6 +205,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="senderApplicationId")
     private @Nullable String senderApplicationId;
 
+    /**
+     * @return The sender application id.
+     * 
+     */
     public Optional<String> senderApplicationId() {
         return Optional.ofNullable(this.senderApplicationId);
     }
@@ -168,6 +220,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="senderApplicationQualifier")
     private @Nullable String senderApplicationQualifier;
 
+    /**
+     * @return The sender application qualifier.
+     * 
+     */
     public Optional<String> senderApplicationQualifier() {
         return Optional.ofNullable(this.senderApplicationQualifier);
     }
@@ -179,6 +235,10 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
     @Import(name="targetNamespace")
     private @Nullable String targetNamespace;
 
+    /**
+     * @return The target namespace on which this envelope settings has to be applied.
+     * 
+     */
     public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
@@ -221,76 +281,166 @@ public final class EdifactEnvelopeOverrideResponse extends com.pulumi.resources.
             $ = new EdifactEnvelopeOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param applicationPassword The application password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationPassword(@Nullable String applicationPassword) {
             $.applicationPassword = applicationPassword;
             return this;
         }
 
+        /**
+         * @param associationAssignedCode The association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder associationAssignedCode(@Nullable String associationAssignedCode) {
             $.associationAssignedCode = associationAssignedCode;
             return this;
         }
 
+        /**
+         * @param controllingAgencyCode The controlling agency code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controllingAgencyCode(@Nullable String controllingAgencyCode) {
             $.controllingAgencyCode = controllingAgencyCode;
             return this;
         }
 
+        /**
+         * @param functionalGroupId The functional group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
             $.functionalGroupId = functionalGroupId;
             return this;
         }
 
+        /**
+         * @param groupHeaderMessageRelease The group header message release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupHeaderMessageRelease(@Nullable String groupHeaderMessageRelease) {
             $.groupHeaderMessageRelease = groupHeaderMessageRelease;
             return this;
         }
 
+        /**
+         * @param groupHeaderMessageVersion The group header message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupHeaderMessageVersion(@Nullable String groupHeaderMessageVersion) {
             $.groupHeaderMessageVersion = groupHeaderMessageVersion;
             return this;
         }
 
+        /**
+         * @param messageAssociationAssignedCode The message association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             $.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
+        /**
+         * @param messageId The message id on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(@Nullable String messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageRelease The message release version on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRelease(@Nullable String messageRelease) {
             $.messageRelease = messageRelease;
             return this;
         }
 
+        /**
+         * @param messageVersion The message version on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(@Nullable String messageVersion) {
             $.messageVersion = messageVersion;
             return this;
         }
 
+        /**
+         * @param receiverApplicationId The receiver application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverApplicationId(@Nullable String receiverApplicationId) {
             $.receiverApplicationId = receiverApplicationId;
             return this;
         }
 
+        /**
+         * @param receiverApplicationQualifier The receiver application qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverApplicationQualifier(@Nullable String receiverApplicationQualifier) {
             $.receiverApplicationQualifier = receiverApplicationQualifier;
             return this;
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(@Nullable String senderApplicationId) {
             $.senderApplicationId = senderApplicationId;
             return this;
         }
 
+        /**
+         * @param senderApplicationQualifier The sender application qualifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationQualifier(@Nullable String senderApplicationQualifier) {
             $.senderApplicationQualifier = senderApplicationQualifier;
             return this;
         }
 
+        /**
+         * @param targetNamespace The target namespace on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(@Nullable String targetNamespace) {
             $.targetNamespace = targetNamespace;
             return this;

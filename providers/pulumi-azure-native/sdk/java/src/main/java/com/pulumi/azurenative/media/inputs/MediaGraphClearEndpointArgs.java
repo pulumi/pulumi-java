@@ -28,6 +28,10 @@ public final class MediaGraphClearEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="credentials")
     private @Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials;
 
+    /**
+     * @return Polymorphic credentials to present to the endpoint.
+     * 
+     */
     public Optional<Output<MediaGraphUsernamePasswordCredentialsArgs>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -40,6 +44,11 @@ public final class MediaGraphClearEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -51,6 +60,10 @@ public final class MediaGraphClearEndpointArgs extends com.pulumi.resources.Reso
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return Url for the endpoint.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -81,29 +94,67 @@ public final class MediaGraphClearEndpointArgs extends com.pulumi.resources.Reso
             $ = new MediaGraphClearEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param credentials Polymorphic credentials to present to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<MediaGraphUsernamePasswordCredentialsArgs> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials Polymorphic credentials to present to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(MediaGraphUsernamePasswordCredentialsArgs credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.MediaGraphClearEndpoint&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param url Url for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Url for the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

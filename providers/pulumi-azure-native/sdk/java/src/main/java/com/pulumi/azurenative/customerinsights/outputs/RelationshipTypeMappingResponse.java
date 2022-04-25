@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class RelationshipTypeMappingResponse {
     /**
-     * Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
+     * @return Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
      * 
      */
     private final List<RelationshipTypeFieldMappingResponse> fieldMappings;
@@ -22,9 +22,9 @@ public final class RelationshipTypeMappingResponse {
     }
 
     /**
-     * Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
+     * @return Maps a profile property with the StrongId of related profile. This is an array to support StrongIds that are composite key as well.
      * 
-    */
+     */
     public List<RelationshipTypeFieldMappingResponse> fieldMappings() {
         return this.fieldMappings;
     }

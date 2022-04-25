@@ -28,6 +28,10 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
     @Import(name="allocationWeight")
     private @Nullable Output<Integer> allocationWeight;
 
+    /**
+     * @return weight to apply for a given iot h.
+     * 
+     */
     public Optional<Output<Integer>> allocationWeight() {
         return Optional.ofNullable(this.allocationWeight);
     }
@@ -39,6 +43,10 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
     @Import(name="applyAllocationPolicy")
     private @Nullable Output<Boolean> applyAllocationPolicy;
 
+    /**
+     * @return flag for applying allocationPolicy or not for a given iot hub.
+     * 
+     */
     public Optional<Output<Boolean>> applyAllocationPolicy() {
         return Optional.ofNullable(this.applyAllocationPolicy);
     }
@@ -50,6 +58,10 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
     @Import(name="connectionString", required=true)
     private Output<String> connectionString;
 
+    /**
+     * @return Connection string of the IoT hub.
+     * 
+     */
     public Output<String> connectionString() {
         return this.connectionString;
     }
@@ -61,6 +73,10 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return ARM region of the IoT hub.
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -92,38 +108,86 @@ public final class IotHubDefinitionDescriptionArgs extends com.pulumi.resources.
             $ = new IotHubDefinitionDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationWeight weight to apply for a given iot h.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationWeight(@Nullable Output<Integer> allocationWeight) {
             $.allocationWeight = allocationWeight;
             return this;
         }
 
+        /**
+         * @param allocationWeight weight to apply for a given iot h.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationWeight(Integer allocationWeight) {
             return allocationWeight(Output.of(allocationWeight));
         }
 
+        /**
+         * @param applyAllocationPolicy flag for applying allocationPolicy or not for a given iot hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyAllocationPolicy(@Nullable Output<Boolean> applyAllocationPolicy) {
             $.applyAllocationPolicy = applyAllocationPolicy;
             return this;
         }
 
+        /**
+         * @param applyAllocationPolicy flag for applying allocationPolicy or not for a given iot hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applyAllocationPolicy(Boolean applyAllocationPolicy) {
             return applyAllocationPolicy(Output.of(applyAllocationPolicy));
         }
 
+        /**
+         * @param connectionString Connection string of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString Connection string of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param location ARM region of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location ARM region of the IoT hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }

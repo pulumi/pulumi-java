@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class EndpointRangeDescriptionResponse {
     /**
-     * End port of a range of ports
+     * @return End port of a range of ports
      * 
      */
     private final Integer endPort;
     /**
-     * Starting port of a range of ports
+     * @return Starting port of a range of ports
      * 
      */
     private final Integer startPort;
@@ -29,16 +29,16 @@ public final class EndpointRangeDescriptionResponse {
     }
 
     /**
-     * End port of a range of ports
+     * @return End port of a range of ports
      * 
-    */
+     */
     public Integer endPort() {
         return this.endPort;
     }
     /**
-     * Starting port of a range of ports
+     * @return Starting port of a range of ports
      * 
-    */
+     */
     public Integer startPort() {
         return this.startPort;
     }

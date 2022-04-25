@@ -23,6 +23,10 @@ public final class TlsCertificatePropertiesResponse extends com.pulumi.resources
     @Import(name="location", required=true)
     private String location;
 
+    /**
+     * @return Indicates the location of the certificates.
+     * 
+     */
     public String location() {
         return this.location;
     }
@@ -34,6 +38,10 @@ public final class TlsCertificatePropertiesResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of certificate location.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class TlsCertificatePropertiesResponse extends com.pulumi.resources
             $ = new TlsCertificatePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location Indicates the location of the certificates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param type The type of certificate location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

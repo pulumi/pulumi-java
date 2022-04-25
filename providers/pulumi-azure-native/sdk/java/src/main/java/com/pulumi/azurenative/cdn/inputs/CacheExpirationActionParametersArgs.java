@@ -29,6 +29,10 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
     @Import(name="cacheBehavior", required=true)
     private Output<Either<String,CacheBehavior>> cacheBehavior;
 
+    /**
+     * @return Caching behavior for the requests
+     * 
+     */
     public Output<Either<String,CacheBehavior>> cacheBehavior() {
         return this.cacheBehavior;
     }
@@ -40,6 +44,10 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
     @Import(name="cacheDuration")
     private @Nullable Output<String> cacheDuration;
 
+    /**
+     * @return The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
+     * 
+     */
     public Optional<Output<String>> cacheDuration() {
         return Optional.ofNullable(this.cacheDuration);
     }
@@ -51,6 +59,10 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
     @Import(name="cacheType", required=true)
     private Output<Either<String,CacheType>> cacheType;
 
+    /**
+     * @return The level at which the content needs to be cached.
+     * 
+     */
     public Output<Either<String,CacheType>> cacheType() {
         return this.cacheType;
     }
@@ -89,45 +101,105 @@ public final class CacheExpirationActionParametersArgs extends com.pulumi.resour
             $ = new CacheExpirationActionParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheBehavior(Output<Either<String,CacheBehavior>> cacheBehavior) {
             $.cacheBehavior = cacheBehavior;
             return this;
         }
 
+        /**
+         * @param cacheBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheBehavior(Either<String,CacheBehavior> cacheBehavior) {
             return cacheBehavior(Output.of(cacheBehavior));
         }
 
+        /**
+         * @param cacheBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheBehavior(String cacheBehavior) {
             return cacheBehavior(Either.ofLeft(cacheBehavior));
         }
 
+        /**
+         * @param cacheBehavior Caching behavior for the requests
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheBehavior(CacheBehavior cacheBehavior) {
             return cacheBehavior(Either.ofRight(cacheBehavior));
         }
 
+        /**
+         * @param cacheDuration The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheDuration(@Nullable Output<String> cacheDuration) {
             $.cacheDuration = cacheDuration;
             return this;
         }
 
+        /**
+         * @param cacheDuration The duration for which the content needs to be cached. Allowed format is [d.]hh:mm:ss
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheDuration(String cacheDuration) {
             return cacheDuration(Output.of(cacheDuration));
         }
 
+        /**
+         * @param cacheType The level at which the content needs to be cached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheType(Output<Either<String,CacheType>> cacheType) {
             $.cacheType = cacheType;
             return this;
         }
 
+        /**
+         * @param cacheType The level at which the content needs to be cached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheType(Either<String,CacheType> cacheType) {
             return cacheType(Output.of(cacheType));
         }
 
+        /**
+         * @param cacheType The level at which the content needs to be cached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheType(String cacheType) {
             return cacheType(Either.ofLeft(cacheType));
         }
 
+        /**
+         * @param cacheType The level at which the content needs to be cached.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheType(CacheType cacheType) {
             return cacheType(Either.ofRight(cacheType));
         }

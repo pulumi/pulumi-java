@@ -26,6 +26,10 @@ public final class PublicIPAddressConfigurationResponse extends com.pulumi.resou
     @Import(name="ipAddressIds")
     private @Nullable List<String> ipAddressIds;
 
+    /**
+     * @return The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
+     * 
+     */
     public Optional<List<String>> ipAddressIds() {
         return Optional.ofNullable(this.ipAddressIds);
     }
@@ -37,6 +41,10 @@ public final class PublicIPAddressConfigurationResponse extends com.pulumi.resou
     @Import(name="provision")
     private @Nullable String provision;
 
+    /**
+     * @return The default value is BatchManaged
+     * 
+     */
     public Optional<String> provision() {
         return Optional.ofNullable(this.provision);
     }
@@ -66,15 +74,33 @@ public final class PublicIPAddressConfigurationResponse extends com.pulumi.resou
             $ = new PublicIPAddressConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddressIds The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressIds(@Nullable List<String> ipAddressIds) {
             $.ipAddressIds = ipAddressIds;
             return this;
         }
 
+        /**
+         * @param ipAddressIds The number of IPs specified here limits the maximum size of the Pool - 100 dedicated nodes or 100 low-priority nodes can be allocated for each public IP. For example, a pool needing 250 dedicated VMs would need at least 3 public IPs specified. Each element of this collection is of the form: /subscriptions/{subscription}/resourceGroups/{group}/providers/Microsoft.Network/publicIPAddresses/{ip}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressIds(String... ipAddressIds) {
             return ipAddressIds(List.of(ipAddressIds));
         }
 
+        /**
+         * @param provision The default value is BatchManaged
+         * 
+         * @return builder
+         * 
+         */
         public Builder provision(@Nullable String provision) {
             $.provision = provision;
             return this;

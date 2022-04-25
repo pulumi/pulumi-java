@@ -16,23 +16,23 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConfigurationResponse {
     /**
-     * ActiveRevisionsMode controls how active revisions are handled for the Container app:
+     * @return ActiveRevisionsMode controls how active revisions are handled for the Container app:
      * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
      * 
      */
     private final @Nullable String activeRevisionsMode;
     /**
-     * Ingress configurations.
+     * @return Ingress configurations.
      * 
      */
     private final @Nullable IngressResponse ingress;
     /**
-     * Collection of private container registry credentials for containers used by the Container app
+     * @return Collection of private container registry credentials for containers used by the Container app
      * 
      */
     private final @Nullable List<RegistryCredentialsResponse> registries;
     /**
-     * Collection of secrets used by a Container app
+     * @return Collection of secrets used by a Container app
      * 
      */
     private final @Nullable List<SecretResponse> secrets;
@@ -50,31 +50,31 @@ public final class ConfigurationResponse {
     }
 
     /**
-     * ActiveRevisionsMode controls how active revisions are handled for the Container app:
+     * @return ActiveRevisionsMode controls how active revisions are handled for the Container app:
      * &lt;list&gt;&lt;item&gt;Multiple: multiple revisions can be active. If no value if provided, this is the default&lt;/item&gt;&lt;item&gt;Single: Only one revision can be active at a time. Revision weights can not be used in this mode&lt;/item&gt;&lt;/list&gt;
      * 
-    */
+     */
     public Optional<String> activeRevisionsMode() {
         return Optional.ofNullable(this.activeRevisionsMode);
     }
     /**
-     * Ingress configurations.
+     * @return Ingress configurations.
      * 
-    */
+     */
     public Optional<IngressResponse> ingress() {
         return Optional.ofNullable(this.ingress);
     }
     /**
-     * Collection of private container registry credentials for containers used by the Container app
+     * @return Collection of private container registry credentials for containers used by the Container app
      * 
-    */
+     */
     public List<RegistryCredentialsResponse> registries() {
         return this.registries == null ? List.of() : this.registries;
     }
     /**
-     * Collection of secrets used by a Container app
+     * @return Collection of secrets used by a Container app
      * 
-    */
+     */
     public List<SecretResponse> secrets() {
         return this.secrets == null ? List.of() : this.secrets;
     }

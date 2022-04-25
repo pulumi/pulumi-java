@@ -19,6 +19,10 @@ public final class ListIotDpsResourceKeysArgs extends com.pulumi.resources.Invok
     @Import(name="provisioningServiceName", required=true)
     private String provisioningServiceName;
 
+    /**
+     * @return The provisioning service name to get the shared access keys for.
+     * 
+     */
     public String provisioningServiceName() {
         return this.provisioningServiceName;
     }
@@ -30,6 +34,10 @@ public final class ListIotDpsResourceKeysArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class ListIotDpsResourceKeysArgs extends com.pulumi.resources.Invok
             $ = new ListIotDpsResourceKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningServiceName The provisioning service name to get the shared access keys for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningServiceName(String provisioningServiceName) {
             $.provisioningServiceName = provisioningServiceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

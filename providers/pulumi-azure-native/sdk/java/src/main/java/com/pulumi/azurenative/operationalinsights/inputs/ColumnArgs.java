@@ -29,6 +29,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataTypeHint")
     private @Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint;
 
+    /**
+     * @return Column data type logical hint.
+     * 
+     */
     public Optional<Output<Either<String,ColumnDataTypeHintEnum>>> dataTypeHint() {
         return Optional.ofNullable(this.dataTypeHint);
     }
@@ -40,6 +44,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Column description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Column display name.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -62,6 +74,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Column name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -73,6 +89,10 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,ColumnTypeEnum>> type;
 
+    /**
+     * @return Column data type.
+     * 
+     */
     public Optional<Output<Either<String,ColumnTypeEnum>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -105,63 +125,147 @@ public final class ColumnArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ColumnArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataTypeHint Column data type logical hint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypeHint(@Nullable Output<Either<String,ColumnDataTypeHintEnum>> dataTypeHint) {
             $.dataTypeHint = dataTypeHint;
             return this;
         }
 
+        /**
+         * @param dataTypeHint Column data type logical hint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypeHint(Either<String,ColumnDataTypeHintEnum> dataTypeHint) {
             return dataTypeHint(Output.of(dataTypeHint));
         }
 
+        /**
+         * @param dataTypeHint Column data type logical hint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypeHint(String dataTypeHint) {
             return dataTypeHint(Either.ofLeft(dataTypeHint));
         }
 
+        /**
+         * @param dataTypeHint Column data type logical hint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataTypeHint(ColumnDataTypeHintEnum dataTypeHint) {
             return dataTypeHint(Either.ofRight(dataTypeHint));
         }
 
+        /**
+         * @param description Column description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Column description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Column display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Column display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param name Column name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Column name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type Column data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ColumnTypeEnum>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Column data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ColumnTypeEnum> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Column data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Column data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ColumnTypeEnum type) {
             return type(Either.ofRight(type));
         }

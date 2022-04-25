@@ -15,102 +15,102 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSecurityRuleResult {
     /**
-     * The network traffic is allowed or denied.
+     * @return The network traffic is allowed or denied.
      * 
      */
     private final String access;
     /**
-     * A description for this rule. Restricted to 140 chars.
+     * @return A description for this rule. Restricted to 140 chars.
      * 
      */
     private final @Nullable String description;
     /**
-     * The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
+     * @return The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
      * 
      */
     private final @Nullable String destinationAddressPrefix;
     /**
-     * The destination address prefixes. CIDR or destination IP ranges.
+     * @return The destination address prefixes. CIDR or destination IP ranges.
      * 
      */
     private final @Nullable List<String> destinationAddressPrefixes;
     /**
-     * The application security group specified as destination.
+     * @return The application security group specified as destination.
      * 
      */
     private final @Nullable List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups;
     /**
-     * The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
+     * @return The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     private final @Nullable String destinationPortRange;
     /**
-     * The destination port ranges.
+     * @return The destination port ranges.
      * 
      */
     private final @Nullable List<String> destinationPortRanges;
     /**
-     * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+     * @return The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
      * 
      */
     private final String direction;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     * @return The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
      */
     private final @Nullable Integer priority;
     /**
-     * Network protocol this rule applies to.
+     * @return Network protocol this rule applies to.
      * 
      */
     private final String protocol;
     /**
-     * The provisioning state of the security rule resource.
+     * @return The provisioning state of the security rule resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * @return The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
      */
     private final @Nullable String sourceAddressPrefix;
     /**
-     * The CIDR or source IP ranges.
+     * @return The CIDR or source IP ranges.
      * 
      */
     private final @Nullable List<String> sourceAddressPrefixes;
     /**
-     * The application security group specified as source.
+     * @return The application security group specified as source.
      * 
      */
     private final @Nullable List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups;
     /**
-     * The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
+     * @return The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
      */
     private final @Nullable String sourcePortRange;
     /**
-     * The source port ranges.
+     * @return The source port ranges.
      * 
      */
     private final @Nullable List<String> sourcePortRanges;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final @Nullable String type;
@@ -160,142 +160,142 @@ public final class GetSecurityRuleResult {
     }
 
     /**
-     * The network traffic is allowed or denied.
+     * @return The network traffic is allowed or denied.
      * 
-    */
+     */
     public String access() {
         return this.access;
     }
     /**
-     * A description for this rule. Restricted to 140 chars.
+     * @return A description for this rule. Restricted to 140 chars.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
+     * @return The destination address prefix. CIDR or destination IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used.
      * 
-    */
+     */
     public Optional<String> destinationAddressPrefix() {
         return Optional.ofNullable(this.destinationAddressPrefix);
     }
     /**
-     * The destination address prefixes. CIDR or destination IP ranges.
+     * @return The destination address prefixes. CIDR or destination IP ranges.
      * 
-    */
+     */
     public List<String> destinationAddressPrefixes() {
         return this.destinationAddressPrefixes == null ? List.of() : this.destinationAddressPrefixes;
     }
     /**
-     * The application security group specified as destination.
+     * @return The application security group specified as destination.
      * 
-    */
+     */
     public List<ApplicationSecurityGroupResponse> destinationApplicationSecurityGroups() {
         return this.destinationApplicationSecurityGroups == null ? List.of() : this.destinationApplicationSecurityGroups;
     }
     /**
-     * The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
+     * @return The destination port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
-    */
+     */
     public Optional<String> destinationPortRange() {
         return Optional.ofNullable(this.destinationPortRange);
     }
     /**
-     * The destination port ranges.
+     * @return The destination port ranges.
      * 
-    */
+     */
     public List<String> destinationPortRanges() {
         return this.destinationPortRanges == null ? List.of() : this.destinationPortRanges;
     }
     /**
-     * The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
+     * @return The direction of the rule. The direction specifies if rule will be evaluated on incoming or outgoing traffic.
      * 
-    */
+     */
     public String direction() {
         return this.direction;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
+     * @return The priority of the rule. The value can be between 100 and 4096. The priority number must be unique for each rule in the collection. The lower the priority number, the higher the priority of the rule.
      * 
-    */
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
     /**
-     * Network protocol this rule applies to.
+     * @return Network protocol this rule applies to.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }
     /**
-     * The provisioning state of the security rule resource.
+     * @return The provisioning state of the security rule resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
+     * @return The CIDR or source IP range. Asterisk &#39;*&#39; can also be used to match all source IPs. Default tags such as &#39;VirtualNetwork&#39;, &#39;AzureLoadBalancer&#39; and &#39;Internet&#39; can also be used. If this is an ingress rule, specifies where network traffic originates from.
      * 
-    */
+     */
     public Optional<String> sourceAddressPrefix() {
         return Optional.ofNullable(this.sourceAddressPrefix);
     }
     /**
-     * The CIDR or source IP ranges.
+     * @return The CIDR or source IP ranges.
      * 
-    */
+     */
     public List<String> sourceAddressPrefixes() {
         return this.sourceAddressPrefixes == null ? List.of() : this.sourceAddressPrefixes;
     }
     /**
-     * The application security group specified as source.
+     * @return The application security group specified as source.
      * 
-    */
+     */
     public List<ApplicationSecurityGroupResponse> sourceApplicationSecurityGroups() {
         return this.sourceApplicationSecurityGroups == null ? List.of() : this.sourceApplicationSecurityGroups;
     }
     /**
-     * The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
+     * @return The source port or range. Integer or range between 0 and 65535. Asterisk &#39;*&#39; can also be used to match all ports.
      * 
-    */
+     */
     public Optional<String> sourcePortRange() {
         return Optional.ofNullable(this.sourcePortRange);
     }
     /**
-     * The source port ranges.
+     * @return The source port ranges.
      * 
-    */
+     */
     public List<String> sourcePortRanges() {
         return this.sourcePortRanges == null ? List.of() : this.sourcePortRanges;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

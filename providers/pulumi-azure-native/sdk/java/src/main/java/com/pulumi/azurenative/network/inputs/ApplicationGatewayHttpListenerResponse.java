@@ -29,6 +29,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="customErrorConfigurations")
     private @Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations;
 
+    /**
+     * @return Custom error configurations of the HTTP listener.
+     * 
+     */
     public Optional<List<ApplicationGatewayCustomErrorResponse>> customErrorConfigurations() {
         return Optional.ofNullable(this.customErrorConfigurations);
     }
@@ -40,6 +44,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -51,6 +59,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="firewallPolicy")
     private @Nullable SubResourceResponse firewallPolicy;
 
+    /**
+     * @return Reference to the FirewallPolicy resource.
+     * 
+     */
     public Optional<SubResourceResponse> firewallPolicy() {
         return Optional.ofNullable(this.firewallPolicy);
     }
@@ -62,6 +74,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="frontendIPConfiguration")
     private @Nullable SubResourceResponse frontendIPConfiguration;
 
+    /**
+     * @return Frontend IP configuration resource of an application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> frontendIPConfiguration() {
         return Optional.ofNullable(this.frontendIPConfiguration);
     }
@@ -73,6 +89,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="frontendPort")
     private @Nullable SubResourceResponse frontendPort;
 
+    /**
+     * @return Frontend port resource of an application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> frontendPort() {
         return Optional.ofNullable(this.frontendPort);
     }
@@ -84,6 +104,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="hostName")
     private @Nullable String hostName;
 
+    /**
+     * @return Host name of HTTP listener.
+     * 
+     */
     public Optional<String> hostName() {
         return Optional.ofNullable(this.hostName);
     }
@@ -95,6 +119,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="hostNames")
     private @Nullable List<String> hostNames;
 
+    /**
+     * @return List of Host names for HTTP Listener that allows special wildcard characters as well.
+     * 
+     */
     public Optional<List<String>> hostNames() {
         return Optional.ofNullable(this.hostNames);
     }
@@ -106,6 +134,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -117,6 +149,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the HTTP listener that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -128,6 +164,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return Protocol of the HTTP listener.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -139,6 +179,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the HTTP listener resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -150,6 +194,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="requireServerNameIndication")
     private @Nullable Boolean requireServerNameIndication;
 
+    /**
+     * @return Applicable only if protocol is https. Enables SNI for multi-hosting.
+     * 
+     */
     public Optional<Boolean> requireServerNameIndication() {
         return Optional.ofNullable(this.requireServerNameIndication);
     }
@@ -161,6 +209,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="sslCertificate")
     private @Nullable SubResourceResponse sslCertificate;
 
+    /**
+     * @return SSL certificate resource of an application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> sslCertificate() {
         return Optional.ofNullable(this.sslCertificate);
     }
@@ -172,6 +224,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="sslProfile")
     private @Nullable SubResourceResponse sslProfile;
 
+    /**
+     * @return SSL profile resource of the application gateway.
+     * 
+     */
     public Optional<SubResourceResponse> sslProfile() {
         return Optional.ofNullable(this.sslProfile);
     }
@@ -183,6 +239,10 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -225,84 +285,186 @@ public final class ApplicationGatewayHttpListenerResponse extends com.pulumi.res
             $ = new ApplicationGatewayHttpListenerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customErrorConfigurations Custom error configurations of the HTTP listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customErrorConfigurations(@Nullable List<ApplicationGatewayCustomErrorResponse> customErrorConfigurations) {
             $.customErrorConfigurations = customErrorConfigurations;
             return this;
         }
 
+        /**
+         * @param customErrorConfigurations Custom error configurations of the HTTP listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customErrorConfigurations(ApplicationGatewayCustomErrorResponse... customErrorConfigurations) {
             return customErrorConfigurations(List.of(customErrorConfigurations));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param firewallPolicy Reference to the FirewallPolicy resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallPolicy(@Nullable SubResourceResponse firewallPolicy) {
             $.firewallPolicy = firewallPolicy;
             return this;
         }
 
+        /**
+         * @param frontendIPConfiguration Frontend IP configuration resource of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfiguration(@Nullable SubResourceResponse frontendIPConfiguration) {
             $.frontendIPConfiguration = frontendIPConfiguration;
             return this;
         }
 
+        /**
+         * @param frontendPort Frontend port resource of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPort(@Nullable SubResourceResponse frontendPort) {
             $.frontendPort = frontendPort;
             return this;
         }
 
+        /**
+         * @param hostName Host name of HTTP listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostName(@Nullable String hostName) {
             $.hostName = hostName;
             return this;
         }
 
+        /**
+         * @param hostNames List of Host names for HTTP Listener that allows special wildcard characters as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNames(@Nullable List<String> hostNames) {
             $.hostNames = hostNames;
             return this;
         }
 
+        /**
+         * @param hostNames List of Host names for HTTP Listener that allows special wildcard characters as well.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostNames(String... hostNames) {
             return hostNames(List.of(hostNames));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the HTTP listener that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param protocol Protocol of the HTTP listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the HTTP listener resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param requireServerNameIndication Applicable only if protocol is https. Enables SNI for multi-hosting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireServerNameIndication(@Nullable Boolean requireServerNameIndication) {
             $.requireServerNameIndication = requireServerNameIndication;
             return this;
         }
 
+        /**
+         * @param sslCertificate SSL certificate resource of an application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslCertificate(@Nullable SubResourceResponse sslCertificate) {
             $.sslCertificate = sslCertificate;
             return this;
         }
 
+        /**
+         * @param sslProfile SSL profile resource of the application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslProfile(@Nullable SubResourceResponse sslProfile) {
             $.sslProfile = sslProfile;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

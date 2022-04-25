@@ -46,6 +46,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the Dataset.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +61,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="columnDelimiter")
     private @Nullable Output<Object> columnDelimiter;
 
+    /**
+     * @return The column delimiter. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> columnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
@@ -68,6 +76,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="compressionCodec")
     private @Nullable Output<Object> compressionCodec;
 
+    /**
+     * @return The data compressionCodec. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> compressionCodec() {
         return Optional.ofNullable(this.compressionCodec);
     }
@@ -79,6 +91,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="compressionLevel")
     private @Nullable Output<Object> compressionLevel;
 
+    /**
+     * @return The data compression method used for DelimitedText.
+     * 
+     */
     public Optional<Output<Object>> compressionLevel() {
         return Optional.ofNullable(this.compressionLevel);
     }
@@ -90,6 +106,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Dataset description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -101,6 +121,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="encodingName")
     private @Nullable Output<Object> encodingName;
 
+    /**
+     * @return The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encodingName() {
         return Optional.ofNullable(this.encodingName);
     }
@@ -112,6 +136,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="escapeChar")
     private @Nullable Output<Object> escapeChar;
 
+    /**
+     * @return The escape character. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> escapeChar() {
         return Optional.ofNullable(this.escapeChar);
     }
@@ -123,6 +151,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="firstRowAsHeader")
     private @Nullable Output<Object> firstRowAsHeader;
 
+    /**
+     * @return When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> firstRowAsHeader() {
         return Optional.ofNullable(this.firstRowAsHeader);
     }
@@ -134,6 +166,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="folder")
     private @Nullable Output<DatasetFolderArgs> folder;
 
+    /**
+     * @return The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+     * 
+     */
     public Optional<Output<DatasetFolderArgs>> folder() {
         return Optional.ofNullable(this.folder);
     }
@@ -145,6 +181,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="linkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -156,6 +196,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="location", required=true)
     private Output<Object> location;
 
+    /**
+     * @return The location of the delimited text storage.
+     * 
+     */
     public Output<Object> location() {
         return this.location;
     }
@@ -167,6 +211,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="nullValue")
     private @Nullable Output<Object> nullValue;
 
+    /**
+     * @return The null value string. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> nullValue() {
         return Optional.ofNullable(this.nullValue);
     }
@@ -178,6 +226,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for dataset.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -189,6 +241,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="quoteChar")
     private @Nullable Output<Object> quoteChar;
 
+    /**
+     * @return The quote character. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> quoteChar() {
         return Optional.ofNullable(this.quoteChar);
     }
@@ -200,6 +256,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="rowDelimiter")
     private @Nullable Output<Object> rowDelimiter;
 
+    /**
+     * @return The row delimiter. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> rowDelimiter() {
         return Optional.ofNullable(this.rowDelimiter);
     }
@@ -211,6 +271,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="schema")
     private @Nullable Output<Object> schema;
 
+    /**
+     * @return Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+     * 
+     */
     public Optional<Output<Object>> schema() {
         return Optional.ofNullable(this.schema);
     }
@@ -222,6 +286,10 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="structure")
     private @Nullable Output<Object> structure;
 
+    /**
+     * @return Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+     * 
+     */
     public Optional<Output<Object>> structure() {
         return Optional.ofNullable(this.structure);
     }
@@ -234,6 +302,11 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of dataset.
+     * Expected value is &#39;DelimitedText&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -279,168 +352,392 @@ public final class DelimitedTextDatasetArgs extends com.pulumi.resources.Resourc
             $ = new DelimitedTextDatasetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the Dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param columnDelimiter The column delimiter. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnDelimiter(@Nullable Output<Object> columnDelimiter) {
             $.columnDelimiter = columnDelimiter;
             return this;
         }
 
+        /**
+         * @param columnDelimiter The column delimiter. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnDelimiter(Object columnDelimiter) {
             return columnDelimiter(Output.of(columnDelimiter));
         }
 
+        /**
+         * @param compressionCodec The data compressionCodec. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionCodec(@Nullable Output<Object> compressionCodec) {
             $.compressionCodec = compressionCodec;
             return this;
         }
 
+        /**
+         * @param compressionCodec The data compressionCodec. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionCodec(Object compressionCodec) {
             return compressionCodec(Output.of(compressionCodec));
         }
 
+        /**
+         * @param compressionLevel The data compression method used for DelimitedText.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionLevel(@Nullable Output<Object> compressionLevel) {
             $.compressionLevel = compressionLevel;
             return this;
         }
 
+        /**
+         * @param compressionLevel The data compression method used for DelimitedText.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compressionLevel(Object compressionLevel) {
             return compressionLevel(Output.of(compressionLevel));
         }
 
+        /**
+         * @param description Dataset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Dataset description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encodingName The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingName(@Nullable Output<Object> encodingName) {
             $.encodingName = encodingName;
             return this;
         }
 
+        /**
+         * @param encodingName The code page name of the preferred encoding. If miss, the default value is UTF-8, unless BOM denotes another Unicode encoding. Refer to the name column of the table in the following link to set supported values: https://msdn.microsoft.com/library/system.text.encoding.aspx. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodingName(Object encodingName) {
             return encodingName(Output.of(encodingName));
         }
 
+        /**
+         * @param escapeChar The escape character. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder escapeChar(@Nullable Output<Object> escapeChar) {
             $.escapeChar = escapeChar;
             return this;
         }
 
+        /**
+         * @param escapeChar The escape character. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder escapeChar(Object escapeChar) {
             return escapeChar(Output.of(escapeChar));
         }
 
+        /**
+         * @param firstRowAsHeader When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstRowAsHeader(@Nullable Output<Object> firstRowAsHeader) {
             $.firstRowAsHeader = firstRowAsHeader;
             return this;
         }
 
+        /**
+         * @param firstRowAsHeader When used as input, treat the first row of data as headers. When used as output,write the headers into the output as the first row of data. The default value is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstRowAsHeader(Object firstRowAsHeader) {
             return firstRowAsHeader(Output.of(firstRowAsHeader));
         }
 
+        /**
+         * @param folder The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(@Nullable Output<DatasetFolderArgs> folder) {
             $.folder = folder;
             return this;
         }
 
+        /**
+         * @param folder The folder that this Dataset is in. If not specified, Dataset will appear at the root level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder folder(DatasetFolderArgs folder) {
             return folder(Output.of(folder));
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param location The location of the delimited text storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<Object> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the delimited text storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Object location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param nullValue The null value string. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullValue(@Nullable Output<Object> nullValue) {
             $.nullValue = nullValue;
             return this;
         }
 
+        /**
+         * @param nullValue The null value string. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder nullValue(Object nullValue) {
             return nullValue(Output.of(nullValue));
         }
 
+        /**
+         * @param parameters Parameters for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param quoteChar The quote character. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteChar(@Nullable Output<Object> quoteChar) {
             $.quoteChar = quoteChar;
             return this;
         }
 
+        /**
+         * @param quoteChar The quote character. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteChar(Object quoteChar) {
             return quoteChar(Output.of(quoteChar));
         }
 
+        /**
+         * @param rowDelimiter The row delimiter. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowDelimiter(@Nullable Output<Object> rowDelimiter) {
             $.rowDelimiter = rowDelimiter;
             return this;
         }
 
+        /**
+         * @param rowDelimiter The row delimiter. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowDelimiter(Object rowDelimiter) {
             return rowDelimiter(Output.of(rowDelimiter));
         }
 
+        /**
+         * @param schema Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(@Nullable Output<Object> schema) {
             $.schema = schema;
             return this;
         }
 
+        /**
+         * @param schema Columns that define the physical type schema of the dataset. Type: array (or Expression with resultType array), itemType: DatasetSchemaDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schema(Object schema) {
             return schema(Output.of(schema));
         }
 
+        /**
+         * @param structure Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(@Nullable Output<Object> structure) {
             $.structure = structure;
             return this;
         }
 
+        /**
+         * @param structure Columns that define the structure of the dataset. Type: array (or Expression with resultType array), itemType: DatasetDataElement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder structure(Object structure) {
             return structure(Output.of(structure));
         }
 
+        /**
+         * @param type Type of dataset.
+         * Expected value is &#39;DelimitedText&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of dataset.
+         * Expected value is &#39;DelimitedText&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

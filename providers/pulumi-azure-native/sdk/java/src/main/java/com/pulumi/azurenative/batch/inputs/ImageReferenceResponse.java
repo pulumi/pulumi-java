@@ -21,6 +21,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -32,6 +36,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="offer")
     private @Nullable String offer;
 
+    /**
+     * @return For example, UbuntuServer or WindowsServer.
+     * 
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
@@ -43,6 +51,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="publisher")
     private @Nullable String publisher;
 
+    /**
+     * @return For example, Canonical or MicrosoftWindowsServer.
+     * 
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
@@ -54,6 +66,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sku")
     private @Nullable String sku;
 
+    /**
+     * @return For example, 18.04-LTS or 2019-Datacenter.
+     * 
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -65,6 +81,10 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -97,26 +117,56 @@ public final class ImageReferenceResponse extends com.pulumi.resources.InvokeArg
             $ = new ImageReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id This property is mutually exclusive with other properties. The Shared Image Gallery image must have replicas in the same region as the Azure Batch account. For information about the firewall settings for the Batch node agent to communicate with the Batch service see https://docs.microsoft.com/en-us/azure/batch/batch-api-basics#virtual-network-vnet-and-firewall-configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param offer For example, UbuntuServer or WindowsServer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder offer(@Nullable String offer) {
             $.offer = offer;
             return this;
         }
 
+        /**
+         * @param publisher For example, Canonical or MicrosoftWindowsServer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(@Nullable String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param sku For example, 18.04-LTS or 2019-Datacenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable String sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param version A value of &#39;latest&#39; can be specified to select the latest version of an image. If omitted, the default is &#39;latest&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

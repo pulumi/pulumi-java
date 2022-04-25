@@ -23,6 +23,10 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return The status code.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -34,6 +38,10 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="displayStatus", required=true)
     private String displayStatus;
 
+    /**
+     * @return The short localizable label for the status.
+     * 
+     */
     public String displayStatus() {
         return this.displayStatus;
     }
@@ -45,6 +53,10 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="level", required=true)
     private String level;
 
+    /**
+     * @return The level code.
+     * 
+     */
     public String level() {
         return this.level;
     }
@@ -56,6 +68,10 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return The detailed status message, including for alerts and error messages.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -67,6 +83,10 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
     @Import(name="time", required=true)
     private String time;
 
+    /**
+     * @return The time of the status.
+     * 
+     */
     public String time() {
         return this.time;
     }
@@ -99,26 +119,56 @@ public final class MachineExtensionInstanceViewResponseStatus extends com.pulumi
             $ = new MachineExtensionInstanceViewResponseStatus(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code The status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param displayStatus The short localizable label for the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayStatus(String displayStatus) {
             $.displayStatus = displayStatus;
             return this;
         }
 
+        /**
+         * @param level The level code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param message The detailed status message, including for alerts and error messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param time The time of the status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             $.time = time;
             return this;

@@ -32,6 +32,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -43,6 +47,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="autoStart")
     private @Nullable Output<Boolean> autoStart;
 
+    /**
+     * @return The flag indicates if the resource should be automatically started on creation.
+     * 
+     */
     public Optional<Output<Boolean>> autoStart() {
         return Optional.ofNullable(this.autoStart);
     }
@@ -54,6 +62,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="crossSiteAccessPolicies")
     private @Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies;
 
+    /**
+     * @return Live event cross site access policies.
+     * 
+     */
     public Optional<Output<CrossSiteAccessPoliciesArgs>> crossSiteAccessPolicies() {
         return Optional.ofNullable(this.crossSiteAccessPolicies);
     }
@@ -65,6 +77,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description for the live event.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -76,6 +92,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="encoding")
     private @Nullable Output<LiveEventEncodingArgs> encoding;
 
+    /**
+     * @return Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
+     * 
+     */
     public Optional<Output<LiveEventEncodingArgs>> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -87,6 +107,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hostnamePrefix")
     private @Nullable Output<String> hostnamePrefix;
 
+    /**
+     * @return When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
+     * 
+     */
     public Optional<Output<String>> hostnamePrefix() {
         return Optional.ofNullable(this.hostnamePrefix);
     }
@@ -98,6 +122,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="input", required=true)
     private Output<LiveEventInputArgs> input;
 
+    /**
+     * @return Live event input settings. It defines how the live event receives input from a contribution encoder.
+     * 
+     */
     public Output<LiveEventInputArgs> input() {
         return this.input;
     }
@@ -109,6 +137,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="liveEventName")
     private @Nullable Output<String> liveEventName;
 
+    /**
+     * @return The name of the live event, maximum length is 32.
+     * 
+     */
     public Optional<Output<String>> liveEventName() {
         return Optional.ofNullable(this.liveEventName);
     }
@@ -120,6 +152,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -131,6 +167,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="preview")
     private @Nullable Output<LiveEventPreviewArgs> preview;
 
+    /**
+     * @return Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
+     * 
+     */
     public Optional<Output<LiveEventPreviewArgs>> preview() {
         return Optional.ofNullable(this.preview);
     }
@@ -142,6 +182,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -153,6 +197,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="streamOptions")
     private @Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions;
 
+    /**
+     * @return The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
+     * 
+     */
     public Optional<Output<List<Either<String,StreamOptionsFlag>>>> streamOptions() {
         return Optional.ofNullable(this.streamOptions);
     }
@@ -164,6 +212,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -175,6 +227,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="transcriptions")
     private @Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions;
 
+    /**
+     * @return Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
+     * 
+     */
     public Optional<Output<List<LiveEventTranscriptionArgs>>> transcriptions() {
         return Optional.ofNullable(this.transcriptions);
     }
@@ -186,6 +242,10 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useStaticHostname")
     private @Nullable Output<Boolean> useStaticHostname;
 
+    /**
+     * @return Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
+     * 
+     */
     public Optional<Output<Boolean>> useStaticHostname() {
         return Optional.ofNullable(this.useStaticHostname);
     }
@@ -228,145 +288,337 @@ public final class LiveEventArgs extends com.pulumi.resources.ResourceArgs {
             $ = new LiveEventArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param autoStart The flag indicates if the resource should be automatically started on creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoStart(@Nullable Output<Boolean> autoStart) {
             $.autoStart = autoStart;
             return this;
         }
 
+        /**
+         * @param autoStart The flag indicates if the resource should be automatically started on creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoStart(Boolean autoStart) {
             return autoStart(Output.of(autoStart));
         }
 
+        /**
+         * @param crossSiteAccessPolicies Live event cross site access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crossSiteAccessPolicies(@Nullable Output<CrossSiteAccessPoliciesArgs> crossSiteAccessPolicies) {
             $.crossSiteAccessPolicies = crossSiteAccessPolicies;
             return this;
         }
 
+        /**
+         * @param crossSiteAccessPolicies Live event cross site access policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder crossSiteAccessPolicies(CrossSiteAccessPoliciesArgs crossSiteAccessPolicies) {
             return crossSiteAccessPolicies(Output.of(crossSiteAccessPolicies));
         }
 
+        /**
+         * @param description A description for the live event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description for the live event.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encoding Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable Output<LiveEventEncodingArgs> encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param encoding Encoding settings for the live event. It configures whether a live encoder is used for the live event and settings for the live encoder if it is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(LiveEventEncodingArgs encoding) {
             return encoding(Output.of(encoding));
         }
 
+        /**
+         * @param hostnamePrefix When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnamePrefix(@Nullable Output<String> hostnamePrefix) {
             $.hostnamePrefix = hostnamePrefix;
             return this;
         }
 
+        /**
+         * @param hostnamePrefix When useStaticHostname is set to true, the hostnamePrefix specifies the first part of the hostname assigned to the live event preview and ingest endpoints. The final hostname would be a combination of this prefix, the media service account name and a short code for the Azure Media Services data center.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostnamePrefix(String hostnamePrefix) {
             return hostnamePrefix(Output.of(hostnamePrefix));
         }
 
+        /**
+         * @param input Live event input settings. It defines how the live event receives input from a contribution encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(Output<LiveEventInputArgs> input) {
             $.input = input;
             return this;
         }
 
+        /**
+         * @param input Live event input settings. It defines how the live event receives input from a contribution encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder input(LiveEventInputArgs input) {
             return input(Output.of(input));
         }
 
+        /**
+         * @param liveEventName The name of the live event, maximum length is 32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveEventName(@Nullable Output<String> liveEventName) {
             $.liveEventName = liveEventName;
             return this;
         }
 
+        /**
+         * @param liveEventName The name of the live event, maximum length is 32.
+         * 
+         * @return builder
+         * 
+         */
         public Builder liveEventName(String liveEventName) {
             return liveEventName(Output.of(liveEventName));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param preview Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(@Nullable Output<LiveEventPreviewArgs> preview) {
             $.preview = preview;
             return this;
         }
 
+        /**
+         * @param preview Live event preview settings. Preview allows live event producers to preview the live streaming content without creating any live output.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preview(LiveEventPreviewArgs preview) {
             return preview(Output.of(preview));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param streamOptions The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamOptions(@Nullable Output<List<Either<String,StreamOptionsFlag>>> streamOptions) {
             $.streamOptions = streamOptions;
             return this;
         }
 
+        /**
+         * @param streamOptions The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamOptions(List<Either<String,StreamOptionsFlag>> streamOptions) {
             return streamOptions(Output.of(streamOptions));
         }
 
+        /**
+         * @param streamOptions The options to use for the LiveEvent. This value is specified at creation time and cannot be updated. The valid values for the array entry values are &#39;Default&#39; and &#39;LowLatency&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamOptions(Either<String,StreamOptionsFlag>... streamOptions) {
             return streamOptions(List.of(streamOptions));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param transcriptions Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptions(@Nullable Output<List<LiveEventTranscriptionArgs>> transcriptions) {
             $.transcriptions = transcriptions;
             return this;
         }
 
+        /**
+         * @param transcriptions Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptions(List<LiveEventTranscriptionArgs> transcriptions) {
             return transcriptions(Output.of(transcriptions));
         }
 
+        /**
+         * @param transcriptions Live transcription settings for the live event. See https://go.microsoft.com/fwlink/?linkid=2133742 for more information about the live transcription feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transcriptions(LiveEventTranscriptionArgs... transcriptions) {
             return transcriptions(List.of(transcriptions));
         }
 
+        /**
+         * @param useStaticHostname Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
+         * 
+         * @return builder
+         * 
+         */
         public Builder useStaticHostname(@Nullable Output<Boolean> useStaticHostname) {
             $.useStaticHostname = useStaticHostname;
             return this;
         }
 
+        /**
+         * @param useStaticHostname Specifies whether a static hostname would be assigned to the live event preview and ingest endpoints. This value can only be updated if the live event is in Standby state
+         * 
+         * @return builder
+         * 
+         */
         public Builder useStaticHostname(Boolean useStaticHostname) {
             return useStaticHostname(Output.of(useStaticHostname));
         }

@@ -21,6 +21,10 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return UTC date and time specifying the end time of an interval. When not specified the service uses DateTime.UtcNow
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -32,6 +36,10 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="machineGroupName", required=true)
     private String machineGroupName;
 
+    /**
+     * @return Machine Group resource name.
+     * 
+     */
     public String machineGroupName() {
         return this.machineGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group name within the specified subscriptionId.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -54,6 +66,10 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return UTC date and time specifying the start time of an interval. When not specified the service uses DateTime.UtcNow - 10m
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -65,6 +81,10 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return OMS workspace containing the resources of interest.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -97,26 +117,56 @@ public final class GetMachineGroupArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetMachineGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endTime UTC date and time specifying the end time of an interval. When not specified the service uses DateTime.UtcNow
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param machineGroupName Machine Group resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineGroupName(String machineGroupName) {
             $.machineGroupName = machineGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name within the specified subscriptionId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param startTime UTC date and time specifying the start time of an interval. When not specified the service uses DateTime.UtcNow - 10m
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param workspaceName OMS workspace containing the resources of interest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

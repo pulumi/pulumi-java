@@ -26,6 +26,10 @@ public final class LinuxOperatingSystemProfileResponse extends com.pulumi.resour
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The password.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class LinuxOperatingSystemProfileResponse extends com.pulumi.resour
     @Import(name="sshProfile")
     private @Nullable SshProfileResponse sshProfile;
 
+    /**
+     * @return The SSH profile.
+     * 
+     */
     public Optional<SshProfileResponse> sshProfile() {
         return Optional.ofNullable(this.sshProfile);
     }
@@ -48,6 +56,10 @@ public final class LinuxOperatingSystemProfileResponse extends com.pulumi.resour
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return The username.
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -78,16 +90,34 @@ public final class LinuxOperatingSystemProfileResponse extends com.pulumi.resour
             $ = new LinuxOperatingSystemProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password The password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param sshProfile The SSH profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshProfile(@Nullable SshProfileResponse sshProfile) {
             $.sshProfile = sshProfile;
             return this;
         }
 
+        /**
+         * @param username The username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

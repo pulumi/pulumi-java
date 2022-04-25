@@ -25,6 +25,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="groupId")
     private @Nullable String groupId;
 
+    /**
+     * @return The group id from the provider of resource the shared private link resource is for.
+     * 
+     */
     public Optional<String> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -36,6 +40,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="privateLinkResourceId")
     private @Nullable String privateLinkResourceId;
 
+    /**
+     * @return The resource id of the resource the shared private link resource is for.
+     * 
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
@@ -47,6 +55,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -58,6 +70,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="requestMessage")
     private @Nullable String requestMessage;
 
+    /**
+     * @return The request message for requesting approval of the shared private link resource.
+     * 
+     */
     public Optional<String> requestMessage() {
         return Optional.ofNullable(this.requestMessage);
     }
@@ -69,6 +85,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="resourceRegion")
     private @Nullable String resourceRegion;
 
+    /**
+     * @return Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
+     * 
+     */
     public Optional<String> resourceRegion() {
         return Optional.ofNullable(this.resourceRegion);
     }
@@ -80,6 +100,10 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -113,31 +137,67 @@ public final class SharedPrivateLinkResourcePropertiesResponse extends com.pulum
             $ = new SharedPrivateLinkResourcePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param groupId The group id from the provider of resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable String groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param privateLinkResourceId The resource id of the resource the shared private link resource is for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkResourceId(@Nullable String privateLinkResourceId) {
             $.privateLinkResourceId = privateLinkResourceId;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the shared private link resource. Can be Updating, Deleting, Failed, Succeeded or Incomplete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param requestMessage The request message for requesting approval of the shared private link resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestMessage(@Nullable String requestMessage) {
             $.requestMessage = requestMessage;
             return this;
         }
 
+        /**
+         * @param resourceRegion Optional. Can be used to specify the Azure Resource Manager location of the resource to which a shared private link is to be created. This is only required for those resources whose DNS configuration are regional (such as Azure Kubernetes Service).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRegion(@Nullable String resourceRegion) {
             $.resourceRegion = resourceRegion;
             return this;
         }
 
+        /**
+         * @param status Status of the shared private link resource. Can be Pending, Approved, Rejected or Disconnected.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

@@ -21,6 +21,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="cdcDeleteCounter", required=true)
     private Double cdcDeleteCounter;
 
+    /**
+     * @return Number of applied deletes
+     * 
+     */
     public Double cdcDeleteCounter() {
         return this.cdcDeleteCounter;
     }
@@ -32,6 +36,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="cdcInsertCounter", required=true)
     private Double cdcInsertCounter;
 
+    /**
+     * @return Number of applied inserts
+     * 
+     */
     public Double cdcInsertCounter() {
         return this.cdcInsertCounter;
     }
@@ -43,6 +51,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="cdcUpdateCounter", required=true)
     private Double cdcUpdateCounter;
 
+    /**
+     * @return Number of applied updates
+     * 
+     */
     public Double cdcUpdateCounter() {
         return this.cdcUpdateCounter;
     }
@@ -54,6 +66,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="dataErrorsCounter", required=true)
     private Double dataErrorsCounter;
 
+    /**
+     * @return Number of data errors occurred
+     * 
+     */
     public Double dataErrorsCounter() {
         return this.dataErrorsCounter;
     }
@@ -65,6 +81,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -76,6 +96,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="fullLoadEndedOn", required=true)
     private String fullLoadEndedOn;
 
+    /**
+     * @return Full load end time
+     * 
+     */
     public String fullLoadEndedOn() {
         return this.fullLoadEndedOn;
     }
@@ -87,6 +111,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="fullLoadEstFinishTime", required=true)
     private String fullLoadEstFinishTime;
 
+    /**
+     * @return Estimate to finish full load
+     * 
+     */
     public String fullLoadEstFinishTime() {
         return this.fullLoadEstFinishTime;
     }
@@ -98,6 +126,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="fullLoadStartedOn", required=true)
     private String fullLoadStartedOn;
 
+    /**
+     * @return Full load start time
+     * 
+     */
     public String fullLoadStartedOn() {
         return this.fullLoadStartedOn;
     }
@@ -109,6 +141,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="fullLoadTotalRows", required=true)
     private Double fullLoadTotalRows;
 
+    /**
+     * @return Number of rows applied in full load
+     * 
+     */
     public Double fullLoadTotalRows() {
         return this.fullLoadTotalRows;
     }
@@ -120,6 +156,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -131,6 +171,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="lastModifiedTime", required=true)
     private String lastModifiedTime;
 
+    /**
+     * @return Last modified time on target
+     * 
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
@@ -143,6 +187,11 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;TableLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -154,6 +203,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of the table migration
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -165,6 +218,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="tableName", required=true)
     private String tableName;
 
+    /**
+     * @return Name of the table
+     * 
+     */
     public String tableName() {
         return this.tableName;
     }
@@ -176,6 +233,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
     @Import(name="totalChangesApplied", required=true)
     private Double totalChangesApplied;
 
+    /**
+     * @return Total number of applied changes
+     * 
+     */
     public Double totalChangesApplied() {
         return this.totalChangesApplied;
     }
@@ -218,76 +279,167 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse extends
             $ = new MigrateSqlServerSqlDbSyncTaskOutputTableLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cdcDeleteCounter Number of applied deletes
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdcDeleteCounter(Double cdcDeleteCounter) {
             $.cdcDeleteCounter = cdcDeleteCounter;
             return this;
         }
 
+        /**
+         * @param cdcInsertCounter Number of applied inserts
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdcInsertCounter(Double cdcInsertCounter) {
             $.cdcInsertCounter = cdcInsertCounter;
             return this;
         }
 
+        /**
+         * @param cdcUpdateCounter Number of applied updates
+         * 
+         * @return builder
+         * 
+         */
         public Builder cdcUpdateCounter(Double cdcUpdateCounter) {
             $.cdcUpdateCounter = cdcUpdateCounter;
             return this;
         }
 
+        /**
+         * @param dataErrorsCounter Number of data errors occurred
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataErrorsCounter(Double dataErrorsCounter) {
             $.dataErrorsCounter = dataErrorsCounter;
             return this;
         }
 
+        /**
+         * @param databaseName Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param fullLoadEndedOn Full load end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadEndedOn(String fullLoadEndedOn) {
             $.fullLoadEndedOn = fullLoadEndedOn;
             return this;
         }
 
+        /**
+         * @param fullLoadEstFinishTime Estimate to finish full load
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadEstFinishTime(String fullLoadEstFinishTime) {
             $.fullLoadEstFinishTime = fullLoadEstFinishTime;
             return this;
         }
 
+        /**
+         * @param fullLoadStartedOn Full load start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadStartedOn(String fullLoadStartedOn) {
             $.fullLoadStartedOn = fullLoadStartedOn;
             return this;
         }
 
+        /**
+         * @param fullLoadTotalRows Number of rows applied in full load
+         * 
+         * @return builder
+         * 
+         */
         public Builder fullLoadTotalRows(Double fullLoadTotalRows) {
             $.fullLoadTotalRows = fullLoadTotalRows;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime Last modified time on target
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(String lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;TableLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param state Current state of the table migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param tableName Name of the table
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableName(String tableName) {
             $.tableName = tableName;
             return this;
         }
 
+        /**
+         * @param totalChangesApplied Total number of applied changes
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalChangesApplied(Double totalChangesApplied) {
             $.totalChangesApplied = totalChangesApplied;
             return this;

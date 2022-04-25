@@ -25,6 +25,10 @@ public final class ManagedInstancePairInfoResponse extends com.pulumi.resources.
     @Import(name="partnerManagedInstanceId")
     private @Nullable String partnerManagedInstanceId;
 
+    /**
+     * @return Id of Partner Managed Instance in pair.
+     * 
+     */
     public Optional<String> partnerManagedInstanceId() {
         return Optional.ofNullable(this.partnerManagedInstanceId);
     }
@@ -36,6 +40,10 @@ public final class ManagedInstancePairInfoResponse extends com.pulumi.resources.
     @Import(name="primaryManagedInstanceId")
     private @Nullable String primaryManagedInstanceId;
 
+    /**
+     * @return Id of Primary Managed Instance in pair.
+     * 
+     */
     public Optional<String> primaryManagedInstanceId() {
         return Optional.ofNullable(this.primaryManagedInstanceId);
     }
@@ -65,11 +73,23 @@ public final class ManagedInstancePairInfoResponse extends com.pulumi.resources.
             $ = new ManagedInstancePairInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partnerManagedInstanceId Id of Partner Managed Instance in pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerManagedInstanceId(@Nullable String partnerManagedInstanceId) {
             $.partnerManagedInstanceId = partnerManagedInstanceId;
             return this;
         }
 
+        /**
+         * @param primaryManagedInstanceId Id of Primary Managed Instance in pair.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryManagedInstanceId(@Nullable String primaryManagedInstanceId) {
             $.primaryManagedInstanceId = primaryManagedInstanceId;
             return this;

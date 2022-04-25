@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class MigrationEligibilityInfoResponse {
     /**
-     * Whether object is eligible for migration or not.
+     * @return Whether object is eligible for migration or not.
      * 
      */
     private final Boolean isEligibleForMigration;
     /**
-     * Information about eligibility failure for the server object.
+     * @return Information about eligibility failure for the server object.
      * 
      */
     private final List<String> validationMessages;
@@ -31,16 +31,16 @@ public final class MigrationEligibilityInfoResponse {
     }
 
     /**
-     * Whether object is eligible for migration or not.
+     * @return Whether object is eligible for migration or not.
      * 
-    */
+     */
     public Boolean isEligibleForMigration() {
         return this.isEligibleForMigration;
     }
     /**
-     * Information about eligibility failure for the server object.
+     * @return Information about eligibility failure for the server object.
      * 
-    */
+     */
     public List<String> validationMessages() {
         return this.validationMessages;
     }

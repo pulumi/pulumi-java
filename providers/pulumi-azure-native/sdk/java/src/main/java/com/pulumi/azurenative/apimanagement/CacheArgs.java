@@ -22,6 +22,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cacheId")
     private @Nullable Output<String> cacheId;
 
+    /**
+     * @return Identifier of the Cache entity. Cache identifier (should be either &#39;default&#39; or valid Azure region identifier).
+     * 
+     */
     public Optional<Output<String>> cacheId() {
         return Optional.ofNullable(this.cacheId);
     }
@@ -33,6 +37,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectionString", required=true)
     private Output<String> connectionString;
 
+    /**
+     * @return Runtime connection string to cache
+     * 
+     */
     public Output<String> connectionString() {
         return this.connectionString;
     }
@@ -44,6 +52,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Cache description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -55,6 +67,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return Original uri of entity in external system cache points to
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -77,6 +97,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -88,6 +112,10 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="useFromLocation", required=true)
     private Output<String> useFromLocation;
 
+    /**
+     * @return Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
+     * 
+     */
     public Output<String> useFromLocation() {
         return this.useFromLocation;
     }
@@ -122,65 +150,149 @@ public final class CacheArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CacheArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cacheId Identifier of the Cache entity. Cache identifier (should be either &#39;default&#39; or valid Azure region identifier).
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheId(@Nullable Output<String> cacheId) {
             $.cacheId = cacheId;
             return this;
         }
 
+        /**
+         * @param cacheId Identifier of the Cache entity. Cache identifier (should be either &#39;default&#39; or valid Azure region identifier).
+         * 
+         * @return builder
+         * 
+         */
         public Builder cacheId(String cacheId) {
             return cacheId(Output.of(cacheId));
         }
 
+        /**
+         * @param connectionString Runtime connection string to cache
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString Runtime connection string to cache
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param description Cache description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Cache description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceId Original uri of entity in external system cache points to
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId Original uri of entity in external system cache points to
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param useFromLocation Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
+         * 
+         * @return builder
+         * 
+         */
         public Builder useFromLocation(Output<String> useFromLocation) {
             $.useFromLocation = useFromLocation;
             return this;
         }
 
+        /**
+         * @param useFromLocation Location identifier to use cache from (should be either &#39;default&#39; or valid Azure region identifier)
+         * 
+         * @return builder
+         * 
+         */
         public Builder useFromLocation(String useFromLocation) {
             return useFromLocation(Output.of(useFromLocation));
         }

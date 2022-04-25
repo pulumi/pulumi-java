@@ -29,6 +29,10 @@ public final class IotHubSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Double> capacity;
 
+    /**
+     * @return The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
+     * 
+     */
     public Optional<Output<Double>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class IotHubSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,IotHubSku>> name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public Output<Either<String,IotHubSku>> name() {
         return this.name;
     }
@@ -69,28 +77,64 @@ public final class IotHubSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IotHubSkuInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Double> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The number of provisioned IoT Hub units. See: https://docs.microsoft.com/azure/azure-subscription-service-limits#iot-hub-limits.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Double capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,IotHubSku>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,IotHubSku> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(IotHubSku name) {
             return name(Either.ofRight(name));
         }

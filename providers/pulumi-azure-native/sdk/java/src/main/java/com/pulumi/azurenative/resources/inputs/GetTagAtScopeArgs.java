@@ -19,6 +19,10 @@ public final class GetTagAtScopeArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The resource scope.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -47,6 +51,12 @@ public final class GetTagAtScopeArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetTagAtScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope The resource scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

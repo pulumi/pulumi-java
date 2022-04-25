@@ -27,6 +27,10 @@ public final class ScriptStringExecutionParameterArgs extends com.pulumi.resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The parameter name
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -39,6 +43,11 @@ public final class ScriptStringExecutionParameterArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The type of execution parameter
+     * Expected value is &#39;Value&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -50,6 +59,10 @@ public final class ScriptStringExecutionParameterArgs extends com.pulumi.resourc
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return The value for the passed parameter
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -80,29 +93,67 @@ public final class ScriptStringExecutionParameterArgs extends com.pulumi.resourc
             $ = new ScriptStringExecutionParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The parameter name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;Value&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of execution parameter
+         * Expected value is &#39;Value&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param value The value for the passed parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value for the passed parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

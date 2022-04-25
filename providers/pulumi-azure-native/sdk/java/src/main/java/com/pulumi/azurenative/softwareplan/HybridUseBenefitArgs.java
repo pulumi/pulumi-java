@@ -23,6 +23,10 @@ public final class HybridUseBenefitArgs extends com.pulumi.resources.ResourceArg
     @Import(name="planId")
     private @Nullable Output<String> planId;
 
+    /**
+     * @return This is a unique identifier for a plan. Should be a guid.
+     * 
+     */
     public Optional<Output<String>> planId() {
         return Optional.ofNullable(this.planId);
     }
@@ -34,6 +38,10 @@ public final class HybridUseBenefitArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scope", required=true)
     private Output<String> scope;
 
+    /**
+     * @return The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
+     * 
+     */
     public Output<String> scope() {
         return this.scope;
     }
@@ -45,6 +53,10 @@ public final class HybridUseBenefitArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return Hybrid use benefit SKU
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -75,29 +87,65 @@ public final class HybridUseBenefitArgs extends com.pulumi.resources.ResourceArg
             $ = new HybridUseBenefitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param planId This is a unique identifier for a plan. Should be a guid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(@Nullable Output<String> planId) {
             $.planId = planId;
             return this;
         }
 
+        /**
+         * @param planId This is a unique identifier for a plan. Should be a guid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(String planId) {
             return planId(Output.of(planId));
         }
 
+        /**
+         * @param scope The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Output<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param sku Hybrid use benefit SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Hybrid use benefit SKU
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }

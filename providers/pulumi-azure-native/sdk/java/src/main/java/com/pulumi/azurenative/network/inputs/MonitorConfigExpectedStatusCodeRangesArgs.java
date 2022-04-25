@@ -26,6 +26,10 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends com.pulumi.
     @Import(name="max")
     private @Nullable Output<Integer> max;
 
+    /**
+     * @return Max status code.
+     * 
+     */
     public Optional<Output<Integer>> max() {
         return Optional.ofNullable(this.max);
     }
@@ -37,6 +41,10 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends com.pulumi.
     @Import(name="min")
     private @Nullable Output<Integer> min;
 
+    /**
+     * @return Min status code.
+     * 
+     */
     public Optional<Output<Integer>> min() {
         return Optional.ofNullable(this.min);
     }
@@ -66,20 +74,44 @@ public final class MonitorConfigExpectedStatusCodeRangesArgs extends com.pulumi.
             $ = new MonitorConfigExpectedStatusCodeRangesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max Max status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(@Nullable Output<Integer> max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param max Max status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Integer max) {
             return max(Output.of(max));
         }
 
+        /**
+         * @param min Min status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(@Nullable Output<Integer> min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param min Min status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Integer min) {
             return min(Output.of(min));
         }

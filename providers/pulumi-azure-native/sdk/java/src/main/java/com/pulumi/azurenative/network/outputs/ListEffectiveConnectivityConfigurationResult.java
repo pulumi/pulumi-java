@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListEffectiveConnectivityConfigurationResult {
     /**
-     * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
      */
     private final @Nullable String skipToken;
     /**
-     * Gets a page of NetworkManagerEffectiveConnectivityConfiguration
+     * @return Gets a page of NetworkManagerEffectiveConnectivityConfiguration
      * 
      */
     private final @Nullable List<EffectiveConnectivityConfigurationResponse> value;
@@ -33,16 +33,16 @@ public final class ListEffectiveConnectivityConfigurationResult {
     }
 
     /**
-     * When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
+     * @return When present, the value can be passed to a subsequent query call (together with the same query and scopes used in the current request) to retrieve the next page of data.
      * 
-    */
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
     /**
-     * Gets a page of NetworkManagerEffectiveConnectivityConfiguration
+     * @return Gets a page of NetworkManagerEffectiveConnectivityConfiguration
      * 
-    */
+     */
     public List<EffectiveConnectivityConfigurationResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

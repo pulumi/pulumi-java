@@ -25,6 +25,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="alias")
     private @Nullable String alias;
 
+    /**
+     * @return The domain&#39;s NetBIOS name
+     * 
+     */
     public Optional<String> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -36,6 +40,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="baseGroupDN")
     private @Nullable String baseGroupDN;
 
+    /**
+     * @return The base distinguished name for groups
+     * 
+     */
     public Optional<String> baseGroupDN() {
         return Optional.ofNullable(this.baseGroupDN);
     }
@@ -47,6 +55,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="baseUserDN")
     private @Nullable String baseUserDN;
 
+    /**
+     * @return The base distinguished name for users
+     * 
+     */
     public Optional<String> baseUserDN() {
         return Optional.ofNullable(this.baseUserDN);
     }
@@ -58,6 +70,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="domain")
     private @Nullable String domain;
 
+    /**
+     * @return The domain&#39;s dns name
+     * 
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -69,6 +85,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the identity source
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,6 +100,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -91,6 +115,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="primaryServer")
     private @Nullable String primaryServer;
 
+    /**
+     * @return Primary server URL
+     * 
+     */
     public Optional<String> primaryServer() {
         return Optional.ofNullable(this.primaryServer);
     }
@@ -102,6 +130,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="secondaryServer")
     private @Nullable String secondaryServer;
 
+    /**
+     * @return Secondary server URL
+     * 
+     */
     public Optional<String> secondaryServer() {
         return Optional.ofNullable(this.secondaryServer);
     }
@@ -113,6 +145,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ssl")
     private @Nullable String ssl;
 
+    /**
+     * @return Protect LDAP communication using SSL certificate (LDAPS)
+     * 
+     */
     public Optional<String> ssl() {
         return Optional.ofNullable(this.ssl);
     }
@@ -124,6 +160,10 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -161,51 +201,111 @@ public final class IdentitySourceResponse extends com.pulumi.resources.InvokeArg
             $ = new IdentitySourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The domain&#39;s NetBIOS name
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable String alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param baseGroupDN The base distinguished name for groups
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseGroupDN(@Nullable String baseGroupDN) {
             $.baseGroupDN = baseGroupDN;
             return this;
         }
 
+        /**
+         * @param baseUserDN The base distinguished name for users
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseUserDN(@Nullable String baseUserDN) {
             $.baseUserDN = baseUserDN;
             return this;
         }
 
+        /**
+         * @param domain The domain&#39;s dns name
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param name The name of the identity source
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param password The password of the Active Directory user with a minimum of read-only access to Base DN for users and groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param primaryServer Primary server URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryServer(@Nullable String primaryServer) {
             $.primaryServer = primaryServer;
             return this;
         }
 
+        /**
+         * @param secondaryServer Secondary server URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryServer(@Nullable String secondaryServer) {
             $.secondaryServer = secondaryServer;
             return this;
         }
 
+        /**
+         * @param ssl Protect LDAP communication using SSL certificate (LDAPS)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssl(@Nullable String ssl) {
             $.ssl = ssl;
             return this;
         }
 
+        /**
+         * @param username The ID of an Active Directory user with a minimum of read-only access to Base DN for users and group
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

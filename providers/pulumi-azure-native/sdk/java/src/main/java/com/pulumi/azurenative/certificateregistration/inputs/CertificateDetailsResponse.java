@@ -24,6 +24,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="issuer", required=true)
     private String issuer;
 
+    /**
+     * @return Certificate Issuer.
+     * 
+     */
     public String issuer() {
         return this.issuer;
     }
@@ -35,6 +39,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="notAfter", required=true)
     private String notAfter;
 
+    /**
+     * @return Date Certificate is valid to.
+     * 
+     */
     public String notAfter() {
         return this.notAfter;
     }
@@ -46,6 +54,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="notBefore", required=true)
     private String notBefore;
 
+    /**
+     * @return Date Certificate is valid from.
+     * 
+     */
     public String notBefore() {
         return this.notBefore;
     }
@@ -57,6 +69,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="rawData", required=true)
     private String rawData;
 
+    /**
+     * @return Raw certificate data.
+     * 
+     */
     public String rawData() {
         return this.rawData;
     }
@@ -68,6 +84,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="serialNumber", required=true)
     private String serialNumber;
 
+    /**
+     * @return Certificate Serial Number.
+     * 
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
@@ -79,6 +99,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="signatureAlgorithm", required=true)
     private String signatureAlgorithm;
 
+    /**
+     * @return Certificate Signature algorithm.
+     * 
+     */
     public String signatureAlgorithm() {
         return this.signatureAlgorithm;
     }
@@ -90,6 +114,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="subject", required=true)
     private String subject;
 
+    /**
+     * @return Certificate Subject.
+     * 
+     */
     public String subject() {
         return this.subject;
     }
@@ -101,6 +129,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="thumbprint", required=true)
     private String thumbprint;
 
+    /**
+     * @return Certificate Thumbprint.
+     * 
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
@@ -112,6 +144,10 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
     @Import(name="version", required=true)
     private Integer version;
 
+    /**
+     * @return Certificate Version.
+     * 
+     */
     public Integer version() {
         return this.version;
     }
@@ -148,46 +184,100 @@ public final class CertificateDetailsResponse extends com.pulumi.resources.Invok
             $ = new CertificateDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param issuer Certificate Issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuer(String issuer) {
             $.issuer = issuer;
             return this;
         }
 
+        /**
+         * @param notAfter Date Certificate is valid to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notAfter(String notAfter) {
             $.notAfter = notAfter;
             return this;
         }
 
+        /**
+         * @param notBefore Date Certificate is valid from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notBefore(String notBefore) {
             $.notBefore = notBefore;
             return this;
         }
 
+        /**
+         * @param rawData Raw certificate data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawData(String rawData) {
             $.rawData = rawData;
             return this;
         }
 
+        /**
+         * @param serialNumber Certificate Serial Number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             $.serialNumber = serialNumber;
             return this;
         }
 
+        /**
+         * @param signatureAlgorithm Certificate Signature algorithm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signatureAlgorithm(String signatureAlgorithm) {
             $.signatureAlgorithm = signatureAlgorithm;
             return this;
         }
 
+        /**
+         * @param subject Certificate Subject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subject(String subject) {
             $.subject = subject;
             return this;
         }
 
+        /**
+         * @param thumbprint Certificate Thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param version Certificate Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Integer version) {
             $.version = version;
             return this;

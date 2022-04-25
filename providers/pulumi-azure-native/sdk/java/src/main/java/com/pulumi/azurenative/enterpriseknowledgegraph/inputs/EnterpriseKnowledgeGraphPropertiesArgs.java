@@ -27,6 +27,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends com.pulumi.res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the EnterpriseKnowledgeGraph
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends com.pulumi.res
     @Import(name="metadata")
     private @Nullable Output<Object> metadata;
 
+    /**
+     * @return Specifies the metadata  of the resource.
+     * 
+     */
     public Optional<Output<Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -49,6 +57,10 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends com.pulumi.res
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return The state of EnterpriseKnowledgeGraph provisioning
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -79,29 +91,65 @@ public final class EnterpriseKnowledgeGraphPropertiesArgs extends com.pulumi.res
             $ = new EnterpriseKnowledgeGraphPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the EnterpriseKnowledgeGraph
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the EnterpriseKnowledgeGraph
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param metadata Specifies the metadata  of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Specifies the metadata  of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Object metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param provisioningState The state of EnterpriseKnowledgeGraph provisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState The state of EnterpriseKnowledgeGraph provisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }

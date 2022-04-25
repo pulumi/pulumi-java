@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AppleRegistrationResponse {
     /**
-     * The Client ID of the app used for login.
+     * @return The Client ID of the app used for login.
      * 
      */
     private final @Nullable String clientId;
     /**
-     * The app setting name that contains the client secret.
+     * @return The app setting name that contains the client secret.
      * 
      */
     private final @Nullable String clientSecretSettingName;
@@ -31,16 +31,16 @@ public final class AppleRegistrationResponse {
     }
 
     /**
-     * The Client ID of the app used for login.
+     * @return The Client ID of the app used for login.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The app setting name that contains the client secret.
+     * @return The app setting name that contains the client secret.
      * 
-    */
+     */
     public Optional<String> clientSecretSettingName() {
         return Optional.ofNullable(this.clientSecretSettingName);
     }

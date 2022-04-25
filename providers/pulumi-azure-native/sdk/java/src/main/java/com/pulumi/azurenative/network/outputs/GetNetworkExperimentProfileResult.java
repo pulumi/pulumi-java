@@ -13,42 +13,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNetworkExperimentProfileResult {
     /**
-     * The state of the Experiment
+     * @return The state of the Experiment
      * 
      */
     private final @Nullable String enabledState;
     /**
-     * Gets a unique read-only string that changes whenever the resource is updated.
+     * @return Gets a unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Resource status.
+     * @return Resource status.
      * 
      */
     private final String resourceState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -74,58 +74,58 @@ public final class GetNetworkExperimentProfileResult {
     }
 
     /**
-     * The state of the Experiment
+     * @return The state of the Experiment
      * 
-    */
+     */
     public Optional<String> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
     /**
-     * Gets a unique read-only string that changes whenever the resource is updated.
+     * @return Gets a unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource status.
+     * @return Resource status.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

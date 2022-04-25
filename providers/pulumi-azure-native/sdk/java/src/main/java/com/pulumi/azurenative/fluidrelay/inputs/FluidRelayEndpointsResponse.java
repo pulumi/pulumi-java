@@ -24,6 +24,10 @@ public final class FluidRelayEndpointsResponse extends com.pulumi.resources.Invo
     @Import(name="ordererEndpoints", required=true)
     private List<String> ordererEndpoints;
 
+    /**
+     * @return The Fluid Relay Orderer endpoints.
+     * 
+     */
     public List<String> ordererEndpoints() {
         return this.ordererEndpoints;
     }
@@ -35,6 +39,10 @@ public final class FluidRelayEndpointsResponse extends com.pulumi.resources.Invo
     @Import(name="storageEndpoints", required=true)
     private List<String> storageEndpoints;
 
+    /**
+     * @return The Fluid Relay storage endpoints.
+     * 
+     */
     public List<String> storageEndpoints() {
         return this.storageEndpoints;
     }
@@ -64,20 +72,44 @@ public final class FluidRelayEndpointsResponse extends com.pulumi.resources.Invo
             $ = new FluidRelayEndpointsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ordererEndpoints The Fluid Relay Orderer endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ordererEndpoints(List<String> ordererEndpoints) {
             $.ordererEndpoints = ordererEndpoints;
             return this;
         }
 
+        /**
+         * @param ordererEndpoints The Fluid Relay Orderer endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ordererEndpoints(String... ordererEndpoints) {
             return ordererEndpoints(List.of(ordererEndpoints));
         }
 
+        /**
+         * @param storageEndpoints The Fluid Relay storage endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEndpoints(List<String> storageEndpoints) {
             $.storageEndpoints = storageEndpoints;
             return this;
         }
 
+        /**
+         * @param storageEndpoints The Fluid Relay storage endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEndpoints(String... storageEndpoints) {
             return storageEndpoints(List.of(storageEndpoints));
         }

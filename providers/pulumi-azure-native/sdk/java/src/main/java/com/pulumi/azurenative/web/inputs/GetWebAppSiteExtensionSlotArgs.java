@@ -19,6 +19,10 @@ public final class GetWebAppSiteExtensionSlotArgs extends com.pulumi.resources.I
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Site name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -30,6 +34,10 @@ public final class GetWebAppSiteExtensionSlotArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetWebAppSiteExtensionSlotArgs extends com.pulumi.resources.I
     @Import(name="siteExtensionId", required=true)
     private String siteExtensionId;
 
+    /**
+     * @return Site extension name.
+     * 
+     */
     public String siteExtensionId() {
         return this.siteExtensionId;
     }
@@ -52,6 +64,10 @@ public final class GetWebAppSiteExtensionSlotArgs extends com.pulumi.resources.I
     @Import(name="slot", required=true)
     private String slot;
 
+    /**
+     * @return Name of the deployment slot. If a slot is not specified, the API uses the production slot.
+     * 
+     */
     public String slot() {
         return this.slot;
     }
@@ -83,21 +99,45 @@ public final class GetWebAppSiteExtensionSlotArgs extends com.pulumi.resources.I
             $ = new GetWebAppSiteExtensionSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param siteExtensionId Site extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteExtensionId(String siteExtensionId) {
             $.siteExtensionId = siteExtensionId;
             return this;
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API uses the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             $.slot = slot;
             return this;

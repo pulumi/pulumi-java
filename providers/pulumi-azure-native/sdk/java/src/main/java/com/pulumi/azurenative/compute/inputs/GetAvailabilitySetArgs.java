@@ -19,6 +19,10 @@ public final class GetAvailabilitySetArgs extends com.pulumi.resources.InvokeArg
     @Import(name="availabilitySetName", required=true)
     private String availabilitySetName;
 
+    /**
+     * @return The name of the availability set.
+     * 
+     */
     public String availabilitySetName() {
         return this.availabilitySetName;
     }
@@ -30,6 +34,10 @@ public final class GetAvailabilitySetArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetAvailabilitySetArgs extends com.pulumi.resources.InvokeArg
             $ = new GetAvailabilitySetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilitySetName The name of the availability set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilitySetName(String availabilitySetName) {
             $.availabilitySetName = availabilitySetName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

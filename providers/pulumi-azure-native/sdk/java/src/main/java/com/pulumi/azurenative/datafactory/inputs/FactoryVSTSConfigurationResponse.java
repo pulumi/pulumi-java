@@ -26,6 +26,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return Account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -37,6 +41,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="collaborationBranch", required=true)
     private String collaborationBranch;
 
+    /**
+     * @return Collaboration branch.
+     * 
+     */
     public String collaborationBranch() {
         return this.collaborationBranch;
     }
@@ -48,6 +56,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="lastCommitId")
     private @Nullable String lastCommitId;
 
+    /**
+     * @return Last commit id.
+     * 
+     */
     public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
@@ -59,6 +71,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="projectName", required=true)
     private String projectName;
 
+    /**
+     * @return VSTS project name.
+     * 
+     */
     public String projectName() {
         return this.projectName;
     }
@@ -70,6 +86,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="repositoryName", required=true)
     private String repositoryName;
 
+    /**
+     * @return Repository name.
+     * 
+     */
     public String repositoryName() {
         return this.repositoryName;
     }
@@ -81,6 +101,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="rootFolder", required=true)
     private String rootFolder;
 
+    /**
+     * @return Root folder.
+     * 
+     */
     public String rootFolder() {
         return this.rootFolder;
     }
@@ -92,6 +116,10 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return VSTS tenant id.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -104,6 +132,11 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of repo configuration.
+     * Expected value is &#39;FactoryVSTSConfiguration&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -139,41 +172,90 @@ public final class FactoryVSTSConfigurationResponse extends com.pulumi.resources
             $ = new FactoryVSTSConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param collaborationBranch Collaboration branch.
+         * 
+         * @return builder
+         * 
+         */
         public Builder collaborationBranch(String collaborationBranch) {
             $.collaborationBranch = collaborationBranch;
             return this;
         }
 
+        /**
+         * @param lastCommitId Last commit id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastCommitId(@Nullable String lastCommitId) {
             $.lastCommitId = lastCommitId;
             return this;
         }
 
+        /**
+         * @param projectName VSTS project name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param repositoryName Repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryName(String repositoryName) {
             $.repositoryName = repositoryName;
             return this;
         }
 
+        /**
+         * @param rootFolder Root folder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootFolder(String rootFolder) {
             $.rootFolder = rootFolder;
             return this;
         }
 
+        /**
+         * @param tenantId VSTS tenant id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param type Type of repo configuration.
+         * Expected value is &#39;FactoryVSTSConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

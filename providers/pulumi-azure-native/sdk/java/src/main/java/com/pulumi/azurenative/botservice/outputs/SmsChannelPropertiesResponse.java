@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SmsChannelPropertiesResponse {
     /**
-     * The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final String accountSID;
     /**
-     * The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final @Nullable String authToken;
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
      */
     private final Boolean isEnabled;
     /**
-     * Whether this channel is validated for the bot
+     * @return Whether this channel is validated for the bot
      * 
      */
     private final @Nullable Boolean isValidated;
     /**
-     * The Sms phone
+     * @return The Sms phone
      * 
      */
     private final String phone;
@@ -53,37 +53,37 @@ public final class SmsChannelPropertiesResponse {
     }
 
     /**
-     * The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Sms account SID. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public String accountSID() {
         return this.accountSID;
     }
     /**
-     * The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Sms auth token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public Optional<String> authToken() {
         return Optional.ofNullable(this.authToken);
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Whether this channel is validated for the bot
+     * @return Whether this channel is validated for the bot
      * 
-    */
+     */
     public Optional<Boolean> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }
     /**
-     * The Sms phone
+     * @return The Sms phone
      * 
-    */
+     */
     public String phone() {
         return this.phone;
     }

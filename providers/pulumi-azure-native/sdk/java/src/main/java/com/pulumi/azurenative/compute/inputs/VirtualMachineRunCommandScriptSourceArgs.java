@@ -26,6 +26,10 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends com.pulumi.r
     @Import(name="commandId")
     private @Nullable Output<String> commandId;
 
+    /**
+     * @return Specifies a commandId of predefined built-in script.
+     * 
+     */
     public Optional<Output<String>> commandId() {
         return Optional.ofNullable(this.commandId);
     }
@@ -37,6 +41,10 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends com.pulumi.r
     @Import(name="script")
     private @Nullable Output<String> script;
 
+    /**
+     * @return Specifies the script content to be executed on the VM.
+     * 
+     */
     public Optional<Output<String>> script() {
         return Optional.ofNullable(this.script);
     }
@@ -48,6 +56,10 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends com.pulumi.r
     @Import(name="scriptUri")
     private @Nullable Output<String> scriptUri;
 
+    /**
+     * @return Specifies the script download location.
+     * 
+     */
     public Optional<Output<String>> scriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
@@ -78,29 +90,65 @@ public final class VirtualMachineRunCommandScriptSourceArgs extends com.pulumi.r
             $ = new VirtualMachineRunCommandScriptSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commandId Specifies a commandId of predefined built-in script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandId(@Nullable Output<String> commandId) {
             $.commandId = commandId;
             return this;
         }
 
+        /**
+         * @param commandId Specifies a commandId of predefined built-in script.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commandId(String commandId) {
             return commandId(Output.of(commandId));
         }
 
+        /**
+         * @param script Specifies the script content to be executed on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(@Nullable Output<String> script) {
             $.script = script;
             return this;
         }
 
+        /**
+         * @param script Specifies the script content to be executed on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder script(String script) {
             return script(Output.of(script));
         }
 
+        /**
+         * @param scriptUri Specifies the script download location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptUri(@Nullable Output<String> scriptUri) {
             $.scriptUri = scriptUri;
             return this;
         }
 
+        /**
+         * @param scriptUri Specifies the script download location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptUri(String scriptUri) {
             return scriptUri(Output.of(scriptUri));
         }

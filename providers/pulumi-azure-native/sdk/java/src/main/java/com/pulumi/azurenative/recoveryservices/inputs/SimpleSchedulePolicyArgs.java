@@ -33,6 +33,11 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="schedulePolicyType", required=true)
     private Output<String> schedulePolicyType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;SimpleSchedulePolicy&#39;.
+     * 
+     */
     public Output<String> schedulePolicyType() {
         return this.schedulePolicyType;
     }
@@ -44,6 +49,10 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="scheduleRunDays")
     private @Nullable Output<List<DayOfWeek>> scheduleRunDays;
 
+    /**
+     * @return List of days of week this schedule has to be run.
+     * 
+     */
     public Optional<Output<List<DayOfWeek>>> scheduleRunDays() {
         return Optional.ofNullable(this.scheduleRunDays);
     }
@@ -55,6 +64,10 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="scheduleRunFrequency")
     private @Nullable Output<Either<String,ScheduleRunType>> scheduleRunFrequency;
 
+    /**
+     * @return Frequency of the schedule operation of this policy.
+     * 
+     */
     public Optional<Output<Either<String,ScheduleRunType>>> scheduleRunFrequency() {
         return Optional.ofNullable(this.scheduleRunFrequency);
     }
@@ -66,6 +79,10 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="scheduleRunTimes")
     private @Nullable Output<List<String>> scheduleRunTimes;
 
+    /**
+     * @return List of times of day this schedule has to be run.
+     * 
+     */
     public Optional<Output<List<String>>> scheduleRunTimes() {
         return Optional.ofNullable(this.scheduleRunTimes);
     }
@@ -77,6 +94,10 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
     @Import(name="scheduleWeeklyFrequency")
     private @Nullable Output<Integer> scheduleWeeklyFrequency;
 
+    /**
+     * @return At every number weeks this schedule has to be run.
+     * 
+     */
     public Optional<Output<Integer>> scheduleWeeklyFrequency() {
         return Optional.ofNullable(this.scheduleWeeklyFrequency);
     }
@@ -109,63 +130,149 @@ public final class SimpleSchedulePolicyArgs extends com.pulumi.resources.Resourc
             $ = new SimpleSchedulePolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedulePolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;SimpleSchedulePolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicyType(Output<String> schedulePolicyType) {
             $.schedulePolicyType = schedulePolicyType;
             return this;
         }
 
+        /**
+         * @param schedulePolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;SimpleSchedulePolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicyType(String schedulePolicyType) {
             return schedulePolicyType(Output.of(schedulePolicyType));
         }
 
+        /**
+         * @param scheduleRunDays List of days of week this schedule has to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunDays(@Nullable Output<List<DayOfWeek>> scheduleRunDays) {
             $.scheduleRunDays = scheduleRunDays;
             return this;
         }
 
+        /**
+         * @param scheduleRunDays List of days of week this schedule has to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunDays(List<DayOfWeek> scheduleRunDays) {
             return scheduleRunDays(Output.of(scheduleRunDays));
         }
 
+        /**
+         * @param scheduleRunDays List of days of week this schedule has to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunDays(DayOfWeek... scheduleRunDays) {
             return scheduleRunDays(List.of(scheduleRunDays));
         }
 
+        /**
+         * @param scheduleRunFrequency Frequency of the schedule operation of this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunFrequency(@Nullable Output<Either<String,ScheduleRunType>> scheduleRunFrequency) {
             $.scheduleRunFrequency = scheduleRunFrequency;
             return this;
         }
 
+        /**
+         * @param scheduleRunFrequency Frequency of the schedule operation of this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunFrequency(Either<String,ScheduleRunType> scheduleRunFrequency) {
             return scheduleRunFrequency(Output.of(scheduleRunFrequency));
         }
 
+        /**
+         * @param scheduleRunFrequency Frequency of the schedule operation of this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunFrequency(String scheduleRunFrequency) {
             return scheduleRunFrequency(Either.ofLeft(scheduleRunFrequency));
         }
 
+        /**
+         * @param scheduleRunFrequency Frequency of the schedule operation of this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunFrequency(ScheduleRunType scheduleRunFrequency) {
             return scheduleRunFrequency(Either.ofRight(scheduleRunFrequency));
         }
 
+        /**
+         * @param scheduleRunTimes List of times of day this schedule has to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunTimes(@Nullable Output<List<String>> scheduleRunTimes) {
             $.scheduleRunTimes = scheduleRunTimes;
             return this;
         }
 
+        /**
+         * @param scheduleRunTimes List of times of day this schedule has to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunTimes(List<String> scheduleRunTimes) {
             return scheduleRunTimes(Output.of(scheduleRunTimes));
         }
 
+        /**
+         * @param scheduleRunTimes List of times of day this schedule has to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleRunTimes(String... scheduleRunTimes) {
             return scheduleRunTimes(List.of(scheduleRunTimes));
         }
 
+        /**
+         * @param scheduleWeeklyFrequency At every number weeks this schedule has to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleWeeklyFrequency(@Nullable Output<Integer> scheduleWeeklyFrequency) {
             $.scheduleWeeklyFrequency = scheduleWeeklyFrequency;
             return this;
         }
 
+        /**
+         * @param scheduleWeeklyFrequency At every number weeks this schedule has to be run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleWeeklyFrequency(Integer scheduleWeeklyFrequency) {
             return scheduleWeeklyFrequency(Output.of(scheduleWeeklyFrequency));
         }

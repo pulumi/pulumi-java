@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MetadataItemResponse {
     /**
-     * Metadata item key name. Type: string (or Expression with resultType string).
+     * @return Metadata item key name. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object name;
     /**
-     * Metadata item value. Type: string (or Expression with resultType string).
+     * @return Metadata item value. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object value;
@@ -31,16 +31,16 @@ public final class MetadataItemResponse {
     }
 
     /**
-     * Metadata item key name. Type: string (or Expression with resultType string).
+     * @return Metadata item key name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Metadata item value. Type: string (or Expression with resultType string).
+     * @return Metadata item value. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> value() {
         return Optional.ofNullable(this.value);
     }

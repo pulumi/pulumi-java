@@ -22,6 +22,10 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="apiId", required=true)
     private Output<String> apiId;
 
+    /**
+     * @return Identifier of the API the release belongs to.
+     * 
+     */
     public Output<String> apiId() {
         return this.apiId;
     }
@@ -33,6 +37,10 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="notes")
     private @Nullable Output<String> notes;
 
+    /**
+     * @return Release Notes
+     * 
+     */
     public Optional<Output<String>> notes() {
         return Optional.ofNullable(this.notes);
     }
@@ -44,6 +52,10 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="releaseId")
     private @Nullable Output<String> releaseId;
 
+    /**
+     * @return Release identifier within an API. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> releaseId() {
         return Optional.ofNullable(this.releaseId);
     }
@@ -55,6 +67,10 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -98,47 +118,107 @@ public final class ApiReleaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ApiReleaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiId Identifier of the API the release belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(Output<String> apiId) {
             $.apiId = apiId;
             return this;
         }
 
+        /**
+         * @param apiId Identifier of the API the release belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiId(String apiId) {
             return apiId(Output.of(apiId));
         }
 
+        /**
+         * @param notes Release Notes
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(@Nullable Output<String> notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param notes Release Notes
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(String notes) {
             return notes(Output.of(notes));
         }
 
+        /**
+         * @param releaseId Release identifier within an API. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseId(@Nullable Output<String> releaseId) {
             $.releaseId = releaseId;
             return this;
         }
 
+        /**
+         * @param releaseId Release identifier within an API. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseId(String releaseId) {
             return releaseId(Output.of(releaseId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }

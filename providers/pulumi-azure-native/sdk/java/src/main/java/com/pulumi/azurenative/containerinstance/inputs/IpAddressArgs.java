@@ -30,6 +30,10 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dnsNameLabel")
     private @Nullable Output<String> dnsNameLabel;
 
+    /**
+     * @return The Dns name label for the IP.
+     * 
+     */
     public Optional<Output<String>> dnsNameLabel() {
         return Optional.ofNullable(this.dnsNameLabel);
     }
@@ -41,6 +45,10 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ip")
     private @Nullable Output<String> ip;
 
+    /**
+     * @return The IP exposed to the public internet.
+     * 
+     */
     public Optional<Output<String>> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -52,6 +60,10 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ports", required=true)
     private Output<List<PortArgs>> ports;
 
+    /**
+     * @return The list of ports exposed on the container group.
+     * 
+     */
     public Output<List<PortArgs>> ports() {
         return this.ports;
     }
@@ -63,6 +75,10 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<Either<String,ContainerGroupIpAddressType>> type;
 
+    /**
+     * @return Specifies if the IP is exposed to the public internet or private VNET.
+     * 
+     */
     public Output<Either<String,ContainerGroupIpAddressType>> type() {
         return this.type;
     }
@@ -94,50 +110,116 @@ public final class IpAddressArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IpAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsNameLabel The Dns name label for the IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNameLabel(@Nullable Output<String> dnsNameLabel) {
             $.dnsNameLabel = dnsNameLabel;
             return this;
         }
 
+        /**
+         * @param dnsNameLabel The Dns name label for the IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsNameLabel(String dnsNameLabel) {
             return dnsNameLabel(Output.of(dnsNameLabel));
         }
 
+        /**
+         * @param ip The IP exposed to the public internet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip The IP exposed to the public internet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }
 
+        /**
+         * @param ports The list of ports exposed on the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(Output<List<PortArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports The list of ports exposed on the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<PortArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports The list of ports exposed on the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(PortArgs... ports) {
             return ports(List.of(ports));
         }
 
+        /**
+         * @param type Specifies if the IP is exposed to the public internet or private VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,ContainerGroupIpAddressType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies if the IP is exposed to the public internet or private VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ContainerGroupIpAddressType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Specifies if the IP is exposed to the public internet or private VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Specifies if the IP is exposed to the public internet or private VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ContainerGroupIpAddressType type) {
             return type(Either.ofRight(type));
         }

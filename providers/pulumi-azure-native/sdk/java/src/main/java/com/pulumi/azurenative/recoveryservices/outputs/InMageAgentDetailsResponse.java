@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class InMageAgentDetailsResponse {
     /**
-     * Agent expiry date.
+     * @return Agent expiry date.
      * 
      */
     private final @Nullable String agentExpiryDate;
     /**
-     * A value indicating whether installed agent needs to be updated.
+     * @return A value indicating whether installed agent needs to be updated.
      * 
      */
     private final @Nullable String agentUpdateStatus;
     /**
-     * The agent version.
+     * @return The agent version.
      * 
      */
     private final @Nullable String agentVersion;
     /**
-     * A value indicating whether reboot is required after update is applied.
+     * @return A value indicating whether reboot is required after update is applied.
      * 
      */
     private final @Nullable String postUpdateRebootStatus;
@@ -45,30 +45,30 @@ public final class InMageAgentDetailsResponse {
     }
 
     /**
-     * Agent expiry date.
+     * @return Agent expiry date.
      * 
-    */
+     */
     public Optional<String> agentExpiryDate() {
         return Optional.ofNullable(this.agentExpiryDate);
     }
     /**
-     * A value indicating whether installed agent needs to be updated.
+     * @return A value indicating whether installed agent needs to be updated.
      * 
-    */
+     */
     public Optional<String> agentUpdateStatus() {
         return Optional.ofNullable(this.agentUpdateStatus);
     }
     /**
-     * The agent version.
+     * @return The agent version.
      * 
-    */
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
     /**
-     * A value indicating whether reboot is required after update is applied.
+     * @return A value indicating whether reboot is required after update is applied.
      * 
-    */
+     */
     public Optional<String> postUpdateRebootStatus() {
         return Optional.ofNullable(this.postUpdateRebootStatus);
     }

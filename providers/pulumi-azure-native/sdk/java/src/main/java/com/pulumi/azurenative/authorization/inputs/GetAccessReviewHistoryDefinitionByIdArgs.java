@@ -19,6 +19,10 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends com.pulumi.r
     @Import(name="historyDefinitionId", required=true)
     private String historyDefinitionId;
 
+    /**
+     * @return The id of the access review history definition.
+     * 
+     */
     public String historyDefinitionId() {
         return this.historyDefinitionId;
     }
@@ -47,6 +51,12 @@ public final class GetAccessReviewHistoryDefinitionByIdArgs extends com.pulumi.r
             $ = new GetAccessReviewHistoryDefinitionByIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param historyDefinitionId The id of the access review history definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder historyDefinitionId(String historyDefinitionId) {
             $.historyDefinitionId = historyDefinitionId;
             return this;

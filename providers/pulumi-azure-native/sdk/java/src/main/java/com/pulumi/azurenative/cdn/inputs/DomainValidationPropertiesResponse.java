@@ -23,6 +23,10 @@ public final class DomainValidationPropertiesResponse extends com.pulumi.resourc
     @Import(name="expirationDate", required=true)
     private String expirationDate;
 
+    /**
+     * @return The date time that the token expires
+     * 
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
@@ -34,6 +38,10 @@ public final class DomainValidationPropertiesResponse extends com.pulumi.resourc
     @Import(name="validationToken", required=true)
     private String validationToken;
 
+    /**
+     * @return Challenge used for DNS TXT record or file based validation
+     * 
+     */
     public String validationToken() {
         return this.validationToken;
     }
@@ -63,11 +71,23 @@ public final class DomainValidationPropertiesResponse extends com.pulumi.resourc
             $ = new DomainValidationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationDate The date time that the token expires
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param validationToken Challenge used for DNS TXT record or file based validation
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationToken(String validationToken) {
             $.validationToken = validationToken;
             return this;

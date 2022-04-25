@@ -25,6 +25,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oSMajorVersion")
     private @Nullable String oSMajorVersion;
 
+    /**
+     * @return The OS Major Version.
+     * 
+     */
     public Optional<String> oSMajorVersion() {
         return Optional.ofNullable(this.oSMajorVersion);
     }
@@ -36,6 +40,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oSMinorVersion")
     private @Nullable String oSMinorVersion;
 
+    /**
+     * @return The OS Minor Version.
+     * 
+     */
     public Optional<String> oSMinorVersion() {
         return Optional.ofNullable(this.oSMinorVersion);
     }
@@ -47,6 +55,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="oSVersion")
     private @Nullable String oSVersion;
 
+    /**
+     * @return The OS Version.
+     * 
+     */
     public Optional<String> oSVersion() {
         return Optional.ofNullable(this.oSVersion);
     }
@@ -58,6 +70,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osEdition")
     private @Nullable String osEdition;
 
+    /**
+     * @return The OSEdition.
+     * 
+     */
     public Optional<String> osEdition() {
         return Optional.ofNullable(this.osEdition);
     }
@@ -69,6 +85,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return VM Disk details.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -80,6 +100,10 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="productType")
     private @Nullable String productType;
 
+    /**
+     * @return Product type.
+     * 
+     */
     public Optional<String> productType() {
         return Optional.ofNullable(this.productType);
     }
@@ -113,31 +137,67 @@ public final class OSDetailsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OSDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oSMajorVersion The OS Major Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oSMajorVersion(@Nullable String oSMajorVersion) {
             $.oSMajorVersion = oSMajorVersion;
             return this;
         }
 
+        /**
+         * @param oSMinorVersion The OS Minor Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oSMinorVersion(@Nullable String oSMinorVersion) {
             $.oSMinorVersion = oSMinorVersion;
             return this;
         }
 
+        /**
+         * @param oSVersion The OS Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oSVersion(@Nullable String oSVersion) {
             $.oSVersion = oSVersion;
             return this;
         }
 
+        /**
+         * @param osEdition The OSEdition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osEdition(@Nullable String osEdition) {
             $.osEdition = osEdition;
             return this;
         }
 
+        /**
+         * @param osType VM Disk details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param productType Product type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productType(@Nullable String productType) {
             $.productType = productType;
             return this;

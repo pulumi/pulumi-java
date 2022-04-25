@@ -21,6 +21,10 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
     @Import(name="labId")
     private @Nullable String labId;
 
+    /**
+     * @return The resource Id of the lab
+     * 
+     */
     public Optional<String> labId() {
         return Optional.ofNullable(this.labId);
     }
@@ -32,6 +36,10 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The name of the user.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -61,11 +69,23 @@ public final class ListGlobalUserEnvironmentsArgs extends com.pulumi.resources.I
             $ = new ListGlobalUserEnvironmentsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labId The resource Id of the lab
+         * 
+         * @return builder
+         * 
+         */
         public Builder labId(@Nullable String labId) {
             $.labId = labId;
             return this;
         }
 
+        /**
+         * @param userName The name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

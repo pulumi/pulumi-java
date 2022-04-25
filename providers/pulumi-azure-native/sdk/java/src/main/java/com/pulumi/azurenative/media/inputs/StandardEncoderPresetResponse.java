@@ -45,6 +45,10 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
     @Import(name="codecs", required=true)
     private List<Object> codecs;
 
+    /**
+     * @return The list of codecs to be used when encoding the input video.
+     * 
+     */
     public List<Object> codecs() {
         return this.codecs;
     }
@@ -56,6 +60,10 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
     @Import(name="filters")
     private @Nullable FiltersResponse filters;
 
+    /**
+     * @return One or more filtering operations that are applied to the input media before encoding.
+     * 
+     */
     public Optional<FiltersResponse> filters() {
         return Optional.ofNullable(this.filters);
     }
@@ -67,6 +75,10 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
     @Import(name="formats", required=true)
     private List<Object> formats;
 
+    /**
+     * @return The list of outputs to be produced by the encoder.
+     * 
+     */
     public List<Object> formats() {
         return this.formats;
     }
@@ -79,6 +91,11 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -110,29 +127,66 @@ public final class StandardEncoderPresetResponse extends com.pulumi.resources.In
             $ = new StandardEncoderPresetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codecs The list of codecs to be used when encoding the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codecs(List<Object> codecs) {
             $.codecs = codecs;
             return this;
         }
 
+        /**
+         * @param codecs The list of codecs to be used when encoding the input video.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codecs(Object... codecs) {
             return codecs(List.of(codecs));
         }
 
+        /**
+         * @param filters One or more filtering operations that are applied to the input media before encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filters(@Nullable FiltersResponse filters) {
             $.filters = filters;
             return this;
         }
 
+        /**
+         * @param formats The list of outputs to be produced by the encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formats(List<Object> formats) {
             $.formats = formats;
             return this;
         }
 
+        /**
+         * @param formats The list of outputs to be produced by the encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formats(Object... formats) {
             return formats(List.of(formats));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.StandardEncoderPreset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

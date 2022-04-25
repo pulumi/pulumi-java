@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListIntegrationRuntimeAuthKeyResult {
     /**
-     * The primary integration runtime authentication key.
+     * @return The primary integration runtime authentication key.
      * 
      */
     private final @Nullable String authKey1;
     /**
-     * The secondary integration runtime authentication key.
+     * @return The secondary integration runtime authentication key.
      * 
      */
     private final @Nullable String authKey2;
@@ -31,16 +31,16 @@ public final class ListIntegrationRuntimeAuthKeyResult {
     }
 
     /**
-     * The primary integration runtime authentication key.
+     * @return The primary integration runtime authentication key.
      * 
-    */
+     */
     public Optional<String> authKey1() {
         return Optional.ofNullable(this.authKey1);
     }
     /**
-     * The secondary integration runtime authentication key.
+     * @return The secondary integration runtime authentication key.
      * 
-    */
+     */
     public Optional<String> authKey2() {
         return Optional.ofNullable(this.authKey2);
     }

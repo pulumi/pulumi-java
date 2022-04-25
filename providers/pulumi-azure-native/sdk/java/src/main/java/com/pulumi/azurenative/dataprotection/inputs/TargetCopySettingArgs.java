@@ -28,6 +28,10 @@ public final class TargetCopySettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="copyAfter", required=true)
     private Output<Object> copyAfter;
 
+    /**
+     * @return It can be CustomCopyOption or ImmediateCopyOption.
+     * 
+     */
     public Output<Object> copyAfter() {
         return this.copyAfter;
     }
@@ -39,6 +43,10 @@ public final class TargetCopySettingArgs extends com.pulumi.resources.ResourceAr
     @Import(name="dataStore", required=true)
     private Output<DataStoreInfoBaseArgs> dataStore;
 
+    /**
+     * @return Info of target datastore
+     * 
+     */
     public Output<DataStoreInfoBaseArgs> dataStore() {
         return this.dataStore;
     }
@@ -68,20 +76,44 @@ public final class TargetCopySettingArgs extends com.pulumi.resources.ResourceAr
             $ = new TargetCopySettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyAfter It can be CustomCopyOption or ImmediateCopyOption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyAfter(Output<Object> copyAfter) {
             $.copyAfter = copyAfter;
             return this;
         }
 
+        /**
+         * @param copyAfter It can be CustomCopyOption or ImmediateCopyOption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyAfter(Object copyAfter) {
             return copyAfter(Output.of(copyAfter));
         }
 
+        /**
+         * @param dataStore Info of target datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStore(Output<DataStoreInfoBaseArgs> dataStore) {
             $.dataStore = dataStore;
             return this;
         }
 
+        /**
+         * @param dataStore Info of target datastore
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataStore(DataStoreInfoBaseArgs dataStore) {
             return dataStore(Output.of(dataStore));
         }

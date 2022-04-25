@@ -26,6 +26,10 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="readOnly")
     private @Nullable Boolean readOnly;
 
+    /**
+     * @return The flag indicating whether the Azure File shared mounted as a volume is read-only.
+     * 
+     */
     public Optional<Boolean> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -37,6 +41,10 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="shareName", required=true)
     private String shareName;
 
+    /**
+     * @return The name of the Azure File share to be mounted as a volume.
+     * 
+     */
     public String shareName() {
         return this.shareName;
     }
@@ -48,6 +56,10 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="storageAccountKey")
     private @Nullable String storageAccountKey;
 
+    /**
+     * @return The storage account access key used to access the Azure File share.
+     * 
+     */
     public Optional<String> storageAccountKey() {
         return Optional.ofNullable(this.storageAccountKey);
     }
@@ -59,6 +71,10 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
     @Import(name="storageAccountName", required=true)
     private String storageAccountName;
 
+    /**
+     * @return The name of the storage account that contains the Azure File share.
+     * 
+     */
     public String storageAccountName() {
         return this.storageAccountName;
     }
@@ -90,21 +106,45 @@ public final class AzureFileVolumeResponse extends com.pulumi.resources.InvokeAr
             $ = new AzureFileVolumeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param readOnly The flag indicating whether the Azure File shared mounted as a volume is read-only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Boolean readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param shareName The name of the Azure File share to be mounted as a volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param storageAccountKey The storage account access key used to access the Azure File share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountKey(@Nullable String storageAccountKey) {
             $.storageAccountKey = storageAccountKey;
             return this;
         }
 
+        /**
+         * @param storageAccountName The name of the storage account that contains the Azure File share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountName(String storageAccountName) {
             $.storageAccountName = storageAccountName;
             return this;

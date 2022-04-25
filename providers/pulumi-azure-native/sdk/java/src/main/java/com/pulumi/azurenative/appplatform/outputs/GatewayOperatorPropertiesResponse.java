@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class GatewayOperatorPropertiesResponse {
     /**
-     * Collection of instances belong to Spring Cloud Gateway operator.
+     * @return Collection of instances belong to Spring Cloud Gateway operator.
      * 
      */
     private final List<GatewayInstanceResponse> instances;
     /**
-     * The requested resource quantity for required CPU and Memory.
+     * @return The requested resource quantity for required CPU and Memory.
      * 
      */
     private final GatewayOperatorResourceRequestsResponse resourceRequests;
@@ -31,16 +31,16 @@ public final class GatewayOperatorPropertiesResponse {
     }
 
     /**
-     * Collection of instances belong to Spring Cloud Gateway operator.
+     * @return Collection of instances belong to Spring Cloud Gateway operator.
      * 
-    */
+     */
     public List<GatewayInstanceResponse> instances() {
         return this.instances;
     }
     /**
-     * The requested resource quantity for required CPU and Memory.
+     * @return The requested resource quantity for required CPU and Memory.
      * 
-    */
+     */
     public GatewayOperatorResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }

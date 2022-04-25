@@ -25,6 +25,10 @@ public final class TrafficSelectorPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="localAddressRanges", required=true)
     private Output<List<String>> localAddressRanges;
 
+    /**
+     * @return A collection of local address spaces in CIDR format.
+     * 
+     */
     public Output<List<String>> localAddressRanges() {
         return this.localAddressRanges;
     }
@@ -36,6 +40,10 @@ public final class TrafficSelectorPolicyArgs extends com.pulumi.resources.Resour
     @Import(name="remoteAddressRanges", required=true)
     private Output<List<String>> remoteAddressRanges;
 
+    /**
+     * @return A collection of remote address spaces in CIDR format.
+     * 
+     */
     public Output<List<String>> remoteAddressRanges() {
         return this.remoteAddressRanges;
     }
@@ -65,28 +73,64 @@ public final class TrafficSelectorPolicyArgs extends com.pulumi.resources.Resour
             $ = new TrafficSelectorPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localAddressRanges A collection of local address spaces in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localAddressRanges(Output<List<String>> localAddressRanges) {
             $.localAddressRanges = localAddressRanges;
             return this;
         }
 
+        /**
+         * @param localAddressRanges A collection of local address spaces in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localAddressRanges(List<String> localAddressRanges) {
             return localAddressRanges(Output.of(localAddressRanges));
         }
 
+        /**
+         * @param localAddressRanges A collection of local address spaces in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localAddressRanges(String... localAddressRanges) {
             return localAddressRanges(List.of(localAddressRanges));
         }
 
+        /**
+         * @param remoteAddressRanges A collection of remote address spaces in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteAddressRanges(Output<List<String>> remoteAddressRanges) {
             $.remoteAddressRanges = remoteAddressRanges;
             return this;
         }
 
+        /**
+         * @param remoteAddressRanges A collection of remote address spaces in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteAddressRanges(List<String> remoteAddressRanges) {
             return remoteAddressRanges(Output.of(remoteAddressRanges));
         }
 
+        /**
+         * @param remoteAddressRanges A collection of remote address spaces in CIDR format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteAddressRanges(String... remoteAddressRanges) {
             return remoteAddressRanges(List.of(remoteAddressRanges));
         }

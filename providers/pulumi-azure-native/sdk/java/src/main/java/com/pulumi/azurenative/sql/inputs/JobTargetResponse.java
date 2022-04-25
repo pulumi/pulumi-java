@@ -26,6 +26,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="databaseName")
     private @Nullable String databaseName;
 
+    /**
+     * @return The target database name.
+     * 
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -37,6 +41,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="elasticPoolName")
     private @Nullable String elasticPoolName;
 
+    /**
+     * @return The target elastic pool name.
+     * 
+     */
     public Optional<String> elasticPoolName() {
         return Optional.ofNullable(this.elasticPoolName);
     }
@@ -48,6 +56,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="membershipType")
     private @Nullable String membershipType;
 
+    /**
+     * @return Whether the target is included or excluded from the group.
+     * 
+     */
     public Optional<String> membershipType() {
         return Optional.ofNullable(this.membershipType);
     }
@@ -59,6 +71,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="refreshCredential")
     private @Nullable String refreshCredential;
 
+    /**
+     * @return The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
+     * 
+     */
     public Optional<String> refreshCredential() {
         return Optional.ofNullable(this.refreshCredential);
     }
@@ -70,6 +86,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serverName")
     private @Nullable String serverName;
 
+    /**
+     * @return The target server name.
+     * 
+     */
     public Optional<String> serverName() {
         return Optional.ofNullable(this.serverName);
     }
@@ -81,6 +101,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="shardMapName")
     private @Nullable String shardMapName;
 
+    /**
+     * @return The target shard map.
+     * 
+     */
     public Optional<String> shardMapName() {
         return Optional.ofNullable(this.shardMapName);
     }
@@ -92,6 +116,10 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The target type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -126,36 +154,78 @@ public final class JobTargetResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobTargetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseName The target database name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable String databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param elasticPoolName The target elastic pool name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticPoolName(@Nullable String elasticPoolName) {
             $.elasticPoolName = elasticPoolName;
             return this;
         }
 
+        /**
+         * @param membershipType Whether the target is included or excluded from the group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder membershipType(@Nullable String membershipType) {
             $.membershipType = membershipType;
             return this;
         }
 
+        /**
+         * @param refreshCredential The resource ID of the credential that is used during job execution to connect to the target and determine the list of databases inside the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshCredential(@Nullable String refreshCredential) {
             $.refreshCredential = refreshCredential;
             return this;
         }
 
+        /**
+         * @param serverName The target server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverName(@Nullable String serverName) {
             $.serverName = serverName;
             return this;
         }
 
+        /**
+         * @param shardMapName The target shard map.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardMapName(@Nullable String shardMapName) {
             $.shardMapName = shardMapName;
             return this;
         }
 
+        /**
+         * @param type The target type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

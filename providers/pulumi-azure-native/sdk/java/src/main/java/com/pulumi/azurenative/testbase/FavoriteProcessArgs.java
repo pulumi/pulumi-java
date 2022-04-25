@@ -22,6 +22,10 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="actualProcessName", required=true)
     private Output<String> actualProcessName;
 
+    /**
+     * @return The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
+     * 
+     */
     public Output<String> actualProcessName() {
         return this.actualProcessName;
     }
@@ -33,6 +37,10 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="favoriteProcessResourceName")
     private @Nullable Output<String> favoriteProcessResourceName;
 
+    /**
+     * @return The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use &#39;actualProcessName&#39; in request body to submit the name.
+     * 
+     */
     public Optional<Output<String>> favoriteProcessResourceName() {
         return Optional.ofNullable(this.favoriteProcessResourceName);
     }
@@ -44,6 +52,10 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="packageName", required=true)
     private Output<String> packageName;
 
+    /**
+     * @return The resource name of the Test Base Package.
+     * 
+     */
     public Output<String> packageName() {
         return this.packageName;
     }
@@ -55,6 +67,10 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -66,6 +82,10 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="testBaseAccountName", required=true)
     private Output<String> testBaseAccountName;
 
+    /**
+     * @return The resource name of the Test Base Account.
+     * 
+     */
     public Output<String> testBaseAccountName() {
         return this.testBaseAccountName;
     }
@@ -98,47 +118,107 @@ public final class FavoriteProcessArgs extends com.pulumi.resources.ResourceArgs
             $ = new FavoriteProcessArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actualProcessName The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actualProcessName(Output<String> actualProcessName) {
             $.actualProcessName = actualProcessName;
             return this;
         }
 
+        /**
+         * @param actualProcessName The actual name of the favorite process. It will be equal to resource name except for the scenario that the process name contains characters that are not allowed in the resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actualProcessName(String actualProcessName) {
             return actualProcessName(Output.of(actualProcessName));
         }
 
+        /**
+         * @param favoriteProcessResourceName The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use &#39;actualProcessName&#39; in request body to submit the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoriteProcessResourceName(@Nullable Output<String> favoriteProcessResourceName) {
             $.favoriteProcessResourceName = favoriteProcessResourceName;
             return this;
         }
 
+        /**
+         * @param favoriteProcessResourceName The resource name of a favorite process in a package. If the process name contains characters that are not allowed in Azure Resource Name, we use &#39;actualProcessName&#39; in request body to submit the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder favoriteProcessResourceName(String favoriteProcessResourceName) {
             return favoriteProcessResourceName(Output.of(favoriteProcessResourceName));
         }
 
+        /**
+         * @param packageName The resource name of the Test Base Package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(Output<String> packageName) {
             $.packageName = packageName;
             return this;
         }
 
+        /**
+         * @param packageName The resource name of the Test Base Package.
+         * 
+         * @return builder
+         * 
+         */
         public Builder packageName(String packageName) {
             return packageName(Output.of(packageName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(Output<String> testBaseAccountName) {
             $.testBaseAccountName = testBaseAccountName;
             return this;
         }
 
+        /**
+         * @param testBaseAccountName The resource name of the Test Base Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testBaseAccountName(String testBaseAccountName) {
             return testBaseAccountName(Output.of(testBaseAccountName));
         }

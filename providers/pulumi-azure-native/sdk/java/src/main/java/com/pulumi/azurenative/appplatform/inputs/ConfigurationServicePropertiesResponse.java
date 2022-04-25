@@ -29,6 +29,10 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
     @Import(name="instances", required=true)
     private List<ConfigurationServiceInstanceResponse> instances;
 
+    /**
+     * @return Collection of instances belong to Application Configuration Service.
+     * 
+     */
     public List<ConfigurationServiceInstanceResponse> instances() {
         return this.instances;
     }
@@ -40,6 +44,10 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the Application Configuration Service.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -51,6 +59,10 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
     @Import(name="resourceRequests", required=true)
     private ConfigurationServiceResourceRequestsResponse resourceRequests;
 
+    /**
+     * @return The requested resource quantity for required CPU and Memory.
+     * 
+     */
     public ConfigurationServiceResourceRequestsResponse resourceRequests() {
         return this.resourceRequests;
     }
@@ -62,6 +74,10 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
     @Import(name="settings")
     private @Nullable ConfigurationServiceSettingsResponse settings;
 
+    /**
+     * @return The settings of Application Configuration Service.
+     * 
+     */
     public Optional<ConfigurationServiceSettingsResponse> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -93,25 +109,55 @@ public final class ConfigurationServicePropertiesResponse extends com.pulumi.res
             $ = new ConfigurationServicePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instances Collection of instances belong to Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<ConfigurationServiceInstanceResponse> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances Collection of instances belong to Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(ConfigurationServiceInstanceResponse... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param provisioningState State of the Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param resourceRequests The requested resource quantity for required CPU and Memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRequests(ConfigurationServiceResourceRequestsResponse resourceRequests) {
             $.resourceRequests = resourceRequests;
             return this;
         }
 
+        /**
+         * @param settings The settings of Application Configuration Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable ConfigurationServiceSettingsResponse settings) {
             $.settings = settings;
             return this;

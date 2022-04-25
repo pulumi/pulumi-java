@@ -30,6 +30,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="backendPort", required=true)
     private Output<Integer> backendPort;
 
+    /**
+     * @return The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+     * 
+     */
     public Output<Integer> backendPort() {
         return this.backendPort;
     }
@@ -41,6 +45,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="frontendPort", required=true)
     private Output<Integer> frontendPort;
 
+    /**
+     * @return The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+     * 
+     */
     public Output<Integer> frontendPort() {
         return this.frontendPort;
     }
@@ -52,6 +60,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="probeProtocol", required=true)
     private Output<Either<String,ProbeProtocol>> probeProtocol;
 
+    /**
+     * @return the reference to the load balancer probe used by the load balancing rule.
+     * 
+     */
     public Output<Either<String,ProbeProtocol>> probeProtocol() {
         return this.probeProtocol;
     }
@@ -63,6 +75,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="probeRequestPath")
     private @Nullable Output<String> probeRequestPath;
 
+    /**
+     * @return The probe request path. Only supported for HTTP/HTTPS probes.
+     * 
+     */
     public Optional<Output<String>> probeRequestPath() {
         return Optional.ofNullable(this.probeRequestPath);
     }
@@ -74,6 +90,10 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
     @Import(name="protocol", required=true)
     private Output<Either<String,Protocol>> protocol;
 
+    /**
+     * @return The reference to the transport protocol used by the load balancing rule.
+     * 
+     */
     public Output<Either<String,Protocol>> protocol() {
         return this.protocol;
     }
@@ -106,63 +126,147 @@ public final class LoadBalancingRuleArgs extends com.pulumi.resources.ResourceAr
             $ = new LoadBalancingRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendPort The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(Output<Integer> backendPort) {
             $.backendPort = backendPort;
             return this;
         }
 
+        /**
+         * @param backendPort The port used for internal connections on the endpoint. Acceptable values are between 1 and 65535.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendPort(Integer backendPort) {
             return backendPort(Output.of(backendPort));
         }
 
+        /**
+         * @param frontendPort The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPort(Output<Integer> frontendPort) {
             $.frontendPort = frontendPort;
             return this;
         }
 
+        /**
+         * @param frontendPort The port for the external endpoint. Port numbers for each rule must be unique within the Load Balancer. Acceptable values are between 1 and 65534.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendPort(Integer frontendPort) {
             return frontendPort(Output.of(frontendPort));
         }
 
+        /**
+         * @param probeProtocol the reference to the load balancer probe used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeProtocol(Output<Either<String,ProbeProtocol>> probeProtocol) {
             $.probeProtocol = probeProtocol;
             return this;
         }
 
+        /**
+         * @param probeProtocol the reference to the load balancer probe used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeProtocol(Either<String,ProbeProtocol> probeProtocol) {
             return probeProtocol(Output.of(probeProtocol));
         }
 
+        /**
+         * @param probeProtocol the reference to the load balancer probe used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeProtocol(String probeProtocol) {
             return probeProtocol(Either.ofLeft(probeProtocol));
         }
 
+        /**
+         * @param probeProtocol the reference to the load balancer probe used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeProtocol(ProbeProtocol probeProtocol) {
             return probeProtocol(Either.ofRight(probeProtocol));
         }
 
+        /**
+         * @param probeRequestPath The probe request path. Only supported for HTTP/HTTPS probes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeRequestPath(@Nullable Output<String> probeRequestPath) {
             $.probeRequestPath = probeRequestPath;
             return this;
         }
 
+        /**
+         * @param probeRequestPath The probe request path. Only supported for HTTP/HTTPS probes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder probeRequestPath(String probeRequestPath) {
             return probeRequestPath(Output.of(probeRequestPath));
         }
 
+        /**
+         * @param protocol The reference to the transport protocol used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<Either<String,Protocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The reference to the transport protocol used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,Protocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol The reference to the transport protocol used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol The reference to the transport protocol used by the load balancing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Protocol protocol) {
             return protocol(Either.ofRight(protocol));
         }

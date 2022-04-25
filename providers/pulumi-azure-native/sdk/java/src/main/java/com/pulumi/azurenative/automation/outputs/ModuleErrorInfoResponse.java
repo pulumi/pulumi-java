@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ModuleErrorInfoResponse {
     /**
-     * Gets or sets the error code.
+     * @return Gets or sets the error code.
      * 
      */
     private final @Nullable String code;
     /**
-     * Gets or sets the error message.
+     * @return Gets or sets the error message.
      * 
      */
     private final @Nullable String message;
@@ -31,16 +31,16 @@ public final class ModuleErrorInfoResponse {
     }
 
     /**
-     * Gets or sets the error code.
+     * @return Gets or sets the error code.
      * 
-    */
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
     /**
-     * Gets or sets the error message.
+     * @return Gets or sets the error message.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }

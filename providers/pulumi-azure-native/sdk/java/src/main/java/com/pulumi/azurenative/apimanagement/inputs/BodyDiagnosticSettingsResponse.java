@@ -25,6 +25,10 @@ public final class BodyDiagnosticSettingsResponse extends com.pulumi.resources.I
     @Import(name="bytes")
     private @Nullable Integer bytes;
 
+    /**
+     * @return Number of request body bytes to log.
+     * 
+     */
     public Optional<Integer> bytes() {
         return Optional.ofNullable(this.bytes);
     }
@@ -53,6 +57,12 @@ public final class BodyDiagnosticSettingsResponse extends com.pulumi.resources.I
             $ = new BodyDiagnosticSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bytes Number of request body bytes to log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bytes(@Nullable Integer bytes) {
             $.bytes = bytes;
             return this;

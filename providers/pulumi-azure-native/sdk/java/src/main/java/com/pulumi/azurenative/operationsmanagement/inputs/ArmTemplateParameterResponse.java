@@ -25,6 +25,10 @@ public final class ArmTemplateParameterResponse extends com.pulumi.resources.Inv
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return name of the parameter.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ArmTemplateParameterResponse extends com.pulumi.resources.Inv
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return value for the parameter. In Jtoken
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -65,11 +73,23 @@ public final class ArmTemplateParameterResponse extends com.pulumi.resources.Inv
             $ = new ArmTemplateParameterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value value for the parameter. In Jtoken
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

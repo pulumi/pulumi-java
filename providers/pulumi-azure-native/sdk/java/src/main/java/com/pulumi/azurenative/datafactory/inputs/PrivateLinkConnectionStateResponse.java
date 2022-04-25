@@ -25,6 +25,10 @@ public final class PrivateLinkConnectionStateResponse extends com.pulumi.resourc
     @Import(name="actionsRequired")
     private @Nullable String actionsRequired;
 
+    /**
+     * @return ActionsRequired for a private link connection
+     * 
+     */
     public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -36,6 +40,10 @@ public final class PrivateLinkConnectionStateResponse extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of a private link connection
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class PrivateLinkConnectionStateResponse extends com.pulumi.resourc
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of a private link connection
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -77,16 +89,34 @@ public final class PrivateLinkConnectionStateResponse extends com.pulumi.resourc
             $ = new PrivateLinkConnectionStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired ActionsRequired for a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable String actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param description Description of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param status Status of a private link connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

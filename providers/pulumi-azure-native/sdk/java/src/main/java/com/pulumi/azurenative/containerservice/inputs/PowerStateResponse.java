@@ -25,6 +25,10 @@ public final class PowerStateResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Tells whether the cluster is Running or Stopped
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -53,6 +57,12 @@ public final class PowerStateResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PowerStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Tells whether the cluster is Running or Stopped
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;

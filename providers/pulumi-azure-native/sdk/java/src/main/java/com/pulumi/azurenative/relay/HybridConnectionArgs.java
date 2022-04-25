@@ -23,6 +23,10 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hybridConnectionName")
     private @Nullable Output<String> hybridConnectionName;
 
+    /**
+     * @return The hybrid connection name.
+     * 
+     */
     public Optional<Output<String>> hybridConnectionName() {
         return Optional.ofNullable(this.hybridConnectionName);
     }
@@ -34,6 +38,10 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -45,6 +53,10 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requiresClientAuthorization")
     private @Nullable Output<Boolean> requiresClientAuthorization;
 
+    /**
+     * @return Returns true if client authorization is needed for this hybrid connection; otherwise, false.
+     * 
+     */
     public Optional<Output<Boolean>> requiresClientAuthorization() {
         return Optional.ofNullable(this.requiresClientAuthorization);
     }
@@ -56,6 +68,10 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="userMetadata")
     private @Nullable Output<String> userMetadata;
 
+    /**
+     * @return The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
+     * 
+     */
     public Optional<Output<String>> userMetadata() {
         return Optional.ofNullable(this.userMetadata);
     }
@@ -99,47 +119,107 @@ public final class HybridConnectionArgs extends com.pulumi.resources.ResourceArg
             $ = new HybridConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hybridConnectionName The hybrid connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridConnectionName(@Nullable Output<String> hybridConnectionName) {
             $.hybridConnectionName = hybridConnectionName;
             return this;
         }
 
+        /**
+         * @param hybridConnectionName The hybrid connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridConnectionName(String hybridConnectionName) {
             return hybridConnectionName(Output.of(hybridConnectionName));
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param requiresClientAuthorization Returns true if client authorization is needed for this hybrid connection; otherwise, false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresClientAuthorization(@Nullable Output<Boolean> requiresClientAuthorization) {
             $.requiresClientAuthorization = requiresClientAuthorization;
             return this;
         }
 
+        /**
+         * @param requiresClientAuthorization Returns true if client authorization is needed for this hybrid connection; otherwise, false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requiresClientAuthorization(Boolean requiresClientAuthorization) {
             return requiresClientAuthorization(Output.of(requiresClientAuthorization));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param userMetadata The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMetadata(@Nullable Output<String> userMetadata) {
             $.userMetadata = userMetadata;
             return this;
         }
 
+        /**
+         * @param userMetadata The usermetadata is a placeholder to store user-defined string data for the hybrid connection endpoint. For example, it can be used to store descriptive data, such as a list of teams and their contact information. Also, user-defined configuration settings can be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userMetadata(String userMetadata) {
             return userMetadata(Output.of(userMetadata));
         }

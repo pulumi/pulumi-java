@@ -26,6 +26,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="computerName")
     private @Nullable Output<String> computerName;
 
+    /**
+     * @return Specifies the host OS name of the HANA instance.
+     * 
+     */
     public Optional<Output<String>> computerName() {
         return Optional.ofNullable(this.computerName);
     }
@@ -37,6 +41,10 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sshPublicKey")
     private @Nullable Output<String> sshPublicKey;
 
+    /**
+     * @return Specifies the SSH public key used to access the operating system.
+     * 
+     */
     public Optional<Output<String>> sshPublicKey() {
         return Optional.ofNullable(this.sshPublicKey);
     }
@@ -66,20 +74,44 @@ public final class OSProfileArgs extends com.pulumi.resources.ResourceArgs {
             $ = new OSProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computerName Specifies the host OS name of the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(@Nullable Output<String> computerName) {
             $.computerName = computerName;
             return this;
         }
 
+        /**
+         * @param computerName Specifies the host OS name of the HANA instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(String computerName) {
             return computerName(Output.of(computerName));
         }
 
+        /**
+         * @param sshPublicKey Specifies the SSH public key used to access the operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicKey(@Nullable Output<String> sshPublicKey) {
             $.sshPublicKey = sshPublicKey;
             return this;
         }
 
+        /**
+         * @param sshPublicKey Specifies the SSH public key used to access the operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshPublicKey(String sshPublicKey) {
             return sshPublicKey(Output.of(sshPublicKey));
         }

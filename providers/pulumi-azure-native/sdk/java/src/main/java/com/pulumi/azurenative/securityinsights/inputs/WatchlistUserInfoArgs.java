@@ -26,6 +26,10 @@ public final class WatchlistUserInfoArgs extends com.pulumi.resources.ResourceAr
     @Import(name="objectId")
     private @Nullable Output<String> objectId;
 
+    /**
+     * @return The object id of the user.
+     * 
+     */
     public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -54,11 +58,23 @@ public final class WatchlistUserInfoArgs extends com.pulumi.resources.ResourceAr
             $ = new WatchlistUserInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param objectId The object id of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId The object id of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }

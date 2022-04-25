@@ -26,6 +26,10 @@ public final class RosettaNetPipActivitySettingsArgs extends com.pulumi.resource
     @Import(name="acknowledgmentOfReceiptSettings", required=true)
     private Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings;
 
+    /**
+     * @return The RosettaNet ProcessConfiguration acknowledgement settings.
+     * 
+     */
     public Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings() {
         return this.acknowledgmentOfReceiptSettings;
     }
@@ -37,6 +41,10 @@ public final class RosettaNetPipActivitySettingsArgs extends com.pulumi.resource
     @Import(name="activityBehavior", required=true)
     private Output<RosettaNetPipActivityBehaviorArgs> activityBehavior;
 
+    /**
+     * @return The RosettaNet ProcessConfiguration activity behavior.
+     * 
+     */
     public Output<RosettaNetPipActivityBehaviorArgs> activityBehavior() {
         return this.activityBehavior;
     }
@@ -48,6 +56,10 @@ public final class RosettaNetPipActivitySettingsArgs extends com.pulumi.resource
     @Import(name="activityType", required=true)
     private Output<RosettaNetPipActivityType> activityType;
 
+    /**
+     * @return The RosettaNet ProcessConfiguration activity type.
+     * 
+     */
     public Output<RosettaNetPipActivityType> activityType() {
         return this.activityType;
     }
@@ -78,29 +90,65 @@ public final class RosettaNetPipActivitySettingsArgs extends com.pulumi.resource
             $ = new RosettaNetPipActivitySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acknowledgmentOfReceiptSettings The RosettaNet ProcessConfiguration acknowledgement settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgmentOfReceiptSettings(Output<RosettaNetPipAcknowledgmentOfReceiptSettingsArgs> acknowledgmentOfReceiptSettings) {
             $.acknowledgmentOfReceiptSettings = acknowledgmentOfReceiptSettings;
             return this;
         }
 
+        /**
+         * @param acknowledgmentOfReceiptSettings The RosettaNet ProcessConfiguration acknowledgement settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgmentOfReceiptSettings(RosettaNetPipAcknowledgmentOfReceiptSettingsArgs acknowledgmentOfReceiptSettings) {
             return acknowledgmentOfReceiptSettings(Output.of(acknowledgmentOfReceiptSettings));
         }
 
+        /**
+         * @param activityBehavior The RosettaNet ProcessConfiguration activity behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityBehavior(Output<RosettaNetPipActivityBehaviorArgs> activityBehavior) {
             $.activityBehavior = activityBehavior;
             return this;
         }
 
+        /**
+         * @param activityBehavior The RosettaNet ProcessConfiguration activity behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityBehavior(RosettaNetPipActivityBehaviorArgs activityBehavior) {
             return activityBehavior(Output.of(activityBehavior));
         }
 
+        /**
+         * @param activityType The RosettaNet ProcessConfiguration activity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityType(Output<RosettaNetPipActivityType> activityType) {
             $.activityType = activityType;
             return this;
         }
 
+        /**
+         * @param activityType The RosettaNet ProcessConfiguration activity type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activityType(RosettaNetPipActivityType activityType) {
             return activityType(Output.of(activityType));
         }

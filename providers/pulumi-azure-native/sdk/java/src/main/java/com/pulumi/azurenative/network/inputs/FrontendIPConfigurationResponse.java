@@ -29,6 +29,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -40,6 +44,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -51,6 +59,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="inboundNatPools", required=true)
     private List<SubResourceResponse> inboundNatPools;
 
+    /**
+     * @return An array of references to inbound pools that use this frontend IP.
+     * 
+     */
     public List<SubResourceResponse> inboundNatPools() {
         return this.inboundNatPools;
     }
@@ -62,6 +74,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="inboundNatRules", required=true)
     private List<SubResourceResponse> inboundNatRules;
 
+    /**
+     * @return An array of references to inbound rules that use this frontend IP.
+     * 
+     */
     public List<SubResourceResponse> inboundNatRules() {
         return this.inboundNatRules;
     }
@@ -73,6 +89,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="loadBalancingRules", required=true)
     private List<SubResourceResponse> loadBalancingRules;
 
+    /**
+     * @return An array of references to load balancing rules that use this frontend IP.
+     * 
+     */
     public List<SubResourceResponse> loadBalancingRules() {
         return this.loadBalancingRules;
     }
@@ -84,6 +104,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +119,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="outboundRules", required=true)
     private List<SubResourceResponse> outboundRules;
 
+    /**
+     * @return An array of references to outbound rules that use this frontend IP.
+     * 
+     */
     public List<SubResourceResponse> outboundRules() {
         return this.outboundRules;
     }
@@ -106,6 +134,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="privateIPAddress")
     private @Nullable String privateIPAddress;
 
+    /**
+     * @return The private IP address of the IP configuration.
+     * 
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
@@ -117,6 +149,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="privateIPAddressVersion")
     private @Nullable String privateIPAddressVersion;
 
+    /**
+     * @return Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+     * 
+     */
     public Optional<String> privateIPAddressVersion() {
         return Optional.ofNullable(this.privateIPAddressVersion);
     }
@@ -128,6 +164,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="privateIPAllocationMethod")
     private @Nullable String privateIPAllocationMethod;
 
+    /**
+     * @return The Private IP allocation method.
+     * 
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
@@ -139,6 +179,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the frontend IP configuration resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -150,6 +194,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="publicIPAddress")
     private @Nullable PublicIPAddressResponse publicIPAddress;
 
+    /**
+     * @return The reference to the Public IP resource.
+     * 
+     */
     public Optional<PublicIPAddressResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
@@ -161,6 +209,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="publicIPPrefix")
     private @Nullable SubResourceResponse publicIPPrefix;
 
+    /**
+     * @return The reference to the Public IP Prefix resource.
+     * 
+     */
     public Optional<SubResourceResponse> publicIPPrefix() {
         return Optional.ofNullable(this.publicIPPrefix);
     }
@@ -172,6 +224,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="subnet")
     private @Nullable SubnetResponse subnet;
 
+    /**
+     * @return The reference to the subnet resource.
+     * 
+     */
     public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -183,6 +239,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -194,6 +254,10 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
     @Import(name="zones")
     private @Nullable List<String> zones;
 
+    /**
+     * @return A list of availability zones denoting the IP allocated for the resource needs to come from.
+     * 
+     */
     public Optional<List<String>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -237,102 +301,228 @@ public final class FrontendIPConfigurationResponse extends com.pulumi.resources.
             $ = new FrontendIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param inboundNatPools An array of references to inbound pools that use this frontend IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(List<SubResourceResponse> inboundNatPools) {
             $.inboundNatPools = inboundNatPools;
             return this;
         }
 
+        /**
+         * @param inboundNatPools An array of references to inbound pools that use this frontend IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatPools(SubResourceResponse... inboundNatPools) {
             return inboundNatPools(List.of(inboundNatPools));
         }
 
+        /**
+         * @param inboundNatRules An array of references to inbound rules that use this frontend IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(List<SubResourceResponse> inboundNatRules) {
             $.inboundNatRules = inboundNatRules;
             return this;
         }
 
+        /**
+         * @param inboundNatRules An array of references to inbound rules that use this frontend IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundNatRules(SubResourceResponse... inboundNatRules) {
             return inboundNatRules(List.of(inboundNatRules));
         }
 
+        /**
+         * @param loadBalancingRules An array of references to load balancing rules that use this frontend IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingRules(List<SubResourceResponse> loadBalancingRules) {
             $.loadBalancingRules = loadBalancingRules;
             return this;
         }
 
+        /**
+         * @param loadBalancingRules An array of references to load balancing rules that use this frontend IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingRules(SubResourceResponse... loadBalancingRules) {
             return loadBalancingRules(List.of(loadBalancingRules));
         }
 
+        /**
+         * @param name The name of the resource that is unique within the set of frontend IP configurations used by the load balancer. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param outboundRules An array of references to outbound rules that use this frontend IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundRules(List<SubResourceResponse> outboundRules) {
             $.outboundRules = outboundRules;
             return this;
         }
 
+        /**
+         * @param outboundRules An array of references to outbound rules that use this frontend IP.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outboundRules(SubResourceResponse... outboundRules) {
             return outboundRules(List.of(outboundRules));
         }
 
+        /**
+         * @param privateIPAddress The private IP address of the IP configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddress(@Nullable String privateIPAddress) {
             $.privateIPAddress = privateIPAddress;
             return this;
         }
 
+        /**
+         * @param privateIPAddressVersion Whether the specific ipconfiguration is IPv4 or IPv6. Default is taken as IPv4.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAddressVersion(@Nullable String privateIPAddressVersion) {
             $.privateIPAddressVersion = privateIPAddressVersion;
             return this;
         }
 
+        /**
+         * @param privateIPAllocationMethod The Private IP allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIPAllocationMethod(@Nullable String privateIPAllocationMethod) {
             $.privateIPAllocationMethod = privateIPAllocationMethod;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the frontend IP configuration resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicIPAddress The reference to the Public IP resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPAddress(@Nullable PublicIPAddressResponse publicIPAddress) {
             $.publicIPAddress = publicIPAddress;
             return this;
         }
 
+        /**
+         * @param publicIPPrefix The reference to the Public IP Prefix resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicIPPrefix(@Nullable SubResourceResponse publicIPPrefix) {
             $.publicIPPrefix = publicIPPrefix;
             return this;
         }
 
+        /**
+         * @param subnet The reference to the subnet resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubnetResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param type Type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable List<String> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones A list of availability zones denoting the IP allocated for the resource needs to come from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

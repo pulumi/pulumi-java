@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class TlsPropertiesResponse {
     /**
-     * The certificate used to configure HTTPS for the login server.
+     * @return The certificate used to configure HTTPS for the login server.
      * 
      */
     private final TlsCertificatePropertiesResponse certificate;
     /**
-     * Indicates whether HTTPS is enabled for the login server.
+     * @return Indicates whether HTTPS is enabled for the login server.
      * 
      */
     private final String status;
@@ -30,16 +30,16 @@ public final class TlsPropertiesResponse {
     }
 
     /**
-     * The certificate used to configure HTTPS for the login server.
+     * @return The certificate used to configure HTTPS for the login server.
      * 
-    */
+     */
     public TlsCertificatePropertiesResponse certificate() {
         return this.certificate;
     }
     /**
-     * Indicates whether HTTPS is enabled for the login server.
+     * @return Indicates whether HTTPS is enabled for the login server.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

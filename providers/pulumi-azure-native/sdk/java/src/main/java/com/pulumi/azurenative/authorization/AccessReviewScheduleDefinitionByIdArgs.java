@@ -30,6 +30,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="autoApplyDecisionsEnabled")
     private @Nullable Output<Boolean> autoApplyDecisionsEnabled;
 
+    /**
+     * @return Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
+     * 
+     */
     public Optional<Output<Boolean>> autoApplyDecisionsEnabled() {
         return Optional.ofNullable(this.autoApplyDecisionsEnabled);
     }
@@ -41,6 +45,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="backupReviewers")
     private @Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers;
 
+    /**
+     * @return This is the collection of backup reviewers.
+     * 
+     */
     public Optional<Output<List<AccessReviewReviewerArgs>>> backupReviewers() {
         return Optional.ofNullable(this.backupReviewers);
     }
@@ -52,6 +60,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="defaultDecision")
     private @Nullable Output<Either<String,DefaultDecisionType>> defaultDecision;
 
+    /**
+     * @return This specifies the behavior for the autoReview feature when an access review completes.
+     * 
+     */
     public Optional<Output<Either<String,DefaultDecisionType>>> defaultDecision() {
         return Optional.ofNullable(this.defaultDecision);
     }
@@ -63,6 +75,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="defaultDecisionEnabled")
     private @Nullable Output<Boolean> defaultDecisionEnabled;
 
+    /**
+     * @return Flag to indicate whether reviewers are required to provide a justification when reviewing access.
+     * 
+     */
     public Optional<Output<Boolean>> defaultDecisionEnabled() {
         return Optional.ofNullable(this.defaultDecisionEnabled);
     }
@@ -74,6 +90,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="descriptionForAdmins")
     private @Nullable Output<String> descriptionForAdmins;
 
+    /**
+     * @return The description provided by the access review creator and visible to admins.
+     * 
+     */
     public Optional<Output<String>> descriptionForAdmins() {
         return Optional.ofNullable(this.descriptionForAdmins);
     }
@@ -85,6 +105,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="descriptionForReviewers")
     private @Nullable Output<String> descriptionForReviewers;
 
+    /**
+     * @return The description provided by the access review creator to be shown to reviewers.
+     * 
+     */
     public Optional<Output<String>> descriptionForReviewers() {
         return Optional.ofNullable(this.descriptionForReviewers);
     }
@@ -96,6 +120,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name for the schedule definition.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -107,6 +135,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="endDate")
     private @Nullable Output<String> endDate;
 
+    /**
+     * @return The DateTime when the review is scheduled to end. Required if type is endDate
+     * 
+     */
     public Optional<Output<String>> endDate() {
         return Optional.ofNullable(this.endDate);
     }
@@ -118,6 +150,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="inactiveDuration")
     private @Nullable Output<String> inactiveDuration;
 
+    /**
+     * @return Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+     * 
+     */
     public Optional<Output<String>> inactiveDuration() {
         return Optional.ofNullable(this.inactiveDuration);
     }
@@ -129,6 +165,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="instanceDurationInDays")
     private @Nullable Output<Integer> instanceDurationInDays;
 
+    /**
+     * @return The duration in days for an instance.
+     * 
+     */
     public Optional<Output<Integer>> instanceDurationInDays() {
         return Optional.ofNullable(this.instanceDurationInDays);
     }
@@ -140,6 +180,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="instances")
     private @Nullable Output<List<AccessReviewInstanceArgs>> instances;
 
+    /**
+     * @return This is the collection of instances returned when one does an expand on it.
+     * 
+     */
     public Optional<Output<List<AccessReviewInstanceArgs>>> instances() {
         return Optional.ofNullable(this.instances);
     }
@@ -151,6 +195,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="interval")
     private @Nullable Output<Integer> interval;
 
+    /**
+     * @return The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+     * 
+     */
     public Optional<Output<Integer>> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -162,6 +210,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="justificationRequiredOnApproval")
     private @Nullable Output<Boolean> justificationRequiredOnApproval;
 
+    /**
+     * @return Flag to indicate whether the reviewer is required to pass justification when recording a decision.
+     * 
+     */
     public Optional<Output<Boolean>> justificationRequiredOnApproval() {
         return Optional.ofNullable(this.justificationRequiredOnApproval);
     }
@@ -173,6 +225,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="mailNotificationsEnabled")
     private @Nullable Output<Boolean> mailNotificationsEnabled;
 
+    /**
+     * @return Flag to indicate whether sending mails to reviewers and the review creator is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> mailNotificationsEnabled() {
         return Optional.ofNullable(this.mailNotificationsEnabled);
     }
@@ -184,6 +240,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="numberOfOccurrences")
     private @Nullable Output<Integer> numberOfOccurrences;
 
+    /**
+     * @return The number of times to repeat the access review. Required and must be positive if type is numbered.
+     * 
+     */
     public Optional<Output<Integer>> numberOfOccurrences() {
         return Optional.ofNullable(this.numberOfOccurrences);
     }
@@ -195,6 +255,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="recommendationsEnabled")
     private @Nullable Output<Boolean> recommendationsEnabled;
 
+    /**
+     * @return Flag to indicate whether showing recommendations to reviewers is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> recommendationsEnabled() {
         return Optional.ofNullable(this.recommendationsEnabled);
     }
@@ -206,6 +270,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="reminderNotificationsEnabled")
     private @Nullable Output<Boolean> reminderNotificationsEnabled;
 
+    /**
+     * @return Flag to indicate whether sending reminder emails to reviewers are enabled.
+     * 
+     */
     public Optional<Output<Boolean>> reminderNotificationsEnabled() {
         return Optional.ofNullable(this.reminderNotificationsEnabled);
     }
@@ -217,6 +285,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="reviewers")
     private @Nullable Output<List<AccessReviewReviewerArgs>> reviewers;
 
+    /**
+     * @return This is the collection of reviewers.
+     * 
+     */
     public Optional<Output<List<AccessReviewReviewerArgs>>> reviewers() {
         return Optional.ofNullable(this.reviewers);
     }
@@ -228,6 +300,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="scheduleDefinitionId")
     private @Nullable Output<String> scheduleDefinitionId;
 
+    /**
+     * @return The id of the access review schedule definition.
+     * 
+     */
     public Optional<Output<String>> scheduleDefinitionId() {
         return Optional.ofNullable(this.scheduleDefinitionId);
     }
@@ -239,6 +315,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="startDate")
     private @Nullable Output<String> startDate;
 
+    /**
+     * @return The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+     * 
+     */
     public Optional<Output<String>> startDate() {
         return Optional.ofNullable(this.startDate);
     }
@@ -250,6 +330,10 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
     @Import(name="type")
     private @Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type;
 
+    /**
+     * @return The recurrence range type. The possible values are: endDate, noEnd, numbered.
+     * 
+     */
     public Optional<Output<Either<String,AccessReviewRecurrenceRangeType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -298,219 +382,513 @@ public final class AccessReviewScheduleDefinitionByIdArgs extends com.pulumi.res
             $ = new AccessReviewScheduleDefinitionByIdArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoApplyDecisionsEnabled Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoApplyDecisionsEnabled(@Nullable Output<Boolean> autoApplyDecisionsEnabled) {
             $.autoApplyDecisionsEnabled = autoApplyDecisionsEnabled;
             return this;
         }
 
+        /**
+         * @param autoApplyDecisionsEnabled Flag to indicate whether auto-apply capability, to automatically change the target object access resource, is enabled. If not enabled, a user must, after the review completes, apply the access review.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoApplyDecisionsEnabled(Boolean autoApplyDecisionsEnabled) {
             return autoApplyDecisionsEnabled(Output.of(autoApplyDecisionsEnabled));
         }
 
+        /**
+         * @param backupReviewers This is the collection of backup reviewers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupReviewers(@Nullable Output<List<AccessReviewReviewerArgs>> backupReviewers) {
             $.backupReviewers = backupReviewers;
             return this;
         }
 
+        /**
+         * @param backupReviewers This is the collection of backup reviewers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupReviewers(List<AccessReviewReviewerArgs> backupReviewers) {
             return backupReviewers(Output.of(backupReviewers));
         }
 
+        /**
+         * @param backupReviewers This is the collection of backup reviewers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupReviewers(AccessReviewReviewerArgs... backupReviewers) {
             return backupReviewers(List.of(backupReviewers));
         }
 
+        /**
+         * @param defaultDecision This specifies the behavior for the autoReview feature when an access review completes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDecision(@Nullable Output<Either<String,DefaultDecisionType>> defaultDecision) {
             $.defaultDecision = defaultDecision;
             return this;
         }
 
+        /**
+         * @param defaultDecision This specifies the behavior for the autoReview feature when an access review completes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDecision(Either<String,DefaultDecisionType> defaultDecision) {
             return defaultDecision(Output.of(defaultDecision));
         }
 
+        /**
+         * @param defaultDecision This specifies the behavior for the autoReview feature when an access review completes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDecision(String defaultDecision) {
             return defaultDecision(Either.ofLeft(defaultDecision));
         }
 
+        /**
+         * @param defaultDecision This specifies the behavior for the autoReview feature when an access review completes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDecision(DefaultDecisionType defaultDecision) {
             return defaultDecision(Either.ofRight(defaultDecision));
         }
 
+        /**
+         * @param defaultDecisionEnabled Flag to indicate whether reviewers are required to provide a justification when reviewing access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDecisionEnabled(@Nullable Output<Boolean> defaultDecisionEnabled) {
             $.defaultDecisionEnabled = defaultDecisionEnabled;
             return this;
         }
 
+        /**
+         * @param defaultDecisionEnabled Flag to indicate whether reviewers are required to provide a justification when reviewing access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultDecisionEnabled(Boolean defaultDecisionEnabled) {
             return defaultDecisionEnabled(Output.of(defaultDecisionEnabled));
         }
 
+        /**
+         * @param descriptionForAdmins The description provided by the access review creator and visible to admins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptionForAdmins(@Nullable Output<String> descriptionForAdmins) {
             $.descriptionForAdmins = descriptionForAdmins;
             return this;
         }
 
+        /**
+         * @param descriptionForAdmins The description provided by the access review creator and visible to admins.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptionForAdmins(String descriptionForAdmins) {
             return descriptionForAdmins(Output.of(descriptionForAdmins));
         }
 
+        /**
+         * @param descriptionForReviewers The description provided by the access review creator to be shown to reviewers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptionForReviewers(@Nullable Output<String> descriptionForReviewers) {
             $.descriptionForReviewers = descriptionForReviewers;
             return this;
         }
 
+        /**
+         * @param descriptionForReviewers The description provided by the access review creator to be shown to reviewers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder descriptionForReviewers(String descriptionForReviewers) {
             return descriptionForReviewers(Output.of(descriptionForReviewers));
         }
 
+        /**
+         * @param displayName The display name for the schedule definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name for the schedule definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param endDate The DateTime when the review is scheduled to end. Required if type is endDate
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(@Nullable Output<String> endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param endDate The DateTime when the review is scheduled to end. Required if type is endDate
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(String endDate) {
             return endDate(Output.of(endDate));
         }
 
+        /**
+         * @param inactiveDuration Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+         * 
+         * @return builder
+         * 
+         */
         public Builder inactiveDuration(@Nullable Output<String> inactiveDuration) {
             $.inactiveDuration = inactiveDuration;
             return this;
         }
 
+        /**
+         * @param inactiveDuration Duration users are inactive for. The value should be in ISO  8601 format (http://en.wikipedia.org/wiki/ISO_8601#Durations).This code can be used to convert TimeSpan to a valid interval string: XmlConvert.ToString(new TimeSpan(hours, minutes, seconds))
+         * 
+         * @return builder
+         * 
+         */
         public Builder inactiveDuration(String inactiveDuration) {
             return inactiveDuration(Output.of(inactiveDuration));
         }
 
+        /**
+         * @param instanceDurationInDays The duration in days for an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDurationInDays(@Nullable Output<Integer> instanceDurationInDays) {
             $.instanceDurationInDays = instanceDurationInDays;
             return this;
         }
 
+        /**
+         * @param instanceDurationInDays The duration in days for an instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceDurationInDays(Integer instanceDurationInDays) {
             return instanceDurationInDays(Output.of(instanceDurationInDays));
         }
 
+        /**
+         * @param instances This is the collection of instances returned when one does an expand on it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(@Nullable Output<List<AccessReviewInstanceArgs>> instances) {
             $.instances = instances;
             return this;
         }
 
+        /**
+         * @param instances This is the collection of instances returned when one does an expand on it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(List<AccessReviewInstanceArgs> instances) {
             return instances(Output.of(instances));
         }
 
+        /**
+         * @param instances This is the collection of instances returned when one does an expand on it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instances(AccessReviewInstanceArgs... instances) {
             return instances(List.of(instances));
         }
 
+        /**
+         * @param interval The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Output<Integer> interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param interval The interval for recurrence. For a quarterly review, the interval is 3 for type : absoluteMonthly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(Integer interval) {
             return interval(Output.of(interval));
         }
 
+        /**
+         * @param justificationRequiredOnApproval Flag to indicate whether the reviewer is required to pass justification when recording a decision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder justificationRequiredOnApproval(@Nullable Output<Boolean> justificationRequiredOnApproval) {
             $.justificationRequiredOnApproval = justificationRequiredOnApproval;
             return this;
         }
 
+        /**
+         * @param justificationRequiredOnApproval Flag to indicate whether the reviewer is required to pass justification when recording a decision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder justificationRequiredOnApproval(Boolean justificationRequiredOnApproval) {
             return justificationRequiredOnApproval(Output.of(justificationRequiredOnApproval));
         }
 
+        /**
+         * @param mailNotificationsEnabled Flag to indicate whether sending mails to reviewers and the review creator is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mailNotificationsEnabled(@Nullable Output<Boolean> mailNotificationsEnabled) {
             $.mailNotificationsEnabled = mailNotificationsEnabled;
             return this;
         }
 
+        /**
+         * @param mailNotificationsEnabled Flag to indicate whether sending mails to reviewers and the review creator is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mailNotificationsEnabled(Boolean mailNotificationsEnabled) {
             return mailNotificationsEnabled(Output.of(mailNotificationsEnabled));
         }
 
+        /**
+         * @param numberOfOccurrences The number of times to repeat the access review. Required and must be positive if type is numbered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfOccurrences(@Nullable Output<Integer> numberOfOccurrences) {
             $.numberOfOccurrences = numberOfOccurrences;
             return this;
         }
 
+        /**
+         * @param numberOfOccurrences The number of times to repeat the access review. Required and must be positive if type is numbered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder numberOfOccurrences(Integer numberOfOccurrences) {
             return numberOfOccurrences(Output.of(numberOfOccurrences));
         }
 
+        /**
+         * @param recommendationsEnabled Flag to indicate whether showing recommendations to reviewers is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationsEnabled(@Nullable Output<Boolean> recommendationsEnabled) {
             $.recommendationsEnabled = recommendationsEnabled;
             return this;
         }
 
+        /**
+         * @param recommendationsEnabled Flag to indicate whether showing recommendations to reviewers is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationsEnabled(Boolean recommendationsEnabled) {
             return recommendationsEnabled(Output.of(recommendationsEnabled));
         }
 
+        /**
+         * @param reminderNotificationsEnabled Flag to indicate whether sending reminder emails to reviewers are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reminderNotificationsEnabled(@Nullable Output<Boolean> reminderNotificationsEnabled) {
             $.reminderNotificationsEnabled = reminderNotificationsEnabled;
             return this;
         }
 
+        /**
+         * @param reminderNotificationsEnabled Flag to indicate whether sending reminder emails to reviewers are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reminderNotificationsEnabled(Boolean reminderNotificationsEnabled) {
             return reminderNotificationsEnabled(Output.of(reminderNotificationsEnabled));
         }
 
+        /**
+         * @param reviewers This is the collection of reviewers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewers(@Nullable Output<List<AccessReviewReviewerArgs>> reviewers) {
             $.reviewers = reviewers;
             return this;
         }
 
+        /**
+         * @param reviewers This is the collection of reviewers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewers(List<AccessReviewReviewerArgs> reviewers) {
             return reviewers(Output.of(reviewers));
         }
 
+        /**
+         * @param reviewers This is the collection of reviewers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reviewers(AccessReviewReviewerArgs... reviewers) {
             return reviewers(List.of(reviewers));
         }
 
+        /**
+         * @param scheduleDefinitionId The id of the access review schedule definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleDefinitionId(@Nullable Output<String> scheduleDefinitionId) {
             $.scheduleDefinitionId = scheduleDefinitionId;
             return this;
         }
 
+        /**
+         * @param scheduleDefinitionId The id of the access review schedule definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleDefinitionId(String scheduleDefinitionId) {
             return scheduleDefinitionId(Output.of(scheduleDefinitionId));
         }
 
+        /**
+         * @param startDate The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(@Nullable Output<String> startDate) {
             $.startDate = startDate;
             return this;
         }
 
+        /**
+         * @param startDate The DateTime when the review is scheduled to be start. This could be a date in the future. Required on create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(String startDate) {
             return startDate(Output.of(startDate));
         }
 
+        /**
+         * @param type The recurrence range type. The possible values are: endDate, noEnd, numbered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,AccessReviewRecurrenceRangeType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The recurrence range type. The possible values are: endDate, noEnd, numbered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,AccessReviewRecurrenceRangeType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The recurrence range type. The possible values are: endDate, noEnd, numbered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The recurrence range type. The possible values are: endDate, noEnd, numbered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(AccessReviewRecurrenceRangeType type) {
             return type(Either.ofRight(type));
         }

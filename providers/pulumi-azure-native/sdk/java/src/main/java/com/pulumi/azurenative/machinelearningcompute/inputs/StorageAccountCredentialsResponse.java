@@ -23,6 +23,10 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
     @Import(name="primaryKey", required=true)
     private String primaryKey;
 
+    /**
+     * @return The primary key of the storage account.
+     * 
+     */
     public String primaryKey() {
         return this.primaryKey;
     }
@@ -34,6 +38,10 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The ARM resource ID of the storage account.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -45,6 +53,10 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
     @Import(name="secondaryKey", required=true)
     private String secondaryKey;
 
+    /**
+     * @return The secondary key of the storage account.
+     * 
+     */
     public String secondaryKey() {
         return this.secondaryKey;
     }
@@ -75,16 +87,34 @@ public final class StorageAccountCredentialsResponse extends com.pulumi.resource
             $ = new StorageAccountCredentialsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primaryKey The primary key of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryKey(String primaryKey) {
             $.primaryKey = primaryKey;
             return this;
         }
 
+        /**
+         * @param resourceId The ARM resource ID of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param secondaryKey The secondary key of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryKey(String secondaryKey) {
             $.secondaryKey = secondaryKey;
             return this;

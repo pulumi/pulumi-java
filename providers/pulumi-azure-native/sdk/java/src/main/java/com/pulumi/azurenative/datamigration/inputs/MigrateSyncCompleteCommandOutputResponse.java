@@ -25,6 +25,10 @@ public final class MigrateSyncCompleteCommandOutputResponse extends com.pulumi.r
     @Import(name="errors", required=true)
     private List<ReportableExceptionResponse> errors;
 
+    /**
+     * @return List of errors that happened during the command execution
+     * 
+     */
     public List<ReportableExceptionResponse> errors() {
         return this.errors;
     }
@@ -36,6 +40,10 @@ public final class MigrateSyncCompleteCommandOutputResponse extends com.pulumi.r
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -65,15 +73,33 @@ public final class MigrateSyncCompleteCommandOutputResponse extends com.pulumi.r
             $ = new MigrateSyncCompleteCommandOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errors List of errors that happened during the command execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(List<ReportableExceptionResponse> errors) {
             $.errors = errors;
             return this;
         }
 
+        /**
+         * @param errors List of errors that happened during the command execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder errors(ReportableExceptionResponse... errors) {
             return errors(List.of(errors));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

@@ -26,6 +26,10 @@ public final class SettingsSectionDescriptionArgs extends com.pulumi.resources.R
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The section name of the fabric settings.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class SettingsSectionDescriptionArgs extends com.pulumi.resources.R
     @Import(name="parameters", required=true)
     private Output<List<SettingsParameterDescriptionArgs>> parameters;
 
+    /**
+     * @return The collection of parameters in the section.
+     * 
+     */
     public Output<List<SettingsParameterDescriptionArgs>> parameters() {
         return this.parameters;
     }
@@ -66,24 +74,54 @@ public final class SettingsSectionDescriptionArgs extends com.pulumi.resources.R
             $ = new SettingsSectionDescriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The section name of the fabric settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The section name of the fabric settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters The collection of parameters in the section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<List<SettingsParameterDescriptionArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The collection of parameters in the section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<SettingsParameterDescriptionArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters The collection of parameters in the section.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(SettingsParameterDescriptionArgs... parameters) {
             return parameters(List.of(parameters));
         }

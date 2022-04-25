@@ -25,6 +25,10 @@ public final class LiveEventEndpointResponse extends com.pulumi.resources.Invoke
     @Import(name="protocol")
     private @Nullable String protocol;
 
+    /**
+     * @return The endpoint protocol.
+     * 
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -36,6 +40,10 @@ public final class LiveEventEndpointResponse extends com.pulumi.resources.Invoke
     @Import(name="url")
     private @Nullable String url;
 
+    /**
+     * @return The endpoint URL.
+     * 
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }
@@ -65,11 +73,23 @@ public final class LiveEventEndpointResponse extends com.pulumi.resources.Invoke
             $ = new LiveEventEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param protocol The endpoint protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param url The endpoint URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable String url) {
             $.url = url;
             return this;

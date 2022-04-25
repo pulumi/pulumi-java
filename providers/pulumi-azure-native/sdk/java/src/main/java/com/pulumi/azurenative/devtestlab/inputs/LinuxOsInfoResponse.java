@@ -25,6 +25,10 @@ public final class LinuxOsInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="linuxOsState")
     private @Nullable String linuxOsState;
 
+    /**
+     * @return The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+     * 
+     */
     public Optional<String> linuxOsState() {
         return Optional.ofNullable(this.linuxOsState);
     }
@@ -53,6 +57,12 @@ public final class LinuxOsInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new LinuxOsInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxOsState The state of the Linux OS (i.e. NonDeprovisioned, DeprovisionRequested, DeprovisionApplied).
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOsState(@Nullable String linuxOsState) {
             $.linuxOsState = linuxOsState;
             return this;

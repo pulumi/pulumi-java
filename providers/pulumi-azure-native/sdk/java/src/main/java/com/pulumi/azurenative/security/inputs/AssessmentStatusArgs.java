@@ -28,6 +28,10 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cause")
     private @Nullable Output<String> cause;
 
+    /**
+     * @return Programmatic code for the cause of the assessment status
+     * 
+     */
     public Optional<Output<String>> cause() {
         return Optional.ofNullable(this.cause);
     }
@@ -39,6 +43,10 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="code", required=true)
     private Output<Either<String,AssessmentStatusCode>> code;
 
+    /**
+     * @return Programmatic code for the status of the assessment
+     * 
+     */
     public Output<Either<String,AssessmentStatusCode>> code() {
         return this.code;
     }
@@ -50,6 +58,10 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Human readable description of the assessment status
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -80,37 +92,85 @@ public final class AssessmentStatusArgs extends com.pulumi.resources.ResourceArg
             $ = new AssessmentStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cause Programmatic code for the cause of the assessment status
+         * 
+         * @return builder
+         * 
+         */
         public Builder cause(@Nullable Output<String> cause) {
             $.cause = cause;
             return this;
         }
 
+        /**
+         * @param cause Programmatic code for the cause of the assessment status
+         * 
+         * @return builder
+         * 
+         */
         public Builder cause(String cause) {
             return cause(Output.of(cause));
         }
 
+        /**
+         * @param code Programmatic code for the status of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Output<Either<String,AssessmentStatusCode>> code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param code Programmatic code for the status of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(Either<String,AssessmentStatusCode> code) {
             return code(Output.of(code));
         }
 
+        /**
+         * @param code Programmatic code for the status of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             return code(Either.ofLeft(code));
         }
 
+        /**
+         * @param code Programmatic code for the status of the assessment
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(AssessmentStatusCode code) {
             return code(Either.ofRight(code));
         }
 
+        /**
+         * @param description Human readable description of the assessment status
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Human readable description of the assessment status
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }

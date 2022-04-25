@@ -28,6 +28,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyFrameInterval")
     private @Nullable String keyFrameInterval;
 
+    /**
+     * @return The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+     * 
+     */
     public Optional<String> keyFrameInterval() {
         return Optional.ofNullable(this.keyFrameInterval);
     }
@@ -39,6 +43,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -50,6 +58,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="layers")
     private @Nullable List<PngLayerResponse> layers;
 
+    /**
+     * @return A collection of output PNG image layers to be produced by the encoder.
+     * 
+     */
     public Optional<List<PngLayerResponse>> layers() {
         return Optional.ofNullable(this.layers);
     }
@@ -62,6 +74,11 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.PngImage&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -73,6 +90,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="range")
     private @Nullable String range;
 
+    /**
+     * @return The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.
+     * 
+     */
     public Optional<String> range() {
         return Optional.ofNullable(this.range);
     }
@@ -84,6 +105,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="start", required=true)
     private String start;
 
+    /**
+     * @return The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.
+     * 
+     */
     public String start() {
         return this.start;
     }
@@ -95,6 +120,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="step")
     private @Nullable String step;
 
+    /**
+     * @return The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.
+     * 
+     */
     public Optional<String> step() {
         return Optional.ofNullable(this.step);
     }
@@ -106,6 +135,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stretchMode")
     private @Nullable String stretchMode;
 
+    /**
+     * @return The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+     * 
+     */
     public Optional<String> stretchMode() {
         return Optional.ofNullable(this.stretchMode);
     }
@@ -117,6 +150,10 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="syncMode")
     private @Nullable String syncMode;
 
+    /**
+     * @return The Video Sync Mode
+     * 
+     */
     public Optional<String> syncMode() {
         return Optional.ofNullable(this.syncMode);
     }
@@ -153,50 +190,111 @@ public final class PngImageResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PngImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyFrameInterval The distance between two key frames. The value should be non-zero in the range [0.5, 20] seconds, specified in ISO 8601 format. The default is 2 seconds(PT2S). Note that this setting is ignored if VideoSyncMode.Passthrough is set, where the KeyFrameInterval value will follow the input source setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFrameInterval(@Nullable String keyFrameInterval) {
             $.keyFrameInterval = keyFrameInterval;
             return this;
         }
 
+        /**
+         * @param label An optional label for the codec. The label can be used to control muxing behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param layers A collection of output PNG image layers to be produced by the encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layers(@Nullable List<PngLayerResponse> layers) {
             $.layers = layers;
             return this;
         }
 
+        /**
+         * @param layers A collection of output PNG image layers to be produced by the encoder.
+         * 
+         * @return builder
+         * 
+         */
         public Builder layers(PngLayerResponse... layers) {
             return layers(List.of(layers));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.PngImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param range The position relative to transform preset start time in the input video at which to stop generating thumbnails. The value can be in ISO 8601 format (For example, PT5M30S to stop at 5 minutes and 30 seconds from start time), or a frame count (For example, 300 to stop at the 300th frame from the frame at start time. If this value is 1, it means only producing one thumbnail at start time), or a relative value to the stream duration (For example, 50% to stop at half of stream duration from start time). The default value is 100%, which means to stop at the end of the stream.
+         * 
+         * @return builder
+         * 
+         */
         public Builder range(@Nullable String range) {
             $.range = range;
             return this;
         }
 
+        /**
+         * @param start The position in the input video from where to start generating thumbnails. The value can be in ISO 8601 format (For example, PT05S to start at 5 seconds), or a frame count (For example, 10 to start at the 10th frame), or a relative value to stream duration (For example, 10% to start at 10% of stream duration). Also supports a macro {Best}, which tells the encoder to select the best thumbnail from the first few seconds of the video and will only produce one thumbnail, no matter what other settings are for Step and Range. The default value is macro {Best}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(String start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param step The intervals at which thumbnails are generated. The value can be in ISO 8601 format (For example, PT05S for one image every 5 seconds), or a frame count (For example, 30 for one image every 30 frames), or a relative value to stream duration (For example, 10% for one image every 10% of stream duration). Note: Step value will affect the first generated thumbnail, which may not be exactly the one specified at transform preset start time. This is due to the encoder, which tries to select the best thumbnail between start time and Step position from start time as the first output. As the default value is 10%, it means if stream has long duration, the first generated thumbnail might be far away from the one specified at start time. Try to select reasonable value for Step if the first thumbnail is expected close to start time, or set Range value at 1 if only one thumbnail is needed at start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder step(@Nullable String step) {
             $.step = step;
             return this;
         }
 
+        /**
+         * @param stretchMode The resizing mode - how the input video will be resized to fit the desired output resolution(s). Default is AutoSize
+         * 
+         * @return builder
+         * 
+         */
         public Builder stretchMode(@Nullable String stretchMode) {
             $.stretchMode = stretchMode;
             return this;
         }
 
+        /**
+         * @param syncMode The Video Sync Mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder syncMode(@Nullable String syncMode) {
             $.syncMode = syncMode;
             return this;

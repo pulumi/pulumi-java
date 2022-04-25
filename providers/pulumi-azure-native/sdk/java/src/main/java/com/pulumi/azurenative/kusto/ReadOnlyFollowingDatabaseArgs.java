@@ -23,6 +23,10 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -34,6 +38,10 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The name of the database in the Kusto cluster.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -45,6 +53,10 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
     @Import(name="hotCachePeriod")
     private @Nullable Output<String> hotCachePeriod;
 
+    /**
+     * @return The time the data should be kept in cache for fast queries in TimeSpan.
+     * 
+     */
     public Optional<Output<String>> hotCachePeriod() {
         return Optional.ofNullable(this.hotCachePeriod);
     }
@@ -57,6 +69,11 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Kind of the database
+     * Expected value is &#39;ReadOnlyFollowing&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -68,6 +85,10 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -79,6 +100,10 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -112,56 +137,130 @@ public final class ReadOnlyFollowingDatabaseArgs extends com.pulumi.resources.Re
             $ = new ReadOnlyFollowingDatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param hotCachePeriod The time the data should be kept in cache for fast queries in TimeSpan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotCachePeriod(@Nullable Output<String> hotCachePeriod) {
             $.hotCachePeriod = hotCachePeriod;
             return this;
         }
 
+        /**
+         * @param hotCachePeriod The time the data should be kept in cache for fast queries in TimeSpan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hotCachePeriod(String hotCachePeriod) {
             return hotCachePeriod(Output.of(hotCachePeriod));
         }
 
+        /**
+         * @param kind Kind of the database
+         * Expected value is &#39;ReadOnlyFollowing&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the database
+         * Expected value is &#39;ReadOnlyFollowing&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

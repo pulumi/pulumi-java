@@ -26,6 +26,10 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
     @Import(name="namespacePath")
     private @Nullable String namespacePath;
 
+    /**
+     * @return Namespace path on a Cache for a Storage Target.
+     * 
+     */
     public Optional<String> namespacePath() {
         return Optional.ofNullable(this.namespacePath);
     }
@@ -37,6 +41,10 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
     @Import(name="nfsAccessPolicy")
     private @Nullable String nfsAccessPolicy;
 
+    /**
+     * @return Name of the access policy applied to this junction.
+     * 
+     */
     public Optional<String> nfsAccessPolicy() {
         return Optional.ofNullable(this.nfsAccessPolicy);
     }
@@ -48,6 +56,10 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
     @Import(name="nfsExport")
     private @Nullable String nfsExport;
 
+    /**
+     * @return NFS export where targetPath exists.
+     * 
+     */
     public Optional<String> nfsExport() {
         return Optional.ofNullable(this.nfsExport);
     }
@@ -59,6 +71,10 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
     @Import(name="targetPath")
     private @Nullable String targetPath;
 
+    /**
+     * @return Path in Storage Target to which namespacePath points.
+     * 
+     */
     public Optional<String> targetPath() {
         return Optional.ofNullable(this.targetPath);
     }
@@ -90,21 +106,45 @@ public final class NamespaceJunctionResponse extends com.pulumi.resources.Invoke
             $ = new NamespaceJunctionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespacePath Namespace path on a Cache for a Storage Target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespacePath(@Nullable String namespacePath) {
             $.namespacePath = namespacePath;
             return this;
         }
 
+        /**
+         * @param nfsAccessPolicy Name of the access policy applied to this junction.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsAccessPolicy(@Nullable String nfsAccessPolicy) {
             $.nfsAccessPolicy = nfsAccessPolicy;
             return this;
         }
 
+        /**
+         * @param nfsExport NFS export where targetPath exists.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nfsExport(@Nullable String nfsExport) {
             $.nfsExport = nfsExport;
             return this;
         }
 
+        /**
+         * @param targetPath Path in Storage Target to which namespacePath points.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetPath(@Nullable String targetPath) {
             $.targetPath = targetPath;
             return this;

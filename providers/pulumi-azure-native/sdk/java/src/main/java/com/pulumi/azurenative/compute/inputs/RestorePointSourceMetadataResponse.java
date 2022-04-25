@@ -30,6 +30,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
     @Import(name="diagnosticsProfile")
     private @Nullable DiagnosticsProfileResponse diagnosticsProfile;
 
+    /**
+     * @return Gets the diagnostics profile.
+     * 
+     */
     public Optional<DiagnosticsProfileResponse> diagnosticsProfile() {
         return Optional.ofNullable(this.diagnosticsProfile);
     }
@@ -41,6 +45,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
     @Import(name="hardwareProfile")
     private @Nullable HardwareProfileResponse hardwareProfile;
 
+    /**
+     * @return Gets the hardware profile.
+     * 
+     */
     public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
@@ -52,6 +60,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
     @Import(name="licenseType")
     private @Nullable String licenseType;
 
+    /**
+     * @return Gets the license type, which is for bring your own license scenario.
+     * 
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -63,6 +75,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Location of the VM from which the restore point was created.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -74,6 +90,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
     @Import(name="osProfile")
     private @Nullable OSProfileResponse osProfile;
 
+    /**
+     * @return Gets the OS profile.
+     * 
+     */
     public Optional<OSProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
@@ -85,6 +105,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
     @Import(name="securityProfile")
     private @Nullable SecurityProfileResponse securityProfile;
 
+    /**
+     * @return Gets the security profile.
+     * 
+     */
     public Optional<SecurityProfileResponse> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
@@ -96,6 +120,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
     @Import(name="storageProfile")
     private @Nullable RestorePointSourceVMStorageProfileResponse storageProfile;
 
+    /**
+     * @return Gets the storage profile.
+     * 
+     */
     public Optional<RestorePointSourceVMStorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
@@ -107,6 +135,10 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
     @Import(name="vmId")
     private @Nullable String vmId;
 
+    /**
+     * @return Gets the virtual machine unique id.
+     * 
+     */
     public Optional<String> vmId() {
         return Optional.ofNullable(this.vmId);
     }
@@ -142,41 +174,89 @@ public final class RestorePointSourceMetadataResponse extends com.pulumi.resourc
             $ = new RestorePointSourceMetadataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diagnosticsProfile Gets the diagnostics profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnosticsProfile(@Nullable DiagnosticsProfileResponse diagnosticsProfile) {
             $.diagnosticsProfile = diagnosticsProfile;
             return this;
         }
 
+        /**
+         * @param hardwareProfile Gets the hardware profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hardwareProfile(@Nullable HardwareProfileResponse hardwareProfile) {
             $.hardwareProfile = hardwareProfile;
             return this;
         }
 
+        /**
+         * @param licenseType Gets the license type, which is for bring your own license scenario.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param location Location of the VM from which the restore point was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param osProfile Gets the OS profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(@Nullable OSProfileResponse osProfile) {
             $.osProfile = osProfile;
             return this;
         }
 
+        /**
+         * @param securityProfile Gets the security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfile(@Nullable SecurityProfileResponse securityProfile) {
             $.securityProfile = securityProfile;
             return this;
         }
 
+        /**
+         * @param storageProfile Gets the storage profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(@Nullable RestorePointSourceVMStorageProfileResponse storageProfile) {
             $.storageProfile = storageProfile;
             return this;
         }
 
+        /**
+         * @param vmId Gets the virtual machine unique id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmId(@Nullable String vmId) {
             $.vmId = vmId;
             return this;

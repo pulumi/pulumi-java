@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetReplicationStorageClassificationMappingResult {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource Location
+     * @return Resource Location
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource Name
+     * @return Resource Name
      * 
      */
     private final String name;
     /**
-     * Properties of the storage mapping object.
+     * @return Properties of the storage mapping object.
      * 
      */
     private final StorageClassificationMappingPropertiesResponse properties;
     /**
-     * Resource Type
+     * @return Resource Type
      * 
      */
     private final String type;
@@ -53,37 +53,37 @@ public final class GetReplicationStorageClassificationMappingResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource Location
+     * @return Resource Location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource Name
+     * @return Resource Name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the storage mapping object.
+     * @return Properties of the storage mapping object.
      * 
-    */
+     */
     public StorageClassificationMappingPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Resource Type
+     * @return Resource Type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class RequestsBasedTriggerResponse extends com.pulumi.resources.Inv
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return Request Count.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -37,6 +41,10 @@ public final class RequestsBasedTriggerResponse extends com.pulumi.resources.Inv
     @Import(name="timeInterval")
     private @Nullable String timeInterval;
 
+    /**
+     * @return Time interval.
+     * 
+     */
     public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -66,11 +74,23 @@ public final class RequestsBasedTriggerResponse extends com.pulumi.resources.Inv
             $ = new RequestsBasedTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(@Nullable String timeInterval) {
             $.timeInterval = timeInterval;
             return this;

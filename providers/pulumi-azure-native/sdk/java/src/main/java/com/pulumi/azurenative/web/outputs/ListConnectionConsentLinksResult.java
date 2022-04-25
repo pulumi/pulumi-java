@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListConnectionConsentLinksResult {
     /**
-     * Collection of resources
+     * @return Collection of resources
      * 
      */
     private final @Nullable List<ConsentLinkDefinitionResponse> value;
@@ -23,9 +23,9 @@ public final class ListConnectionConsentLinksResult {
     }
 
     /**
-     * Collection of resources
+     * @return Collection of resources
      * 
-    */
+     */
     public List<ConsentLinkDefinitionResponse> value() {
         return this.value == null ? List.of() : this.value;
     }

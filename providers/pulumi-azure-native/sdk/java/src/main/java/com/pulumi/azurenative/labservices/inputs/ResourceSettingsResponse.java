@@ -27,6 +27,10 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="cores", required=true)
     private Integer cores;
 
+    /**
+     * @return The translated compute cores of the virtual machine
+     * 
+     */
     public Integer cores() {
         return this.cores;
     }
@@ -38,6 +42,10 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="galleryImageResourceId")
     private @Nullable String galleryImageResourceId;
 
+    /**
+     * @return The resource id of the gallery image used for creating the virtual machine
+     * 
+     */
     public Optional<String> galleryImageResourceId() {
         return Optional.ofNullable(this.galleryImageResourceId);
     }
@@ -49,6 +57,10 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The unique id of the resource setting
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -60,6 +72,10 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="imageName", required=true)
     private String imageName;
 
+    /**
+     * @return The name of the image used to created the environment setting
+     * 
+     */
     public String imageName() {
         return this.imageName;
     }
@@ -71,6 +87,10 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="referenceVm", required=true)
     private ReferenceVmResponse referenceVm;
 
+    /**
+     * @return Details specific to Reference Vm
+     * 
+     */
     public ReferenceVmResponse referenceVm() {
         return this.referenceVm;
     }
@@ -82,6 +102,10 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return The size of the virtual machine
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -115,31 +139,67 @@ public final class ResourceSettingsResponse extends com.pulumi.resources.InvokeA
             $ = new ResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cores The translated compute cores of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder cores(Integer cores) {
             $.cores = cores;
             return this;
         }
 
+        /**
+         * @param galleryImageResourceId The resource id of the gallery image used for creating the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageResourceId(@Nullable String galleryImageResourceId) {
             $.galleryImageResourceId = galleryImageResourceId;
             return this;
         }
 
+        /**
+         * @param id The unique id of the resource setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param imageName The name of the image used to created the environment setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(String imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param referenceVm Details specific to Reference Vm
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceVm(ReferenceVmResponse referenceVm) {
             $.referenceVm = referenceVm;
             return this;
         }
 
+        /**
+         * @param size The size of the virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;

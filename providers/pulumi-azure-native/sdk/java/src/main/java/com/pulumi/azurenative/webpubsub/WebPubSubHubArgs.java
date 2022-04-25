@@ -23,6 +23,10 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName")
     private @Nullable Output<String> hubName;
 
+    /**
+     * @return The hub name.
+     * 
+     */
     public Optional<Output<String>> hubName() {
         return Optional.ofNullable(this.hubName);
     }
@@ -34,6 +38,10 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<WebPubSubHubPropertiesArgs> properties;
 
+    /**
+     * @return Properties of a hub.
+     * 
+     */
     public Output<WebPubSubHubPropertiesArgs> properties() {
         return this.properties;
     }
@@ -45,6 +53,10 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -87,38 +103,86 @@ public final class WebPubSubHubArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebPubSubHubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hubName The hub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(@Nullable Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The hub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param properties Properties of a hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<WebPubSubHubPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of a hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(WebPubSubHubPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

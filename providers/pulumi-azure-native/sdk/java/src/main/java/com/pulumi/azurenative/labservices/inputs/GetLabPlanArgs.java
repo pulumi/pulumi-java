@@ -19,6 +19,10 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="labPlanName", required=true)
     private String labPlanName;
 
+    /**
+     * @return The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
+     * 
+     */
     public String labPlanName() {
         return this.labPlanName;
     }
@@ -30,6 +34,10 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetLabPlanArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetLabPlanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param labPlanName The name of the lab plan that uniquely identifies it within containing resource group. Used in resource URIs and in UI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labPlanName(String labPlanName) {
             $.labPlanName = labPlanName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

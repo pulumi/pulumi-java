@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PoliciesResponse {
     /**
-     * The quarantine policy for a container registry.
+     * @return The quarantine policy for a container registry.
      * 
      */
     private final @Nullable QuarantinePolicyResponse quarantinePolicy;
     /**
-     * The retention policy for a container registry.
+     * @return The retention policy for a container registry.
      * 
      */
     private final @Nullable RetentionPolicyResponse retentionPolicy;
     /**
-     * The content trust policy for a container registry.
+     * @return The content trust policy for a container registry.
      * 
      */
     private final @Nullable TrustPolicyResponse trustPolicy;
@@ -40,23 +40,23 @@ public final class PoliciesResponse {
     }
 
     /**
-     * The quarantine policy for a container registry.
+     * @return The quarantine policy for a container registry.
      * 
-    */
+     */
     public Optional<QuarantinePolicyResponse> quarantinePolicy() {
         return Optional.ofNullable(this.quarantinePolicy);
     }
     /**
-     * The retention policy for a container registry.
+     * @return The retention policy for a container registry.
      * 
-    */
+     */
     public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
     /**
-     * The content trust policy for a container registry.
+     * @return The content trust policy for a container registry.
      * 
-    */
+     */
     public Optional<TrustPolicyResponse> trustPolicy() {
         return Optional.ofNullable(this.trustPolicy);
     }

@@ -27,6 +27,10 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable Map<String,String> description;
 
+    /**
+     * @return Localized descriptions.
+     * 
+     */
     public Optional<Map<String,String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
     private @Nullable Map<String,String> displayName;
 
+    /**
+     * @return Localized display name.
+     * 
+     */
     public Optional<Map<String,String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -49,6 +57,10 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="keyPropertyNames", required=true)
     private List<String> keyPropertyNames;
 
+    /**
+     * @return The properties which make up the unique ID.
+     * 
+     */
     public List<String> keyPropertyNames() {
         return this.keyPropertyNames;
     }
@@ -60,6 +72,10 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="strongIdName", required=true)
     private String strongIdName;
 
+    /**
+     * @return The Name identifying the strong ID.
+     * 
+     */
     public String strongIdName() {
         return this.strongIdName;
     }
@@ -91,25 +107,55 @@ public final class StrongIdResponse extends com.pulumi.resources.InvokeArgs {
             $ = new StrongIdResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Localized descriptions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Map<String,String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName Localized display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Map<String,String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param keyPropertyNames The properties which make up the unique ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPropertyNames(List<String> keyPropertyNames) {
             $.keyPropertyNames = keyPropertyNames;
             return this;
         }
 
+        /**
+         * @param keyPropertyNames The properties which make up the unique ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyPropertyNames(String... keyPropertyNames) {
             return keyPropertyNames(List.of(keyPropertyNames));
         }
 
+        /**
+         * @param strongIdName The Name identifying the strong ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongIdName(String strongIdName) {
             $.strongIdName = strongIdName;
             return this;

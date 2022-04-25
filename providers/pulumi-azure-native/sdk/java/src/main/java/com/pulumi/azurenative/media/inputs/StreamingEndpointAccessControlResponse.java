@@ -26,6 +26,10 @@ public final class StreamingEndpointAccessControlResponse extends com.pulumi.res
     @Import(name="akamai")
     private @Nullable AkamaiAccessControlResponse akamai;
 
+    /**
+     * @return The access control of Akamai
+     * 
+     */
     public Optional<AkamaiAccessControlResponse> akamai() {
         return Optional.ofNullable(this.akamai);
     }
@@ -37,6 +41,10 @@ public final class StreamingEndpointAccessControlResponse extends com.pulumi.res
     @Import(name="ip")
     private @Nullable IPAccessControlResponse ip;
 
+    /**
+     * @return The IP access control of the streaming endpoint.
+     * 
+     */
     public Optional<IPAccessControlResponse> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -66,11 +74,23 @@ public final class StreamingEndpointAccessControlResponse extends com.pulumi.res
             $ = new StreamingEndpointAccessControlResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param akamai The access control of Akamai
+         * 
+         * @return builder
+         * 
+         */
         public Builder akamai(@Nullable AkamaiAccessControlResponse akamai) {
             $.akamai = akamai;
             return this;
         }
 
+        /**
+         * @param ip The IP access control of the streaming endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable IPAccessControlResponse ip) {
             $.ip = ip;
             return this;

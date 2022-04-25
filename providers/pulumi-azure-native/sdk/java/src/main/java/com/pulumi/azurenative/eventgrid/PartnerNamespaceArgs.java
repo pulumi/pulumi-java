@@ -29,6 +29,10 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="disableLocalAuth")
     private @Nullable Output<Boolean> disableLocalAuth;
 
+    /**
+     * @return This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
+     * 
+     */
     public Optional<Output<Boolean>> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
@@ -40,6 +44,10 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="inboundIpRules")
     private @Nullable Output<List<InboundIpRuleArgs>> inboundIpRules;
 
+    /**
+     * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     * 
+     */
     public Optional<Output<List<InboundIpRuleArgs>>> inboundIpRules() {
         return Optional.ofNullable(this.inboundIpRules);
     }
@@ -51,6 +59,10 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -62,6 +74,10 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="partnerNamespaceName")
     private @Nullable Output<String> partnerNamespaceName;
 
+    /**
+     * @return Name of the partner namespace.
+     * 
+     */
     public Optional<Output<String>> partnerNamespaceName() {
         return Optional.ofNullable(this.partnerNamespaceName);
     }
@@ -74,6 +90,11 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="partnerRegistrationFullyQualifiedId")
     private @Nullable Output<String> partnerRegistrationFullyQualifiedId;
 
+    /**
+     * @return The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
+     * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
+     * 
+     */
     public Optional<Output<String>> partnerRegistrationFullyQualifiedId() {
         return Optional.ofNullable(this.partnerRegistrationFullyQualifiedId);
     }
@@ -86,6 +107,11 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="publicNetworkAccess")
     private @Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess;
 
+    /**
+     * @return This determines if traffic is allowed over public network. By default it is enabled.
+     * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules&#34; /&gt;
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccess>>> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -97,6 +123,10 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -108,6 +138,10 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -143,86 +177,206 @@ public final class PartnerNamespaceArgs extends com.pulumi.resources.ResourceArg
             $ = new PartnerNamespaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param disableLocalAuth This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(@Nullable Output<Boolean> disableLocalAuth) {
             $.disableLocalAuth = disableLocalAuth;
             return this;
         }
 
+        /**
+         * @param disableLocalAuth This boolean is used to enable or disable local auth. Default value is false. When the property is set to true, only AAD token will be used to authenticate if user is allowed to publish to the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableLocalAuth(Boolean disableLocalAuth) {
             return disableLocalAuth(Output.of(disableLocalAuth));
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(@Nullable Output<List<InboundIpRuleArgs>> inboundIpRules) {
             $.inboundIpRules = inboundIpRules;
             return this;
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(List<InboundIpRuleArgs> inboundIpRules) {
             return inboundIpRules(Output.of(inboundIpRules));
         }
 
+        /**
+         * @param inboundIpRules This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inboundIpRules(InboundIpRuleArgs... inboundIpRules) {
             return inboundIpRules(List.of(inboundIpRules));
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNamespaceName(@Nullable Output<String> partnerNamespaceName) {
             $.partnerNamespaceName = partnerNamespaceName;
             return this;
         }
 
+        /**
+         * @param partnerNamespaceName Name of the partner namespace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNamespaceName(String partnerNamespaceName) {
             return partnerNamespaceName(Output.of(partnerNamespaceName));
         }
 
+        /**
+         * @param partnerRegistrationFullyQualifiedId The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
+         * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerRegistrationFullyQualifiedId(@Nullable Output<String> partnerRegistrationFullyQualifiedId) {
             $.partnerRegistrationFullyQualifiedId = partnerRegistrationFullyQualifiedId;
             return this;
         }
 
+        /**
+         * @param partnerRegistrationFullyQualifiedId The fully qualified ARM Id of the partner registration that should be associated with this partner namespace. This takes the following format:
+         * /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.EventGrid/partnerRegistrations/{partnerRegistrationName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerRegistrationFullyQualifiedId(String partnerRegistrationFullyQualifiedId) {
             return partnerRegistrationFullyQualifiedId(Output.of(partnerRegistrationFullyQualifiedId));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable Output<Either<String,PublicNetworkAccess>> publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(Either<String,PublicNetworkAccess> publicNetworkAccess) {
             return publicNetworkAccess(Output.of(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(String publicNetworkAccess) {
             return publicNetworkAccess(Either.ofLeft(publicNetworkAccess));
         }
 
+        /**
+         * @param publicNetworkAccess This determines if traffic is allowed over public network. By default it is enabled.
+         * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.PartnerNamespaceProperties.InboundIpRules&#34; /&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(PublicNetworkAccess publicNetworkAccess) {
             return publicNetworkAccess(Either.ofRight(publicNetworkAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

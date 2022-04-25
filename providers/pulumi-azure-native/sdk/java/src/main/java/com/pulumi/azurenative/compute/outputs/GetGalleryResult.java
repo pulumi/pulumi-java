@@ -15,47 +15,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetGalleryResult {
     /**
-     * The description of this Shared Image Gallery resource. This property is updatable.
+     * @return The description of this Shared Image Gallery resource. This property is updatable.
      * 
      */
     private final @Nullable String description;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Describes the gallery unique name.
+     * @return Describes the gallery unique name.
      * 
      */
     private final @Nullable GalleryIdentifierResponse identifier;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * Profile for gallery sharing to subscription or tenant
+     * @return Profile for gallery sharing to subscription or tenant
      * 
      */
     private final @Nullable SharingProfileResponse sharingProfile;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -83,65 +83,65 @@ public final class GetGalleryResult {
     }
 
     /**
-     * The description of this Shared Image Gallery resource. This property is updatable.
+     * @return The description of this Shared Image Gallery resource. This property is updatable.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Describes the gallery unique name.
+     * @return Describes the gallery unique name.
      * 
-    */
+     */
     public Optional<GalleryIdentifierResponse> identifier() {
         return Optional.ofNullable(this.identifier);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state, which only appears in the response.
+     * @return The provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Profile for gallery sharing to subscription or tenant
+     * @return Profile for gallery sharing to subscription or tenant
      * 
-    */
+     */
     public Optional<SharingProfileResponse> sharingProfile() {
         return Optional.ofNullable(this.sharingProfile);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

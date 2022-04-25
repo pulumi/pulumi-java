@@ -13,28 +13,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Migration Identifier
+     * @return Migration Identifier
      * 
      */
     private final String migrationId;
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationValidationOutput&#39;.
      * 
      */
     private final String resultType;
     /**
-     * Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
+     * @return Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
      * 
      */
     private final String status;
     /**
-     * Validation summary results for each database
+     * @return Validation summary results for each database
      * 
      */
     private final @Nullable Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults;
@@ -54,38 +54,38 @@ public final class MigrateSqlServerSqlDbTaskOutputValidationResultResponse {
     }
 
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Migration Identifier
+     * @return Migration Identifier
      * 
-    */
+     */
     public String migrationId() {
         return this.migrationId;
     }
     /**
-     * Result type
+     * @return Result type
      * Expected value is &#39;MigrationValidationOutput&#39;.
      * 
-    */
+     */
     public String resultType() {
         return this.resultType;
     }
     /**
-     * Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
+     * @return Current status of validation at the migration level. Status from the database validation result status will be aggregated here.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Validation summary results for each database
+     * @return Validation summary results for each database
      * 
-    */
+     */
     public Map<String,MigrationValidationDatabaseSummaryResultResponse> summaryResults() {
         return this.summaryResults == null ? Map.of() : this.summaryResults;
     }

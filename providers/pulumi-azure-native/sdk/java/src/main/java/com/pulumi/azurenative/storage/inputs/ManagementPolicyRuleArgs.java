@@ -30,6 +30,10 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="definition", required=true)
     private Output<ManagementPolicyDefinitionArgs> definition;
 
+    /**
+     * @return An object that defines the Lifecycle rule.
+     * 
+     */
     public Output<ManagementPolicyDefinitionArgs> definition() {
         return this.definition;
     }
@@ -41,6 +45,10 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return Rule is enabled if set to true.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -52,6 +60,10 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -63,6 +75,10 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<Either<String,RuleType>> type;
 
+    /**
+     * @return The valid value is Lifecycle
+     * 
+     */
     public Output<Either<String,RuleType>> type() {
         return this.type;
     }
@@ -94,46 +110,106 @@ public final class ManagementPolicyRuleArgs extends com.pulumi.resources.Resourc
             $ = new ManagementPolicyRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param definition An object that defines the Lifecycle rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(Output<ManagementPolicyDefinitionArgs> definition) {
             $.definition = definition;
             return this;
         }
 
+        /**
+         * @param definition An object that defines the Lifecycle rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder definition(ManagementPolicyDefinitionArgs definition) {
             return definition(Output.of(definition));
         }
 
+        /**
+         * @param enabled Rule is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Rule is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param name A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A rule name can contain any combination of alpha numeric characters. Rule name is case-sensitive. It must be unique within a policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type The valid value is Lifecycle
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<Either<String,RuleType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The valid value is Lifecycle
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,RuleType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The valid value is Lifecycle
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The valid value is Lifecycle
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(RuleType type) {
             return type(Either.ofRight(type));
         }

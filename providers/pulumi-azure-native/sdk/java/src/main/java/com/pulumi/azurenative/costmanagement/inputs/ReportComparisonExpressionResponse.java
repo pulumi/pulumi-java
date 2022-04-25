@@ -24,6 +24,10 @@ public final class ReportComparisonExpressionResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the column to use in comparison.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class ReportComparisonExpressionResponse extends com.pulumi.resourc
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return The operator to use for comparison.
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -46,6 +54,10 @@ public final class ReportComparisonExpressionResponse extends com.pulumi.resourc
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return Array of values to use for comparison
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -76,21 +88,45 @@ public final class ReportComparisonExpressionResponse extends com.pulumi.resourc
             $ = new ReportComparisonExpressionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the column to use in comparison.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operator The operator to use for comparison.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param values Array of values to use for comparison
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Array of values to use for comparison
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

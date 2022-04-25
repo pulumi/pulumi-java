@@ -27,6 +27,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorName")
     private @Nullable Output<String> connectorName;
 
+    /**
+     * @return Name of the connector.
+     * 
+     */
     public Optional<Output<String>> connectorName() {
         return Optional.ofNullable(this.connectorName);
     }
@@ -38,6 +42,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorProperties", required=true)
     private Output<Map<String,Object>> connectorProperties;
 
+    /**
+     * @return The connector properties.
+     * 
+     */
     public Output<Map<String,Object>> connectorProperties() {
         return this.connectorProperties;
     }
@@ -49,6 +57,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="connectorType", required=true)
     private Output<Either<String,ConnectorTypes>> connectorType;
 
+    /**
+     * @return Type of connector.
+     * 
+     */
     public Output<Either<String,ConnectorTypes>> connectorType() {
         return this.connectorType;
     }
@@ -60,6 +72,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Description of the connector.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -71,6 +87,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the connector.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -82,6 +102,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="hubName", required=true)
     private Output<String> hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public Output<String> hubName() {
         return this.hubName;
     }
@@ -93,6 +117,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isInternal")
     private @Nullable Output<Boolean> isInternal;
 
+    /**
+     * @return If this is an internal connector.
+     * 
+     */
     public Optional<Output<Boolean>> isInternal() {
         return Optional.ofNullable(this.isInternal);
     }
@@ -104,6 +132,10 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -139,82 +171,190 @@ public final class ConnectorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ConnectorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectorName Name of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(@Nullable Output<String> connectorName) {
             $.connectorName = connectorName;
             return this;
         }
 
+        /**
+         * @param connectorName Name of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorName(String connectorName) {
             return connectorName(Output.of(connectorName));
         }
 
+        /**
+         * @param connectorProperties The connector properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorProperties(Output<Map<String,Object>> connectorProperties) {
             $.connectorProperties = connectorProperties;
             return this;
         }
 
+        /**
+         * @param connectorProperties The connector properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorProperties(Map<String,Object> connectorProperties) {
             return connectorProperties(Output.of(connectorProperties));
         }
 
+        /**
+         * @param connectorType Type of connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(Output<Either<String,ConnectorTypes>> connectorType) {
             $.connectorType = connectorType;
             return this;
         }
 
+        /**
+         * @param connectorType Type of connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(Either<String,ConnectorTypes> connectorType) {
             return connectorType(Output.of(connectorType));
         }
 
+        /**
+         * @param connectorType Type of connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(String connectorType) {
             return connectorType(Either.ofLeft(connectorType));
         }
 
+        /**
+         * @param connectorType Type of connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectorType(ConnectorTypes connectorType) {
             return connectorType(Either.ofRight(connectorType));
         }
 
+        /**
+         * @param description Description of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Description of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Display name of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param isInternal If this is an internal connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isInternal(@Nullable Output<Boolean> isInternal) {
             $.isInternal = isInternal;
             return this;
         }
 
+        /**
+         * @param isInternal If this is an internal connector.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isInternal(Boolean isInternal) {
             return isInternal(Output.of(isInternal));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

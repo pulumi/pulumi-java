@@ -24,6 +24,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="groupId")
     private @Nullable Output<String> groupId;
 
+    /**
+     * @return Group id of the private endpoint.
+     * 
+     */
     public Optional<Output<String>> groupId() {
         return Optional.ofNullable(this.groupId);
     }
@@ -46,6 +54,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpoint")
     private @Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint;
 
+    /**
+     * @return Private endpoint which the connection belongs to.
+     * 
+     */
     public Optional<Output<PrivateEndpointPropertyArgs>> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -57,6 +69,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpointConnectionName")
     private @Nullable Output<String> privateEndpointConnectionName;
 
+    /**
+     * @return The name of the private endpoint connection.
+     * 
+     */
     public Optional<Output<String>> privateEndpointConnectionName() {
         return Optional.ofNullable(this.privateEndpointConnectionName);
     }
@@ -68,6 +84,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return Connection State of the Private Endpoint Connection.
+     * 
+     */
     public Optional<Output<PrivateLinkServiceConnectionStatePropertyArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -79,6 +99,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="provisioningState")
     private @Nullable Output<String> provisioningState;
 
+    /**
+     * @return Provisioning state of the private endpoint.
+     * 
+     */
     public Optional<Output<String>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -90,6 +114,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -124,65 +152,149 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param groupId Group id of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(@Nullable Output<String> groupId) {
             $.groupId = groupId;
             return this;
         }
 
+        /**
+         * @param groupId Group id of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupId(String groupId) {
             return groupId(Output.of(groupId));
         }
 
+        /**
+         * @param privateEndpoint Private endpoint which the connection belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointPropertyArgs> privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateEndpoint Private endpoint which the connection belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(PrivateEndpointPropertyArgs privateEndpoint) {
             return privateEndpoint(Output.of(privateEndpoint));
         }
 
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Connection State of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStatePropertyArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Connection State of the Private Endpoint Connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStatePropertyArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<String> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

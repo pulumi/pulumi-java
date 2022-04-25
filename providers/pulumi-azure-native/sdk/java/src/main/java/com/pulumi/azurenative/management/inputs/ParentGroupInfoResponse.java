@@ -25,6 +25,10 @@ public final class ParentGroupInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The friendly name of the parent management group.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -36,6 +40,10 @@ public final class ParentGroupInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -47,6 +55,10 @@ public final class ParentGroupInfoResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the parent management group
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -77,16 +89,34 @@ public final class ParentGroupInfoResponse extends com.pulumi.resources.InvokeAr
             $ = new ParentGroupInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName The friendly name of the parent management group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param id The fully qualified ID for the parent management group.  For example, /providers/Microsoft.Management/managementGroups/0000000-0000-0000-0000-000000000000
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the parent management group
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

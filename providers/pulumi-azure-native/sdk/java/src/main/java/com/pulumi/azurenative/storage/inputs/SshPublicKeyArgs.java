@@ -22,6 +22,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Optional. It is used to store the function/usage of the key
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Ssh public key base64 encoded. The format should be: &#39;&lt;keyType&gt; &lt;keyData&gt;&#39;, e.g. ssh-rsa AAAABBBB
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -62,20 +70,44 @@ public final class SshPublicKeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SshPublicKeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional. It is used to store the function/usage of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Optional. It is used to store the function/usage of the key
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param key Ssh public key base64 encoded. The format should be: &#39;&lt;keyType&gt; &lt;keyData&gt;&#39;, e.g. ssh-rsa AAAABBBB
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Ssh public key base64 encoded. The format should be: &#39;&lt;keyType&gt; &lt;keyData&gt;&#39;, e.g. ssh-rsa AAAABBBB
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }

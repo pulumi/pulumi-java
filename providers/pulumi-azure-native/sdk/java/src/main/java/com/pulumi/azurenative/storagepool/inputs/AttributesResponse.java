@@ -23,6 +23,10 @@ public final class AttributesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authentication", required=true)
     private Boolean authentication;
 
+    /**
+     * @return Indicates whether or not authentication is enabled on the ACL.
+     * 
+     */
     public Boolean authentication() {
         return this.authentication;
     }
@@ -34,6 +38,10 @@ public final class AttributesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="prodModeWriteProtect", required=true)
     private Boolean prodModeWriteProtect;
 
+    /**
+     * @return Indicates whether or not write protect is enabled on the LUNs.
+     * 
+     */
     public Boolean prodModeWriteProtect() {
         return this.prodModeWriteProtect;
     }
@@ -63,11 +71,23 @@ public final class AttributesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new AttributesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authentication Indicates whether or not authentication is enabled on the ACL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authentication(Boolean authentication) {
             $.authentication = authentication;
             return this;
         }
 
+        /**
+         * @param prodModeWriteProtect Indicates whether or not write protect is enabled on the LUNs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prodModeWriteProtect(Boolean prodModeWriteProtect) {
             $.prodModeWriteProtect = prodModeWriteProtect;
             return this;

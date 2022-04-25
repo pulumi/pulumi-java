@@ -26,6 +26,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
     @Import(name="cipherSuites")
     private @Nullable List<String> cipherSuites;
 
+    /**
+     * @return Ssl cipher suites to be enabled in the specified order to application gateway.
+     * 
+     */
     public Optional<List<String>> cipherSuites() {
         return Optional.ofNullable(this.cipherSuites);
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
     @Import(name="disabledSslProtocols")
     private @Nullable List<String> disabledSslProtocols;
 
+    /**
+     * @return Ssl protocols to be disabled on application gateway.
+     * 
+     */
     public Optional<List<String>> disabledSslProtocols() {
         return Optional.ofNullable(this.disabledSslProtocols);
     }
@@ -48,6 +56,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
     @Import(name="minProtocolVersion")
     private @Nullable String minProtocolVersion;
 
+    /**
+     * @return Minimum version of Ssl protocol to be supported on application gateway.
+     * 
+     */
     public Optional<String> minProtocolVersion() {
         return Optional.ofNullable(this.minProtocolVersion);
     }
@@ -59,6 +71,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
     @Import(name="policyName")
     private @Nullable String policyName;
 
+    /**
+     * @return Name of Ssl predefined policy.
+     * 
+     */
     public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -70,6 +86,10 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
     @Import(name="policyType")
     private @Nullable String policyType;
 
+    /**
+     * @return Type of Ssl Policy.
+     * 
+     */
     public Optional<String> policyType() {
         return Optional.ofNullable(this.policyType);
     }
@@ -102,34 +122,76 @@ public final class ApplicationGatewaySslPolicyResponse extends com.pulumi.resour
             $ = new ApplicationGatewaySslPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cipherSuites Ssl cipher suites to be enabled in the specified order to application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipherSuites(@Nullable List<String> cipherSuites) {
             $.cipherSuites = cipherSuites;
             return this;
         }
 
+        /**
+         * @param cipherSuites Ssl cipher suites to be enabled in the specified order to application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cipherSuites(String... cipherSuites) {
             return cipherSuites(List.of(cipherSuites));
         }
 
+        /**
+         * @param disabledSslProtocols Ssl protocols to be disabled on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledSslProtocols(@Nullable List<String> disabledSslProtocols) {
             $.disabledSslProtocols = disabledSslProtocols;
             return this;
         }
 
+        /**
+         * @param disabledSslProtocols Ssl protocols to be disabled on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disabledSslProtocols(String... disabledSslProtocols) {
             return disabledSslProtocols(List.of(disabledSslProtocols));
         }
 
+        /**
+         * @param minProtocolVersion Minimum version of Ssl protocol to be supported on application gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minProtocolVersion(@Nullable String minProtocolVersion) {
             $.minProtocolVersion = minProtocolVersion;
             return this;
         }
 
+        /**
+         * @param policyName Name of Ssl predefined policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable String policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyType Type of Ssl Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyType(@Nullable String policyType) {
             $.policyType = policyType;
             return this;

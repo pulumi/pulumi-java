@@ -11,22 +11,22 @@ import java.util.Objects;
 @CustomType
 public final class DatasetResponseSqlDataPath {
     /**
-     * SQL query timeout. Unit in seconds.
+     * @return SQL query timeout. Unit in seconds.
      * 
      */
     private final Double queryTimeout;
     /**
-     * SQL query
+     * @return SQL query
      * 
      */
     private final String sqlQuery;
     /**
-     * SQL storedProcedure name
+     * @return SQL storedProcedure name
      * 
      */
     private final String sqlStoredProcedureName;
     /**
-     * SQL table name
+     * @return SQL table name
      * 
      */
     private final String sqlTableName;
@@ -44,30 +44,30 @@ public final class DatasetResponseSqlDataPath {
     }
 
     /**
-     * SQL query timeout. Unit in seconds.
+     * @return SQL query timeout. Unit in seconds.
      * 
-    */
+     */
     public Double queryTimeout() {
         return this.queryTimeout;
     }
     /**
-     * SQL query
+     * @return SQL query
      * 
-    */
+     */
     public String sqlQuery() {
         return this.sqlQuery;
     }
     /**
-     * SQL storedProcedure name
+     * @return SQL storedProcedure name
      * 
-    */
+     */
     public String sqlStoredProcedureName() {
         return this.sqlStoredProcedureName;
     }
     /**
-     * SQL table name
+     * @return SQL table name
      * 
-    */
+     */
     public String sqlTableName() {
         return this.sqlTableName;
     }

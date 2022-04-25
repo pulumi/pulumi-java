@@ -31,6 +31,10 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="audiences")
     private @Nullable List<String> audiences;
 
+    /**
+     * @return List of expected token audiences. Token audience is valid if it matches at least one of the given values.
+     * 
+     */
     public Optional<List<String>> audiences() {
         return Optional.ofNullable(this.audiences);
     }
@@ -42,6 +46,10 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="claims")
     private @Nullable List<TokenClaimResponse> claims;
 
+    /**
+     * @return List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
+     * 
+     */
     public Optional<List<TokenClaimResponse>> claims() {
         return Optional.ofNullable(this.claims);
     }
@@ -53,6 +61,10 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="issuers")
     private @Nullable List<String> issuers;
 
+    /**
+     * @return List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
+     * 
+     */
     public Optional<List<String>> issuers() {
         return Optional.ofNullable(this.issuers);
     }
@@ -64,6 +76,10 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="keys")
     private @Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys;
 
+    /**
+     * @return List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
+     * 
+     */
     public Optional<List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -76,6 +92,11 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.VideoAnalyzer.JwtAuthentication&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -108,42 +129,97 @@ public final class JwtAuthenticationResponse extends com.pulumi.resources.Invoke
             $ = new JwtAuthenticationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audiences List of expected token audiences. Token audience is valid if it matches at least one of the given values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(@Nullable List<String> audiences) {
             $.audiences = audiences;
             return this;
         }
 
+        /**
+         * @param audiences List of expected token audiences. Token audience is valid if it matches at least one of the given values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
 
+        /**
+         * @param claims List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claims(@Nullable List<TokenClaimResponse> claims) {
             $.claims = claims;
             return this;
         }
 
+        /**
+         * @param claims List of additional token claims to be validated. Token must contains all claims and respective values for it to be valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder claims(TokenClaimResponse... claims) {
             return claims(List.of(claims));
         }
 
+        /**
+         * @param issuers List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuers(@Nullable List<String> issuers) {
             $.issuers = issuers;
             return this;
         }
 
+        /**
+         * @param issuers List of expected token issuers. Token issuer is valid if it matches at least one of the given values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuers(String... issuers) {
             return issuers(List.of(issuers));
         }
 
+        /**
+         * @param keys List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable List<Either<EccTokenKeyResponse,RsaTokenKeyResponse>> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys List of keys which can be used to validate access tokens. Having multiple keys allow for seamless key rotation of the token signing key. Token signature must match exactly one key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(Either<EccTokenKeyResponse,RsaTokenKeyResponse>... keys) {
             return keys(List.of(keys));
         }
 
+        /**
+         * @param type The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.VideoAnalyzer.JwtAuthentication&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

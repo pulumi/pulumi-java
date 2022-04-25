@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayBackendAddressResponse {
     /**
-     * Fully qualified domain name (FQDN).
+     * @return Fully qualified domain name (FQDN).
      * 
      */
     private final @Nullable String fqdn;
     /**
-     * IP address.
+     * @return IP address.
      * 
      */
     private final @Nullable String ipAddress;
@@ -31,16 +31,16 @@ public final class ApplicationGatewayBackendAddressResponse {
     }
 
     /**
-     * Fully qualified domain name (FQDN).
+     * @return Fully qualified domain name (FQDN).
      * 
-    */
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * IP address.
+     * @return IP address.
      * 
-    */
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }

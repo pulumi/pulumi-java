@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ListIngestionSettingTokensResult {
     /**
-     * The token is used for correlating security data and logs with the resources in the subscription.
+     * @return The token is used for correlating security data and logs with the resources in the subscription.
      * 
      */
     private final String token;
@@ -21,9 +21,9 @@ public final class ListIngestionSettingTokensResult {
     }
 
     /**
-     * The token is used for correlating security data and logs with the resources in the subscription.
+     * @return The token is used for correlating security data and logs with the resources in the subscription.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }

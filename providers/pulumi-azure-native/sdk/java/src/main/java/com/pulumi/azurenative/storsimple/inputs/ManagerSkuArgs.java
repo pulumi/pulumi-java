@@ -24,6 +24,10 @@ public final class ManagerSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<ManagerSkuType> name;
 
+    /**
+     * @return Refers to the sku name which should be &#34;Standard&#34;
+     * 
+     */
     public Output<ManagerSkuType> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class ManagerSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ManagerSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Refers to the sku name which should be &#34;Standard&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<ManagerSkuType> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Refers to the sku name which should be &#34;Standard&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(ManagerSkuType name) {
             return name(Output.of(name));
         }

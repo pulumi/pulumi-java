@@ -28,6 +28,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -39,6 +43,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="automaticSnapshotPolicyEnabled")
     private @Nullable Output<Boolean> automaticSnapshotPolicyEnabled;
 
+    /**
+     * @return Deprecated in favor of isVersioningEnabled property.
+     * 
+     */
     public Optional<Output<Boolean>> automaticSnapshotPolicyEnabled() {
         return Optional.ofNullable(this.automaticSnapshotPolicyEnabled);
     }
@@ -50,6 +58,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="blobServicesName")
     private @Nullable Output<String> blobServicesName;
 
+    /**
+     * @return The name of the blob Service within the specified storage account. Blob Service Name must be &#39;default&#39;
+     * 
+     */
     public Optional<Output<String>> blobServicesName() {
         return Optional.ofNullable(this.blobServicesName);
     }
@@ -61,6 +73,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="changeFeed")
     private @Nullable Output<ChangeFeedArgs> changeFeed;
 
+    /**
+     * @return The blob service properties for change feed events.
+     * 
+     */
     public Optional<Output<ChangeFeedArgs>> changeFeed() {
         return Optional.ofNullable(this.changeFeed);
     }
@@ -72,6 +88,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="containerDeleteRetentionPolicy")
     private @Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy;
 
+    /**
+     * @return The blob service properties for container soft delete.
+     * 
+     */
     public Optional<Output<DeleteRetentionPolicyArgs>> containerDeleteRetentionPolicy() {
         return Optional.ofNullable(this.containerDeleteRetentionPolicy);
     }
@@ -83,6 +103,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="cors")
     private @Nullable Output<CorsRulesArgs> cors;
 
+    /**
+     * @return Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
+     * 
+     */
     public Optional<Output<CorsRulesArgs>> cors() {
         return Optional.ofNullable(this.cors);
     }
@@ -94,6 +118,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="defaultServiceVersion")
     private @Nullable Output<String> defaultServiceVersion;
 
+    /**
+     * @return DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
+     * 
+     */
     public Optional<Output<String>> defaultServiceVersion() {
         return Optional.ofNullable(this.defaultServiceVersion);
     }
@@ -105,6 +133,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="deleteRetentionPolicy")
     private @Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy;
 
+    /**
+     * @return The blob service properties for blob soft delete.
+     * 
+     */
     public Optional<Output<DeleteRetentionPolicyArgs>> deleteRetentionPolicy() {
         return Optional.ofNullable(this.deleteRetentionPolicy);
     }
@@ -116,6 +148,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="isVersioningEnabled")
     private @Nullable Output<Boolean> isVersioningEnabled;
 
+    /**
+     * @return Versioning is enabled if set to true.
+     * 
+     */
     public Optional<Output<Boolean>> isVersioningEnabled() {
         return Optional.ofNullable(this.isVersioningEnabled);
     }
@@ -127,6 +163,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="lastAccessTimeTrackingPolicy")
     private @Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy;
 
+    /**
+     * @return The blob service property to configure last access time based tracking policy.
+     * 
+     */
     public Optional<Output<LastAccessTimeTrackingPolicyArgs>> lastAccessTimeTrackingPolicy() {
         return Optional.ofNullable(this.lastAccessTimeTrackingPolicy);
     }
@@ -138,6 +178,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -149,6 +193,10 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="restorePolicy")
     private @Nullable Output<RestorePolicyPropertiesArgs> restorePolicy;
 
+    /**
+     * @return The blob service properties for blob restore policy.
+     * 
+     */
     public Optional<Output<RestorePolicyPropertiesArgs>> restorePolicy() {
         return Optional.ofNullable(this.restorePolicy);
     }
@@ -188,110 +236,254 @@ public final class BlobServicePropertiesArgs extends com.pulumi.resources.Resour
             $ = new BlobServicePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param automaticSnapshotPolicyEnabled Deprecated in favor of isVersioningEnabled property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticSnapshotPolicyEnabled(@Nullable Output<Boolean> automaticSnapshotPolicyEnabled) {
             $.automaticSnapshotPolicyEnabled = automaticSnapshotPolicyEnabled;
             return this;
         }
 
+        /**
+         * @param automaticSnapshotPolicyEnabled Deprecated in favor of isVersioningEnabled property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticSnapshotPolicyEnabled(Boolean automaticSnapshotPolicyEnabled) {
             return automaticSnapshotPolicyEnabled(Output.of(automaticSnapshotPolicyEnabled));
         }
 
+        /**
+         * @param blobServicesName The name of the blob Service within the specified storage account. Blob Service Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobServicesName(@Nullable Output<String> blobServicesName) {
             $.blobServicesName = blobServicesName;
             return this;
         }
 
+        /**
+         * @param blobServicesName The name of the blob Service within the specified storage account. Blob Service Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobServicesName(String blobServicesName) {
             return blobServicesName(Output.of(blobServicesName));
         }
 
+        /**
+         * @param changeFeed The blob service properties for change feed events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeFeed(@Nullable Output<ChangeFeedArgs> changeFeed) {
             $.changeFeed = changeFeed;
             return this;
         }
 
+        /**
+         * @param changeFeed The blob service properties for change feed events.
+         * 
+         * @return builder
+         * 
+         */
         public Builder changeFeed(ChangeFeedArgs changeFeed) {
             return changeFeed(Output.of(changeFeed));
         }
 
+        /**
+         * @param containerDeleteRetentionPolicy The blob service properties for container soft delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDeleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> containerDeleteRetentionPolicy) {
             $.containerDeleteRetentionPolicy = containerDeleteRetentionPolicy;
             return this;
         }
 
+        /**
+         * @param containerDeleteRetentionPolicy The blob service properties for container soft delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerDeleteRetentionPolicy(DeleteRetentionPolicyArgs containerDeleteRetentionPolicy) {
             return containerDeleteRetentionPolicy(Output.of(containerDeleteRetentionPolicy));
         }
 
+        /**
+         * @param cors Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(@Nullable Output<CorsRulesArgs> cors) {
             $.cors = cors;
             return this;
         }
 
+        /**
+         * @param cors Specifies CORS rules for the Blob service. You can include up to five CorsRule elements in the request. If no CorsRule elements are included in the request body, all CORS rules will be deleted, and CORS will be disabled for the Blob service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cors(CorsRulesArgs cors) {
             return cors(Output.of(cors));
         }
 
+        /**
+         * @param defaultServiceVersion DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceVersion(@Nullable Output<String> defaultServiceVersion) {
             $.defaultServiceVersion = defaultServiceVersion;
             return this;
         }
 
+        /**
+         * @param defaultServiceVersion DefaultServiceVersion indicates the default version to use for requests to the Blob service if an incoming request’s version is not specified. Possible values include version 2008-10-27 and all more recent versions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceVersion(String defaultServiceVersion) {
             return defaultServiceVersion(Output.of(defaultServiceVersion));
         }
 
+        /**
+         * @param deleteRetentionPolicy The blob service properties for blob soft delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteRetentionPolicy(@Nullable Output<DeleteRetentionPolicyArgs> deleteRetentionPolicy) {
             $.deleteRetentionPolicy = deleteRetentionPolicy;
             return this;
         }
 
+        /**
+         * @param deleteRetentionPolicy The blob service properties for blob soft delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteRetentionPolicy(DeleteRetentionPolicyArgs deleteRetentionPolicy) {
             return deleteRetentionPolicy(Output.of(deleteRetentionPolicy));
         }
 
+        /**
+         * @param isVersioningEnabled Versioning is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isVersioningEnabled(@Nullable Output<Boolean> isVersioningEnabled) {
             $.isVersioningEnabled = isVersioningEnabled;
             return this;
         }
 
+        /**
+         * @param isVersioningEnabled Versioning is enabled if set to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isVersioningEnabled(Boolean isVersioningEnabled) {
             return isVersioningEnabled(Output.of(isVersioningEnabled));
         }
 
+        /**
+         * @param lastAccessTimeTrackingPolicy The blob service property to configure last access time based tracking policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAccessTimeTrackingPolicy(@Nullable Output<LastAccessTimeTrackingPolicyArgs> lastAccessTimeTrackingPolicy) {
             $.lastAccessTimeTrackingPolicy = lastAccessTimeTrackingPolicy;
             return this;
         }
 
+        /**
+         * @param lastAccessTimeTrackingPolicy The blob service property to configure last access time based tracking policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAccessTimeTrackingPolicy(LastAccessTimeTrackingPolicyArgs lastAccessTimeTrackingPolicy) {
             return lastAccessTimeTrackingPolicy(Output.of(lastAccessTimeTrackingPolicy));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param restorePolicy The blob service properties for blob restore policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePolicy(@Nullable Output<RestorePolicyPropertiesArgs> restorePolicy) {
             $.restorePolicy = restorePolicy;
             return this;
         }
 
+        /**
+         * @param restorePolicy The blob service properties for blob restore policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePolicy(RestorePolicyPropertiesArgs restorePolicy) {
             return restorePolicy(Output.of(restorePolicy));
         }

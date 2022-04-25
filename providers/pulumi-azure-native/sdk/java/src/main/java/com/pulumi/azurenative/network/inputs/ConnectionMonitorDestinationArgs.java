@@ -27,6 +27,10 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return Address of the connection monitor destination (IP or domain name).
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -38,6 +42,10 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return The destination port used by connection monitor.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -49,6 +57,10 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The ID of the resource used as the destination by connection monitor.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -79,29 +91,65 @@ public final class ConnectionMonitorDestinationArgs extends com.pulumi.resources
             $ = new ConnectionMonitorDestinationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address Address of the connection monitor destination (IP or domain name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address Address of the connection monitor destination (IP or domain name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param port The destination port used by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The destination port used by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param resourceId The ID of the resource used as the destination by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The ID of the resource used as the destination by connection monitor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

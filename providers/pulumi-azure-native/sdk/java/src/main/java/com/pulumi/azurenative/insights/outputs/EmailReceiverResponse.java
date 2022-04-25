@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EmailReceiverResponse {
     /**
-     * The email address of this receiver.
+     * @return The email address of this receiver.
      * 
      */
     private final String emailAddress;
     /**
-     * The name of the email receiver. Names must be unique across all receivers within an action group.
+     * @return The name of the email receiver. Names must be unique across all receivers within an action group.
      * 
      */
     private final String name;
     /**
-     * The receiver status of the e-mail.
+     * @return The receiver status of the e-mail.
      * 
      */
     private final String status;
     /**
-     * Indicates whether to use common alert schema.
+     * @return Indicates whether to use common alert schema.
      * 
      */
     private final @Nullable Boolean useCommonAlertSchema;
@@ -46,30 +46,30 @@ public final class EmailReceiverResponse {
     }
 
     /**
-     * The email address of this receiver.
+     * @return The email address of this receiver.
      * 
-    */
+     */
     public String emailAddress() {
         return this.emailAddress;
     }
     /**
-     * The name of the email receiver. Names must be unique across all receivers within an action group.
+     * @return The name of the email receiver. Names must be unique across all receivers within an action group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The receiver status of the e-mail.
+     * @return The receiver status of the e-mail.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Indicates whether to use common alert schema.
+     * @return Indicates whether to use common alert schema.
      * 
-    */
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }

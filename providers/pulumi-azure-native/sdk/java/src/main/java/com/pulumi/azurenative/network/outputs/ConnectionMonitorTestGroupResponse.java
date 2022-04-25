@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectionMonitorTestGroupResponse {
     /**
-     * List of destination endpoint names.
+     * @return List of destination endpoint names.
      * 
      */
     private final List<String> destinations;
     /**
-     * Value indicating whether test group is disabled.
+     * @return Value indicating whether test group is disabled.
      * 
      */
     private final @Nullable Boolean disable;
     /**
-     * The name of the connection monitor test group.
+     * @return The name of the connection monitor test group.
      * 
      */
     private final String name;
     /**
-     * List of source endpoint names.
+     * @return List of source endpoint names.
      * 
      */
     private final List<String> sources;
     /**
-     * List of test configuration names.
+     * @return List of test configuration names.
      * 
      */
     private final List<String> testConfigurations;
@@ -54,37 +54,37 @@ public final class ConnectionMonitorTestGroupResponse {
     }
 
     /**
-     * List of destination endpoint names.
+     * @return List of destination endpoint names.
      * 
-    */
+     */
     public List<String> destinations() {
         return this.destinations;
     }
     /**
-     * Value indicating whether test group is disabled.
+     * @return Value indicating whether test group is disabled.
      * 
-    */
+     */
     public Optional<Boolean> disable() {
         return Optional.ofNullable(this.disable);
     }
     /**
-     * The name of the connection monitor test group.
+     * @return The name of the connection monitor test group.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of source endpoint names.
+     * @return List of source endpoint names.
      * 
-    */
+     */
     public List<String> sources() {
         return this.sources;
     }
     /**
-     * List of test configuration names.
+     * @return List of test configuration names.
      * 
-    */
+     */
     public List<String> testConfigurations() {
         return this.testConfigurations;
     }

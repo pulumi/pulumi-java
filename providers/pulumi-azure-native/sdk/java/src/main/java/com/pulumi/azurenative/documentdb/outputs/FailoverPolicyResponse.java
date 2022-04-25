@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FailoverPolicyResponse {
     /**
-     * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+     * @return The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
      * 
      */
     private final @Nullable Integer failoverPriority;
     /**
-     * The unique identifier of the region in which the database account replicates to. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
+     * @return The unique identifier of the region in which the database account replicates to. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
      * 
      */
     private final String id;
     /**
-     * The name of the region in which the database account exists.
+     * @return The name of the region in which the database account exists.
      * 
      */
     private final @Nullable String locationName;
@@ -39,23 +39,23 @@ public final class FailoverPolicyResponse {
     }
 
     /**
-     * The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
+     * @return The failover priority of the region. A failover priority of 0 indicates a write region. The maximum value for a failover priority = (total number of regions - 1). Failover priority values must be unique for each of the regions in which the database account exists.
      * 
-    */
+     */
     public Optional<Integer> failoverPriority() {
         return Optional.ofNullable(this.failoverPriority);
     }
     /**
-     * The unique identifier of the region in which the database account replicates to. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
+     * @return The unique identifier of the region in which the database account replicates to. Example: &amp;lt;accountName&amp;gt;-&amp;lt;locationName&amp;gt;.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the region in which the database account exists.
+     * @return The name of the region in which the database account exists.
      * 
-    */
+     */
     public Optional<String> locationName() {
         return Optional.ofNullable(this.locationName);
     }

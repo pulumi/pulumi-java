@@ -23,6 +23,10 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="bindingSelector")
     private @Nullable String bindingSelector;
 
+    /**
+     * @return Binding selector to use for the AzureIdentityBinding resource.
+     * 
+     */
     public Optional<String> bindingSelector() {
         return Optional.ofNullable(this.bindingSelector);
     }
@@ -34,6 +38,10 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="identity", required=true)
     private UserAssignedIdentityResponse identity;
 
+    /**
+     * @return Information of the user assigned identity.
+     * 
+     */
     public UserAssignedIdentityResponse identity() {
         return this.identity;
     }
@@ -45,6 +53,10 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the pod identity.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -56,6 +68,10 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return Namespace of the pod identity.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -74,6 +90,10 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The current provisioning state of the pod identity.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -107,21 +127,45 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
             $ = new ManagedClusterPodIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bindingSelector Binding selector to use for the AzureIdentityBinding resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bindingSelector(@Nullable String bindingSelector) {
             $.bindingSelector = bindingSelector;
             return this;
         }
 
+        /**
+         * @param identity Information of the user assigned identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(UserAssignedIdentityResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param name Name of the pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param namespace Namespace of the pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;
@@ -132,6 +176,12 @@ public final class ManagedClusterPodIdentityResponse extends com.pulumi.resource
             return this;
         }
 
+        /**
+         * @param provisioningState The current provisioning state of the pod identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

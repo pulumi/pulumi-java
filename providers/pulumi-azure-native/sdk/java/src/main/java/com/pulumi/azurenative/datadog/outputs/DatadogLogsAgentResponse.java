@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatadogLogsAgentResponse {
     /**
-     * The transport.
+     * @return The transport.
      * 
      */
     private final @Nullable String transport;
@@ -23,9 +23,9 @@ public final class DatadogLogsAgentResponse {
     }
 
     /**
-     * The transport.
+     * @return The transport.
      * 
-    */
+     */
     public Optional<String> transport() {
         return Optional.ofNullable(this.transport);
     }

@@ -31,6 +31,12 @@ public final class SignalRFeatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="flag", required=true)
     private Output<Either<String,FeatureFlags>> flag;
 
+    /**
+     * @return FeatureFlags is the supported features of Azure SignalR service.
+     * - ServiceMode: Flag for backend server for SignalR service. Values allowed: &#34;Default&#34;: have your own backend server; &#34;Serverless&#34;: your application doesn&#39;t have a backend server; &#34;Classic&#34;: for backward compatibility. Support both Default and Serverless mode but not recommended; &#34;PredefinedOnly&#34;: for future use.
+     * - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+     * 
+     */
     public Output<Either<String,FeatureFlags>> flag() {
         return this.flag;
     }
@@ -42,6 +48,10 @@ public final class SignalRFeatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return Optional properties related to this feature.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -53,6 +63,10 @@ public final class SignalRFeatureArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="value", required=true)
     private Output<String> value;
 
+    /**
+     * @return Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+     * 
+     */
     public Output<String> value() {
         return this.value;
     }
@@ -83,37 +97,93 @@ public final class SignalRFeatureArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SignalRFeatureArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param flag FeatureFlags is the supported features of Azure SignalR service.
+         * - ServiceMode: Flag for backend server for SignalR service. Values allowed: &#34;Default&#34;: have your own backend server; &#34;Serverless&#34;: your application doesn&#39;t have a backend server; &#34;Classic&#34;: for backward compatibility. Support both Default and Serverless mode but not recommended; &#34;PredefinedOnly&#34;: for future use.
+         * - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flag(Output<Either<String,FeatureFlags>> flag) {
             $.flag = flag;
             return this;
         }
 
+        /**
+         * @param flag FeatureFlags is the supported features of Azure SignalR service.
+         * - ServiceMode: Flag for backend server for SignalR service. Values allowed: &#34;Default&#34;: have your own backend server; &#34;Serverless&#34;: your application doesn&#39;t have a backend server; &#34;Classic&#34;: for backward compatibility. Support both Default and Serverless mode but not recommended; &#34;PredefinedOnly&#34;: for future use.
+         * - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flag(Either<String,FeatureFlags> flag) {
             return flag(Output.of(flag));
         }
 
+        /**
+         * @param flag FeatureFlags is the supported features of Azure SignalR service.
+         * - ServiceMode: Flag for backend server for SignalR service. Values allowed: &#34;Default&#34;: have your own backend server; &#34;Serverless&#34;: your application doesn&#39;t have a backend server; &#34;Classic&#34;: for backward compatibility. Support both Default and Serverless mode but not recommended; &#34;PredefinedOnly&#34;: for future use.
+         * - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flag(String flag) {
             return flag(Either.ofLeft(flag));
         }
 
+        /**
+         * @param flag FeatureFlags is the supported features of Azure SignalR service.
+         * - ServiceMode: Flag for backend server for SignalR service. Values allowed: &#34;Default&#34;: have your own backend server; &#34;Serverless&#34;: your application doesn&#39;t have a backend server; &#34;Classic&#34;: for backward compatibility. Support both Default and Serverless mode but not recommended; &#34;PredefinedOnly&#34;: for future use.
+         * - EnableConnectivityLogs: &#34;true&#34;/&#34;false&#34;, to enable/disable the connectivity log category respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder flag(FeatureFlags flag) {
             return flag(Either.ofRight(flag));
         }
 
+        /**
+         * @param properties Optional properties related to this feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Optional properties related to this feature.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param value Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value of the feature flag. See Azure SignalR service document https://docs.microsoft.com/azure/azure-signalr/ for allowed values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

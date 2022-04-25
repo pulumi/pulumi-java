@@ -25,6 +25,10 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ip")
     private @Nullable String ip;
 
+    /**
+     * @return The IP of the ingress (immutable).
+     * 
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -36,6 +40,10 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The ingress profile name.  Must be &#34;default&#34; (immutable).
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="visibility")
     private @Nullable String visibility;
 
+    /**
+     * @return Ingress visibility (immutable).
+     * 
+     */
     public Optional<String> visibility() {
         return Optional.ofNullable(this.visibility);
     }
@@ -77,16 +89,34 @@ public final class IngressProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new IngressProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ip The IP of the ingress (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable String ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param name The ingress profile name.  Must be &#34;default&#34; (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param visibility Ingress visibility (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder visibility(@Nullable String visibility) {
             $.visibility = visibility;
             return this;

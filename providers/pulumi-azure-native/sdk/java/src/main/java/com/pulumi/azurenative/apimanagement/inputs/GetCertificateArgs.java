@@ -19,6 +19,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="certificateId", required=true)
     private String certificateId;
 
+    /**
+     * @return Identifier of the certificate entity. Must be unique in the current API Management service instance.
+     * 
+     */
     public String certificateId() {
         return this.certificateId;
     }
@@ -30,6 +34,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -71,16 +83,34 @@ public final class GetCertificateArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateId Identifier of the certificate entity. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateId(String certificateId) {
             $.certificateId = certificateId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;

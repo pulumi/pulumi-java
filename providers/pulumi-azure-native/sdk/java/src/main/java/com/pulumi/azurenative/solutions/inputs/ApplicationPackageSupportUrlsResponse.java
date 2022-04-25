@@ -25,6 +25,10 @@ public final class ApplicationPackageSupportUrlsResponse extends com.pulumi.reso
     @Import(name="governmentCloud")
     private @Nullable String governmentCloud;
 
+    /**
+     * @return The government cloud support URL.
+     * 
+     */
     public Optional<String> governmentCloud() {
         return Optional.ofNullable(this.governmentCloud);
     }
@@ -36,6 +40,10 @@ public final class ApplicationPackageSupportUrlsResponse extends com.pulumi.reso
     @Import(name="publicAzure")
     private @Nullable String publicAzure;
 
+    /**
+     * @return The public azure support URL.
+     * 
+     */
     public Optional<String> publicAzure() {
         return Optional.ofNullable(this.publicAzure);
     }
@@ -65,11 +73,23 @@ public final class ApplicationPackageSupportUrlsResponse extends com.pulumi.reso
             $ = new ApplicationPackageSupportUrlsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param governmentCloud The government cloud support URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder governmentCloud(@Nullable String governmentCloud) {
             $.governmentCloud = governmentCloud;
             return this;
         }
 
+        /**
+         * @param publicAzure The public azure support URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAzure(@Nullable String publicAzure) {
             $.publicAzure = publicAzure;
             return this;

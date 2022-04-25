@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class UserAccessRightResponse {
     /**
-     * Type of access to be allowed for the user.
+     * @return Type of access to be allowed for the user.
      * 
      */
     private final String accessType;
     /**
-     * User ID (already existing in the device).
+     * @return User ID (already existing in the device).
      * 
      */
     private final String userId;
@@ -29,16 +29,16 @@ public final class UserAccessRightResponse {
     }
 
     /**
-     * Type of access to be allowed for the user.
+     * @return Type of access to be allowed for the user.
      * 
-    */
+     */
     public String accessType() {
         return this.accessType;
     }
     /**
-     * User ID (already existing in the device).
+     * @return User ID (already existing in the device).
      * 
-    */
+     */
     public String userId() {
         return this.userId;
     }

@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class DataTransferRegionalServiceResourceResponse {
     /**
-     * The location name.
+     * @return The location name.
      * 
      */
     private final String location;
     /**
-     * The regional service name.
+     * @return The regional service name.
      * 
      */
     private final String name;
     /**
-     * Describes the status of a service.
+     * @return Describes the status of a service.
      * 
      */
     private final String status;
@@ -36,23 +36,23 @@ public final class DataTransferRegionalServiceResourceResponse {
     }
 
     /**
-     * The location name.
+     * @return The location name.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The regional service name.
+     * @return The regional service name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Describes the status of a service.
+     * @return Describes the status of a service.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

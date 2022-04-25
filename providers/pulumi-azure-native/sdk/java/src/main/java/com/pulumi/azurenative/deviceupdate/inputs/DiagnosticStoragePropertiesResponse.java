@@ -25,6 +25,10 @@ public final class DiagnosticStoragePropertiesResponse extends com.pulumi.resour
     @Import(name="authenticationType", required=true)
     private String authenticationType;
 
+    /**
+     * @return Authentication Type
+     * 
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
@@ -36,6 +40,10 @@ public final class DiagnosticStoragePropertiesResponse extends com.pulumi.resour
     @Import(name="connectionString")
     private @Nullable String connectionString;
 
+    /**
+     * @return ConnectionString of the diagnostic storage account
+     * 
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -47,6 +55,10 @@ public final class DiagnosticStoragePropertiesResponse extends com.pulumi.resour
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return ResourceId of the diagnostic storage account
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -77,16 +89,34 @@ public final class DiagnosticStoragePropertiesResponse extends com.pulumi.resour
             $ = new DiagnosticStoragePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Authentication Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param connectionString ConnectionString of the diagnostic storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param resourceId ResourceId of the diagnostic storage account
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

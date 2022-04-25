@@ -24,6 +24,10 @@ public final class JobCollectionPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="quota")
     private @Nullable Output<JobCollectionQuotaArgs> quota;
 
+    /**
+     * @return Gets or sets the job collection quota.
+     * 
+     */
     public Optional<Output<JobCollectionQuotaArgs>> quota() {
         return Optional.ofNullable(this.quota);
     }
@@ -35,6 +39,10 @@ public final class JobCollectionPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Gets or sets the SKU.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -46,6 +54,10 @@ public final class JobCollectionPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="state")
     private @Nullable Output<JobCollectionState> state;
 
+    /**
+     * @return Gets or sets the state.
+     * 
+     */
     public Optional<Output<JobCollectionState>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -76,29 +88,65 @@ public final class JobCollectionPropertiesArgs extends com.pulumi.resources.Reso
             $ = new JobCollectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quota Gets or sets the job collection quota.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(@Nullable Output<JobCollectionQuotaArgs> quota) {
             $.quota = quota;
             return this;
         }
 
+        /**
+         * @param quota Gets or sets the job collection quota.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(JobCollectionQuotaArgs quota) {
             return quota(Output.of(quota));
         }
 
+        /**
+         * @param sku Gets or sets the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param state Gets or sets the state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<JobCollectionState> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state Gets or sets the state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(JobCollectionState state) {
             return state(Output.of(state));
         }

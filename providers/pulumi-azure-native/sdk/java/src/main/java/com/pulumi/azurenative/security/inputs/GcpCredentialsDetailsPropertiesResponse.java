@@ -25,6 +25,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="authProviderX509CertUrl", required=true)
     private String authProviderX509CertUrl;
 
+    /**
+     * @return Auth provider x509 certificate URL field of the API key (write only)
+     * 
+     */
     public String authProviderX509CertUrl() {
         return this.authProviderX509CertUrl;
     }
@@ -36,6 +40,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="authUri", required=true)
     private String authUri;
 
+    /**
+     * @return Auth URI field of the API key (write only)
+     * 
+     */
     public String authUri() {
         return this.authUri;
     }
@@ -47,6 +55,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="authenticationProvisioningState", required=true)
     private String authenticationProvisioningState;
 
+    /**
+     * @return State of the multi-cloud connector
+     * 
+     */
     public String authenticationProvisioningState() {
         return this.authenticationProvisioningState;
     }
@@ -59,6 +71,11 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="authenticationType", required=true)
     private String authenticationType;
 
+    /**
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * Expected value is &#39;gcpCredentials&#39;.
+     * 
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
@@ -70,6 +87,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="clientEmail", required=true)
     private String clientEmail;
 
+    /**
+     * @return Client email field of the API key (write only)
+     * 
+     */
     public String clientEmail() {
         return this.clientEmail;
     }
@@ -81,6 +102,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="clientId", required=true)
     private String clientId;
 
+    /**
+     * @return Client ID field of the API key (write only)
+     * 
+     */
     public String clientId() {
         return this.clientId;
     }
@@ -92,6 +117,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="clientX509CertUrl", required=true)
     private String clientX509CertUrl;
 
+    /**
+     * @return Client x509 certificate URL field of the API key (write only)
+     * 
+     */
     public String clientX509CertUrl() {
         return this.clientX509CertUrl;
     }
@@ -103,6 +132,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="grantedPermissions", required=true)
     private List<String> grantedPermissions;
 
+    /**
+     * @return The permissions detected in the cloud account.
+     * 
+     */
     public List<String> grantedPermissions() {
         return this.grantedPermissions;
     }
@@ -114,6 +147,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="organizationId", required=true)
     private String organizationId;
 
+    /**
+     * @return The organization ID of the GCP cloud account
+     * 
+     */
     public String organizationId() {
         return this.organizationId;
     }
@@ -125,6 +162,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="privateKey", required=true)
     private String privateKey;
 
+    /**
+     * @return Private key field of the API key (write only)
+     * 
+     */
     public String privateKey() {
         return this.privateKey;
     }
@@ -136,6 +177,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="privateKeyId", required=true)
     private String privateKeyId;
 
+    /**
+     * @return Private key ID field of the API key (write only)
+     * 
+     */
     public String privateKeyId() {
         return this.privateKeyId;
     }
@@ -147,6 +192,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="projectId", required=true)
     private String projectId;
 
+    /**
+     * @return Project ID field of the API key (write only)
+     * 
+     */
     public String projectId() {
         return this.projectId;
     }
@@ -158,6 +207,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="tokenUri", required=true)
     private String tokenUri;
 
+    /**
+     * @return Token URI field of the API key (write only)
+     * 
+     */
     public String tokenUri() {
         return this.tokenUri;
     }
@@ -169,6 +222,10 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type field of the API key (write only)
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -210,75 +267,166 @@ public final class GcpCredentialsDetailsPropertiesResponse extends com.pulumi.re
             $ = new GcpCredentialsDetailsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authProviderX509CertUrl Auth provider x509 certificate URL field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder authProviderX509CertUrl(String authProviderX509CertUrl) {
             $.authProviderX509CertUrl = authProviderX509CertUrl;
             return this;
         }
 
+        /**
+         * @param authUri Auth URI field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder authUri(String authUri) {
             $.authUri = authUri;
             return this;
         }
 
+        /**
+         * @param authenticationProvisioningState State of the multi-cloud connector
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationProvisioningState(String authenticationProvisioningState) {
             $.authenticationProvisioningState = authenticationProvisioningState;
             return this;
         }
 
+        /**
+         * @param authenticationType Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+         * Expected value is &#39;gcpCredentials&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param clientEmail Client email field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientEmail(String clientEmail) {
             $.clientEmail = clientEmail;
             return this;
         }
 
+        /**
+         * @param clientId Client ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientX509CertUrl Client x509 certificate URL field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientX509CertUrl(String clientX509CertUrl) {
             $.clientX509CertUrl = clientX509CertUrl;
             return this;
         }
 
+        /**
+         * @param grantedPermissions The permissions detected in the cloud account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantedPermissions(List<String> grantedPermissions) {
             $.grantedPermissions = grantedPermissions;
             return this;
         }
 
+        /**
+         * @param grantedPermissions The permissions detected in the cloud account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder grantedPermissions(String... grantedPermissions) {
             return grantedPermissions(List.of(grantedPermissions));
         }
 
+        /**
+         * @param organizationId The organization ID of the GCP cloud account
+         * 
+         * @return builder
+         * 
+         */
         public Builder organizationId(String organizationId) {
             $.organizationId = organizationId;
             return this;
         }
 
+        /**
+         * @param privateKey Private key field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKey(String privateKey) {
             $.privateKey = privateKey;
             return this;
         }
 
+        /**
+         * @param privateKeyId Private key ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateKeyId(String privateKeyId) {
             $.privateKeyId = privateKeyId;
             return this;
         }
 
+        /**
+         * @param projectId Project ID field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectId(String projectId) {
             $.projectId = projectId;
             return this;
         }
 
+        /**
+         * @param tokenUri Token URI field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenUri(String tokenUri) {
             $.tokenUri = tokenUri;
             return this;
         }
 
+        /**
+         * @param type Type field of the API key (write only)
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

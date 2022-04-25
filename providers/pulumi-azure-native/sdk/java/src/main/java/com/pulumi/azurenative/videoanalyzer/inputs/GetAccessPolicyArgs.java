@@ -19,6 +19,10 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accessPolicyName", required=true)
     private String accessPolicyName;
 
+    /**
+     * @return The name of the access policy to retrieve.
+     * 
+     */
     public String accessPolicyName() {
         return this.accessPolicyName;
     }
@@ -30,6 +34,10 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Azure Video Analyzer account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -41,6 +49,10 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetAccessPolicyArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAccessPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicyName The name of the access policy to retrieve.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicyName(String accessPolicyName) {
             $.accessPolicyName = accessPolicyName;
             return this;
         }
 
+        /**
+         * @param accountName The Azure Video Analyzer account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

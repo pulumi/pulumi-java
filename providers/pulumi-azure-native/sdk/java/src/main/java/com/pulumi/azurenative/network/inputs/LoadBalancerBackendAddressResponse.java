@@ -26,6 +26,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return IP Address belonging to the referenced virtual network.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -37,6 +41,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="loadBalancerFrontendIPConfiguration")
     private @Nullable SubResourceResponse loadBalancerFrontendIPConfiguration;
 
+    /**
+     * @return Reference to the frontend ip address configuration defined in regional loadbalancer.
+     * 
+     */
     public Optional<SubResourceResponse> loadBalancerFrontendIPConfiguration() {
         return Optional.ofNullable(this.loadBalancerFrontendIPConfiguration);
     }
@@ -48,6 +56,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the backend address.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="networkInterfaceIPConfiguration", required=true)
     private SubResourceResponse networkInterfaceIPConfiguration;
 
+    /**
+     * @return Reference to IP address defined in network interfaces.
+     * 
+     */
     public SubResourceResponse networkInterfaceIPConfiguration() {
         return this.networkInterfaceIPConfiguration;
     }
@@ -70,6 +86,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="subnet")
     private @Nullable SubResourceResponse subnet;
 
+    /**
+     * @return Reference to an existing subnet.
+     * 
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -81,6 +101,10 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
     @Import(name="virtualNetwork")
     private @Nullable SubResourceResponse virtualNetwork;
 
+    /**
+     * @return Reference to an existing virtual network.
+     * 
+     */
     public Optional<SubResourceResponse> virtualNetwork() {
         return Optional.ofNullable(this.virtualNetwork);
     }
@@ -114,31 +138,67 @@ public final class LoadBalancerBackendAddressResponse extends com.pulumi.resourc
             $ = new LoadBalancerBackendAddressResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddress IP Address belonging to the referenced virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param loadBalancerFrontendIPConfiguration Reference to the frontend ip address configuration defined in regional loadbalancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerFrontendIPConfiguration(@Nullable SubResourceResponse loadBalancerFrontendIPConfiguration) {
             $.loadBalancerFrontendIPConfiguration = loadBalancerFrontendIPConfiguration;
             return this;
         }
 
+        /**
+         * @param name Name of the backend address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param networkInterfaceIPConfiguration Reference to IP address defined in network interfaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceIPConfiguration(SubResourceResponse networkInterfaceIPConfiguration) {
             $.networkInterfaceIPConfiguration = networkInterfaceIPConfiguration;
             return this;
         }
 
+        /**
+         * @param subnet Reference to an existing subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable SubResourceResponse subnet) {
             $.subnet = subnet;
             return this;
         }
 
+        /**
+         * @param virtualNetwork Reference to an existing virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetwork(@Nullable SubResourceResponse virtualNetwork) {
             $.virtualNetwork = virtualNetwork;
             return this;

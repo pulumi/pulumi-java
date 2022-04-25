@@ -25,6 +25,10 @@ public final class HttpRouteMatchHeaderResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of header to match in request.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -36,6 +40,10 @@ public final class HttpRouteMatchHeaderResponse extends com.pulumi.resources.Inv
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return how to match header value
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -47,6 +55,10 @@ public final class HttpRouteMatchHeaderResponse extends com.pulumi.resources.Inv
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value of header to match in request.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -77,16 +89,34 @@ public final class HttpRouteMatchHeaderResponse extends com.pulumi.resources.Inv
             $ = new HttpRouteMatchHeaderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of header to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type how to match header value
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Value of header to match in request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

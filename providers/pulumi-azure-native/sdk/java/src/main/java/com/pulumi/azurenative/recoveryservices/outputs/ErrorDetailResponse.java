@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class ErrorDetailResponse {
     /**
-     * Error code.
+     * @return Error code.
      * 
      */
     private final String code;
     /**
-     * Error Message related to the Code.
+     * @return Error Message related to the Code.
      * 
      */
     private final String message;
     /**
-     * List of recommendation strings.
+     * @return List of recommendation strings.
      * 
      */
     private final List<String> recommendations;
@@ -37,23 +37,23 @@ public final class ErrorDetailResponse {
     }
 
     /**
-     * Error code.
+     * @return Error code.
      * 
-    */
+     */
     public String code() {
         return this.code;
     }
     /**
-     * Error Message related to the Code.
+     * @return Error Message related to the Code.
      * 
-    */
+     */
     public String message() {
         return this.message;
     }
     /**
-     * List of recommendation strings.
+     * @return List of recommendation strings.
      * 
-    */
+     */
     public List<String> recommendations() {
         return this.recommendations;
     }

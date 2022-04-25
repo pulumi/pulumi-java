@@ -29,6 +29,10 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -40,6 +44,10 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
     @Import(name="encryptionSettings")
     private @Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings;
 
+    /**
+     * @return A collection of encryption settings, one for each disk volume.
+     * 
+     */
     public Optional<Output<List<EncryptionSettingsElementArgs>>> encryptionSettings() {
         return Optional.ofNullable(this.encryptionSettings);
     }
@@ -51,6 +59,10 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
     @Import(name="encryptionSettingsVersion")
     private @Nullable Output<String> encryptionSettingsVersion;
 
+    /**
+     * @return Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
+     * 
+     */
     public Optional<Output<String>> encryptionSettingsVersion() {
         return Optional.ofNullable(this.encryptionSettingsVersion);
     }
@@ -81,33 +93,75 @@ public final class EncryptionSettingsCollectionArgs extends com.pulumi.resources
             $ = new EncryptionSettingsCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Set this flag to true and provide DiskEncryptionKey and optional KeyEncryptionKey to enable encryption. Set this flag to false and remove DiskEncryptionKey and KeyEncryptionKey to disable encryption. If EncryptionSettings is null in the request object, the existing settings remain unchanged.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param encryptionSettings A collection of encryption settings, one for each disk volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettings(@Nullable Output<List<EncryptionSettingsElementArgs>> encryptionSettings) {
             $.encryptionSettings = encryptionSettings;
             return this;
         }
 
+        /**
+         * @param encryptionSettings A collection of encryption settings, one for each disk volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettings(List<EncryptionSettingsElementArgs> encryptionSettings) {
             return encryptionSettings(Output.of(encryptionSettings));
         }
 
+        /**
+         * @param encryptionSettings A collection of encryption settings, one for each disk volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettings(EncryptionSettingsElementArgs... encryptionSettings) {
             return encryptionSettings(List.of(encryptionSettings));
         }
 
+        /**
+         * @param encryptionSettingsVersion Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettingsVersion(@Nullable Output<String> encryptionSettingsVersion) {
             $.encryptionSettingsVersion = encryptionSettingsVersion;
             return this;
         }
 
+        /**
+         * @param encryptionSettingsVersion Describes what type of encryption is used for the disks. Once this field is set, it cannot be overwritten. &#39;1.0&#39; corresponds to Azure Disk Encryption with AAD app.&#39;1.1&#39; corresponds to Azure Disk Encryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionSettingsVersion(String encryptionSettingsVersion) {
             return encryptionSettingsVersion(Output.of(encryptionSettingsVersion));
         }

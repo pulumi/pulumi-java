@@ -27,6 +27,10 @@ public final class ApplicableScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The identifier of the resource.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -38,6 +42,10 @@ public final class ApplicableScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="labVmsShutdown")
     private @Nullable ScheduleResponse labVmsShutdown;
 
+    /**
+     * @return The auto-shutdown schedule, if one has been set at the lab or lab resource level.
+     * 
+     */
     public Optional<ScheduleResponse> labVmsShutdown() {
         return Optional.ofNullable(this.labVmsShutdown);
     }
@@ -49,6 +57,10 @@ public final class ApplicableScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="labVmsStartup")
     private @Nullable ScheduleResponse labVmsStartup;
 
+    /**
+     * @return The auto-startup schedule, if one has been set at the lab or lab resource level.
+     * 
+     */
     public Optional<ScheduleResponse> labVmsStartup() {
         return Optional.ofNullable(this.labVmsStartup);
     }
@@ -60,6 +72,10 @@ public final class ApplicableScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -71,6 +87,10 @@ public final class ApplicableScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -82,6 +102,10 @@ public final class ApplicableScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -93,6 +117,10 @@ public final class ApplicableScheduleResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -127,36 +155,78 @@ public final class ApplicableScheduleResponse extends com.pulumi.resources.Invok
             $ = new ApplicableScheduleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The identifier of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param labVmsShutdown The auto-shutdown schedule, if one has been set at the lab or lab resource level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labVmsShutdown(@Nullable ScheduleResponse labVmsShutdown) {
             $.labVmsShutdown = labVmsShutdown;
             return this;
         }
 
+        /**
+         * @param labVmsStartup The auto-startup schedule, if one has been set at the lab or lab resource level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labVmsStartup(@Nullable ScheduleResponse labVmsStartup) {
             $.labVmsStartup = labVmsStartup;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -25,6 +25,10 @@ public final class ExternalSubnetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Gets or sets the identifier.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class ExternalSubnetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gets or sets the name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -65,11 +73,23 @@ public final class ExternalSubnetResponse extends com.pulumi.resources.InvokeArg
             $ = new ExternalSubnetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Gets or sets the identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

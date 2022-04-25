@@ -18,42 +18,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MariaDBLinkedServiceResponse {
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * @return An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
      */
     private final @Nullable Object connectionString;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * The Azure key vault secret reference of password in connection string.
+     * @return The Azure key vault secret reference of password in connection string.
      * 
      */
     private final @Nullable AzureKeyVaultSecretReferenceResponse pwd;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;MariaDB&#39;.
      * 
      */
@@ -80,59 +80,59 @@ public final class MariaDBLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * @return An ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
      * 
-    */
+     */
     public Optional<Object> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The Azure key vault secret reference of password in connection string.
+     * @return The Azure key vault secret reference of password in connection string.
      * 
-    */
+     */
     public Optional<AzureKeyVaultSecretReferenceResponse> pwd() {
         return Optional.ofNullable(this.pwd);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;MariaDB&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

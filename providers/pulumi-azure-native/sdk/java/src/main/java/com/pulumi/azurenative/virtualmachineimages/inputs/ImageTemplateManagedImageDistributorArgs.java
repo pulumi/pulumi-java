@@ -28,6 +28,10 @@ public final class ImageTemplateManagedImageDistributorArgs extends com.pulumi.r
     @Import(name="artifactTags")
     private @Nullable Output<Map<String,String>> artifactTags;
 
+    /**
+     * @return Tags that will be applied to the artifact once it has been created/updated by the distributor.
+     * 
+     */
     public Optional<Output<Map<String,String>>> artifactTags() {
         return Optional.ofNullable(this.artifactTags);
     }
@@ -39,6 +43,10 @@ public final class ImageTemplateManagedImageDistributorArgs extends com.pulumi.r
     @Import(name="imageId", required=true)
     private Output<String> imageId;
 
+    /**
+     * @return Resource Id of the Managed Disk Image
+     * 
+     */
     public Output<String> imageId() {
         return this.imageId;
     }
@@ -50,6 +58,10 @@ public final class ImageTemplateManagedImageDistributorArgs extends com.pulumi.r
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return Azure location for the image, should match if image already exists
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -61,6 +73,10 @@ public final class ImageTemplateManagedImageDistributorArgs extends com.pulumi.r
     @Import(name="runOutputName", required=true)
     private Output<String> runOutputName;
 
+    /**
+     * @return The name to be used for the associated RunOutput.
+     * 
+     */
     public Output<String> runOutputName() {
         return this.runOutputName;
     }
@@ -73,6 +89,11 @@ public final class ImageTemplateManagedImageDistributorArgs extends com.pulumi.r
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of distribution.
+     * Expected value is &#39;ManagedImage&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -105,47 +126,109 @@ public final class ImageTemplateManagedImageDistributorArgs extends com.pulumi.r
             $ = new ImageTemplateManagedImageDistributorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactTags Tags that will be applied to the artifact once it has been created/updated by the distributor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTags(@Nullable Output<Map<String,String>> artifactTags) {
             $.artifactTags = artifactTags;
             return this;
         }
 
+        /**
+         * @param artifactTags Tags that will be applied to the artifact once it has been created/updated by the distributor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactTags(Map<String,String> artifactTags) {
             return artifactTags(Output.of(artifactTags));
         }
 
+        /**
+         * @param imageId Resource Id of the Managed Disk Image
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(Output<String> imageId) {
             $.imageId = imageId;
             return this;
         }
 
+        /**
+         * @param imageId Resource Id of the Managed Disk Image
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(String imageId) {
             return imageId(Output.of(imageId));
         }
 
+        /**
+         * @param location Azure location for the image, should match if image already exists
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Azure location for the image, should match if image already exists
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param runOutputName The name to be used for the associated RunOutput.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOutputName(Output<String> runOutputName) {
             $.runOutputName = runOutputName;
             return this;
         }
 
+        /**
+         * @param runOutputName The name to be used for the associated RunOutput.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOutputName(String runOutputName) {
             return runOutputName(Output.of(runOutputName));
         }
 
+        /**
+         * @param type Type of distribution.
+         * Expected value is &#39;ManagedImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of distribution.
+         * Expected value is &#39;ManagedImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

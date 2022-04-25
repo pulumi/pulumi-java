@@ -27,6 +27,10 @@ public final class SolutionDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="assessmentCount")
     private @Nullable Integer assessmentCount;
 
+    /**
+     * @return Gets or sets the count of assessments reported by the solution.
+     * 
+     */
     public Optional<Integer> assessmentCount() {
         return Optional.ofNullable(this.assessmentCount);
     }
@@ -38,6 +42,10 @@ public final class SolutionDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="extendedDetails")
     private @Nullable Map<String,String> extendedDetails;
 
+    /**
+     * @return Gets or sets the extended details reported by the solution.
+     * 
+     */
     public Optional<Map<String,String>> extendedDetails() {
         return Optional.ofNullable(this.extendedDetails);
     }
@@ -49,6 +57,10 @@ public final class SolutionDetailsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupCount")
     private @Nullable Integer groupCount;
 
+    /**
+     * @return Gets or sets the count of groups reported by the solution.
+     * 
+     */
     public Optional<Integer> groupCount() {
         return Optional.ofNullable(this.groupCount);
     }
@@ -79,16 +91,34 @@ public final class SolutionDetailsResponse extends com.pulumi.resources.InvokeAr
             $ = new SolutionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessmentCount Gets or sets the count of assessments reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessmentCount(@Nullable Integer assessmentCount) {
             $.assessmentCount = assessmentCount;
             return this;
         }
 
+        /**
+         * @param extendedDetails Gets or sets the extended details reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedDetails(@Nullable Map<String,String> extendedDetails) {
             $.extendedDetails = extendedDetails;
             return this;
         }
 
+        /**
+         * @param groupCount Gets or sets the count of groups reported by the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupCount(@Nullable Integer groupCount) {
             $.groupCount = groupCount;
             return this;

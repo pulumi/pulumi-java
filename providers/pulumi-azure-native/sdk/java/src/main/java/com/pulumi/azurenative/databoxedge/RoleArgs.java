@@ -24,6 +24,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -35,6 +39,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,RoleTypes>> kind;
 
+    /**
+     * @return Role type.
+     * 
+     */
     public Output<Either<String,RoleTypes>> kind() {
         return this.kind;
     }
@@ -46,6 +54,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -57,6 +69,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -88,46 +104,106 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param kind Role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,RoleTypes>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,RoleTypes> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Role type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(RoleTypes kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

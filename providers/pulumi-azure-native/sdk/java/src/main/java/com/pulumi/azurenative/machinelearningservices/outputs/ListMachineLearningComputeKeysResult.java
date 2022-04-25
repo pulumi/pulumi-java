@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ListMachineLearningComputeKeysResult {
     /**
-     * The type of compute
+     * @return The type of compute
      * 
      */
     private final String computeType;
@@ -21,9 +21,9 @@ public final class ListMachineLearningComputeKeysResult {
     }
 
     /**
-     * The type of compute
+     * @return The type of compute
      * 
-    */
+     */
     public String computeType() {
         return this.computeType;
     }

@@ -26,6 +26,10 @@ public final class SubscriptionKeyParameterNamesContractArgs extends com.pulumi.
     @Import(name="header")
     private @Nullable Output<String> header;
 
+    /**
+     * @return Subscription key header name.
+     * 
+     */
     public Optional<Output<String>> header() {
         return Optional.ofNullable(this.header);
     }
@@ -37,6 +41,10 @@ public final class SubscriptionKeyParameterNamesContractArgs extends com.pulumi.
     @Import(name="query")
     private @Nullable Output<String> query;
 
+    /**
+     * @return Subscription key query string parameter name.
+     * 
+     */
     public Optional<Output<String>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -66,20 +74,44 @@ public final class SubscriptionKeyParameterNamesContractArgs extends com.pulumi.
             $ = new SubscriptionKeyParameterNamesContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param header Subscription key header name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(@Nullable Output<String> header) {
             $.header = header;
             return this;
         }
 
+        /**
+         * @param header Subscription key header name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder header(String header) {
             return header(Output.of(header));
         }
 
+        /**
+         * @param query Subscription key query string parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<String> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query Subscription key query string parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(String query) {
             return query(Output.of(query));
         }

@@ -26,6 +26,10 @@ public final class BatchRetrySettingsResponse extends com.pulumi.resources.Invok
     @Import(name="maxRetries")
     private @Nullable Integer maxRetries;
 
+    /**
+     * @return Maximum retry count for a mini-batch
+     * 
+     */
     public Optional<Integer> maxRetries() {
         return Optional.ofNullable(this.maxRetries);
     }
@@ -37,6 +41,10 @@ public final class BatchRetrySettingsResponse extends com.pulumi.resources.Invok
     @Import(name="timeout")
     private @Nullable String timeout;
 
+    /**
+     * @return Invocation timeout for a mini-batch, in ISO 8601 format.
+     * 
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -66,11 +74,23 @@ public final class BatchRetrySettingsResponse extends com.pulumi.resources.Invok
             $ = new BatchRetrySettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxRetries Maximum retry count for a mini-batch
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxRetries(@Nullable Integer maxRetries) {
             $.maxRetries = maxRetries;
             return this;
         }
 
+        /**
+         * @param timeout Invocation timeout for a mini-batch, in ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable String timeout) {
             $.timeout = timeout;
             return this;

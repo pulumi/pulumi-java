@@ -25,6 +25,10 @@ public final class PipelineRunSourcePropertiesArgs extends com.pulumi.resources.
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the source.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class PipelineRunSourcePropertiesArgs extends com.pulumi.resources.
     @Import(name="type")
     private @Nullable Output<Either<String,PipelineRunSourceType>> type;
 
+    /**
+     * @return The type of the source.
+     * 
+     */
     public Optional<Output<Either<String,PipelineRunSourceType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,28 +73,64 @@ public final class PipelineRunSourcePropertiesArgs extends com.pulumi.resources.
             $ = new PipelineRunSourcePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param type The type of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,PipelineRunSourceType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,PipelineRunSourceType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of the source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(PipelineRunSourceType type) {
             return type(Either.ofRight(type));
         }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WebServiceKeysResponse {
     /**
-     * The primary access key.
+     * @return The primary access key.
      * 
      */
     private final @Nullable String primary;
     /**
-     * The secondary access key.
+     * @return The secondary access key.
      * 
      */
     private final @Nullable String secondary;
@@ -31,16 +31,16 @@ public final class WebServiceKeysResponse {
     }
 
     /**
-     * The primary access key.
+     * @return The primary access key.
      * 
-    */
+     */
     public Optional<String> primary() {
         return Optional.ofNullable(this.primary);
     }
     /**
-     * The secondary access key.
+     * @return The secondary access key.
      * 
-    */
+     */
     public Optional<String> secondary() {
         return Optional.ofNullable(this.secondary);
     }

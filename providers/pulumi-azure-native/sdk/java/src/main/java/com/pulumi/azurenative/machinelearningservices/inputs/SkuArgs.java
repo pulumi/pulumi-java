@@ -26,6 +26,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the sku
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return Tier of the sku like Basic or Enterprise
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -66,20 +74,44 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the sku
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the sku
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tier Tier of the sku like Basic or Enterprise
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Tier of the sku like Basic or Enterprise
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }

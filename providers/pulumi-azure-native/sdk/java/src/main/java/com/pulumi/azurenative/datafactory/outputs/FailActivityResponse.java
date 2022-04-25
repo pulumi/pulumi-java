@@ -16,38 +16,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FailActivityResponse {
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * @return The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
     private final Object errorCode;
     /**
-     * The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * @return The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
      */
     private final Object message;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Fail&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -71,52 +71,52 @@ public final class FailActivityResponse {
     }
 
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * @return The error code that categorizes the error type of the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object errorCode() {
         return this.errorCode;
     }
     /**
-     * The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
+     * @return The error message that surfaced in the Fail activity. It can be dynamic content that&#39;s evaluated to a non empty/blank string at runtime. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object message() {
         return this.message;
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;Fail&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

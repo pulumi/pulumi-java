@@ -28,6 +28,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="consistencyMode", required=true)
     private String consistencyMode;
 
+    /**
+     * @return Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
+     * 
+     */
     public String consistencyMode() {
         return this.consistencyMode;
     }
@@ -39,6 +43,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="excludeDisks")
     private @Nullable List<ApiEntityReferenceResponse> excludeDisks;
 
+    /**
+     * @return List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+     * 
+     */
     public Optional<List<ApiEntityReferenceResponse>> excludeDisks() {
         return Optional.ofNullable(this.excludeDisks);
     }
@@ -50,6 +58,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -61,6 +73,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -72,6 +88,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Gets the provisioning state of the restore point.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -83,6 +103,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceMetadata", required=true)
     private RestorePointSourceMetadataResponse sourceMetadata;
 
+    /**
+     * @return Gets the details of the VM captured at the time of the restore point creation.
+     * 
+     */
     public RestorePointSourceMetadataResponse sourceMetadata() {
         return this.sourceMetadata;
     }
@@ -94,6 +118,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="timeCreated")
     private @Nullable String timeCreated;
 
+    /**
+     * @return Gets the creation time of the restore point.
+     * 
+     */
     public Optional<String> timeCreated() {
         return Optional.ofNullable(this.timeCreated);
     }
@@ -105,6 +133,10 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -140,45 +172,99 @@ public final class RestorePointResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RestorePointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consistencyMode Gets the consistency mode for the restore point. Please refer to https://aka.ms/RestorePoints for more details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consistencyMode(String consistencyMode) {
             $.consistencyMode = consistencyMode;
             return this;
         }
 
+        /**
+         * @param excludeDisks List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeDisks(@Nullable List<ApiEntityReferenceResponse> excludeDisks) {
             $.excludeDisks = excludeDisks;
             return this;
         }
 
+        /**
+         * @param excludeDisks List of disk resource ids that the customer wishes to exclude from the restore point. If no disks are specified, all disks will be included.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeDisks(ApiEntityReferenceResponse... excludeDisks) {
             return excludeDisks(List.of(excludeDisks));
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState Gets the provisioning state of the restore point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param sourceMetadata Gets the details of the VM captured at the time of the restore point creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceMetadata(RestorePointSourceMetadataResponse sourceMetadata) {
             $.sourceMetadata = sourceMetadata;
             return this;
         }
 
+        /**
+         * @param timeCreated Gets the creation time of the restore point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeCreated(@Nullable String timeCreated) {
             $.timeCreated = timeCreated;
             return this;
         }
 
+        /**
+         * @param type Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

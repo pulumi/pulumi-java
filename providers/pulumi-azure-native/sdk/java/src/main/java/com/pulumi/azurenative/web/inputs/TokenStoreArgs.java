@@ -29,6 +29,10 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="azureBlobStorage")
     private @Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage;
 
+    /**
+     * @return The configuration settings of the storage of the tokens if blob storage is used.
+     * 
+     */
     public Optional<Output<BlobStorageTokenStoreArgs>> azureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
@@ -41,6 +45,11 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     *  The default is &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -52,6 +61,10 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="fileSystem")
     private @Nullable Output<FileSystemTokenStoreArgs> fileSystem;
 
+    /**
+     * @return The configuration settings of the storage of the tokens if a file system is used.
+     * 
+     */
     public Optional<Output<FileSystemTokenStoreArgs>> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -64,6 +77,11 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tokenRefreshExtensionHours")
     private @Nullable Output<Double> tokenRefreshExtensionHours;
 
+    /**
+     * @return The number of hours after session token expiration that a session token can be used to
+     * call the token refresh API. The default is 72 hours.
+     * 
+     */
     public Optional<Output<Double>> tokenRefreshExtensionHours() {
         return Optional.ofNullable(this.tokenRefreshExtensionHours);
     }
@@ -95,38 +113,90 @@ public final class TokenStoreArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TokenStoreArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureBlobStorage The configuration settings of the storage of the tokens if blob storage is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorage(@Nullable Output<BlobStorageTokenStoreArgs> azureBlobStorage) {
             $.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
+        /**
+         * @param azureBlobStorage The configuration settings of the storage of the tokens if blob storage is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorage(BlobStorageTokenStoreArgs azureBlobStorage) {
             return azureBlobStorage(Output.of(azureBlobStorage));
         }
 
+        /**
+         * @param enabled &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         *  The default is &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled &lt;code&gt;true&lt;/code&gt; to durably store platform-specific security tokens that are obtained during login flows; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         *  The default is &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param fileSystem The configuration settings of the storage of the tokens if a file system is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable Output<FileSystemTokenStoreArgs> fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param fileSystem The configuration settings of the storage of the tokens if a file system is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(FileSystemTokenStoreArgs fileSystem) {
             return fileSystem(Output.of(fileSystem));
         }
 
+        /**
+         * @param tokenRefreshExtensionHours The number of hours after session token expiration that a session token can be used to
+         * call the token refresh API. The default is 72 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenRefreshExtensionHours(@Nullable Output<Double> tokenRefreshExtensionHours) {
             $.tokenRefreshExtensionHours = tokenRefreshExtensionHours;
             return this;
         }
 
+        /**
+         * @param tokenRefreshExtensionHours The number of hours after session token expiration that a session token can be used to
+         * call the token refresh API. The default is 72 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenRefreshExtensionHours(Double tokenRefreshExtensionHours) {
             return tokenRefreshExtensionHours(Output.of(tokenRefreshExtensionHours));
         }

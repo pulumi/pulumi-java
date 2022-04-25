@@ -24,6 +24,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity", required=true)
     private Integer capacity;
 
+    /**
+     * @return The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+     * 
+     */
     public Integer capacity() {
         return this.capacity;
     }
@@ -35,6 +39,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of this SKU.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,11 +72,23 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity of the sku. For Gen1 environments, this value can be changed to support scale out of environments after they have been created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name The name of this SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

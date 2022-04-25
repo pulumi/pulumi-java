@@ -25,6 +25,10 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
     @Import(name="default")
     private @Nullable String default_;
 
+    /**
+     * @return The default value for the parameter to be used if the pipeline does not specify a value.
+     * 
+     */
     public Optional<String> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -36,6 +40,10 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of the parameter.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -47,6 +55,10 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the parameter.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -58,6 +70,10 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the parameter.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -89,21 +105,45 @@ public final class ParameterDeclarationResponse extends com.pulumi.resources.Inv
             $ = new ParameterDeclarationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ The default value for the parameter to be used if the pipeline does not specify a value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable String default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param description Description of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param name Name of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

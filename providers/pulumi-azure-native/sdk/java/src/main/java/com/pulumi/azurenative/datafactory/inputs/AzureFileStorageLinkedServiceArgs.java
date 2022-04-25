@@ -35,6 +35,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="accountKey")
     private @Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey;
 
+    /**
+     * @return The Azure key vault secret reference of accountKey in connection string.
+     * 
+     */
     public Optional<Output<AzureKeyVaultSecretReferenceArgs>> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -46,6 +50,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +65,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -68,6 +80,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="connectionString")
     private @Nullable Output<Object> connectionString;
 
+    /**
+     * @return The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Optional<Output<Object>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -79,6 +95,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -90,6 +110,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -101,6 +125,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="fileShare")
     private @Nullable Output<Object> fileShare;
 
+    /**
+     * @return The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> fileShare() {
         return Optional.ofNullable(this.fileShare);
     }
@@ -112,6 +140,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="host")
     private @Nullable Output<Object> host;
 
+    /**
+     * @return Host name of the server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> host() {
         return Optional.ofNullable(this.host);
     }
@@ -123,6 +155,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -134,6 +170,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="password")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return Password to logon the server.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -145,6 +185,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="sasToken")
     private @Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken;
 
+    /**
+     * @return The Azure key vault secret reference of sasToken in sas uri.
+     * 
+     */
     public Optional<Output<AzureKeyVaultSecretReferenceArgs>> sasToken() {
         return Optional.ofNullable(this.sasToken);
     }
@@ -156,6 +200,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="sasUri")
     private @Nullable Output<Object> sasUri;
 
+    /**
+     * @return SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Optional<Output<Object>> sasUri() {
         return Optional.ofNullable(this.sasUri);
     }
@@ -167,6 +215,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="snapshot")
     private @Nullable Output<Object> snapshot;
 
+    /**
+     * @return The azure file share snapshot version. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> snapshot() {
         return Optional.ofNullable(this.snapshot);
     }
@@ -179,6 +231,11 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureFileStorage&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -190,6 +247,10 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
     @Import(name="userId")
     private @Nullable Output<Object> userId;
 
+    /**
+     * @return User ID to logon the server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -232,149 +293,349 @@ public final class AzureFileStorageLinkedServiceArgs extends com.pulumi.resource
             $ = new AzureFileStorageLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey The Azure key vault secret reference of accountKey in connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable Output<AzureKeyVaultSecretReferenceArgs> accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountKey The Azure key vault secret reference of accountKey in connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(AzureKeyVaultSecretReferenceArgs accountKey) {
             return accountKey(Output.of(accountKey));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param connectionString The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<Object> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString The connection string. It is mutually exclusive with sasUri property. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(Object connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param fileShare The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShare(@Nullable Output<Object> fileShare) {
             $.fileShare = fileShare;
             return this;
         }
 
+        /**
+         * @param fileShare The azure file share name. It is required when auth with accountKey/sasToken. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShare(Object fileShare) {
             return fileShare(Output.of(fileShare));
         }
 
+        /**
+         * @param host Host name of the server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable Output<Object> host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param host Host name of the server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(Object host) {
             return host(Output.of(host));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param password Password to logon the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to logon the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password Password to logon the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password to logon the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param sasToken The Azure key vault secret reference of sasToken in sas uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(@Nullable Output<AzureKeyVaultSecretReferenceArgs> sasToken) {
             $.sasToken = sasToken;
             return this;
         }
 
+        /**
+         * @param sasToken The Azure key vault secret reference of sasToken in sas uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasToken(AzureKeyVaultSecretReferenceArgs sasToken) {
             return sasToken(Output.of(sasToken));
         }
 
+        /**
+         * @param sasUri SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUri(@Nullable Output<Object> sasUri) {
             $.sasUri = sasUri;
             return this;
         }
 
+        /**
+         * @param sasUri SAS URI of the Azure File resource. It is mutually exclusive with connectionString property. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasUri(Object sasUri) {
             return sasUri(Output.of(sasUri));
         }
 
+        /**
+         * @param snapshot The azure file share snapshot version. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(@Nullable Output<Object> snapshot) {
             $.snapshot = snapshot;
             return this;
         }
 
+        /**
+         * @param snapshot The azure file share snapshot version. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshot(Object snapshot) {
             return snapshot(Output.of(snapshot));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureFileStorage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureFileStorage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userId User ID to logon the server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(@Nullable Output<Object> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId User ID to logon the server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(Object userId) {
             return userId(Output.of(userId));
         }

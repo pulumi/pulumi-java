@@ -21,6 +21,10 @@ public final class ControllerConnectionDetailsResponse extends com.pulumi.resour
     @Import(name="orchestratorSpecificConnectionDetails")
     private @Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails;
 
+    /**
+     * @return Base class for types that supply values used to connect to container orchestrators
+     * 
+     */
     public Optional<KubernetesConnectionDetailsResponse> orchestratorSpecificConnectionDetails() {
         return Optional.ofNullable(this.orchestratorSpecificConnectionDetails);
     }
@@ -49,6 +53,12 @@ public final class ControllerConnectionDetailsResponse extends com.pulumi.resour
             $ = new ControllerConnectionDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param orchestratorSpecificConnectionDetails Base class for types that supply values used to connect to container orchestrators
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorSpecificConnectionDetails(@Nullable KubernetesConnectionDetailsResponse orchestratorSpecificConnectionDetails) {
             $.orchestratorSpecificConnectionDetails = orchestratorSpecificConnectionDetails;
             return this;

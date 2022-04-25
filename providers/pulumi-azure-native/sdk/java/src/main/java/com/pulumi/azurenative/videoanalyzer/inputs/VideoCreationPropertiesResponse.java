@@ -25,6 +25,10 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Optional description provided by the user. Value can be up to 2048 characters long.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -36,6 +40,10 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
     @Import(name="retentionPeriod")
     private @Nullable String retentionPeriod;
 
+    /**
+     * @return Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. &#34;P1D&#34; equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
+     * 
+     */
     public Optional<String> retentionPeriod() {
         return Optional.ofNullable(this.retentionPeriod);
     }
@@ -47,6 +55,10 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
     @Import(name="segmentLength")
     private @Nullable String segmentLength;
 
+    /**
+     * @return Segment length indicates the length of individual content files (segments) which are persisted to storage. Smaller segments provide lower archive playback latency but generate larger volume of storage transactions. Larger segments reduce the amount of storage transactions while increasing the archive playback latency. Value must be specified in ISO8601 duration format (i.e. &#34;PT30S&#34; equals 30 seconds) and can vary between 30 seconds to 5 minutes, in 30 seconds increments. Changing this value after the initial call to create the video resource can lead to errors when uploading content to the archive. Default value is 30 seconds. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
+     * 
+     */
     public Optional<String> segmentLength() {
         return Optional.ofNullable(this.segmentLength);
     }
@@ -58,6 +70,10 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
     @Import(name="title")
     private @Nullable String title;
 
+    /**
+     * @return Optional title provided by the user. Value can be up to 256 characters long.
+     * 
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
@@ -89,21 +105,45 @@ public final class VideoCreationPropertiesResponse extends com.pulumi.resources.
             $ = new VideoCreationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Optional description provided by the user. Value can be up to 2048 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param retentionPeriod Video retention period indicates how long the video is kept in storage. Value must be specified in ISO8601 duration format (i.e. &#34;P1D&#34; equals 1 day) and can vary between 1 day to 10 years, in 1 day increments. When absent (null), all video content is retained indefinitely. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriod(@Nullable String retentionPeriod) {
             $.retentionPeriod = retentionPeriod;
             return this;
         }
 
+        /**
+         * @param segmentLength Segment length indicates the length of individual content files (segments) which are persisted to storage. Smaller segments provide lower archive playback latency but generate larger volume of storage transactions. Larger segments reduce the amount of storage transactions while increasing the archive playback latency. Value must be specified in ISO8601 duration format (i.e. &#34;PT30S&#34; equals 30 seconds) and can vary between 30 seconds to 5 minutes, in 30 seconds increments. Changing this value after the initial call to create the video resource can lead to errors when uploading content to the archive. Default value is 30 seconds. This property is only allowed for topologies where &#34;kind&#34; is set to &#34;live&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentLength(@Nullable String segmentLength) {
             $.segmentLength = segmentLength;
             return this;
         }
 
+        /**
+         * @param title Optional title provided by the user. Value can be up to 256 characters long.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable String title) {
             $.title = title;
             return this;

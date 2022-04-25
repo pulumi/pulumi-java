@@ -22,6 +22,10 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="evaluationInterval")
     private @Nullable Output<String> evaluationInterval;
 
+    /**
+     * @return If omitted, the default value is 15 minutes (PT15M).
+     * 
+     */
     public Optional<Output<String>> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
@@ -58,11 +62,23 @@ public final class AutoScaleSettingsArgs extends com.pulumi.resources.ResourceAr
             $ = new AutoScaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param evaluationInterval If omitted, the default value is 15 minutes (PT15M).
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationInterval(@Nullable Output<String> evaluationInterval) {
             $.evaluationInterval = evaluationInterval;
             return this;
         }
 
+        /**
+         * @param evaluationInterval If omitted, the default value is 15 minutes (PT15M).
+         * 
+         * @return builder
+         * 
+         */
         public Builder evaluationInterval(String evaluationInterval) {
             return evaluationInterval(Output.of(evaluationInterval));
         }

@@ -29,6 +29,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="allowedDiskLevelOperation")
     private @Nullable List<String> allowedDiskLevelOperation;
 
+    /**
+     * @return The disk level operations list.
+     * 
+     */
     public Optional<List<String>> allowedDiskLevelOperation() {
         return Optional.ofNullable(this.allowedDiskLevelOperation);
     }
@@ -40,6 +44,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="dataPendingAtSourceAgentInMB")
     private @Nullable Double dataPendingAtSourceAgentInMB;
 
+    /**
+     * @return The data pending at source virtual machine in MB.
+     * 
+     */
     public Optional<Double> dataPendingAtSourceAgentInMB() {
         return Optional.ofNullable(this.dataPendingAtSourceAgentInMB);
     }
@@ -51,6 +59,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="dataPendingInStagingStorageAccountInMB")
     private @Nullable Double dataPendingInStagingStorageAccountInMB;
 
+    /**
+     * @return The data pending for replication in MB at staging account.
+     * 
+     */
     public Optional<Double> dataPendingInStagingStorageAccountInMB() {
         return Optional.ofNullable(this.dataPendingInStagingStorageAccountInMB);
     }
@@ -62,6 +74,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="dekKeyVaultArmId")
     private @Nullable String dekKeyVaultArmId;
 
+    /**
+     * @return The KeyVault resource id for secret (BEK).
+     * 
+     */
     public Optional<String> dekKeyVaultArmId() {
         return Optional.ofNullable(this.dekKeyVaultArmId);
     }
@@ -73,6 +89,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="diskCapacityInBytes")
     private @Nullable Double diskCapacityInBytes;
 
+    /**
+     * @return The disk capacity in bytes.
+     * 
+     */
     public Optional<Double> diskCapacityInBytes() {
         return Optional.ofNullable(this.diskCapacityInBytes);
     }
@@ -84,6 +104,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="diskName")
     private @Nullable String diskName;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public Optional<String> diskName() {
         return Optional.ofNullable(this.diskName);
     }
@@ -95,6 +119,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="diskState")
     private @Nullable String diskState;
 
+    /**
+     * @return The disk state.
+     * 
+     */
     public Optional<String> diskState() {
         return Optional.ofNullable(this.diskState);
     }
@@ -106,6 +134,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="diskType")
     private @Nullable String diskType;
 
+    /**
+     * @return The type of disk.
+     * 
+     */
     public Optional<String> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -117,6 +149,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="diskUri")
     private @Nullable String diskUri;
 
+    /**
+     * @return The disk uri.
+     * 
+     */
     public Optional<String> diskUri() {
         return Optional.ofNullable(this.diskUri);
     }
@@ -128,6 +164,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="isDiskEncrypted")
     private @Nullable Boolean isDiskEncrypted;
 
+    /**
+     * @return A value indicating whether vm has encrypted os disk or not.
+     * 
+     */
     public Optional<Boolean> isDiskEncrypted() {
         return Optional.ofNullable(this.isDiskEncrypted);
     }
@@ -139,6 +179,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="isDiskKeyEncrypted")
     private @Nullable Boolean isDiskKeyEncrypted;
 
+    /**
+     * @return A value indicating whether disk key got encrypted or not.
+     * 
+     */
     public Optional<Boolean> isDiskKeyEncrypted() {
         return Optional.ofNullable(this.isDiskKeyEncrypted);
     }
@@ -150,6 +194,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="kekKeyVaultArmId")
     private @Nullable String kekKeyVaultArmId;
 
+    /**
+     * @return The KeyVault resource id for key (KEK).
+     * 
+     */
     public Optional<String> kekKeyVaultArmId() {
         return Optional.ofNullable(this.kekKeyVaultArmId);
     }
@@ -161,6 +209,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="keyIdentifier")
     private @Nullable String keyIdentifier;
 
+    /**
+     * @return The key URL / identifier (KEK).
+     * 
+     */
     public Optional<String> keyIdentifier() {
         return Optional.ofNullable(this.keyIdentifier);
     }
@@ -172,6 +224,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="monitoringJobType")
     private @Nullable String monitoringJobType;
 
+    /**
+     * @return The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
+     * 
+     */
     public Optional<String> monitoringJobType() {
         return Optional.ofNullable(this.monitoringJobType);
     }
@@ -183,6 +239,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="monitoringPercentageCompletion")
     private @Nullable Integer monitoringPercentageCompletion;
 
+    /**
+     * @return The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
+     * 
+     */
     public Optional<Integer> monitoringPercentageCompletion() {
         return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
@@ -194,6 +254,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="primaryDiskAzureStorageAccountId")
     private @Nullable String primaryDiskAzureStorageAccountId;
 
+    /**
+     * @return The primary disk storage account.
+     * 
+     */
     public Optional<String> primaryDiskAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryDiskAzureStorageAccountId);
     }
@@ -205,6 +269,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="primaryStagingAzureStorageAccountId")
     private @Nullable String primaryStagingAzureStorageAccountId;
 
+    /**
+     * @return The primary staging storage account.
+     * 
+     */
     public Optional<String> primaryStagingAzureStorageAccountId() {
         return Optional.ofNullable(this.primaryStagingAzureStorageAccountId);
     }
@@ -216,6 +284,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="recoveryAzureStorageAccountId")
     private @Nullable String recoveryAzureStorageAccountId;
 
+    /**
+     * @return The recovery disk storage account.
+     * 
+     */
     public Optional<String> recoveryAzureStorageAccountId() {
         return Optional.ofNullable(this.recoveryAzureStorageAccountId);
     }
@@ -227,6 +299,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="recoveryDiskUri")
     private @Nullable String recoveryDiskUri;
 
+    /**
+     * @return Recovery disk uri.
+     * 
+     */
     public Optional<String> recoveryDiskUri() {
         return Optional.ofNullable(this.recoveryDiskUri);
     }
@@ -238,6 +314,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="resyncRequired")
     private @Nullable Boolean resyncRequired;
 
+    /**
+     * @return A value indicating whether resync is required for this disk.
+     * 
+     */
     public Optional<Boolean> resyncRequired() {
         return Optional.ofNullable(this.resyncRequired);
     }
@@ -249,6 +329,10 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
     @Import(name="secretIdentifier")
     private @Nullable String secretIdentifier;
 
+    /**
+     * @return The secret URL / identifier (BEK).
+     * 
+     */
     public Optional<String> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }
@@ -297,110 +381,242 @@ public final class A2AProtectedDiskDetailsResponse extends com.pulumi.resources.
             $ = new A2AProtectedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedDiskLevelOperation The disk level operations list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDiskLevelOperation(@Nullable List<String> allowedDiskLevelOperation) {
             $.allowedDiskLevelOperation = allowedDiskLevelOperation;
             return this;
         }
 
+        /**
+         * @param allowedDiskLevelOperation The disk level operations list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedDiskLevelOperation(String... allowedDiskLevelOperation) {
             return allowedDiskLevelOperation(List.of(allowedDiskLevelOperation));
         }
 
+        /**
+         * @param dataPendingAtSourceAgentInMB The data pending at source virtual machine in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPendingAtSourceAgentInMB(@Nullable Double dataPendingAtSourceAgentInMB) {
             $.dataPendingAtSourceAgentInMB = dataPendingAtSourceAgentInMB;
             return this;
         }
 
+        /**
+         * @param dataPendingInStagingStorageAccountInMB The data pending for replication in MB at staging account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPendingInStagingStorageAccountInMB(@Nullable Double dataPendingInStagingStorageAccountInMB) {
             $.dataPendingInStagingStorageAccountInMB = dataPendingInStagingStorageAccountInMB;
             return this;
         }
 
+        /**
+         * @param dekKeyVaultArmId The KeyVault resource id for secret (BEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dekKeyVaultArmId(@Nullable String dekKeyVaultArmId) {
             $.dekKeyVaultArmId = dekKeyVaultArmId;
             return this;
         }
 
+        /**
+         * @param diskCapacityInBytes The disk capacity in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskCapacityInBytes(@Nullable Double diskCapacityInBytes) {
             $.diskCapacityInBytes = diskCapacityInBytes;
             return this;
         }
 
+        /**
+         * @param diskName The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskName(@Nullable String diskName) {
             $.diskName = diskName;
             return this;
         }
 
+        /**
+         * @param diskState The disk state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskState(@Nullable String diskState) {
             $.diskState = diskState;
             return this;
         }
 
+        /**
+         * @param diskType The type of disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable String diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskUri The disk uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskUri(@Nullable String diskUri) {
             $.diskUri = diskUri;
             return this;
         }
 
+        /**
+         * @param isDiskEncrypted A value indicating whether vm has encrypted os disk or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDiskEncrypted(@Nullable Boolean isDiskEncrypted) {
             $.isDiskEncrypted = isDiskEncrypted;
             return this;
         }
 
+        /**
+         * @param isDiskKeyEncrypted A value indicating whether disk key got encrypted or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDiskKeyEncrypted(@Nullable Boolean isDiskKeyEncrypted) {
             $.isDiskKeyEncrypted = isDiskKeyEncrypted;
             return this;
         }
 
+        /**
+         * @param kekKeyVaultArmId The KeyVault resource id for key (KEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekKeyVaultArmId(@Nullable String kekKeyVaultArmId) {
             $.kekKeyVaultArmId = kekKeyVaultArmId;
             return this;
         }
 
+        /**
+         * @param keyIdentifier The key URL / identifier (KEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(@Nullable String keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;
         }
 
+        /**
+         * @param monitoringJobType The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringJobType(@Nullable String monitoringJobType) {
             $.monitoringJobType = monitoringJobType;
             return this;
         }
 
+        /**
+         * @param monitoringPercentageCompletion The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
             $.monitoringPercentageCompletion = monitoringPercentageCompletion;
             return this;
         }
 
+        /**
+         * @param primaryDiskAzureStorageAccountId The primary disk storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryDiskAzureStorageAccountId(@Nullable String primaryDiskAzureStorageAccountId) {
             $.primaryDiskAzureStorageAccountId = primaryDiskAzureStorageAccountId;
             return this;
         }
 
+        /**
+         * @param primaryStagingAzureStorageAccountId The primary staging storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryStagingAzureStorageAccountId(@Nullable String primaryStagingAzureStorageAccountId) {
             $.primaryStagingAzureStorageAccountId = primaryStagingAzureStorageAccountId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureStorageAccountId The recovery disk storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureStorageAccountId(@Nullable String recoveryAzureStorageAccountId) {
             $.recoveryAzureStorageAccountId = recoveryAzureStorageAccountId;
             return this;
         }
 
+        /**
+         * @param recoveryDiskUri Recovery disk uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryDiskUri(@Nullable String recoveryDiskUri) {
             $.recoveryDiskUri = recoveryDiskUri;
             return this;
         }
 
+        /**
+         * @param resyncRequired A value indicating whether resync is required for this disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncRequired(@Nullable Boolean resyncRequired) {
             $.resyncRequired = resyncRequired;
             return this;
         }
 
+        /**
+         * @param secretIdentifier The secret URL / identifier (BEK).
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
             $.secretIdentifier = secretIdentifier;
             return this;

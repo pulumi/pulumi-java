@@ -25,6 +25,10 @@ public final class NonAzureQueryPropertiesResponse extends com.pulumi.resources.
     @Import(name="functionAlias")
     private @Nullable String functionAlias;
 
+    /**
+     * @return Log Analytics Saved Search name.
+     * 
+     */
     public Optional<String> functionAlias() {
         return Optional.ofNullable(this.functionAlias);
     }
@@ -36,6 +40,10 @@ public final class NonAzureQueryPropertiesResponse extends com.pulumi.resources.
     @Import(name="workspaceId")
     private @Nullable String workspaceId;
 
+    /**
+     * @return Workspace Id for Log Analytics in which the saved Search is resided.
+     * 
+     */
     public Optional<String> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -65,11 +73,23 @@ public final class NonAzureQueryPropertiesResponse extends com.pulumi.resources.
             $ = new NonAzureQueryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionAlias Log Analytics Saved Search name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAlias(@Nullable String functionAlias) {
             $.functionAlias = functionAlias;
             return this;
         }
 
+        /**
+         * @param workspaceId Workspace Id for Log Analytics in which the saved Search is resided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable String workspaceId) {
             $.workspaceId = workspaceId;
             return this;

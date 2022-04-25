@@ -19,6 +19,10 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
     @Import(name="managementGroupId", required=true)
     private String managementGroupId;
 
+    /**
+     * @return The management group id.
+     * 
+     */
     public String managementGroupId() {
         return this.managementGroupId;
     }
@@ -30,6 +34,10 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the diagnostic setting.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,11 +67,23 @@ public final class GetManagementGroupDiagnosticSettingArgs extends com.pulumi.re
             $ = new GetManagementGroupDiagnosticSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementGroupId The management group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupId(String managementGroupId) {
             $.managementGroupId = managementGroupId;
             return this;
         }
 
+        /**
+         * @param name The name of the diagnostic setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

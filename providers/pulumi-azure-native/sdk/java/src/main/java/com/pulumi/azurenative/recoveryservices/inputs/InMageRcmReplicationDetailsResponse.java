@@ -32,6 +32,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="agentUpgradeBlockingErrorDetails", required=true)
     private List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails;
 
+    /**
+     * @return The agent upgrade blocking error information.
+     * 
+     */
     public List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails() {
         return this.agentUpgradeBlockingErrorDetails;
     }
@@ -43,6 +47,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="agentUpgradeState", required=true)
     private String agentUpgradeState;
 
+    /**
+     * @return The agent auto upgrade state.
+     * 
+     */
     public String agentUpgradeState() {
         return this.agentUpgradeState;
     }
@@ -54,6 +62,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="allocatedMemoryInMB", required=true)
     private Double allocatedMemoryInMB;
 
+    /**
+     * @return The allocated memory in MB.
+     * 
+     */
     public Double allocatedMemoryInMB() {
         return this.allocatedMemoryInMB;
     }
@@ -65,6 +77,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="discoveryType", required=true)
     private String discoveryType;
 
+    /**
+     * @return The type of the discovered VM.
+     * 
+     */
     public String discoveryType() {
         return this.discoveryType;
     }
@@ -76,6 +92,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="fabricDiscoveryMachineId", required=true)
     private String fabricDiscoveryMachineId;
 
+    /**
+     * @return The ARM Id of the discovered VM.
+     * 
+     */
     public String fabricDiscoveryMachineId() {
         return this.fabricDiscoveryMachineId;
     }
@@ -87,6 +107,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="failoverRecoveryPointId", required=true)
     private String failoverRecoveryPointId;
 
+    /**
+     * @return The recovery point Id to which the VM was failed over.
+     * 
+     */
     public String failoverRecoveryPointId() {
         return this.failoverRecoveryPointId;
     }
@@ -98,6 +122,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="firmwareType", required=true)
     private String firmwareType;
 
+    /**
+     * @return The firmware type.
+     * 
+     */
     public String firmwareType() {
         return this.firmwareType;
     }
@@ -109,6 +137,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="initialReplicationProcessedBytes", required=true)
     private Double initialReplicationProcessedBytes;
 
+    /**
+     * @return The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
+     * 
+     */
     public Double initialReplicationProcessedBytes() {
         return this.initialReplicationProcessedBytes;
     }
@@ -120,6 +152,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="initialReplicationProgressPercentage", required=true)
     private Integer initialReplicationProgressPercentage;
 
+    /**
+     * @return The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
+     * 
+     */
     public Integer initialReplicationProgressPercentage() {
         return this.initialReplicationProgressPercentage;
     }
@@ -131,6 +167,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="initialReplicationTransferredBytes", required=true)
     private Double initialReplicationTransferredBytes;
 
+    /**
+     * @return The initial replication transferred bytes from source VM to azure for all selected disks on source VM.
+     * 
+     */
     public Double initialReplicationTransferredBytes() {
         return this.initialReplicationTransferredBytes;
     }
@@ -143,6 +183,11 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;InMageRcm&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -154,6 +199,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="internalIdentifier", required=true)
     private String internalIdentifier;
 
+    /**
+     * @return The virtual machine internal identifier.
+     * 
+     */
     public String internalIdentifier() {
         return this.internalIdentifier;
     }
@@ -165,6 +214,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="isLastUpgradeSuccessful", required=true)
     private String isLastUpgradeSuccessful;
 
+    /**
+     * @return A value indicating whether last agent upgrade was successful or not.
+     * 
+     */
     public String isLastUpgradeSuccessful() {
         return this.isLastUpgradeSuccessful;
     }
@@ -176,6 +229,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastAgentUpgradeErrorDetails", required=true)
     private List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails;
 
+    /**
+     * @return The last agent upgrade error information.
+     * 
+     */
     public List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails() {
         return this.lastAgentUpgradeErrorDetails;
     }
@@ -187,6 +244,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastAgentUpgradeFailedJobId", required=true)
     private String lastAgentUpgradeFailedJobId;
 
+    /**
+     * @return The last agent upgrade failed or cancelled job Id.
+     * 
+     */
     public String lastAgentUpgradeFailedJobId() {
         return this.lastAgentUpgradeFailedJobId;
     }
@@ -198,6 +259,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastAgentUpgradeType", required=true)
     private String lastAgentUpgradeType;
 
+    /**
+     * @return The last agent upgrade type.
+     * 
+     */
     public String lastAgentUpgradeType() {
         return this.lastAgentUpgradeType;
     }
@@ -209,6 +274,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastRecoveryPointId", required=true)
     private String lastRecoveryPointId;
 
+    /**
+     * @return The last recovery point Id.
+     * 
+     */
     public String lastRecoveryPointId() {
         return this.lastRecoveryPointId;
     }
@@ -220,6 +289,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastRecoveryPointReceived", required=true)
     private String lastRecoveryPointReceived;
 
+    /**
+     * @return The last recovery point received time.
+     * 
+     */
     public String lastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
     }
@@ -231,6 +304,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastRpoCalculatedTime", required=true)
     private String lastRpoCalculatedTime;
 
+    /**
+     * @return The last recovery point objective calculated time.
+     * 
+     */
     public String lastRpoCalculatedTime() {
         return this.lastRpoCalculatedTime;
     }
@@ -242,6 +319,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="lastRpoInSeconds", required=true)
     private Double lastRpoInSeconds;
 
+    /**
+     * @return The last recovery point objective value.
+     * 
+     */
     public Double lastRpoInSeconds() {
         return this.lastRpoInSeconds;
     }
@@ -253,6 +334,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="licenseType", required=true)
     private String licenseType;
 
+    /**
+     * @return License Type of the VM to be used.
+     * 
+     */
     public String licenseType() {
         return this.licenseType;
     }
@@ -264,6 +349,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="mobilityAgentDetails", required=true)
     private InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails;
 
+    /**
+     * @return The mobility agent information.
+     * 
+     */
     public InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails() {
         return this.mobilityAgentDetails;
     }
@@ -275,6 +364,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="multiVmGroupName", required=true)
     private String multiVmGroupName;
 
+    /**
+     * @return The multi VM group name.
+     * 
+     */
     public String multiVmGroupName() {
         return this.multiVmGroupName;
     }
@@ -286,6 +379,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="osType", required=true)
     private String osType;
 
+    /**
+     * @return The type of the OS on the VM.
+     * 
+     */
     public String osType() {
         return this.osType;
     }
@@ -297,6 +394,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="processServerId", required=true)
     private String processServerId;
 
+    /**
+     * @return The process server Id.
+     * 
+     */
     public String processServerId() {
         return this.processServerId;
     }
@@ -308,6 +409,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="processServerName", required=true)
     private String processServerName;
 
+    /**
+     * @return The process server name.
+     * 
+     */
     public String processServerName() {
         return this.processServerName;
     }
@@ -319,6 +424,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="processorCoreCount", required=true)
     private Integer processorCoreCount;
 
+    /**
+     * @return The processor core count.
+     * 
+     */
     public Integer processorCoreCount() {
         return this.processorCoreCount;
     }
@@ -330,6 +439,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="protectedDisks", required=true)
     private List<InMageRcmProtectedDiskDetailsResponse> protectedDisks;
 
+    /**
+     * @return The list of protected disks.
+     * 
+     */
     public List<InMageRcmProtectedDiskDetailsResponse> protectedDisks() {
         return this.protectedDisks;
     }
@@ -341,6 +454,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncProcessedBytes", required=true)
     private Double resyncProcessedBytes;
 
+    /**
+     * @return The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
+     * 
+     */
     public Double resyncProcessedBytes() {
         return this.resyncProcessedBytes;
     }
@@ -352,6 +469,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncProgressPercentage", required=true)
     private Integer resyncProgressPercentage;
 
+    /**
+     * @return The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
+     * 
+     */
     public Integer resyncProgressPercentage() {
         return this.resyncProgressPercentage;
     }
@@ -363,6 +484,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncRequired", required=true)
     private String resyncRequired;
 
+    /**
+     * @return A value indicating whether resync is required.
+     * 
+     */
     public String resyncRequired() {
         return this.resyncRequired;
     }
@@ -374,6 +499,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncState", required=true)
     private String resyncState;
 
+    /**
+     * @return The resync state.
+     * 
+     */
     public String resyncState() {
         return this.resyncState;
     }
@@ -385,6 +514,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="resyncTransferredBytes", required=true)
     private Double resyncTransferredBytes;
 
+    /**
+     * @return The resync transferred bytes from source VM to azure for all selected disks on source VM.
+     * 
+     */
     public Double resyncTransferredBytes() {
         return this.resyncTransferredBytes;
     }
@@ -396,6 +529,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="runAsAccountId", required=true)
     private String runAsAccountId;
 
+    /**
+     * @return The run-as account Id.
+     * 
+     */
     public String runAsAccountId() {
         return this.runAsAccountId;
     }
@@ -407,6 +544,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetAvailabilitySetId", required=true)
     private String targetAvailabilitySetId;
 
+    /**
+     * @return The target availability set Id.
+     * 
+     */
     public String targetAvailabilitySetId() {
         return this.targetAvailabilitySetId;
     }
@@ -418,6 +559,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetAvailabilityZone", required=true)
     private String targetAvailabilityZone;
 
+    /**
+     * @return The target availability zone.
+     * 
+     */
     public String targetAvailabilityZone() {
         return this.targetAvailabilityZone;
     }
@@ -429,6 +574,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetBootDiagnosticsStorageAccountId", required=true)
     private String targetBootDiagnosticsStorageAccountId;
 
+    /**
+     * @return The target boot diagnostics storage account ARM Id.
+     * 
+     */
     public String targetBootDiagnosticsStorageAccountId() {
         return this.targetBootDiagnosticsStorageAccountId;
     }
@@ -440,6 +589,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetGeneration", required=true)
     private String targetGeneration;
 
+    /**
+     * @return The target generation.
+     * 
+     */
     public String targetGeneration() {
         return this.targetGeneration;
     }
@@ -451,6 +604,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetNetworkId", required=true)
     private String targetNetworkId;
 
+    /**
+     * @return The target network Id.
+     * 
+     */
     public String targetNetworkId() {
         return this.targetNetworkId;
     }
@@ -462,6 +619,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetProximityPlacementGroupId", required=true)
     private String targetProximityPlacementGroupId;
 
+    /**
+     * @return The target proximity placement group Id.
+     * 
+     */
     public String targetProximityPlacementGroupId() {
         return this.targetProximityPlacementGroupId;
     }
@@ -473,6 +634,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetResourceGroupId", required=true)
     private String targetResourceGroupId;
 
+    /**
+     * @return The target resource group Id.
+     * 
+     */
     public String targetResourceGroupId() {
         return this.targetResourceGroupId;
     }
@@ -484,6 +649,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetVmName", required=true)
     private String targetVmName;
 
+    /**
+     * @return Target VM name.
+     * 
+     */
     public String targetVmName() {
         return this.targetVmName;
     }
@@ -495,6 +664,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="targetVmSize", required=true)
     private String targetVmSize;
 
+    /**
+     * @return The target VM size.
+     * 
+     */
     public String targetVmSize() {
         return this.targetVmSize;
     }
@@ -506,6 +679,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="testNetworkId", required=true)
     private String testNetworkId;
 
+    /**
+     * @return The test network Id.
+     * 
+     */
     public String testNetworkId() {
         return this.testNetworkId;
     }
@@ -517,6 +694,10 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
     @Import(name="vmNics", required=true)
     private List<InMageRcmNicDetailsResponse> vmNics;
 
+    /**
+     * @return The network details.
+     * 
+     */
     public List<InMageRcmNicDetailsResponse> vmNics() {
         return this.vmNics;
     }
@@ -589,243 +770,538 @@ public final class InMageRcmReplicationDetailsResponse extends com.pulumi.resour
             $ = new InMageRcmReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentUpgradeBlockingErrorDetails The agent upgrade blocking error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentUpgradeBlockingErrorDetails(List<InMageRcmAgentUpgradeBlockingErrorDetailsResponse> agentUpgradeBlockingErrorDetails) {
             $.agentUpgradeBlockingErrorDetails = agentUpgradeBlockingErrorDetails;
             return this;
         }
 
+        /**
+         * @param agentUpgradeBlockingErrorDetails The agent upgrade blocking error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentUpgradeBlockingErrorDetails(InMageRcmAgentUpgradeBlockingErrorDetailsResponse... agentUpgradeBlockingErrorDetails) {
             return agentUpgradeBlockingErrorDetails(List.of(agentUpgradeBlockingErrorDetails));
         }
 
+        /**
+         * @param agentUpgradeState The agent auto upgrade state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentUpgradeState(String agentUpgradeState) {
             $.agentUpgradeState = agentUpgradeState;
             return this;
         }
 
+        /**
+         * @param allocatedMemoryInMB The allocated memory in MB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocatedMemoryInMB(Double allocatedMemoryInMB) {
             $.allocatedMemoryInMB = allocatedMemoryInMB;
             return this;
         }
 
+        /**
+         * @param discoveryType The type of the discovered VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryType(String discoveryType) {
             $.discoveryType = discoveryType;
             return this;
         }
 
+        /**
+         * @param fabricDiscoveryMachineId The ARM Id of the discovered VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricDiscoveryMachineId(String fabricDiscoveryMachineId) {
             $.fabricDiscoveryMachineId = fabricDiscoveryMachineId;
             return this;
         }
 
+        /**
+         * @param failoverRecoveryPointId The recovery point Id to which the VM was failed over.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverRecoveryPointId(String failoverRecoveryPointId) {
             $.failoverRecoveryPointId = failoverRecoveryPointId;
             return this;
         }
 
+        /**
+         * @param firmwareType The firmware type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firmwareType(String firmwareType) {
             $.firmwareType = firmwareType;
             return this;
         }
 
+        /**
+         * @param initialReplicationProcessedBytes The initial replication processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationProcessedBytes(Double initialReplicationProcessedBytes) {
             $.initialReplicationProcessedBytes = initialReplicationProcessedBytes;
             return this;
         }
 
+        /**
+         * @param initialReplicationProgressPercentage The initial replication progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationProgressPercentage(Integer initialReplicationProgressPercentage) {
             $.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
             return this;
         }
 
+        /**
+         * @param initialReplicationTransferredBytes The initial replication transferred bytes from source VM to azure for all selected disks on source VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationTransferredBytes(Double initialReplicationTransferredBytes) {
             $.initialReplicationTransferredBytes = initialReplicationTransferredBytes;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;InMageRcm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param internalIdentifier The virtual machine internal identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalIdentifier(String internalIdentifier) {
             $.internalIdentifier = internalIdentifier;
             return this;
         }
 
+        /**
+         * @param isLastUpgradeSuccessful A value indicating whether last agent upgrade was successful or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isLastUpgradeSuccessful(String isLastUpgradeSuccessful) {
             $.isLastUpgradeSuccessful = isLastUpgradeSuccessful;
             return this;
         }
 
+        /**
+         * @param lastAgentUpgradeErrorDetails The last agent upgrade error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAgentUpgradeErrorDetails(List<InMageRcmLastAgentUpgradeErrorDetailsResponse> lastAgentUpgradeErrorDetails) {
             $.lastAgentUpgradeErrorDetails = lastAgentUpgradeErrorDetails;
             return this;
         }
 
+        /**
+         * @param lastAgentUpgradeErrorDetails The last agent upgrade error information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAgentUpgradeErrorDetails(InMageRcmLastAgentUpgradeErrorDetailsResponse... lastAgentUpgradeErrorDetails) {
             return lastAgentUpgradeErrorDetails(List.of(lastAgentUpgradeErrorDetails));
         }
 
+        /**
+         * @param lastAgentUpgradeFailedJobId The last agent upgrade failed or cancelled job Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAgentUpgradeFailedJobId(String lastAgentUpgradeFailedJobId) {
             $.lastAgentUpgradeFailedJobId = lastAgentUpgradeFailedJobId;
             return this;
         }
 
+        /**
+         * @param lastAgentUpgradeType The last agent upgrade type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastAgentUpgradeType(String lastAgentUpgradeType) {
             $.lastAgentUpgradeType = lastAgentUpgradeType;
             return this;
         }
 
+        /**
+         * @param lastRecoveryPointId The last recovery point Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecoveryPointId(String lastRecoveryPointId) {
             $.lastRecoveryPointId = lastRecoveryPointId;
             return this;
         }
 
+        /**
+         * @param lastRecoveryPointReceived The last recovery point received time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecoveryPointReceived(String lastRecoveryPointReceived) {
             $.lastRecoveryPointReceived = lastRecoveryPointReceived;
             return this;
         }
 
+        /**
+         * @param lastRpoCalculatedTime The last recovery point objective calculated time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRpoCalculatedTime(String lastRpoCalculatedTime) {
             $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
 
+        /**
+         * @param lastRpoInSeconds The last recovery point objective value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRpoInSeconds(Double lastRpoInSeconds) {
             $.lastRpoInSeconds = lastRpoInSeconds;
             return this;
         }
 
+        /**
+         * @param licenseType License Type of the VM to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param mobilityAgentDetails The mobility agent information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mobilityAgentDetails(InMageRcmMobilityAgentDetailsResponse mobilityAgentDetails) {
             $.mobilityAgentDetails = mobilityAgentDetails;
             return this;
         }
 
+        /**
+         * @param multiVmGroupName The multi VM group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(String multiVmGroupName) {
             $.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
+        /**
+         * @param osType The type of the OS on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param processServerId The process server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(String processServerId) {
             $.processServerId = processServerId;
             return this;
         }
 
+        /**
+         * @param processServerName The process server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerName(String processServerName) {
             $.processServerName = processServerName;
             return this;
         }
 
+        /**
+         * @param processorCoreCount The processor core count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processorCoreCount(Integer processorCoreCount) {
             $.processorCoreCount = processorCoreCount;
             return this;
         }
 
+        /**
+         * @param protectedDisks The list of protected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedDisks(List<InMageRcmProtectedDiskDetailsResponse> protectedDisks) {
             $.protectedDisks = protectedDisks;
             return this;
         }
 
+        /**
+         * @param protectedDisks The list of protected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedDisks(InMageRcmProtectedDiskDetailsResponse... protectedDisks) {
             return protectedDisks(List.of(protectedDisks));
         }
 
+        /**
+         * @param resyncProcessedBytes The resync processed bytes. This includes sum of total bytes transferred and matched bytes on all selected disks in source VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncProcessedBytes(Double resyncProcessedBytes) {
             $.resyncProcessedBytes = resyncProcessedBytes;
             return this;
         }
 
+        /**
+         * @param resyncProgressPercentage The resync progress percentage. This is calculated based on total bytes processed for all disks in the source VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncProgressPercentage(Integer resyncProgressPercentage) {
             $.resyncProgressPercentage = resyncProgressPercentage;
             return this;
         }
 
+        /**
+         * @param resyncRequired A value indicating whether resync is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncRequired(String resyncRequired) {
             $.resyncRequired = resyncRequired;
             return this;
         }
 
+        /**
+         * @param resyncState The resync state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncState(String resyncState) {
             $.resyncState = resyncState;
             return this;
         }
 
+        /**
+         * @param resyncTransferredBytes The resync transferred bytes from source VM to azure for all selected disks on source VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resyncTransferredBytes(Double resyncTransferredBytes) {
             $.resyncTransferredBytes = resyncTransferredBytes;
             return this;
         }
 
+        /**
+         * @param runAsAccountId The run-as account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccountId(String runAsAccountId) {
             $.runAsAccountId = runAsAccountId;
             return this;
         }
 
+        /**
+         * @param targetAvailabilitySetId The target availability set Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
             $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param targetAvailabilityZone The target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(String targetAvailabilityZone) {
             $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param targetBootDiagnosticsStorageAccountId The target boot diagnostics storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetBootDiagnosticsStorageAccountId(String targetBootDiagnosticsStorageAccountId) {
             $.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
 
+        /**
+         * @param targetGeneration The target generation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetGeneration(String targetGeneration) {
             $.targetGeneration = targetGeneration;
             return this;
         }
 
+        /**
+         * @param targetNetworkId The target network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNetworkId(String targetNetworkId) {
             $.targetNetworkId = targetNetworkId;
             return this;
         }
 
+        /**
+         * @param targetProximityPlacementGroupId The target proximity placement group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
             $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
+        /**
+         * @param targetResourceGroupId The target resource group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGroupId(String targetResourceGroupId) {
             $.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
 
+        /**
+         * @param targetVmName Target VM name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmName(String targetVmName) {
             $.targetVmName = targetVmName;
             return this;
         }
 
+        /**
+         * @param targetVmSize The target VM size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(String targetVmSize) {
             $.targetVmSize = targetVmSize;
             return this;
         }
 
+        /**
+         * @param testNetworkId The test network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testNetworkId(String testNetworkId) {
             $.testNetworkId = testNetworkId;
             return this;
         }
 
+        /**
+         * @param vmNics The network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(List<InMageRcmNicDetailsResponse> vmNics) {
             $.vmNics = vmNics;
             return this;
         }
 
+        /**
+         * @param vmNics The network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(InMageRcmNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }

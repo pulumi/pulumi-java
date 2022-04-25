@@ -27,6 +27,10 @@ public final class PoliciesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="quarantinePolicy")
     private @Nullable QuarantinePolicyResponse quarantinePolicy;
 
+    /**
+     * @return The quarantine policy for a container registry.
+     * 
+     */
     public Optional<QuarantinePolicyResponse> quarantinePolicy() {
         return Optional.ofNullable(this.quarantinePolicy);
     }
@@ -38,6 +42,10 @@ public final class PoliciesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retentionPolicy")
     private @Nullable RetentionPolicyResponse retentionPolicy;
 
+    /**
+     * @return The retention policy for a container registry.
+     * 
+     */
     public Optional<RetentionPolicyResponse> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -49,6 +57,10 @@ public final class PoliciesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="trustPolicy")
     private @Nullable TrustPolicyResponse trustPolicy;
 
+    /**
+     * @return The content trust policy for a container registry.
+     * 
+     */
     public Optional<TrustPolicyResponse> trustPolicy() {
         return Optional.ofNullable(this.trustPolicy);
     }
@@ -79,16 +91,34 @@ public final class PoliciesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new PoliciesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quarantinePolicy The quarantine policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quarantinePolicy(@Nullable QuarantinePolicyResponse quarantinePolicy) {
             $.quarantinePolicy = quarantinePolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy The retention policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable RetentionPolicyResponse retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param trustPolicy The content trust policy for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustPolicy(@Nullable TrustPolicyResponse trustPolicy) {
             $.trustPolicy = trustPolicy;
             return this;

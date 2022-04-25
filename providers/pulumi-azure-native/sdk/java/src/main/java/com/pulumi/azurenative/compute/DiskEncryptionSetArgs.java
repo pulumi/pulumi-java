@@ -28,6 +28,10 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="activeKey")
     private @Nullable Output<KeyForDiskEncryptionSetArgs> activeKey;
 
+    /**
+     * @return The key vault key which is currently used by this disk encryption set.
+     * 
+     */
     public Optional<Output<KeyForDiskEncryptionSetArgs>> activeKey() {
         return Optional.ofNullable(this.activeKey);
     }
@@ -39,6 +43,10 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="diskEncryptionSetName")
     private @Nullable Output<String> diskEncryptionSetName;
 
+    /**
+     * @return The name of the disk encryption set that is being created. The name can&#39;t be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+     * 
+     */
     public Optional<Output<String>> diskEncryptionSetName() {
         return Optional.ofNullable(this.diskEncryptionSetName);
     }
@@ -50,6 +58,10 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="encryptionType")
     private @Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType;
 
+    /**
+     * @return The type of key used to encrypt the data of the disk.
+     * 
+     */
     public Optional<Output<Either<String,DiskEncryptionSetType>>> encryptionType() {
         return Optional.ofNullable(this.encryptionType);
     }
@@ -61,6 +73,10 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="identity")
     private @Nullable Output<EncryptionSetIdentityArgs> identity;
 
+    /**
+     * @return The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
+     * 
+     */
     public Optional<Output<EncryptionSetIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -72,6 +88,10 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -83,6 +103,10 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -94,6 +118,10 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="rotationToLatestKeyVersionEnabled")
     private @Nullable Output<Boolean> rotationToLatestKeyVersionEnabled;
 
+    /**
+     * @return Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
+     * 
+     */
     public Optional<Output<Boolean>> rotationToLatestKeyVersionEnabled() {
         return Optional.ofNullable(this.rotationToLatestKeyVersionEnabled);
     }
@@ -105,6 +133,10 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -140,82 +172,190 @@ public final class DiskEncryptionSetArgs extends com.pulumi.resources.ResourceAr
             $ = new DiskEncryptionSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param activeKey The key vault key which is currently used by this disk encryption set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeKey(@Nullable Output<KeyForDiskEncryptionSetArgs> activeKey) {
             $.activeKey = activeKey;
             return this;
         }
 
+        /**
+         * @param activeKey The key vault key which is currently used by this disk encryption set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder activeKey(KeyForDiskEncryptionSetArgs activeKey) {
             return activeKey(Output.of(activeKey));
         }
 
+        /**
+         * @param diskEncryptionSetName The name of the disk encryption set that is being created. The name can&#39;t be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetName(@Nullable Output<String> diskEncryptionSetName) {
             $.diskEncryptionSetName = diskEncryptionSetName;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSetName The name of the disk encryption set that is being created. The name can&#39;t be changed after the disk encryption set is created. Supported characters for the name are a-z, A-Z, 0-9 and _. The maximum name length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetName(String diskEncryptionSetName) {
             return diskEncryptionSetName(Output.of(diskEncryptionSetName));
         }
 
+        /**
+         * @param encryptionType The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(@Nullable Output<Either<String,DiskEncryptionSetType>> encryptionType) {
             $.encryptionType = encryptionType;
             return this;
         }
 
+        /**
+         * @param encryptionType The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(Either<String,DiskEncryptionSetType> encryptionType) {
             return encryptionType(Output.of(encryptionType));
         }
 
+        /**
+         * @param encryptionType The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(String encryptionType) {
             return encryptionType(Either.ofLeft(encryptionType));
         }
 
+        /**
+         * @param encryptionType The type of key used to encrypt the data of the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionType(DiskEncryptionSetType encryptionType) {
             return encryptionType(Either.ofRight(encryptionType));
         }
 
+        /**
+         * @param identity The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<EncryptionSetIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The managed identity for the disk encryption set. It should be given permission on the key vault before it can be used to encrypt disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(EncryptionSetIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param rotationToLatestKeyVersionEnabled Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationToLatestKeyVersionEnabled(@Nullable Output<Boolean> rotationToLatestKeyVersionEnabled) {
             $.rotationToLatestKeyVersionEnabled = rotationToLatestKeyVersionEnabled;
             return this;
         }
 
+        /**
+         * @param rotationToLatestKeyVersionEnabled Set this flag to true to enable auto-updating of this disk encryption set to the latest key version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rotationToLatestKeyVersionEnabled(Boolean rotationToLatestKeyVersionEnabled) {
             return rotationToLatestKeyVersionEnabled(Output.of(rotationToLatestKeyVersionEnabled));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

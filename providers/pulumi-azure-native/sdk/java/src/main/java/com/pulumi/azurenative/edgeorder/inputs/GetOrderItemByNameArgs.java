@@ -21,6 +21,10 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return $expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
     @Import(name="orderItemName", required=true)
     private String orderItemName;
 
+    /**
+     * @return The name of the order item
+     * 
+     */
     public String orderItemName() {
         return this.orderItemName;
     }
@@ -43,6 +51,10 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetOrderItemByNameArgs extends com.pulumi.resources.InvokeArg
             $ = new GetOrderItemByNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand $expand is supported on device details, forward shipping details and reverse shipping details parameters. Each of these can be provided as a comma separated list. Device Details for order item provides details on the devices of the product, Forward and Reverse Shipping details provide forward and reverse shipping details respectively.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param orderItemName The name of the order item
+         * 
+         * @return builder
+         * 
+         */
         public Builder orderItemName(String orderItemName) {
             $.orderItemName = orderItemName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

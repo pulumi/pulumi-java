@@ -25,6 +25,10 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
     @Import(name="name")
     private @Nullable Output<Either<String,ManagedClusterSKUName>> name;
 
+    /**
+     * @return Name of a managed cluster SKU.
+     * 
+     */
     public Optional<Output<Either<String,ManagedClusterSKUName>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
     @Import(name="tier")
     private @Nullable Output<Either<String,ManagedClusterSKUTier>> tier;
 
+    /**
+     * @return Tier of a managed cluster SKU.
+     * 
+     */
     public Optional<Output<Either<String,ManagedClusterSKUTier>>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -65,36 +73,84 @@ public final class ManagedClusterSKUArgs extends com.pulumi.resources.ResourceAr
             $ = new ManagedClusterSKUArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of a managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,ManagedClusterSKUName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of a managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,ManagedClusterSKUName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Name of a managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Name of a managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(ManagedClusterSKUName name) {
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param tier Tier of a managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Either<String,ManagedClusterSKUTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Tier of a managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,ManagedClusterSKUTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Tier of a managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Tier of a managed cluster SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(ManagedClusterSKUTier tier) {
             return tier(Either.ofRight(tier));
         }

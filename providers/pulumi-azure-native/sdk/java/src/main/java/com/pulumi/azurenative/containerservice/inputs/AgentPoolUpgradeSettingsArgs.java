@@ -26,6 +26,10 @@ public final class AgentPoolUpgradeSettingsArgs extends com.pulumi.resources.Res
     @Import(name="maxSurge")
     private @Nullable Output<String> maxSurge;
 
+    /**
+     * @return Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
+     * 
+     */
     public Optional<Output<String>> maxSurge() {
         return Optional.ofNullable(this.maxSurge);
     }
@@ -54,11 +58,23 @@ public final class AgentPoolUpgradeSettingsArgs extends com.pulumi.resources.Res
             $ = new AgentPoolUpgradeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxSurge Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(@Nullable Output<String> maxSurge) {
             $.maxSurge = maxSurge;
             return this;
         }
 
+        /**
+         * @param maxSurge Count or percentage of additional nodes to be added during upgrade. If empty uses AKS default
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxSurge(String maxSurge) {
             return maxSurge(Output.of(maxSurge));
         }

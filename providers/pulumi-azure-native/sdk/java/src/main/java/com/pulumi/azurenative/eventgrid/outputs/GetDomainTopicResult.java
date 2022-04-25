@@ -11,27 +11,27 @@ import java.util.Objects;
 @CustomType
 public final class GetDomainTopicResult {
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
      */
     private final String name;
     /**
-     * Provisioning state of the domain topic.
+     * @return Provisioning state of the domain topic.
      * 
      */
     private final String provisioningState;
     /**
-     * The system metadata relating to Domain Topic resource.
+     * @return The system metadata relating to Domain Topic resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -51,37 +51,37 @@ public final class GetDomainTopicResult {
     }
 
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state of the domain topic.
+     * @return Provisioning state of the domain topic.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The system metadata relating to Domain Topic resource.
+     * @return The system metadata relating to Domain Topic resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

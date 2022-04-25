@@ -28,6 +28,10 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="assetName", required=true)
     private String assetName;
 
+    /**
+     * @return The name of the output Asset.
+     * 
+     */
     public String assetName() {
         return this.assetName;
     }
@@ -39,6 +43,10 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="endTime", required=true)
     private String endTime;
 
+    /**
+     * @return The UTC date and time at which this Job Output finished processing.
+     * 
+     */
     public String endTime() {
         return this.endTime;
     }
@@ -50,6 +58,10 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="error", required=true)
     private JobErrorResponse error;
 
+    /**
+     * @return If the JobOutput is in the Error state, it contains the details of the error.
+     * 
+     */
     public JobErrorResponse error() {
         return this.error;
     }
@@ -61,6 +73,10 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="label")
     private @Nullable String label;
 
+    /**
+     * @return A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of &#39;{presetName}_{outputIndex}&#39; will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
+     * 
+     */
     public Optional<String> label() {
         return Optional.ofNullable(this.label);
     }
@@ -73,6 +89,11 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.JobOutputAsset&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -84,6 +105,10 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="progress", required=true)
     private Integer progress;
 
+    /**
+     * @return If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
+     * 
+     */
     public Integer progress() {
         return this.progress;
     }
@@ -95,6 +120,10 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="startTime", required=true)
     private String startTime;
 
+    /**
+     * @return The UTC date and time at which this Job Output began processing.
+     * 
+     */
     public String startTime() {
         return this.startTime;
     }
@@ -106,6 +135,10 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Describes the state of the JobOutput.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -141,41 +174,90 @@ public final class JobOutputAssetResponse extends com.pulumi.resources.InvokeArg
             $ = new JobOutputAssetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetName The name of the output Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param endTime The UTC date and time at which this Job Output finished processing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param error If the JobOutput is in the Error state, it contains the details of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(JobErrorResponse error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param label A label that is assigned to a JobOutput in order to help uniquely identify it. This is useful when your Transform has more than one TransformOutput, whereby your Job has more than one JobOutput. In such cases, when you submit the Job, you will add two or more JobOutputs, in the same order as TransformOutputs in the Transform. Subsequently, when you retrieve the Job, either through events or on a GET request, you can use the label to easily identify the JobOutput. If a label is not provided, a default value of &#39;{presetName}_{outputIndex}&#39; will be used, where the preset name is the name of the preset in the corresponding TransformOutput and the output index is the relative index of the this JobOutput within the Job. Note that this index is the same as the relative index of the corresponding TransformOutput within its Transform.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable String label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JobOutputAsset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param progress If the JobOutput is in a Processing state, this contains the Job completion percentage. The value is an estimate and not intended to be used to predict Job completion times. To determine if the JobOutput is complete, use the State property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder progress(Integer progress) {
             $.progress = progress;
             return this;
         }
 
+        /**
+         * @param startTime The UTC date and time at which this Job Output began processing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param state Describes the state of the JobOutput.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

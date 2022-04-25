@@ -27,6 +27,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="container")
     private @Nullable Output<String> container;
 
+    /**
+     * @return The container in the storage account, only to be specified for WASB storage accounts.
+     * 
+     */
     public Optional<Output<String>> container() {
         return Optional.ofNullable(this.container);
     }
@@ -38,6 +42,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fileSystem")
     private @Nullable Output<String> fileSystem;
 
+    /**
+     * @return The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     public Optional<Output<String>> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -49,6 +57,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fileshare")
     private @Nullable Output<String> fileshare;
 
+    /**
+     * @return The file share name.
+     * 
+     */
     public Optional<Output<String>> fileshare() {
         return Optional.ofNullable(this.fileshare);
     }
@@ -60,6 +72,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isDefault")
     private @Nullable Output<Boolean> isDefault;
 
+    /**
+     * @return Whether or not the storage account is the default storage account.
+     * 
+     */
     public Optional<Output<Boolean>> isDefault() {
         return Optional.ofNullable(this.isDefault);
     }
@@ -71,6 +87,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return The storage account access key.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -82,6 +102,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="msiResourceId")
     private @Nullable Output<String> msiResourceId;
 
+    /**
+     * @return The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     public Optional<Output<String>> msiResourceId() {
         return Optional.ofNullable(this.msiResourceId);
     }
@@ -93,6 +117,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the storage account.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -104,6 +132,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -115,6 +147,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="saskey")
     private @Nullable Output<String> saskey;
 
+    /**
+     * @return The shared access signature key.
+     * 
+     */
     public Optional<Output<String>> saskey() {
         return Optional.ofNullable(this.saskey);
     }
@@ -151,83 +187,191 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container The container in the storage account, only to be specified for WASB storage accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(@Nullable Output<String> container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param container The container in the storage account, only to be specified for WASB storage accounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             return container(Output.of(container));
         }
 
+        /**
+         * @param fileSystem The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable Output<String> fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param fileSystem The filesystem, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(String fileSystem) {
             return fileSystem(Output.of(fileSystem));
         }
 
+        /**
+         * @param fileshare The file share name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileshare(@Nullable Output<String> fileshare) {
             $.fileshare = fileshare;
             return this;
         }
 
+        /**
+         * @param fileshare The file share name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileshare(String fileshare) {
             return fileshare(Output.of(fileshare));
         }
 
+        /**
+         * @param isDefault Whether or not the storage account is the default storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(@Nullable Output<Boolean> isDefault) {
             $.isDefault = isDefault;
             return this;
         }
 
+        /**
+         * @param isDefault Whether or not the storage account is the default storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isDefault(Boolean isDefault) {
             return isDefault(Output.of(isDefault));
         }
 
+        /**
+         * @param key The storage account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key The storage account access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param msiResourceId The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiResourceId(@Nullable Output<String> msiResourceId) {
             $.msiResourceId = msiResourceId;
             return this;
         }
 
+        /**
+         * @param msiResourceId The managed identity (MSI) that is allowed to access the storage account, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder msiResourceId(String msiResourceId) {
             return msiResourceId(Output.of(msiResourceId));
         }
 
+        /**
+         * @param name The name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceId The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The resource ID of storage account, only to be specified for Azure Data Lake Storage Gen 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }
 
+        /**
+         * @param saskey The shared access signature key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saskey(@Nullable Output<String> saskey) {
             $.saskey = saskey;
             return this;
         }
 
+        /**
+         * @param saskey The shared access signature key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder saskey(String saskey) {
             return saskey(Output.of(saskey));
         }

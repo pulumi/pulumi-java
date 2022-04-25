@@ -25,6 +25,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="addr")
     private @Nullable String addr;
 
+    /**
+     * @return The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
+     * 
+     */
     public Optional<String> addr() {
         return Optional.ofNullable(this.addr);
     }
@@ -36,6 +40,10 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="instanceID")
     private @Nullable String instanceID;
 
+    /**
+     * @return The running instance of an application. Changes after each restart.
+     * 
+     */
     public Optional<String> instanceID() {
         return Optional.ofNullable(this.instanceID);
     }
@@ -65,11 +73,23 @@ public final class SourceResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addr The IP or hostname and the port of the registry node that generated the event. Generally, this will be resolved by os.Hostname() along with the running port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addr(@Nullable String addr) {
             $.addr = addr;
             return this;
         }
 
+        /**
+         * @param instanceID The running instance of an application. Changes after each restart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceID(@Nullable String instanceID) {
             $.instanceID = instanceID;
             return this;

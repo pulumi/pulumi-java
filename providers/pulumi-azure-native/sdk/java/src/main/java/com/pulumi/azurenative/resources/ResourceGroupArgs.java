@@ -23,6 +23,10 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedBy")
     private @Nullable Output<String> managedBy;
 
+    /**
+     * @return The ID of the resource that manages this resource group.
+     * 
+     */
     public Optional<Output<String>> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
@@ -45,6 +53,10 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName")
     private @Nullable Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.
+     * 
+     */
     public Optional<Output<String>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
@@ -56,6 +68,10 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags attached to the resource group.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -87,38 +103,86 @@ public final class ResourceGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource group. It cannot be changed after the resource group has been created. It must be one of the supported Azure locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedBy The ID of the resource that manages this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(@Nullable Output<String> managedBy) {
             $.managedBy = managedBy;
             return this;
         }
 
+        /**
+         * @param managedBy The ID of the resource that manages this resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(String managedBy) {
             return managedBy(Output.of(managedBy));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(@Nullable Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to create or update. Can include alphanumeric, underscore, parentheses, hyphen, period (except at end), and Unicode characters that match the allowed characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags attached to the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags attached to the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

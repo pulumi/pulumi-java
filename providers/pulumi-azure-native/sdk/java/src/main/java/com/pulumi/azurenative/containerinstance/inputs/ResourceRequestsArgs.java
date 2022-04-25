@@ -27,6 +27,10 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="cpu", required=true)
     private Output<Double> cpu;
 
+    /**
+     * @return The CPU request of this container instance.
+     * 
+     */
     public Output<Double> cpu() {
         return this.cpu;
     }
@@ -38,6 +42,10 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="gpu")
     private @Nullable Output<GpuResourceArgs> gpu;
 
+    /**
+     * @return The GPU request of this container instance.
+     * 
+     */
     public Optional<Output<GpuResourceArgs>> gpu() {
         return Optional.ofNullable(this.gpu);
     }
@@ -49,6 +57,10 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
     @Import(name="memoryInGB", required=true)
     private Output<Double> memoryInGB;
 
+    /**
+     * @return The memory request in GB of this container instance.
+     * 
+     */
     public Output<Double> memoryInGB() {
         return this.memoryInGB;
     }
@@ -79,29 +91,65 @@ public final class ResourceRequestsArgs extends com.pulumi.resources.ResourceArg
             $ = new ResourceRequestsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu The CPU request of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu The CPU request of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param gpu The GPU request of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(@Nullable Output<GpuResourceArgs> gpu) {
             $.gpu = gpu;
             return this;
         }
 
+        /**
+         * @param gpu The GPU request of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpu(GpuResourceArgs gpu) {
             return gpu(Output.of(gpu));
         }
 
+        /**
+         * @param memoryInGB The memory request in GB of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Output<Double> memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;
         }
 
+        /**
+         * @param memoryInGB The memory request in GB of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Double memoryInGB) {
             return memoryInGB(Output.of(memoryInGB));
         }

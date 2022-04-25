@@ -19,6 +19,10 @@ public final class GetManagedNetworkArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="managedNetworkName", required=true)
     private String managedNetworkName;
 
+    /**
+     * @return The name of the Managed Network.
+     * 
+     */
     public String managedNetworkName() {
         return this.managedNetworkName;
     }
@@ -30,6 +34,10 @@ public final class GetManagedNetworkArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetManagedNetworkArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetManagedNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedNetworkName The name of the Managed Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkName(String managedNetworkName) {
             $.managedNetworkName = managedNetworkName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -24,6 +24,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Gets or sets the sku name. Required for account creation, optional for update.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -52,11 +56,23 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Gets or sets the sku name. Required for account creation, optional for update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the sku name. Required for account creation, optional for update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

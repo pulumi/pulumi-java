@@ -28,6 +28,10 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="incidentId")
     private @Nullable Output<String> incidentId;
 
+    /**
+     * @return Incident Id
+     * 
+     */
     public Optional<Output<String>> incidentId() {
         return Optional.ofNullable(this.incidentId);
     }
@@ -39,6 +43,10 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="relationName")
     private @Nullable Output<String> relationName;
 
+    /**
+     * @return Relation Name
+     * 
+     */
     public Optional<Output<String>> relationName() {
         return Optional.ofNullable(this.relationName);
     }
@@ -50,6 +58,10 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="severity")
     private @Nullable Output<Either<String,IncidentSeverity>> severity;
 
+    /**
+     * @return The severity of the incident
+     * 
+     */
     public Optional<Output<Either<String,IncidentSeverity>>> severity() {
         return Optional.ofNullable(this.severity);
     }
@@ -61,6 +73,10 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="title")
     private @Nullable Output<String> title;
 
+    /**
+     * @return The title of the incident
+     * 
+     */
     public Optional<Output<String>> title() {
         return Optional.ofNullable(this.title);
     }
@@ -92,46 +108,106 @@ public final class IncidentInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IncidentInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param incidentId Incident Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(@Nullable Output<String> incidentId) {
             $.incidentId = incidentId;
             return this;
         }
 
+        /**
+         * @param incidentId Incident Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder incidentId(String incidentId) {
             return incidentId(Output.of(incidentId));
         }
 
+        /**
+         * @param relationName Relation Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationName(@Nullable Output<String> relationName) {
             $.relationName = relationName;
             return this;
         }
 
+        /**
+         * @param relationName Relation Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationName(String relationName) {
             return relationName(Output.of(relationName));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(@Nullable Output<Either<String,IncidentSeverity>> severity) {
             $.severity = severity;
             return this;
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(Either<String,IncidentSeverity> severity) {
             return severity(Output.of(severity));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(String severity) {
             return severity(Either.ofLeft(severity));
         }
 
+        /**
+         * @param severity The severity of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder severity(IncidentSeverity severity) {
             return severity(Either.ofRight(severity));
         }
 
+        /**
+         * @param title The title of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(@Nullable Output<String> title) {
             $.title = title;
             return this;
         }
 
+        /**
+         * @param title The title of the incident
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             return title(Output.of(title));
         }

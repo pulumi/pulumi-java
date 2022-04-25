@@ -25,6 +25,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="adminUsername")
     private @Nullable String adminUsername;
 
+    /**
+     * @return Gets or sets administrator username.
+     * 
+     */
     public Optional<String> adminUsername() {
         return Optional.ofNullable(this.adminUsername);
     }
@@ -36,6 +40,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="computerName")
     private @Nullable String computerName;
 
+    /**
+     * @return Gets or sets computer name.
+     * 
+     */
     public Optional<String> computerName() {
         return Optional.ofNullable(this.computerName);
     }
@@ -47,6 +55,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osName", required=true)
     private String osName;
 
+    /**
+     * @return Gets or sets os name.
+     * 
+     */
     public String osName() {
         return this.osName;
     }
@@ -58,6 +70,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return Gets or sets the type of the os.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -69,6 +85,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="toolsRunningStatus", required=true)
     private String toolsRunningStatus;
 
+    /**
+     * @return Gets or sets the current running status of VMware Tools running in the guest operating system.
+     * 
+     */
     public String toolsRunningStatus() {
         return this.toolsRunningStatus;
     }
@@ -80,6 +100,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="toolsVersion", required=true)
     private String toolsVersion;
 
+    /**
+     * @return Gets or sets the current version of VMware Tools.
+     * 
+     */
     public String toolsVersion() {
         return this.toolsVersion;
     }
@@ -91,6 +115,10 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="toolsVersionStatus", required=true)
     private String toolsVersionStatus;
 
+    /**
+     * @return Gets or sets the current version status of VMware Tools installed in the guest operating system.
+     * 
+     */
     public String toolsVersionStatus() {
         return this.toolsVersionStatus;
     }
@@ -125,36 +153,78 @@ public final class OsProfileResponse extends com.pulumi.resources.InvokeArgs {
             $ = new OsProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminUsername Gets or sets administrator username.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUsername(@Nullable String adminUsername) {
             $.adminUsername = adminUsername;
             return this;
         }
 
+        /**
+         * @param computerName Gets or sets computer name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computerName(@Nullable String computerName) {
             $.computerName = computerName;
             return this;
         }
 
+        /**
+         * @param osName Gets or sets os name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osName(String osName) {
             $.osName = osName;
             return this;
         }
 
+        /**
+         * @param osType Gets or sets the type of the os.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param toolsRunningStatus Gets or sets the current running status of VMware Tools running in the guest operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolsRunningStatus(String toolsRunningStatus) {
             $.toolsRunningStatus = toolsRunningStatus;
             return this;
         }
 
+        /**
+         * @param toolsVersion Gets or sets the current version of VMware Tools.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolsVersion(String toolsVersion) {
             $.toolsVersion = toolsVersion;
             return this;
         }
 
+        /**
+         * @param toolsVersionStatus Gets or sets the current version status of VMware Tools installed in the guest operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toolsVersionStatus(String toolsVersionStatus) {
             $.toolsVersionStatus = toolsVersionStatus;
             return this;

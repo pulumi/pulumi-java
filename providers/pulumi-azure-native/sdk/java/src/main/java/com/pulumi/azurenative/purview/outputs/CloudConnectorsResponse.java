@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class CloudConnectorsResponse {
     /**
-     * AWS external identifier.
+     * @return AWS external identifier.
      * Configured in AWS to allow use of the role arn used for scanning
      * 
      */
@@ -22,10 +22,10 @@ public final class CloudConnectorsResponse {
     }
 
     /**
-     * AWS external identifier.
+     * @return AWS external identifier.
      * Configured in AWS to allow use of the role arn used for scanning
      * 
-    */
+     */
     public String awsExternalId() {
         return this.awsExternalId;
     }

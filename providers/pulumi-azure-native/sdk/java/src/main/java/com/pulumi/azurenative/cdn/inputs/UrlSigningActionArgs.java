@@ -27,6 +27,11 @@ public final class UrlSigningActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the action for the delivery rule.
+     * Expected value is &#39;UrlSigning&#39;.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +43,10 @@ public final class UrlSigningActionArgs extends com.pulumi.resources.ResourceArg
     @Import(name="parameters", required=true)
     private Output<UrlSigningActionParametersArgs> parameters;
 
+    /**
+     * @return Defines the parameters for the action.
+     * 
+     */
     public Output<UrlSigningActionParametersArgs> parameters() {
         return this.parameters;
     }
@@ -67,20 +76,46 @@ public final class UrlSigningActionArgs extends com.pulumi.resources.ResourceArg
             $ = new UrlSigningActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;UrlSigning&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the action for the delivery rule.
+         * Expected value is &#39;UrlSigning&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<UrlSigningActionParametersArgs> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Defines the parameters for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(UrlSigningActionParametersArgs parameters) {
             return parameters(Output.of(parameters));
         }

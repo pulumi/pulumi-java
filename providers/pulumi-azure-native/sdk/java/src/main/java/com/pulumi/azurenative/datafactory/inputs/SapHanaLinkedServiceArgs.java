@@ -36,6 +36,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -47,6 +51,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="authenticationType")
     private @Nullable Output<Either<String,SapHanaAuthenticationType>> authenticationType;
 
+    /**
+     * @return The authentication type to be used to connect to the SAP HANA server.
+     * 
+     */
     public Optional<Output<Either<String,SapHanaAuthenticationType>>> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -58,6 +66,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -69,6 +81,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="connectionString")
     private @Nullable Output<Object> connectionString;
 
+    /**
+     * @return SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+     * 
+     */
     public Optional<Output<Object>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -80,6 +96,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -91,6 +111,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -102,6 +126,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -113,6 +141,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="password")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password;
 
+    /**
+     * @return Password to access the SAP HANA server.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -124,6 +156,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="server")
     private @Nullable Output<Object> server;
 
+    /**
+     * @return Host name of the SAP HANA server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> server() {
         return Optional.ofNullable(this.server);
     }
@@ -136,6 +172,11 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;SapHana&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -147,6 +188,10 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
     @Import(name="userName")
     private @Nullable Output<Object> userName;
 
+    /**
+     * @return Username to access the SAP HANA server. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -185,121 +230,285 @@ public final class SapHanaLinkedServiceArgs extends com.pulumi.resources.Resourc
             $ = new SapHanaLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the SAP HANA server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable Output<Either<String,SapHanaAuthenticationType>> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the SAP HANA server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Either<String,SapHanaAuthenticationType> authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the SAP HANA server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Either.ofLeft(authenticationType));
         }
 
+        /**
+         * @param authenticationType The authentication type to be used to connect to the SAP HANA server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(SapHanaAuthenticationType authenticationType) {
             return authenticationType(Either.ofRight(authenticationType));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param connectionString SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<Object> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString SAP HANA ODBC connection string. Type: string, SecureString or AzureKeyVaultSecretReference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(Object connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param password Password to access the SAP HANA server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Password to access the SAP HANA server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param password Password to access the SAP HANA server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceArgs password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password Password to access the SAP HANA server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringArgs password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param server Host name of the SAP HANA server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(@Nullable Output<Object> server) {
             $.server = server;
             return this;
         }
 
+        /**
+         * @param server Host name of the SAP HANA server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder server(Object server) {
             return server(Output.of(server));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;SapHana&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;SapHana&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param userName Username to access the SAP HANA server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<Object> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName Username to access the SAP HANA server. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(Object userName) {
             return userName(Output.of(userName));
         }

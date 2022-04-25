@@ -15,42 +15,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetJobScheduleResult {
     /**
-     * Gets the id of the resource.
+     * @return Gets the id of the resource.
      * 
      */
     private final String id;
     /**
-     * Gets or sets the id of job schedule.
+     * @return Gets or sets the id of job schedule.
      * 
      */
     private final @Nullable String jobScheduleId;
     /**
-     * Gets the name of the variable.
+     * @return Gets the name of the variable.
      * 
      */
     private final String name;
     /**
-     * Gets or sets the parameters of the job schedule.
+     * @return Gets or sets the parameters of the job schedule.
      * 
      */
     private final @Nullable Map<String,String> parameters;
     /**
-     * Gets or sets the hybrid worker group that the scheduled job should run on.
+     * @return Gets or sets the hybrid worker group that the scheduled job should run on.
      * 
      */
     private final @Nullable String runOn;
     /**
-     * Gets or sets the runbook.
+     * @return Gets or sets the runbook.
      * 
      */
     private final @Nullable RunbookAssociationPropertyResponse runbook;
     /**
-     * Gets or sets the schedule.
+     * @return Gets or sets the schedule.
      * 
      */
     private final @Nullable ScheduleAssociationPropertyResponse schedule;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -76,58 +76,58 @@ public final class GetJobScheduleResult {
     }
 
     /**
-     * Gets the id of the resource.
+     * @return Gets the id of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets the id of job schedule.
+     * @return Gets or sets the id of job schedule.
      * 
-    */
+     */
     public Optional<String> jobScheduleId() {
         return Optional.ofNullable(this.jobScheduleId);
     }
     /**
-     * Gets the name of the variable.
+     * @return Gets the name of the variable.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets the parameters of the job schedule.
+     * @return Gets or sets the parameters of the job schedule.
      * 
-    */
+     */
     public Map<String,String> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Gets or sets the hybrid worker group that the scheduled job should run on.
+     * @return Gets or sets the hybrid worker group that the scheduled job should run on.
      * 
-    */
+     */
     public Optional<String> runOn() {
         return Optional.ofNullable(this.runOn);
     }
     /**
-     * Gets or sets the runbook.
+     * @return Gets or sets the runbook.
      * 
-    */
+     */
     public Optional<RunbookAssociationPropertyResponse> runbook() {
         return Optional.ofNullable(this.runbook);
     }
     /**
-     * Gets or sets the schedule.
+     * @return Gets or sets the schedule.
      * 
-    */
+     */
     public Optional<ScheduleAssociationPropertyResponse> schedule() {
         return Optional.ofNullable(this.schedule);
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -14,47 +14,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVirtualHubIpConfigurationResult {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the Ip Configuration.
+     * @return Name of the Ip Configuration.
      * 
      */
     private final @Nullable String name;
     /**
-     * The private IP address of the IP configuration.
+     * @return The private IP address of the IP configuration.
      * 
      */
     private final @Nullable String privateIPAddress;
     /**
-     * The private IP address allocation method.
+     * @return The private IP address allocation method.
      * 
      */
     private final @Nullable String privateIPAllocationMethod;
     /**
-     * The provisioning state of the IP configuration resource.
+     * @return The provisioning state of the IP configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The reference to the public IP resource.
+     * @return The reference to the public IP resource.
      * 
      */
     private final @Nullable PublicIPAddressResponse publicIPAddress;
     /**
-     * The reference to the subnet resource.
+     * @return The reference to the subnet resource.
      * 
      */
     private final @Nullable SubnetResponse subnet;
     /**
-     * Ipconfiguration type.
+     * @return Ipconfiguration type.
      * 
      */
     private final String type;
@@ -82,65 +82,65 @@ public final class GetVirtualHubIpConfigurationResult {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the Ip Configuration.
+     * @return Name of the Ip Configuration.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The private IP address of the IP configuration.
+     * @return The private IP address of the IP configuration.
      * 
-    */
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
-     * The private IP address allocation method.
+     * @return The private IP address allocation method.
      * 
-    */
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
-     * The provisioning state of the IP configuration resource.
+     * @return The provisioning state of the IP configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The reference to the public IP resource.
+     * @return The reference to the public IP resource.
      * 
-    */
+     */
     public Optional<PublicIPAddressResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
-     * The reference to the subnet resource.
+     * @return The reference to the subnet resource.
      * 
-    */
+     */
     public Optional<SubnetResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Ipconfiguration type.
+     * @return Ipconfiguration type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -15,27 +15,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServiceCorsConfigurationInfoResponse {
     /**
-     * If credentials are allowed via CORS.
+     * @return If credentials are allowed via CORS.
      * 
      */
     private final @Nullable Boolean allowCredentials;
     /**
-     * The headers to be allowed via CORS.
+     * @return The headers to be allowed via CORS.
      * 
      */
     private final @Nullable List<String> headers;
     /**
-     * The max age to be allowed via CORS.
+     * @return The max age to be allowed via CORS.
      * 
      */
     private final @Nullable Double maxAge;
     /**
-     * The methods to be allowed via CORS.
+     * @return The methods to be allowed via CORS.
      * 
      */
     private final @Nullable List<String> methods;
     /**
-     * The origins to be allowed via CORS.
+     * @return The origins to be allowed via CORS.
      * 
      */
     private final @Nullable List<String> origins;
@@ -55,37 +55,37 @@ public final class ServiceCorsConfigurationInfoResponse {
     }
 
     /**
-     * If credentials are allowed via CORS.
+     * @return If credentials are allowed via CORS.
      * 
-    */
+     */
     public Optional<Boolean> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
     /**
-     * The headers to be allowed via CORS.
+     * @return The headers to be allowed via CORS.
      * 
-    */
+     */
     public List<String> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
-     * The max age to be allowed via CORS.
+     * @return The max age to be allowed via CORS.
      * 
-    */
+     */
     public Optional<Double> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
     /**
-     * The methods to be allowed via CORS.
+     * @return The methods to be allowed via CORS.
      * 
-    */
+     */
     public List<String> methods() {
         return this.methods == null ? List.of() : this.methods;
     }
     /**
-     * The origins to be allowed via CORS.
+     * @return The origins to be allowed via CORS.
      * 
-    */
+     */
     public List<String> origins() {
         return this.origins == null ? List.of() : this.origins;
     }

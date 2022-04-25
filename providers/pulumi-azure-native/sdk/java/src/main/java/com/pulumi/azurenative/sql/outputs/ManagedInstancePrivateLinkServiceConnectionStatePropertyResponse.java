@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyResponse {
     /**
-     * The private link service connection description.
+     * @return The private link service connection description.
      * 
      */
     private final String actionsRequired;
     /**
-     * The private link service connection description.
+     * @return The private link service connection description.
      * 
      */
     private final String description;
     /**
-     * The private link service connection status.
+     * @return The private link service connection status.
      * 
      */
     private final String status;
@@ -36,23 +36,23 @@ public final class ManagedInstancePrivateLinkServiceConnectionStatePropertyRespo
     }
 
     /**
-     * The private link service connection description.
+     * @return The private link service connection description.
      * 
-    */
+     */
     public String actionsRequired() {
         return this.actionsRequired;
     }
     /**
-     * The private link service connection description.
+     * @return The private link service connection description.
      * 
-    */
+     */
     public String description() {
         return this.description;
     }
     /**
-     * The private link service connection status.
+     * @return The private link service connection status.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

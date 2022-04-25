@@ -22,6 +22,10 @@ public final class AutoscaleSettingsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="maxThroughput")
     private @Nullable Output<Integer> maxThroughput;
 
+    /**
+     * @return Represents maximum throughput, the resource can scale up to.
+     * 
+     */
     public Optional<Output<Integer>> maxThroughput() {
         return Optional.ofNullable(this.maxThroughput);
     }
@@ -50,11 +54,23 @@ public final class AutoscaleSettingsArgs extends com.pulumi.resources.ResourceAr
             $ = new AutoscaleSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxThroughput Represents maximum throughput, the resource can scale up to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxThroughput(@Nullable Output<Integer> maxThroughput) {
             $.maxThroughput = maxThroughput;
             return this;
         }
 
+        /**
+         * @param maxThroughput Represents maximum throughput, the resource can scale up to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxThroughput(Integer maxThroughput) {
             return maxThroughput(Output.of(maxThroughput));
         }

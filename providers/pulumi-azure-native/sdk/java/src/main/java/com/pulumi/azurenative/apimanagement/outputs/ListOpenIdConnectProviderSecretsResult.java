@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ListOpenIdConnectProviderSecretsResult {
     /**
-     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * @return Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
      * 
      */
     private final @Nullable String clientSecret;
@@ -23,9 +23,9 @@ public final class ListOpenIdConnectProviderSecretsResult {
     }
 
     /**
-     * Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
+     * @return Client or app secret used in IdentityProviders, Aad, OpenID or OAuth.
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }

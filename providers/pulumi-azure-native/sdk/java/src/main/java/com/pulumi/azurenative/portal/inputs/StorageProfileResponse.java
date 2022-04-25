@@ -26,6 +26,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="diskSizeInGB")
     private @Nullable Integer diskSizeInGB;
 
+    /**
+     * @return Size of file share
+     * 
+     */
     public Optional<Integer> diskSizeInGB() {
         return Optional.ofNullable(this.diskSizeInGB);
     }
@@ -37,6 +41,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileShareName")
     private @Nullable String fileShareName;
 
+    /**
+     * @return Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+     * 
+     */
     public Optional<String> fileShareName() {
         return Optional.ofNullable(this.fileShareName);
     }
@@ -48,6 +56,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageAccountResourceId")
     private @Nullable String storageAccountResourceId;
 
+    /**
+     * @return Full resource ID of storage account.
+     * 
+     */
     public Optional<String> storageAccountResourceId() {
         return Optional.ofNullable(this.storageAccountResourceId);
     }
@@ -78,16 +90,34 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeInGB Size of file share
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeInGB(@Nullable Integer diskSizeInGB) {
             $.diskSizeInGB = diskSizeInGB;
             return this;
         }
 
+        /**
+         * @param fileShareName Name of the mounted file share. 63 characters or less, lowercase alphabet, numbers, and -
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileShareName(@Nullable String fileShareName) {
             $.fileShareName = fileShareName;
             return this;
         }
 
+        /**
+         * @param storageAccountResourceId Full resource ID of storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountResourceId(@Nullable String storageAccountResourceId) {
             $.storageAccountResourceId = storageAccountResourceId;
             return this;

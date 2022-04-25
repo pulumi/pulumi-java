@@ -25,6 +25,10 @@ public final class FlowEndpointsConfigurationResponse extends com.pulumi.resourc
     @Import(name="connector")
     private @Nullable FlowEndpointsResponse connector;
 
+    /**
+     * @return The connector endpoints.
+     * 
+     */
     public Optional<FlowEndpointsResponse> connector() {
         return Optional.ofNullable(this.connector);
     }
@@ -36,6 +40,10 @@ public final class FlowEndpointsConfigurationResponse extends com.pulumi.resourc
     @Import(name="workflow")
     private @Nullable FlowEndpointsResponse workflow;
 
+    /**
+     * @return The workflow endpoints.
+     * 
+     */
     public Optional<FlowEndpointsResponse> workflow() {
         return Optional.ofNullable(this.workflow);
     }
@@ -65,11 +73,23 @@ public final class FlowEndpointsConfigurationResponse extends com.pulumi.resourc
             $ = new FlowEndpointsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connector The connector endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connector(@Nullable FlowEndpointsResponse connector) {
             $.connector = connector;
             return this;
         }
 
+        /**
+         * @param workflow The workflow endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workflow(@Nullable FlowEndpointsResponse workflow) {
             $.workflow = workflow;
             return this;

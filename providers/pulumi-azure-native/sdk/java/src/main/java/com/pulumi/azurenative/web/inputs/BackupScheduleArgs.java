@@ -30,6 +30,10 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frequencyInterval", required=true)
     private Output<Integer> frequencyInterval;
 
+    /**
+     * @return How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
+     * 
+     */
     public Output<Integer> frequencyInterval() {
         return this.frequencyInterval;
     }
@@ -41,6 +45,10 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="frequencyUnit", required=true)
     private Output<FrequencyUnit> frequencyUnit;
 
+    /**
+     * @return The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
+     * 
+     */
     public Output<FrequencyUnit> frequencyUnit() {
         return this.frequencyUnit;
     }
@@ -52,6 +60,10 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keepAtLeastOneBackup", required=true)
     private Output<Boolean> keepAtLeastOneBackup;
 
+    /**
+     * @return True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
+     * 
+     */
     public Output<Boolean> keepAtLeastOneBackup() {
         return this.keepAtLeastOneBackup;
     }
@@ -63,6 +75,10 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="retentionPeriodInDays", required=true)
     private Output<Integer> retentionPeriodInDays;
 
+    /**
+     * @return After how many days backups should be deleted.
+     * 
+     */
     public Output<Integer> retentionPeriodInDays() {
         return this.retentionPeriodInDays;
     }
@@ -74,6 +90,10 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="startTime")
     private @Nullable Output<String> startTime;
 
+    /**
+     * @return When the schedule should start working.
+     * 
+     */
     public Optional<Output<String>> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -106,47 +126,107 @@ public final class BackupScheduleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new BackupScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param frequencyInterval How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyInterval(Output<Integer> frequencyInterval) {
             $.frequencyInterval = frequencyInterval;
             return this;
         }
 
+        /**
+         * @param frequencyInterval How often the backup should be executed (e.g. for weekly backup, this should be set to 7 and FrequencyUnit should be set to Day)
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyInterval(Integer frequencyInterval) {
             return frequencyInterval(Output.of(frequencyInterval));
         }
 
+        /**
+         * @param frequencyUnit The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyUnit(Output<FrequencyUnit> frequencyUnit) {
             $.frequencyUnit = frequencyUnit;
             return this;
         }
 
+        /**
+         * @param frequencyUnit The unit of time for how often the backup should be executed (e.g. for weekly backup, this should be set to Day and FrequencyInterval should be set to 7)
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequencyUnit(FrequencyUnit frequencyUnit) {
             return frequencyUnit(Output.of(frequencyUnit));
         }
 
+        /**
+         * @param keepAtLeastOneBackup True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepAtLeastOneBackup(Output<Boolean> keepAtLeastOneBackup) {
             $.keepAtLeastOneBackup = keepAtLeastOneBackup;
             return this;
         }
 
+        /**
+         * @param keepAtLeastOneBackup True if the retention policy should always keep at least one backup in the storage account, regardless how old it is; false otherwise.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keepAtLeastOneBackup(Boolean keepAtLeastOneBackup) {
             return keepAtLeastOneBackup(Output.of(keepAtLeastOneBackup));
         }
 
+        /**
+         * @param retentionPeriodInDays After how many days backups should be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriodInDays(Output<Integer> retentionPeriodInDays) {
             $.retentionPeriodInDays = retentionPeriodInDays;
             return this;
         }
 
+        /**
+         * @param retentionPeriodInDays After how many days backups should be deleted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPeriodInDays(Integer retentionPeriodInDays) {
             return retentionPeriodInDays(Output.of(retentionPeriodInDays));
         }
 
+        /**
+         * @param startTime When the schedule should start working.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime When the schedule should start working.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

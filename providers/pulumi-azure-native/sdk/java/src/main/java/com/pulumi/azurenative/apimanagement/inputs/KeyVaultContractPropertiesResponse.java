@@ -26,6 +26,10 @@ public final class KeyVaultContractPropertiesResponse extends com.pulumi.resourc
     @Import(name="identityClientId")
     private @Nullable String identityClientId;
 
+    /**
+     * @return SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+     * 
+     */
     public Optional<String> identityClientId() {
         return Optional.ofNullable(this.identityClientId);
     }
@@ -37,6 +41,10 @@ public final class KeyVaultContractPropertiesResponse extends com.pulumi.resourc
     @Import(name="lastStatus")
     private @Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus;
 
+    /**
+     * @return Last time sync and refresh status of secret from key vault.
+     * 
+     */
     public Optional<KeyVaultLastAccessStatusContractPropertiesResponse> lastStatus() {
         return Optional.ofNullable(this.lastStatus);
     }
@@ -48,6 +56,10 @@ public final class KeyVaultContractPropertiesResponse extends com.pulumi.resourc
     @Import(name="secretIdentifier")
     private @Nullable String secretIdentifier;
 
+    /**
+     * @return Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+     * 
+     */
     public Optional<String> secretIdentifier() {
         return Optional.ofNullable(this.secretIdentifier);
     }
@@ -78,16 +90,34 @@ public final class KeyVaultContractPropertiesResponse extends com.pulumi.resourc
             $ = new KeyVaultContractPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identityClientId SystemAssignedIdentity or UserAssignedIdentity Client Id which will be used to access key vault secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identityClientId(@Nullable String identityClientId) {
             $.identityClientId = identityClientId;
             return this;
         }
 
+        /**
+         * @param lastStatus Last time sync and refresh status of secret from key vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastStatus(@Nullable KeyVaultLastAccessStatusContractPropertiesResponse lastStatus) {
             $.lastStatus = lastStatus;
             return this;
         }
 
+        /**
+         * @param secretIdentifier Key vault secret identifier for fetching secret. Providing a versioned secret will prevent auto-refresh. This requires Api Management service to be configured with aka.ms/apimmsi
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretIdentifier(@Nullable String secretIdentifier) {
             $.secretIdentifier = secretIdentifier;
             return this;

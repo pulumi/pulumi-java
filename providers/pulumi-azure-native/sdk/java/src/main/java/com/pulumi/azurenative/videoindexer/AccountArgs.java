@@ -25,6 +25,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountId")
     private @Nullable Output<String> accountId;
 
+    /**
+     * @return The account&#39;s data-plane ID
+     * 
+     */
     public Optional<Output<String>> accountId() {
         return Optional.ofNullable(this.accountId);
     }
@@ -36,6 +40,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName")
     private @Nullable Output<String> accountName;
 
+    /**
+     * @return The name of the Azure Video Analyzer for Media account.
+     * 
+     */
     public Optional<Output<String>> accountName() {
         return Optional.ofNullable(this.accountName);
     }
@@ -47,6 +55,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ManagedServiceIdentityArgs> identity;
 
+    /**
+     * @return Managed service identity (system assigned and/or user assigned identities)
+     * 
+     */
     public Optional<Output<ManagedServiceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -58,6 +70,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -69,6 +85,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="mediaServices")
     private @Nullable Output<MediaServicesForPutRequestArgs> mediaServices;
 
+    /**
+     * @return The media services details
+     * 
+     */
     public Optional<Output<MediaServicesForPutRequestArgs>> mediaServices() {
         return Optional.ofNullable(this.mediaServices);
     }
@@ -80,6 +100,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -125,65 +153,149 @@ public final class AccountArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountId The account&#39;s data-plane ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(@Nullable Output<String> accountId) {
             $.accountId = accountId;
             return this;
         }
 
+        /**
+         * @param accountId The account&#39;s data-plane ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountId(String accountId) {
             return accountId(Output.of(accountId));
         }
 
+        /**
+         * @param accountName The name of the Azure Video Analyzer for Media account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(@Nullable Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the Azure Video Analyzer for Media account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param identity Managed service identity (system assigned and/or user assigned identities)
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ManagedServiceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Managed service identity (system assigned and/or user assigned identities)
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedServiceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param mediaServices The media services details
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaServices(@Nullable Output<MediaServicesForPutRequestArgs> mediaServices) {
             $.mediaServices = mediaServices;
             return this;
         }
 
+        /**
+         * @param mediaServices The media services details
+         * 
+         * @return builder
+         * 
+         */
         public Builder mediaServices(MediaServicesForPutRequestArgs mediaServices) {
             return mediaServices(Output.of(mediaServices));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

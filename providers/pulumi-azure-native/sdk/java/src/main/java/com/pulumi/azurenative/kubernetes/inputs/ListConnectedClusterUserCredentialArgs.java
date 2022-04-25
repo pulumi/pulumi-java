@@ -22,6 +22,10 @@ public final class ListConnectedClusterUserCredentialArgs extends com.pulumi.res
     @Import(name="authenticationMethod", required=true)
     private Either<String,AuthenticationMethod> authenticationMethod;
 
+    /**
+     * @return The mode of client authentication.
+     * 
+     */
     public Either<String,AuthenticationMethod> authenticationMethod() {
         return this.authenticationMethod;
     }
@@ -33,6 +37,10 @@ public final class ListConnectedClusterUserCredentialArgs extends com.pulumi.res
     @Import(name="clientProxy", required=true)
     private Boolean clientProxy;
 
+    /**
+     * @return Boolean value to indicate whether the request is for client side proxy or not
+     * 
+     */
     public Boolean clientProxy() {
         return this.clientProxy;
     }
@@ -44,6 +52,10 @@ public final class ListConnectedClusterUserCredentialArgs extends com.pulumi.res
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the Kubernetes cluster on which get is called.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -55,6 +67,10 @@ public final class ListConnectedClusterUserCredentialArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -86,29 +102,65 @@ public final class ListConnectedClusterUserCredentialArgs extends com.pulumi.res
             $ = new ListConnectedClusterUserCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationMethod The mode of client authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMethod(Either<String,AuthenticationMethod> authenticationMethod) {
             $.authenticationMethod = authenticationMethod;
             return this;
         }
 
+        /**
+         * @param authenticationMethod The mode of client authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMethod(String authenticationMethod) {
             return authenticationMethod(Either.ofLeft(authenticationMethod));
         }
 
+        /**
+         * @param authenticationMethod The mode of client authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationMethod(AuthenticationMethod authenticationMethod) {
             return authenticationMethod(Either.ofRight(authenticationMethod));
         }
 
+        /**
+         * @param clientProxy Boolean value to indicate whether the request is for client side proxy or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientProxy(Boolean clientProxy) {
             $.clientProxy = clientProxy;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Kubernetes cluster on which get is called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

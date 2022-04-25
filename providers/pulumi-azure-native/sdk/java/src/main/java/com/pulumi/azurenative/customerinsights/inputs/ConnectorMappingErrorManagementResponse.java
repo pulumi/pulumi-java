@@ -26,6 +26,10 @@ public final class ConnectorMappingErrorManagementResponse extends com.pulumi.re
     @Import(name="errorLimit")
     private @Nullable Integer errorLimit;
 
+    /**
+     * @return The error limit allowed while importing data.
+     * 
+     */
     public Optional<Integer> errorLimit() {
         return Optional.ofNullable(this.errorLimit);
     }
@@ -37,6 +41,10 @@ public final class ConnectorMappingErrorManagementResponse extends com.pulumi.re
     @Import(name="errorManagementType", required=true)
     private String errorManagementType;
 
+    /**
+     * @return The type of error management to use for the mapping.
+     * 
+     */
     public String errorManagementType() {
         return this.errorManagementType;
     }
@@ -66,11 +74,23 @@ public final class ConnectorMappingErrorManagementResponse extends com.pulumi.re
             $ = new ConnectorMappingErrorManagementResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorLimit The error limit allowed while importing data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorLimit(@Nullable Integer errorLimit) {
             $.errorLimit = errorLimit;
             return this;
         }
 
+        /**
+         * @param errorManagementType The type of error management to use for the mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorManagementType(String errorManagementType) {
             $.errorManagementType = errorManagementType;
             return this;

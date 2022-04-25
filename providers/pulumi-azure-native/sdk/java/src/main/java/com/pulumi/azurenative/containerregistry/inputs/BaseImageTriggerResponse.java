@@ -26,6 +26,10 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="baseImageTriggerType", required=true)
     private String baseImageTriggerType;
 
+    /**
+     * @return The type of the auto trigger for base image dependency updates.
+     * 
+     */
     public String baseImageTriggerType() {
         return this.baseImageTriggerType;
     }
@@ -37,6 +41,10 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the trigger.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return The current status of trigger.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -59,6 +71,10 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="updateTriggerEndpoint")
     private @Nullable String updateTriggerEndpoint;
 
+    /**
+     * @return The endpoint URL for receiving update triggers.
+     * 
+     */
     public Optional<String> updateTriggerEndpoint() {
         return Optional.ofNullable(this.updateTriggerEndpoint);
     }
@@ -70,6 +86,10 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
     @Import(name="updateTriggerPayloadType")
     private @Nullable String updateTriggerPayloadType;
 
+    /**
+     * @return Type of Payload body for Base image update triggers.
+     * 
+     */
     public Optional<String> updateTriggerPayloadType() {
         return Optional.ofNullable(this.updateTriggerPayloadType);
     }
@@ -102,26 +122,56 @@ public final class BaseImageTriggerResponse extends com.pulumi.resources.InvokeA
             $ = new BaseImageTriggerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseImageTriggerType The type of the auto trigger for base image dependency updates.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageTriggerType(String baseImageTriggerType) {
             $.baseImageTriggerType = baseImageTriggerType;
             return this;
         }
 
+        /**
+         * @param name The name of the trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param status The current status of trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param updateTriggerEndpoint The endpoint URL for receiving update triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerEndpoint(@Nullable String updateTriggerEndpoint) {
             $.updateTriggerEndpoint = updateTriggerEndpoint;
             return this;
         }
 
+        /**
+         * @param updateTriggerPayloadType Type of Payload body for Base image update triggers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerPayloadType(@Nullable String updateTriggerPayloadType) {
             $.updateTriggerPayloadType = updateTriggerPayloadType;
             return this;

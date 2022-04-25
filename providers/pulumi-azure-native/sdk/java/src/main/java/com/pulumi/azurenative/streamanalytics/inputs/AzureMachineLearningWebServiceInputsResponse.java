@@ -27,6 +27,10 @@ public final class AzureMachineLearningWebServiceInputsResponse extends com.pulu
     @Import(name="columnNames")
     private @Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames;
 
+    /**
+     * @return A list of input columns for the Azure Machine Learning web service endpoint.
+     * 
+     */
     public Optional<List<AzureMachineLearningWebServiceInputColumnResponse>> columnNames() {
         return Optional.ofNullable(this.columnNames);
     }
@@ -38,6 +42,10 @@ public final class AzureMachineLearningWebServiceInputsResponse extends com.pulu
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the input. This is the name provided while authoring the endpoint.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,15 +75,33 @@ public final class AzureMachineLearningWebServiceInputsResponse extends com.pulu
             $ = new AzureMachineLearningWebServiceInputsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnNames A list of input columns for the Azure Machine Learning web service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(@Nullable List<AzureMachineLearningWebServiceInputColumnResponse> columnNames) {
             $.columnNames = columnNames;
             return this;
         }
 
+        /**
+         * @param columnNames A list of input columns for the Azure Machine Learning web service endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnNames(AzureMachineLearningWebServiceInputColumnResponse... columnNames) {
             return columnNames(List.of(columnNames));
         }
 
+        /**
+         * @param name The name of the input. This is the name provided while authoring the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

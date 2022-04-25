@@ -26,6 +26,10 @@ public final class EndpointPropertiesResponseSubnets extends com.pulumi.resource
     @Import(name="first")
     private @Nullable String first;
 
+    /**
+     * @return First address in the subnet.
+     * 
+     */
     public Optional<String> first() {
         return Optional.ofNullable(this.first);
     }
@@ -37,6 +41,10 @@ public final class EndpointPropertiesResponseSubnets extends com.pulumi.resource
     @Import(name="last")
     private @Nullable String last;
 
+    /**
+     * @return Last address in the subnet.
+     * 
+     */
     public Optional<String> last() {
         return Optional.ofNullable(this.last);
     }
@@ -48,6 +56,10 @@ public final class EndpointPropertiesResponseSubnets extends com.pulumi.resource
     @Import(name="scope")
     private @Nullable Integer scope;
 
+    /**
+     * @return Block size (number of leading bits in the subnet mask).
+     * 
+     */
     public Optional<Integer> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -78,16 +90,34 @@ public final class EndpointPropertiesResponseSubnets extends com.pulumi.resource
             $ = new EndpointPropertiesResponseSubnets(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param first First address in the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder first(@Nullable String first) {
             $.first = first;
             return this;
         }
 
+        /**
+         * @param last Last address in the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder last(@Nullable String last) {
             $.last = last;
             return this;
         }
 
+        /**
+         * @param scope Block size (number of leading bits in the subnet mask).
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Integer scope) {
             $.scope = scope;
             return this;

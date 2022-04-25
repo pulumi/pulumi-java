@@ -34,6 +34,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="apiProperties")
     private @Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties;
 
+    /**
+     * @return The api properties for special APIs.
+     * 
+     */
     public Optional<CognitiveServicesAccountApiPropertiesResponse> apiProperties() {
         return Optional.ofNullable(this.apiProperties);
     }
@@ -45,6 +49,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="capabilities", required=true)
     private List<SkuCapabilityResponse> capabilities;
 
+    /**
+     * @return Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
+     * 
+     */
     public List<SkuCapabilityResponse> capabilities() {
         return this.capabilities;
     }
@@ -56,6 +64,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="customSubDomainName")
     private @Nullable String customSubDomainName;
 
+    /**
+     * @return Optional subdomain name used for token-based authentication.
+     * 
+     */
     public Optional<String> customSubDomainName() {
         return Optional.ofNullable(this.customSubDomainName);
     }
@@ -67,6 +79,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="dateCreated", required=true)
     private String dateCreated;
 
+    /**
+     * @return Gets the date of cognitive services account creation.
+     * 
+     */
     public String dateCreated() {
         return this.dateCreated;
     }
@@ -78,6 +94,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="encryption")
     private @Nullable EncryptionResponse encryption;
 
+    /**
+     * @return The encryption properties for this resource.
+     * 
+     */
     public Optional<EncryptionResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -89,6 +109,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="endpoint", required=true)
     private String endpoint;
 
+    /**
+     * @return Endpoint of the created account.
+     * 
+     */
     public String endpoint() {
         return this.endpoint;
     }
@@ -100,6 +124,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="internalId", required=true)
     private String internalId;
 
+    /**
+     * @return The internal identifier.
+     * 
+     */
     public String internalId() {
         return this.internalId;
     }
@@ -111,6 +139,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="isMigrated", required=true)
     private Boolean isMigrated;
 
+    /**
+     * @return If the resource is migrated from an existing key.
+     * 
+     */
     public Boolean isMigrated() {
         return this.isMigrated;
     }
@@ -122,6 +154,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="networkAcls")
     private @Nullable NetworkRuleSetResponse networkAcls;
 
+    /**
+     * @return A collection of rules governing the accessibility from specific network locations.
+     * 
+     */
     public Optional<NetworkRuleSetResponse> networkAcls() {
         return Optional.ofNullable(this.networkAcls);
     }
@@ -133,6 +169,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="privateEndpointConnections")
     private @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
 
+    /**
+     * @return The private endpoint connection associated with the Cognitive Services account.
+     * 
+     */
     public Optional<List<PrivateEndpointConnectionResponse>> privateEndpointConnections() {
         return Optional.ofNullable(this.privateEndpointConnections);
     }
@@ -144,6 +184,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Gets the status of the cognitive services account at the time the operation was called.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -155,6 +199,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="publicNetworkAccess")
     private @Nullable String publicNetworkAccess;
 
+    /**
+     * @return Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
+     * 
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
@@ -166,6 +214,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="skuChangeInfo", required=true)
     private CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo;
 
+    /**
+     * @return Sku change info of account.
+     * 
+     */
     public CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo() {
         return this.skuChangeInfo;
     }
@@ -177,6 +229,10 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
     @Import(name="userOwnedStorage")
     private @Nullable List<UserOwnedStorageResponse> userOwnedStorage;
 
+    /**
+     * @return The storage accounts for this resource.
+     * 
+     */
     public Optional<List<UserOwnedStorageResponse>> userOwnedStorage() {
         return Optional.ofNullable(this.userOwnedStorage);
     }
@@ -218,84 +274,186 @@ public final class CognitiveServicesAccountPropertiesResponse extends com.pulumi
             $ = new CognitiveServicesAccountPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiProperties The api properties for special APIs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProperties(@Nullable CognitiveServicesAccountApiPropertiesResponse apiProperties) {
             $.apiProperties = apiProperties;
             return this;
         }
 
+        /**
+         * @param capabilities Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(List<SkuCapabilityResponse> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities Gets the capabilities of the cognitive services account. Each item indicates the capability of a specific feature. The values are read-only and for reference only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(SkuCapabilityResponse... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param customSubDomainName Optional subdomain name used for token-based authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customSubDomainName(@Nullable String customSubDomainName) {
             $.customSubDomainName = customSubDomainName;
             return this;
         }
 
+        /**
+         * @param dateCreated Gets the date of cognitive services account creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateCreated(String dateCreated) {
             $.dateCreated = dateCreated;
             return this;
         }
 
+        /**
+         * @param encryption The encryption properties for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable EncryptionResponse encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param endpoint Endpoint of the created account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoint(String endpoint) {
             $.endpoint = endpoint;
             return this;
         }
 
+        /**
+         * @param internalId The internal identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalId(String internalId) {
             $.internalId = internalId;
             return this;
         }
 
+        /**
+         * @param isMigrated If the resource is migrated from an existing key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isMigrated(Boolean isMigrated) {
             $.isMigrated = isMigrated;
             return this;
         }
 
+        /**
+         * @param networkAcls A collection of rules governing the accessibility from specific network locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkAcls(@Nullable NetworkRuleSetResponse networkAcls) {
             $.networkAcls = networkAcls;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections The private endpoint connection associated with the Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(@Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections) {
             $.privateEndpointConnections = privateEndpointConnections;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnections The private endpoint connection associated with the Cognitive Services account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnections(PrivateEndpointConnectionResponse... privateEndpointConnections) {
             return privateEndpointConnections(List.of(privateEndpointConnections));
         }
 
+        /**
+         * @param provisioningState Gets the status of the cognitive services account at the time the operation was called.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccess Whether or not public endpoint access is allowed for this account. Value is optional but if passed in, must be &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccess(@Nullable String publicNetworkAccess) {
             $.publicNetworkAccess = publicNetworkAccess;
             return this;
         }
 
+        /**
+         * @param skuChangeInfo Sku change info of account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuChangeInfo(CognitiveServicesAccountSkuChangeInfoResponse skuChangeInfo) {
             $.skuChangeInfo = skuChangeInfo;
             return this;
         }
 
+        /**
+         * @param userOwnedStorage The storage accounts for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userOwnedStorage(@Nullable List<UserOwnedStorageResponse> userOwnedStorage) {
             $.userOwnedStorage = userOwnedStorage;
             return this;
         }
 
+        /**
+         * @param userOwnedStorage The storage accounts for this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userOwnedStorage(UserOwnedStorageResponse... userOwnedStorage) {
             return userOwnedStorage(List.of(userOwnedStorage));
         }

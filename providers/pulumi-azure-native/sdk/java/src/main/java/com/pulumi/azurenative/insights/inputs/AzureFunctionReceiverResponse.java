@@ -27,6 +27,10 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="functionAppResourceId", required=true)
     private String functionAppResourceId;
 
+    /**
+     * @return The azure resource id of the function app.
+     * 
+     */
     public String functionAppResourceId() {
         return this.functionAppResourceId;
     }
@@ -38,6 +42,10 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="functionName", required=true)
     private String functionName;
 
+    /**
+     * @return The function name in the function app.
+     * 
+     */
     public String functionName() {
         return this.functionName;
     }
@@ -49,6 +57,10 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="httpTriggerUrl", required=true)
     private String httpTriggerUrl;
 
+    /**
+     * @return The http trigger url where http request sent to.
+     * 
+     */
     public String httpTriggerUrl() {
         return this.httpTriggerUrl;
     }
@@ -60,6 +72,10 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the azure function receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -71,6 +87,10 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
     @Import(name="useCommonAlertSchema")
     private @Nullable Boolean useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -103,26 +123,56 @@ public final class AzureFunctionReceiverResponse extends com.pulumi.resources.In
             $ = new AzureFunctionReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param functionAppResourceId The azure resource id of the function app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionAppResourceId(String functionAppResourceId) {
             $.functionAppResourceId = functionAppResourceId;
             return this;
         }
 
+        /**
+         * @param functionName The function name in the function app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(String functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param httpTriggerUrl The http trigger url where http request sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpTriggerUrl(String httpTriggerUrl) {
             $.httpTriggerUrl = httpTriggerUrl;
             return this;
         }
 
+        /**
+         * @param name The name of the azure function receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;

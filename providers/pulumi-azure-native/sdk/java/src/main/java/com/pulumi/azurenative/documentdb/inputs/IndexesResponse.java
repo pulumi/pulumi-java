@@ -27,6 +27,10 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="dataType")
     private @Nullable String dataType;
 
+    /**
+     * @return The datatype for which the indexing behavior is applied to.
+     * 
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -38,6 +42,10 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Indicates the type of index.
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -49,6 +57,10 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="precision")
     private @Nullable Integer precision;
 
+    /**
+     * @return The precision of the index. -1 is maximum precision.
+     * 
+     */
     public Optional<Integer> precision() {
         return Optional.ofNullable(this.precision);
     }
@@ -79,16 +91,34 @@ public final class IndexesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IndexesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataType The datatype for which the indexing behavior is applied to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param kind Indicates the type of index.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param precision The precision of the index. -1 is maximum precision.
+         * 
+         * @return builder
+         * 
+         */
         public Builder precision(@Nullable Integer precision) {
             $.precision = precision;
             return this;

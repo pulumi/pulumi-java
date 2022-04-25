@@ -17,52 +17,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetExpressRouteGatewayResult {
     /**
-     * Configuration for auto scaling.
+     * @return Configuration for auto scaling.
      * 
      */
     private final @Nullable ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration autoScaleConfiguration;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * List of ExpressRoute connections to the ExpressRoute gateway.
+     * @return List of ExpressRoute connections to the ExpressRoute gateway.
      * 
      */
     private final List<ExpressRouteConnectionResponse> expressRouteConnections;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the express route gateway resource.
+     * @return The provisioning state of the express route gateway resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
+     * @return The Virtual Hub where the ExpressRoute gateway is or will be deployed.
      * 
      */
     private final VirtualHubIdResponse virtualHub;
@@ -92,72 +92,72 @@ public final class GetExpressRouteGatewayResult {
     }
 
     /**
-     * Configuration for auto scaling.
+     * @return Configuration for auto scaling.
      * 
-    */
+     */
     public Optional<ExpressRouteGatewayPropertiesResponseAutoScaleConfiguration> autoScaleConfiguration() {
         return Optional.ofNullable(this.autoScaleConfiguration);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * List of ExpressRoute connections to the ExpressRoute gateway.
+     * @return List of ExpressRoute connections to the ExpressRoute gateway.
      * 
-    */
+     */
     public List<ExpressRouteConnectionResponse> expressRouteConnections() {
         return this.expressRouteConnections;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the express route gateway resource.
+     * @return The provisioning state of the express route gateway resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The Virtual Hub where the ExpressRoute gateway is or will be deployed.
+     * @return The Virtual Hub where the ExpressRoute gateway is or will be deployed.
      * 
-    */
+     */
     public VirtualHubIdResponse virtualHub() {
         return this.virtualHub;
     }

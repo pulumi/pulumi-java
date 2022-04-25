@@ -15,17 +15,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutoscaleNotificationResponse {
     /**
-     * the email notification.
+     * @return the email notification.
      * 
      */
     private final @Nullable EmailNotificationResponse email;
     /**
-     * the operation associated with the notification and its value must be &#34;scale&#34;
+     * @return the operation associated with the notification and its value must be &#34;scale&#34;
      * 
      */
     private final String operation;
     /**
-     * the collection of webhook notifications.
+     * @return the collection of webhook notifications.
      * 
      */
     private final @Nullable List<WebhookNotificationResponse> webhooks;
@@ -41,23 +41,23 @@ public final class AutoscaleNotificationResponse {
     }
 
     /**
-     * the email notification.
+     * @return the email notification.
      * 
-    */
+     */
     public Optional<EmailNotificationResponse> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * the operation associated with the notification and its value must be &#34;scale&#34;
+     * @return the operation associated with the notification and its value must be &#34;scale&#34;
      * 
-    */
+     */
     public String operation() {
         return this.operation;
     }
     /**
-     * the collection of webhook notifications.
+     * @return the collection of webhook notifications.
      * 
-    */
+     */
     public List<WebhookNotificationResponse> webhooks() {
         return this.webhooks == null ? List.of() : this.webhooks;
     }

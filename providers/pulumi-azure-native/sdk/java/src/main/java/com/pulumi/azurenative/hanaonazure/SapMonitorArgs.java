@@ -24,6 +24,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="enableCustomerAnalytics")
     private @Nullable Output<Boolean> enableCustomerAnalytics;
 
+    /**
+     * @return The value indicating whether to send analytics to Microsoft
+     * 
+     */
     public Optional<Output<Boolean>> enableCustomerAnalytics() {
         return Optional.ofNullable(this.enableCustomerAnalytics);
     }
@@ -35,6 +39,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logAnalyticsWorkspaceArmId")
     private @Nullable Output<String> logAnalyticsWorkspaceArmId;
 
+    /**
+     * @return The ARM ID of the Log Analytics Workspace that is used for monitoring
+     * 
+     */
     public Optional<Output<String>> logAnalyticsWorkspaceArmId() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceArmId);
     }
@@ -57,6 +69,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logAnalyticsWorkspaceId")
     private @Nullable Output<String> logAnalyticsWorkspaceId;
 
+    /**
+     * @return The workspace ID of the log analytics workspace to be used for monitoring
+     * 
+     */
     public Optional<Output<String>> logAnalyticsWorkspaceId() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceId);
     }
@@ -68,6 +84,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="logAnalyticsWorkspaceSharedKey")
     private @Nullable Output<String> logAnalyticsWorkspaceSharedKey;
 
+    /**
+     * @return The shared key of the log analytics workspace that is used for monitoring
+     * 
+     */
     public Optional<Output<String>> logAnalyticsWorkspaceSharedKey() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceSharedKey);
     }
@@ -79,6 +99,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="monitorSubnet")
     private @Nullable Output<String> monitorSubnet;
 
+    /**
+     * @return The subnet which the SAP monitor will be deployed in
+     * 
+     */
     public Optional<Output<String>> monitorSubnet() {
         return Optional.ofNullable(this.monitorSubnet);
     }
@@ -90,6 +114,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -101,6 +129,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sapMonitorName")
     private @Nullable Output<String> sapMonitorName;
 
+    /**
+     * @return Name of the SAP monitor resource.
+     * 
+     */
     public Optional<Output<String>> sapMonitorName() {
         return Optional.ofNullable(this.sapMonitorName);
     }
@@ -112,6 +144,10 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -148,83 +184,191 @@ public final class SapMonitorArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SapMonitorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableCustomerAnalytics The value indicating whether to send analytics to Microsoft
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCustomerAnalytics(@Nullable Output<Boolean> enableCustomerAnalytics) {
             $.enableCustomerAnalytics = enableCustomerAnalytics;
             return this;
         }
 
+        /**
+         * @param enableCustomerAnalytics The value indicating whether to send analytics to Microsoft
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableCustomerAnalytics(Boolean enableCustomerAnalytics) {
             return enableCustomerAnalytics(Output.of(enableCustomerAnalytics));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param logAnalyticsWorkspaceArmId The ARM ID of the Log Analytics Workspace that is used for monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsWorkspaceArmId(@Nullable Output<String> logAnalyticsWorkspaceArmId) {
             $.logAnalyticsWorkspaceArmId = logAnalyticsWorkspaceArmId;
             return this;
         }
 
+        /**
+         * @param logAnalyticsWorkspaceArmId The ARM ID of the Log Analytics Workspace that is used for monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsWorkspaceArmId(String logAnalyticsWorkspaceArmId) {
             return logAnalyticsWorkspaceArmId(Output.of(logAnalyticsWorkspaceArmId));
         }
 
+        /**
+         * @param logAnalyticsWorkspaceId The workspace ID of the log analytics workspace to be used for monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsWorkspaceId(@Nullable Output<String> logAnalyticsWorkspaceId) {
             $.logAnalyticsWorkspaceId = logAnalyticsWorkspaceId;
             return this;
         }
 
+        /**
+         * @param logAnalyticsWorkspaceId The workspace ID of the log analytics workspace to be used for monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsWorkspaceId(String logAnalyticsWorkspaceId) {
             return logAnalyticsWorkspaceId(Output.of(logAnalyticsWorkspaceId));
         }
 
+        /**
+         * @param logAnalyticsWorkspaceSharedKey The shared key of the log analytics workspace that is used for monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsWorkspaceSharedKey(@Nullable Output<String> logAnalyticsWorkspaceSharedKey) {
             $.logAnalyticsWorkspaceSharedKey = logAnalyticsWorkspaceSharedKey;
             return this;
         }
 
+        /**
+         * @param logAnalyticsWorkspaceSharedKey The shared key of the log analytics workspace that is used for monitoring
+         * 
+         * @return builder
+         * 
+         */
         public Builder logAnalyticsWorkspaceSharedKey(String logAnalyticsWorkspaceSharedKey) {
             return logAnalyticsWorkspaceSharedKey(Output.of(logAnalyticsWorkspaceSharedKey));
         }
 
+        /**
+         * @param monitorSubnet The subnet which the SAP monitor will be deployed in
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorSubnet(@Nullable Output<String> monitorSubnet) {
             $.monitorSubnet = monitorSubnet;
             return this;
         }
 
+        /**
+         * @param monitorSubnet The subnet which the SAP monitor will be deployed in
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorSubnet(String monitorSubnet) {
             return monitorSubnet(Output.of(monitorSubnet));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sapMonitorName Name of the SAP monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sapMonitorName(@Nullable Output<String> sapMonitorName) {
             $.sapMonitorName = sapMonitorName;
             return this;
         }
 
+        /**
+         * @param sapMonitorName Name of the SAP monitor resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sapMonitorName(String sapMonitorName) {
             return sapMonitorName(Output.of(sapMonitorName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

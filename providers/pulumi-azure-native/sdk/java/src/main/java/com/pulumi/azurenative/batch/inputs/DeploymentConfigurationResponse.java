@@ -22,6 +22,10 @@ public final class DeploymentConfigurationResponse extends com.pulumi.resources.
     @Import(name="cloudServiceConfiguration")
     private @Nullable CloudServiceConfigurationResponse cloudServiceConfiguration;
 
+    /**
+     * @return This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
+     * 
+     */
     public Optional<CloudServiceConfigurationResponse> cloudServiceConfiguration() {
         return Optional.ofNullable(this.cloudServiceConfiguration);
     }
@@ -33,6 +37,10 @@ public final class DeploymentConfigurationResponse extends com.pulumi.resources.
     @Import(name="virtualMachineConfiguration")
     private @Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration;
 
+    /**
+     * @return This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+     * 
+     */
     public Optional<VirtualMachineConfigurationResponse> virtualMachineConfiguration() {
         return Optional.ofNullable(this.virtualMachineConfiguration);
     }
@@ -62,11 +70,23 @@ public final class DeploymentConfigurationResponse extends com.pulumi.resources.
             $ = new DeploymentConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudServiceConfiguration This property and virtualMachineConfiguration are mutually exclusive and one of the properties must be specified. This property cannot be specified if the Batch account was created with its poolAllocationMode property set to &#39;UserSubscription&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudServiceConfiguration(@Nullable CloudServiceConfigurationResponse cloudServiceConfiguration) {
             $.cloudServiceConfiguration = cloudServiceConfiguration;
             return this;
         }
 
+        /**
+         * @param virtualMachineConfiguration This property and cloudServiceConfiguration are mutually exclusive and one of the properties must be specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineConfiguration(@Nullable VirtualMachineConfigurationResponse virtualMachineConfiguration) {
             $.virtualMachineConfiguration = virtualMachineConfiguration;
             return this;

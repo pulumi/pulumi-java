@@ -23,6 +23,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="properties")
     private @Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties;
 
+    /**
+     * @return Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
+     * 
+     */
     public Optional<Output<SharedPrivateLinkResourcePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -34,6 +38,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -45,6 +53,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="searchServiceName", required=true)
     private Output<String> searchServiceName;
 
+    /**
+     * @return The name of the Azure Cognitive Search service associated with the specified resource group.
+     * 
+     */
     public Output<String> searchServiceName() {
         return this.searchServiceName;
     }
@@ -56,6 +68,10 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
     @Import(name="sharedPrivateLinkResourceName")
     private @Nullable Output<String> sharedPrivateLinkResourceName;
 
+    /**
+     * @return The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
+     * 
+     */
     public Optional<Output<String>> sharedPrivateLinkResourceName() {
         return Optional.ofNullable(this.sharedPrivateLinkResourceName);
     }
@@ -87,38 +103,86 @@ public final class SharedPrivateLinkResourceArgs extends com.pulumi.resources.Re
             $ = new SharedPrivateLinkResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<SharedPrivateLinkResourcePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Describes the properties of a Shared Private Link Resource managed by the Azure Cognitive Search service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(SharedPrivateLinkResourcePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param searchServiceName The name of the Azure Cognitive Search service associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchServiceName(Output<String> searchServiceName) {
             $.searchServiceName = searchServiceName;
             return this;
         }
 
+        /**
+         * @param searchServiceName The name of the Azure Cognitive Search service associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchServiceName(String searchServiceName) {
             return searchServiceName(Output.of(searchServiceName));
         }
 
+        /**
+         * @param sharedPrivateLinkResourceName The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResourceName(@Nullable Output<String> sharedPrivateLinkResourceName) {
             $.sharedPrivateLinkResourceName = sharedPrivateLinkResourceName;
             return this;
         }
 
+        /**
+         * @param sharedPrivateLinkResourceName The name of the shared private link resource managed by the Azure Cognitive Search service within the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharedPrivateLinkResourceName(String sharedPrivateLinkResourceName) {
             return sharedPrivateLinkResourceName(Output.of(sharedPrivateLinkResourceName));
         }

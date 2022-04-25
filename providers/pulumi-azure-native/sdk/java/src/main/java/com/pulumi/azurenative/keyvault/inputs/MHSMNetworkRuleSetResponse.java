@@ -28,6 +28,10 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
     @Import(name="bypass")
     private @Nullable String bypass;
 
+    /**
+     * @return Tells what traffic can bypass network rules. This can be &#39;AzureServices&#39; or &#39;None&#39;.  If not specified the default is &#39;AzureServices&#39;.
+     * 
+     */
     public Optional<String> bypass() {
         return Optional.ofNullable(this.bypass);
     }
@@ -39,6 +43,10 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
     @Import(name="defaultAction")
     private @Nullable String defaultAction;
 
+    /**
+     * @return The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
+     * 
+     */
     public Optional<String> defaultAction() {
         return Optional.ofNullable(this.defaultAction);
     }
@@ -50,6 +58,10 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
     @Import(name="ipRules")
     private @Nullable List<MHSMIPRuleResponse> ipRules;
 
+    /**
+     * @return The list of IP address rules.
+     * 
+     */
     public Optional<List<MHSMIPRuleResponse>> ipRules() {
         return Optional.ofNullable(this.ipRules);
     }
@@ -61,6 +73,10 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
     @Import(name="virtualNetworkRules")
     private @Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules;
 
+    /**
+     * @return The list of virtual network rules.
+     * 
+     */
     public Optional<List<MHSMVirtualNetworkRuleResponse>> virtualNetworkRules() {
         return Optional.ofNullable(this.virtualNetworkRules);
     }
@@ -92,30 +108,66 @@ public final class MHSMNetworkRuleSetResponse extends com.pulumi.resources.Invok
             $ = new MHSMNetworkRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bypass Tells what traffic can bypass network rules. This can be &#39;AzureServices&#39; or &#39;None&#39;.  If not specified the default is &#39;AzureServices&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bypass(@Nullable String bypass) {
             $.bypass = bypass;
             return this;
         }
 
+        /**
+         * @param defaultAction The default action when no rule from ipRules and from virtualNetworkRules match. This is only used after the bypass property has been evaluated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultAction(@Nullable String defaultAction) {
             $.defaultAction = defaultAction;
             return this;
         }
 
+        /**
+         * @param ipRules The list of IP address rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(@Nullable List<MHSMIPRuleResponse> ipRules) {
             $.ipRules = ipRules;
             return this;
         }
 
+        /**
+         * @param ipRules The list of IP address rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipRules(MHSMIPRuleResponse... ipRules) {
             return ipRules(List.of(ipRules));
         }
 
+        /**
+         * @param virtualNetworkRules The list of virtual network rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(@Nullable List<MHSMVirtualNetworkRuleResponse> virtualNetworkRules) {
             $.virtualNetworkRules = virtualNetworkRules;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRules The list of virtual network rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRules(MHSMVirtualNetworkRuleResponse... virtualNetworkRules) {
             return virtualNetworkRules(List.of(virtualNetworkRules));
         }

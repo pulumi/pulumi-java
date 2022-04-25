@@ -25,6 +25,10 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="assignedTo")
     private @Nullable String assignedTo;
 
+    /**
+     * @return The name of the user the incident is assigned to.
+     * 
+     */
     public Optional<String> assignedTo() {
         return Optional.ofNullable(this.assignedTo);
     }
@@ -36,6 +40,10 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return The email of the user the incident is assigned to.
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -47,6 +55,10 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return The object id of the user the incident is assigned to.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -58,6 +70,10 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
     @Import(name="userPrincipalName")
     private @Nullable String userPrincipalName;
 
+    /**
+     * @return The user principal name of the user the incident is assigned to.
+     * 
+     */
     public Optional<String> userPrincipalName() {
         return Optional.ofNullable(this.userPrincipalName);
     }
@@ -89,21 +105,45 @@ public final class IncidentOwnerInfoResponse extends com.pulumi.resources.Invoke
             $ = new IncidentOwnerInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignedTo The name of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignedTo(@Nullable String assignedTo) {
             $.assignedTo = assignedTo;
             return this;
         }
 
+        /**
+         * @param email The email of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param objectId The object id of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param userPrincipalName The user principal name of the user the incident is assigned to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userPrincipalName(@Nullable String userPrincipalName) {
             $.userPrincipalName = userPrincipalName;
             return this;

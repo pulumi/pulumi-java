@@ -27,6 +27,10 @@ public final class AuthenticationSettingsContractArgs extends com.pulumi.resourc
     @Import(name="oAuth2")
     private @Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2;
 
+    /**
+     * @return OAuth2 Authentication settings
+     * 
+     */
     public Optional<Output<OAuth2AuthenticationSettingsContractArgs>> oAuth2() {
         return Optional.ofNullable(this.oAuth2);
     }
@@ -38,6 +42,10 @@ public final class AuthenticationSettingsContractArgs extends com.pulumi.resourc
     @Import(name="openid")
     private @Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid;
 
+    /**
+     * @return OpenID Connect Authentication Settings
+     * 
+     */
     public Optional<Output<OpenIdAuthenticationSettingsContractArgs>> openid() {
         return Optional.ofNullable(this.openid);
     }
@@ -67,20 +75,44 @@ public final class AuthenticationSettingsContractArgs extends com.pulumi.resourc
             $ = new AuthenticationSettingsContractArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param oAuth2 OAuth2 Authentication settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder oAuth2(@Nullable Output<OAuth2AuthenticationSettingsContractArgs> oAuth2) {
             $.oAuth2 = oAuth2;
             return this;
         }
 
+        /**
+         * @param oAuth2 OAuth2 Authentication settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder oAuth2(OAuth2AuthenticationSettingsContractArgs oAuth2) {
             return oAuth2(Output.of(oAuth2));
         }
 
+        /**
+         * @param openid OpenID Connect Authentication Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder openid(@Nullable Output<OpenIdAuthenticationSettingsContractArgs> openid) {
             $.openid = openid;
             return this;
         }
 
+        /**
+         * @param openid OpenID Connect Authentication Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder openid(OpenIdAuthenticationSettingsContractArgs openid) {
             return openid(Output.of(openid));
         }

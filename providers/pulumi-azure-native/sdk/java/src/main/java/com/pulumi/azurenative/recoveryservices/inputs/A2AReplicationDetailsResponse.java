@@ -35,6 +35,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="agentVersion")
     private @Nullable String agentVersion;
 
+    /**
+     * @return The agent version.
+     * 
+     */
     public Optional<String> agentVersion() {
         return Optional.ofNullable(this.agentVersion);
     }
@@ -46,6 +50,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="fabricObjectId")
     private @Nullable String fabricObjectId;
 
+    /**
+     * @return The fabric specific object Id of the virtual machine.
+     * 
+     */
     public Optional<String> fabricObjectId() {
         return Optional.ofNullable(this.fabricObjectId);
     }
@@ -57,6 +65,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="initialPrimaryFabricLocation", required=true)
     private String initialPrimaryFabricLocation;
 
+    /**
+     * @return The initial primary fabric location.
+     * 
+     */
     public String initialPrimaryFabricLocation() {
         return this.initialPrimaryFabricLocation;
     }
@@ -68,6 +80,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="initialPrimaryZone", required=true)
     private String initialPrimaryZone;
 
+    /**
+     * @return The initial primary availability zone.
+     * 
+     */
     public String initialPrimaryZone() {
         return this.initialPrimaryZone;
     }
@@ -79,6 +95,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="initialRecoveryFabricLocation", required=true)
     private String initialRecoveryFabricLocation;
 
+    /**
+     * @return The initial recovery fabric location.
+     * 
+     */
     public String initialRecoveryFabricLocation() {
         return this.initialRecoveryFabricLocation;
     }
@@ -90,6 +110,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="initialRecoveryZone", required=true)
     private String initialRecoveryZone;
 
+    /**
+     * @return The initial recovery availability zone.
+     * 
+     */
     public String initialRecoveryZone() {
         return this.initialRecoveryZone;
     }
@@ -102,6 +126,11 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;A2A&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -113,6 +142,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="isReplicationAgentUpdateRequired")
     private @Nullable Boolean isReplicationAgentUpdateRequired;
 
+    /**
+     * @return A value indicating whether replication agent update is required.
+     * 
+     */
     public Optional<Boolean> isReplicationAgentUpdateRequired() {
         return Optional.ofNullable(this.isReplicationAgentUpdateRequired);
     }
@@ -124,6 +157,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="lastHeartbeat")
     private @Nullable String lastHeartbeat;
 
+    /**
+     * @return The last heartbeat received from the source server.
+     * 
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
@@ -135,6 +172,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="lastRpoCalculatedTime")
     private @Nullable String lastRpoCalculatedTime;
 
+    /**
+     * @return The time (in UTC) when the last RPO value was calculated by Protection Service.
+     * 
+     */
     public Optional<String> lastRpoCalculatedTime() {
         return Optional.ofNullable(this.lastRpoCalculatedTime);
     }
@@ -146,6 +187,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="lifecycleId")
     private @Nullable String lifecycleId;
 
+    /**
+     * @return An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the &#34;same&#34; protected item even though other internal Ids/ARM Id might be changing.
+     * 
+     */
     public Optional<String> lifecycleId() {
         return Optional.ofNullable(this.lifecycleId);
     }
@@ -157,6 +202,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="managementId")
     private @Nullable String managementId;
 
+    /**
+     * @return The management Id.
+     * 
+     */
     public Optional<String> managementId() {
         return Optional.ofNullable(this.managementId);
     }
@@ -168,6 +217,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="monitoringJobType")
     private @Nullable String monitoringJobType;
 
+    /**
+     * @return The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
+     * 
+     */
     public Optional<String> monitoringJobType() {
         return Optional.ofNullable(this.monitoringJobType);
     }
@@ -179,6 +232,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="monitoringPercentageCompletion")
     private @Nullable Integer monitoringPercentageCompletion;
 
+    /**
+     * @return The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
+     * 
+     */
     public Optional<Integer> monitoringPercentageCompletion() {
         return Optional.ofNullable(this.monitoringPercentageCompletion);
     }
@@ -190,6 +247,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="multiVmGroupCreateOption")
     private @Nullable String multiVmGroupCreateOption;
 
+    /**
+     * @return Whether Multi VM group is auto created or specified by user.
+     * 
+     */
     public Optional<String> multiVmGroupCreateOption() {
         return Optional.ofNullable(this.multiVmGroupCreateOption);
     }
@@ -201,6 +262,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="multiVmGroupId")
     private @Nullable String multiVmGroupId;
 
+    /**
+     * @return The multi vm group Id.
+     * 
+     */
     public Optional<String> multiVmGroupId() {
         return Optional.ofNullable(this.multiVmGroupId);
     }
@@ -212,6 +277,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="multiVmGroupName")
     private @Nullable String multiVmGroupName;
 
+    /**
+     * @return The multi vm group name.
+     * 
+     */
     public Optional<String> multiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
@@ -223,6 +292,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return The type of operating system.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -234,6 +307,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="primaryFabricLocation")
     private @Nullable String primaryFabricLocation;
 
+    /**
+     * @return Primary fabric location.
+     * 
+     */
     public Optional<String> primaryFabricLocation() {
         return Optional.ofNullable(this.primaryFabricLocation);
     }
@@ -245,6 +322,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="protectedDisks")
     private @Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks;
 
+    /**
+     * @return The list of protected disks.
+     * 
+     */
     public Optional<List<A2AProtectedDiskDetailsResponse>> protectedDisks() {
         return Optional.ofNullable(this.protectedDisks);
     }
@@ -256,6 +337,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="protectedManagedDisks")
     private @Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks;
 
+    /**
+     * @return The list of protected managed disks.
+     * 
+     */
     public Optional<List<A2AProtectedManagedDiskDetailsResponse>> protectedManagedDisks() {
         return Optional.ofNullable(this.protectedManagedDisks);
     }
@@ -267,6 +352,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAvailabilitySet")
     private @Nullable String recoveryAvailabilitySet;
 
+    /**
+     * @return The recovery availability set.
+     * 
+     */
     public Optional<String> recoveryAvailabilitySet() {
         return Optional.ofNullable(this.recoveryAvailabilitySet);
     }
@@ -278,6 +367,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAvailabilityZone")
     private @Nullable String recoveryAvailabilityZone;
 
+    /**
+     * @return The recovery availability zone.
+     * 
+     */
     public Optional<String> recoveryAvailabilityZone() {
         return Optional.ofNullable(this.recoveryAvailabilityZone);
     }
@@ -289,6 +382,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAzureResourceGroupId")
     private @Nullable String recoveryAzureResourceGroupId;
 
+    /**
+     * @return The recovery resource group.
+     * 
+     */
     public Optional<String> recoveryAzureResourceGroupId() {
         return Optional.ofNullable(this.recoveryAzureResourceGroupId);
     }
@@ -300,6 +397,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAzureVMName")
     private @Nullable String recoveryAzureVMName;
 
+    /**
+     * @return The name of recovery virtual machine.
+     * 
+     */
     public Optional<String> recoveryAzureVMName() {
         return Optional.ofNullable(this.recoveryAzureVMName);
     }
@@ -311,6 +412,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryAzureVMSize")
     private @Nullable String recoveryAzureVMSize;
 
+    /**
+     * @return The size of recovery virtual machine.
+     * 
+     */
     public Optional<String> recoveryAzureVMSize() {
         return Optional.ofNullable(this.recoveryAzureVMSize);
     }
@@ -322,6 +427,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryBootDiagStorageAccountId")
     private @Nullable String recoveryBootDiagStorageAccountId;
 
+    /**
+     * @return The recovery boot diagnostic storage account Arm Id.
+     * 
+     */
     public Optional<String> recoveryBootDiagStorageAccountId() {
         return Optional.ofNullable(this.recoveryBootDiagStorageAccountId);
     }
@@ -333,6 +442,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryCloudService")
     private @Nullable String recoveryCloudService;
 
+    /**
+     * @return The recovery cloud service.
+     * 
+     */
     public Optional<String> recoveryCloudService() {
         return Optional.ofNullable(this.recoveryCloudService);
     }
@@ -344,6 +457,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryFabricLocation")
     private @Nullable String recoveryFabricLocation;
 
+    /**
+     * @return The recovery fabric location.
+     * 
+     */
     public Optional<String> recoveryFabricLocation() {
         return Optional.ofNullable(this.recoveryFabricLocation);
     }
@@ -355,6 +472,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryFabricObjectId")
     private @Nullable String recoveryFabricObjectId;
 
+    /**
+     * @return The recovery fabric object Id.
+     * 
+     */
     public Optional<String> recoveryFabricObjectId() {
         return Optional.ofNullable(this.recoveryFabricObjectId);
     }
@@ -366,6 +487,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="recoveryProximityPlacementGroupId")
     private @Nullable String recoveryProximityPlacementGroupId;
 
+    /**
+     * @return The recovery proximity placement group Id.
+     * 
+     */
     public Optional<String> recoveryProximityPlacementGroupId() {
         return Optional.ofNullable(this.recoveryProximityPlacementGroupId);
     }
@@ -377,6 +502,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="rpoInSeconds")
     private @Nullable Double rpoInSeconds;
 
+    /**
+     * @return The last RPO value in seconds.
+     * 
+     */
     public Optional<Double> rpoInSeconds() {
         return Optional.ofNullable(this.rpoInSeconds);
     }
@@ -388,6 +517,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="selectedRecoveryAzureNetworkId")
     private @Nullable String selectedRecoveryAzureNetworkId;
 
+    /**
+     * @return The recovery virtual network.
+     * 
+     */
     public Optional<String> selectedRecoveryAzureNetworkId() {
         return Optional.ofNullable(this.selectedRecoveryAzureNetworkId);
     }
@@ -399,6 +532,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="selectedTfoAzureNetworkId")
     private @Nullable String selectedTfoAzureNetworkId;
 
+    /**
+     * @return The test failover virtual network.
+     * 
+     */
     public Optional<String> selectedTfoAzureNetworkId() {
         return Optional.ofNullable(this.selectedTfoAzureNetworkId);
     }
@@ -410,6 +547,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="testFailoverRecoveryFabricObjectId")
     private @Nullable String testFailoverRecoveryFabricObjectId;
 
+    /**
+     * @return The test failover fabric object Id.
+     * 
+     */
     public Optional<String> testFailoverRecoveryFabricObjectId() {
         return Optional.ofNullable(this.testFailoverRecoveryFabricObjectId);
     }
@@ -421,6 +562,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="tfoAzureVMName")
     private @Nullable String tfoAzureVMName;
 
+    /**
+     * @return The test failover VM name.
+     * 
+     */
     public Optional<String> tfoAzureVMName() {
         return Optional.ofNullable(this.tfoAzureVMName);
     }
@@ -432,6 +577,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="unprotectedDisks")
     private @Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks;
 
+    /**
+     * @return The list of unprotected disks.
+     * 
+     */
     public Optional<List<A2AUnprotectedDiskDetailsResponse>> unprotectedDisks() {
         return Optional.ofNullable(this.unprotectedDisks);
     }
@@ -443,6 +592,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmEncryptionType", required=true)
     private String vmEncryptionType;
 
+    /**
+     * @return The encryption type of the VM.
+     * 
+     */
     public String vmEncryptionType() {
         return this.vmEncryptionType;
     }
@@ -454,6 +607,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmNics")
     private @Nullable List<VMNicDetailsResponse> vmNics;
 
+    /**
+     * @return The virtual machine nic details.
+     * 
+     */
     public Optional<List<VMNicDetailsResponse>> vmNics() {
         return Optional.ofNullable(this.vmNics);
     }
@@ -465,6 +622,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmProtectionState")
     private @Nullable String vmProtectionState;
 
+    /**
+     * @return The protection state for the vm.
+     * 
+     */
     public Optional<String> vmProtectionState() {
         return Optional.ofNullable(this.vmProtectionState);
     }
@@ -476,6 +637,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmProtectionStateDescription")
     private @Nullable String vmProtectionStateDescription;
 
+    /**
+     * @return The protection state description for the vm.
+     * 
+     */
     public Optional<String> vmProtectionStateDescription() {
         return Optional.ofNullable(this.vmProtectionStateDescription);
     }
@@ -487,6 +652,10 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
     @Import(name="vmSyncedConfigDetails")
     private @Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails;
 
+    /**
+     * @return The synced configuration details.
+     * 
+     */
     public Optional<AzureToAzureVmSyncedConfigDetailsResponse> vmSyncedConfigDetails() {
         return Optional.ofNullable(this.vmSyncedConfigDetails);
     }
@@ -556,227 +725,504 @@ public final class A2AReplicationDetailsResponse extends com.pulumi.resources.In
             $ = new A2AReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersion The agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersion(@Nullable String agentVersion) {
             $.agentVersion = agentVersion;
             return this;
         }
 
+        /**
+         * @param fabricObjectId The fabric specific object Id of the virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricObjectId(@Nullable String fabricObjectId) {
             $.fabricObjectId = fabricObjectId;
             return this;
         }
 
+        /**
+         * @param initialPrimaryFabricLocation The initial primary fabric location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialPrimaryFabricLocation(String initialPrimaryFabricLocation) {
             $.initialPrimaryFabricLocation = initialPrimaryFabricLocation;
             return this;
         }
 
+        /**
+         * @param initialPrimaryZone The initial primary availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialPrimaryZone(String initialPrimaryZone) {
             $.initialPrimaryZone = initialPrimaryZone;
             return this;
         }
 
+        /**
+         * @param initialRecoveryFabricLocation The initial recovery fabric location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialRecoveryFabricLocation(String initialRecoveryFabricLocation) {
             $.initialRecoveryFabricLocation = initialRecoveryFabricLocation;
             return this;
         }
 
+        /**
+         * @param initialRecoveryZone The initial recovery availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialRecoveryZone(String initialRecoveryZone) {
             $.initialRecoveryZone = initialRecoveryZone;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param isReplicationAgentUpdateRequired A value indicating whether replication agent update is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isReplicationAgentUpdateRequired(@Nullable Boolean isReplicationAgentUpdateRequired) {
             $.isReplicationAgentUpdateRequired = isReplicationAgentUpdateRequired;
             return this;
         }
 
+        /**
+         * @param lastHeartbeat The last heartbeat received from the source server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             $.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
+        /**
+         * @param lastRpoCalculatedTime The time (in UTC) when the last RPO value was calculated by Protection Service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRpoCalculatedTime(@Nullable String lastRpoCalculatedTime) {
             $.lastRpoCalculatedTime = lastRpoCalculatedTime;
             return this;
         }
 
+        /**
+         * @param lifecycleId An id associated with the PE that survives actions like switch protection which change the backing PE/CPE objects internally.The lifecycle id gets carried forward to have a link/continuity in being able to have an Id that denotes the &#34;same&#34; protected item even though other internal Ids/ARM Id might be changing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lifecycleId(@Nullable String lifecycleId) {
             $.lifecycleId = lifecycleId;
             return this;
         }
 
+        /**
+         * @param managementId The management Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementId(@Nullable String managementId) {
             $.managementId = managementId;
             return this;
         }
 
+        /**
+         * @param monitoringJobType The type of the monitoring job. The progress is contained in MonitoringPercentageCompletion property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringJobType(@Nullable String monitoringJobType) {
             $.monitoringJobType = monitoringJobType;
             return this;
         }
 
+        /**
+         * @param monitoringPercentageCompletion The percentage of the monitoring job. The type of the monitoring job is defined by MonitoringJobType property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringPercentageCompletion(@Nullable Integer monitoringPercentageCompletion) {
             $.monitoringPercentageCompletion = monitoringPercentageCompletion;
             return this;
         }
 
+        /**
+         * @param multiVmGroupCreateOption Whether Multi VM group is auto created or specified by user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupCreateOption(@Nullable String multiVmGroupCreateOption) {
             $.multiVmGroupCreateOption = multiVmGroupCreateOption;
             return this;
         }
 
+        /**
+         * @param multiVmGroupId The multi vm group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupId(@Nullable String multiVmGroupId) {
             $.multiVmGroupId = multiVmGroupId;
             return this;
         }
 
+        /**
+         * @param multiVmGroupName The multi vm group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(@Nullable String multiVmGroupName) {
             $.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
+        /**
+         * @param osType The type of operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param primaryFabricLocation Primary fabric location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryFabricLocation(@Nullable String primaryFabricLocation) {
             $.primaryFabricLocation = primaryFabricLocation;
             return this;
         }
 
+        /**
+         * @param protectedDisks The list of protected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedDisks(@Nullable List<A2AProtectedDiskDetailsResponse> protectedDisks) {
             $.protectedDisks = protectedDisks;
             return this;
         }
 
+        /**
+         * @param protectedDisks The list of protected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedDisks(A2AProtectedDiskDetailsResponse... protectedDisks) {
             return protectedDisks(List.of(protectedDisks));
         }
 
+        /**
+         * @param protectedManagedDisks The list of protected managed disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedManagedDisks(@Nullable List<A2AProtectedManagedDiskDetailsResponse> protectedManagedDisks) {
             $.protectedManagedDisks = protectedManagedDisks;
             return this;
         }
 
+        /**
+         * @param protectedManagedDisks The list of protected managed disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedManagedDisks(A2AProtectedManagedDiskDetailsResponse... protectedManagedDisks) {
             return protectedManagedDisks(List.of(protectedManagedDisks));
         }
 
+        /**
+         * @param recoveryAvailabilitySet The recovery availability set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAvailabilitySet(@Nullable String recoveryAvailabilitySet) {
             $.recoveryAvailabilitySet = recoveryAvailabilitySet;
             return this;
         }
 
+        /**
+         * @param recoveryAvailabilityZone The recovery availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAvailabilityZone(@Nullable String recoveryAvailabilityZone) {
             $.recoveryAvailabilityZone = recoveryAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param recoveryAzureResourceGroupId The recovery resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureResourceGroupId(@Nullable String recoveryAzureResourceGroupId) {
             $.recoveryAzureResourceGroupId = recoveryAzureResourceGroupId;
             return this;
         }
 
+        /**
+         * @param recoveryAzureVMName The name of recovery virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureVMName(@Nullable String recoveryAzureVMName) {
             $.recoveryAzureVMName = recoveryAzureVMName;
             return this;
         }
 
+        /**
+         * @param recoveryAzureVMSize The size of recovery virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryAzureVMSize(@Nullable String recoveryAzureVMSize) {
             $.recoveryAzureVMSize = recoveryAzureVMSize;
             return this;
         }
 
+        /**
+         * @param recoveryBootDiagStorageAccountId The recovery boot diagnostic storage account Arm Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryBootDiagStorageAccountId(@Nullable String recoveryBootDiagStorageAccountId) {
             $.recoveryBootDiagStorageAccountId = recoveryBootDiagStorageAccountId;
             return this;
         }
 
+        /**
+         * @param recoveryCloudService The recovery cloud service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryCloudService(@Nullable String recoveryCloudService) {
             $.recoveryCloudService = recoveryCloudService;
             return this;
         }
 
+        /**
+         * @param recoveryFabricLocation The recovery fabric location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricLocation(@Nullable String recoveryFabricLocation) {
             $.recoveryFabricLocation = recoveryFabricLocation;
             return this;
         }
 
+        /**
+         * @param recoveryFabricObjectId The recovery fabric object Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryFabricObjectId(@Nullable String recoveryFabricObjectId) {
             $.recoveryFabricObjectId = recoveryFabricObjectId;
             return this;
         }
 
+        /**
+         * @param recoveryProximityPlacementGroupId The recovery proximity placement group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryProximityPlacementGroupId(@Nullable String recoveryProximityPlacementGroupId) {
             $.recoveryProximityPlacementGroupId = recoveryProximityPlacementGroupId;
             return this;
         }
 
+        /**
+         * @param rpoInSeconds The last RPO value in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpoInSeconds(@Nullable Double rpoInSeconds) {
             $.rpoInSeconds = rpoInSeconds;
             return this;
         }
 
+        /**
+         * @param selectedRecoveryAzureNetworkId The recovery virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedRecoveryAzureNetworkId(@Nullable String selectedRecoveryAzureNetworkId) {
             $.selectedRecoveryAzureNetworkId = selectedRecoveryAzureNetworkId;
             return this;
         }
 
+        /**
+         * @param selectedTfoAzureNetworkId The test failover virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedTfoAzureNetworkId(@Nullable String selectedTfoAzureNetworkId) {
             $.selectedTfoAzureNetworkId = selectedTfoAzureNetworkId;
             return this;
         }
 
+        /**
+         * @param testFailoverRecoveryFabricObjectId The test failover fabric object Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testFailoverRecoveryFabricObjectId(@Nullable String testFailoverRecoveryFabricObjectId) {
             $.testFailoverRecoveryFabricObjectId = testFailoverRecoveryFabricObjectId;
             return this;
         }
 
+        /**
+         * @param tfoAzureVMName The test failover VM name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoAzureVMName(@Nullable String tfoAzureVMName) {
             $.tfoAzureVMName = tfoAzureVMName;
             return this;
         }
 
+        /**
+         * @param unprotectedDisks The list of unprotected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unprotectedDisks(@Nullable List<A2AUnprotectedDiskDetailsResponse> unprotectedDisks) {
             $.unprotectedDisks = unprotectedDisks;
             return this;
         }
 
+        /**
+         * @param unprotectedDisks The list of unprotected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unprotectedDisks(A2AUnprotectedDiskDetailsResponse... unprotectedDisks) {
             return unprotectedDisks(List.of(unprotectedDisks));
         }
 
+        /**
+         * @param vmEncryptionType The encryption type of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmEncryptionType(String vmEncryptionType) {
             $.vmEncryptionType = vmEncryptionType;
             return this;
         }
 
+        /**
+         * @param vmNics The virtual machine nic details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(@Nullable List<VMNicDetailsResponse> vmNics) {
             $.vmNics = vmNics;
             return this;
         }
 
+        /**
+         * @param vmNics The virtual machine nic details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(VMNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
 
+        /**
+         * @param vmProtectionState The protection state for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProtectionState(@Nullable String vmProtectionState) {
             $.vmProtectionState = vmProtectionState;
             return this;
         }
 
+        /**
+         * @param vmProtectionStateDescription The protection state description for the vm.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProtectionStateDescription(@Nullable String vmProtectionStateDescription) {
             $.vmProtectionStateDescription = vmProtectionStateDescription;
             return this;
         }
 
+        /**
+         * @param vmSyncedConfigDetails The synced configuration details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSyncedConfigDetails(@Nullable AzureToAzureVmSyncedConfigDetailsResponse vmSyncedConfigDetails) {
             $.vmSyncedConfigDetails = vmSyncedConfigDetails;
             return this;

@@ -25,6 +25,10 @@ public final class LabelingJobInstructionsResponse extends com.pulumi.resources.
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return The link to a page with detailed labeling instructions for labelers.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -53,6 +57,12 @@ public final class LabelingJobInstructionsResponse extends com.pulumi.resources.
             $ = new LabelingJobInstructionsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param uri The link to a page with detailed labeling instructions for labelers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

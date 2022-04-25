@@ -26,6 +26,10 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="endpointName")
     private @Nullable Output<String> endpointName;
 
+    /**
+     * @return Name of Endpoint Resource.
+     * 
+     */
     public Optional<Output<String>> endpointName() {
         return Optional.ofNullable(this.endpointName);
     }
@@ -37,6 +41,10 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="properties", required=true)
     private Output<Object> properties;
 
+    /**
+     * @return DigitalTwinsInstance endpoint resource properties.
+     * 
+     */
     public Output<Object> properties() {
         return this.properties;
     }
@@ -48,6 +56,10 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the DigitalTwinsInstance.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,6 +71,10 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the DigitalTwinsInstance.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -90,38 +106,86 @@ public final class DigitalTwinsEndpointArgs extends com.pulumi.resources.Resourc
             $ = new DigitalTwinsEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpointName Name of Endpoint Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(@Nullable Output<String> endpointName) {
             $.endpointName = endpointName;
             return this;
         }
 
+        /**
+         * @param endpointName Name of Endpoint Resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointName(String endpointName) {
             return endpointName(Output.of(endpointName));
         }
 
+        /**
+         * @param properties DigitalTwinsInstance endpoint resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties DigitalTwinsInstance endpoint resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

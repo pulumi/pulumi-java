@@ -17,77 +17,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetHanaInstanceResult {
     /**
-     * Specifies the HANA instance unique ID.
+     * @return Specifies the HANA instance unique ID.
      * 
      */
     private final String hanaInstanceId;
     /**
-     * Specifies the hardware settings for the HANA instance.
+     * @return Specifies the hardware settings for the HANA instance.
      * 
      */
     private final @Nullable HardwareProfileResponse hardwareProfile;
     /**
-     * Hardware revision of a HANA instance
+     * @return Hardware revision of a HANA instance
      * 
      */
     private final String hwRevision;
     /**
-     * Resource ID
+     * @return Resource ID
      * 
      */
     private final String id;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Specifies the network settings for the HANA instance.
+     * @return Specifies the network settings for the HANA instance.
      * 
      */
     private final @Nullable NetworkProfileResponse networkProfile;
     /**
-     * Specifies the operating system settings for the HANA instance.
+     * @return Specifies the operating system settings for the HANA instance.
      * 
      */
     private final @Nullable OSProfileResponse osProfile;
     /**
-     * ARM ID of another HanaInstance that will share a network with this HanaInstance
+     * @return ARM ID of another HanaInstance that will share a network with this HanaInstance
      * 
      */
     private final @Nullable String partnerNodeId;
     /**
-     * Resource power state
+     * @return Resource power state
      * 
      */
     private final String powerState;
     /**
-     * State of provisioning of the HanaInstance
+     * @return State of provisioning of the HanaInstance
      * 
      */
     private final String provisioningState;
     /**
-     * Resource proximity placement group
+     * @return Resource proximity placement group
      * 
      */
     private final String proximityPlacementGroup;
     /**
-     * Specifies the storage settings for the HANA instance disks.
+     * @return Specifies the storage settings for the HANA instance disks.
      * 
      */
     private final @Nullable StorageProfileResponse storageProfile;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -127,107 +127,107 @@ public final class GetHanaInstanceResult {
     }
 
     /**
-     * Specifies the HANA instance unique ID.
+     * @return Specifies the HANA instance unique ID.
      * 
-    */
+     */
     public String hanaInstanceId() {
         return this.hanaInstanceId;
     }
     /**
-     * Specifies the hardware settings for the HANA instance.
+     * @return Specifies the hardware settings for the HANA instance.
      * 
-    */
+     */
     public Optional<HardwareProfileResponse> hardwareProfile() {
         return Optional.ofNullable(this.hardwareProfile);
     }
     /**
-     * Hardware revision of a HANA instance
+     * @return Hardware revision of a HANA instance
      * 
-    */
+     */
     public String hwRevision() {
         return this.hwRevision;
     }
     /**
-     * Resource ID
+     * @return Resource ID
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Specifies the network settings for the HANA instance.
+     * @return Specifies the network settings for the HANA instance.
      * 
-    */
+     */
     public Optional<NetworkProfileResponse> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
     /**
-     * Specifies the operating system settings for the HANA instance.
+     * @return Specifies the operating system settings for the HANA instance.
      * 
-    */
+     */
     public Optional<OSProfileResponse> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
     /**
-     * ARM ID of another HanaInstance that will share a network with this HanaInstance
+     * @return ARM ID of another HanaInstance that will share a network with this HanaInstance
      * 
-    */
+     */
     public Optional<String> partnerNodeId() {
         return Optional.ofNullable(this.partnerNodeId);
     }
     /**
-     * Resource power state
+     * @return Resource power state
      * 
-    */
+     */
     public String powerState() {
         return this.powerState;
     }
     /**
-     * State of provisioning of the HanaInstance
+     * @return State of provisioning of the HanaInstance
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource proximity placement group
+     * @return Resource proximity placement group
      * 
-    */
+     */
     public String proximityPlacementGroup() {
         return this.proximityPlacementGroup;
     }
     /**
-     * Specifies the storage settings for the HANA instance disks.
+     * @return Specifies the storage settings for the HANA instance disks.
      * 
-    */
+     */
     public Optional<StorageProfileResponse> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

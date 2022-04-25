@@ -28,6 +28,10 @@ public final class AmazonS3CompatibleLocationArgs extends com.pulumi.resources.R
     @Import(name="bucketName")
     private @Nullable Output<Object> bucketName;
 
+    /**
+     * @return Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Output<Object>> bucketName() {
         return Optional.ofNullable(this.bucketName);
     }
@@ -39,6 +43,10 @@ public final class AmazonS3CompatibleLocationArgs extends com.pulumi.resources.R
     @Import(name="fileName")
     private @Nullable Output<Object> fileName;
 
+    /**
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -50,6 +58,10 @@ public final class AmazonS3CompatibleLocationArgs extends com.pulumi.resources.R
     @Import(name="folderPath")
     private @Nullable Output<Object> folderPath;
 
+    /**
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Output<Object>> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -62,6 +74,11 @@ public final class AmazonS3CompatibleLocationArgs extends com.pulumi.resources.R
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of dataset storage location.
+     * Expected value is &#39;AmazonS3CompatibleLocation&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -73,6 +90,10 @@ public final class AmazonS3CompatibleLocationArgs extends com.pulumi.resources.R
     @Import(name="version")
     private @Nullable Output<Object> version;
 
+    /**
+     * @return Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -105,47 +126,109 @@ public final class AmazonS3CompatibleLocationArgs extends com.pulumi.resources.R
             $ = new AmazonS3CompatibleLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketName Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(@Nullable Output<Object> bucketName) {
             $.bucketName = bucketName;
             return this;
         }
 
+        /**
+         * @param bucketName Specify the bucketName of Amazon S3 Compatible. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketName(Object bucketName) {
             return bucketName(Output.of(bucketName));
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Output<Object> fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(Object fileName) {
             return fileName(Output.of(fileName));
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(Object folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;AmazonS3CompatibleLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;AmazonS3CompatibleLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param version Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<Object> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Specify the version of Amazon S3 Compatible. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Object version) {
             return version(Output.of(version));
         }

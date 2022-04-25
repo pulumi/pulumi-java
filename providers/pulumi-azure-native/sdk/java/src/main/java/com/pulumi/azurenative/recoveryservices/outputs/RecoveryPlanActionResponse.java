@@ -15,22 +15,22 @@ import java.util.Objects;
 @CustomType
 public final class RecoveryPlanActionResponse {
     /**
-     * The action name.
+     * @return The action name.
      * 
      */
     private final String actionName;
     /**
-     * The custom details.
+     * @return The custom details.
      * 
      */
     private final Object customDetails;
     /**
-     * The list of failover directions.
+     * @return The list of failover directions.
      * 
      */
     private final List<String> failoverDirections;
     /**
-     * The list of failover types.
+     * @return The list of failover types.
      * 
      */
     private final List<String> failoverTypes;
@@ -48,30 +48,30 @@ public final class RecoveryPlanActionResponse {
     }
 
     /**
-     * The action name.
+     * @return The action name.
      * 
-    */
+     */
     public String actionName() {
         return this.actionName;
     }
     /**
-     * The custom details.
+     * @return The custom details.
      * 
-    */
+     */
     public Object customDetails() {
         return this.customDetails;
     }
     /**
-     * The list of failover directions.
+     * @return The list of failover directions.
      * 
-    */
+     */
     public List<String> failoverDirections() {
         return this.failoverDirections;
     }
     /**
-     * The list of failover types.
+     * @return The list of failover types.
      * 
-    */
+     */
     public List<String> failoverTypes() {
         return this.failoverTypes;
     }

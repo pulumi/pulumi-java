@@ -25,6 +25,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="protocol", required=true)
     private String protocol;
 
+    /**
+     * @return The protocol used to connect to the target.
+     * 
+     */
     public String protocol() {
         return this.protocol;
     }
@@ -36,6 +40,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The type of the resource.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -47,6 +55,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="sessionDurationInMins", required=true)
     private Double sessionDurationInMins;
 
+    /**
+     * @return Duration in mins the session has been active.
+     * 
+     */
     public Double sessionDurationInMins() {
         return this.sessionDurationInMins;
     }
@@ -58,6 +70,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="sessionId", required=true)
     private String sessionId;
 
+    /**
+     * @return A unique id for the session.
+     * 
+     */
     public String sessionId() {
         return this.sessionId;
     }
@@ -69,6 +85,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="startTime", required=true)
     private Object startTime;
 
+    /**
+     * @return The time when the session started.
+     * 
+     */
     public Object startTime() {
         return this.startTime;
     }
@@ -80,6 +100,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="targetHostName", required=true)
     private String targetHostName;
 
+    /**
+     * @return The host name of the target.
+     * 
+     */
     public String targetHostName() {
         return this.targetHostName;
     }
@@ -91,6 +115,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="targetIpAddress", required=true)
     private String targetIpAddress;
 
+    /**
+     * @return The IP Address of the target.
+     * 
+     */
     public String targetIpAddress() {
         return this.targetIpAddress;
     }
@@ -102,6 +130,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="targetResourceGroup", required=true)
     private String targetResourceGroup;
 
+    /**
+     * @return The resource group of the target.
+     * 
+     */
     public String targetResourceGroup() {
         return this.targetResourceGroup;
     }
@@ -113,6 +145,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="targetResourceId", required=true)
     private String targetResourceId;
 
+    /**
+     * @return The resource id of the target.
+     * 
+     */
     public String targetResourceId() {
         return this.targetResourceId;
     }
@@ -124,6 +160,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="targetSubscriptionId", required=true)
     private String targetSubscriptionId;
 
+    /**
+     * @return The subscription id for the target virtual machine.
+     * 
+     */
     public String targetSubscriptionId() {
         return this.targetSubscriptionId;
     }
@@ -135,6 +175,10 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return The user name who is active on this session.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -173,56 +217,122 @@ public final class BastionActiveSessionResponse extends com.pulumi.resources.Inv
             $ = new BastionActiveSessionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param protocol The protocol used to connect to the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param resourceType The type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param sessionDurationInMins Duration in mins the session has been active.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionDurationInMins(Double sessionDurationInMins) {
             $.sessionDurationInMins = sessionDurationInMins;
             return this;
         }
 
+        /**
+         * @param sessionId A unique id for the session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionId(String sessionId) {
             $.sessionId = sessionId;
             return this;
         }
 
+        /**
+         * @param startTime The time when the session started.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Object startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param targetHostName The host name of the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetHostName(String targetHostName) {
             $.targetHostName = targetHostName;
             return this;
         }
 
+        /**
+         * @param targetIpAddress The IP Address of the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetIpAddress(String targetIpAddress) {
             $.targetIpAddress = targetIpAddress;
             return this;
         }
 
+        /**
+         * @param targetResourceGroup The resource group of the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGroup(String targetResourceGroup) {
             $.targetResourceGroup = targetResourceGroup;
             return this;
         }
 
+        /**
+         * @param targetResourceId The resource id of the target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceId(String targetResourceId) {
             $.targetResourceId = targetResourceId;
             return this;
         }
 
+        /**
+         * @param targetSubscriptionId The subscription id for the target virtual machine.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSubscriptionId(String targetSubscriptionId) {
             $.targetSubscriptionId = targetSubscriptionId;
             return this;
         }
 
+        /**
+         * @param userName The user name who is active on this session.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

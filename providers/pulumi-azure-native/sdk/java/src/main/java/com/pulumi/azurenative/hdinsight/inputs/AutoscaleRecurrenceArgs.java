@@ -28,6 +28,10 @@ public final class AutoscaleRecurrenceArgs extends com.pulumi.resources.Resource
     @Import(name="schedule")
     private @Nullable Output<List<AutoscaleScheduleArgs>> schedule;
 
+    /**
+     * @return Array of schedule-based autoscale rules
+     * 
+     */
     public Optional<Output<List<AutoscaleScheduleArgs>>> schedule() {
         return Optional.ofNullable(this.schedule);
     }
@@ -39,6 +43,10 @@ public final class AutoscaleRecurrenceArgs extends com.pulumi.resources.Resource
     @Import(name="timeZone")
     private @Nullable Output<String> timeZone;
 
+    /**
+     * @return The time zone for the autoscale schedule times
+     * 
+     */
     public Optional<Output<String>> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -68,24 +76,54 @@ public final class AutoscaleRecurrenceArgs extends com.pulumi.resources.Resource
             $ = new AutoscaleRecurrenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param schedule Array of schedule-based autoscale rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(@Nullable Output<List<AutoscaleScheduleArgs>> schedule) {
             $.schedule = schedule;
             return this;
         }
 
+        /**
+         * @param schedule Array of schedule-based autoscale rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(List<AutoscaleScheduleArgs> schedule) {
             return schedule(Output.of(schedule));
         }
 
+        /**
+         * @param schedule Array of schedule-based autoscale rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedule(AutoscaleScheduleArgs... schedule) {
             return schedule(List.of(schedule));
         }
 
+        /**
+         * @param timeZone The time zone for the autoscale schedule times
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable Output<String> timeZone) {
             $.timeZone = timeZone;
             return this;
         }
 
+        /**
+         * @param timeZone The time zone for the autoscale schedule times
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(String timeZone) {
             return timeZone(Output.of(timeZone));
         }

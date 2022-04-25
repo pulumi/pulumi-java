@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SharePointOnlineListSourceResponse {
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object httpRequestTimeout;
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
+     * @return The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object query;
     /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object sourceRetryCount;
     /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object sourceRetryWait;
     /**
-     * Copy source type.
+     * @return Copy source type.
      * Expected value is &#39;SharePointOnlineListSource&#39;.
      * 
      */
@@ -68,52 +68,52 @@ public final class SharePointOnlineListSourceResponse {
     }
 
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return The wait time to get a response from SharePoint Online. Default value is 5 minutes (00:05:00). Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> httpRequestTimeout() {
         return Optional.ofNullable(this.httpRequestTimeout);
     }
     /**
-     * The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
+     * @return The OData query to filter the data in SharePoint Online list. For example, &#34;$top=1&#34;. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> query() {
         return Optional.ofNullable(this.query);
     }
     /**
-     * Source retry count. Type: integer (or Expression with resultType integer).
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
     /**
-     * Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
     /**
-     * Copy source type.
+     * @return Copy source type.
      * Expected value is &#39;SharePointOnlineListSource&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

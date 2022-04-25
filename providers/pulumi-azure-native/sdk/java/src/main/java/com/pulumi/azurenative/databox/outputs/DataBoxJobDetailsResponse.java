@@ -27,83 +27,83 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DataBoxJobDetailsResponse {
     /**
-     * Shared access key to download the chain of custody logs
+     * @return Shared access key to download the chain of custody logs
      * 
      */
     private final String chainOfCustodySasKey;
     /**
-     * Contact details for notification and shipping.
+     * @return Contact details for notification and shipping.
      * 
      */
     private final ContactDetailsResponse contactDetails;
     /**
-     * List of copy log details.
+     * @return List of copy log details.
      * 
      */
     private final List<Object> copyLogDetails;
     /**
-     * Copy progress per storage account.
+     * @return Copy progress per storage account.
      * 
      */
     private final List<CopyProgressResponse> copyProgress;
     /**
-     * Details of the data to be exported from azure.
+     * @return Details of the data to be exported from azure.
      * 
      */
     private final @Nullable List<DataExportDetailsResponse> dataExportDetails;
     /**
-     * Details of the data to be imported into azure.
+     * @return Details of the data to be imported into azure.
      * 
      */
     private final @Nullable List<DataImportDetailsResponse> dataImportDetails;
     /**
-     * Delivery package shipping details.
+     * @return Delivery package shipping details.
      * 
      */
     private final PackageShippingDetailsResponse deliveryPackage;
     /**
-     * Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+     * @return Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
      * 
      */
     private final @Nullable String devicePassword;
     /**
-     * The expected size of the data, which needs to be transferred in this job, in terabytes.
+     * @return The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
      */
     private final @Nullable Integer expectedDataSizeInTeraBytes;
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBox&#39;.
      * 
      */
     private final String jobDetailsType;
     /**
-     * List of stages that run in the job.
+     * @return List of stages that run in the job.
      * 
      */
     private final List<JobStagesResponse> jobStages;
     /**
-     * Details about which key encryption type is being used.
+     * @return Details about which key encryption type is being used.
      * 
      */
     private final @Nullable KeyEncryptionKeyResponse keyEncryptionKey;
     /**
-     * Preferences for the order.
+     * @return Preferences for the order.
      * 
      */
     private final @Nullable PreferencesResponse preferences;
     /**
-     * Return package shipping details.
+     * @return Return package shipping details.
      * 
      */
     private final PackageShippingDetailsResponse returnPackage;
     /**
-     * Shared access key to download the return shipment label
+     * @return Shared access key to download the return shipment label
      * 
      */
     private final String reverseShipmentLabelSasKey;
     /**
-     * Shipping address of the customer.
+     * @return Shipping address of the customer.
      * 
      */
     private final @Nullable ShippingAddressResponse shippingAddress;
@@ -145,115 +145,115 @@ public final class DataBoxJobDetailsResponse {
     }
 
     /**
-     * Shared access key to download the chain of custody logs
+     * @return Shared access key to download the chain of custody logs
      * 
-    */
+     */
     public String chainOfCustodySasKey() {
         return this.chainOfCustodySasKey;
     }
     /**
-     * Contact details for notification and shipping.
+     * @return Contact details for notification and shipping.
      * 
-    */
+     */
     public ContactDetailsResponse contactDetails() {
         return this.contactDetails;
     }
     /**
-     * List of copy log details.
+     * @return List of copy log details.
      * 
-    */
+     */
     public List<Object> copyLogDetails() {
         return this.copyLogDetails;
     }
     /**
-     * Copy progress per storage account.
+     * @return Copy progress per storage account.
      * 
-    */
+     */
     public List<CopyProgressResponse> copyProgress() {
         return this.copyProgress;
     }
     /**
-     * Details of the data to be exported from azure.
+     * @return Details of the data to be exported from azure.
      * 
-    */
+     */
     public List<DataExportDetailsResponse> dataExportDetails() {
         return this.dataExportDetails == null ? List.of() : this.dataExportDetails;
     }
     /**
-     * Details of the data to be imported into azure.
+     * @return Details of the data to be imported into azure.
      * 
-    */
+     */
     public List<DataImportDetailsResponse> dataImportDetails() {
         return this.dataImportDetails == null ? List.of() : this.dataImportDetails;
     }
     /**
-     * Delivery package shipping details.
+     * @return Delivery package shipping details.
      * 
-    */
+     */
     public PackageShippingDetailsResponse deliveryPackage() {
         return this.deliveryPackage;
     }
     /**
-     * Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
+     * @return Set Device password for unlocking Databox. Should not be passed for TransferType:ExportFromAzure jobs. If this is not passed, the service will generate password itself. This will not be returned in Get Call. Password Requirements :  Password must be minimum of 12 and maximum of 64 characters. Password must have at least one uppercase alphabet, one number and one special character. Password cannot have the following characters : IilLoO0 Password can have only alphabets, numbers and these characters : @#\-$%^!+=;:_()]+
      * 
-    */
+     */
     public Optional<String> devicePassword() {
         return Optional.ofNullable(this.devicePassword);
     }
     /**
-     * The expected size of the data, which needs to be transferred in this job, in terabytes.
+     * @return The expected size of the data, which needs to be transferred in this job, in terabytes.
      * 
-    */
+     */
     public Optional<Integer> expectedDataSizeInTeraBytes() {
         return Optional.ofNullable(this.expectedDataSizeInTeraBytes);
     }
     /**
-     * Indicates the type of job details.
+     * @return Indicates the type of job details.
      * Expected value is &#39;DataBox&#39;.
      * 
-    */
+     */
     public String jobDetailsType() {
         return this.jobDetailsType;
     }
     /**
-     * List of stages that run in the job.
+     * @return List of stages that run in the job.
      * 
-    */
+     */
     public List<JobStagesResponse> jobStages() {
         return this.jobStages;
     }
     /**
-     * Details about which key encryption type is being used.
+     * @return Details about which key encryption type is being used.
      * 
-    */
+     */
     public Optional<KeyEncryptionKeyResponse> keyEncryptionKey() {
         return Optional.ofNullable(this.keyEncryptionKey);
     }
     /**
-     * Preferences for the order.
+     * @return Preferences for the order.
      * 
-    */
+     */
     public Optional<PreferencesResponse> preferences() {
         return Optional.ofNullable(this.preferences);
     }
     /**
-     * Return package shipping details.
+     * @return Return package shipping details.
      * 
-    */
+     */
     public PackageShippingDetailsResponse returnPackage() {
         return this.returnPackage;
     }
     /**
-     * Shared access key to download the return shipment label
+     * @return Shared access key to download the return shipment label
      * 
-    */
+     */
     public String reverseShipmentLabelSasKey() {
         return this.reverseShipmentLabelSasKey;
     }
     /**
-     * Shipping address of the customer.
+     * @return Shipping address of the customer.
      * 
-    */
+     */
     public Optional<ShippingAddressResponse> shippingAddress() {
         return Optional.ofNullable(this.shippingAddress);
     }

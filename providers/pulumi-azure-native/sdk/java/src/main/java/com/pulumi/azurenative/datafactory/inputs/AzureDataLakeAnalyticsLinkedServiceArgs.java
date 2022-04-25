@@ -35,6 +35,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="accountName", required=true)
     private Output<Object> accountName;
 
+    /**
+     * @return The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> accountName() {
         return this.accountName;
     }
@@ -46,6 +50,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +65,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -68,6 +80,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="dataLakeAnalyticsUri")
     private @Nullable Output<Object> dataLakeAnalyticsUri;
 
+    /**
+     * @return Azure Data Lake Analytics URI Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> dataLakeAnalyticsUri() {
         return Optional.ofNullable(this.dataLakeAnalyticsUri);
     }
@@ -79,6 +95,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -90,6 +110,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -101,6 +125,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -112,6 +140,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="resourceGroupName")
     private @Nullable Output<Object> resourceGroupName;
 
+    /**
+     * @return Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
@@ -123,6 +155,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="servicePrincipalId")
     private @Nullable Output<Object> servicePrincipalId;
 
+    /**
+     * @return The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
@@ -134,6 +170,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="servicePrincipalKey")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
+    /**
+     * @return The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
@@ -145,6 +185,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="subscriptionId")
     private @Nullable Output<Object> subscriptionId;
 
+    /**
+     * @return Data Lake Analytics account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -156,6 +200,10 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="tenant", required=true)
     private Output<Object> tenant;
 
+    /**
+     * @return The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> tenant() {
         return this.tenant;
     }
@@ -168,6 +216,11 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;AzureDataLakeAnalytics&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -208,131 +261,307 @@ public final class AzureDataLakeAnalyticsLinkedServiceArgs extends com.pulumi.re
             $ = new AzureDataLakeAnalyticsLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<Object> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The Azure Data Lake Analytics account name. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Object accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param dataLakeAnalyticsUri Azure Data Lake Analytics URI Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLakeAnalyticsUri(@Nullable Output<Object> dataLakeAnalyticsUri) {
             $.dataLakeAnalyticsUri = dataLakeAnalyticsUri;
             return this;
         }
 
+        /**
+         * @param dataLakeAnalyticsUri Azure Data Lake Analytics URI Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataLakeAnalyticsUri(Object dataLakeAnalyticsUri) {
             return dataLakeAnalyticsUri(Output.of(dataLakeAnalyticsUri));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(@Nullable Output<Object> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Data Lake Analytics account resource group name (if different from Data Factory account). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Object resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param servicePrincipalId The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalId The ID of the application used to authenticate against the Azure Data Lake Analytics account. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(Object servicePrincipalId) {
             return servicePrincipalId(Output.of(servicePrincipalId));
         }
 
+        /**
+         * @param servicePrincipalKey The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The Key of the application used to authenticate against the Azure Data Lake Analytics account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
+        /**
+         * @param subscriptionId Data Lake Analytics account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable Output<Object> subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param subscriptionId Data Lake Analytics account subscription ID (if different from Data Factory account). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(Object subscriptionId) {
             return subscriptionId(Output.of(subscriptionId));
         }
 
+        /**
+         * @param tenant The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(Output<Object> tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param tenant The name or ID of the tenant to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(Object tenant) {
             return tenant(Output.of(tenant));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureDataLakeAnalytics&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;AzureDataLakeAnalytics&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

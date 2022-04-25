@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ReportAggregationResponse {
     /**
-     * The name of the aggregation function to use.
+     * @return The name of the aggregation function to use.
      * 
      */
     private final String function;
     /**
-     * The name of the column to aggregate.
+     * @return The name of the column to aggregate.
      * 
      */
     private final String name;
@@ -29,16 +29,16 @@ public final class ReportAggregationResponse {
     }
 
     /**
-     * The name of the aggregation function to use.
+     * @return The name of the aggregation function to use.
      * 
-    */
+     */
     public String function() {
         return this.function;
     }
     /**
-     * The name of the column to aggregate.
+     * @return The name of the column to aggregate.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

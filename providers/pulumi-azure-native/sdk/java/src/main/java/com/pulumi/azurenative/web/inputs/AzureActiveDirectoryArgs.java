@@ -29,6 +29,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="enabled")
     private @Nullable Output<Boolean> enabled;
 
+    /**
+     * @return &lt;code&gt;false&lt;/code&gt; if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -42,6 +46,12 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="isAutoProvisioned")
     private @Nullable Output<Boolean> isAutoProvisioned;
 
+    /**
+     * @return Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+     * This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+     * read or write to this property.
+     * 
+     */
     public Optional<Output<Boolean>> isAutoProvisioned() {
         return Optional.ofNullable(this.isAutoProvisioned);
     }
@@ -53,6 +63,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="login")
     private @Nullable Output<AzureActiveDirectoryLoginArgs> login;
 
+    /**
+     * @return The configuration settings of the Azure Active Directory login flow.
+     * 
+     */
     public Optional<Output<AzureActiveDirectoryLoginArgs>> login() {
         return Optional.ofNullable(this.login);
     }
@@ -64,6 +78,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="registration")
     private @Nullable Output<AzureActiveDirectoryRegistrationArgs> registration;
 
+    /**
+     * @return The configuration settings of the Azure Active Directory app registration.
+     * 
+     */
     public Optional<Output<AzureActiveDirectoryRegistrationArgs>> registration() {
         return Optional.ofNullable(this.registration);
     }
@@ -75,6 +93,10 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
     @Import(name="validation")
     private @Nullable Output<AzureActiveDirectoryValidationArgs> validation;
 
+    /**
+     * @return The configuration settings of the Azure Active Directory token validation flow.
+     * 
+     */
     public Optional<Output<AzureActiveDirectoryValidationArgs>> validation() {
         return Optional.ofNullable(this.validation);
     }
@@ -107,47 +129,111 @@ public final class AzureActiveDirectoryArgs extends com.pulumi.resources.Resourc
             $ = new AzureActiveDirectoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled &lt;code&gt;false&lt;/code&gt; if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled &lt;code&gt;false&lt;/code&gt; if the Azure Active Directory provider should not be enabled despite the set registration; otherwise, &lt;code&gt;true&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }
 
+        /**
+         * @param isAutoProvisioned Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+         * This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+         * read or write to this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAutoProvisioned(@Nullable Output<Boolean> isAutoProvisioned) {
             $.isAutoProvisioned = isAutoProvisioned;
             return this;
         }
 
+        /**
+         * @param isAutoProvisioned Gets a value indicating whether the Azure AD configuration was auto-provisioned using 1st party tooling.
+         * This is an internal flag primarily intended to support the Azure Management Portal. Users should not
+         * read or write to this property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAutoProvisioned(Boolean isAutoProvisioned) {
             return isAutoProvisioned(Output.of(isAutoProvisioned));
         }
 
+        /**
+         * @param login The configuration settings of the Azure Active Directory login flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(@Nullable Output<AzureActiveDirectoryLoginArgs> login) {
             $.login = login;
             return this;
         }
 
+        /**
+         * @param login The configuration settings of the Azure Active Directory login flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder login(AzureActiveDirectoryLoginArgs login) {
             return login(Output.of(login));
         }
 
+        /**
+         * @param registration The configuration settings of the Azure Active Directory app registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registration(@Nullable Output<AzureActiveDirectoryRegistrationArgs> registration) {
             $.registration = registration;
             return this;
         }
 
+        /**
+         * @param registration The configuration settings of the Azure Active Directory app registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registration(AzureActiveDirectoryRegistrationArgs registration) {
             return registration(Output.of(registration));
         }
 
+        /**
+         * @param validation The configuration settings of the Azure Active Directory token validation flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(@Nullable Output<AzureActiveDirectoryValidationArgs> validation) {
             $.validation = validation;
             return this;
         }
 
+        /**
+         * @param validation The configuration settings of the Azure Active Directory token validation flow.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(AzureActiveDirectoryValidationArgs validation) {
             return validation(Output.of(validation));
         }

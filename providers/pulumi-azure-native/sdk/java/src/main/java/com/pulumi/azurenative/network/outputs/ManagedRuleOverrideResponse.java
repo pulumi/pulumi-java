@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedRuleOverrideResponse {
     /**
-     * Identifier for the managed rule.
+     * @return Identifier for the managed rule.
      * 
      */
     private final String ruleId;
     /**
-     * The state of the managed rule. Defaults to Disabled if not specified.
+     * @return The state of the managed rule. Defaults to Disabled if not specified.
      * 
      */
     private final @Nullable String state;
@@ -31,16 +31,16 @@ public final class ManagedRuleOverrideResponse {
     }
 
     /**
-     * Identifier for the managed rule.
+     * @return Identifier for the managed rule.
      * 
-    */
+     */
     public String ruleId() {
         return this.ruleId;
     }
     /**
-     * The state of the managed rule. Defaults to Disabled if not specified.
+     * @return The state of the managed rule. Defaults to Disabled if not specified.
      * 
-    */
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }

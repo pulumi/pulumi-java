@@ -32,6 +32,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="allowForwardedTraffic")
     private @Nullable Output<Boolean> allowForwardedTraffic;
 
+    /**
+     * @return Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+     * 
+     */
     public Optional<Output<Boolean>> allowForwardedTraffic() {
         return Optional.ofNullable(this.allowForwardedTraffic);
     }
@@ -43,6 +47,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="allowGatewayTransit")
     private @Nullable Output<Boolean> allowGatewayTransit;
 
+    /**
+     * @return If gateway links can be used in remote virtual networking to link to this virtual network.
+     * 
+     */
     public Optional<Output<Boolean>> allowGatewayTransit() {
         return Optional.ofNullable(this.allowGatewayTransit);
     }
@@ -54,6 +62,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="allowVirtualNetworkAccess")
     private @Nullable Output<Boolean> allowVirtualNetworkAccess;
 
+    /**
+     * @return Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+     * 
+     */
     public Optional<Output<Boolean>> allowVirtualNetworkAccess() {
         return Optional.ofNullable(this.allowVirtualNetworkAccess);
     }
@@ -65,6 +77,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="doNotVerifyRemoteGateways")
     private @Nullable Output<Boolean> doNotVerifyRemoteGateways;
 
+    /**
+     * @return If we need to verify the provisioning state of the remote gateway.
+     * 
+     */
     public Optional<Output<Boolean>> doNotVerifyRemoteGateways() {
         return Optional.ofNullable(this.doNotVerifyRemoteGateways);
     }
@@ -76,6 +92,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -87,6 +107,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -98,6 +122,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="peeringState")
     private @Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState;
 
+    /**
+     * @return The status of the virtual network peering.
+     * 
+     */
     public Optional<Output<Either<String,VirtualNetworkPeeringState>>> peeringState() {
         return Optional.ofNullable(this.peeringState);
     }
@@ -109,6 +137,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="remoteAddressSpace")
     private @Nullable Output<AddressSpaceArgs> remoteAddressSpace;
 
+    /**
+     * @return The reference to the remote virtual network address space.
+     * 
+     */
     public Optional<Output<AddressSpaceArgs>> remoteAddressSpace() {
         return Optional.ofNullable(this.remoteAddressSpace);
     }
@@ -120,6 +152,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="remoteBgpCommunities")
     private @Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities;
 
+    /**
+     * @return The reference to the remote virtual network&#39;s Bgp Communities.
+     * 
+     */
     public Optional<Output<VirtualNetworkBgpCommunitiesArgs>> remoteBgpCommunities() {
         return Optional.ofNullable(this.remoteBgpCommunities);
     }
@@ -131,6 +167,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="remoteVirtualNetwork")
     private @Nullable Output<SubResourceArgs> remoteVirtualNetwork;
 
+    /**
+     * @return The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
+     * 
+     */
     public Optional<Output<SubResourceArgs>> remoteVirtualNetwork() {
         return Optional.ofNullable(this.remoteVirtualNetwork);
     }
@@ -142,6 +182,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Resource type.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -153,6 +197,10 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
     @Import(name="useRemoteGateways")
     private @Nullable Output<Boolean> useRemoteGateways;
 
+    /**
+     * @return If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+     * 
+     */
     public Optional<Output<Boolean>> useRemoteGateways() {
         return Optional.ofNullable(this.useRemoteGateways);
     }
@@ -192,118 +240,274 @@ public final class VirtualNetworkPeeringArgs extends com.pulumi.resources.Resour
             $ = new VirtualNetworkPeeringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowForwardedTraffic Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowForwardedTraffic(@Nullable Output<Boolean> allowForwardedTraffic) {
             $.allowForwardedTraffic = allowForwardedTraffic;
             return this;
         }
 
+        /**
+         * @param allowForwardedTraffic Whether the forwarded traffic from the VMs in the local virtual network will be allowed/disallowed in remote virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowForwardedTraffic(Boolean allowForwardedTraffic) {
             return allowForwardedTraffic(Output.of(allowForwardedTraffic));
         }
 
+        /**
+         * @param allowGatewayTransit If gateway links can be used in remote virtual networking to link to this virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowGatewayTransit(@Nullable Output<Boolean> allowGatewayTransit) {
             $.allowGatewayTransit = allowGatewayTransit;
             return this;
         }
 
+        /**
+         * @param allowGatewayTransit If gateway links can be used in remote virtual networking to link to this virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowGatewayTransit(Boolean allowGatewayTransit) {
             return allowGatewayTransit(Output.of(allowGatewayTransit));
         }
 
+        /**
+         * @param allowVirtualNetworkAccess Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVirtualNetworkAccess(@Nullable Output<Boolean> allowVirtualNetworkAccess) {
             $.allowVirtualNetworkAccess = allowVirtualNetworkAccess;
             return this;
         }
 
+        /**
+         * @param allowVirtualNetworkAccess Whether the VMs in the local virtual network space would be able to access the VMs in remote virtual network space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowVirtualNetworkAccess(Boolean allowVirtualNetworkAccess) {
             return allowVirtualNetworkAccess(Output.of(allowVirtualNetworkAccess));
         }
 
+        /**
+         * @param doNotVerifyRemoteGateways If we need to verify the provisioning state of the remote gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotVerifyRemoteGateways(@Nullable Output<Boolean> doNotVerifyRemoteGateways) {
             $.doNotVerifyRemoteGateways = doNotVerifyRemoteGateways;
             return this;
         }
 
+        /**
+         * @param doNotVerifyRemoteGateways If we need to verify the provisioning state of the remote gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotVerifyRemoteGateways(Boolean doNotVerifyRemoteGateways) {
             return doNotVerifyRemoteGateways(Output.of(doNotVerifyRemoteGateways));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param peeringState The status of the virtual network peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringState(@Nullable Output<Either<String,VirtualNetworkPeeringState>> peeringState) {
             $.peeringState = peeringState;
             return this;
         }
 
+        /**
+         * @param peeringState The status of the virtual network peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringState(Either<String,VirtualNetworkPeeringState> peeringState) {
             return peeringState(Output.of(peeringState));
         }
 
+        /**
+         * @param peeringState The status of the virtual network peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringState(String peeringState) {
             return peeringState(Either.ofLeft(peeringState));
         }
 
+        /**
+         * @param peeringState The status of the virtual network peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringState(VirtualNetworkPeeringState peeringState) {
             return peeringState(Either.ofRight(peeringState));
         }
 
+        /**
+         * @param remoteAddressSpace The reference to the remote virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteAddressSpace(@Nullable Output<AddressSpaceArgs> remoteAddressSpace) {
             $.remoteAddressSpace = remoteAddressSpace;
             return this;
         }
 
+        /**
+         * @param remoteAddressSpace The reference to the remote virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteAddressSpace(AddressSpaceArgs remoteAddressSpace) {
             return remoteAddressSpace(Output.of(remoteAddressSpace));
         }
 
+        /**
+         * @param remoteBgpCommunities The reference to the remote virtual network&#39;s Bgp Communities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteBgpCommunities(@Nullable Output<VirtualNetworkBgpCommunitiesArgs> remoteBgpCommunities) {
             $.remoteBgpCommunities = remoteBgpCommunities;
             return this;
         }
 
+        /**
+         * @param remoteBgpCommunities The reference to the remote virtual network&#39;s Bgp Communities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteBgpCommunities(VirtualNetworkBgpCommunitiesArgs remoteBgpCommunities) {
             return remoteBgpCommunities(Output.of(remoteBgpCommunities));
         }
 
+        /**
+         * @param remoteVirtualNetwork The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVirtualNetwork(@Nullable Output<SubResourceArgs> remoteVirtualNetwork) {
             $.remoteVirtualNetwork = remoteVirtualNetwork;
             return this;
         }
 
+        /**
+         * @param remoteVirtualNetwork The reference to the remote virtual network. The remote virtual network can be in the same or different region (preview). See here to register for the preview and learn more (https://docs.microsoft.com/en-us/azure/virtual-network/virtual-network-create-peering).
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteVirtualNetwork(SubResourceArgs remoteVirtualNetwork) {
             return remoteVirtualNetwork(Output.of(remoteVirtualNetwork));
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param useRemoteGateways If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useRemoteGateways(@Nullable Output<Boolean> useRemoteGateways) {
             $.useRemoteGateways = useRemoteGateways;
             return this;
         }
 
+        /**
+         * @param useRemoteGateways If remote gateways can be used on this virtual network. If the flag is set to true, and allowGatewayTransit on remote peering is also true, virtual network will use gateways of remote virtual network for transit. Only one peering can have this flag set to true. This flag cannot be set if virtual network already has a gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useRemoteGateways(Boolean useRemoteGateways) {
             return useRemoteGateways(Output.of(useRemoteGateways));
         }

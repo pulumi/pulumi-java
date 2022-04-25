@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class QuotaInfoResponse {
     /**
-     * The cores used by the cluster.
+     * @return The cores used by the cluster.
      * 
      */
     private final @Nullable Integer coresUsed;
@@ -23,9 +23,9 @@ public final class QuotaInfoResponse {
     }
 
     /**
-     * The cores used by the cluster.
+     * @return The cores used by the cluster.
      * 
-    */
+     */
     public Optional<Integer> coresUsed() {
         return Optional.ofNullable(this.coresUsed);
     }

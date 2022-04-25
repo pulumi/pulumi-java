@@ -19,6 +19,10 @@ public final class GetConfigurationAssignmentArgs extends com.pulumi.resources.I
     @Import(name="configurationAssignmentName", required=true)
     private String configurationAssignmentName;
 
+    /**
+     * @return Configuration assignment name
+     * 
+     */
     public String configurationAssignmentName() {
         return this.configurationAssignmentName;
     }
@@ -30,6 +34,10 @@ public final class GetConfigurationAssignmentArgs extends com.pulumi.resources.I
     @Import(name="providerName", required=true)
     private String providerName;
 
+    /**
+     * @return Resource provider name
+     * 
+     */
     public String providerName() {
         return this.providerName;
     }
@@ -41,6 +49,10 @@ public final class GetConfigurationAssignmentArgs extends com.pulumi.resources.I
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource group name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetConfigurationAssignmentArgs extends com.pulumi.resources.I
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return Resource identifier
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -63,6 +79,10 @@ public final class GetConfigurationAssignmentArgs extends com.pulumi.resources.I
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -95,26 +115,56 @@ public final class GetConfigurationAssignmentArgs extends com.pulumi.resources.I
             $ = new GetConfigurationAssignmentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationAssignmentName Configuration assignment name
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationAssignmentName(String configurationAssignmentName) {
             $.configurationAssignmentName = configurationAssignmentName;
             return this;
         }
 
+        /**
+         * @param providerName Resource provider name
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName Resource identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceType Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

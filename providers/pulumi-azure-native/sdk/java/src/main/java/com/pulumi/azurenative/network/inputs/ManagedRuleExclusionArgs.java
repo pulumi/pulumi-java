@@ -27,6 +27,10 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
     @Import(name="matchVariable", required=true)
     private Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable;
 
+    /**
+     * @return The variable type to be excluded.
+     * 
+     */
     public Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable() {
         return this.matchVariable;
     }
@@ -38,6 +42,10 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
     @Import(name="selector", required=true)
     private Output<String> selector;
 
+    /**
+     * @return Selector value for which elements in the collection this exclusion applies to.
+     * 
+     */
     public Output<String> selector() {
         return this.selector;
     }
@@ -49,6 +57,10 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
     @Import(name="selectorMatchOperator", required=true)
     private Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator;
 
+    /**
+     * @return Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+     * 
+     */
     public Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator() {
         return this.selectorMatchOperator;
     }
@@ -79,45 +91,105 @@ public final class ManagedRuleExclusionArgs extends com.pulumi.resources.Resourc
             $ = new ManagedRuleExclusionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchVariable The variable type to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(Output<Either<String,ManagedRuleExclusionMatchVariable>> matchVariable) {
             $.matchVariable = matchVariable;
             return this;
         }
 
+        /**
+         * @param matchVariable The variable type to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(Either<String,ManagedRuleExclusionMatchVariable> matchVariable) {
             return matchVariable(Output.of(matchVariable));
         }
 
+        /**
+         * @param matchVariable The variable type to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(String matchVariable) {
             return matchVariable(Either.ofLeft(matchVariable));
         }
 
+        /**
+         * @param matchVariable The variable type to be excluded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(ManagedRuleExclusionMatchVariable matchVariable) {
             return matchVariable(Either.ofRight(matchVariable));
         }
 
+        /**
+         * @param selector Selector value for which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Selector value for which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param selectorMatchOperator Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(Output<Either<String,ManagedRuleExclusionSelectorMatchOperator>> selectorMatchOperator) {
             $.selectorMatchOperator = selectorMatchOperator;
             return this;
         }
 
+        /**
+         * @param selectorMatchOperator Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(Either<String,ManagedRuleExclusionSelectorMatchOperator> selectorMatchOperator) {
             return selectorMatchOperator(Output.of(selectorMatchOperator));
         }
 
+        /**
+         * @param selectorMatchOperator Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(String selectorMatchOperator) {
             return selectorMatchOperator(Either.ofLeft(selectorMatchOperator));
         }
 
+        /**
+         * @param selectorMatchOperator Comparison operator to apply to the selector when specifying which elements in the collection this exclusion applies to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectorMatchOperator(ManagedRuleExclusionSelectorMatchOperator selectorMatchOperator) {
             return selectorMatchOperator(Either.ofRight(selectorMatchOperator));
         }

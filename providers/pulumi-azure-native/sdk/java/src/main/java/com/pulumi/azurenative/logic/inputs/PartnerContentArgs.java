@@ -26,6 +26,10 @@ public final class PartnerContentArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="b2b")
     private @Nullable Output<B2BPartnerContentArgs> b2b;
 
+    /**
+     * @return The B2B partner content.
+     * 
+     */
     public Optional<Output<B2BPartnerContentArgs>> b2b() {
         return Optional.ofNullable(this.b2b);
     }
@@ -54,11 +58,23 @@ public final class PartnerContentArgs extends com.pulumi.resources.ResourceArgs 
             $ = new PartnerContentArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param b2b The B2B partner content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder b2b(@Nullable Output<B2BPartnerContentArgs> b2b) {
             $.b2b = b2b;
             return this;
         }
 
+        /**
+         * @param b2b The B2B partner content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder b2b(B2BPartnerContentArgs b2b) {
             return b2b(Output.of(b2b));
         }

@@ -21,6 +21,10 @@ public final class RCranPackageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The package name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -32,6 +36,10 @@ public final class RCranPackageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="repository")
     private @Nullable String repository;
 
+    /**
+     * @return The repository name.
+     * 
+     */
     public Optional<String> repository() {
         return Optional.ofNullable(this.repository);
     }
@@ -61,11 +69,23 @@ public final class RCranPackageResponse extends com.pulumi.resources.InvokeArgs 
             $ = new RCranPackageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The package name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param repository The repository name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repository(@Nullable String repository) {
             $.repository = repository;
             return this;

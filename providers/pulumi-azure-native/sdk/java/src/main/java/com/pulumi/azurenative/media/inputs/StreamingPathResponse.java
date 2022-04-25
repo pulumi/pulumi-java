@@ -26,6 +26,10 @@ public final class StreamingPathResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="encryptionScheme", required=true)
     private String encryptionScheme;
 
+    /**
+     * @return Encryption scheme
+     * 
+     */
     public String encryptionScheme() {
         return this.encryptionScheme;
     }
@@ -37,6 +41,10 @@ public final class StreamingPathResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="paths")
     private @Nullable List<String> paths;
 
+    /**
+     * @return Streaming paths for each protocol and encryptionScheme pair
+     * 
+     */
     public Optional<List<String>> paths() {
         return Optional.ofNullable(this.paths);
     }
@@ -48,6 +56,10 @@ public final class StreamingPathResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="streamingProtocol", required=true)
     private String streamingProtocol;
 
+    /**
+     * @return Streaming protocol
+     * 
+     */
     public String streamingProtocol() {
         return this.streamingProtocol;
     }
@@ -78,20 +90,44 @@ public final class StreamingPathResponse extends com.pulumi.resources.InvokeArgs
             $ = new StreamingPathResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionScheme Encryption scheme
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionScheme(String encryptionScheme) {
             $.encryptionScheme = encryptionScheme;
             return this;
         }
 
+        /**
+         * @param paths Streaming paths for each protocol and encryptionScheme pair
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(@Nullable List<String> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths Streaming paths for each protocol and encryptionScheme pair
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
 
+        /**
+         * @param streamingProtocol Streaming protocol
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingProtocol(String streamingProtocol) {
             $.streamingProtocol = streamingProtocol;
             return this;

@@ -16,117 +16,117 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetRoleAssignmentResult {
     /**
-     * The name of the metadata object.
+     * @return The name of the metadata object.
      * 
      */
     private final String assignmentName;
     /**
-     * Widget types set for the assignment.
+     * @return Widget types set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse conflationPolicies;
     /**
-     * Connectors set for the assignment.
+     * @return Connectors set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse connectors;
     /**
-     * Localized description for the metadata.
+     * @return Localized description for the metadata.
      * 
      */
     private final @Nullable Map<String,String> description;
     /**
-     * Localized display names for the metadata.
+     * @return Localized display names for the metadata.
      * 
      */
     private final @Nullable Map<String,String> displayName;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Interactions set for the assignment.
+     * @return Interactions set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse interactions;
     /**
-     * Kpis set for the assignment.
+     * @return Kpis set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse kpis;
     /**
-     * Links set for the assignment.
+     * @return Links set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse links;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The principals being assigned to.
+     * @return The principals being assigned to.
      * 
      */
     private final List<AssignmentPrincipalResponse> principals;
     /**
-     * Profiles set for the assignment.
+     * @return Profiles set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse profiles;
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The Role assignments set for the relationship links.
+     * @return The Role assignments set for the relationship links.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse relationshipLinks;
     /**
-     * The Role assignments set for the relationships.
+     * @return The Role assignments set for the relationships.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse relationships;
     /**
-     * Type of roles.
+     * @return Type of roles.
      * 
      */
     private final String role;
     /**
-     * The Role assignments set for the assignment.
+     * @return The Role assignments set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse roleAssignments;
     /**
-     * Sas Policies set for the assignment.
+     * @return Sas Policies set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse sasPolicies;
     /**
-     * The Role assignments set for the assignment.
+     * @return The Role assignments set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse segments;
     /**
-     * The hub name.
+     * @return The hub name.
      * 
      */
     private final String tenantId;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Views set for the assignment.
+     * @return Views set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse views;
     /**
-     * Widget types set for the assignment.
+     * @return Widget types set for the assignment.
      * 
      */
     private final @Nullable ResourceSetDescriptionResponse widgetTypes;
@@ -182,163 +182,163 @@ public final class GetRoleAssignmentResult {
     }
 
     /**
-     * The name of the metadata object.
+     * @return The name of the metadata object.
      * 
-    */
+     */
     public String assignmentName() {
         return this.assignmentName;
     }
     /**
-     * Widget types set for the assignment.
+     * @return Widget types set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> conflationPolicies() {
         return Optional.ofNullable(this.conflationPolicies);
     }
     /**
-     * Connectors set for the assignment.
+     * @return Connectors set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> connectors() {
         return Optional.ofNullable(this.connectors);
     }
     /**
-     * Localized description for the metadata.
+     * @return Localized description for the metadata.
      * 
-    */
+     */
     public Map<String,String> description() {
         return this.description == null ? Map.of() : this.description;
     }
     /**
-     * Localized display names for the metadata.
+     * @return Localized display names for the metadata.
      * 
-    */
+     */
     public Map<String,String> displayName() {
         return this.displayName == null ? Map.of() : this.displayName;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Interactions set for the assignment.
+     * @return Interactions set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> interactions() {
         return Optional.ofNullable(this.interactions);
     }
     /**
-     * Kpis set for the assignment.
+     * @return Kpis set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> kpis() {
         return Optional.ofNullable(this.kpis);
     }
     /**
-     * Links set for the assignment.
+     * @return Links set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> links() {
         return Optional.ofNullable(this.links);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The principals being assigned to.
+     * @return The principals being assigned to.
      * 
-    */
+     */
     public List<AssignmentPrincipalResponse> principals() {
         return this.principals;
     }
     /**
-     * Profiles set for the assignment.
+     * @return Profiles set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> profiles() {
         return Optional.ofNullable(this.profiles);
     }
     /**
-     * Provisioning state.
+     * @return Provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The Role assignments set for the relationship links.
+     * @return The Role assignments set for the relationship links.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> relationshipLinks() {
         return Optional.ofNullable(this.relationshipLinks);
     }
     /**
-     * The Role assignments set for the relationships.
+     * @return The Role assignments set for the relationships.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> relationships() {
         return Optional.ofNullable(this.relationships);
     }
     /**
-     * Type of roles.
+     * @return Type of roles.
      * 
-    */
+     */
     public String role() {
         return this.role;
     }
     /**
-     * The Role assignments set for the assignment.
+     * @return The Role assignments set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> roleAssignments() {
         return Optional.ofNullable(this.roleAssignments);
     }
     /**
-     * Sas Policies set for the assignment.
+     * @return Sas Policies set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> sasPolicies() {
         return Optional.ofNullable(this.sasPolicies);
     }
     /**
-     * The Role assignments set for the assignment.
+     * @return The Role assignments set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> segments() {
         return Optional.ofNullable(this.segments);
     }
     /**
-     * The hub name.
+     * @return The hub name.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Views set for the assignment.
+     * @return Views set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> views() {
         return Optional.ofNullable(this.views);
     }
     /**
-     * Widget types set for the assignment.
+     * @return Widget types set for the assignment.
      * 
-    */
+     */
     public Optional<ResourceSetDescriptionResponse> widgetTypes() {
         return Optional.ofNullable(this.widgetTypes);
     }

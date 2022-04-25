@@ -19,62 +19,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetBudgetResult {
     /**
-     * The total amount of cost to track with the budget
+     * @return The total amount of cost to track with the budget
      * 
      */
     private final Double amount;
     /**
-     * The category of the budget, whether the budget tracks cost or usage.
+     * @return The category of the budget, whether the budget tracks cost or usage.
      * 
      */
     private final String category;
     /**
-     * The current amount of cost which is being tracked for a budget.
+     * @return The current amount of cost which is being tracked for a budget.
      * 
      */
     private final CurrentSpendResponse currentSpend;
     /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
      */
     private final @Nullable String eTag;
     /**
-     * May be used to filter budgets by user-specified dimensions and/or tags.
+     * @return May be used to filter budgets by user-specified dimensions and/or tags.
      * 
      */
     private final @Nullable BudgetFilterResponse filter;
     /**
-     * The forecasted cost which is being tracked for a budget.
+     * @return The forecasted cost which is being tracked for a budget.
      * 
      */
     private final ForecastSpendResponse forecastSpend;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Dictionary of notifications associated with the budget. Budget can have up to five notifications.
+     * @return Dictionary of notifications associated with the budget. Budget can have up to five notifications.
      * 
      */
     private final @Nullable Map<String,NotificationResponse> notifications;
     /**
-     * The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
+     * @return The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
      * 
      */
     private final String timeGrain;
     /**
-     * Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
+     * @return Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
      * 
      */
     private final BudgetTimePeriodResponse timePeriod;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -108,86 +108,86 @@ public final class GetBudgetResult {
     }
 
     /**
-     * The total amount of cost to track with the budget
+     * @return The total amount of cost to track with the budget
      * 
-    */
+     */
     public Double amount() {
         return this.amount;
     }
     /**
-     * The category of the budget, whether the budget tracks cost or usage.
+     * @return The category of the budget, whether the budget tracks cost or usage.
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * The current amount of cost which is being tracked for a budget.
+     * @return The current amount of cost which is being tracked for a budget.
      * 
-    */
+     */
     public CurrentSpendResponse currentSpend() {
         return this.currentSpend;
     }
     /**
-     * eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
+     * @return eTag of the resource. To handle concurrent update scenario, this field will be used to determine whether the user is updating the latest version or not.
      * 
-    */
+     */
     public Optional<String> eTag() {
         return Optional.ofNullable(this.eTag);
     }
     /**
-     * May be used to filter budgets by user-specified dimensions and/or tags.
+     * @return May be used to filter budgets by user-specified dimensions and/or tags.
      * 
-    */
+     */
     public Optional<BudgetFilterResponse> filter() {
         return Optional.ofNullable(this.filter);
     }
     /**
-     * The forecasted cost which is being tracked for a budget.
+     * @return The forecasted cost which is being tracked for a budget.
      * 
-    */
+     */
     public ForecastSpendResponse forecastSpend() {
         return this.forecastSpend;
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Dictionary of notifications associated with the budget. Budget can have up to five notifications.
+     * @return Dictionary of notifications associated with the budget. Budget can have up to five notifications.
      * 
-    */
+     */
     public Map<String,NotificationResponse> notifications() {
         return this.notifications == null ? Map.of() : this.notifications;
     }
     /**
-     * The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
+     * @return The time covered by a budget. Tracking of the amount will be reset based on the time grain. BillingMonth, BillingQuarter, and BillingAnnual are only supported by WD customers
      * 
-    */
+     */
     public String timeGrain() {
         return this.timeGrain;
     }
     /**
-     * Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
+     * @return Has start and end date of the budget. The start date must be first of the month and should be less than the end date. Budget start date must be on or after June 1, 2017. Future start date should not be more than twelve months. Past start date should  be selected within the timegrain period. There are no restrictions on the end date.
      * 
-    */
+     */
     public BudgetTimePeriodResponse timePeriod() {
         return this.timePeriod;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

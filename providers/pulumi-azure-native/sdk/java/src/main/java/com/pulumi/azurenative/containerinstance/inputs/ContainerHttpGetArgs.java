@@ -30,6 +30,10 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="httpHeaders")
     private @Nullable Output<HttpHeadersArgs> httpHeaders;
 
+    /**
+     * @return The HTTP headers.
+     * 
+     */
     public Optional<Output<HttpHeadersArgs>> httpHeaders() {
         return Optional.ofNullable(this.httpHeaders);
     }
@@ -41,6 +45,10 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return The path to probe.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -52,6 +60,10 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return The port number to probe.
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -63,6 +75,10 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
     @Import(name="scheme")
     private @Nullable Output<Either<String,Scheme>> scheme;
 
+    /**
+     * @return The scheme.
+     * 
+     */
     public Optional<Output<Either<String,Scheme>>> scheme() {
         return Optional.ofNullable(this.scheme);
     }
@@ -94,46 +110,106 @@ public final class ContainerHttpGetArgs extends com.pulumi.resources.ResourceArg
             $ = new ContainerHttpGetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpHeaders The HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(@Nullable Output<HttpHeadersArgs> httpHeaders) {
             $.httpHeaders = httpHeaders;
             return this;
         }
 
+        /**
+         * @param httpHeaders The HTTP headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpHeaders(HttpHeadersArgs httpHeaders) {
             return httpHeaders(Output.of(httpHeaders));
         }
 
+        /**
+         * @param path The path to probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path The path to probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param port The port number to probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port The port number to probe.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param scheme The scheme.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(@Nullable Output<Either<String,Scheme>> scheme) {
             $.scheme = scheme;
             return this;
         }
 
+        /**
+         * @param scheme The scheme.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(Either<String,Scheme> scheme) {
             return scheme(Output.of(scheme));
         }
 
+        /**
+         * @param scheme The scheme.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(String scheme) {
             return scheme(Either.ofLeft(scheme));
         }
 
+        /**
+         * @param scheme The scheme.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheme(Scheme scheme) {
             return scheme(Either.ofRight(scheme));
         }

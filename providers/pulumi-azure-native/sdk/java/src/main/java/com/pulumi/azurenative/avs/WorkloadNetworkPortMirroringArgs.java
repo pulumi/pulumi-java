@@ -25,6 +25,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
     @Import(name="destination")
     private @Nullable Output<String> destination;
 
+    /**
+     * @return Destination VM Group.
+     * 
+     */
     public Optional<Output<String>> destination() {
         return Optional.ofNullable(this.destination);
     }
@@ -36,6 +40,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
     @Import(name="direction")
     private @Nullable Output<Either<String,PortMirroringDirectionEnum>> direction;
 
+    /**
+     * @return Direction of port mirroring profile.
+     * 
+     */
     public Optional<Output<Either<String,PortMirroringDirectionEnum>>> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -47,6 +55,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return Display name of the port mirroring profile.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -58,6 +70,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
     @Import(name="portMirroringId")
     private @Nullable Output<String> portMirroringId;
 
+    /**
+     * @return NSX Port Mirroring identifier. Generally the same as the Port Mirroring display name
+     * 
+     */
     public Optional<Output<String>> portMirroringId() {
         return Optional.ofNullable(this.portMirroringId);
     }
@@ -69,6 +85,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return Name of the private cloud
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -80,6 +100,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
     @Import(name="revision")
     private @Nullable Output<Double> revision;
 
+    /**
+     * @return NSX revision number.
+     * 
+     */
     public Optional<Output<Double>> revision() {
         return Optional.ofNullable(this.revision);
     }
@@ -102,6 +130,10 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
     @Import(name="source")
     private @Nullable Output<String> source;
 
+    /**
+     * @return Source VM Group.
+     * 
+     */
     public Optional<Output<String>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -137,82 +169,190 @@ public final class WorkloadNetworkPortMirroringArgs extends com.pulumi.resources
             $ = new WorkloadNetworkPortMirroringArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Destination VM Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(@Nullable Output<String> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Destination VM Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(String destination) {
             return destination(Output.of(destination));
         }
 
+        /**
+         * @param direction Direction of port mirroring profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Output<Either<String,PortMirroringDirectionEnum>> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction Direction of port mirroring profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(Either<String,PortMirroringDirectionEnum> direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param direction Direction of port mirroring profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             return direction(Either.ofLeft(direction));
         }
 
+        /**
+         * @param direction Direction of port mirroring profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(PortMirroringDirectionEnum direction) {
             return direction(Either.ofRight(direction));
         }
 
+        /**
+         * @param displayName Display name of the port mirroring profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the port mirroring profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param portMirroringId NSX Port Mirroring identifier. Generally the same as the Port Mirroring display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMirroringId(@Nullable Output<String> portMirroringId) {
             $.portMirroringId = portMirroringId;
             return this;
         }
 
+        /**
+         * @param portMirroringId NSX Port Mirroring identifier. Generally the same as the Port Mirroring display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder portMirroringId(String portMirroringId) {
             return portMirroringId(Output.of(portMirroringId));
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName Name of the private cloud
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(@Nullable Output<Double> revision) {
             $.revision = revision;
             return this;
         }
 
+        /**
+         * @param revision NSX revision number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder revision(Double revision) {
             return revision(Output.of(revision));
         }
 
+        /**
+         * @param source Source VM Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<String> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source Source VM Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             return source(Output.of(source));
         }

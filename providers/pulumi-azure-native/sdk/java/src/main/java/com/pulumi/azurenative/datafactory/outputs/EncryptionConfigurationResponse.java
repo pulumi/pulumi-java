@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EncryptionConfigurationResponse {
     /**
-     * User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
+     * @return User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
      * 
      */
     private final @Nullable CMKIdentityDefinitionResponse identity;
     /**
-     * The name of the key in Azure Key Vault to use as Customer Managed Key.
+     * @return The name of the key in Azure Key Vault to use as Customer Managed Key.
      * 
      */
     private final String keyName;
     /**
-     * The version of the key used for CMK. If not provided, latest version will be used.
+     * @return The version of the key used for CMK. If not provided, latest version will be used.
      * 
      */
     private final @Nullable String keyVersion;
     /**
-     * The url of the Azure Key Vault used for CMK.
+     * @return The url of the Azure Key Vault used for CMK.
      * 
      */
     private final String vaultBaseUrl;
@@ -46,30 +46,30 @@ public final class EncryptionConfigurationResponse {
     }
 
     /**
-     * User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
+     * @return User assigned identity to use to authenticate to customer&#39;s key vault. If not provided Managed Service Identity will be used.
      * 
-    */
+     */
     public Optional<CMKIdentityDefinitionResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The name of the key in Azure Key Vault to use as Customer Managed Key.
+     * @return The name of the key in Azure Key Vault to use as Customer Managed Key.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * The version of the key used for CMK. If not provided, latest version will be used.
+     * @return The version of the key used for CMK. If not provided, latest version will be used.
      * 
-    */
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
-     * The url of the Azure Key Vault used for CMK.
+     * @return The url of the Azure Key Vault used for CMK.
      * 
-    */
+     */
     public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }

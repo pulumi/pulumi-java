@@ -26,6 +26,10 @@ public final class HttpLogsConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="azureBlobStorage")
     private @Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage;
 
+    /**
+     * @return Http logs to azure blob storage configuration.
+     * 
+     */
     public Optional<AzureBlobStorageHttpLogsConfigResponse> azureBlobStorage() {
         return Optional.ofNullable(this.azureBlobStorage);
     }
@@ -37,6 +41,10 @@ public final class HttpLogsConfigResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileSystem")
     private @Nullable FileSystemHttpLogsConfigResponse fileSystem;
 
+    /**
+     * @return Http logs to file system configuration.
+     * 
+     */
     public Optional<FileSystemHttpLogsConfigResponse> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -66,11 +74,23 @@ public final class HttpLogsConfigResponse extends com.pulumi.resources.InvokeArg
             $ = new HttpLogsConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param azureBlobStorage Http logs to azure blob storage configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureBlobStorage(@Nullable AzureBlobStorageHttpLogsConfigResponse azureBlobStorage) {
             $.azureBlobStorage = azureBlobStorage;
             return this;
         }
 
+        /**
+         * @param fileSystem Http logs to file system configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable FileSystemHttpLogsConfigResponse fileSystem) {
             $.fileSystem = fileSystem;
             return this;

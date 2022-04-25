@@ -27,6 +27,10 @@ public final class KubernetesRoleStorageArgs extends com.pulumi.resources.Resour
     @Import(name="endpoints")
     private @Nullable Output<List<MountPointMapArgs>> endpoints;
 
+    /**
+     * @return Mount points of shares in role(s).
+     * 
+     */
     public Optional<Output<List<MountPointMapArgs>>> endpoints() {
         return Optional.ofNullable(this.endpoints);
     }
@@ -55,15 +59,33 @@ public final class KubernetesRoleStorageArgs extends com.pulumi.resources.Resour
             $ = new KubernetesRoleStorageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endpoints Mount points of shares in role(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(@Nullable Output<List<MountPointMapArgs>> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints Mount points of shares in role(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(List<MountPointMapArgs> endpoints) {
             return endpoints(Output.of(endpoints));
         }
 
+        /**
+         * @param endpoints Mount points of shares in role(s).
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(MountPointMapArgs... endpoints) {
             return endpoints(List.of(endpoints));
         }

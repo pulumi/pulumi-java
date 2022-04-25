@@ -33,6 +33,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="addressSpace")
     private @Nullable Output<AddressSpaceArgs> addressSpace;
 
+    /**
+     * @return The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+     * 
+     */
     public Optional<Output<AddressSpaceArgs>> addressSpace() {
         return Optional.ofNullable(this.addressSpace);
     }
@@ -44,6 +48,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="bgpCommunities")
     private @Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities;
 
+    /**
+     * @return Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+     * 
+     */
     public Optional<Output<VirtualNetworkBgpCommunitiesArgs>> bgpCommunities() {
         return Optional.ofNullable(this.bgpCommunities);
     }
@@ -55,6 +63,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ddosProtectionPlan")
     private @Nullable Output<SubResourceArgs> ddosProtectionPlan;
 
+    /**
+     * @return The DDoS protection plan associated with the virtual network.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> ddosProtectionPlan() {
         return Optional.ofNullable(this.ddosProtectionPlan);
     }
@@ -66,6 +78,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dhcpOptions")
     private @Nullable Output<DhcpOptionsArgs> dhcpOptions;
 
+    /**
+     * @return The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
+     * 
+     */
     public Optional<Output<DhcpOptionsArgs>> dhcpOptions() {
         return Optional.ofNullable(this.dhcpOptions);
     }
@@ -77,6 +93,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableDdosProtection")
     private @Nullable Output<Boolean> enableDdosProtection;
 
+    /**
+     * @return Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
+     * 
+     */
     public Optional<Output<Boolean>> enableDdosProtection() {
         return Optional.ofNullable(this.enableDdosProtection);
     }
@@ -88,6 +108,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="enableVmProtection")
     private @Nullable Output<Boolean> enableVmProtection;
 
+    /**
+     * @return Indicates if VM protection is enabled for all the subnets in the virtual network.
+     * 
+     */
     public Optional<Output<Boolean>> enableVmProtection() {
         return Optional.ofNullable(this.enableVmProtection);
     }
@@ -99,6 +123,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location of the virtual network.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -110,6 +138,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -121,6 +153,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipAllocations")
     private @Nullable Output<List<SubResourceArgs>> ipAllocations;
 
+    /**
+     * @return Array of IpAllocation which reference this VNET.
+     * 
+     */
     public Optional<Output<List<SubResourceArgs>>> ipAllocations() {
         return Optional.ofNullable(this.ipAllocations);
     }
@@ -132,6 +168,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -143,6 +183,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -154,6 +198,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="subnets")
     private @Nullable Output<List<SubnetArgs>> subnets;
 
+    /**
+     * @return A list of subnets in a Virtual Network.
+     * 
+     */
     public Optional<Output<List<SubnetArgs>>> subnets() {
         return Optional.ofNullable(this.subnets);
     }
@@ -165,6 +213,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -176,6 +228,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualNetworkName")
     private @Nullable Output<String> virtualNetworkName;
 
+    /**
+     * @return The name of the virtual network.
+     * 
+     */
     public Optional<Output<String>> virtualNetworkName() {
         return Optional.ofNullable(this.virtualNetworkName);
     }
@@ -187,6 +243,10 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="virtualNetworkPeerings")
     private @Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings;
 
+    /**
+     * @return A list of peerings in a Virtual Network.
+     * 
+     */
     public Optional<Output<List<VirtualNetworkPeeringArgs>>> virtualNetworkPeerings() {
         return Optional.ofNullable(this.virtualNetworkPeerings);
     }
@@ -229,149 +289,347 @@ public final class VirtualNetworkArgs extends com.pulumi.resources.ResourceArgs 
             $ = new VirtualNetworkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressSpace The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(@Nullable Output<AddressSpaceArgs> addressSpace) {
             $.addressSpace = addressSpace;
             return this;
         }
 
+        /**
+         * @param addressSpace The AddressSpace that contains an array of IP address ranges that can be used by subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressSpace(AddressSpaceArgs addressSpace) {
             return addressSpace(Output.of(addressSpace));
         }
 
+        /**
+         * @param bgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpCommunities(@Nullable Output<VirtualNetworkBgpCommunitiesArgs> bgpCommunities) {
             $.bgpCommunities = bgpCommunities;
             return this;
         }
 
+        /**
+         * @param bgpCommunities Bgp Communities sent over ExpressRoute with each route corresponding to a prefix in this VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpCommunities(VirtualNetworkBgpCommunitiesArgs bgpCommunities) {
             return bgpCommunities(Output.of(bgpCommunities));
         }
 
+        /**
+         * @param ddosProtectionPlan The DDoS protection plan associated with the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosProtectionPlan(@Nullable Output<SubResourceArgs> ddosProtectionPlan) {
             $.ddosProtectionPlan = ddosProtectionPlan;
             return this;
         }
 
+        /**
+         * @param ddosProtectionPlan The DDoS protection plan associated with the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ddosProtectionPlan(SubResourceArgs ddosProtectionPlan) {
             return ddosProtectionPlan(Output.of(ddosProtectionPlan));
         }
 
+        /**
+         * @param dhcpOptions The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpOptions(@Nullable Output<DhcpOptionsArgs> dhcpOptions) {
             $.dhcpOptions = dhcpOptions;
             return this;
         }
 
+        /**
+         * @param dhcpOptions The dhcpOptions that contains an array of DNS servers available to VMs deployed in the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dhcpOptions(DhcpOptionsArgs dhcpOptions) {
             return dhcpOptions(Output.of(dhcpOptions));
         }
 
+        /**
+         * @param enableDdosProtection Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDdosProtection(@Nullable Output<Boolean> enableDdosProtection) {
             $.enableDdosProtection = enableDdosProtection;
             return this;
         }
 
+        /**
+         * @param enableDdosProtection Indicates if DDoS protection is enabled for all the protected resources in the virtual network. It requires a DDoS protection plan associated with the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDdosProtection(Boolean enableDdosProtection) {
             return enableDdosProtection(Output.of(enableDdosProtection));
         }
 
+        /**
+         * @param enableVmProtection Indicates if VM protection is enabled for all the subnets in the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVmProtection(@Nullable Output<Boolean> enableVmProtection) {
             $.enableVmProtection = enableVmProtection;
             return this;
         }
 
+        /**
+         * @param enableVmProtection Indicates if VM protection is enabled for all the subnets in the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableVmProtection(Boolean enableVmProtection) {
             return enableVmProtection(Output.of(enableVmProtection));
         }
 
+        /**
+         * @param extendedLocation The extended location of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipAllocations Array of IpAllocation which reference this VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocations(@Nullable Output<List<SubResourceArgs>> ipAllocations) {
             $.ipAllocations = ipAllocations;
             return this;
         }
 
+        /**
+         * @param ipAllocations Array of IpAllocation which reference this VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocations(List<SubResourceArgs> ipAllocations) {
             return ipAllocations(Output.of(ipAllocations));
         }
 
+        /**
+         * @param ipAllocations Array of IpAllocation which reference this VNET.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocations(SubResourceArgs... ipAllocations) {
             return ipAllocations(List.of(ipAllocations));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param subnets A list of subnets in a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(@Nullable Output<List<SubnetArgs>> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets A list of subnets in a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(List<SubnetArgs> subnets) {
             return subnets(Output.of(subnets));
         }
 
+        /**
+         * @param subnets A list of subnets in a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(SubnetArgs... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param virtualNetworkName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkName(@Nullable Output<String> virtualNetworkName) {
             $.virtualNetworkName = virtualNetworkName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkName The name of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkName(String virtualNetworkName) {
             return virtualNetworkName(Output.of(virtualNetworkName));
         }
 
+        /**
+         * @param virtualNetworkPeerings A list of peerings in a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkPeerings(@Nullable Output<List<VirtualNetworkPeeringArgs>> virtualNetworkPeerings) {
             $.virtualNetworkPeerings = virtualNetworkPeerings;
             return this;
         }
 
+        /**
+         * @param virtualNetworkPeerings A list of peerings in a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkPeerings(List<VirtualNetworkPeeringArgs> virtualNetworkPeerings) {
             return virtualNetworkPeerings(Output.of(virtualNetworkPeerings));
         }
 
+        /**
+         * @param virtualNetworkPeerings A list of peerings in a Virtual Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkPeerings(VirtualNetworkPeeringArgs... virtualNetworkPeerings) {
             return virtualNetworkPeerings(List.of(virtualNetworkPeerings));
         }

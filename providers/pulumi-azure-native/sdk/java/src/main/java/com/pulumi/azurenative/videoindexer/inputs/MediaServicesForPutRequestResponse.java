@@ -25,6 +25,10 @@ public final class MediaServicesForPutRequestResponse extends com.pulumi.resourc
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The media services resource id
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -36,6 +40,10 @@ public final class MediaServicesForPutRequestResponse extends com.pulumi.resourc
     @Import(name="userAssignedIdentity")
     private @Nullable String userAssignedIdentity;
 
+    /**
+     * @return The user assigned identity to be used to grant permissions
+     * 
+     */
     public Optional<String> userAssignedIdentity() {
         return Optional.ofNullable(this.userAssignedIdentity);
     }
@@ -65,11 +73,23 @@ public final class MediaServicesForPutRequestResponse extends com.pulumi.resourc
             $ = new MediaServicesForPutRequestResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceId The media services resource id
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned identity to be used to grant permissions
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(@Nullable String userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;

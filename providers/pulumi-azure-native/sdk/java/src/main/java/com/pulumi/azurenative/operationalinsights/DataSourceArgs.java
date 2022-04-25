@@ -26,6 +26,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceName")
     private @Nullable Output<String> dataSourceName;
 
+    /**
+     * @return The name of the datasource resource.
+     * 
+     */
     public Optional<Output<String>> dataSourceName() {
         return Optional.ofNullable(this.dataSourceName);
     }
@@ -37,6 +41,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,DataSourceKind>> kind;
 
+    /**
+     * @return The kind of the DataSource.
+     * 
+     */
     public Output<Either<String,DataSourceKind>> kind() {
         return this.kind;
     }
@@ -48,6 +56,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<Object> properties;
 
+    /**
+     * @return The data source properties in raw json format, each kind of data source have it&#39;s own schema.
+     * 
+     */
     public Output<Object> properties() {
         return this.properties;
     }
@@ -59,6 +71,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -70,6 +86,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -81,6 +101,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -114,64 +138,148 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSourceName The name of the datasource resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceName(@Nullable Output<String> dataSourceName) {
             $.dataSourceName = dataSourceName;
             return this;
         }
 
+        /**
+         * @param dataSourceName The name of the datasource resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceName(String dataSourceName) {
             return dataSourceName(Output.of(dataSourceName));
         }
 
+        /**
+         * @param kind The kind of the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,DataSourceKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,DataSourceKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The kind of the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The kind of the DataSource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(DataSourceKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param properties The data source properties in raw json format, each kind of data source have it&#39;s own schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The data source properties in raw json format, each kind of data source have it&#39;s own schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

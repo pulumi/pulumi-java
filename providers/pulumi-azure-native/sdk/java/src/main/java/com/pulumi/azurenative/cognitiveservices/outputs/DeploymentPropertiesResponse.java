@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DeploymentPropertiesResponse {
     /**
-     * Properties of Cognitive Services account deployment model.
+     * @return Properties of Cognitive Services account deployment model.
      * 
      */
     private final @Nullable DeploymentModelResponse model;
     /**
-     * Gets the status of the resource at the time the operation was called.
+     * @return Gets the status of the resource at the time the operation was called.
      * 
      */
     private final String provisioningState;
     /**
-     * Properties of Cognitive Services account deployment model.
+     * @return Properties of Cognitive Services account deployment model.
      * 
      */
     private final @Nullable DeploymentScaleSettingsResponse scaleSettings;
@@ -40,23 +40,23 @@ public final class DeploymentPropertiesResponse {
     }
 
     /**
-     * Properties of Cognitive Services account deployment model.
+     * @return Properties of Cognitive Services account deployment model.
      * 
-    */
+     */
     public Optional<DeploymentModelResponse> model() {
         return Optional.ofNullable(this.model);
     }
     /**
-     * Gets the status of the resource at the time the operation was called.
+     * @return Gets the status of the resource at the time the operation was called.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Properties of Cognitive Services account deployment model.
+     * @return Properties of Cognitive Services account deployment model.
      * 
-    */
+     */
     public Optional<DeploymentScaleSettingsResponse> scaleSettings() {
         return Optional.ofNullable(this.scaleSettings);
     }

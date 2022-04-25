@@ -24,6 +24,10 @@ public final class KubernetesRoleComputeArgs extends com.pulumi.resources.Resour
     @Import(name="vmProfile", required=true)
     private Output<String> vmProfile;
 
+    /**
+     * @return VM profile
+     * 
+     */
     public Output<String> vmProfile() {
         return this.vmProfile;
     }
@@ -52,11 +56,23 @@ public final class KubernetesRoleComputeArgs extends com.pulumi.resources.Resour
             $ = new KubernetesRoleComputeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vmProfile VM profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProfile(Output<String> vmProfile) {
             $.vmProfile = vmProfile;
             return this;
         }
 
+        /**
+         * @param vmProfile VM profile
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmProfile(String vmProfile) {
             return vmProfile(Output.of(vmProfile));
         }

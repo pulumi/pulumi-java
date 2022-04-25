@@ -29,6 +29,10 @@ public final class TriggerPipelineReferenceArgs extends com.pulumi.resources.Res
     @Import(name="parameters")
     private @Nullable Output<Map<String,Object>> parameters;
 
+    /**
+     * @return Pipeline parameters.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -40,6 +44,10 @@ public final class TriggerPipelineReferenceArgs extends com.pulumi.resources.Res
     @Import(name="pipelineReference")
     private @Nullable Output<PipelineReferenceArgs> pipelineReference;
 
+    /**
+     * @return Pipeline reference.
+     * 
+     */
     public Optional<Output<PipelineReferenceArgs>> pipelineReference() {
         return Optional.ofNullable(this.pipelineReference);
     }
@@ -69,20 +77,44 @@ public final class TriggerPipelineReferenceArgs extends com.pulumi.resources.Res
             $ = new TriggerPipelineReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parameters Pipeline parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,Object>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Pipeline parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,Object> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param pipelineReference Pipeline reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineReference(@Nullable Output<PipelineReferenceArgs> pipelineReference) {
             $.pipelineReference = pipelineReference;
             return this;
         }
 
+        /**
+         * @param pipelineReference Pipeline reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pipelineReference(PipelineReferenceArgs pipelineReference) {
             return pipelineReference(Output.of(pipelineReference));
         }

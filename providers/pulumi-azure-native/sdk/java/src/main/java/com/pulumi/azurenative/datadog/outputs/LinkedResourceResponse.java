@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LinkedResourceResponse {
     /**
-     * The ARM id of the linked resource.
+     * @return The ARM id of the linked resource.
      * 
      */
     private final @Nullable String id;
@@ -23,9 +23,9 @@ public final class LinkedResourceResponse {
     }
 
     /**
-     * The ARM id of the linked resource.
+     * @return The ARM id of the linked resource.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

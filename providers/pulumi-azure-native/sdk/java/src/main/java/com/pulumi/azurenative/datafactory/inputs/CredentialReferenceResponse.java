@@ -23,6 +23,10 @@ public final class CredentialReferenceResponse extends com.pulumi.resources.Invo
     @Import(name="referenceName", required=true)
     private String referenceName;
 
+    /**
+     * @return Reference credential name.
+     * 
+     */
     public String referenceName() {
         return this.referenceName;
     }
@@ -34,6 +38,10 @@ public final class CredentialReferenceResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Credential reference type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -63,11 +71,23 @@ public final class CredentialReferenceResponse extends com.pulumi.resources.Invo
             $ = new CredentialReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param referenceName Reference credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param type Credential reference type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -19,6 +19,10 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the machine learning team account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the machine learning team account belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return The name of the machine learning team account workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -71,16 +83,34 @@ public final class GetWorkspaceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the machine learning team account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the machine learning team account belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the machine learning team account workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

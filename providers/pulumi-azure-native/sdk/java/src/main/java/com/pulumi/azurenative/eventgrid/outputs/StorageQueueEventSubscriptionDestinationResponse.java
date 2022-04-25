@@ -12,18 +12,18 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageQueueEventSubscriptionDestinationResponse {
     /**
-     * Type of the endpoint for the event subscription destination.
+     * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;StorageQueue&#39;.
      * 
      */
     private final String endpointType;
     /**
-     * The name of the Storage queue under a storage account that is the destination of an event subscription.
+     * @return The name of the Storage queue under a storage account that is the destination of an event subscription.
      * 
      */
     private final @Nullable String queueName;
     /**
-     * The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
+     * @return The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
      * 
      */
     private final @Nullable String resourceId;
@@ -39,24 +39,24 @@ public final class StorageQueueEventSubscriptionDestinationResponse {
     }
 
     /**
-     * Type of the endpoint for the event subscription destination.
+     * @return Type of the endpoint for the event subscription destination.
      * Expected value is &#39;StorageQueue&#39;.
      * 
-    */
+     */
     public String endpointType() {
         return this.endpointType;
     }
     /**
-     * The name of the Storage queue under a storage account that is the destination of an event subscription.
+     * @return The name of the Storage queue under a storage account that is the destination of an event subscription.
      * 
-    */
+     */
     public Optional<String> queueName() {
         return Optional.ofNullable(this.queueName);
     }
     /**
-     * The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
+     * @return The Azure Resource ID of the storage account that contains the queue that is the destination of an event subscription.
      * 
-    */
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }

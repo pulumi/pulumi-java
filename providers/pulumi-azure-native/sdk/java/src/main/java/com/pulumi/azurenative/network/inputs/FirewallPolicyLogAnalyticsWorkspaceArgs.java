@@ -27,6 +27,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends com.pulumi.re
     @Import(name="region")
     private @Nullable Output<String> region;
 
+    /**
+     * @return Region to configure the Workspace.
+     * 
+     */
     public Optional<Output<String>> region() {
         return Optional.ofNullable(this.region);
     }
@@ -38,6 +42,10 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends com.pulumi.re
     @Import(name="workspaceId")
     private @Nullable Output<SubResourceArgs> workspaceId;
 
+    /**
+     * @return The workspace Id for Firewall Policy Insights.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> workspaceId() {
         return Optional.ofNullable(this.workspaceId);
     }
@@ -67,20 +75,44 @@ public final class FirewallPolicyLogAnalyticsWorkspaceArgs extends com.pulumi.re
             $ = new FirewallPolicyLogAnalyticsWorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param region Region to configure the Workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(@Nullable Output<String> region) {
             $.region = region;
             return this;
         }
 
+        /**
+         * @param region Region to configure the Workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder region(String region) {
             return region(Output.of(region));
         }
 
+        /**
+         * @param workspaceId The workspace Id for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(@Nullable Output<SubResourceArgs> workspaceId) {
             $.workspaceId = workspaceId;
             return this;
         }
 
+        /**
+         * @param workspaceId The workspace Id for Firewall Policy Insights.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceId(SubResourceArgs workspaceId) {
             return workspaceId(Output.of(workspaceId));
         }

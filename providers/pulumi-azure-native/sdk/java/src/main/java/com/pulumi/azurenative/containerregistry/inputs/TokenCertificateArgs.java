@@ -28,6 +28,10 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="encodedPemCertificate")
     private @Nullable Output<String> encodedPemCertificate;
 
+    /**
+     * @return Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
+     * 
+     */
     public Optional<Output<String>> encodedPemCertificate() {
         return Optional.ofNullable(this.encodedPemCertificate);
     }
@@ -39,6 +43,10 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="expiry")
     private @Nullable Output<String> expiry;
 
+    /**
+     * @return The expiry datetime of the certificate.
+     * 
+     */
     public Optional<Output<String>> expiry() {
         return Optional.ofNullable(this.expiry);
     }
@@ -57,6 +65,10 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return The thumbprint of the certificate.
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -88,20 +100,44 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
             $ = new TokenCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encodedPemCertificate Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedPemCertificate(@Nullable Output<String> encodedPemCertificate) {
             $.encodedPemCertificate = encodedPemCertificate;
             return this;
         }
 
+        /**
+         * @param encodedPemCertificate Base 64 encoded string of the public certificate1 in PEM format that will be used for authenticating the token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedPemCertificate(String encodedPemCertificate) {
             return encodedPemCertificate(Output.of(encodedPemCertificate));
         }
 
+        /**
+         * @param expiry The expiry datetime of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(@Nullable Output<String> expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param expiry The expiry datetime of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(String expiry) {
             return expiry(Output.of(expiry));
         }
@@ -123,11 +159,23 @@ public final class TokenCertificateArgs extends com.pulumi.resources.ResourceArg
             return name(Either.ofRight(name));
         }
 
+        /**
+         * @param thumbprint The thumbprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint The thumbprint of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

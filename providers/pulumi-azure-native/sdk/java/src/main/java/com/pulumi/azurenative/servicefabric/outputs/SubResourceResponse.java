@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SubResourceResponse {
     /**
-     * Azure resource identifier.
+     * @return Azure resource identifier.
      * 
      */
     private final @Nullable String id;
@@ -23,9 +23,9 @@ public final class SubResourceResponse {
     }
 
     /**
-     * Azure resource identifier.
+     * @return Azure resource identifier.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

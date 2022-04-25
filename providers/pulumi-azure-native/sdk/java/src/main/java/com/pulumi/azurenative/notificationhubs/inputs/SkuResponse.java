@@ -26,6 +26,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return The capacity of the resource
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="family")
     private @Nullable String family;
 
+    /**
+     * @return The Sku Family
+     * 
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
@@ -48,6 +56,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the notification hub sku
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -59,6 +71,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return The Sku size
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -70,6 +86,10 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return The tier of particular sku
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -102,26 +122,56 @@ public final class SkuResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param family The Sku Family
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param name Name of the notification hub sku
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param size The Sku size
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param tier The tier of particular sku
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

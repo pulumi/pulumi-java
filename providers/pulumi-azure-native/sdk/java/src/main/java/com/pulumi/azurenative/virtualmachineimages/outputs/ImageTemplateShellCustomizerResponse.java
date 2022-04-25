@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ImageTemplateShellCustomizerResponse {
     /**
-     * Array of shell commands to execute
+     * @return Array of shell commands to execute
      * 
      */
     private final @Nullable List<String> inline;
     /**
-     * Friendly Name to provide context on what this customization step does
+     * @return Friendly Name to provide context on what this customization step does
      * 
      */
     private final @Nullable String name;
     /**
-     * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
+     * @return URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
      * 
      */
     private final @Nullable String scriptUri;
     /**
-     * SHA256 checksum of the shell script provided in the scriptUri field
+     * @return SHA256 checksum of the shell script provided in the scriptUri field
      * 
      */
     private final @Nullable String sha256Checksum;
     /**
-     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
      * Expected value is &#39;Shell&#39;.
      * 
      */
@@ -54,38 +54,38 @@ public final class ImageTemplateShellCustomizerResponse {
     }
 
     /**
-     * Array of shell commands to execute
+     * @return Array of shell commands to execute
      * 
-    */
+     */
     public List<String> inline() {
         return this.inline == null ? List.of() : this.inline;
     }
     /**
-     * Friendly Name to provide context on what this customization step does
+     * @return Friendly Name to provide context on what this customization step does
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
+     * @return URI of the shell script to be run for customizing. It can be a github link, SAS URI for Azure Storage, etc
      * 
-    */
+     */
     public Optional<String> scriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }
     /**
-     * SHA256 checksum of the shell script provided in the scriptUri field
+     * @return SHA256 checksum of the shell script provided in the scriptUri field
      * 
-    */
+     */
     public Optional<String> sha256Checksum() {
         return Optional.ofNullable(this.sha256Checksum);
     }
     /**
-     * The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
+     * @return The type of customization tool you want to use on the Image. For example, &#34;Shell&#34; can be shell customizer
      * Expected value is &#39;Shell&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

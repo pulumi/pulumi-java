@@ -28,6 +28,10 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
     @Import(name="linuxOsInfo")
     private @Nullable Output<LinuxOsInfoArgs> linuxOsInfo;
 
+    /**
+     * @return The Linux OS information of the VM.
+     * 
+     */
     public Optional<Output<LinuxOsInfoArgs>> linuxOsInfo() {
         return Optional.ofNullable(this.linuxOsInfo);
     }
@@ -39,6 +43,10 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
     @Import(name="sourceVmId")
     private @Nullable Output<String> sourceVmId;
 
+    /**
+     * @return The source vm identifier.
+     * 
+     */
     public Optional<Output<String>> sourceVmId() {
         return Optional.ofNullable(this.sourceVmId);
     }
@@ -50,6 +58,10 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
     @Import(name="windowsOsInfo")
     private @Nullable Output<WindowsOsInfoArgs> windowsOsInfo;
 
+    /**
+     * @return The Windows OS information of the VM.
+     * 
+     */
     public Optional<Output<WindowsOsInfoArgs>> windowsOsInfo() {
         return Optional.ofNullable(this.windowsOsInfo);
     }
@@ -80,29 +92,65 @@ public final class CustomImagePropertiesFromVmArgs extends com.pulumi.resources.
             $ = new CustomImagePropertiesFromVmArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linuxOsInfo The Linux OS information of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOsInfo(@Nullable Output<LinuxOsInfoArgs> linuxOsInfo) {
             $.linuxOsInfo = linuxOsInfo;
             return this;
         }
 
+        /**
+         * @param linuxOsInfo The Linux OS information of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOsInfo(LinuxOsInfoArgs linuxOsInfo) {
             return linuxOsInfo(Output.of(linuxOsInfo));
         }
 
+        /**
+         * @param sourceVmId The source vm identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmId(@Nullable Output<String> sourceVmId) {
             $.sourceVmId = sourceVmId;
             return this;
         }
 
+        /**
+         * @param sourceVmId The source vm identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceVmId(String sourceVmId) {
             return sourceVmId(Output.of(sourceVmId));
         }
 
+        /**
+         * @param windowsOsInfo The Windows OS information of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsOsInfo(@Nullable Output<WindowsOsInfoArgs> windowsOsInfo) {
             $.windowsOsInfo = windowsOsInfo;
             return this;
         }
 
+        /**
+         * @param windowsOsInfo The Windows OS information of the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder windowsOsInfo(WindowsOsInfoArgs windowsOsInfo) {
             return windowsOsInfo(Output.of(windowsOsInfo));
         }

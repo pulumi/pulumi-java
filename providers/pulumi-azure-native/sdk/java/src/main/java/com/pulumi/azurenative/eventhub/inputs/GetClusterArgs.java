@@ -19,6 +19,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the Event Hubs Cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetClusterArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetClusterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Event Hubs Cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

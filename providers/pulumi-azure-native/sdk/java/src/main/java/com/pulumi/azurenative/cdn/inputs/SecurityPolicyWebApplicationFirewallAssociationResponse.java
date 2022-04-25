@@ -27,6 +27,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
     @Import(name="domains")
     private @Nullable List<ResourceReferenceResponse> domains;
 
+    /**
+     * @return List of domains.
+     * 
+     */
     public Optional<List<ResourceReferenceResponse>> domains() {
         return Optional.ofNullable(this.domains);
     }
@@ -38,6 +42,10 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
     @Import(name="patternsToMatch")
     private @Nullable List<String> patternsToMatch;
 
+    /**
+     * @return List of paths
+     * 
+     */
     public Optional<List<String>> patternsToMatch() {
         return Optional.ofNullable(this.patternsToMatch);
     }
@@ -67,20 +75,44 @@ public final class SecurityPolicyWebApplicationFirewallAssociationResponse exten
             $ = new SecurityPolicyWebApplicationFirewallAssociationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domains List of domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(@Nullable List<ResourceReferenceResponse> domains) {
             $.domains = domains;
             return this;
         }
 
+        /**
+         * @param domains List of domains.
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(ResourceReferenceResponse... domains) {
             return domains(List.of(domains));
         }
 
+        /**
+         * @param patternsToMatch List of paths
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(@Nullable List<String> patternsToMatch) {
             $.patternsToMatch = patternsToMatch;
             return this;
         }
 
+        /**
+         * @param patternsToMatch List of paths
+         * 
+         * @return builder
+         * 
+         */
         public Builder patternsToMatch(String... patternsToMatch) {
             return patternsToMatch(List.of(patternsToMatch));
         }

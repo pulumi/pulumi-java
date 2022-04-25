@@ -26,6 +26,10 @@ public final class ManagedClusterServicePrincipalProfileArgs extends com.pulumi.
     @Import(name="clientId", required=true)
     private Output<String> clientId;
 
+    /**
+     * @return The ID for the service principal.
+     * 
+     */
     public Output<String> clientId() {
         return this.clientId;
     }
@@ -37,6 +41,10 @@ public final class ManagedClusterServicePrincipalProfileArgs extends com.pulumi.
     @Import(name="secret")
     private @Nullable Output<String> secret;
 
+    /**
+     * @return The secret password associated with the service principal in plain text.
+     * 
+     */
     public Optional<Output<String>> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -66,20 +74,44 @@ public final class ManagedClusterServicePrincipalProfileArgs extends com.pulumi.
             $ = new ManagedClusterServicePrincipalProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The ID for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The ID for the service principal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param secret The secret password associated with the service principal in plain text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable Output<String> secret) {
             $.secret = secret;
             return this;
         }
 
+        /**
+         * @param secret The secret password associated with the service principal in plain text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(String secret) {
             return secret(Output.of(secret));
         }

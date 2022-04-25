@@ -26,6 +26,10 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends com.pulumi
     @Import(name="isRServicesEnabled")
     private @Nullable Output<Boolean> isRServicesEnabled;
 
+    /**
+     * @return Enable or disable R services (SQL 2016 onwards).
+     * 
+     */
     public Optional<Output<Boolean>> isRServicesEnabled() {
         return Optional.ofNullable(this.isRServicesEnabled);
     }
@@ -54,11 +58,23 @@ public final class AdditionalFeaturesServerConfigurationsArgs extends com.pulumi
             $ = new AdditionalFeaturesServerConfigurationsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isRServicesEnabled Enable or disable R services (SQL 2016 onwards).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRServicesEnabled(@Nullable Output<Boolean> isRServicesEnabled) {
             $.isRServicesEnabled = isRServicesEnabled;
             return this;
         }
 
+        /**
+         * @param isRServicesEnabled Enable or disable R services (SQL 2016 onwards).
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRServicesEnabled(Boolean isRServicesEnabled) {
             return isRServicesEnabled(Output.of(isRServicesEnabled));
         }

@@ -26,6 +26,10 @@ public final class VolumeProviderParametersAzureFileArgs extends com.pulumi.reso
     @Import(name="accountKey")
     private @Nullable Output<String> accountKey;
 
+    /**
+     * @return Access key of the Azure storage account for the File Share.
+     * 
+     */
     public Optional<Output<String>> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -37,6 +41,10 @@ public final class VolumeProviderParametersAzureFileArgs extends com.pulumi.reso
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Name of the Azure storage account for the File Share.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -48,6 +56,10 @@ public final class VolumeProviderParametersAzureFileArgs extends com.pulumi.reso
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return Name of the Azure Files file share that provides storage for the volume.
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -78,29 +90,65 @@ public final class VolumeProviderParametersAzureFileArgs extends com.pulumi.reso
             $ = new VolumeProviderParametersAzureFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey Access key of the Azure storage account for the File Share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable Output<String> accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountKey Access key of the Azure storage account for the File Share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(String accountKey) {
             return accountKey(Output.of(accountKey));
         }
 
+        /**
+         * @param accountName Name of the Azure storage account for the File Share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Name of the Azure storage account for the File Share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param shareName Name of the Azure Files file share that provides storage for the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName Name of the Azure Files file share that provides storage for the volume.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }

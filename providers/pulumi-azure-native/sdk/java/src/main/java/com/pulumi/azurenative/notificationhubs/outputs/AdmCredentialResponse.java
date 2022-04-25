@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AdmCredentialResponse {
     /**
-     * The URL of the authorization token.
+     * @return The URL of the authorization token.
      * 
      */
     private final @Nullable String authTokenUrl;
     /**
-     * The client identifier.
+     * @return The client identifier.
      * 
      */
     private final @Nullable String clientId;
     /**
-     * The credential secret access key.
+     * @return The credential secret access key.
      * 
      */
     private final @Nullable String clientSecret;
@@ -38,23 +38,23 @@ public final class AdmCredentialResponse {
     }
 
     /**
-     * The URL of the authorization token.
+     * @return The URL of the authorization token.
      * 
-    */
+     */
     public Optional<String> authTokenUrl() {
         return Optional.ofNullable(this.authTokenUrl);
     }
     /**
-     * The client identifier.
+     * @return The client identifier.
      * 
-    */
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The credential secret access key.
+     * @return The credential secret access key.
      * 
-    */
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }

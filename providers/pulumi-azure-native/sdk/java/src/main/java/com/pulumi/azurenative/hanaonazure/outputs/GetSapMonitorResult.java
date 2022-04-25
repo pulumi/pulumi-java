@@ -14,67 +14,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSapMonitorResult {
     /**
-     * The value indicating whether to send analytics to Microsoft
+     * @return The value indicating whether to send analytics to Microsoft
      * 
      */
     private final @Nullable Boolean enableCustomerAnalytics;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The ARM ID of the Log Analytics Workspace that is used for monitoring
+     * @return The ARM ID of the Log Analytics Workspace that is used for monitoring
      * 
      */
     private final @Nullable String logAnalyticsWorkspaceArmId;
     /**
-     * The workspace ID of the log analytics workspace to be used for monitoring
+     * @return The workspace ID of the log analytics workspace to be used for monitoring
      * 
      */
     private final @Nullable String logAnalyticsWorkspaceId;
     /**
-     * The shared key of the log analytics workspace that is used for monitoring
+     * @return The shared key of the log analytics workspace that is used for monitoring
      * 
      */
     private final @Nullable String logAnalyticsWorkspaceSharedKey;
     /**
-     * The name of the resource group the SAP Monitor resources get deployed into.
+     * @return The name of the resource group the SAP Monitor resources get deployed into.
      * 
      */
     private final String managedResourceGroupName;
     /**
-     * The subnet which the SAP monitor will be deployed in
+     * @return The subnet which the SAP monitor will be deployed in
      * 
      */
     private final @Nullable String monitorSubnet;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * State of provisioning of the HanaInstance
+     * @return State of provisioning of the HanaInstance
      * 
      */
     private final String provisioningState;
     /**
-     * The version of the payload running in the Collector VM
+     * @return The version of the payload running in the Collector VM
      * 
      */
     private final String sapMonitorCollectorVersion;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -110,93 +110,93 @@ public final class GetSapMonitorResult {
     }
 
     /**
-     * The value indicating whether to send analytics to Microsoft
+     * @return The value indicating whether to send analytics to Microsoft
      * 
-    */
+     */
     public Optional<Boolean> enableCustomerAnalytics() {
         return Optional.ofNullable(this.enableCustomerAnalytics);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The ARM ID of the Log Analytics Workspace that is used for monitoring
+     * @return The ARM ID of the Log Analytics Workspace that is used for monitoring
      * 
-    */
+     */
     public Optional<String> logAnalyticsWorkspaceArmId() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceArmId);
     }
     /**
-     * The workspace ID of the log analytics workspace to be used for monitoring
+     * @return The workspace ID of the log analytics workspace to be used for monitoring
      * 
-    */
+     */
     public Optional<String> logAnalyticsWorkspaceId() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceId);
     }
     /**
-     * The shared key of the log analytics workspace that is used for monitoring
+     * @return The shared key of the log analytics workspace that is used for monitoring
      * 
-    */
+     */
     public Optional<String> logAnalyticsWorkspaceSharedKey() {
         return Optional.ofNullable(this.logAnalyticsWorkspaceSharedKey);
     }
     /**
-     * The name of the resource group the SAP Monitor resources get deployed into.
+     * @return The name of the resource group the SAP Monitor resources get deployed into.
      * 
-    */
+     */
     public String managedResourceGroupName() {
         return this.managedResourceGroupName;
     }
     /**
-     * The subnet which the SAP monitor will be deployed in
+     * @return The subnet which the SAP monitor will be deployed in
      * 
-    */
+     */
     public Optional<String> monitorSubnet() {
         return Optional.ofNullable(this.monitorSubnet);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * State of provisioning of the HanaInstance
+     * @return State of provisioning of the HanaInstance
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The version of the payload running in the Collector VM
+     * @return The version of the payload running in the Collector VM
      * 
-    */
+     */
     public String sapMonitorCollectorVersion() {
         return this.sapMonitorCollectorVersion;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

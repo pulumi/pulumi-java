@@ -21,6 +21,10 @@ public final class DockerImagePlatformResponse extends com.pulumi.resources.Invo
     @Import(name="operatingSystemType")
     private @Nullable String operatingSystemType;
 
+    /**
+     * @return The OS type the Environment.
+     * 
+     */
     public Optional<String> operatingSystemType() {
         return Optional.ofNullable(this.operatingSystemType);
     }
@@ -49,6 +53,12 @@ public final class DockerImagePlatformResponse extends com.pulumi.resources.Invo
             $ = new DockerImagePlatformResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operatingSystemType The OS type the Environment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operatingSystemType(@Nullable String operatingSystemType) {
             $.operatingSystemType = operatingSystemType;
             return this;

@@ -24,6 +24,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="authorizationKey")
     private @Nullable Output<String> authorizationKey;
 
+    /**
+     * @return The authorization key.
+     * 
+     */
     public Optional<Output<String>> authorizationKey() {
         return Optional.ofNullable(this.authorizationKey);
     }
@@ -35,6 +39,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="authorizationName")
     private @Nullable Output<String> authorizationName;
 
+    /**
+     * @return The name of the authorization.
+     * 
+     */
     public Optional<Output<String>> authorizationName() {
         return Optional.ofNullable(this.authorizationName);
     }
@@ -46,6 +54,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="authorizationUseStatus")
     private @Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus;
 
+    /**
+     * @return The authorization use status.
+     * 
+     */
     public Optional<Output<Either<String,AuthorizationUseStatus>>> authorizationUseStatus() {
         return Optional.ofNullable(this.authorizationUseStatus);
     }
@@ -57,6 +69,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="circuitName", required=true)
     private Output<String> circuitName;
 
+    /**
+     * @return The name of the express route circuit.
+     * 
+     */
     public Output<String> circuitName() {
         return this.circuitName;
     }
@@ -68,6 +84,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -79,6 +99,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -90,6 +114,10 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -124,73 +152,169 @@ public final class ExpressRouteCircuitAuthorizationArgs extends com.pulumi.resou
             $ = new ExpressRouteCircuitAuthorizationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationKey The authorization key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(@Nullable Output<String> authorizationKey) {
             $.authorizationKey = authorizationKey;
             return this;
         }
 
+        /**
+         * @param authorizationKey The authorization key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationKey(String authorizationKey) {
             return authorizationKey(Output.of(authorizationKey));
         }
 
+        /**
+         * @param authorizationName The name of the authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationName(@Nullable Output<String> authorizationName) {
             $.authorizationName = authorizationName;
             return this;
         }
 
+        /**
+         * @param authorizationName The name of the authorization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationName(String authorizationName) {
             return authorizationName(Output.of(authorizationName));
         }
 
+        /**
+         * @param authorizationUseStatus The authorization use status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationUseStatus(@Nullable Output<Either<String,AuthorizationUseStatus>> authorizationUseStatus) {
             $.authorizationUseStatus = authorizationUseStatus;
             return this;
         }
 
+        /**
+         * @param authorizationUseStatus The authorization use status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationUseStatus(Either<String,AuthorizationUseStatus> authorizationUseStatus) {
             return authorizationUseStatus(Output.of(authorizationUseStatus));
         }
 
+        /**
+         * @param authorizationUseStatus The authorization use status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationUseStatus(String authorizationUseStatus) {
             return authorizationUseStatus(Either.ofLeft(authorizationUseStatus));
         }
 
+        /**
+         * @param authorizationUseStatus The authorization use status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationUseStatus(AuthorizationUseStatus authorizationUseStatus) {
             return authorizationUseStatus(Either.ofRight(authorizationUseStatus));
         }
 
+        /**
+         * @param circuitName The name of the express route circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitName(Output<String> circuitName) {
             $.circuitName = circuitName;
             return this;
         }
 
+        /**
+         * @param circuitName The name of the express route circuit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitName(String circuitName) {
             return circuitName(Output.of(circuitName));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

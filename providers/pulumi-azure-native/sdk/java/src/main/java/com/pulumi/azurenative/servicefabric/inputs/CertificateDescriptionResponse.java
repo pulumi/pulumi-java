@@ -25,6 +25,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="thumbprint", required=true)
     private String thumbprint;
 
+    /**
+     * @return Thumbprint of the primary certificate.
+     * 
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
@@ -36,6 +40,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="thumbprintSecondary")
     private @Nullable String thumbprintSecondary;
 
+    /**
+     * @return Thumbprint of the secondary certificate.
+     * 
+     */
     public Optional<String> thumbprintSecondary() {
         return Optional.ofNullable(this.thumbprintSecondary);
     }
@@ -47,6 +55,10 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
     @Import(name="x509StoreName")
     private @Nullable String x509StoreName;
 
+    /**
+     * @return The local certificate store location.
+     * 
+     */
     public Optional<String> x509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }
@@ -77,16 +89,34 @@ public final class CertificateDescriptionResponse extends com.pulumi.resources.I
             $ = new CertificateDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param thumbprint Thumbprint of the primary certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprintSecondary Thumbprint of the secondary certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprintSecondary(@Nullable String thumbprintSecondary) {
             $.thumbprintSecondary = thumbprintSecondary;
             return this;
         }
 
+        /**
+         * @param x509StoreName The local certificate store location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x509StoreName(@Nullable String x509StoreName) {
             $.x509StoreName = x509StoreName;
             return this;

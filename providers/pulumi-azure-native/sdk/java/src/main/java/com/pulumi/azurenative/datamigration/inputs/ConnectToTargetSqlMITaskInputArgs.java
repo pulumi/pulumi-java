@@ -24,6 +24,10 @@ public final class ConnectToTargetSqlMITaskInputArgs extends com.pulumi.resource
     @Import(name="targetConnectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> targetConnectionInfo;
 
+    /**
+     * @return Connection information for target SQL Server
+     * 
+     */
     public Output<SqlConnectionInfoArgs> targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -52,11 +56,23 @@ public final class ConnectToTargetSqlMITaskInputArgs extends com.pulumi.resource
             $ = new ConnectToTargetSqlMITaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(Output<SqlConnectionInfoArgs> targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(SqlConnectionInfoArgs targetConnectionInfo) {
             return targetConnectionInfo(Output.of(targetConnectionInfo));
         }

@@ -26,6 +26,10 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationRespons
     @Import(name="dnsServers")
     private @Nullable List<String> dnsServers;
 
+    /**
+     * @return List of DNS servers IP addresses
+     * 
+     */
     public Optional<List<String>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -54,11 +58,23 @@ public final class VirtualMachineNetworkInterfaceDnsSettingsConfigurationRespons
             $ = new VirtualMachineNetworkInterfaceDnsSettingsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServers List of DNS servers IP addresses
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers List of DNS servers IP addresses
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }

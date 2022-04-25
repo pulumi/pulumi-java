@@ -29,6 +29,10 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="catalogAdminPassword")
     private @Nullable Output<SecureStringArgs> catalogAdminPassword;
 
+    /**
+     * @return The password of the administrator user account of the catalog database.
+     * 
+     */
     public Optional<Output<SecureStringArgs>> catalogAdminPassword() {
         return Optional.ofNullable(this.catalogAdminPassword);
     }
@@ -40,6 +44,10 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="catalogAdminUserName")
     private @Nullable Output<String> catalogAdminUserName;
 
+    /**
+     * @return The administrator user name of catalog database.
+     * 
+     */
     public Optional<Output<String>> catalogAdminUserName() {
         return Optional.ofNullable(this.catalogAdminUserName);
     }
@@ -51,6 +59,10 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="catalogPricingTier")
     private @Nullable Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier;
 
+    /**
+     * @return The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+     * 
+     */
     public Optional<Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>>> catalogPricingTier() {
         return Optional.ofNullable(this.catalogPricingTier);
     }
@@ -62,6 +74,10 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
     @Import(name="catalogServerEndpoint")
     private @Nullable Output<String> catalogServerEndpoint;
 
+    /**
+     * @return The catalog database server URL.
+     * 
+     */
     public Optional<Output<String>> catalogServerEndpoint() {
         return Optional.ofNullable(this.catalogServerEndpoint);
     }
@@ -93,46 +109,106 @@ public final class IntegrationRuntimeSsisCatalogInfoArgs extends com.pulumi.reso
             $ = new IntegrationRuntimeSsisCatalogInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param catalogAdminPassword The password of the administrator user account of the catalog database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogAdminPassword(@Nullable Output<SecureStringArgs> catalogAdminPassword) {
             $.catalogAdminPassword = catalogAdminPassword;
             return this;
         }
 
+        /**
+         * @param catalogAdminPassword The password of the administrator user account of the catalog database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogAdminPassword(SecureStringArgs catalogAdminPassword) {
             return catalogAdminPassword(Output.of(catalogAdminPassword));
         }
 
+        /**
+         * @param catalogAdminUserName The administrator user name of catalog database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogAdminUserName(@Nullable Output<String> catalogAdminUserName) {
             $.catalogAdminUserName = catalogAdminUserName;
             return this;
         }
 
+        /**
+         * @param catalogAdminUserName The administrator user name of catalog database.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogAdminUserName(String catalogAdminUserName) {
             return catalogAdminUserName(Output.of(catalogAdminUserName));
         }
 
+        /**
+         * @param catalogPricingTier The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogPricingTier(@Nullable Output<Either<String,IntegrationRuntimeSsisCatalogPricingTier>> catalogPricingTier) {
             $.catalogPricingTier = catalogPricingTier;
             return this;
         }
 
+        /**
+         * @param catalogPricingTier The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogPricingTier(Either<String,IntegrationRuntimeSsisCatalogPricingTier> catalogPricingTier) {
             return catalogPricingTier(Output.of(catalogPricingTier));
         }
 
+        /**
+         * @param catalogPricingTier The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogPricingTier(String catalogPricingTier) {
             return catalogPricingTier(Either.ofLeft(catalogPricingTier));
         }
 
+        /**
+         * @param catalogPricingTier The pricing tier for the catalog database. The valid values could be found in https://azure.microsoft.com/en-us/pricing/details/sql-database/
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogPricingTier(IntegrationRuntimeSsisCatalogPricingTier catalogPricingTier) {
             return catalogPricingTier(Either.ofRight(catalogPricingTier));
         }
 
+        /**
+         * @param catalogServerEndpoint The catalog database server URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogServerEndpoint(@Nullable Output<String> catalogServerEndpoint) {
             $.catalogServerEndpoint = catalogServerEndpoint;
             return this;
         }
 
+        /**
+         * @param catalogServerEndpoint The catalog database server URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder catalogServerEndpoint(String catalogServerEndpoint) {
             return catalogServerEndpoint(Output.of(catalogServerEndpoint));
         }

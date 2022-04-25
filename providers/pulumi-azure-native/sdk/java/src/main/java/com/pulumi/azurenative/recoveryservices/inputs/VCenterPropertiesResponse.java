@@ -27,6 +27,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="discoveryStatus")
     private @Nullable String discoveryStatus;
 
+    /**
+     * @return The VCenter discovery status.
+     * 
+     */
     public Optional<String> discoveryStatus() {
         return Optional.ofNullable(this.discoveryStatus);
     }
@@ -38,6 +42,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="fabricArmResourceName")
     private @Nullable String fabricArmResourceName;
 
+    /**
+     * @return The ARM resource name of the fabric containing this VCenter.
+     * 
+     */
     public Optional<String> fabricArmResourceName() {
         return Optional.ofNullable(this.fabricArmResourceName);
     }
@@ -49,6 +57,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Friendly name of the vCenter.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -60,6 +72,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="healthErrors")
     private @Nullable List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return The health errors for this VCenter.
+     * 
+     */
     public Optional<List<HealthErrorResponse>> healthErrors() {
         return Optional.ofNullable(this.healthErrors);
     }
@@ -71,6 +87,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="infrastructureId")
     private @Nullable String infrastructureId;
 
+    /**
+     * @return The infrastructure Id of vCenter.
+     * 
+     */
     public Optional<String> infrastructureId() {
         return Optional.ofNullable(this.infrastructureId);
     }
@@ -82,6 +102,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="internalId")
     private @Nullable String internalId;
 
+    /**
+     * @return VCenter internal ID.
+     * 
+     */
     public Optional<String> internalId() {
         return Optional.ofNullable(this.internalId);
     }
@@ -93,6 +117,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return The IP address of the vCenter.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -104,6 +132,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="lastHeartbeat")
     private @Nullable String lastHeartbeat;
 
+    /**
+     * @return The time when the last heartbeat was received by vCenter.
+     * 
+     */
     public Optional<String> lastHeartbeat() {
         return Optional.ofNullable(this.lastHeartbeat);
     }
@@ -115,6 +147,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="port")
     private @Nullable String port;
 
+    /**
+     * @return The port number for discovery.
+     * 
+     */
     public Optional<String> port() {
         return Optional.ofNullable(this.port);
     }
@@ -126,6 +162,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="processServerId")
     private @Nullable String processServerId;
 
+    /**
+     * @return The process server Id.
+     * 
+     */
     public Optional<String> processServerId() {
         return Optional.ofNullable(this.processServerId);
     }
@@ -137,6 +177,10 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="runAsAccountId")
     private @Nullable String runAsAccountId;
 
+    /**
+     * @return The account Id which has privileges to discover the vCenter.
+     * 
+     */
     public Optional<String> runAsAccountId() {
         return Optional.ofNullable(this.runAsAccountId);
     }
@@ -175,60 +219,132 @@ public final class VCenterPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new VCenterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param discoveryStatus The VCenter discovery status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveryStatus(@Nullable String discoveryStatus) {
             $.discoveryStatus = discoveryStatus;
             return this;
         }
 
+        /**
+         * @param fabricArmResourceName The ARM resource name of the fabric containing this VCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricArmResourceName(@Nullable String fabricArmResourceName) {
             $.fabricArmResourceName = fabricArmResourceName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors for this VCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(@Nullable List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors for this VCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param infrastructureId The infrastructure Id of vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureId(@Nullable String infrastructureId) {
             $.infrastructureId = infrastructureId;
             return this;
         }
 
+        /**
+         * @param internalId VCenter internal ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalId(@Nullable String internalId) {
             $.internalId = internalId;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address of the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param lastHeartbeat The time when the last heartbeat was received by vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeat(@Nullable String lastHeartbeat) {
             $.lastHeartbeat = lastHeartbeat;
             return this;
         }
 
+        /**
+         * @param port The port number for discovery.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable String port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param processServerId The process server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(@Nullable String processServerId) {
             $.processServerId = processServerId;
             return this;
         }
 
+        /**
+         * @param runAsAccountId The account Id which has privileges to discover the vCenter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccountId(@Nullable String runAsAccountId) {
             $.runAsAccountId = runAsAccountId;
             return this;

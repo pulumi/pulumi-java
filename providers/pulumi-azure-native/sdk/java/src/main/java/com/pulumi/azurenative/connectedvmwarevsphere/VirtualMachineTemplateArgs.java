@@ -24,6 +24,10 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return Gets or sets the extended location.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -35,6 +39,10 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="inventoryItemId")
     private @Nullable Output<String> inventoryItemId;
 
+    /**
+     * @return Gets or sets the inventory Item ID for the virtual machine template.
+     * 
+     */
     public Optional<Output<String>> inventoryItemId() {
         return Optional.ofNullable(this.inventoryItemId);
     }
@@ -46,6 +54,10 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -57,6 +69,10 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Gets or sets the location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -69,6 +85,11 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="moRefId")
     private @Nullable Output<String> moRefId;
 
+    /**
+     * @return Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
+     * template.
+     * 
+     */
     public Optional<Output<String>> moRefId() {
         return Optional.ofNullable(this.moRefId);
     }
@@ -80,6 +101,10 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +116,10 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Gets or sets the Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,6 +131,10 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="vCenterId")
     private @Nullable Output<String> vCenterId;
 
+    /**
+     * @return Gets or sets the ARM Id of the vCenter resource in which this template resides.
+     * 
+     */
     public Optional<Output<String>> vCenterId() {
         return Optional.ofNullable(this.vCenterId);
     }
@@ -113,6 +146,10 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
     @Import(name="virtualMachineTemplateName")
     private @Nullable Output<String> virtualMachineTemplateName;
 
+    /**
+     * @return Name of the virtual machine template resource.
+     * 
+     */
     public Optional<Output<String>> virtualMachineTemplateName() {
         return Optional.ofNullable(this.virtualMachineTemplateName);
     }
@@ -149,83 +186,193 @@ public final class VirtualMachineTemplateArgs extends com.pulumi.resources.Resou
             $ = new VirtualMachineTemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extendedLocation Gets or sets the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation Gets or sets the extended location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param inventoryItemId Gets or sets the inventory Item ID for the virtual machine template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryItemId(@Nullable Output<String> inventoryItemId) {
             $.inventoryItemId = inventoryItemId;
             return this;
         }
 
+        /**
+         * @param inventoryItemId Gets or sets the inventory Item ID for the virtual machine template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inventoryItemId(String inventoryItemId) {
             return inventoryItemId(Output.of(inventoryItemId));
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Metadata used by portal/tooling/etc to render different UX experiences for resources of the same type; e.g. ApiApps are a kind of Microsoft.Web/sites type.  If supported, the resource provider must validate and persist this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Gets or sets the location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Gets or sets the location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param moRefId Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
+         * template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moRefId(@Nullable Output<String> moRefId) {
             $.moRefId = moRefId;
             return this;
         }
 
+        /**
+         * @param moRefId Gets or sets the vCenter MoRef (Managed Object Reference) ID for the virtual machine
+         * template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moRefId(String moRefId) {
             return moRefId(Output.of(moRefId));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Gets or sets the Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Gets or sets the Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vCenterId Gets or sets the ARM Id of the vCenter resource in which this template resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCenterId(@Nullable Output<String> vCenterId) {
             $.vCenterId = vCenterId;
             return this;
         }
 
+        /**
+         * @param vCenterId Gets or sets the ARM Id of the vCenter resource in which this template resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vCenterId(String vCenterId) {
             return vCenterId(Output.of(vCenterId));
         }
 
+        /**
+         * @param virtualMachineTemplateName Name of the virtual machine template resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineTemplateName(@Nullable Output<String> virtualMachineTemplateName) {
             $.virtualMachineTemplateName = virtualMachineTemplateName;
             return this;
         }
 
+        /**
+         * @param virtualMachineTemplateName Name of the virtual machine template resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineTemplateName(String virtualMachineTemplateName) {
             return virtualMachineTemplateName(Output.of(virtualMachineTemplateName));
         }

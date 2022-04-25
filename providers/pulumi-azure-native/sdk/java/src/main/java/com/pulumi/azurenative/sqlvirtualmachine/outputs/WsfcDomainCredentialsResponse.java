@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WsfcDomainCredentialsResponse {
     /**
-     * Cluster bootstrap account password.
+     * @return Cluster bootstrap account password.
      * 
      */
     private final @Nullable String clusterBootstrapAccountPassword;
     /**
-     * Cluster operator account password.
+     * @return Cluster operator account password.
      * 
      */
     private final @Nullable String clusterOperatorAccountPassword;
     /**
-     * SQL service account password.
+     * @return SQL service account password.
      * 
      */
     private final @Nullable String sqlServiceAccountPassword;
@@ -38,23 +38,23 @@ public final class WsfcDomainCredentialsResponse {
     }
 
     /**
-     * Cluster bootstrap account password.
+     * @return Cluster bootstrap account password.
      * 
-    */
+     */
     public Optional<String> clusterBootstrapAccountPassword() {
         return Optional.ofNullable(this.clusterBootstrapAccountPassword);
     }
     /**
-     * Cluster operator account password.
+     * @return Cluster operator account password.
      * 
-    */
+     */
     public Optional<String> clusterOperatorAccountPassword() {
         return Optional.ofNullable(this.clusterOperatorAccountPassword);
     }
     /**
-     * SQL service account password.
+     * @return SQL service account password.
      * 
-    */
+     */
     public Optional<String> sqlServiceAccountPassword() {
         return Optional.ofNullable(this.sqlServiceAccountPassword);
     }

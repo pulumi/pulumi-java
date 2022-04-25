@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConsentLinkDefinitionResponse {
     /**
-     * Display name of the parameter in the connection provider&#39;s OAuth settings
+     * @return Display name of the parameter in the connection provider&#39;s OAuth settings
      * 
      */
     private final @Nullable String displayName;
     /**
-     * URI for first party login
+     * @return URI for first party login
      * 
      */
     private final @Nullable String firstPartyLoginUri;
     /**
-     * URI for the consent link
+     * @return URI for the consent link
      * 
      */
     private final @Nullable String link;
     /**
-     * Status of the link
+     * @return Status of the link
      * 
      */
     private final @Nullable String status;
@@ -45,30 +45,30 @@ public final class ConsentLinkDefinitionResponse {
     }
 
     /**
-     * Display name of the parameter in the connection provider&#39;s OAuth settings
+     * @return Display name of the parameter in the connection provider&#39;s OAuth settings
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * URI for first party login
+     * @return URI for first party login
      * 
-    */
+     */
     public Optional<String> firstPartyLoginUri() {
         return Optional.ofNullable(this.firstPartyLoginUri);
     }
     /**
-     * URI for the consent link
+     * @return URI for the consent link
      * 
-    */
+     */
     public Optional<String> link() {
         return Optional.ofNullable(this.link);
     }
     /**
-     * Status of the link
+     * @return Status of the link
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }

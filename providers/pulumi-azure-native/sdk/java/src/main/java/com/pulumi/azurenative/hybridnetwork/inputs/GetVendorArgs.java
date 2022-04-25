@@ -19,6 +19,10 @@ public final class GetVendorArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vendorName", required=true)
     private String vendorName;
 
+    /**
+     * @return The name of the vendor.
+     * 
+     */
     public String vendorName() {
         return this.vendorName;
     }
@@ -47,6 +51,12 @@ public final class GetVendorArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVendorArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param vendorName The name of the vendor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vendorName(String vendorName) {
             $.vendorName = vendorName;
             return this;

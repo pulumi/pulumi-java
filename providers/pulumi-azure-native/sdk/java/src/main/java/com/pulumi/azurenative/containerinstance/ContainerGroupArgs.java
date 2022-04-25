@@ -38,6 +38,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="containerGroupName")
     private @Nullable Output<String> containerGroupName;
 
+    /**
+     * @return The name of the container group.
+     * 
+     */
     public Optional<Output<String>> containerGroupName() {
         return Optional.ofNullable(this.containerGroupName);
     }
@@ -49,6 +53,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="containers", required=true)
     private Output<List<ContainerArgs>> containers;
 
+    /**
+     * @return The containers within the container group.
+     * 
+     */
     public Output<List<ContainerArgs>> containers() {
         return this.containers;
     }
@@ -60,6 +68,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="diagnostics")
     private @Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics;
 
+    /**
+     * @return The diagnostic information for a container group.
+     * 
+     */
     public Optional<Output<ContainerGroupDiagnosticsArgs>> diagnostics() {
         return Optional.ofNullable(this.diagnostics);
     }
@@ -71,6 +83,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dnsConfig")
     private @Nullable Output<DnsConfigurationArgs> dnsConfig;
 
+    /**
+     * @return The DNS config information for a container group.
+     * 
+     */
     public Optional<Output<DnsConfigurationArgs>> dnsConfig() {
         return Optional.ofNullable(this.dnsConfig);
     }
@@ -82,6 +98,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="encryptionProperties")
     private @Nullable Output<EncryptionPropertiesArgs> encryptionProperties;
 
+    /**
+     * @return The encryption properties for a container group.
+     * 
+     */
     public Optional<Output<EncryptionPropertiesArgs>> encryptionProperties() {
         return Optional.ofNullable(this.encryptionProperties);
     }
@@ -93,6 +113,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<ContainerGroupIdentityArgs> identity;
 
+    /**
+     * @return The identity of the container group, if configured.
+     * 
+     */
     public Optional<Output<ContainerGroupIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -104,6 +128,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="imageRegistryCredentials")
     private @Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials;
 
+    /**
+     * @return The image registry credentials by which the container group is created from.
+     * 
+     */
     public Optional<Output<List<ImageRegistryCredentialArgs>>> imageRegistryCredentials() {
         return Optional.ofNullable(this.imageRegistryCredentials);
     }
@@ -115,6 +143,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="initContainers")
     private @Nullable Output<List<InitContainerDefinitionArgs>> initContainers;
 
+    /**
+     * @return The init containers for a container group.
+     * 
+     */
     public Optional<Output<List<InitContainerDefinitionArgs>>> initContainers() {
         return Optional.ofNullable(this.initContainers);
     }
@@ -126,6 +158,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ipAddress")
     private @Nullable Output<IpAddressArgs> ipAddress;
 
+    /**
+     * @return The IP address type of the container group.
+     * 
+     */
     public Optional<Output<IpAddressArgs>> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -137,6 +173,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -148,6 +188,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="networkProfile")
     private @Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile;
 
+    /**
+     * @return The network profile information for a container group.
+     * 
+     */
     public Optional<Output<ContainerGroupNetworkProfileArgs>> networkProfile() {
         return Optional.ofNullable(this.networkProfile);
     }
@@ -159,6 +203,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="osType", required=true)
     private Output<Either<String,OperatingSystemTypes>> osType;
 
+    /**
+     * @return The operating system type required by the containers in the container group.
+     * 
+     */
     public Output<Either<String,OperatingSystemTypes>> osType() {
         return this.osType;
     }
@@ -170,6 +218,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -184,6 +236,13 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="restartPolicy")
     private @Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy;
 
+    /**
+     * @return Restart policy for all containers within the container group.
+     * - `Always` Always restart
+     * - `OnFailure` Restart on failure
+     * - `Never` Never restart
+     * 
+     */
     public Optional<Output<Either<String,ContainerGroupRestartPolicy>>> restartPolicy() {
         return Optional.ofNullable(this.restartPolicy);
     }
@@ -195,6 +254,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sku")
     private @Nullable Output<Either<String,ContainerGroupSku>> sku;
 
+    /**
+     * @return The SKU for a container group.
+     * 
+     */
     public Optional<Output<Either<String,ContainerGroupSku>>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -206,6 +269,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -217,6 +284,10 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="volumes")
     private @Nullable Output<List<VolumeArgs>> volumes;
 
+    /**
+     * @return The list of volumes that can be mounted by containers in this container group.
+     * 
+     */
     public Optional<Output<List<VolumeArgs>>> volumes() {
         return Optional.ofNullable(this.volumes);
     }
@@ -261,195 +332,471 @@ public final class ContainerGroupArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContainerGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerGroupName The name of the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerGroupName(@Nullable Output<String> containerGroupName) {
             $.containerGroupName = containerGroupName;
             return this;
         }
 
+        /**
+         * @param containerGroupName The name of the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerGroupName(String containerGroupName) {
             return containerGroupName(Output.of(containerGroupName));
         }
 
+        /**
+         * @param containers The containers within the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(Output<List<ContainerArgs>> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers The containers within the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(List<ContainerArgs> containers) {
             return containers(Output.of(containers));
         }
 
+        /**
+         * @param containers The containers within the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param diagnostics The diagnostic information for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnostics(@Nullable Output<ContainerGroupDiagnosticsArgs> diagnostics) {
             $.diagnostics = diagnostics;
             return this;
         }
 
+        /**
+         * @param diagnostics The diagnostic information for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diagnostics(ContainerGroupDiagnosticsArgs diagnostics) {
             return diagnostics(Output.of(diagnostics));
         }
 
+        /**
+         * @param dnsConfig The DNS config information for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(@Nullable Output<DnsConfigurationArgs> dnsConfig) {
             $.dnsConfig = dnsConfig;
             return this;
         }
 
+        /**
+         * @param dnsConfig The DNS config information for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsConfig(DnsConfigurationArgs dnsConfig) {
             return dnsConfig(Output.of(dnsConfig));
         }
 
+        /**
+         * @param encryptionProperties The encryption properties for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionProperties(@Nullable Output<EncryptionPropertiesArgs> encryptionProperties) {
             $.encryptionProperties = encryptionProperties;
             return this;
         }
 
+        /**
+         * @param encryptionProperties The encryption properties for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionProperties(EncryptionPropertiesArgs encryptionProperties) {
             return encryptionProperties(Output.of(encryptionProperties));
         }
 
+        /**
+         * @param identity The identity of the container group, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ContainerGroupIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the container group, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ContainerGroupIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param imageRegistryCredentials The image registry credentials by which the container group is created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRegistryCredentials(@Nullable Output<List<ImageRegistryCredentialArgs>> imageRegistryCredentials) {
             $.imageRegistryCredentials = imageRegistryCredentials;
             return this;
         }
 
+        /**
+         * @param imageRegistryCredentials The image registry credentials by which the container group is created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRegistryCredentials(List<ImageRegistryCredentialArgs> imageRegistryCredentials) {
             return imageRegistryCredentials(Output.of(imageRegistryCredentials));
         }
 
+        /**
+         * @param imageRegistryCredentials The image registry credentials by which the container group is created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageRegistryCredentials(ImageRegistryCredentialArgs... imageRegistryCredentials) {
             return imageRegistryCredentials(List.of(imageRegistryCredentials));
         }
 
+        /**
+         * @param initContainers The init containers for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initContainers(@Nullable Output<List<InitContainerDefinitionArgs>> initContainers) {
             $.initContainers = initContainers;
             return this;
         }
 
+        /**
+         * @param initContainers The init containers for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initContainers(List<InitContainerDefinitionArgs> initContainers) {
             return initContainers(Output.of(initContainers));
         }
 
+        /**
+         * @param initContainers The init containers for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initContainers(InitContainerDefinitionArgs... initContainers) {
             return initContainers(List.of(initContainers));
         }
 
+        /**
+         * @param ipAddress The IP address type of the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable Output<IpAddressArgs> ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddress The IP address type of the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(IpAddressArgs ipAddress) {
             return ipAddress(Output.of(ipAddress));
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkProfile The network profile information for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(@Nullable Output<ContainerGroupNetworkProfileArgs> networkProfile) {
             $.networkProfile = networkProfile;
             return this;
         }
 
+        /**
+         * @param networkProfile The network profile information for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProfile(ContainerGroupNetworkProfileArgs networkProfile) {
             return networkProfile(Output.of(networkProfile));
         }
 
+        /**
+         * @param osType The operating system type required by the containers in the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Output<Either<String,OperatingSystemTypes>> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The operating system type required by the containers in the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(Either<String,OperatingSystemTypes> osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param osType The operating system type required by the containers in the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             return osType(Either.ofLeft(osType));
         }
 
+        /**
+         * @param osType The operating system type required by the containers in the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OperatingSystemTypes osType) {
             return osType(Either.ofRight(osType));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param restartPolicy Restart policy for all containers within the container group.
+         * - `Always` Always restart
+         * - `OnFailure` Restart on failure
+         * - `Never` Never restart
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartPolicy(@Nullable Output<Either<String,ContainerGroupRestartPolicy>> restartPolicy) {
             $.restartPolicy = restartPolicy;
             return this;
         }
 
+        /**
+         * @param restartPolicy Restart policy for all containers within the container group.
+         * - `Always` Always restart
+         * - `OnFailure` Restart on failure
+         * - `Never` Never restart
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartPolicy(Either<String,ContainerGroupRestartPolicy> restartPolicy) {
             return restartPolicy(Output.of(restartPolicy));
         }
 
+        /**
+         * @param restartPolicy Restart policy for all containers within the container group.
+         * - `Always` Always restart
+         * - `OnFailure` Restart on failure
+         * - `Never` Never restart
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartPolicy(String restartPolicy) {
             return restartPolicy(Either.ofLeft(restartPolicy));
         }
 
+        /**
+         * @param restartPolicy Restart policy for all containers within the container group.
+         * - `Always` Always restart
+         * - `OnFailure` Restart on failure
+         * - `Never` Never restart
+         * 
+         * @return builder
+         * 
+         */
         public Builder restartPolicy(ContainerGroupRestartPolicy restartPolicy) {
             return restartPolicy(Either.ofRight(restartPolicy));
         }
 
+        /**
+         * @param sku The SKU for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<Either<String,ContainerGroupSku>> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Either<String,ContainerGroupSku> sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param sku The SKU for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(String sku) {
             return sku(Either.ofLeft(sku));
         }
 
+        /**
+         * @param sku The SKU for a container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(ContainerGroupSku sku) {
             return sku(Either.ofRight(sku));
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param volumes The list of volumes that can be mounted by containers in this container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(@Nullable Output<List<VolumeArgs>> volumes) {
             $.volumes = volumes;
             return this;
         }
 
+        /**
+         * @param volumes The list of volumes that can be mounted by containers in this container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(List<VolumeArgs> volumes) {
             return volumes(Output.of(volumes));
         }
 
+        /**
+         * @param volumes The list of volumes that can be mounted by containers in this container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumes(VolumeArgs... volumes) {
             return volumes(List.of(volumes));
         }

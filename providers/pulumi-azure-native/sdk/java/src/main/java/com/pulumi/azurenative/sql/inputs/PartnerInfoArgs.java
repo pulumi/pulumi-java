@@ -24,6 +24,10 @@ public final class PartnerInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Resource identifier of the partner server.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,11 +56,23 @@ public final class PartnerInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PartnerInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource identifier of the partner server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource identifier of the partner server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

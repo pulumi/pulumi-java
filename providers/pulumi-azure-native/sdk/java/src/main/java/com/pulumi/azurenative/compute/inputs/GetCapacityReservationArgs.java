@@ -21,6 +21,10 @@ public final class GetCapacityReservationArgs extends com.pulumi.resources.Invok
     @Import(name="capacityReservationGroupName", required=true)
     private String capacityReservationGroupName;
 
+    /**
+     * @return The name of the capacity reservation group.
+     * 
+     */
     public String capacityReservationGroupName() {
         return this.capacityReservationGroupName;
     }
@@ -32,6 +36,10 @@ public final class GetCapacityReservationArgs extends com.pulumi.resources.Invok
     @Import(name="capacityReservationName", required=true)
     private String capacityReservationName;
 
+    /**
+     * @return The name of the capacity reservation.
+     * 
+     */
     public String capacityReservationName() {
         return this.capacityReservationName;
     }
@@ -43,6 +51,10 @@ public final class GetCapacityReservationArgs extends com.pulumi.resources.Invok
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation. &#39;InstanceView&#39; retrieves a snapshot of the runtime properties of the capacity reservation that is managed by the platform and can change outside of control plane operations.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -54,6 +66,10 @@ public final class GetCapacityReservationArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -85,21 +101,45 @@ public final class GetCapacityReservationArgs extends com.pulumi.resources.Invok
             $ = new GetCapacityReservationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityReservationGroupName The name of the capacity reservation group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationGroupName(String capacityReservationGroupName) {
             $.capacityReservationGroupName = capacityReservationGroupName;
             return this;
         }
 
+        /**
+         * @param capacityReservationName The name of the capacity reservation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityReservationName(String capacityReservationName) {
             $.capacityReservationName = capacityReservationName;
             return this;
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation. &#39;InstanceView&#39; retrieves a snapshot of the runtime properties of the capacity reservation that is managed by the platform and can change outside of control plane operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

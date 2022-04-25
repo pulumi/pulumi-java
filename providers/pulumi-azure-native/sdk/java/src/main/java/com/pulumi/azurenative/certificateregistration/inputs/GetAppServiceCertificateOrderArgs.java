@@ -19,6 +19,10 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
     @Import(name="certificateOrderName", required=true)
     private String certificateOrderName;
 
+    /**
+     * @return Name of the certificate order..
+     * 
+     */
     public String certificateOrderName() {
         return this.certificateOrderName;
     }
@@ -30,6 +34,10 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetAppServiceCertificateOrderArgs extends com.pulumi.resource
             $ = new GetAppServiceCertificateOrderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateOrderName Name of the certificate order..
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateOrderName(String certificateOrderName) {
             $.certificateOrderName = certificateOrderName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

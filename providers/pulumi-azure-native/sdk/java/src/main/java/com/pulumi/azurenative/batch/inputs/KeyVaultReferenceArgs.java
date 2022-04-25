@@ -24,6 +24,10 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return The resource ID of the Azure key vault associated with the Batch account.
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -35,6 +39,10 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
     @Import(name="url", required=true)
     private Output<String> url;
 
+    /**
+     * @return The URL of the Azure key vault associated with the Batch account.
+     * 
+     */
     public Output<String> url() {
         return this.url;
     }
@@ -64,20 +72,44 @@ public final class KeyVaultReferenceArgs extends com.pulumi.resources.ResourceAr
             $ = new KeyVaultReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource ID of the Azure key vault associated with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The resource ID of the Azure key vault associated with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param url The URL of the Azure key vault associated with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the Azure key vault associated with the Batch account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

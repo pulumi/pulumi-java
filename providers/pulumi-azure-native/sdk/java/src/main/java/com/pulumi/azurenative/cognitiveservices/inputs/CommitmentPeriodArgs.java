@@ -27,6 +27,10 @@ public final class CommitmentPeriodArgs extends com.pulumi.resources.ResourceArg
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Commitment period commitment count.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class CommitmentPeriodArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tier")
     private @Nullable Output<String> tier;
 
+    /**
+     * @return Commitment period commitment tier.
+     * 
+     */
     public Optional<Output<String>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -67,20 +75,44 @@ public final class CommitmentPeriodArgs extends com.pulumi.resources.ResourceArg
             $ = new CommitmentPeriodArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Commitment period commitment count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Commitment period commitment count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param tier Commitment period commitment tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<String> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Commitment period commitment tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Output.of(tier));
         }

@@ -27,6 +27,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
     @Import(name="makeSourceDbReadOnly")
     private @Nullable Boolean makeSourceDbReadOnly;
 
+    /**
+     * @return Whether to set database read only before migration
+     * 
+     */
     public Optional<Boolean> makeSourceDbReadOnly() {
         return Optional.ofNullable(this.makeSourceDbReadOnly);
     }
@@ -38,6 +42,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
     @Import(name="tableMap")
     private @Nullable Map<String,String> tableMap;
 
+    /**
+     * @return Mapping of source to target tables
+     * 
+     */
     public Optional<Map<String,String>> tableMap() {
         return Optional.ofNullable(this.tableMap);
     }
@@ -60,6 +72,10 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
     @Import(name="targetDatabaseName")
     private @Nullable String targetDatabaseName;
 
+    /**
+     * @return Name of target database. Note: Target database will be truncated before starting migration.
+     * 
+     */
     public Optional<String> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
@@ -91,21 +107,45 @@ public final class MigrateSqlServerSqlDbDatabaseInputResponse extends com.pulumi
             $ = new MigrateSqlServerSqlDbDatabaseInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param makeSourceDbReadOnly Whether to set database read only before migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder makeSourceDbReadOnly(@Nullable Boolean makeSourceDbReadOnly) {
             $.makeSourceDbReadOnly = makeSourceDbReadOnly;
             return this;
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tableMap Mapping of source to target tables
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableMap(@Nullable Map<String,String> tableMap) {
             $.tableMap = tableMap;
             return this;
         }
 
+        /**
+         * @param targetDatabaseName Name of target database. Note: Target database will be truncated before starting migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             $.targetDatabaseName = targetDatabaseName;
             return this;

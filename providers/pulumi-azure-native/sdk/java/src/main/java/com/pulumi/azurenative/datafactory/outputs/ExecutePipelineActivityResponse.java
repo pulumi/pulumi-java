@@ -19,43 +19,43 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ExecutePipelineActivityResponse {
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Pipeline parameters.
+     * @return Pipeline parameters.
      * 
      */
     private final @Nullable Map<String,Object> parameters;
     /**
-     * Pipeline reference.
+     * @return Pipeline reference.
      * 
      */
     private final PipelineReferenceResponse pipeline;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;ExecutePipeline&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
     /**
-     * Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
+     * @return Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
      * 
      */
     private final @Nullable Boolean waitOnCompletion;
@@ -81,59 +81,59 @@ public final class ExecutePipelineActivityResponse {
     }
 
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Pipeline parameters.
+     * @return Pipeline parameters.
      * 
-    */
+     */
     public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Pipeline reference.
+     * @return Pipeline reference.
      * 
-    */
+     */
     public PipelineReferenceResponse pipeline() {
         return this.pipeline;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;ExecutePipeline&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }
     /**
-     * Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
+     * @return Defines whether activity execution will wait for the dependent pipeline execution to finish. Default is false.
      * 
-    */
+     */
     public Optional<Boolean> waitOnCompletion() {
         return Optional.ofNullable(this.waitOnCompletion);
     }

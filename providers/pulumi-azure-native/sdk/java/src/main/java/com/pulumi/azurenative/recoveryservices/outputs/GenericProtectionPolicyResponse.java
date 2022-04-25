@@ -15,28 +15,28 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GenericProtectionPolicyResponse {
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;GenericProtectionPolicy&#39;.
      * 
      */
     private final String backupManagementType;
     /**
-     * Name of this policy&#39;s fabric.
+     * @return Name of this policy&#39;s fabric.
      * 
      */
     private final @Nullable String fabricName;
     /**
-     * Number of items associated with this policy.
+     * @return Number of items associated with this policy.
      * 
      */
     private final @Nullable Integer protectedItemsCount;
     /**
-     * List of sub-protection policies which includes schedule and retention
+     * @return List of sub-protection policies which includes schedule and retention
      * 
      */
     private final @Nullable List<SubProtectionPolicyResponse> subProtectionPolicy;
     /**
-     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
      */
     private final @Nullable String timeZone;
@@ -56,38 +56,38 @@ public final class GenericProtectionPolicyResponse {
     }
 
     /**
-     * This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
      * Expected value is &#39;GenericProtectionPolicy&#39;.
      * 
-    */
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
     /**
-     * Name of this policy&#39;s fabric.
+     * @return Name of this policy&#39;s fabric.
      * 
-    */
+     */
     public Optional<String> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
     /**
-     * Number of items associated with this policy.
+     * @return Number of items associated with this policy.
      * 
-    */
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
     /**
-     * List of sub-protection policies which includes schedule and retention
+     * @return List of sub-protection policies which includes schedule and retention
      * 
-    */
+     */
     public List<SubProtectionPolicyResponse> subProtectionPolicy() {
         return this.subProtectionPolicy == null ? List.of() : this.subProtectionPolicy;
     }
     /**
-     * TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
      * 
-    */
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }

@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineSshCredentialsResponse {
     /**
-     * Password of admin account
+     * @return Password of admin account
      * 
      */
     private final @Nullable String password;
     /**
-     * Private key data
+     * @return Private key data
      * 
      */
     private final @Nullable String privateKeyData;
     /**
-     * Public key data
+     * @return Public key data
      * 
      */
     private final @Nullable String publicKeyData;
     /**
-     * Username of admin account
+     * @return Username of admin account
      * 
      */
     private final @Nullable String username;
@@ -45,30 +45,30 @@ public final class VirtualMachineSshCredentialsResponse {
     }
 
     /**
-     * Password of admin account
+     * @return Password of admin account
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Private key data
+     * @return Private key data
      * 
-    */
+     */
     public Optional<String> privateKeyData() {
         return Optional.ofNullable(this.privateKeyData);
     }
     /**
-     * Public key data
+     * @return Public key data
      * 
-    */
+     */
     public Optional<String> publicKeyData() {
         return Optional.ofNullable(this.publicKeyData);
     }
     /**
-     * Username of admin account
+     * @return Username of admin account
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

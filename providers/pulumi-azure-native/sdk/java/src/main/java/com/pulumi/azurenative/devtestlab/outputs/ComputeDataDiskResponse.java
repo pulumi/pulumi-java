@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ComputeDataDiskResponse {
     /**
-     * Gets data disk size in GiB.
+     * @return Gets data disk size in GiB.
      * 
      */
     private final @Nullable Integer diskSizeGiB;
     /**
-     * When backed by a blob, the URI of underlying blob.
+     * @return When backed by a blob, the URI of underlying blob.
      * 
      */
     private final @Nullable String diskUri;
     /**
-     * When backed by managed disk, this is the ID of the compute disk resource.
+     * @return When backed by managed disk, this is the ID of the compute disk resource.
      * 
      */
     private final @Nullable String managedDiskId;
     /**
-     * Gets data disk name.
+     * @return Gets data disk name.
      * 
      */
     private final @Nullable String name;
@@ -46,30 +46,30 @@ public final class ComputeDataDiskResponse {
     }
 
     /**
-     * Gets data disk size in GiB.
+     * @return Gets data disk size in GiB.
      * 
-    */
+     */
     public Optional<Integer> diskSizeGiB() {
         return Optional.ofNullable(this.diskSizeGiB);
     }
     /**
-     * When backed by a blob, the URI of underlying blob.
+     * @return When backed by a blob, the URI of underlying blob.
      * 
-    */
+     */
     public Optional<String> diskUri() {
         return Optional.ofNullable(this.diskUri);
     }
     /**
-     * When backed by managed disk, this is the ID of the compute disk resource.
+     * @return When backed by managed disk, this is the ID of the compute disk resource.
      * 
-    */
+     */
     public Optional<String> managedDiskId() {
         return Optional.ofNullable(this.managedDiskId);
     }
     /**
-     * Gets data disk name.
+     * @return Gets data disk name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

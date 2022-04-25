@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FailoverSetEligibilityResultResponse {
     /**
-     * The error message, if the failover set is not eligible for failover.
+     * @return The error message, if the failover set is not eligible for failover.
      * 
      */
     private final @Nullable String errorMessage;
     /**
-     * Represents if this failover set is eligible for failover or not.
+     * @return Represents if this failover set is eligible for failover or not.
      * 
      */
     private final @Nullable Boolean isEligibleForFailover;
@@ -32,16 +32,16 @@ public final class FailoverSetEligibilityResultResponse {
     }
 
     /**
-     * The error message, if the failover set is not eligible for failover.
+     * @return The error message, if the failover set is not eligible for failover.
      * 
-    */
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
-     * Represents if this failover set is eligible for failover or not.
+     * @return Represents if this failover set is eligible for failover or not.
      * 
-    */
+     */
     public Optional<Boolean> isEligibleForFailover() {
         return Optional.ofNullable(this.isEligibleForFailover);
     }

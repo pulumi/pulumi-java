@@ -23,6 +23,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends com.p
     @Import(name="sourceConnectionInfo", required=true)
     private MySqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source MySQL server
+     * 
+     */
     public MySqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -34,6 +38,10 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends com.p
     @Import(name="targetConnectionInfo", required=true)
     private MySqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Connection information for target Azure Database for MySQL server
+     * 
+     */
     public MySqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -63,11 +71,23 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse extends com.p
             $ = new ConnectToTargetAzureDbForMySqlTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source MySQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(MySqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for MySQL server
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

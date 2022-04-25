@@ -23,6 +23,10 @@ public final class KeyValuePairResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The name of the setting for the action.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class KeyValuePairResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return The value of the setting for the action.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class KeyValuePairResponse extends com.pulumi.resources.InvokeArgs 
             $ = new KeyValuePairResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The name of the setting for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param value The value of the setting for the action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

@@ -25,6 +25,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends com.
     @Import(name="selectedDatabases", required=true)
     private List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases;
 
+    /**
+     * @return Databases to migrate
+     * 
+     */
     public List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases() {
         return this.selectedDatabases;
     }
@@ -36,6 +40,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends com.
     @Import(name="sourceConnectionInfo", required=true)
     private MySqlConnectionInfoResponse sourceConnectionInfo;
 
+    /**
+     * @return Connection information for source MySQL
+     * 
+     */
     public MySqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
@@ -47,6 +55,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends com.
     @Import(name="targetConnectionInfo", required=true)
     private MySqlConnectionInfoResponse targetConnectionInfo;
 
+    /**
+     * @return Connection information for target Azure Database for MySQL
+     * 
+     */
     public MySqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }
@@ -77,20 +89,44 @@ public final class MigrateMySqlAzureDbForMySqlSyncTaskInputResponse extends com.
             $ = new MigrateMySqlAzureDbForMySqlSyncTaskInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(List<MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse> selectedDatabases) {
             $.selectedDatabases = selectedDatabases;
             return this;
         }
 
+        /**
+         * @param selectedDatabases Databases to migrate
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedDatabases(MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse... selectedDatabases) {
             return selectedDatabases(List.of(selectedDatabases));
         }
 
+        /**
+         * @param sourceConnectionInfo Connection information for source MySQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceConnectionInfo(MySqlConnectionInfoResponse sourceConnectionInfo) {
             $.sourceConnectionInfo = sourceConnectionInfo;
             return this;
         }
 
+        /**
+         * @param targetConnectionInfo Connection information for target Azure Database for MySQL
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetConnectionInfo(MySqlConnectionInfoResponse targetConnectionInfo) {
             $.targetConnectionInfo = targetConnectionInfo;
             return this;

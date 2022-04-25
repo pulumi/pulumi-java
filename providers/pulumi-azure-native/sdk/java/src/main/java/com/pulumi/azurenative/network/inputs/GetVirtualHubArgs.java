@@ -19,6 +19,10 @@ public final class GetVirtualHubArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the VirtualHub.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualHubArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualHubName", required=true)
     private String virtualHubName;
 
+    /**
+     * @return The name of the VirtualHub.
+     * 
+     */
     public String virtualHubName() {
         return this.virtualHubName;
     }
@@ -59,11 +67,23 @@ public final class GetVirtualHubArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVirtualHubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualHubName The name of the VirtualHub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualHubName(String virtualHubName) {
             $.virtualHubName = virtualHubName;
             return this;

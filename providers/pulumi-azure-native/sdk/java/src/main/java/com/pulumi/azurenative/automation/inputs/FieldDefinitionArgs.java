@@ -27,6 +27,10 @@ public final class FieldDefinitionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isEncrypted")
     private @Nullable Output<Boolean> isEncrypted;
 
+    /**
+     * @return Gets or sets the isEncrypted flag of the connection field definition.
+     * 
+     */
     public Optional<Output<Boolean>> isEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
@@ -38,6 +42,10 @@ public final class FieldDefinitionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="isOptional")
     private @Nullable Output<Boolean> isOptional;
 
+    /**
+     * @return Gets or sets the isOptional flag of the connection field definition.
+     * 
+     */
     public Optional<Output<Boolean>> isOptional() {
         return Optional.ofNullable(this.isOptional);
     }
@@ -49,6 +57,10 @@ public final class FieldDefinitionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Gets or sets the type of the connection field definition.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -79,29 +91,65 @@ public final class FieldDefinitionArgs extends com.pulumi.resources.ResourceArgs
             $ = new FieldDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEncrypted Gets or sets the isEncrypted flag of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEncrypted(@Nullable Output<Boolean> isEncrypted) {
             $.isEncrypted = isEncrypted;
             return this;
         }
 
+        /**
+         * @param isEncrypted Gets or sets the isEncrypted flag of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEncrypted(Boolean isEncrypted) {
             return isEncrypted(Output.of(isEncrypted));
         }
 
+        /**
+         * @param isOptional Gets or sets the isOptional flag of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOptional(@Nullable Output<Boolean> isOptional) {
             $.isOptional = isOptional;
             return this;
         }
 
+        /**
+         * @param isOptional Gets or sets the isOptional flag of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isOptional(Boolean isOptional) {
             return isOptional(Output.of(isOptional));
         }
 
+        /**
+         * @param type Gets or sets the type of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the type of the connection field definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

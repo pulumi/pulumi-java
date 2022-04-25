@@ -27,6 +27,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="privateEndpoint")
     private @Nullable PrivateEndpointPropertyResponse privateEndpoint;
 
+    /**
+     * @return Private endpoint which the connection belongs to.
+     * 
+     */
     public Optional<PrivateEndpointPropertyResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -38,6 +42,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState;
 
+    /**
+     * @return Connection state of the private endpoint connection.
+     * 
+     */
     public Optional<PrivateLinkServiceConnectionStatePropertyResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -49,6 +57,10 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return State of the private endpoint connection.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -79,16 +91,34 @@ public final class PrivateEndpointConnectionPropertiesResponse extends com.pulum
             $ = new PrivateEndpointConnectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpoint Private endpoint which the connection belongs to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable PrivateEndpointPropertyResponse privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Connection state of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable PrivateLinkServiceConnectionStatePropertyResponse privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param provisioningState State of the private endpoint connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

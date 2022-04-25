@@ -23,6 +23,10 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="lastKnownPowerState", required=true)
     private String lastKnownPowerState;
 
+    /**
+     * @return Last known compute power state captured in DTL
+     * 
+     */
     public String lastKnownPowerState() {
         return this.lastKnownPowerState;
     }
@@ -34,6 +38,10 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="privateIpAddress", required=true)
     private String privateIpAddress;
 
+    /**
+     * @return PrivateIp address of the compute VM
+     * 
+     */
     public String privateIpAddress() {
         return this.privateIpAddress;
     }
@@ -45,6 +53,10 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the Dtl VM
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -56,6 +68,10 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="rdpAuthority", required=true)
     private String rdpAuthority;
 
+    /**
+     * @return Connection information for Windows
+     * 
+     */
     public String rdpAuthority() {
         return this.rdpAuthority;
     }
@@ -67,6 +83,10 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="sshAuthority", required=true)
     private String sshAuthority;
 
+    /**
+     * @return Connection information for Linux
+     * 
+     */
     public String sshAuthority() {
         return this.sshAuthority;
     }
@@ -78,6 +98,10 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return Compute VM login user name
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -111,31 +135,67 @@ public final class VirtualMachineDetailsResponse extends com.pulumi.resources.In
             $ = new VirtualMachineDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lastKnownPowerState Last known compute power state captured in DTL
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastKnownPowerState(String lastKnownPowerState) {
             $.lastKnownPowerState = lastKnownPowerState;
             return this;
         }
 
+        /**
+         * @param privateIpAddress PrivateIp address of the compute VM
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateIpAddress(String privateIpAddress) {
             $.privateIpAddress = privateIpAddress;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the Dtl VM
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param rdpAuthority Connection information for Windows
+         * 
+         * @return builder
+         * 
+         */
         public Builder rdpAuthority(String rdpAuthority) {
             $.rdpAuthority = rdpAuthority;
             return this;
         }
 
+        /**
+         * @param sshAuthority Connection information for Linux
+         * 
+         * @return builder
+         * 
+         */
         public Builder sshAuthority(String sshAuthority) {
             $.sshAuthority = sshAuthority;
             return this;
         }
 
+        /**
+         * @param userName Compute VM login user name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;

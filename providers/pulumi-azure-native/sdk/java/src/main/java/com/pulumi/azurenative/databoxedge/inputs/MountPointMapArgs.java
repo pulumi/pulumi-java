@@ -24,6 +24,10 @@ public final class MountPointMapArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="shareId", required=true)
     private Output<String> shareId;
 
+    /**
+     * @return ID of the share mounted to the role VM.
+     * 
+     */
     public Output<String> shareId() {
         return this.shareId;
     }
@@ -52,11 +56,23 @@ public final class MountPointMapArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MountPointMapArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param shareId ID of the share mounted to the role VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareId(Output<String> shareId) {
             $.shareId = shareId;
             return this;
         }
 
+        /**
+         * @param shareId ID of the share mounted to the role VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareId(String shareId) {
             return shareId(Output.of(shareId));
         }

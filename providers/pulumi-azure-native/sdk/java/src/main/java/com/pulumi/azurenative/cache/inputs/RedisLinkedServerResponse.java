@@ -23,6 +23,10 @@ public final class RedisLinkedServerResponse extends com.pulumi.resources.Invoke
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Linked server Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class RedisLinkedServerResponse extends com.pulumi.resources.Invoke
             $ = new RedisLinkedServerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Linked server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

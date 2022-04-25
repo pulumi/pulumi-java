@@ -25,6 +25,10 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="eventHubConnectionString")
     private @Nullable String eventHubConnectionString;
 
+    /**
+     * @return EventHub connection string.
+     * 
+     */
     public Optional<String> eventHubConnectionString() {
         return Optional.ofNullable(this.eventHubConnectionString);
     }
@@ -36,6 +40,10 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="ioTHubConnectionString")
     private @Nullable String ioTHubConnectionString;
 
+    /**
+     * @return IoTHub connection string.
+     * 
+     */
     public Optional<String> ioTHubConnectionString() {
         return Optional.ofNullable(this.ioTHubConnectionString);
     }
@@ -47,6 +55,10 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return IoTHub resource ID
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -77,16 +89,34 @@ public final class IotHubSettingsResponse extends com.pulumi.resources.InvokeArg
             $ = new IotHubSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHubConnectionString EventHub connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubConnectionString(@Nullable String eventHubConnectionString) {
             $.eventHubConnectionString = eventHubConnectionString;
             return this;
         }
 
+        /**
+         * @param ioTHubConnectionString IoTHub connection string.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ioTHubConnectionString(@Nullable String ioTHubConnectionString) {
             $.ioTHubConnectionString = ioTHubConnectionString;
             return this;
         }
 
+        /**
+         * @param resourceId IoTHub resource ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

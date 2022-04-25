@@ -27,6 +27,10 @@ public final class DiagnosticsRefResponse extends com.pulumi.resources.InvokeArg
     @Import(name="enabled")
     private @Nullable Boolean enabled;
 
+    /**
+     * @return Status of whether or not sinks are enabled.
+     * 
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
@@ -38,6 +42,10 @@ public final class DiagnosticsRefResponse extends com.pulumi.resources.InvokeArg
     @Import(name="sinkRefs")
     private @Nullable List<String> sinkRefs;
 
+    /**
+     * @return List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
+     * 
+     */
     public Optional<List<String>> sinkRefs() {
         return Optional.ofNullable(this.sinkRefs);
     }
@@ -67,16 +75,34 @@ public final class DiagnosticsRefResponse extends com.pulumi.resources.InvokeArg
             $ = new DiagnosticsRefResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enabled Status of whether or not sinks are enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(@Nullable Boolean enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param sinkRefs List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRefs(@Nullable List<String> sinkRefs) {
             $.sinkRefs = sinkRefs;
             return this;
         }
 
+        /**
+         * @param sinkRefs List of sinks to be used if enabled. References the list of sinks in DiagnosticsDescription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sinkRefs(String... sinkRefs) {
             return sinkRefs(List.of(sinkRefs));
         }

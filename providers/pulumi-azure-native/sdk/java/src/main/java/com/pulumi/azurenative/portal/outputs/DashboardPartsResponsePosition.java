@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DashboardPartsResponsePosition {
     /**
-     * The dashboard&#39;s part column span.
+     * @return The dashboard&#39;s part column span.
      * 
      */
     private final Integer colSpan;
     /**
-     * The dashboard part&#39;s metadata.
+     * @return The dashboard part&#39;s metadata.
      * 
      */
     private final @Nullable Map<String,Object> metadata;
     /**
-     * The dashboard&#39;s part row span.
+     * @return The dashboard&#39;s part row span.
      * 
      */
     private final Integer rowSpan;
     /**
-     * The dashboard&#39;s part x coordinate.
+     * @return The dashboard&#39;s part x coordinate.
      * 
      */
     private final Integer x;
     /**
-     * The dashboard&#39;s part y coordinate.
+     * @return The dashboard&#39;s part y coordinate.
      * 
      */
     private final Integer y;
@@ -54,37 +54,37 @@ public final class DashboardPartsResponsePosition {
     }
 
     /**
-     * The dashboard&#39;s part column span.
+     * @return The dashboard&#39;s part column span.
      * 
-    */
+     */
     public Integer colSpan() {
         return this.colSpan;
     }
     /**
-     * The dashboard part&#39;s metadata.
+     * @return The dashboard part&#39;s metadata.
      * 
-    */
+     */
     public Map<String,Object> metadata() {
         return this.metadata == null ? Map.of() : this.metadata;
     }
     /**
-     * The dashboard&#39;s part row span.
+     * @return The dashboard&#39;s part row span.
      * 
-    */
+     */
     public Integer rowSpan() {
         return this.rowSpan;
     }
     /**
-     * The dashboard&#39;s part x coordinate.
+     * @return The dashboard&#39;s part x coordinate.
      * 
-    */
+     */
     public Integer x() {
         return this.x;
     }
     /**
-     * The dashboard&#39;s part y coordinate.
+     * @return The dashboard&#39;s part y coordinate.
      * 
-    */
+     */
     public Integer y() {
         return this.y;
     }

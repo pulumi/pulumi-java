@@ -31,6 +31,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="cpu")
     private @Nullable Output<Integer> cpu;
 
+    /**
+     * @return Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+     * 
+     */
     public Optional<Output<Integer>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -42,6 +46,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="environmentVariables")
     private @Nullable Output<Map<String,String>> environmentVariables;
 
+    /**
+     * @return Collection of environment variables
+     * 
+     */
     public Optional<Output<Map<String,String>>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -53,6 +61,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="jvmOptions")
     private @Nullable Output<String> jvmOptions;
 
+    /**
+     * @return JVM parameter
+     * 
+     */
     public Optional<Output<String>> jvmOptions() {
         return Optional.ofNullable(this.jvmOptions);
     }
@@ -64,6 +76,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="memoryInGB")
     private @Nullable Output<Integer> memoryInGB;
 
+    /**
+     * @return Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+     * 
+     */
     public Optional<Output<Integer>> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
@@ -75,6 +91,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="netCoreMainEntryPath")
     private @Nullable Output<String> netCoreMainEntryPath;
 
+    /**
+     * @return The path to the .NET executable relative to zip root
+     * 
+     */
     public Optional<Output<String>> netCoreMainEntryPath() {
         return Optional.ofNullable(this.netCoreMainEntryPath);
     }
@@ -86,6 +106,10 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
     @Import(name="runtimeVersion")
     private @Nullable Output<Either<String,RuntimeVersion>> runtimeVersion;
 
+    /**
+     * @return Runtime version
+     * 
+     */
     public Optional<Output<Either<String,RuntimeVersion>>> runtimeVersion() {
         return Optional.ofNullable(this.runtimeVersion);
     }
@@ -119,64 +143,148 @@ public final class DeploymentSettingsArgs extends com.pulumi.resources.ResourceA
             $ = new DeploymentSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Integer> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Required CPU, basic tier should be 1, standard tier should be in range (1, 4)
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Integer cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param environmentVariables Collection of environment variables
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Output<Map<String,String>> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param environmentVariables Collection of environment variables
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(Map<String,String> environmentVariables) {
             return environmentVariables(Output.of(environmentVariables));
         }
 
+        /**
+         * @param jvmOptions JVM parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder jvmOptions(@Nullable Output<String> jvmOptions) {
             $.jvmOptions = jvmOptions;
             return this;
         }
 
+        /**
+         * @param jvmOptions JVM parameter
+         * 
+         * @return builder
+         * 
+         */
         public Builder jvmOptions(String jvmOptions) {
             return jvmOptions(Output.of(jvmOptions));
         }
 
+        /**
+         * @param memoryInGB Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(@Nullable Output<Integer> memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;
         }
 
+        /**
+         * @param memoryInGB Required Memory size in GB, basic tier should be in range (1, 2), standard tier should be in range (1, 8)
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(Integer memoryInGB) {
             return memoryInGB(Output.of(memoryInGB));
         }
 
+        /**
+         * @param netCoreMainEntryPath The path to the .NET executable relative to zip root
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreMainEntryPath(@Nullable Output<String> netCoreMainEntryPath) {
             $.netCoreMainEntryPath = netCoreMainEntryPath;
             return this;
         }
 
+        /**
+         * @param netCoreMainEntryPath The path to the .NET executable relative to zip root
+         * 
+         * @return builder
+         * 
+         */
         public Builder netCoreMainEntryPath(String netCoreMainEntryPath) {
             return netCoreMainEntryPath(Output.of(netCoreMainEntryPath));
         }
 
+        /**
+         * @param runtimeVersion Runtime version
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(@Nullable Output<Either<String,RuntimeVersion>> runtimeVersion) {
             $.runtimeVersion = runtimeVersion;
             return this;
         }
 
+        /**
+         * @param runtimeVersion Runtime version
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(Either<String,RuntimeVersion> runtimeVersion) {
             return runtimeVersion(Output.of(runtimeVersion));
         }
 
+        /**
+         * @param runtimeVersion Runtime version
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(String runtimeVersion) {
             return runtimeVersion(Either.ofLeft(runtimeVersion));
         }
 
+        /**
+         * @param runtimeVersion Runtime version
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeVersion(RuntimeVersion runtimeVersion) {
             return runtimeVersion(Either.ofRight(runtimeVersion));
         }

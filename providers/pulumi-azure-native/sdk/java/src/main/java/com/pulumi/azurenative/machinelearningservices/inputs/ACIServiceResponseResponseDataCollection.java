@@ -25,6 +25,10 @@ public final class ACIServiceResponseResponseDataCollection extends com.pulumi.r
     @Import(name="eventHubEnabled")
     private @Nullable Boolean eventHubEnabled;
 
+    /**
+     * @return Option for enabling/disabling Event Hub.
+     * 
+     */
     public Optional<Boolean> eventHubEnabled() {
         return Optional.ofNullable(this.eventHubEnabled);
     }
@@ -36,6 +40,10 @@ public final class ACIServiceResponseResponseDataCollection extends com.pulumi.r
     @Import(name="storageEnabled")
     private @Nullable Boolean storageEnabled;
 
+    /**
+     * @return Option for enabling/disabling storage.
+     * 
+     */
     public Optional<Boolean> storageEnabled() {
         return Optional.ofNullable(this.storageEnabled);
     }
@@ -65,11 +73,23 @@ public final class ACIServiceResponseResponseDataCollection extends com.pulumi.r
             $ = new ACIServiceResponseResponseDataCollection(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eventHubEnabled Option for enabling/disabling Event Hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eventHubEnabled(@Nullable Boolean eventHubEnabled) {
             $.eventHubEnabled = eventHubEnabled;
             return this;
         }
 
+        /**
+         * @param storageEnabled Option for enabling/disabling storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageEnabled(@Nullable Boolean storageEnabled) {
             $.storageEnabled = storageEnabled;
             return this;

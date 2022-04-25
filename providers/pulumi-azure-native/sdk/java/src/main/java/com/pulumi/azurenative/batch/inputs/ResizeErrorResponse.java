@@ -22,6 +22,10 @@ public final class ResizeErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="code", required=true)
     private String code;
 
+    /**
+     * @return An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+     * 
+     */
     public String code() {
         return this.code;
     }
@@ -40,6 +44,10 @@ public final class ResizeErrorResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return A message describing the error, intended to be suitable for display in a user interface.
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -70,6 +78,12 @@ public final class ResizeErrorResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ResizeErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code An identifier for the error. Codes are invariant and are intended to be consumed programmatically.
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(String code) {
             $.code = code;
             return this;
@@ -84,6 +98,12 @@ public final class ResizeErrorResponse extends com.pulumi.resources.InvokeArgs {
             return details(List.of(details));
         }
 
+        /**
+         * @param message A message describing the error, intended to be suitable for display in a user interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;

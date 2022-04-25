@@ -29,6 +29,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="code")
     private @Nullable String code;
 
+    /**
+     * @return Unique code for this error
+     * 
+     */
     public Optional<String> code() {
         return Optional.ofNullable(this.code);
     }
@@ -40,6 +44,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="details")
     private @Nullable List<UserFacingErrorResponse> details;
 
+    /**
+     * @return Additional related Errors
+     * 
+     */
     public Optional<List<UserFacingErrorResponse>> details() {
         return Optional.ofNullable(this.details);
     }
@@ -51,6 +59,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="innerError")
     private @Nullable InnerErrorResponse innerError;
 
+    /**
+     * @return Inner Error
+     * 
+     */
     public Optional<InnerErrorResponse> innerError() {
         return Optional.ofNullable(this.innerError);
     }
@@ -62,6 +74,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isRetryable")
     private @Nullable Boolean isRetryable;
 
+    /**
+     * @return Whether the operation will be retryable or not
+     * 
+     */
     public Optional<Boolean> isRetryable() {
         return Optional.ofNullable(this.isRetryable);
     }
@@ -73,6 +89,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isUserError")
     private @Nullable Boolean isUserError;
 
+    /**
+     * @return Whether the operation is due to a user error or service error
+     * 
+     */
     public Optional<Boolean> isUserError() {
         return Optional.ofNullable(this.isUserError);
     }
@@ -91,6 +111,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Any key value pairs that can be injected inside error object
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -102,6 +126,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="recommendedAction")
     private @Nullable List<String> recommendedAction;
 
+    /**
+     * @return RecommendedAction � localized.
+     * 
+     */
     public Optional<List<String>> recommendedAction() {
         return Optional.ofNullable(this.recommendedAction);
     }
@@ -113,6 +141,10 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return Target of the error.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -149,30 +181,66 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
             $ = new UserFacingErrorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param code Unique code for this error
+         * 
+         * @return builder
+         * 
+         */
         public Builder code(@Nullable String code) {
             $.code = code;
             return this;
         }
 
+        /**
+         * @param details Additional related Errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable List<UserFacingErrorResponse> details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param details Additional related Errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(UserFacingErrorResponse... details) {
             return details(List.of(details));
         }
 
+        /**
+         * @param innerError Inner Error
+         * 
+         * @return builder
+         * 
+         */
         public Builder innerError(@Nullable InnerErrorResponse innerError) {
             $.innerError = innerError;
             return this;
         }
 
+        /**
+         * @param isRetryable Whether the operation will be retryable or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder isRetryable(@Nullable Boolean isRetryable) {
             $.isRetryable = isRetryable;
             return this;
         }
 
+        /**
+         * @param isUserError Whether the operation is due to a user error or service error
+         * 
+         * @return builder
+         * 
+         */
         public Builder isUserError(@Nullable Boolean isUserError) {
             $.isUserError = isUserError;
             return this;
@@ -183,20 +251,44 @@ public final class UserFacingErrorResponse extends com.pulumi.resources.InvokeAr
             return this;
         }
 
+        /**
+         * @param properties Any key value pairs that can be injected inside error object
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param recommendedAction RecommendedAction � localized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendedAction(@Nullable List<String> recommendedAction) {
             $.recommendedAction = recommendedAction;
             return this;
         }
 
+        /**
+         * @param recommendedAction RecommendedAction � localized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendedAction(String... recommendedAction) {
             return recommendedAction(List.of(recommendedAction));
         }
 
+        /**
+         * @param target Target of the error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;

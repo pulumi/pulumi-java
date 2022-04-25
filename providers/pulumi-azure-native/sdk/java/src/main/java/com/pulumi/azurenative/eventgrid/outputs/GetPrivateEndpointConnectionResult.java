@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetPrivateEndpointConnectionResult {
     /**
-     * GroupIds from the private link service resource.
+     * @return GroupIds from the private link service resource.
      * 
      */
     private final @Nullable List<String> groupIds;
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
      */
     private final String name;
     /**
-     * The Private Endpoint resource for this Connection.
+     * @return The Private Endpoint resource for this Connection.
      * 
      */
     private final @Nullable PrivateEndpointResponse privateEndpoint;
     /**
-     * Details about the state of the connection.
+     * @return Details about the state of the connection.
      * 
      */
     private final @Nullable ConnectionStateResponse privateLinkServiceConnectionState;
     /**
-     * Provisioning state of the Private Endpoint Connection.
+     * @return Provisioning state of the Private Endpoint Connection.
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class GetPrivateEndpointConnectionResult {
     }
 
     /**
-     * GroupIds from the private link service resource.
+     * @return GroupIds from the private link service resource.
      * 
-    */
+     */
     public List<String> groupIds() {
         return this.groupIds == null ? List.of() : this.groupIds;
     }
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Private Endpoint resource for this Connection.
+     * @return The Private Endpoint resource for this Connection.
      * 
-    */
+     */
     public Optional<PrivateEndpointResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * Details about the state of the connection.
+     * @return Details about the state of the connection.
      * 
-    */
+     */
     public Optional<ConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
     /**
-     * Provisioning state of the Private Endpoint Connection.
+     * @return Provisioning state of the Private Endpoint Connection.
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

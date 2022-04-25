@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PipelineReferenceResponse {
     /**
-     * Reference name.
+     * @return Reference name.
      * 
      */
     private final @Nullable String name;
     /**
-     * Reference pipeline name.
+     * @return Reference pipeline name.
      * 
      */
     private final String referenceName;
     /**
-     * Pipeline reference type.
+     * @return Pipeline reference type.
      * 
      */
     private final String type;
@@ -38,23 +38,23 @@ public final class PipelineReferenceResponse {
     }
 
     /**
-     * Reference name.
+     * @return Reference name.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Reference pipeline name.
+     * @return Reference pipeline name.
      * 
-    */
+     */
     public String referenceName() {
         return this.referenceName;
     }
     /**
-     * Pipeline reference type.
+     * @return Pipeline reference type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

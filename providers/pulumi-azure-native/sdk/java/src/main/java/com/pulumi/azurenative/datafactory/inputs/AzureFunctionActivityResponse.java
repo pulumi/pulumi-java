@@ -32,6 +32,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="body")
     private @Nullable Object body;
 
+    /**
+     * @return Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> body() {
         return Optional.ofNullable(this.body);
     }
@@ -43,6 +47,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -54,6 +62,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -65,6 +77,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="functionName", required=true)
     private Object functionName;
 
+    /**
+     * @return Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
+     * 
+     */
     public Object functionName() {
         return this.functionName;
     }
@@ -76,6 +92,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="headers")
     private @Nullable Object headers;
 
+    /**
+     * @return Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -87,6 +107,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -98,6 +122,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="method", required=true)
     private String method;
 
+    /**
+     * @return Rest API method for target endpoint.
+     * 
+     */
     public String method() {
         return this.method;
     }
@@ -109,6 +137,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -120,6 +152,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -132,6 +168,11 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;AzureFunctionActivity&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -143,6 +184,10 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -181,65 +226,144 @@ public final class AzureFunctionActivityResponse extends com.pulumi.resources.In
             $ = new AzureFunctionActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param body Represents the payload that will be sent to the endpoint. Required for POST/PUT method, not allowed for GET method Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder body(@Nullable Object body) {
             $.body = body;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param functionName Name of the Function that the Azure Function Activity will call. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionName(Object functionName) {
             $.functionName = functionName;
             return this;
         }
 
+        /**
+         * @param headers Represents the headers that will be sent to the request. For example, to set the language and type on a request: &#34;headers&#34; : { &#34;Accept-Language&#34;: &#34;en-us&#34;, &#34;Content-Type&#34;: &#34;application/json&#34; }. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Object headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param method Rest API method for target endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder method(String method) {
             $.method = method;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;AzureFunctionActivity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

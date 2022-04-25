@@ -29,6 +29,10 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
     @Import(name="dataDiskImages")
     private @Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages;
 
+    /**
+     * @return A list of data disk images.
+     * 
+     */
     public Optional<Output<List<GalleryDataDiskImageArgs>>> dataDiskImages() {
         return Optional.ofNullable(this.dataDiskImages);
     }
@@ -40,6 +44,10 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
     @Import(name="osDiskImage")
     private @Nullable Output<GalleryOSDiskImageArgs> osDiskImage;
 
+    /**
+     * @return This is the OS disk image.
+     * 
+     */
     public Optional<Output<GalleryOSDiskImageArgs>> osDiskImage() {
         return Optional.ofNullable(this.osDiskImage);
     }
@@ -51,6 +59,10 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
     @Import(name="source")
     private @Nullable Output<GalleryArtifactVersionSourceArgs> source;
 
+    /**
+     * @return The gallery artifact version source.
+     * 
+     */
     public Optional<Output<GalleryArtifactVersionSourceArgs>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -81,33 +93,75 @@ public final class GalleryImageVersionStorageProfileArgs extends com.pulumi.reso
             $ = new GalleryImageVersionStorageProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDiskImages A list of data disk images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskImages(@Nullable Output<List<GalleryDataDiskImageArgs>> dataDiskImages) {
             $.dataDiskImages = dataDiskImages;
             return this;
         }
 
+        /**
+         * @param dataDiskImages A list of data disk images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskImages(List<GalleryDataDiskImageArgs> dataDiskImages) {
             return dataDiskImages(Output.of(dataDiskImages));
         }
 
+        /**
+         * @param dataDiskImages A list of data disk images.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskImages(GalleryDataDiskImageArgs... dataDiskImages) {
             return dataDiskImages(List.of(dataDiskImages));
         }
 
+        /**
+         * @param osDiskImage This is the OS disk image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskImage(@Nullable Output<GalleryOSDiskImageArgs> osDiskImage) {
             $.osDiskImage = osDiskImage;
             return this;
         }
 
+        /**
+         * @param osDiskImage This is the OS disk image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskImage(GalleryOSDiskImageArgs osDiskImage) {
             return osDiskImage(Output.of(osDiskImage));
         }
 
+        /**
+         * @param source The gallery artifact version source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<GalleryArtifactVersionSourceArgs> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source The gallery artifact version source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(GalleryArtifactVersionSourceArgs source) {
             return source(Output.of(source));
         }

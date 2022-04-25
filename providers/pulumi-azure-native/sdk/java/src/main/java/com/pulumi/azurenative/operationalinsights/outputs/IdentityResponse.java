@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IdentityResponse {
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
      */
     private final String principalId;
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
      */
     private final String tenantId;
     /**
-     * Type of managed service identity.
+     * @return Type of managed service identity.
      * 
      */
     private final String type;
     /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
      */
     private final @Nullable Map<String,UserIdentityPropertiesResponse> userAssignedIdentities;
@@ -46,30 +46,30 @@ public final class IdentityResponse {
     }
 
     /**
-     * The principal ID of resource identity.
+     * @return The principal ID of resource identity.
      * 
-    */
+     */
     public String principalId() {
         return this.principalId;
     }
     /**
-     * The tenant ID of resource.
+     * @return The tenant ID of resource.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }
     /**
-     * Type of managed service identity.
+     * @return Type of managed service identity.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * @return The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
      * 
-    */
+     */
     public Map<String,UserIdentityPropertiesResponse> userAssignedIdentities() {
         return this.userAssignedIdentities == null ? Map.of() : this.userAssignedIdentities;
     }

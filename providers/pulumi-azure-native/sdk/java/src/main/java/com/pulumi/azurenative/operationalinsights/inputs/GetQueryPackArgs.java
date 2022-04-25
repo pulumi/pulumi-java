@@ -19,6 +19,10 @@ public final class GetQueryPackArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="queryPackName", required=true)
     private String queryPackName;
 
+    /**
+     * @return The name of the Log Analytics QueryPack resource.
+     * 
+     */
     public String queryPackName() {
         return this.queryPackName;
     }
@@ -30,6 +34,10 @@ public final class GetQueryPackArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetQueryPackArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetQueryPackArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param queryPackName The name of the Log Analytics QueryPack resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryPackName(String queryPackName) {
             $.queryPackName = queryPackName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

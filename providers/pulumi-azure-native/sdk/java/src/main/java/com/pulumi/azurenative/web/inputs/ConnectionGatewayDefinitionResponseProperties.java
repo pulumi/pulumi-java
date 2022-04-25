@@ -24,6 +24,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
     @Import(name="backendUri")
     private @Nullable String backendUri;
 
+    /**
+     * @return The URI of the backend
+     * 
+     */
     public Optional<String> backendUri() {
         return Optional.ofNullable(this.backendUri);
     }
@@ -35,6 +39,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
     @Import(name="connectionGatewayInstallation")
     private @Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation;
 
+    /**
+     * @return The gateway installation reference
+     * 
+     */
     public Optional<ConnectionGatewayReferenceResponse> connectionGatewayInstallation() {
         return Optional.ofNullable(this.connectionGatewayInstallation);
     }
@@ -46,6 +54,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
     @Import(name="contactInformation")
     private @Nullable List<String> contactInformation;
 
+    /**
+     * @return The gateway admin
+     * 
+     */
     public Optional<List<String>> contactInformation() {
         return Optional.ofNullable(this.contactInformation);
     }
@@ -57,6 +69,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The gateway description
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -68,6 +84,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The gateway display name
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -79,6 +99,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
     @Import(name="machineName")
     private @Nullable String machineName;
 
+    /**
+     * @return The machine name of the gateway
+     * 
+     */
     public Optional<String> machineName() {
         return Optional.ofNullable(this.machineName);
     }
@@ -90,6 +114,10 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
     @Import(name="status")
     private @Nullable Object status;
 
+    /**
+     * @return The gateway status
+     * 
+     */
     public Optional<Object> status() {
         return Optional.ofNullable(this.status);
     }
@@ -124,40 +152,88 @@ public final class ConnectionGatewayDefinitionResponseProperties extends com.pul
             $ = new ConnectionGatewayDefinitionResponseProperties(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendUri The URI of the backend
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendUri(@Nullable String backendUri) {
             $.backendUri = backendUri;
             return this;
         }
 
+        /**
+         * @param connectionGatewayInstallation The gateway installation reference
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionGatewayInstallation(@Nullable ConnectionGatewayReferenceResponse connectionGatewayInstallation) {
             $.connectionGatewayInstallation = connectionGatewayInstallation;
             return this;
         }
 
+        /**
+         * @param contactInformation The gateway admin
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactInformation(@Nullable List<String> contactInformation) {
             $.contactInformation = contactInformation;
             return this;
         }
 
+        /**
+         * @param contactInformation The gateway admin
+         * 
+         * @return builder
+         * 
+         */
         public Builder contactInformation(String... contactInformation) {
             return contactInformation(List.of(contactInformation));
         }
 
+        /**
+         * @param description The gateway description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The gateway display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param machineName The machine name of the gateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineName(@Nullable String machineName) {
             $.machineName = machineName;
             return this;
         }
 
+        /**
+         * @param status The gateway status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Object status) {
             $.status = status;
             return this;

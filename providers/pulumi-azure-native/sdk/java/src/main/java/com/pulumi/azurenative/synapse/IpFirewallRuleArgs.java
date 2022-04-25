@@ -22,6 +22,10 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="endIpAddress")
     private @Nullable Output<String> endIpAddress;
 
+    /**
+     * @return The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
+     * 
+     */
     public Optional<Output<String>> endIpAddress() {
         return Optional.ofNullable(this.endIpAddress);
     }
@@ -33,6 +37,10 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="ruleName")
     private @Nullable Output<String> ruleName;
 
+    /**
+     * @return The IP firewall rule name
+     * 
+     */
     public Optional<Output<String>> ruleName() {
         return Optional.ofNullable(this.ruleName);
     }
@@ -55,6 +67,10 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="startIpAddress")
     private @Nullable Output<String> startIpAddress;
 
+    /**
+     * @return The start IP address of the firewall rule. Must be IPv4 format
+     * 
+     */
     public Optional<Output<String>> startIpAddress() {
         return Optional.ofNullable(this.startIpAddress);
     }
@@ -66,6 +82,10 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -98,47 +118,107 @@ public final class IpFirewallRuleArgs extends com.pulumi.resources.ResourceArgs 
             $ = new IpFirewallRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endIpAddress The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIpAddress(@Nullable Output<String> endIpAddress) {
             $.endIpAddress = endIpAddress;
             return this;
         }
 
+        /**
+         * @param endIpAddress The end IP address of the firewall rule. Must be IPv4 format. Must be greater than or equal to startIpAddress
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIpAddress(String endIpAddress) {
             return endIpAddress(Output.of(endIpAddress));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleName The IP firewall rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(@Nullable Output<String> ruleName) {
             $.ruleName = ruleName;
             return this;
         }
 
+        /**
+         * @param ruleName The IP firewall rule name
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleName(String ruleName) {
             return ruleName(Output.of(ruleName));
         }
 
+        /**
+         * @param startIpAddress The start IP address of the firewall rule. Must be IPv4 format
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIpAddress(@Nullable Output<String> startIpAddress) {
             $.startIpAddress = startIpAddress;
             return this;
         }
 
+        /**
+         * @param startIpAddress The start IP address of the firewall rule. Must be IPv4 format
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIpAddress(String startIpAddress) {
             return startIpAddress(Output.of(startIpAddress));
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

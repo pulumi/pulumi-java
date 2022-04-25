@@ -26,6 +26,10 @@ public final class WorkspaceCappingArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dailyQuotaGb")
     private @Nullable Output<Double> dailyQuotaGb;
 
+    /**
+     * @return The workspace daily quota for ingestion.
+     * 
+     */
     public Optional<Output<Double>> dailyQuotaGb() {
         return Optional.ofNullable(this.dailyQuotaGb);
     }
@@ -54,11 +58,23 @@ public final class WorkspaceCappingArgs extends com.pulumi.resources.ResourceArg
             $ = new WorkspaceCappingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dailyQuotaGb The workspace daily quota for ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyQuotaGb(@Nullable Output<Double> dailyQuotaGb) {
             $.dailyQuotaGb = dailyQuotaGb;
             return this;
         }
 
+        /**
+         * @param dailyQuotaGb The workspace daily quota for ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dailyQuotaGb(Double dailyQuotaGb) {
             return dailyQuotaGb(Output.of(dailyQuotaGb));
         }

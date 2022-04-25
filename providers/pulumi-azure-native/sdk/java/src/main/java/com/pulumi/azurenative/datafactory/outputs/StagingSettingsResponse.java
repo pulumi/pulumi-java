@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StagingSettingsResponse {
     /**
-     * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object enableCompression;
     /**
-     * Staging linked service reference.
+     * @return Staging linked service reference.
      * 
      */
     private final LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+     * @return The path to storage for storing the interim data. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object path;
@@ -39,23 +39,23 @@ public final class StagingSettingsResponse {
     }
 
     /**
-     * Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
+     * @return Specifies whether to use compression when copying data via an interim staging. Default value is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> enableCompression() {
         return Optional.ofNullable(this.enableCompression);
     }
     /**
-     * Staging linked service reference.
+     * @return Staging linked service reference.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
     /**
-     * The path to storage for storing the interim data. Type: string (or Expression with resultType string).
+     * @return The path to storage for storing the interim data. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }

@@ -25,6 +25,11 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends com.p
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -36,6 +41,10 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends com.p
     @Import(name="rawBody", required=true)
     private String rawBody;
 
+    /**
+     * @return The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
+     * 
+     */
     public String rawBody() {
         return this.rawBody;
     }
@@ -65,11 +74,24 @@ public final class ContentKeyPolicyX509CertificateTokenKeyResponse extends com.p
             $ = new ContentKeyPolicyX509CertificateTokenKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyX509CertificateTokenKey&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param rawBody The raw data field of a certificate in PKCS 12 format (X509Certificate2 in .NET)
+         * 
+         * @return builder
+         * 
+         */
         public Builder rawBody(String rawBody) {
             $.rawBody = rawBody;
             return this;

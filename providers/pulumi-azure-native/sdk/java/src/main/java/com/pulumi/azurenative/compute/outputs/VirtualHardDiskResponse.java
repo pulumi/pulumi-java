@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualHardDiskResponse {
     /**
-     * Specifies the virtual hard disk&#39;s uri.
+     * @return Specifies the virtual hard disk&#39;s uri.
      * 
      */
     private final @Nullable String uri;
@@ -23,9 +23,9 @@ public final class VirtualHardDiskResponse {
     }
 
     /**
-     * Specifies the virtual hard disk&#39;s uri.
+     * @return Specifies the virtual hard disk&#39;s uri.
      * 
-    */
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }

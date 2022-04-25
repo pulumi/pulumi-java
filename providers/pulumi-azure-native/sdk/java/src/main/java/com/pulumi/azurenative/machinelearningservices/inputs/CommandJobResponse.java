@@ -40,6 +40,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="codeId")
     private @Nullable String codeId;
 
+    /**
+     * @return ARM resource ID of the code asset.
+     * 
+     */
     public Optional<String> codeId() {
         return Optional.ofNullable(this.codeId);
     }
@@ -51,6 +55,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="command", required=true)
     private String command;
 
+    /**
+     * @return The command to execute on startup of the job. eg. &#34;python train.py&#34;
+     * 
+     */
     public String command() {
         return this.command;
     }
@@ -62,6 +70,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="compute", required=true)
     private ComputeConfigurationResponse compute;
 
+    /**
+     * @return Compute binding for the job.
+     * 
+     */
     public ComputeConfigurationResponse compute() {
         return this.compute;
     }
@@ -73,6 +85,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The asset description text.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -84,6 +100,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="distribution")
     private @Nullable Object distribution;
 
+    /**
+     * @return Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+     * 
+     */
     public Optional<Object> distribution() {
         return Optional.ofNullable(this.distribution);
     }
@@ -95,6 +115,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentId")
     private @Nullable String environmentId;
 
+    /**
+     * @return The ARM resource ID of the Environment specification for the job.
+     * 
+     */
     public Optional<String> environmentId() {
         return Optional.ofNullable(this.environmentId);
     }
@@ -106,6 +130,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="environmentVariables")
     private @Nullable Map<String,String> environmentVariables;
 
+    /**
+     * @return Environment variables included in the job.
+     * 
+     */
     public Optional<Map<String,String>> environmentVariables() {
         return Optional.ofNullable(this.environmentVariables);
     }
@@ -117,6 +145,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="experimentName")
     private @Nullable String experimentName;
 
+    /**
+     * @return The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+     * 
+     */
     public Optional<String> experimentName() {
         return Optional.ofNullable(this.experimentName);
     }
@@ -129,6 +161,11 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="identity")
     private @Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity;
 
+    /**
+     * @return Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
+     * Defaults to AmlToken if null.
+     * 
+     */
     public Optional<Either<AmlTokenResponse,ManagedIdentityResponse>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -140,6 +177,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputDataBindings")
     private @Nullable Map<String,InputDataBindingResponse> inputDataBindings;
 
+    /**
+     * @return Mapping of input data bindings used in the job.
+     * 
+     */
     public Optional<Map<String,InputDataBindingResponse>> inputDataBindings() {
         return Optional.ofNullable(this.inputDataBindings);
     }
@@ -152,6 +193,11 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="interactionEndpoints", required=true)
     private Map<String,JobEndpointResponse> interactionEndpoints;
 
+    /**
+     * @return List of JobEndpoints.
+     * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
+     * 
+     */
     public Map<String,JobEndpointResponse> interactionEndpoints() {
         return this.interactionEndpoints;
     }
@@ -164,6 +210,11 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobType", required=true)
     private String jobType;
 
+    /**
+     * @return Enum to determine the type of job.
+     * Expected value is &#39;Command&#39;.
+     * 
+     */
     public String jobType() {
         return this.jobType;
     }
@@ -175,6 +226,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="output", required=true)
     private JobOutputResponse output;
 
+    /**
+     * @return Location of the job output logs and artifacts.
+     * 
+     */
     public JobOutputResponse output() {
         return this.output;
     }
@@ -186,6 +241,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputDataBindings")
     private @Nullable Map<String,OutputDataBindingResponse> outputDataBindings;
 
+    /**
+     * @return Mapping of output data bindings used in the job.
+     * 
+     */
     public Optional<Map<String,OutputDataBindingResponse>> outputDataBindings() {
         return Optional.ofNullable(this.outputDataBindings);
     }
@@ -197,6 +256,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters", required=true)
     private Object parameters;
 
+    /**
+     * @return Input parameters.
+     * 
+     */
     public Object parameters() {
         return this.parameters;
     }
@@ -209,6 +272,11 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority")
     private @Nullable Integer priority;
 
+    /**
+     * @return Job priority for scheduling policy. Only applies to AMLCompute.
+     * Private preview feature and only available to users on the allow list.
+     * 
+     */
     public Optional<Integer> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -220,6 +288,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The asset property dictionary.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -231,6 +303,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Specifies the job provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -242,6 +318,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the job.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -253,6 +333,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Tag dictionary. Tags can be added, removed, and updated.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -264,6 +348,10 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="timeout")
     private @Nullable String timeout;
 
+    /**
+     * @return The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
+     * 
+     */
     public Optional<String> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -312,114 +400,258 @@ public final class CommandJobResponse extends com.pulumi.resources.InvokeArgs {
             $ = new CommandJobResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param codeId ARM resource ID of the code asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder codeId(@Nullable String codeId) {
             $.codeId = codeId;
             return this;
         }
 
+        /**
+         * @param command The command to execute on startup of the job. eg. &#34;python train.py&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder command(String command) {
             $.command = command;
             return this;
         }
 
+        /**
+         * @param compute Compute binding for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(ComputeConfigurationResponse compute) {
             $.compute = compute;
             return this;
         }
 
+        /**
+         * @param description The asset description text.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param distribution Distribution configuration of the job. If set, this should be one of Mpi, Tensorflow, PyTorch, or null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder distribution(@Nullable Object distribution) {
             $.distribution = distribution;
             return this;
         }
 
+        /**
+         * @param environmentId The ARM resource ID of the Environment specification for the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentId(@Nullable String environmentId) {
             $.environmentId = environmentId;
             return this;
         }
 
+        /**
+         * @param environmentVariables Environment variables included in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentVariables(@Nullable Map<String,String> environmentVariables) {
             $.environmentVariables = environmentVariables;
             return this;
         }
 
+        /**
+         * @param experimentName The name of the experiment the job belongs to. If not set, the job is placed in the &#34;Default&#34; experiment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder experimentName(@Nullable String experimentName) {
             $.experimentName = experimentName;
             return this;
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Either<AmlTokenResponse,ManagedIdentityResponse> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(AmlTokenResponse identity) {
             return identity(Either.ofLeft(identity));
         }
 
+        /**
+         * @param identity Identity configuration. If set, this should be one of AmlToken, ManagedIdentity, or null.
+         * Defaults to AmlToken if null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ManagedIdentityResponse identity) {
             return identity(Either.ofRight(identity));
         }
 
+        /**
+         * @param inputDataBindings Mapping of input data bindings used in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDataBindings(@Nullable Map<String,InputDataBindingResponse> inputDataBindings) {
             $.inputDataBindings = inputDataBindings;
             return this;
         }
 
+        /**
+         * @param interactionEndpoints List of JobEndpoints.
+         * For local jobs, a job endpoint will have an endpoint value of FileStreamObject.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionEndpoints(Map<String,JobEndpointResponse> interactionEndpoints) {
             $.interactionEndpoints = interactionEndpoints;
             return this;
         }
 
+        /**
+         * @param jobType Enum to determine the type of job.
+         * Expected value is &#39;Command&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobType(String jobType) {
             $.jobType = jobType;
             return this;
         }
 
+        /**
+         * @param output Location of the job output logs and artifacts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(JobOutputResponse output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param outputDataBindings Mapping of output data bindings used in the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputDataBindings(@Nullable Map<String,OutputDataBindingResponse> outputDataBindings) {
             $.outputDataBindings = outputDataBindings;
             return this;
         }
 
+        /**
+         * @param parameters Input parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param priority Job priority for scheduling policy. Only applies to AMLCompute.
+         * Private preview feature and only available to users on the allow list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param properties The asset property dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param provisioningState Specifies the job provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param status Status of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param tags Tag dictionary. Tags can be added, removed, and updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param timeout The max run duration in ISO 8601 format, after which the job will be cancelled. Only supports duration with precision as low as Seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable String timeout) {
             $.timeout = timeout;
             return this;

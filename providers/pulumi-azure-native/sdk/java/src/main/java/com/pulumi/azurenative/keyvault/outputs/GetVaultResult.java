@@ -14,32 +14,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetVaultResult {
     /**
-     * Fully qualified identifier of the key vault resource.
+     * @return Fully qualified identifier of the key vault resource.
      * 
      */
     private final String id;
     /**
-     * Azure location of the key vault resource.
+     * @return Azure location of the key vault resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * Name of the key vault resource.
+     * @return Name of the key vault resource.
      * 
      */
     private final String name;
     /**
-     * Properties of the vault
+     * @return Properties of the vault
      * 
      */
     private final VaultPropertiesResponse properties;
     /**
-     * Tags assigned to the key vault resource.
+     * @return Tags assigned to the key vault resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type of the key vault resource.
+     * @return Resource type of the key vault resource.
      * 
      */
     private final String type;
@@ -61,44 +61,44 @@ public final class GetVaultResult {
     }
 
     /**
-     * Fully qualified identifier of the key vault resource.
+     * @return Fully qualified identifier of the key vault resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure location of the key vault resource.
+     * @return Azure location of the key vault resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Name of the key vault resource.
+     * @return Name of the key vault resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Properties of the vault
+     * @return Properties of the vault
      * 
-    */
+     */
     public VaultPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Tags assigned to the key vault resource.
+     * @return Tags assigned to the key vault resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type of the key vault resource.
+     * @return Resource type of the key vault resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

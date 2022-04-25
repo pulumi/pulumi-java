@@ -24,6 +24,10 @@ public final class ApiManagementServiceSkuPropertiesResponse extends com.pulumi.
     @Import(name="capacity", required=true)
     private Integer capacity;
 
+    /**
+     * @return Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
+     * 
+     */
     public Integer capacity() {
         return this.capacity;
     }
@@ -35,6 +39,10 @@ public final class ApiManagementServiceSkuPropertiesResponse extends com.pulumi.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the Sku.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -64,11 +72,23 @@ public final class ApiManagementServiceSkuPropertiesResponse extends com.pulumi.
             $ = new ApiManagementServiceSkuPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity Capacity of the SKU (number of deployed units of the SKU). For Consumption SKU capacity must be specified as 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name Name of the Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

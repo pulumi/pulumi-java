@@ -29,6 +29,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="dataMoverRunAsAccountId", required=true)
     private String dataMoverRunAsAccountId;
 
+    /**
+     * @return The data mover RunAs account Id.
+     * 
+     */
     public String dataMoverRunAsAccountId() {
         return this.dataMoverRunAsAccountId;
     }
@@ -41,6 +45,11 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the instance type.
+     * Expected value is &#39;VMwareCbt&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -52,6 +61,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="lastRecoveryPointReceived", required=true)
     private String lastRecoveryPointReceived;
 
+    /**
+     * @return The last recovery point received time.
+     * 
+     */
     public String lastRecoveryPointReceived() {
         return this.lastRecoveryPointReceived;
     }
@@ -63,6 +76,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="licenseType")
     private @Nullable String licenseType;
 
+    /**
+     * @return License Type of the VM to be used.
+     * 
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
@@ -74,6 +91,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="migrationRecoveryPointId", required=true)
     private String migrationRecoveryPointId;
 
+    /**
+     * @return The recovery point Id to which the VM was migrated.
+     * 
+     */
     public String migrationRecoveryPointId() {
         return this.migrationRecoveryPointId;
     }
@@ -85,6 +106,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="osType", required=true)
     private String osType;
 
+    /**
+     * @return The type of the OS on the VM.
+     * 
+     */
     public String osType() {
         return this.osType;
     }
@@ -96,6 +121,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="protectedDisks")
     private @Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks;
 
+    /**
+     * @return The list of protected disks.
+     * 
+     */
     public Optional<List<VMwareCbtProtectedDiskDetailsResponse>> protectedDisks() {
         return Optional.ofNullable(this.protectedDisks);
     }
@@ -107,6 +136,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="snapshotRunAsAccountId", required=true)
     private String snapshotRunAsAccountId;
 
+    /**
+     * @return The snapshot RunAs account Id.
+     * 
+     */
     public String snapshotRunAsAccountId() {
         return this.snapshotRunAsAccountId;
     }
@@ -118,6 +151,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="targetAvailabilitySetId")
     private @Nullable String targetAvailabilitySetId;
 
+    /**
+     * @return The target availability set Id.
+     * 
+     */
     public Optional<String> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
@@ -129,6 +166,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="targetBootDiagnosticsStorageAccountId")
     private @Nullable String targetBootDiagnosticsStorageAccountId;
 
+    /**
+     * @return The target boot diagnostics storage account ARM Id.
+     * 
+     */
     public Optional<String> targetBootDiagnosticsStorageAccountId() {
         return Optional.ofNullable(this.targetBootDiagnosticsStorageAccountId);
     }
@@ -140,6 +181,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="targetLocation", required=true)
     private String targetLocation;
 
+    /**
+     * @return The target location.
+     * 
+     */
     public String targetLocation() {
         return this.targetLocation;
     }
@@ -151,6 +196,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="targetNetworkId")
     private @Nullable String targetNetworkId;
 
+    /**
+     * @return The target network Id.
+     * 
+     */
     public Optional<String> targetNetworkId() {
         return Optional.ofNullable(this.targetNetworkId);
     }
@@ -162,6 +211,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="targetResourceGroupId")
     private @Nullable String targetResourceGroupId;
 
+    /**
+     * @return The target resource group Id.
+     * 
+     */
     public Optional<String> targetResourceGroupId() {
         return Optional.ofNullable(this.targetResourceGroupId);
     }
@@ -173,6 +226,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="targetVmName")
     private @Nullable String targetVmName;
 
+    /**
+     * @return Target VM name.
+     * 
+     */
     public Optional<String> targetVmName() {
         return Optional.ofNullable(this.targetVmName);
     }
@@ -184,6 +241,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="targetVmSize")
     private @Nullable String targetVmSize;
 
+    /**
+     * @return The target VM size.
+     * 
+     */
     public Optional<String> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
@@ -195,6 +256,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="vmNics")
     private @Nullable List<VMwareCbtNicDetailsResponse> vmNics;
 
+    /**
+     * @return The network details.
+     * 
+     */
     public Optional<List<VMwareCbtNicDetailsResponse>> vmNics() {
         return Optional.ofNullable(this.vmNics);
     }
@@ -206,6 +271,10 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
     @Import(name="vmwareMachineId", required=true)
     private String vmwareMachineId;
 
+    /**
+     * @return The ARM Id of the VM discovered in VMware.
+     * 
+     */
     public String vmwareMachineId() {
         return this.vmwareMachineId;
     }
@@ -250,94 +319,209 @@ public final class VMwareCbtMigrationDetailsResponse extends com.pulumi.resource
             $ = new VMwareCbtMigrationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataMoverRunAsAccountId The data mover RunAs account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataMoverRunAsAccountId(String dataMoverRunAsAccountId) {
             $.dataMoverRunAsAccountId = dataMoverRunAsAccountId;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the instance type.
+         * Expected value is &#39;VMwareCbt&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param lastRecoveryPointReceived The last recovery point received time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastRecoveryPointReceived(String lastRecoveryPointReceived) {
             $.lastRecoveryPointReceived = lastRecoveryPointReceived;
             return this;
         }
 
+        /**
+         * @param licenseType License Type of the VM to be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder licenseType(@Nullable String licenseType) {
             $.licenseType = licenseType;
             return this;
         }
 
+        /**
+         * @param migrationRecoveryPointId The recovery point Id to which the VM was migrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationRecoveryPointId(String migrationRecoveryPointId) {
             $.migrationRecoveryPointId = migrationRecoveryPointId;
             return this;
         }
 
+        /**
+         * @param osType The type of the OS on the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param protectedDisks The list of protected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedDisks(@Nullable List<VMwareCbtProtectedDiskDetailsResponse> protectedDisks) {
             $.protectedDisks = protectedDisks;
             return this;
         }
 
+        /**
+         * @param protectedDisks The list of protected disks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedDisks(VMwareCbtProtectedDiskDetailsResponse... protectedDisks) {
             return protectedDisks(List.of(protectedDisks));
         }
 
+        /**
+         * @param snapshotRunAsAccountId The snapshot RunAs account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder snapshotRunAsAccountId(String snapshotRunAsAccountId) {
             $.snapshotRunAsAccountId = snapshotRunAsAccountId;
             return this;
         }
 
+        /**
+         * @param targetAvailabilitySetId The target availability set Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(@Nullable String targetAvailabilitySetId) {
             $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param targetBootDiagnosticsStorageAccountId The target boot diagnostics storage account ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetBootDiagnosticsStorageAccountId(@Nullable String targetBootDiagnosticsStorageAccountId) {
             $.targetBootDiagnosticsStorageAccountId = targetBootDiagnosticsStorageAccountId;
             return this;
         }
 
+        /**
+         * @param targetLocation The target location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetLocation(String targetLocation) {
             $.targetLocation = targetLocation;
             return this;
         }
 
+        /**
+         * @param targetNetworkId The target network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNetworkId(@Nullable String targetNetworkId) {
             $.targetNetworkId = targetNetworkId;
             return this;
         }
 
+        /**
+         * @param targetResourceGroupId The target resource group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceGroupId(@Nullable String targetResourceGroupId) {
             $.targetResourceGroupId = targetResourceGroupId;
             return this;
         }
 
+        /**
+         * @param targetVmName Target VM name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmName(@Nullable String targetVmName) {
             $.targetVmName = targetVmName;
             return this;
         }
 
+        /**
+         * @param targetVmSize The target VM size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(@Nullable String targetVmSize) {
             $.targetVmSize = targetVmSize;
             return this;
         }
 
+        /**
+         * @param vmNics The network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(@Nullable List<VMwareCbtNicDetailsResponse> vmNics) {
             $.vmNics = vmNics;
             return this;
         }
 
+        /**
+         * @param vmNics The network details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmNics(VMwareCbtNicDetailsResponse... vmNics) {
             return vmNics(List.of(vmNics));
         }
 
+        /**
+         * @param vmwareMachineId The ARM Id of the VM discovered in VMware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmwareMachineId(String vmwareMachineId) {
             $.vmwareMachineId = vmwareMachineId;
             return this;

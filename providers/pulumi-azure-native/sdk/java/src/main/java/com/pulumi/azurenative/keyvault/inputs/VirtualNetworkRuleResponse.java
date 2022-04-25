@@ -26,6 +26,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="ignoreMissingVnetServiceEndpoint")
     private @Nullable Boolean ignoreMissingVnetServiceEndpoint;
 
+    /**
+     * @return Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.
+     * 
+     */
     public Optional<Boolean> ignoreMissingVnetServiceEndpoint() {
         return Optional.ofNullable(this.ignoreMissingVnetServiceEndpoint);
     }
@@ -66,11 +74,23 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
             $ = new VirtualNetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Full resource id of a vnet subnet, such as &#39;/subscriptions/subid/resourceGroups/rg1/providers/Microsoft.Network/virtualNetworks/test-vnet/subnets/subnet1&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param ignoreMissingVnetServiceEndpoint Property to specify whether NRP will ignore the check if parent subnet has serviceEndpoints configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ignoreMissingVnetServiceEndpoint(@Nullable Boolean ignoreMissingVnetServiceEndpoint) {
             $.ignoreMissingVnetServiceEndpoint = ignoreMissingVnetServiceEndpoint;
             return this;

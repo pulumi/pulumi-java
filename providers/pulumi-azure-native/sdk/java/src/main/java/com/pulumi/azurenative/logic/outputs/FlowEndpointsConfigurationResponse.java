@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FlowEndpointsConfigurationResponse {
     /**
-     * The connector endpoints.
+     * @return The connector endpoints.
      * 
      */
     private final @Nullable FlowEndpointsResponse connector;
     /**
-     * The workflow endpoints.
+     * @return The workflow endpoints.
      * 
      */
     private final @Nullable FlowEndpointsResponse workflow;
@@ -31,16 +31,16 @@ public final class FlowEndpointsConfigurationResponse {
     }
 
     /**
-     * The connector endpoints.
+     * @return The connector endpoints.
      * 
-    */
+     */
     public Optional<FlowEndpointsResponse> connector() {
         return Optional.ofNullable(this.connector);
     }
     /**
-     * The workflow endpoints.
+     * @return The workflow endpoints.
      * 
-    */
+     */
     public Optional<FlowEndpointsResponse> workflow() {
         return Optional.ofNullable(this.workflow);
     }

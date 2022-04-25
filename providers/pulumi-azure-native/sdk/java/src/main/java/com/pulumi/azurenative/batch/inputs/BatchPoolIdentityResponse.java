@@ -27,6 +27,10 @@ public final class BatchPoolIdentityResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of identity used for the Batch Pool.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -38,6 +42,10 @@ public final class BatchPoolIdentityResponse extends com.pulumi.resources.Invoke
     @Import(name="userAssignedIdentities")
     private @Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities;
 
+    /**
+     * @return The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * 
+     */
     public Optional<Map<String,BatchPoolIdentityResponseUserAssignedIdentities>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -67,11 +75,23 @@ public final class BatchPoolIdentityResponse extends com.pulumi.resources.Invoke
             $ = new BatchPoolIdentityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of identity used for the Batch Pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the Batch pool. The user identity dictionary key references will be ARM resource ids in the form: &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Map<String,BatchPoolIdentityResponseUserAssignedIdentities> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;

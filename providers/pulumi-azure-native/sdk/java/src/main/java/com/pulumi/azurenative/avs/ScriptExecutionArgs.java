@@ -28,6 +28,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="failureReason")
     private @Nullable Output<String> failureReason;
 
+    /**
+     * @return Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
+     * 
+     */
     public Optional<Output<String>> failureReason() {
         return Optional.ofNullable(this.failureReason);
     }
@@ -39,6 +43,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="hiddenParameters")
     private @Nullable Output<List<Object>> hiddenParameters;
 
+    /**
+     * @return Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+     * 
+     */
     public Optional<Output<List<Object>>> hiddenParameters() {
         return Optional.ofNullable(this.hiddenParameters);
     }
@@ -50,6 +58,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namedOutputs")
     private @Nullable Output<Map<String,Object>> namedOutputs;
 
+    /**
+     * @return User-defined dictionary.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> namedOutputs() {
         return Optional.ofNullable(this.namedOutputs);
     }
@@ -61,6 +73,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="output")
     private @Nullable Output<List<String>> output;
 
+    /**
+     * @return Standard output stream from the powershell execution
+     * 
+     */
     public Optional<Output<List<String>>> output() {
         return Optional.ofNullable(this.output);
     }
@@ -72,6 +88,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="parameters")
     private @Nullable Output<List<Object>> parameters;
 
+    /**
+     * @return Parameters the script will accept
+     * 
+     */
     public Optional<Output<List<Object>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -83,6 +103,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return The name of the private cloud.
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -94,6 +118,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -105,6 +133,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="retention")
     private @Nullable Output<String> retention;
 
+    /**
+     * @return Time to live for the resource. If not provided, will be available for 60 days
+     * 
+     */
     public Optional<Output<String>> retention() {
         return Optional.ofNullable(this.retention);
     }
@@ -116,6 +148,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptCmdletId")
     private @Nullable Output<String> scriptCmdletId;
 
+    /**
+     * @return A reference to the script cmdlet resource if user is running a AVS script
+     * 
+     */
     public Optional<Output<String>> scriptCmdletId() {
         return Optional.ofNullable(this.scriptCmdletId);
     }
@@ -127,6 +163,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="scriptExecutionName")
     private @Nullable Output<String> scriptExecutionName;
 
+    /**
+     * @return Name of the user-invoked script execution resource
+     * 
+     */
     public Optional<Output<String>> scriptExecutionName() {
         return Optional.ofNullable(this.scriptExecutionName);
     }
@@ -138,6 +178,10 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="timeout", required=true)
     private Output<String> timeout;
 
+    /**
+     * @return Time limit for execution
+     * 
+     */
     public Output<String> timeout() {
         return this.timeout;
     }
@@ -176,113 +220,263 @@ public final class ScriptExecutionArgs extends com.pulumi.resources.ResourceArgs
             $ = new ScriptExecutionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failureReason Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(@Nullable Output<String> failureReason) {
             $.failureReason = failureReason;
             return this;
         }
 
+        /**
+         * @param failureReason Error message if the script was able to run, but if the script itself had errors or powershell threw an exception
+         * 
+         * @return builder
+         * 
+         */
         public Builder failureReason(String failureReason) {
             return failureReason(Output.of(failureReason));
         }
 
+        /**
+         * @param hiddenParameters Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiddenParameters(@Nullable Output<List<Object>> hiddenParameters) {
             $.hiddenParameters = hiddenParameters;
             return this;
         }
 
+        /**
+         * @param hiddenParameters Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiddenParameters(List<Object> hiddenParameters) {
             return hiddenParameters(Output.of(hiddenParameters));
         }
 
+        /**
+         * @param hiddenParameters Parameters that will be hidden/not visible to ARM, such as passwords and credentials
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiddenParameters(Object... hiddenParameters) {
             return hiddenParameters(List.of(hiddenParameters));
         }
 
+        /**
+         * @param namedOutputs User-defined dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedOutputs(@Nullable Output<Map<String,Object>> namedOutputs) {
             $.namedOutputs = namedOutputs;
             return this;
         }
 
+        /**
+         * @param namedOutputs User-defined dictionary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namedOutputs(Map<String,Object> namedOutputs) {
             return namedOutputs(Output.of(namedOutputs));
         }
 
+        /**
+         * @param output Standard output stream from the powershell execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(@Nullable Output<List<String>> output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param output Standard output stream from the powershell execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(List<String> output) {
             return output(Output.of(output));
         }
 
+        /**
+         * @param output Standard output stream from the powershell execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(String... output) {
             return output(List.of(output));
         }
 
+        /**
+         * @param parameters Parameters the script will accept
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<List<Object>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters the script will accept
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(List<Object> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param parameters Parameters the script will accept
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Object... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param retention Time to live for the resource. If not provided, will be available for 60 days
+         * 
+         * @return builder
+         * 
+         */
         public Builder retention(@Nullable Output<String> retention) {
             $.retention = retention;
             return this;
         }
 
+        /**
+         * @param retention Time to live for the resource. If not provided, will be available for 60 days
+         * 
+         * @return builder
+         * 
+         */
         public Builder retention(String retention) {
             return retention(Output.of(retention));
         }
 
+        /**
+         * @param scriptCmdletId A reference to the script cmdlet resource if user is running a AVS script
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptCmdletId(@Nullable Output<String> scriptCmdletId) {
             $.scriptCmdletId = scriptCmdletId;
             return this;
         }
 
+        /**
+         * @param scriptCmdletId A reference to the script cmdlet resource if user is running a AVS script
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptCmdletId(String scriptCmdletId) {
             return scriptCmdletId(Output.of(scriptCmdletId));
         }
 
+        /**
+         * @param scriptExecutionName Name of the user-invoked script execution resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptExecutionName(@Nullable Output<String> scriptExecutionName) {
             $.scriptExecutionName = scriptExecutionName;
             return this;
         }
 
+        /**
+         * @param scriptExecutionName Name of the user-invoked script execution resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptExecutionName(String scriptExecutionName) {
             return scriptExecutionName(Output.of(scriptExecutionName));
         }
 
+        /**
+         * @param timeout Time limit for execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Output<String> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Time limit for execution
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(String timeout) {
             return timeout(Output.of(timeout));
         }

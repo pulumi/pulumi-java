@@ -24,97 +24,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetActionGroupResult {
     /**
-     * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
+     * @return The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
      * 
      */
     private final @Nullable List<ArmRoleReceiverResponse> armRoleReceivers;
     /**
-     * The list of AutomationRunbook receivers that are part of this action group.
+     * @return The list of AutomationRunbook receivers that are part of this action group.
      * 
      */
     private final @Nullable List<AutomationRunbookReceiverResponse> automationRunbookReceivers;
     /**
-     * The list of AzureAppPush receivers that are part of this action group.
+     * @return The list of AzureAppPush receivers that are part of this action group.
      * 
      */
     private final @Nullable List<AzureAppPushReceiverResponse> azureAppPushReceivers;
     /**
-     * The list of azure function receivers that are part of this action group.
+     * @return The list of azure function receivers that are part of this action group.
      * 
      */
     private final @Nullable List<AzureFunctionReceiverResponse> azureFunctionReceivers;
     /**
-     * The list of email receivers that are part of this action group.
+     * @return The list of email receivers that are part of this action group.
      * 
      */
     private final @Nullable List<EmailReceiverResponse> emailReceivers;
     /**
-     * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
+     * @return Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
      * 
      */
     private final Boolean enabled;
     /**
-     * The short name of the action group. This will be used in SMS messages.
+     * @return The short name of the action group. This will be used in SMS messages.
      * 
      */
     private final String groupShortName;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * Azure resource identity
+     * @return Azure resource identity
      * 
      */
     private final String identity;
     /**
-     * The list of ITSM receivers that are part of this action group.
+     * @return The list of ITSM receivers that are part of this action group.
      * 
      */
     private final @Nullable List<ItsmReceiverResponse> itsmReceivers;
     /**
-     * Azure resource kind
+     * @return Azure resource kind
      * 
      */
     private final String kind;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * The list of logic app receivers that are part of this action group.
+     * @return The list of logic app receivers that are part of this action group.
      * 
      */
     private final @Nullable List<LogicAppReceiverResponse> logicAppReceivers;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * The list of SMS receivers that are part of this action group.
+     * @return The list of SMS receivers that are part of this action group.
      * 
      */
     private final @Nullable List<SmsReceiverResponse> smsReceivers;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
     /**
-     * The list of voice receivers that are part of this action group.
+     * @return The list of voice receivers that are part of this action group.
      * 
      */
     private final @Nullable List<VoiceReceiverResponse> voiceReceivers;
     /**
-     * The list of webhook receivers that are part of this action group.
+     * @return The list of webhook receivers that are part of this action group.
      * 
      */
     private final @Nullable List<WebhookReceiverResponse> webhookReceivers;
@@ -162,135 +162,135 @@ public final class GetActionGroupResult {
     }
 
     /**
-     * The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
+     * @return The list of ARM role receivers that are part of this action group. Roles are Azure RBAC roles and only built-in roles are supported.
      * 
-    */
+     */
     public List<ArmRoleReceiverResponse> armRoleReceivers() {
         return this.armRoleReceivers == null ? List.of() : this.armRoleReceivers;
     }
     /**
-     * The list of AutomationRunbook receivers that are part of this action group.
+     * @return The list of AutomationRunbook receivers that are part of this action group.
      * 
-    */
+     */
     public List<AutomationRunbookReceiverResponse> automationRunbookReceivers() {
         return this.automationRunbookReceivers == null ? List.of() : this.automationRunbookReceivers;
     }
     /**
-     * The list of AzureAppPush receivers that are part of this action group.
+     * @return The list of AzureAppPush receivers that are part of this action group.
      * 
-    */
+     */
     public List<AzureAppPushReceiverResponse> azureAppPushReceivers() {
         return this.azureAppPushReceivers == null ? List.of() : this.azureAppPushReceivers;
     }
     /**
-     * The list of azure function receivers that are part of this action group.
+     * @return The list of azure function receivers that are part of this action group.
      * 
-    */
+     */
     public List<AzureFunctionReceiverResponse> azureFunctionReceivers() {
         return this.azureFunctionReceivers == null ? List.of() : this.azureFunctionReceivers;
     }
     /**
-     * The list of email receivers that are part of this action group.
+     * @return The list of email receivers that are part of this action group.
      * 
-    */
+     */
     public List<EmailReceiverResponse> emailReceivers() {
         return this.emailReceivers == null ? List.of() : this.emailReceivers;
     }
     /**
-     * Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
+     * @return Indicates whether this action group is enabled. If an action group is not enabled, then none of its receivers will receive communications.
      * 
-    */
+     */
     public Boolean enabled() {
         return this.enabled;
     }
     /**
-     * The short name of the action group. This will be used in SMS messages.
+     * @return The short name of the action group. This will be used in SMS messages.
      * 
-    */
+     */
     public String groupShortName() {
         return this.groupShortName;
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure resource identity
+     * @return Azure resource identity
      * 
-    */
+     */
     public String identity() {
         return this.identity;
     }
     /**
-     * The list of ITSM receivers that are part of this action group.
+     * @return The list of ITSM receivers that are part of this action group.
      * 
-    */
+     */
     public List<ItsmReceiverResponse> itsmReceivers() {
         return this.itsmReceivers == null ? List.of() : this.itsmReceivers;
     }
     /**
-     * Azure resource kind
+     * @return Azure resource kind
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The list of logic app receivers that are part of this action group.
+     * @return The list of logic app receivers that are part of this action group.
      * 
-    */
+     */
     public List<LogicAppReceiverResponse> logicAppReceivers() {
         return this.logicAppReceivers == null ? List.of() : this.logicAppReceivers;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The list of SMS receivers that are part of this action group.
+     * @return The list of SMS receivers that are part of this action group.
      * 
-    */
+     */
     public List<SmsReceiverResponse> smsReceivers() {
         return this.smsReceivers == null ? List.of() : this.smsReceivers;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The list of voice receivers that are part of this action group.
+     * @return The list of voice receivers that are part of this action group.
      * 
-    */
+     */
     public List<VoiceReceiverResponse> voiceReceivers() {
         return this.voiceReceivers == null ? List.of() : this.voiceReceivers;
     }
     /**
-     * The list of webhook receivers that are part of this action group.
+     * @return The list of webhook receivers that are part of this action group.
      * 
-    */
+     */
     public List<WebhookReceiverResponse> webhookReceivers() {
         return this.webhookReceivers == null ? List.of() : this.webhookReceivers;
     }

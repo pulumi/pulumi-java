@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
     /**
-     * Connection information for source MySQL server
+     * @return Connection information for source MySQL server
      * 
      */
     private final MySqlConnectionInfoResponse sourceConnectionInfo;
     /**
-     * Connection information for target Azure Database for MySQL server
+     * @return Connection information for target Azure Database for MySQL server
      * 
      */
     private final MySqlConnectionInfoResponse targetConnectionInfo;
@@ -29,16 +29,16 @@ public final class ConnectToTargetAzureDbForMySqlTaskInputResponse {
     }
 
     /**
-     * Connection information for source MySQL server
+     * @return Connection information for source MySQL server
      * 
-    */
+     */
     public MySqlConnectionInfoResponse sourceConnectionInfo() {
         return this.sourceConnectionInfo;
     }
     /**
-     * Connection information for target Azure Database for MySQL server
+     * @return Connection information for target Azure Database for MySQL server
      * 
-    */
+     */
     public MySqlConnectionInfoResponse targetConnectionInfo() {
         return this.targetConnectionInfo;
     }

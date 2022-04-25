@@ -19,6 +19,10 @@ public final class GraphResourceGetPropertiesResponseResource extends com.pulumi
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Name of the Cosmos DB Graph
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -47,6 +51,12 @@ public final class GraphResourceGetPropertiesResponseResource extends com.pulumi
             $ = new GraphResourceGetPropertiesResponseResource(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Name of the Cosmos DB Graph
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

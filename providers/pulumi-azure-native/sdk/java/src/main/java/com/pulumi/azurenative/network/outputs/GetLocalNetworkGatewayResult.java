@@ -15,62 +15,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetLocalNetworkGatewayResult {
     /**
-     * Local network gateway&#39;s BGP speaker settings.
+     * @return Local network gateway&#39;s BGP speaker settings.
      * 
      */
     private final @Nullable BgpSettingsResponse bgpSettings;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * FQDN of local network gateway.
+     * @return FQDN of local network gateway.
      * 
      */
     private final @Nullable String fqdn;
     /**
-     * IP address of local network gateway.
+     * @return IP address of local network gateway.
      * 
      */
     private final @Nullable String gatewayIpAddress;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Local network site address space.
+     * @return Local network site address space.
      * 
      */
     private final @Nullable AddressSpaceResponse localNetworkAddressSpace;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the local network gateway resource.
+     * @return The provisioning state of the local network gateway resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The resource GUID property of the local network gateway resource.
+     * @return The resource GUID property of the local network gateway resource.
      * 
      */
     private final String resourceGuid;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -104,86 +104,86 @@ public final class GetLocalNetworkGatewayResult {
     }
 
     /**
-     * Local network gateway&#39;s BGP speaker settings.
+     * @return Local network gateway&#39;s BGP speaker settings.
      * 
-    */
+     */
     public Optional<BgpSettingsResponse> bgpSettings() {
         return Optional.ofNullable(this.bgpSettings);
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * FQDN of local network gateway.
+     * @return FQDN of local network gateway.
      * 
-    */
+     */
     public Optional<String> fqdn() {
         return Optional.ofNullable(this.fqdn);
     }
     /**
-     * IP address of local network gateway.
+     * @return IP address of local network gateway.
      * 
-    */
+     */
     public Optional<String> gatewayIpAddress() {
         return Optional.ofNullable(this.gatewayIpAddress);
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Local network site address space.
+     * @return Local network site address space.
      * 
-    */
+     */
     public Optional<AddressSpaceResponse> localNetworkAddressSpace() {
         return Optional.ofNullable(this.localNetworkAddressSpace);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the local network gateway resource.
+     * @return The provisioning state of the local network gateway resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The resource GUID property of the local network gateway resource.
+     * @return The resource GUID property of the local network gateway resource.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

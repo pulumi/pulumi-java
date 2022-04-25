@@ -25,6 +25,10 @@ public final class ApiEntityReferenceResponse extends com.pulumi.resources.Invok
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -53,6 +57,12 @@ public final class ApiEntityReferenceResponse extends com.pulumi.resources.Invok
             $ = new ApiEntityReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARM resource id in the form of /subscriptions/{SubscriptionId}/resourceGroups/{ResourceGroupName}/...
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;

@@ -29,6 +29,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="backends")
     private @Nullable Output<List<BackendArgs>> backends;
 
+    /**
+     * @return The set of backends for this pool
+     * 
+     */
     public Optional<Output<List<BackendArgs>>> backends() {
         return Optional.ofNullable(this.backends);
     }
@@ -40,6 +44,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="healthProbeSettings")
     private @Nullable Output<SubResourceArgs> healthProbeSettings;
 
+    /**
+     * @return L7 health probe settings for a backend pool
+     * 
+     */
     public Optional<Output<SubResourceArgs>> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
@@ -51,6 +59,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -62,6 +74,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="loadBalancingSettings")
     private @Nullable Output<SubResourceArgs> loadBalancingSettings;
 
+    /**
+     * @return Load balancing settings for a backend pool
+     * 
+     */
     public Optional<Output<SubResourceArgs>> loadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
@@ -73,6 +89,10 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -105,51 +125,117 @@ public final class BackendPoolArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BackendPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backends The set of backends for this pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(@Nullable Output<List<BackendArgs>> backends) {
             $.backends = backends;
             return this;
         }
 
+        /**
+         * @param backends The set of backends for this pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(List<BackendArgs> backends) {
             return backends(Output.of(backends));
         }
 
+        /**
+         * @param backends The set of backends for this pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder backends(BackendArgs... backends) {
             return backends(List.of(backends));
         }
 
+        /**
+         * @param healthProbeSettings L7 health probe settings for a backend pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(@Nullable Output<SubResourceArgs> healthProbeSettings) {
             $.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
+        /**
+         * @param healthProbeSettings L7 health probe settings for a backend pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(SubResourceArgs healthProbeSettings) {
             return healthProbeSettings(Output.of(healthProbeSettings));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param loadBalancingSettings Load balancing settings for a backend pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingSettings(@Nullable Output<SubResourceArgs> loadBalancingSettings) {
             $.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
+        /**
+         * @param loadBalancingSettings Load balancing settings for a backend pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingSettings(SubResourceArgs loadBalancingSettings) {
             return loadBalancingSettings(Output.of(loadBalancingSettings));
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

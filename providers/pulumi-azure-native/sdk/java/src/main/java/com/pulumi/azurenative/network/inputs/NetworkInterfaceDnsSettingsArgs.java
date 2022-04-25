@@ -27,6 +27,10 @@ public final class NetworkInterfaceDnsSettingsArgs extends com.pulumi.resources.
     @Import(name="dnsServers")
     private @Nullable Output<List<String>> dnsServers;
 
+    /**
+     * @return List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+     * 
+     */
     public Optional<Output<List<String>>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -38,6 +42,10 @@ public final class NetworkInterfaceDnsSettingsArgs extends com.pulumi.resources.
     @Import(name="internalDnsNameLabel")
     private @Nullable Output<String> internalDnsNameLabel;
 
+    /**
+     * @return Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+     * 
+     */
     public Optional<Output<String>> internalDnsNameLabel() {
         return Optional.ofNullable(this.internalDnsNameLabel);
     }
@@ -67,24 +75,54 @@ public final class NetworkInterfaceDnsSettingsArgs extends com.pulumi.resources.
             $ = new NetworkInterfaceDnsSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServers List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable Output<List<String>> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(List<String> dnsServers) {
             return dnsServers(Output.of(dnsServers));
         }
 
+        /**
+         * @param dnsServers List of DNS servers IP addresses. Use &#39;AzureProvidedDNS&#39; to switch to azure provided DNS resolution. &#39;AzureProvidedDNS&#39; value cannot be combined with other IPs, it must be the only value in dnsServers collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param internalDnsNameLabel Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalDnsNameLabel(@Nullable Output<String> internalDnsNameLabel) {
             $.internalDnsNameLabel = internalDnsNameLabel;
             return this;
         }
 
+        /**
+         * @param internalDnsNameLabel Relative DNS name for this NIC used for internal communications between VMs in the same virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalDnsNameLabel(String internalDnsNameLabel) {
             return internalDnsNameLabel(Output.of(internalDnsNameLabel));
         }

@@ -28,6 +28,10 @@ public final class ExpressionEvaluationOptionsArgs extends com.pulumi.resources.
     @Import(name="scope")
     private @Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope;
 
+    /**
+     * @return The scope to be used for evaluation of parameters, variables and functions in a nested template.
+     * 
+     */
     public Optional<Output<Either<String,ExpressionEvaluationOptionsScopeType>>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -56,19 +60,43 @@ public final class ExpressionEvaluationOptionsArgs extends com.pulumi.resources.
             $ = new ExpressionEvaluationOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param scope The scope to be used for evaluation of parameters, variables and functions in a nested template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable Output<Either<String,ExpressionEvaluationOptionsScopeType>> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope The scope to be used for evaluation of parameters, variables and functions in a nested template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(Either<String,ExpressionEvaluationOptionsScopeType> scope) {
             return scope(Output.of(scope));
         }
 
+        /**
+         * @param scope The scope to be used for evaluation of parameters, variables and functions in a nested template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             return scope(Either.ofLeft(scope));
         }
 
+        /**
+         * @param scope The scope to be used for evaluation of parameters, variables and functions in a nested template.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(ExpressionEvaluationOptionsScopeType scope) {
             return scope(Either.ofRight(scope));
         }

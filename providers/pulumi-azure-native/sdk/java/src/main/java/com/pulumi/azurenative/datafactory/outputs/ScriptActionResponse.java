@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ScriptActionResponse {
     /**
-     * The user provided name of the script action.
+     * @return The user provided name of the script action.
      * 
      */
     private final String name;
     /**
-     * The parameters for the script action.
+     * @return The parameters for the script action.
      * 
      */
     private final @Nullable String parameters;
     /**
-     * The node types on which the script action should be executed.
+     * @return The node types on which the script action should be executed.
      * 
      */
     private final Object roles;
     /**
-     * The URI for the script action.
+     * @return The URI for the script action.
      * 
      */
     private final String uri;
@@ -46,30 +46,30 @@ public final class ScriptActionResponse {
     }
 
     /**
-     * The user provided name of the script action.
+     * @return The user provided name of the script action.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The parameters for the script action.
+     * @return The parameters for the script action.
      * 
-    */
+     */
     public Optional<String> parameters() {
         return Optional.ofNullable(this.parameters);
     }
     /**
-     * The node types on which the script action should be executed.
+     * @return The node types on which the script action should be executed.
      * 
-    */
+     */
     public Object roles() {
         return this.roles;
     }
     /**
-     * The URI for the script action.
+     * @return The URI for the script action.
      * 
-    */
+     */
     public String uri() {
         return this.uri;
     }

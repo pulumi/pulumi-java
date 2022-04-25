@@ -21,6 +21,10 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
     @Import(name="networkSecurityGroupName", required=true)
     private String networkSecurityGroupName;
 
+    /**
+     * @return The name of the network security group.
+     * 
+     */
     public String networkSecurityGroupName() {
         return this.networkSecurityGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetNetworkSecurityGroupArgs extends com.pulumi.resources.Invo
             $ = new GetNetworkSecurityGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param networkSecurityGroupName The name of the network security group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroupName(String networkSecurityGroupName) {
             $.networkSecurityGroupName = networkSecurityGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

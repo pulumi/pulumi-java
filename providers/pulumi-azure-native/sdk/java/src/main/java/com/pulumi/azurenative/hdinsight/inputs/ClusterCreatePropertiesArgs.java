@@ -38,6 +38,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="clusterDefinition")
     private @Nullable Output<ClusterDefinitionArgs> clusterDefinition;
 
+    /**
+     * @return The cluster definition.
+     * 
+     */
     public Optional<Output<ClusterDefinitionArgs>> clusterDefinition() {
         return Optional.ofNullable(this.clusterDefinition);
     }
@@ -49,6 +53,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="clusterVersion")
     private @Nullable Output<String> clusterVersion;
 
+    /**
+     * @return The version of the cluster.
+     * 
+     */
     public Optional<Output<String>> clusterVersion() {
         return Optional.ofNullable(this.clusterVersion);
     }
@@ -60,6 +68,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="computeIsolationProperties")
     private @Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties;
 
+    /**
+     * @return The compute isolation properties.
+     * 
+     */
     public Optional<Output<ComputeIsolationPropertiesArgs>> computeIsolationProperties() {
         return Optional.ofNullable(this.computeIsolationProperties);
     }
@@ -71,6 +83,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="computeProfile")
     private @Nullable Output<ComputeProfileArgs> computeProfile;
 
+    /**
+     * @return The compute profile.
+     * 
+     */
     public Optional<Output<ComputeProfileArgs>> computeProfile() {
         return Optional.ofNullable(this.computeProfile);
     }
@@ -82,6 +98,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="diskEncryptionProperties")
     private @Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties;
 
+    /**
+     * @return The disk encryption properties.
+     * 
+     */
     public Optional<Output<DiskEncryptionPropertiesArgs>> diskEncryptionProperties() {
         return Optional.ofNullable(this.diskEncryptionProperties);
     }
@@ -93,6 +113,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="encryptionInTransitProperties")
     private @Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties;
 
+    /**
+     * @return The encryption-in-transit properties.
+     * 
+     */
     public Optional<Output<EncryptionInTransitPropertiesArgs>> encryptionInTransitProperties() {
         return Optional.ofNullable(this.encryptionInTransitProperties);
     }
@@ -104,6 +128,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="kafkaRestProperties")
     private @Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties;
 
+    /**
+     * @return The cluster kafka rest proxy configuration.
+     * 
+     */
     public Optional<Output<KafkaRestPropertiesArgs>> kafkaRestProperties() {
         return Optional.ofNullable(this.kafkaRestProperties);
     }
@@ -115,6 +143,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="minSupportedTlsVersion")
     private @Nullable Output<String> minSupportedTlsVersion;
 
+    /**
+     * @return The minimal supported tls version.
+     * 
+     */
     public Optional<Output<String>> minSupportedTlsVersion() {
         return Optional.ofNullable(this.minSupportedTlsVersion);
     }
@@ -126,6 +158,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="networkProperties")
     private @Nullable Output<NetworkPropertiesArgs> networkProperties;
 
+    /**
+     * @return The network properties.
+     * 
+     */
     public Optional<Output<NetworkPropertiesArgs>> networkProperties() {
         return Optional.ofNullable(this.networkProperties);
     }
@@ -137,6 +173,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="osType")
     private @Nullable Output<OSType> osType;
 
+    /**
+     * @return The type of operating system.
+     * 
+     */
     public Optional<Output<OSType>> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -148,6 +188,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="securityProfile")
     private @Nullable Output<SecurityProfileArgs> securityProfile;
 
+    /**
+     * @return The security profile.
+     * 
+     */
     public Optional<Output<SecurityProfileArgs>> securityProfile() {
         return Optional.ofNullable(this.securityProfile);
     }
@@ -159,6 +203,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="storageProfile")
     private @Nullable Output<StorageProfileArgs> storageProfile;
 
+    /**
+     * @return The storage profile.
+     * 
+     */
     public Optional<Output<StorageProfileArgs>> storageProfile() {
         return Optional.ofNullable(this.storageProfile);
     }
@@ -170,6 +218,10 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="tier")
     private @Nullable Output<Tier> tier;
 
+    /**
+     * @return The cluster tier.
+     * 
+     */
     public Optional<Output<Tier>> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -210,119 +262,275 @@ public final class ClusterCreatePropertiesArgs extends com.pulumi.resources.Reso
             $ = new ClusterCreatePropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterDefinition The cluster definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDefinition(@Nullable Output<ClusterDefinitionArgs> clusterDefinition) {
             $.clusterDefinition = clusterDefinition;
             return this;
         }
 
+        /**
+         * @param clusterDefinition The cluster definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterDefinition(ClusterDefinitionArgs clusterDefinition) {
             return clusterDefinition(Output.of(clusterDefinition));
         }
 
+        /**
+         * @param clusterVersion The version of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterVersion(@Nullable Output<String> clusterVersion) {
             $.clusterVersion = clusterVersion;
             return this;
         }
 
+        /**
+         * @param clusterVersion The version of the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterVersion(String clusterVersion) {
             return clusterVersion(Output.of(clusterVersion));
         }
 
+        /**
+         * @param computeIsolationProperties The compute isolation properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeIsolationProperties(@Nullable Output<ComputeIsolationPropertiesArgs> computeIsolationProperties) {
             $.computeIsolationProperties = computeIsolationProperties;
             return this;
         }
 
+        /**
+         * @param computeIsolationProperties The compute isolation properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeIsolationProperties(ComputeIsolationPropertiesArgs computeIsolationProperties) {
             return computeIsolationProperties(Output.of(computeIsolationProperties));
         }
 
+        /**
+         * @param computeProfile The compute profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeProfile(@Nullable Output<ComputeProfileArgs> computeProfile) {
             $.computeProfile = computeProfile;
             return this;
         }
 
+        /**
+         * @param computeProfile The compute profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeProfile(ComputeProfileArgs computeProfile) {
             return computeProfile(Output.of(computeProfile));
         }
 
+        /**
+         * @param diskEncryptionProperties The disk encryption properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionProperties(@Nullable Output<DiskEncryptionPropertiesArgs> diskEncryptionProperties) {
             $.diskEncryptionProperties = diskEncryptionProperties;
             return this;
         }
 
+        /**
+         * @param diskEncryptionProperties The disk encryption properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionProperties(DiskEncryptionPropertiesArgs diskEncryptionProperties) {
             return diskEncryptionProperties(Output.of(diskEncryptionProperties));
         }
 
+        /**
+         * @param encryptionInTransitProperties The encryption-in-transit properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionInTransitProperties(@Nullable Output<EncryptionInTransitPropertiesArgs> encryptionInTransitProperties) {
             $.encryptionInTransitProperties = encryptionInTransitProperties;
             return this;
         }
 
+        /**
+         * @param encryptionInTransitProperties The encryption-in-transit properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionInTransitProperties(EncryptionInTransitPropertiesArgs encryptionInTransitProperties) {
             return encryptionInTransitProperties(Output.of(encryptionInTransitProperties));
         }
 
+        /**
+         * @param kafkaRestProperties The cluster kafka rest proxy configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaRestProperties(@Nullable Output<KafkaRestPropertiesArgs> kafkaRestProperties) {
             $.kafkaRestProperties = kafkaRestProperties;
             return this;
         }
 
+        /**
+         * @param kafkaRestProperties The cluster kafka rest proxy configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kafkaRestProperties(KafkaRestPropertiesArgs kafkaRestProperties) {
             return kafkaRestProperties(Output.of(kafkaRestProperties));
         }
 
+        /**
+         * @param minSupportedTlsVersion The minimal supported tls version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSupportedTlsVersion(@Nullable Output<String> minSupportedTlsVersion) {
             $.minSupportedTlsVersion = minSupportedTlsVersion;
             return this;
         }
 
+        /**
+         * @param minSupportedTlsVersion The minimal supported tls version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minSupportedTlsVersion(String minSupportedTlsVersion) {
             return minSupportedTlsVersion(Output.of(minSupportedTlsVersion));
         }
 
+        /**
+         * @param networkProperties The network properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProperties(@Nullable Output<NetworkPropertiesArgs> networkProperties) {
             $.networkProperties = networkProperties;
             return this;
         }
 
+        /**
+         * @param networkProperties The network properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkProperties(NetworkPropertiesArgs networkProperties) {
             return networkProperties(Output.of(networkProperties));
         }
 
+        /**
+         * @param osType The type of operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable Output<OSType> osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param osType The type of operating system.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(OSType osType) {
             return osType(Output.of(osType));
         }
 
+        /**
+         * @param securityProfile The security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfile(@Nullable Output<SecurityProfileArgs> securityProfile) {
             $.securityProfile = securityProfile;
             return this;
         }
 
+        /**
+         * @param securityProfile The security profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder securityProfile(SecurityProfileArgs securityProfile) {
             return securityProfile(Output.of(securityProfile));
         }
 
+        /**
+         * @param storageProfile The storage profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(@Nullable Output<StorageProfileArgs> storageProfile) {
             $.storageProfile = storageProfile;
             return this;
         }
 
+        /**
+         * @param storageProfile The storage profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageProfile(StorageProfileArgs storageProfile) {
             return storageProfile(Output.of(storageProfile));
         }
 
+        /**
+         * @param tier The cluster tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable Output<Tier> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier The cluster tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Tier tier) {
             return tier(Output.of(tier));
         }

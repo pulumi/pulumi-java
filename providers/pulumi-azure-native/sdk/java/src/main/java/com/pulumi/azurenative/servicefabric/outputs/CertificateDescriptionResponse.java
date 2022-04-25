@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateDescriptionResponse {
     /**
-     * Thumbprint of the primary certificate.
+     * @return Thumbprint of the primary certificate.
      * 
      */
     private final String thumbprint;
     /**
-     * Thumbprint of the secondary certificate.
+     * @return Thumbprint of the secondary certificate.
      * 
      */
     private final @Nullable String thumbprintSecondary;
     /**
-     * The local certificate store location.
+     * @return The local certificate store location.
      * 
      */
     private final @Nullable String x509StoreName;
@@ -38,23 +38,23 @@ public final class CertificateDescriptionResponse {
     }
 
     /**
-     * Thumbprint of the primary certificate.
+     * @return Thumbprint of the primary certificate.
      * 
-    */
+     */
     public String thumbprint() {
         return this.thumbprint;
     }
     /**
-     * Thumbprint of the secondary certificate.
+     * @return Thumbprint of the secondary certificate.
      * 
-    */
+     */
     public Optional<String> thumbprintSecondary() {
         return Optional.ofNullable(this.thumbprintSecondary);
     }
     /**
-     * The local certificate store location.
+     * @return The local certificate store location.
      * 
-    */
+     */
     public Optional<String> x509StoreName() {
         return Optional.ofNullable(this.x509StoreName);
     }

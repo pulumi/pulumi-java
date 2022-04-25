@@ -22,6 +22,10 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Specifies the id of private endpoint.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -50,11 +54,23 @@ public final class PrivateEndpointArgs extends com.pulumi.resources.ResourceArgs
             $ = new PrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Specifies the id of private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Specifies the id of private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }

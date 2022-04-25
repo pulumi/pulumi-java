@@ -15,32 +15,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApiPortalResult {
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
      */
     private final String id;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * API portal properties payload
+     * @return API portal properties payload
      * 
      */
     private final ApiPortalPropertiesResponse properties;
     /**
-     * Sku of the API portal resource
+     * @return Sku of the API portal resource
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -62,44 +62,44 @@ public final class GetApiPortalResult {
     }
 
     /**
-     * Fully qualified resource Id for the resource.
+     * @return Fully qualified resource Id for the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * API portal properties payload
+     * @return API portal properties payload
      * 
-    */
+     */
     public ApiPortalPropertiesResponse properties() {
         return this.properties;
     }
     /**
-     * Sku of the API portal resource
+     * @return Sku of the API portal resource
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

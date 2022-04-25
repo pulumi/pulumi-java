@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class EncryptionPropertiesResponse {
     /**
-     * The encryption key name.
+     * @return The encryption key name.
      * 
      */
     private final String keyName;
     /**
-     * The encryption key version.
+     * @return The encryption key version.
      * 
      */
     private final String keyVersion;
     /**
-     * The keyvault base url.
+     * @return The keyvault base url.
      * 
      */
     private final String vaultBaseUrl;
@@ -36,23 +36,23 @@ public final class EncryptionPropertiesResponse {
     }
 
     /**
-     * The encryption key name.
+     * @return The encryption key name.
      * 
-    */
+     */
     public String keyName() {
         return this.keyName;
     }
     /**
-     * The encryption key version.
+     * @return The encryption key version.
      * 
-    */
+     */
     public String keyVersion() {
         return this.keyVersion;
     }
     /**
-     * The keyvault base url.
+     * @return The keyvault base url.
      * 
-    */
+     */
     public String vaultBaseUrl() {
         return this.vaultBaseUrl;
     }

@@ -18,87 +18,87 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebTestResult {
     /**
-     * An XML configuration specification for a WebTest.
+     * @return An XML configuration specification for a WebTest.
      * 
      */
     private final @Nullable WebTestPropertiesResponseConfiguration configuration;
     /**
-     * Purpose/user defined descriptive test for this WebTest.
+     * @return Purpose/user defined descriptive test for this WebTest.
      * 
      */
     private final @Nullable String description;
     /**
-     * Is the test actively being monitored.
+     * @return Is the test actively being monitored.
      * 
      */
     private final @Nullable Boolean enabled;
     /**
-     * Interval in seconds between test runs for this WebTest. Default value is 300.
+     * @return Interval in seconds between test runs for this WebTest. Default value is 300.
      * 
      */
     private final @Nullable Integer frequency;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * The kind of web test that this web test watches. Choices are ping and multistep.
+     * @return The kind of web test that this web test watches. Choices are ping and multistep.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource location
+     * @return Resource location
      * 
      */
     private final String location;
     /**
-     * A list of where to physically run the tests from to give global coverage for accessibility of your application.
+     * @return A list of where to physically run the tests from to give global coverage for accessibility of your application.
      * 
      */
     private final List<WebTestGeolocationResponse> locations;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+     * @return Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
      */
     private final String provisioningState;
     /**
-     * Allow for retries should this WebTest fail.
+     * @return Allow for retries should this WebTest fail.
      * 
      */
     private final @Nullable Boolean retryEnabled;
     /**
-     * Unique ID of this WebTest. This is typically the same value as the Name field.
+     * @return Unique ID of this WebTest. This is typically the same value as the Name field.
      * 
      */
     private final String syntheticMonitorId;
     /**
-     * Resource tags
+     * @return Resource tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Seconds until this WebTest will timeout and fail. Default value is 30.
+     * @return Seconds until this WebTest will timeout and fail. Default value is 30.
      * 
      */
     private final @Nullable Integer timeout;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
     /**
-     * The kind of web test this is, valid choices are ping and multistep.
+     * @return The kind of web test this is, valid choices are ping and multistep.
      * 
      */
     private final String webTestKind;
     /**
-     * User defined name if this WebTest.
+     * @return User defined name if this WebTest.
      * 
      */
     private final String webTestName;
@@ -142,121 +142,121 @@ public final class GetWebTestResult {
     }
 
     /**
-     * An XML configuration specification for a WebTest.
+     * @return An XML configuration specification for a WebTest.
      * 
-    */
+     */
     public Optional<WebTestPropertiesResponseConfiguration> configuration() {
         return Optional.ofNullable(this.configuration);
     }
     /**
-     * Purpose/user defined descriptive test for this WebTest.
+     * @return Purpose/user defined descriptive test for this WebTest.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Is the test actively being monitored.
+     * @return Is the test actively being monitored.
      * 
-    */
+     */
     public Optional<Boolean> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * Interval in seconds between test runs for this WebTest. Default value is 300.
+     * @return Interval in seconds between test runs for this WebTest. Default value is 300.
      * 
-    */
+     */
     public Optional<Integer> frequency() {
         return Optional.ofNullable(this.frequency);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The kind of web test that this web test watches. Choices are ping and multistep.
+     * @return The kind of web test that this web test watches. Choices are ping and multistep.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource location
+     * @return Resource location
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * A list of where to physically run the tests from to give global coverage for accessibility of your application.
+     * @return A list of where to physically run the tests from to give global coverage for accessibility of your application.
      * 
-    */
+     */
     public List<WebTestGeolocationResponse> locations() {
         return this.locations;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
+     * @return Current state of this component, whether or not is has been provisioned within the resource group it is defined. Users cannot change this value but are able to read from it. Values will include Succeeded, Deploying, Canceled, and Failed.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Allow for retries should this WebTest fail.
+     * @return Allow for retries should this WebTest fail.
      * 
-    */
+     */
     public Optional<Boolean> retryEnabled() {
         return Optional.ofNullable(this.retryEnabled);
     }
     /**
-     * Unique ID of this WebTest. This is typically the same value as the Name field.
+     * @return Unique ID of this WebTest. This is typically the same value as the Name field.
      * 
-    */
+     */
     public String syntheticMonitorId() {
         return this.syntheticMonitorId;
     }
     /**
-     * Resource tags
+     * @return Resource tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Seconds until this WebTest will timeout and fail. Default value is 30.
+     * @return Seconds until this WebTest will timeout and fail. Default value is 30.
      * 
-    */
+     */
     public Optional<Integer> timeout() {
         return Optional.ofNullable(this.timeout);
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The kind of web test this is, valid choices are ping and multistep.
+     * @return The kind of web test this is, valid choices are ping and multistep.
      * 
-    */
+     */
     public String webTestKind() {
         return this.webTestKind;
     }
     /**
-     * User defined name if this WebTest.
+     * @return User defined name if this WebTest.
      * 
-    */
+     */
     public String webTestName() {
         return this.webTestName;
     }

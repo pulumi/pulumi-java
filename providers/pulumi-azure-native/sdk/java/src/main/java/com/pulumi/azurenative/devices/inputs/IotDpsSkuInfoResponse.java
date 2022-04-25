@@ -26,6 +26,10 @@ public final class IotDpsSkuInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="capacity")
     private @Nullable Double capacity;
 
+    /**
+     * @return The number of units to provision
+     * 
+     */
     public Optional<Double> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -37,6 +41,10 @@ public final class IotDpsSkuInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Sku name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class IotDpsSkuInfoResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="tier", required=true)
     private String tier;
 
+    /**
+     * @return Pricing tier name of the provisioning service.
+     * 
+     */
     public String tier() {
         return this.tier;
     }
@@ -78,16 +90,34 @@ public final class IotDpsSkuInfoResponse extends com.pulumi.resources.InvokeArgs
             $ = new IotDpsSkuInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The number of units to provision
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Double capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier Pricing tier name of the provisioning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             $.tier = tier;
             return this;

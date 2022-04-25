@@ -28,6 +28,11 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="access")
     private @Nullable Output<String> access;
 
+    /**
+     * @return Gets or sets whether network traffic is allowed or denied.
+     * Possible values are “Allow” and “Deny”.
+     * 
+     */
     public Optional<Output<String>> access() {
         return Optional.ofNullable(this.access);
     }
@@ -39,6 +44,10 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Gets or sets a description for this rule. Restricted to 140 chars.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -52,6 +61,12 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="destinationAddressPrefix")
     private @Nullable Output<String> destinationAddressPrefix;
 
+    /**
+     * @return Gets or sets destination address prefix. CIDR or source IP range.
+     *  A “*” can also be used to match all source IPs. Default tags such
+     * as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.
+     * 
+     */
     public Optional<Output<String>> destinationAddressPrefix() {
         return Optional.ofNullable(this.destinationAddressPrefix);
     }
@@ -64,6 +79,11 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="destinationPortRange")
     private @Nullable Output<String> destinationPortRange;
 
+    /**
+     * @return Gets or sets Destination Port or Range. Integer or range between
+     * 0 and 65535. A “*” can also be used to match all ports.
+     * 
+     */
     public Optional<Output<String>> destinationPortRange() {
         return Optional.ofNullable(this.destinationPortRange);
     }
@@ -76,6 +96,11 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="direction")
     private @Nullable Output<String> direction;
 
+    /**
+     * @return Gets or sets the direction of the rule.InBound or Outbound. The
+     * direction specifies if rule will be evaluated on incoming or outgoing traffic.
+     * 
+     */
     public Optional<Output<String>> direction() {
         return Optional.ofNullable(this.direction);
     }
@@ -87,6 +112,10 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Gets or sets the Security rule name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -100,6 +129,12 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Gets or sets the priority of the rule. The value can be between
+     * 100 and 4096. The priority number must be unique for each rule in the collection.
+     * The lower the priority number, the higher the priority of the rule.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -111,6 +146,10 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="protocol")
     private @Nullable Output<String> protocol;
 
+    /**
+     * @return Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
+     * 
+     */
     public Optional<Output<String>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -125,6 +164,13 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourceAddressPrefix")
     private @Nullable Output<String> sourceAddressPrefix;
 
+    /**
+     * @return Gets or sets source address prefix. CIDR or source IP range. A
+     * “*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
+     * ‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
+     * rule, specifies where network traffic originates from.
+     * 
+     */
     public Optional<Output<String>> sourceAddressPrefix() {
         return Optional.ofNullable(this.sourceAddressPrefix);
     }
@@ -137,6 +183,11 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sourcePortRange")
     private @Nullable Output<String> sourcePortRange;
 
+    /**
+     * @return Gets or sets Source Port or Range. Integer or range between 0 and
+     * 65535. A “*” can also be used to match all ports.
+     * 
+     */
     public Optional<Output<String>> sourcePortRange() {
         return Optional.ofNullable(this.sourcePortRange);
     }
@@ -174,92 +225,234 @@ public final class NsgSecurityRuleArgs extends com.pulumi.resources.ResourceArgs
             $ = new NsgSecurityRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param access Gets or sets whether network traffic is allowed or denied.
+         * Possible values are “Allow” and “Deny”.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(@Nullable Output<String> access) {
             $.access = access;
             return this;
         }
 
+        /**
+         * @param access Gets or sets whether network traffic is allowed or denied.
+         * Possible values are “Allow” and “Deny”.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(String access) {
             return access(Output.of(access));
         }
 
+        /**
+         * @param description Gets or sets a description for this rule. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Gets or sets a description for this rule. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param destinationAddressPrefix Gets or sets destination address prefix. CIDR or source IP range.
+         *  A “*” can also be used to match all source IPs. Default tags such
+         * as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddressPrefix(@Nullable Output<String> destinationAddressPrefix) {
             $.destinationAddressPrefix = destinationAddressPrefix;
             return this;
         }
 
+        /**
+         * @param destinationAddressPrefix Gets or sets destination address prefix. CIDR or source IP range.
+         *  A “*” can also be used to match all source IPs. Default tags such
+         * as ‘VirtualNetwork’, ‘AzureLoadBalancer’ and ‘Internet’ can also be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationAddressPrefix(String destinationAddressPrefix) {
             return destinationAddressPrefix(Output.of(destinationAddressPrefix));
         }
 
+        /**
+         * @param destinationPortRange Gets or sets Destination Port or Range. Integer or range between
+         * 0 and 65535. A “*” can also be used to match all ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRange(@Nullable Output<String> destinationPortRange) {
             $.destinationPortRange = destinationPortRange;
             return this;
         }
 
+        /**
+         * @param destinationPortRange Gets or sets Destination Port or Range. Integer or range between
+         * 0 and 65535. A “*” can also be used to match all ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destinationPortRange(String destinationPortRange) {
             return destinationPortRange(Output.of(destinationPortRange));
         }
 
+        /**
+         * @param direction Gets or sets the direction of the rule.InBound or Outbound. The
+         * direction specifies if rule will be evaluated on incoming or outgoing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(@Nullable Output<String> direction) {
             $.direction = direction;
             return this;
         }
 
+        /**
+         * @param direction Gets or sets the direction of the rule.InBound or Outbound. The
+         * direction specifies if rule will be evaluated on incoming or outgoing traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder direction(String direction) {
             return direction(Output.of(direction));
         }
 
+        /**
+         * @param name Gets or sets the Security rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the Security rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Gets or sets the priority of the rule. The value can be between
+         * 100 and 4096. The priority number must be unique for each rule in the collection.
+         * The lower the priority number, the higher the priority of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Gets or sets the priority of the rule. The value can be between
+         * 100 and 4096. The priority number must be unique for each rule in the collection.
+         * The lower the priority number, the higher the priority of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param protocol Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Gets or sets Network protocol this rule applies to. Can be Tcp, Udp or All(*).
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param sourceAddressPrefix Gets or sets source address prefix. CIDR or source IP range. A
+         * “*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
+         * ‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
+         * rule, specifies where network traffic originates from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddressPrefix(@Nullable Output<String> sourceAddressPrefix) {
             $.sourceAddressPrefix = sourceAddressPrefix;
             return this;
         }
 
+        /**
+         * @param sourceAddressPrefix Gets or sets source address prefix. CIDR or source IP range. A
+         * “*” can also be used to match all source IPs.  Default tags such as ‘VirtualNetwork’,
+         * ‘AzureLoadBalancer’ and ‘Internet’ can also be used. If this is an ingress
+         * rule, specifies where network traffic originates from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceAddressPrefix(String sourceAddressPrefix) {
             return sourceAddressPrefix(Output.of(sourceAddressPrefix));
         }
 
+        /**
+         * @param sourcePortRange Gets or sets Source Port or Range. Integer or range between 0 and
+         * 65535. A “*” can also be used to match all ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRange(@Nullable Output<String> sourcePortRange) {
             $.sourcePortRange = sourcePortRange;
             return this;
         }
 
+        /**
+         * @param sourcePortRange Gets or sets Source Port or Range. Integer or range between 0 and
+         * 65535. A “*” can also be used to match all ports.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourcePortRange(String sourcePortRange) {
             return sourcePortRange(Output.of(sourcePortRange));
         }

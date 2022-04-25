@@ -19,6 +19,10 @@ public final class GetSchemaRegistryArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -30,6 +34,10 @@ public final class GetSchemaRegistryArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSchemaRegistryArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="schemaGroupName", required=true)
     private String schemaGroupName;
 
+    /**
+     * @return The Schema Group name
+     * 
+     */
     public String schemaGroupName() {
         return this.schemaGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetSchemaRegistryArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetSchemaRegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param schemaGroupName The Schema Group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaGroupName(String schemaGroupName) {
             $.schemaGroupName = schemaGroupName;
             return this;

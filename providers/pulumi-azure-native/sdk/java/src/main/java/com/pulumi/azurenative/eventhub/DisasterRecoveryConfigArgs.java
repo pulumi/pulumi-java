@@ -22,6 +22,10 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="alias")
     private @Nullable Output<String> alias;
 
+    /**
+     * @return The Disaster Recovery configuration name
+     * 
+     */
     public Optional<Output<String>> alias() {
         return Optional.ofNullable(this.alias);
     }
@@ -33,6 +37,10 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="alternateName")
     private @Nullable Output<String> alternateName;
 
+    /**
+     * @return Alternate name specified when alias and namespace names are same.
+     * 
+     */
     public Optional<Output<String>> alternateName() {
         return Optional.ofNullable(this.alternateName);
     }
@@ -44,6 +52,10 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -55,6 +67,10 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="partnerNamespace")
     private @Nullable Output<String> partnerNamespace;
 
+    /**
+     * @return ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+     * 
+     */
     public Optional<Output<String>> partnerNamespace() {
         return Optional.ofNullable(this.partnerNamespace);
     }
@@ -66,6 +82,10 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -98,47 +118,107 @@ public final class DisasterRecoveryConfigArgs extends com.pulumi.resources.Resou
             $ = new DisasterRecoveryConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param alias The Disaster Recovery configuration name
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(@Nullable Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias The Disaster Recovery configuration name
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param alternateName Alternate name specified when alias and namespace names are same.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateName(@Nullable Output<String> alternateName) {
             $.alternateName = alternateName;
             return this;
         }
 
+        /**
+         * @param alternateName Alternate name specified when alias and namespace names are same.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alternateName(String alternateName) {
             return alternateName(Output.of(alternateName));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param partnerNamespace ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNamespace(@Nullable Output<String> partnerNamespace) {
             $.partnerNamespace = partnerNamespace;
             return this;
         }
 
+        /**
+         * @param partnerNamespace ARM Id of the Primary/Secondary eventhub namespace name, which is part of GEO DR pairing
+         * 
+         * @return builder
+         * 
+         */
         public Builder partnerNamespace(String partnerNamespace) {
             return partnerNamespace(Output.of(partnerNamespace));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

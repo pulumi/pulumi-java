@@ -28,6 +28,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -39,6 +43,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayName", required=true)
     private Output<String> displayName;
 
+    /**
+     * @return User defined name for the group
+     * 
+     */
     public Output<String> displayName() {
         return this.displayName;
     }
@@ -50,6 +58,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="groupType")
     private @Nullable Output<Either<String,MachineGroupType>> groupType;
 
+    /**
+     * @return Type of the machine group
+     * 
+     */
     public Optional<Output<Either<String,MachineGroupType>>> groupType() {
         return Optional.ofNullable(this.groupType);
     }
@@ -62,6 +74,11 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Additional resource type qualifier.
+     * Expected value is &#39;machineGroup&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -73,6 +90,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machineGroupName")
     private @Nullable Output<String> machineGroupName;
 
+    /**
+     * @return Machine Group resource name.
+     * 
+     */
     public Optional<Output<String>> machineGroupName() {
         return Optional.ofNullable(this.machineGroupName);
     }
@@ -84,6 +105,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="machines")
     private @Nullable Output<List<MachineReferenceWithHintsArgs>> machines;
 
+    /**
+     * @return References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
+     * 
+     */
     public Optional<Output<List<MachineReferenceWithHintsArgs>>> machines() {
         return Optional.ofNullable(this.machines);
     }
@@ -95,6 +120,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource group name within the specified subscriptionId.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -106,6 +135,10 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return OMS workspace containing the resources of interest.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -141,86 +174,202 @@ public final class MachineGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MachineGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Count of machines in this group. The value of count may be bigger than the number of machines in case of the group has been truncated due to exceeding the max number of machines a group can handle.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param displayName User defined name for the group
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName User defined name for the group
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param groupType Type of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(@Nullable Output<Either<String,MachineGroupType>> groupType) {
             $.groupType = groupType;
             return this;
         }
 
+        /**
+         * @param groupType Type of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(Either<String,MachineGroupType> groupType) {
             return groupType(Output.of(groupType));
         }
 
+        /**
+         * @param groupType Type of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(String groupType) {
             return groupType(Either.ofLeft(groupType));
         }
 
+        /**
+         * @param groupType Type of the machine group
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(MachineGroupType groupType) {
             return groupType(Either.ofRight(groupType));
         }
 
+        /**
+         * @param kind Additional resource type qualifier.
+         * Expected value is &#39;machineGroup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Additional resource type qualifier.
+         * Expected value is &#39;machineGroup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param machineGroupName Machine Group resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineGroupName(@Nullable Output<String> machineGroupName) {
             $.machineGroupName = machineGroupName;
             return this;
         }
 
+        /**
+         * @param machineGroupName Machine Group resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineGroupName(String machineGroupName) {
             return machineGroupName(Output.of(machineGroupName));
         }
 
+        /**
+         * @param machines References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machines(@Nullable Output<List<MachineReferenceWithHintsArgs>> machines) {
             $.machines = machines;
             return this;
         }
 
+        /**
+         * @param machines References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machines(List<MachineReferenceWithHintsArgs> machines) {
             return machines(Output.of(machines));
         }
 
+        /**
+         * @param machines References of the machines in this group. The hints within each reference do not represent the current value of the corresponding fields. They are a snapshot created during the last time the machine group was updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machines(MachineReferenceWithHintsArgs... machines) {
             return machines(List.of(machines));
         }
 
+        /**
+         * @param resourceGroupName Resource group name within the specified subscriptionId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource group name within the specified subscriptionId.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName OMS workspace containing the resources of interest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName OMS workspace containing the resources of interest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

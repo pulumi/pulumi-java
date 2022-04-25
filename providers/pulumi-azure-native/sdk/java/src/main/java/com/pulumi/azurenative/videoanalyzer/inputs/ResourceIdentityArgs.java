@@ -24,6 +24,10 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
     @Import(name="userAssignedIdentity", required=true)
     private Output<String> userAssignedIdentity;
 
+    /**
+     * @return The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
+     * 
+     */
     public Output<String> userAssignedIdentity() {
         return this.userAssignedIdentity;
     }
@@ -52,11 +56,23 @@ public final class ResourceIdentityArgs extends com.pulumi.resources.ResourceArg
             $ = new ResourceIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(Output<String> userAssignedIdentity) {
             $.userAssignedIdentity = userAssignedIdentity;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentity The user assigned managed identity&#39;s resource identifier to use when accessing a resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentity(String userAssignedIdentity) {
             return userAssignedIdentity(Output.of(userAssignedIdentity));
         }

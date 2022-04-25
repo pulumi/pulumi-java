@@ -25,6 +25,11 @@ public final class AzPowerShellSetupResponse extends com.pulumi.resources.Invoke
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of custom setup.
+     * Expected value is &#39;AzPowerShellSetup&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -36,6 +41,10 @@ public final class AzPowerShellSetupResponse extends com.pulumi.resources.Invoke
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The required version of Azure PowerShell to install.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -65,11 +74,24 @@ public final class AzPowerShellSetupResponse extends com.pulumi.resources.Invoke
             $ = new AzPowerShellSetupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of custom setup.
+         * Expected value is &#39;AzPowerShellSetup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param version The required version of Azure PowerShell to install.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

@@ -28,6 +28,10 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="healthChecks", required=true)
     private List<RestHealthCheckResponse> healthChecks;
 
+    /**
+     * @return The list of checks that form the health check step.
+     * 
+     */
     public List<RestHealthCheckResponse> healthChecks() {
         return this.healthChecks;
     }
@@ -39,6 +43,10 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="healthyStateDuration", required=true)
     private String healthyStateDuration;
 
+    /**
+     * @return The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
+     * 
+     */
     public String healthyStateDuration() {
         return this.healthyStateDuration;
     }
@@ -50,6 +58,10 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="maxElasticDuration")
     private @Nullable String maxElasticDuration;
 
+    /**
+     * @return The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
+     * 
+     */
     public Optional<String> maxElasticDuration() {
         return Optional.ofNullable(this.maxElasticDuration);
     }
@@ -62,6 +74,11 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of health check.
+     * Expected value is &#39;REST&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -73,6 +90,10 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
     @Import(name="waitDuration")
     private @Nullable String waitDuration;
 
+    /**
+     * @return The duration in ISO 8601 format for which health check waits idly without any checks.
+     * 
+     */
     public Optional<String> waitDuration() {
         return Optional.ofNullable(this.waitDuration);
     }
@@ -105,30 +126,67 @@ public final class RestHealthCheckStepAttributesResponse extends com.pulumi.reso
             $ = new RestHealthCheckStepAttributesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthChecks The list of checks that form the health check step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(List<RestHealthCheckResponse> healthChecks) {
             $.healthChecks = healthChecks;
             return this;
         }
 
+        /**
+         * @param healthChecks The list of checks that form the health check step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthChecks(RestHealthCheckResponse... healthChecks) {
             return healthChecks(List.of(healthChecks));
         }
 
+        /**
+         * @param healthyStateDuration The duration in ISO 8601 format for which the resource is expected to be continuously healthy. If maxElasticDuration is specified, healthy state duration is enforced after the detection of first healthy signal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthyStateDuration(String healthyStateDuration) {
             $.healthyStateDuration = healthyStateDuration;
             return this;
         }
 
+        /**
+         * @param maxElasticDuration The duration in ISO 8601 format for which the health check waits for the resource to become healthy. Health check fails if it doesn&#39;t. Health check starts to enforce healthyStateDuration once resource becomes healthy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxElasticDuration(@Nullable String maxElasticDuration) {
             $.maxElasticDuration = maxElasticDuration;
             return this;
         }
 
+        /**
+         * @param type The type of health check.
+         * Expected value is &#39;REST&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param waitDuration The duration in ISO 8601 format for which health check waits idly without any checks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitDuration(@Nullable String waitDuration) {
             $.waitDuration = waitDuration;
             return this;

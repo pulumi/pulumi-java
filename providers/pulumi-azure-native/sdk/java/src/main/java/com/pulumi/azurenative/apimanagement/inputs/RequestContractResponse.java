@@ -28,6 +28,10 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Operation request description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -39,6 +43,10 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
     @Import(name="headers")
     private @Nullable List<ParameterContractResponse> headers;
 
+    /**
+     * @return Collection of operation request headers.
+     * 
+     */
     public Optional<List<ParameterContractResponse>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -50,6 +58,10 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
     @Import(name="queryParameters")
     private @Nullable List<ParameterContractResponse> queryParameters;
 
+    /**
+     * @return Collection of operation request query parameters.
+     * 
+     */
     public Optional<List<ParameterContractResponse>> queryParameters() {
         return Optional.ofNullable(this.queryParameters);
     }
@@ -61,6 +73,10 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
     @Import(name="representations")
     private @Nullable List<RepresentationContractResponse> representations;
 
+    /**
+     * @return Collection of operation request representations.
+     * 
+     */
     public Optional<List<RepresentationContractResponse>> representations() {
         return Optional.ofNullable(this.representations);
     }
@@ -92,34 +108,76 @@ public final class RequestContractResponse extends com.pulumi.resources.InvokeAr
             $ = new RequestContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Operation request description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param headers Collection of operation request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable List<ParameterContractResponse> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers Collection of operation request headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(ParameterContractResponse... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param queryParameters Collection of operation request query parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(@Nullable List<ParameterContractResponse> queryParameters) {
             $.queryParameters = queryParameters;
             return this;
         }
 
+        /**
+         * @param queryParameters Collection of operation request query parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryParameters(ParameterContractResponse... queryParameters) {
             return queryParameters(List.of(queryParameters));
         }
 
+        /**
+         * @param representations Collection of operation request representations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder representations(@Nullable List<RepresentationContractResponse> representations) {
             $.representations = representations;
             return this;
         }
 
+        /**
+         * @param representations Collection of operation request representations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder representations(RepresentationContractResponse... representations) {
             return representations(List.of(representations));
         }

@@ -28,6 +28,10 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
     @Import(name="faultDomain")
     private @Nullable Output<Integer> faultDomain;
 
+    /**
+     * @return Gets or sets the target fault domain.
+     * 
+     */
     public Optional<Output<Integer>> faultDomain() {
         return Optional.ofNullable(this.faultDomain);
     }
@@ -40,6 +44,11 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -51,6 +60,10 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
     @Import(name="targetResourceName", required=true)
     private Output<String> targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
@@ -62,6 +75,10 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
     @Import(name="updateDomain")
     private @Nullable Output<Integer> updateDomain;
 
+    /**
+     * @return Gets or sets the target update domain.
+     * 
+     */
     public Optional<Output<Integer>> updateDomain() {
         return Optional.ofNullable(this.updateDomain);
     }
@@ -93,38 +110,88 @@ public final class AvailabilitySetResourceSettingsArgs extends com.pulumi.resour
             $ = new AvailabilitySetResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param faultDomain Gets or sets the target fault domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultDomain(@Nullable Output<Integer> faultDomain) {
             $.faultDomain = faultDomain;
             return this;
         }
 
+        /**
+         * @param faultDomain Gets or sets the target fault domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultDomain(Integer faultDomain) {
             return faultDomain(Output.of(faultDomain));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             return targetResourceName(Output.of(targetResourceName));
         }
 
+        /**
+         * @param updateDomain Gets or sets the target update domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateDomain(@Nullable Output<Integer> updateDomain) {
             $.updateDomain = updateDomain;
             return this;
         }
 
+        /**
+         * @param updateDomain Gets or sets the target update domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateDomain(Integer updateDomain) {
             return updateDomain(Output.of(updateDomain));
         }

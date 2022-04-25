@@ -13,27 +13,27 @@ import java.util.Objects;
 @CustomType
 public final class GetIntegrationRuntimeResult {
     /**
-     * Etag identifies change in the resource.
+     * @return Etag identifies change in the resource.
      * 
      */
     private final String etag;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * Integration runtime properties.
+     * @return Integration runtime properties.
      * 
      */
     private final Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse> properties;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -53,37 +53,37 @@ public final class GetIntegrationRuntimeResult {
     }
 
     /**
-     * Etag identifies change in the resource.
+     * @return Etag identifies change in the resource.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Integration runtime properties.
+     * @return Integration runtime properties.
      * 
-    */
+     */
     public Either<ManagedIntegrationRuntimeResponse,SelfHostedIntegrationRuntimeResponse> properties() {
         return this.properties;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

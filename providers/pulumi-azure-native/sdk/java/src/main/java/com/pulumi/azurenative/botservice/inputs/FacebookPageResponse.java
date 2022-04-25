@@ -25,6 +25,10 @@ public final class FacebookPageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="accessToken")
     private @Nullable String accessToken;
 
+    /**
+     * @return Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
@@ -36,6 +40,10 @@ public final class FacebookPageResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Page id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -65,11 +73,23 @@ public final class FacebookPageResponse extends com.pulumi.resources.InvokeArgs 
             $ = new FacebookPageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessToken Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessToken(@Nullable String accessToken) {
             $.accessToken = accessToken;
             return this;
         }
 
+        /**
+         * @param id Page id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

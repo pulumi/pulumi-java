@@ -26,6 +26,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="dnsServers")
     private @Nullable List<String> dnsServers;
 
+    /**
+     * @return The list of DNS servers IP addresses.
+     * 
+     */
     public Optional<List<String>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -37,6 +41,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="gateway")
     private @Nullable String gateway;
 
+    /**
+     * @return The value of the gateway.
+     * 
+     */
     public Optional<String> gateway() {
         return Optional.ofNullable(this.gateway);
     }
@@ -48,6 +56,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return The value of the IP address.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -59,6 +71,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="ipAllocationMethod")
     private @Nullable String ipAllocationMethod;
 
+    /**
+     * @return IP address allocation method.
+     * 
+     */
     public Optional<String> ipAllocationMethod() {
         return Optional.ofNullable(this.ipAllocationMethod);
     }
@@ -70,6 +86,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="ipVersion")
     private @Nullable String ipVersion;
 
+    /**
+     * @return IP address version.
+     * 
+     */
     public Optional<String> ipVersion() {
         return Optional.ofNullable(this.ipVersion);
     }
@@ -81,6 +101,10 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
     @Import(name="subnet")
     private @Nullable String subnet;
 
+    /**
+     * @return The value of the subnet.
+     * 
+     */
     public Optional<String> subnet() {
         return Optional.ofNullable(this.subnet);
     }
@@ -114,35 +138,77 @@ public final class NetworkInterfaceIPConfigurationResponse extends com.pulumi.re
             $ = new NetworkInterfaceIPConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsServers The list of DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers The list of DNS servers IP addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param gateway The value of the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(@Nullable String gateway) {
             $.gateway = gateway;
             return this;
         }
 
+        /**
+         * @param ipAddress The value of the IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAllocationMethod IP address allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAllocationMethod(@Nullable String ipAllocationMethod) {
             $.ipAllocationMethod = ipAllocationMethod;
             return this;
         }
 
+        /**
+         * @param ipVersion IP address version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipVersion(@Nullable String ipVersion) {
             $.ipVersion = ipVersion;
             return this;
         }
 
+        /**
+         * @param subnet The value of the subnet.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnet(@Nullable String subnet) {
             $.subnet = subnet;
             return this;

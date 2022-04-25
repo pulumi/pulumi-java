@@ -19,6 +19,10 @@ public final class GetMigrateProjectArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="migrateProjectName", required=true)
     private String migrateProjectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public String migrateProjectName() {
         return this.migrateProjectName;
     }
@@ -30,6 +34,10 @@ public final class GetMigrateProjectArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that migrate project is part of.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetMigrateProjectArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetMigrateProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrateProjectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrateProjectName(String migrateProjectName) {
             $.migrateProjectName = migrateProjectName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that migrate project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

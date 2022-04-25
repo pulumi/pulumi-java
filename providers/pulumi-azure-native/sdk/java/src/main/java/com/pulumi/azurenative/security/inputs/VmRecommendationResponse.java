@@ -25,6 +25,10 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
     @Import(name="configurationStatus")
     private @Nullable String configurationStatus;
 
+    /**
+     * @return The configuration status of the machines group or machine or rule
+     * 
+     */
     public Optional<String> configurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
@@ -36,6 +40,10 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
     @Import(name="enforcementSupport")
     private @Nullable String enforcementSupport;
 
+    /**
+     * @return The machine supportability of Enforce feature
+     * 
+     */
     public Optional<String> enforcementSupport() {
         return Optional.ofNullable(this.enforcementSupport);
     }
@@ -47,6 +55,10 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
     @Import(name="recommendationAction")
     private @Nullable String recommendationAction;
 
+    /**
+     * @return The recommendation action of the machine or rule
+     * 
+     */
     public Optional<String> recommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
@@ -58,6 +70,10 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return The full resource id of the machine
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -89,21 +105,45 @@ public final class VmRecommendationResponse extends com.pulumi.resources.InvokeA
             $ = new VmRecommendationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationStatus The configuration status of the machines group or machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationStatus(@Nullable String configurationStatus) {
             $.configurationStatus = configurationStatus;
             return this;
         }
 
+        /**
+         * @param enforcementSupport The machine supportability of Enforce feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcementSupport(@Nullable String enforcementSupport) {
             $.enforcementSupport = enforcementSupport;
             return this;
         }
 
+        /**
+         * @param recommendationAction The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationAction(@Nullable String recommendationAction) {
             $.recommendationAction = recommendationAction;
             return this;
         }
 
+        /**
+         * @param resourceId The full resource id of the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;

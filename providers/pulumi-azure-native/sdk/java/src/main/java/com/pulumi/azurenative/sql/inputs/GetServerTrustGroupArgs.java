@@ -19,6 +19,10 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="locationName", required=true)
     private String locationName;
 
+    /**
+     * @return The name of the region where the resource is located.
+     * 
+     */
     public String locationName() {
         return this.locationName;
     }
@@ -30,6 +34,10 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
     @Import(name="serverTrustGroupName", required=true)
     private String serverTrustGroupName;
 
+    /**
+     * @return The name of the server trust group.
+     * 
+     */
     public String serverTrustGroupName() {
         return this.serverTrustGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetServerTrustGroupArgs extends com.pulumi.resources.InvokeAr
             $ = new GetServerTrustGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locationName The name of the region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(String locationName) {
             $.locationName = locationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serverTrustGroupName The name of the server trust group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serverTrustGroupName(String serverTrustGroupName) {
             $.serverTrustGroupName = serverTrustGroupName;
             return this;

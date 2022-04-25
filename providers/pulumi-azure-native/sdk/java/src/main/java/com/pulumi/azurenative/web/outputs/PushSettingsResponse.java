@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PushSettingsResponse {
     /**
-     * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+     * @return Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
      */
     private final @Nullable String dynamicTagsJson;
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Gets or sets a flag indicating whether the Push endpoint is enabled.
+     * @return Gets or sets a flag indicating whether the Push endpoint is enabled.
      * 
      */
     private final Boolean isPushEnabled;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+     * @return Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
      */
     private final @Nullable String tagWhitelistJson;
     /**
-     * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+     * @return Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
      * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
      * Validation should be performed at the PushRequestHandler.
@@ -51,7 +51,7 @@ public final class PushSettingsResponse {
      */
     private final @Nullable String tagsRequiringAuth;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -77,61 +77,61 @@ public final class PushSettingsResponse {
     }
 
     /**
-     * Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
+     * @return Gets or sets a JSON string containing a list of dynamic tags that will be evaluated from user claims in the push registration endpoint.
      * 
-    */
+     */
     public Optional<String> dynamicTagsJson() {
         return Optional.ofNullable(this.dynamicTagsJson);
     }
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Gets or sets a flag indicating whether the Push endpoint is enabled.
+     * @return Gets or sets a flag indicating whether the Push endpoint is enabled.
      * 
-    */
+     */
     public Boolean isPushEnabled() {
         return this.isPushEnabled;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
+     * @return Gets or sets a JSON string containing a list of tags that are whitelisted for use by the push registration endpoint.
      * 
-    */
+     */
     public Optional<String> tagWhitelistJson() {
         return Optional.ofNullable(this.tagWhitelistJson);
     }
     /**
-     * Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
+     * @return Gets or sets a JSON string containing a list of tags that require user authentication to be used in the push registration endpoint.
      * Tags can consist of alphanumeric characters and the following:
      * &#39;_&#39;, &#39;@&#39;, &#39;#&#39;, &#39;.&#39;, &#39;:&#39;, &#39;-&#39;.
      * Validation should be performed at the PushRequestHandler.
      * 
-    */
+     */
     public Optional<String> tagsRequiringAuth() {
         return Optional.ofNullable(this.tagsRequiringAuth);
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

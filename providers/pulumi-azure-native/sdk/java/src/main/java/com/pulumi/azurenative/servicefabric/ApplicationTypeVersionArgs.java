@@ -23,6 +23,10 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="appPackageUrl", required=true)
     private Output<String> appPackageUrl;
 
+    /**
+     * @return The URL to the application package
+     * 
+     */
     public Output<String> appPackageUrl() {
         return this.appPackageUrl;
     }
@@ -34,6 +38,10 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="applicationTypeName", required=true)
     private Output<String> applicationTypeName;
 
+    /**
+     * @return The name of the application type name resource.
+     * 
+     */
     public Output<String> applicationTypeName() {
         return this.applicationTypeName;
     }
@@ -45,6 +53,10 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the cluster resource.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -56,6 +68,10 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return It will be deprecated in New API, resource location depends on the parent resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -67,6 +83,10 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -78,6 +98,10 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Azure resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -89,6 +113,10 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The application type version.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -123,65 +151,149 @@ public final class ApplicationTypeVersionArgs extends com.pulumi.resources.Resou
             $ = new ApplicationTypeVersionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appPackageUrl The URL to the application package
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPackageUrl(Output<String> appPackageUrl) {
             $.appPackageUrl = appPackageUrl;
             return this;
         }
 
+        /**
+         * @param appPackageUrl The URL to the application package
+         * 
+         * @return builder
+         * 
+         */
         public Builder appPackageUrl(String appPackageUrl) {
             return appPackageUrl(Output.of(appPackageUrl));
         }
 
+        /**
+         * @param applicationTypeName The name of the application type name resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationTypeName(Output<String> applicationTypeName) {
             $.applicationTypeName = applicationTypeName;
             return this;
         }
 
+        /**
+         * @param applicationTypeName The name of the application type name resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder applicationTypeName(String applicationTypeName) {
             return applicationTypeName(Output.of(applicationTypeName));
         }
 
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the cluster resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param location It will be deprecated in New API, resource location depends on the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location It will be deprecated in New API, resource location depends on the parent resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Azure resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Azure resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param version The application type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The application type version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

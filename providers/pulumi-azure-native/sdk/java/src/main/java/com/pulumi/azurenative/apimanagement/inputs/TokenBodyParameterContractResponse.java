@@ -23,6 +23,10 @@ public final class TokenBodyParameterContractResponse extends com.pulumi.resourc
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return body parameter name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -34,6 +38,10 @@ public final class TokenBodyParameterContractResponse extends com.pulumi.resourc
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return body parameter value.
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -63,11 +71,23 @@ public final class TokenBodyParameterContractResponse extends com.pulumi.resourc
             $ = new TokenBodyParameterContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name body parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param value body parameter value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

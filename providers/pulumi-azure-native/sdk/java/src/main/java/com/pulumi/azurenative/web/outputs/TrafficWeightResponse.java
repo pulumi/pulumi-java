@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TrafficWeightResponse {
     /**
-     * Indicates that the traffic weight belongs to a latest stable revision
+     * @return Indicates that the traffic weight belongs to a latest stable revision
      * 
      */
     private final @Nullable Boolean latestRevision;
     /**
-     * Name of a revision
+     * @return Name of a revision
      * 
      */
     private final @Nullable String revisionName;
     /**
-     * Traffic weight assigned to a revision
+     * @return Traffic weight assigned to a revision
      * 
      */
     private final @Nullable Integer weight;
@@ -40,23 +40,23 @@ public final class TrafficWeightResponse {
     }
 
     /**
-     * Indicates that the traffic weight belongs to a latest stable revision
+     * @return Indicates that the traffic weight belongs to a latest stable revision
      * 
-    */
+     */
     public Optional<Boolean> latestRevision() {
         return Optional.ofNullable(this.latestRevision);
     }
     /**
-     * Name of a revision
+     * @return Name of a revision
      * 
-    */
+     */
     public Optional<String> revisionName() {
         return Optional.ofNullable(this.revisionName);
     }
     /**
-     * Traffic weight assigned to a revision
+     * @return Traffic weight assigned to a revision
      * 
-    */
+     */
     public Optional<Integer> weight() {
         return Optional.ofNullable(this.weight);
     }

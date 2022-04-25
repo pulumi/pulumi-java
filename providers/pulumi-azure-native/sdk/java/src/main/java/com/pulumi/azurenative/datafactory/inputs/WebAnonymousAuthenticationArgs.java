@@ -27,6 +27,11 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
     @Import(name="authenticationType", required=true)
     private Output<String> authenticationType;
 
+    /**
+     * @return Type of authentication used to connect to the web table source.
+     * Expected value is &#39;Anonymous&#39;.
+     * 
+     */
     public Output<String> authenticationType() {
         return this.authenticationType;
     }
@@ -38,6 +43,10 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
     @Import(name="url", required=true)
     private Output<Object> url;
 
+    /**
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> url() {
         return this.url;
     }
@@ -67,20 +76,46 @@ public final class WebAnonymousAuthenticationArgs extends com.pulumi.resources.R
             $ = new WebAnonymousAuthenticationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the web table source.
+         * Expected value is &#39;Anonymous&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the web table source.
+         * Expected value is &#39;Anonymous&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param url The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Output<Object> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             return url(Output.of(url));
         }

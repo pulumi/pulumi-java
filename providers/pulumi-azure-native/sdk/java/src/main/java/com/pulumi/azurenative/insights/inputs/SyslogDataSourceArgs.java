@@ -32,6 +32,10 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="facilityNames")
     private @Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames;
 
+    /**
+     * @return The list of facility names.
+     * 
+     */
     public Optional<Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>>> facilityNames() {
         return Optional.ofNullable(this.facilityNames);
     }
@@ -43,6 +47,10 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="logLevels")
     private @Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels;
 
+    /**
+     * @return The log levels to collect.
+     * 
+     */
     public Optional<Output<List<Either<String,KnownSyslogDataSourceLogLevels>>>> logLevels() {
         return Optional.ofNullable(this.logLevels);
     }
@@ -55,6 +63,11 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return A friendly name for the data source.
+     * This name should be unique across all data sources (regardless of type) within the data collection rule.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -67,6 +80,11 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="streams")
     private @Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams;
 
+    /**
+     * @return List of streams that this data source will be sent to.
+     * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+     * 
+     */
     public Optional<Output<List<Either<String,KnownSyslogDataSourceStreams>>>> streams() {
         return Optional.ofNullable(this.streams);
     }
@@ -98,50 +116,121 @@ public final class SyslogDataSourceArgs extends com.pulumi.resources.ResourceArg
             $ = new SyslogDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param facilityNames The list of facility names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facilityNames(@Nullable Output<List<Either<String,KnownSyslogDataSourceFacilityNames>>> facilityNames) {
             $.facilityNames = facilityNames;
             return this;
         }
 
+        /**
+         * @param facilityNames The list of facility names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facilityNames(List<Either<String,KnownSyslogDataSourceFacilityNames>> facilityNames) {
             return facilityNames(Output.of(facilityNames));
         }
 
+        /**
+         * @param facilityNames The list of facility names.
+         * 
+         * @return builder
+         * 
+         */
         public Builder facilityNames(Either<String,KnownSyslogDataSourceFacilityNames>... facilityNames) {
             return facilityNames(List.of(facilityNames));
         }
 
+        /**
+         * @param logLevels The log levels to collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevels(@Nullable Output<List<Either<String,KnownSyslogDataSourceLogLevels>>> logLevels) {
             $.logLevels = logLevels;
             return this;
         }
 
+        /**
+         * @param logLevels The log levels to collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevels(List<Either<String,KnownSyslogDataSourceLogLevels>> logLevels) {
             return logLevels(Output.of(logLevels));
         }
 
+        /**
+         * @param logLevels The log levels to collect.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevels(Either<String,KnownSyslogDataSourceLogLevels>... logLevels) {
             return logLevels(List.of(logLevels));
         }
 
+        /**
+         * @param name A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name A friendly name for the data source.
+         * This name should be unique across all data sources (regardless of type) within the data collection rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(@Nullable Output<List<Either<String,KnownSyslogDataSourceStreams>>> streams) {
             $.streams = streams;
             return this;
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(List<Either<String,KnownSyslogDataSourceStreams>> streams) {
             return streams(Output.of(streams));
         }
 
+        /**
+         * @param streams List of streams that this data source will be sent to.
+         * A stream indicates what schema will be used for this data and usually what table in Log Analytics the data will be sent to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streams(Either<String,KnownSyslogDataSourceStreams>... streams) {
             return streams(List.of(streams));
         }

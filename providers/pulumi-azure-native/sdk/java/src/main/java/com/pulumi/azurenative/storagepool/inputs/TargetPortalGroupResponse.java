@@ -28,6 +28,10 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="acls", required=true)
     private List<AclResponse> acls;
 
+    /**
+     * @return Access Control List (ACL) for an iSCSI target portal group.
+     * 
+     */
     public List<AclResponse> acls() {
         return this.acls;
     }
@@ -39,6 +43,10 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="attributes", required=true)
     private AttributesResponse attributes;
 
+    /**
+     * @return Attributes of an iSCSI target portal group.
+     * 
+     */
     public AttributesResponse attributes() {
         return this.attributes;
     }
@@ -50,6 +58,10 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="endpoints", required=true)
     private List<String> endpoints;
 
+    /**
+     * @return List of private IPv4 addresses to connect to the iSCSI target.
+     * 
+     */
     public List<String> endpoints() {
         return this.endpoints;
     }
@@ -61,6 +73,10 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="luns", required=true)
     private List<IscsiLunResponse> luns;
 
+    /**
+     * @return List of LUNs to be exposed through iSCSI target portal group.
+     * 
+     */
     public List<IscsiLunResponse> luns() {
         return this.luns;
     }
@@ -72,6 +88,10 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="port", required=true)
     private Integer port;
 
+    /**
+     * @return The port used by iSCSI target portal group.
+     * 
+     */
     public Integer port() {
         return this.port;
     }
@@ -83,6 +103,10 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
     @Import(name="tag", required=true)
     private Integer tag;
 
+    /**
+     * @return The tag associated with the iSCSI target portal group.
+     * 
+     */
     public Integer tag() {
         return this.tag;
     }
@@ -116,43 +140,97 @@ public final class TargetPortalGroupResponse extends com.pulumi.resources.Invoke
             $ = new TargetPortalGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acls Access Control List (ACL) for an iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acls(List<AclResponse> acls) {
             $.acls = acls;
             return this;
         }
 
+        /**
+         * @param acls Access Control List (ACL) for an iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acls(AclResponse... acls) {
             return acls(List.of(acls));
         }
 
+        /**
+         * @param attributes Attributes of an iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(AttributesResponse attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param endpoints List of private IPv4 addresses to connect to the iSCSI target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(List<String> endpoints) {
             $.endpoints = endpoints;
             return this;
         }
 
+        /**
+         * @param endpoints List of private IPv4 addresses to connect to the iSCSI target.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpoints(String... endpoints) {
             return endpoints(List.of(endpoints));
         }
 
+        /**
+         * @param luns List of LUNs to be exposed through iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(List<IscsiLunResponse> luns) {
             $.luns = luns;
             return this;
         }
 
+        /**
+         * @param luns List of LUNs to be exposed through iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(IscsiLunResponse... luns) {
             return luns(List.of(luns));
         }
 
+        /**
+         * @param port The port used by iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param tag The tag associated with the iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tag(Integer tag) {
             $.tag = tag;
             return this;

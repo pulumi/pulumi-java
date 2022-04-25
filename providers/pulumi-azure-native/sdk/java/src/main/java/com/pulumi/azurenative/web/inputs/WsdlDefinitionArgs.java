@@ -29,6 +29,10 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="content")
     private @Nullable Output<String> content;
 
+    /**
+     * @return The WSDL content
+     * 
+     */
     public Optional<Output<String>> content() {
         return Optional.ofNullable(this.content);
     }
@@ -40,6 +44,10 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="importMethod")
     private @Nullable Output<Either<String,WsdlImportMethod>> importMethod;
 
+    /**
+     * @return The WSDL import method
+     * 
+     */
     public Optional<Output<Either<String,WsdlImportMethod>>> importMethod() {
         return Optional.ofNullable(this.importMethod);
     }
@@ -51,6 +59,10 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="service")
     private @Nullable Output<WsdlServiceArgs> service;
 
+    /**
+     * @return The service with name and endpoint names
+     * 
+     */
     public Optional<Output<WsdlServiceArgs>> service() {
         return Optional.ofNullable(this.service);
     }
@@ -62,6 +74,10 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return The WSDL URL
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -93,46 +109,106 @@ public final class WsdlDefinitionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new WsdlDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param content The WSDL content
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(@Nullable Output<String> content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param content The WSDL content
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             return content(Output.of(content));
         }
 
+        /**
+         * @param importMethod The WSDL import method
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(@Nullable Output<Either<String,WsdlImportMethod>> importMethod) {
             $.importMethod = importMethod;
             return this;
         }
 
+        /**
+         * @param importMethod The WSDL import method
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(Either<String,WsdlImportMethod> importMethod) {
             return importMethod(Output.of(importMethod));
         }
 
+        /**
+         * @param importMethod The WSDL import method
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(String importMethod) {
             return importMethod(Either.ofLeft(importMethod));
         }
 
+        /**
+         * @param importMethod The WSDL import method
+         * 
+         * @return builder
+         * 
+         */
         public Builder importMethod(WsdlImportMethod importMethod) {
             return importMethod(Either.ofRight(importMethod));
         }
 
+        /**
+         * @param service The service with name and endpoint names
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable Output<WsdlServiceArgs> service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param service The service with name and endpoint names
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(WsdlServiceArgs service) {
             return service(Output.of(service));
         }
 
+        /**
+         * @param url The WSDL URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url The WSDL URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

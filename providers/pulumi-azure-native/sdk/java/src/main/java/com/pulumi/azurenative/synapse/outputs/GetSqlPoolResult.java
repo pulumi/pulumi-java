@@ -15,12 +15,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSqlPoolResult {
     /**
-     * Collation mode
+     * @return Collation mode
      * 
      */
     private final @Nullable String collation;
     /**
-     * Specifies the mode of sql pool creation.
+     * @return Specifies the mode of sql pool creation.
      * 
      * Default: regular sql pool creation.
      * 
@@ -33,72 +33,72 @@ public final class GetSqlPoolResult {
      */
     private final @Nullable String createMode;
     /**
-     * Date the SQL pool was created
+     * @return Date the SQL pool was created
      * 
      */
     private final @Nullable String creationDate;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * Maximum size in bytes
+     * @return Maximum size in bytes
      * 
      */
     private final @Nullable Double maxSizeBytes;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Resource state
+     * @return Resource state
      * 
      */
     private final @Nullable String provisioningState;
     /**
-     * Backup database to restore from
+     * @return Backup database to restore from
      * 
      */
     private final @Nullable String recoverableDatabaseId;
     /**
-     * Snapshot time to restore
+     * @return Snapshot time to restore
      * 
      */
     private final @Nullable String restorePointInTime;
     /**
-     * SQL pool SKU
+     * @return SQL pool SKU
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Source database to create from
+     * @return Source database to create from
      * 
      */
     private final @Nullable String sourceDatabaseId;
     /**
-     * Resource status
+     * @return Resource status
      * 
      */
     private final @Nullable String status;
     /**
-     * The storage account type used to store backups for this sql pool.
+     * @return The storage account type used to store backups for this sql pool.
      * 
      */
     private final @Nullable String storageAccountType;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -140,14 +140,14 @@ public final class GetSqlPoolResult {
     }
 
     /**
-     * Collation mode
+     * @return Collation mode
      * 
-    */
+     */
     public Optional<String> collation() {
         return Optional.ofNullable(this.collation);
     }
     /**
-     * Specifies the mode of sql pool creation.
+     * @return Specifies the mode of sql pool creation.
      * 
      * Default: regular sql pool creation.
      * 
@@ -157,105 +157,105 @@ public final class GetSqlPoolResult {
      * 
      * Restore: Creates a sql pool by restoring a backup of a deleted sql  pool. SourceDatabaseId should be the sql pool&#39;s original resource ID. SourceDatabaseId and sourceDatabaseDeletionDate must be specified.
      * 
-    */
+     */
     public Optional<String> createMode() {
         return Optional.ofNullable(this.createMode);
     }
     /**
-     * Date the SQL pool was created
+     * @return Date the SQL pool was created
      * 
-    */
+     */
     public Optional<String> creationDate() {
         return Optional.ofNullable(this.creationDate);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Maximum size in bytes
+     * @return Maximum size in bytes
      * 
-    */
+     */
     public Optional<Double> maxSizeBytes() {
         return Optional.ofNullable(this.maxSizeBytes);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource state
+     * @return Resource state
      * 
-    */
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
     /**
-     * Backup database to restore from
+     * @return Backup database to restore from
      * 
-    */
+     */
     public Optional<String> recoverableDatabaseId() {
         return Optional.ofNullable(this.recoverableDatabaseId);
     }
     /**
-     * Snapshot time to restore
+     * @return Snapshot time to restore
      * 
-    */
+     */
     public Optional<String> restorePointInTime() {
         return Optional.ofNullable(this.restorePointInTime);
     }
     /**
-     * SQL pool SKU
+     * @return SQL pool SKU
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Source database to create from
+     * @return Source database to create from
      * 
-    */
+     */
     public Optional<String> sourceDatabaseId() {
         return Optional.ofNullable(this.sourceDatabaseId);
     }
     /**
-     * Resource status
+     * @return Resource status
      * 
-    */
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * The storage account type used to store backups for this sql pool.
+     * @return The storage account type used to store backups for this sql pool.
      * 
-    */
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

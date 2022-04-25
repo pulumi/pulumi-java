@@ -20,58 +20,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CassandraLinkedServiceResponse {
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
+     * @return AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object authenticationType;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * Host name for connection. Type: string (or Expression with resultType string).
+     * @return Host name for connection. Type: string (or Expression with resultType string).
      * 
      */
     private final Object host;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * Password for authentication.
+     * @return Password for authentication.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
-     * The port for the connection. Type: integer (or Expression with resultType integer).
+     * @return The port for the connection. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object port;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Cassandra&#39;.
      * 
      */
     private final String type;
     /**
-     * Username for authentication. Type: string (or Expression with resultType string).
+     * @return Username for authentication. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object username;
@@ -103,80 +103,80 @@ public final class CassandraLinkedServiceResponse {
     }
 
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
+     * @return AuthenticationType to be used for connection. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * Host name for connection. Type: string (or Expression with resultType string).
+     * @return Host name for connection. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object host() {
         return this.host;
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Password for authentication.
+     * @return Password for authentication.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * The port for the connection. Type: integer (or Expression with resultType integer).
+     * @return The port for the connection. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> port() {
         return Optional.ofNullable(this.port);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;Cassandra&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Username for authentication. Type: string (or Expression with resultType string).
+     * @return Username for authentication. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> username() {
         return Optional.ofNullable(this.username);
     }

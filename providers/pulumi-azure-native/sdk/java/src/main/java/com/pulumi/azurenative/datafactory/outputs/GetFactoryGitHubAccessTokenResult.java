@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetFactoryGitHubAccessTokenResult {
     /**
-     * GitHub access token.
+     * @return GitHub access token.
      * 
      */
     private final @Nullable String gitHubAccessToken;
@@ -23,9 +23,9 @@ public final class GetFactoryGitHubAccessTokenResult {
     }
 
     /**
-     * GitHub access token.
+     * @return GitHub access token.
      * 
-    */
+     */
     public Optional<String> gitHubAccessToken() {
         return Optional.ofNullable(this.gitHubAccessToken);
     }

@@ -26,6 +26,10 @@ public final class RestResponseResponseRegex extends com.pulumi.resources.Invoke
     @Import(name="matchQuantifier")
     private @Nullable String matchQuantifier;
 
+    /**
+     * @return Indicates whether any or all of the expressions should match with the response content.
+     * 
+     */
     public Optional<String> matchQuantifier() {
         return Optional.ofNullable(this.matchQuantifier);
     }
@@ -37,6 +41,10 @@ public final class RestResponseResponseRegex extends com.pulumi.resources.Invoke
     @Import(name="matches")
     private @Nullable List<String> matches;
 
+    /**
+     * @return The list of regular expressions.
+     * 
+     */
     public Optional<List<String>> matches() {
         return Optional.ofNullable(this.matches);
     }
@@ -66,16 +74,34 @@ public final class RestResponseResponseRegex extends com.pulumi.resources.Invoke
             $ = new RestResponseResponseRegex(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchQuantifier Indicates whether any or all of the expressions should match with the response content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchQuantifier(@Nullable String matchQuantifier) {
             $.matchQuantifier = matchQuantifier;
             return this;
         }
 
+        /**
+         * @param matches The list of regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matches(@Nullable List<String> matches) {
             $.matches = matches;
             return this;
         }
 
+        /**
+         * @param matches The list of regular expressions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matches(String... matches) {
             return matches(List.of(matches));
         }

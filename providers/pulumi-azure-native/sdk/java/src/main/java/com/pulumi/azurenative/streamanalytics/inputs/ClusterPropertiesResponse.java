@@ -24,6 +24,10 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="capacityAllocated", required=true)
     private Integer capacityAllocated;
 
+    /**
+     * @return Represents the number of streaming units currently being used on the cluster.
+     * 
+     */
     public Integer capacityAllocated() {
         return this.capacityAllocated;
     }
@@ -35,6 +39,10 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="capacityAssigned", required=true)
     private Integer capacityAssigned;
 
+    /**
+     * @return Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
+     * 
+     */
     public Integer capacityAssigned() {
         return this.capacityAssigned;
     }
@@ -46,6 +54,10 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterId", required=true)
     private String clusterId;
 
+    /**
+     * @return Unique identifier for the cluster.
+     * 
+     */
     public String clusterId() {
         return this.clusterId;
     }
@@ -57,6 +69,10 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="createdDate", required=true)
     private String createdDate;
 
+    /**
+     * @return The date this cluster was created.
+     * 
+     */
     public String createdDate() {
         return this.createdDate;
     }
@@ -68,6 +84,10 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -100,26 +120,56 @@ public final class ClusterPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new ClusterPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacityAllocated Represents the number of streaming units currently being used on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityAllocated(Integer capacityAllocated) {
             $.capacityAllocated = capacityAllocated;
             return this;
         }
 
+        /**
+         * @param capacityAssigned Represents the sum of the SUs of all streaming jobs associated with the cluster. If all of the jobs were running, this would be the capacity allocated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacityAssigned(Integer capacityAssigned) {
             $.capacityAssigned = capacityAssigned;
             return this;
         }
 
+        /**
+         * @param clusterId Unique identifier for the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(String clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param createdDate The date this cluster was created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param provisioningState The status of the cluster provisioning. The three terminal states are: Succeeded, Failed and Canceled
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

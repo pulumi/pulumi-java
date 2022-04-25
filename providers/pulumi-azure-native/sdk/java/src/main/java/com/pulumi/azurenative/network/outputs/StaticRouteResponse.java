@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StaticRouteResponse {
     /**
-     * List of all address prefixes.
+     * @return List of all address prefixes.
      * 
      */
     private final @Nullable List<String> addressPrefixes;
     /**
-     * The name of the StaticRoute that is unique within a VnetRoute.
+     * @return The name of the StaticRoute that is unique within a VnetRoute.
      * 
      */
     private final @Nullable String name;
     /**
-     * The ip address of the next hop.
+     * @return The ip address of the next hop.
      * 
      */
     private final @Nullable String nextHopIpAddress;
@@ -39,23 +39,23 @@ public final class StaticRouteResponse {
     }
 
     /**
-     * List of all address prefixes.
+     * @return List of all address prefixes.
      * 
-    */
+     */
     public List<String> addressPrefixes() {
         return this.addressPrefixes == null ? List.of() : this.addressPrefixes;
     }
     /**
-     * The name of the StaticRoute that is unique within a VnetRoute.
+     * @return The name of the StaticRoute that is unique within a VnetRoute.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The ip address of the next hop.
+     * @return The ip address of the next hop.
      * 
-    */
+     */
     public Optional<String> nextHopIpAddress() {
         return Optional.ofNullable(this.nextHopIpAddress);
     }

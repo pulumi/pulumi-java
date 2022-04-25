@@ -27,6 +27,10 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
     @Import(name="httpProxy")
     private @Nullable Output<String> httpProxy;
 
+    /**
+     * @return HTTP proxy server endpoint to use.
+     * 
+     */
     public Optional<Output<String>> httpProxy() {
         return Optional.ofNullable(this.httpProxy);
     }
@@ -38,6 +42,10 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
     @Import(name="httpsProxy")
     private @Nullable Output<String> httpsProxy;
 
+    /**
+     * @return HTTPS proxy server endpoint to use.
+     * 
+     */
     public Optional<Output<String>> httpsProxy() {
         return Optional.ofNullable(this.httpsProxy);
     }
@@ -49,6 +57,10 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
     @Import(name="noProxy")
     private @Nullable Output<List<String>> noProxy;
 
+    /**
+     * @return Endpoints that should not go through proxy.
+     * 
+     */
     public Optional<Output<List<String>>> noProxy() {
         return Optional.ofNullable(this.noProxy);
     }
@@ -60,6 +72,10 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
     @Import(name="trustedCa")
     private @Nullable Output<String> trustedCa;
 
+    /**
+     * @return Alternative CA cert to use for connecting to proxy servers.
+     * 
+     */
     public Optional<Output<String>> trustedCa() {
         return Optional.ofNullable(this.trustedCa);
     }
@@ -91,42 +107,96 @@ public final class ManagedClusterHTTPProxyConfigArgs extends com.pulumi.resource
             $ = new ManagedClusterHTTPProxyConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param httpProxy HTTP proxy server endpoint to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpProxy(@Nullable Output<String> httpProxy) {
             $.httpProxy = httpProxy;
             return this;
         }
 
+        /**
+         * @param httpProxy HTTP proxy server endpoint to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpProxy(String httpProxy) {
             return httpProxy(Output.of(httpProxy));
         }
 
+        /**
+         * @param httpsProxy HTTPS proxy server endpoint to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsProxy(@Nullable Output<String> httpsProxy) {
             $.httpsProxy = httpsProxy;
             return this;
         }
 
+        /**
+         * @param httpsProxy HTTPS proxy server endpoint to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsProxy(String httpsProxy) {
             return httpsProxy(Output.of(httpsProxy));
         }
 
+        /**
+         * @param noProxy Endpoints that should not go through proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noProxy(@Nullable Output<List<String>> noProxy) {
             $.noProxy = noProxy;
             return this;
         }
 
+        /**
+         * @param noProxy Endpoints that should not go through proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noProxy(List<String> noProxy) {
             return noProxy(Output.of(noProxy));
         }
 
+        /**
+         * @param noProxy Endpoints that should not go through proxy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noProxy(String... noProxy) {
             return noProxy(List.of(noProxy));
         }
 
+        /**
+         * @param trustedCa Alternative CA cert to use for connecting to proxy servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCa(@Nullable Output<String> trustedCa) {
             $.trustedCa = trustedCa;
             return this;
         }
 
+        /**
+         * @param trustedCa Alternative CA cert to use for connecting to proxy servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCa(String trustedCa) {
             return trustedCa(Output.of(trustedCa));
         }

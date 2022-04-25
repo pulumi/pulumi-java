@@ -26,6 +26,11 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends com.p
     @Import(name="authenticationType", required=true)
     private Output<String> authenticationType;
 
+    /**
+     * @return Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+     * Expected value is &#39;awsAssumeRole&#39;.
+     * 
+     */
     public Output<String> authenticationType() {
         return this.authenticationType;
     }
@@ -37,6 +42,10 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends com.p
     @Import(name="awsAssumeRoleArn", required=true)
     private Output<String> awsAssumeRoleArn;
 
+    /**
+     * @return Assumed role ID is an identifier that you can use to create temporary security credentials.
+     * 
+     */
     public Output<String> awsAssumeRoleArn() {
         return this.awsAssumeRoleArn;
     }
@@ -48,6 +57,10 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends com.p
     @Import(name="awsExternalId", required=true)
     private Output<String> awsExternalId;
 
+    /**
+     * @return A unique identifier that is required when you assume a role in another account.
+     * 
+     */
     public Output<String> awsExternalId() {
         return this.awsExternalId;
     }
@@ -78,29 +91,67 @@ public final class AwAssumeRoleAuthenticationDetailsPropertiesArgs extends com.p
             $ = new AwAssumeRoleAuthenticationDetailsPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+         * Expected value is &#39;awsAssumeRole&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(Output<String> authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param authenticationType Connect to your cloud account, for AWS use either account credentials or role-based authentication. For GCP use account organization credentials.
+         * Expected value is &#39;awsAssumeRole&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             return authenticationType(Output.of(authenticationType));
         }
 
+        /**
+         * @param awsAssumeRoleArn Assumed role ID is an identifier that you can use to create temporary security credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAssumeRoleArn(Output<String> awsAssumeRoleArn) {
             $.awsAssumeRoleArn = awsAssumeRoleArn;
             return this;
         }
 
+        /**
+         * @param awsAssumeRoleArn Assumed role ID is an identifier that you can use to create temporary security credentials.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsAssumeRoleArn(String awsAssumeRoleArn) {
             return awsAssumeRoleArn(Output.of(awsAssumeRoleArn));
         }
 
+        /**
+         * @param awsExternalId A unique identifier that is required when you assume a role in another account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsExternalId(Output<String> awsExternalId) {
             $.awsExternalId = awsExternalId;
             return this;
         }
 
+        /**
+         * @param awsExternalId A unique identifier that is required when you assume a role in another account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder awsExternalId(String awsExternalId) {
             return awsExternalId(Output.of(awsExternalId));
         }

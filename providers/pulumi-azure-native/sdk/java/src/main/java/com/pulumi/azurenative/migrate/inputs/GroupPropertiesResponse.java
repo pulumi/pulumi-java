@@ -28,6 +28,10 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="areAssessmentsRunning", required=true)
     private Boolean areAssessmentsRunning;
 
+    /**
+     * @return If the assessments are in running state.
+     * 
+     */
     public Boolean areAssessmentsRunning() {
         return this.areAssessmentsRunning;
     }
@@ -39,6 +43,10 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="assessments", required=true)
     private List<String> assessments;
 
+    /**
+     * @return List of References to Assessments created on this group.
+     * 
+     */
     public List<String> assessments() {
         return this.assessments;
     }
@@ -50,6 +58,10 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="createdTimestamp", required=true)
     private String createdTimestamp;
 
+    /**
+     * @return Time when this group was created. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String createdTimestamp() {
         return this.createdTimestamp;
     }
@@ -61,6 +73,10 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupStatus", required=true)
     private String groupStatus;
 
+    /**
+     * @return Whether the group has been created and is valid.
+     * 
+     */
     public String groupStatus() {
         return this.groupStatus;
     }
@@ -72,6 +88,10 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="groupType")
     private @Nullable String groupType;
 
+    /**
+     * @return The type of group.
+     * 
+     */
     public Optional<String> groupType() {
         return Optional.ofNullable(this.groupType);
     }
@@ -83,6 +103,10 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="machineCount", required=true)
     private Integer machineCount;
 
+    /**
+     * @return Number of machines part of this group.
+     * 
+     */
     public Integer machineCount() {
         return this.machineCount;
     }
@@ -94,6 +118,10 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
     @Import(name="updatedTimestamp", required=true)
     private String updatedTimestamp;
 
+    /**
+     * @return Time when this group was last updated. Date-Time represented in ISO-8601 format.
+     * 
+     */
     public String updatedTimestamp() {
         return this.updatedTimestamp;
     }
@@ -128,40 +156,88 @@ public final class GroupPropertiesResponse extends com.pulumi.resources.InvokeAr
             $ = new GroupPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param areAssessmentsRunning If the assessments are in running state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder areAssessmentsRunning(Boolean areAssessmentsRunning) {
             $.areAssessmentsRunning = areAssessmentsRunning;
             return this;
         }
 
+        /**
+         * @param assessments List of References to Assessments created on this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessments(List<String> assessments) {
             $.assessments = assessments;
             return this;
         }
 
+        /**
+         * @param assessments List of References to Assessments created on this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessments(String... assessments) {
             return assessments(List.of(assessments));
         }
 
+        /**
+         * @param createdTimestamp Time when this group was created. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTimestamp(String createdTimestamp) {
             $.createdTimestamp = createdTimestamp;
             return this;
         }
 
+        /**
+         * @param groupStatus Whether the group has been created and is valid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupStatus(String groupStatus) {
             $.groupStatus = groupStatus;
             return this;
         }
 
+        /**
+         * @param groupType The type of group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupType(@Nullable String groupType) {
             $.groupType = groupType;
             return this;
         }
 
+        /**
+         * @param machineCount Number of machines part of this group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder machineCount(Integer machineCount) {
             $.machineCount = machineCount;
             return this;
         }
 
+        /**
+         * @param updatedTimestamp Time when this group was last updated. Date-Time represented in ISO-8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedTimestamp(String updatedTimestamp) {
             $.updatedTimestamp = updatedTimestamp;
             return this;

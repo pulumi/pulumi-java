@@ -26,6 +26,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="email")
     private @Nullable String email;
 
+    /**
+     * @return The email contact for this SOA record.
+     * 
+     */
     public Optional<String> email() {
         return Optional.ofNullable(this.email);
     }
@@ -37,6 +41,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expireTime")
     private @Nullable Double expireTime;
 
+    /**
+     * @return The expire time for this SOA record.
+     * 
+     */
     public Optional<Double> expireTime() {
         return Optional.ofNullable(this.expireTime);
     }
@@ -48,6 +56,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="host")
     private @Nullable String host;
 
+    /**
+     * @return The domain name of the authoritative name server for this SOA record.
+     * 
+     */
     public Optional<String> host() {
         return Optional.ofNullable(this.host);
     }
@@ -59,6 +71,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minimumTtl")
     private @Nullable Double minimumTtl;
 
+    /**
+     * @return The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
+     * 
+     */
     public Optional<Double> minimumTtl() {
         return Optional.ofNullable(this.minimumTtl);
     }
@@ -70,6 +86,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="refreshTime")
     private @Nullable Double refreshTime;
 
+    /**
+     * @return The refresh value for this SOA record.
+     * 
+     */
     public Optional<Double> refreshTime() {
         return Optional.ofNullable(this.refreshTime);
     }
@@ -81,6 +101,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="retryTime")
     private @Nullable Double retryTime;
 
+    /**
+     * @return The retry time for this SOA record.
+     * 
+     */
     public Optional<Double> retryTime() {
         return Optional.ofNullable(this.retryTime);
     }
@@ -92,6 +116,10 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serialNumber")
     private @Nullable Double serialNumber;
 
+    /**
+     * @return The serial number for this SOA record.
+     * 
+     */
     public Optional<Double> serialNumber() {
         return Optional.ofNullable(this.serialNumber);
     }
@@ -126,36 +154,78 @@ public final class SoaRecordResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SoaRecordResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email The email contact for this SOA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable String email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param expireTime The expire time for this SOA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expireTime(@Nullable Double expireTime) {
             $.expireTime = expireTime;
             return this;
         }
 
+        /**
+         * @param host The domain name of the authoritative name server for this SOA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder host(@Nullable String host) {
             $.host = host;
             return this;
         }
 
+        /**
+         * @param minimumTtl The minimum value for this SOA record. By convention this is used to determine the negative caching duration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minimumTtl(@Nullable Double minimumTtl) {
             $.minimumTtl = minimumTtl;
             return this;
         }
 
+        /**
+         * @param refreshTime The refresh value for this SOA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshTime(@Nullable Double refreshTime) {
             $.refreshTime = refreshTime;
             return this;
         }
 
+        /**
+         * @param retryTime The retry time for this SOA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryTime(@Nullable Double retryTime) {
             $.retryTime = retryTime;
             return this;
         }
 
+        /**
+         * @param serialNumber The serial number for this SOA record.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(@Nullable Double serialNumber) {
             $.serialNumber = serialNumber;
             return this;

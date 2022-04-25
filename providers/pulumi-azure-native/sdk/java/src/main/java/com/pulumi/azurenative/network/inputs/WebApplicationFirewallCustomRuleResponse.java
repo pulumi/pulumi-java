@@ -28,6 +28,10 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="action", required=true)
     private String action;
 
+    /**
+     * @return Type of Actions.
+     * 
+     */
     public String action() {
         return this.action;
     }
@@ -39,6 +43,10 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -50,6 +58,10 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="matchConditions", required=true)
     private List<MatchConditionResponse> matchConditions;
 
+    /**
+     * @return List of match conditions.
+     * 
+     */
     public List<MatchConditionResponse> matchConditions() {
         return this.matchConditions;
     }
@@ -61,6 +73,10 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a policy. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -72,6 +88,10 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="priority", required=true)
     private Integer priority;
 
+    /**
+     * @return Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+     * 
+     */
     public Integer priority() {
         return this.priority;
     }
@@ -83,6 +103,10 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
     @Import(name="ruleType", required=true)
     private String ruleType;
 
+    /**
+     * @return The rule type.
+     * 
+     */
     public String ruleType() {
         return this.ruleType;
     }
@@ -116,35 +140,77 @@ public final class WebApplicationFirewallCustomRuleResponse extends com.pulumi.r
             $ = new WebApplicationFirewallCustomRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action Type of Actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(String action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(List<MatchConditionResponse> matchConditions) {
             $.matchConditions = matchConditions;
             return this;
         }
 
+        /**
+         * @param matchConditions List of match conditions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchConditions(MatchConditionResponse... matchConditions) {
             return matchConditions(List.of(matchConditions));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a policy. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority Priority of the rule. Rules with a lower value will be evaluated before rules with a higher value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param ruleType The rule type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             $.ruleType = ruleType;
             return this;

@@ -27,6 +27,10 @@ public final class JwtClaimChecksArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedClientApplications")
     private @Nullable Output<List<String>> allowedClientApplications;
 
+    /**
+     * @return The list of the allowed client applications.
+     * 
+     */
     public Optional<Output<List<String>>> allowedClientApplications() {
         return Optional.ofNullable(this.allowedClientApplications);
     }
@@ -38,6 +42,10 @@ public final class JwtClaimChecksArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="allowedGroups")
     private @Nullable Output<List<String>> allowedGroups;
 
+    /**
+     * @return The list of the allowed groups.
+     * 
+     */
     public Optional<Output<List<String>>> allowedGroups() {
         return Optional.ofNullable(this.allowedGroups);
     }
@@ -67,28 +75,64 @@ public final class JwtClaimChecksArgs extends com.pulumi.resources.ResourceArgs 
             $ = new JwtClaimChecksArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowedClientApplications The list of the allowed client applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedClientApplications(@Nullable Output<List<String>> allowedClientApplications) {
             $.allowedClientApplications = allowedClientApplications;
             return this;
         }
 
+        /**
+         * @param allowedClientApplications The list of the allowed client applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedClientApplications(List<String> allowedClientApplications) {
             return allowedClientApplications(Output.of(allowedClientApplications));
         }
 
+        /**
+         * @param allowedClientApplications The list of the allowed client applications.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedClientApplications(String... allowedClientApplications) {
             return allowedClientApplications(List.of(allowedClientApplications));
         }
 
+        /**
+         * @param allowedGroups The list of the allowed groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedGroups(@Nullable Output<List<String>> allowedGroups) {
             $.allowedGroups = allowedGroups;
             return this;
         }
 
+        /**
+         * @param allowedGroups The list of the allowed groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedGroups(List<String> allowedGroups) {
             return allowedGroups(Output.of(allowedGroups));
         }
 
+        /**
+         * @param allowedGroups The list of the allowed groups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowedGroups(String... allowedGroups) {
             return allowedGroups(List.of(allowedGroups));
         }

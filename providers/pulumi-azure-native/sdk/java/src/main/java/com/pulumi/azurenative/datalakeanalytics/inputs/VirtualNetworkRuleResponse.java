@@ -23,6 +23,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The resource identifier.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -34,6 +38,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The resource name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="subnetId", required=true)
     private String subnetId;
 
+    /**
+     * @return The resource identifier for the subnet
+     * 
+     */
     public String subnetId() {
         return this.subnetId;
     }
@@ -56,6 +68,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -67,6 +83,10 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
     @Import(name="virtualNetworkRuleState", required=true)
     private String virtualNetworkRuleState;
 
+    /**
+     * @return The current state of the VirtualNetwork Rule
+     * 
+     */
     public String virtualNetworkRuleState() {
         return this.virtualNetworkRuleState;
     }
@@ -99,26 +119,56 @@ public final class VirtualNetworkRuleResponse extends com.pulumi.resources.Invok
             $ = new VirtualNetworkRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The resource identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param subnetId The resource identifier for the subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetId(String subnetId) {
             $.subnetId = subnetId;
             return this;
         }
 
+        /**
+         * @param type The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRuleState The current state of the VirtualNetwork Rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRuleState(String virtualNetworkRuleState) {
             $.virtualNetworkRuleState = virtualNetworkRuleState;
             return this;

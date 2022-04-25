@@ -27,6 +27,10 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
     @Import(name="isSecret")
     private @Nullable Boolean isSecret;
 
+    /**
+     * @return Boolean flag to tell if the attribute contains sensitive information .
+     * 
+     */
     public Optional<Boolean> isSecret() {
         return Optional.ofNullable(this.isSecret);
     }
@@ -38,6 +42,10 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the delivery attribute or header.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,11 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of the delivery attribute or header name.
+     * Expected value is &#39;Static&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -61,6 +74,10 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
     @Import(name="value")
     private @Nullable String value;
 
+    /**
+     * @return Value of the delivery attribute.
+     * 
+     */
     public Optional<String> value() {
         return Optional.ofNullable(this.value);
     }
@@ -92,21 +109,46 @@ public final class StaticDeliveryAttributeMappingResponse extends com.pulumi.res
             $ = new StaticDeliveryAttributeMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isSecret Boolean flag to tell if the attribute contains sensitive information .
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecret(@Nullable Boolean isSecret) {
             $.isSecret = isSecret;
             return this;
         }
 
+        /**
+         * @param name Name of the delivery attribute or header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of the delivery attribute or header name.
+         * Expected value is &#39;Static&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param value Value of the delivery attribute.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable String value) {
             $.value = value;
             return this;

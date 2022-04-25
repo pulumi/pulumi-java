@@ -23,6 +23,10 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Gets or sets id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class PrivateEndpointResponse extends com.pulumi.resources.InvokeAr
             $ = new PrivateEndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Gets or sets id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

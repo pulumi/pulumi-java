@@ -26,6 +26,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return Method used to authenticate against the storage endpoint
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -37,6 +41,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="batchFrequencyInSeconds")
     private @Nullable Integer batchFrequencyInSeconds;
 
+    /**
+     * @return Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
+     * 
+     */
     public Optional<Integer> batchFrequencyInSeconds() {
         return Optional.ofNullable(this.batchFrequencyInSeconds);
     }
@@ -48,6 +56,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="connectionString")
     private @Nullable String connectionString;
 
+    /**
+     * @return The connection string of the storage account.
+     * 
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -59,6 +71,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="containerName", required=true)
     private String containerName;
 
+    /**
+     * @return The name of storage container in the storage account.
+     * 
+     */
     public String containerName() {
         return this.containerName;
     }
@@ -70,6 +86,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="encoding")
     private @Nullable String encoding;
 
+    /**
+     * @return Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
+     * 
+     */
     public Optional<String> encoding() {
         return Optional.ofNullable(this.encoding);
     }
@@ -81,6 +101,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="endpointUri")
     private @Nullable String endpointUri;
 
+    /**
+     * @return The url of the storage endpoint. It must include the protocol https://
+     * 
+     */
     public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
@@ -92,6 +116,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="fileNameFormat")
     private @Nullable String fileNameFormat;
 
+    /**
+     * @return File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
+     * 
+     */
     public Optional<String> fileNameFormat() {
         return Optional.ofNullable(this.fileNameFormat);
     }
@@ -103,6 +131,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Id of the storage container endpoint
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -114,6 +146,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="maxChunkSizeInBytes")
     private @Nullable Integer maxChunkSizeInBytes;
 
+    /**
+     * @return Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
+     * 
+     */
     public Optional<Integer> maxChunkSizeInBytes() {
         return Optional.ofNullable(this.maxChunkSizeInBytes);
     }
@@ -125,6 +161,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -136,6 +176,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="resourceGroup")
     private @Nullable String resourceGroup;
 
+    /**
+     * @return The name of the resource group of the storage account.
+     * 
+     */
     public Optional<String> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -147,6 +191,10 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return The subscription identifier of the storage account.
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -186,61 +234,133 @@ public final class RoutingStorageContainerPropertiesResponse extends com.pulumi.
             $ = new RoutingStorageContainerPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Method used to authenticate against the storage endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param batchFrequencyInSeconds Time interval at which blobs are written to storage. Value should be between 60 and 720 seconds. Default value is 300 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchFrequencyInSeconds(@Nullable Integer batchFrequencyInSeconds) {
             $.batchFrequencyInSeconds = batchFrequencyInSeconds;
             return this;
         }
 
+        /**
+         * @param connectionString The connection string of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable String connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param containerName The name of storage container in the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param encoding Encoding that is used to serialize messages to blobs. Supported values are &#39;avro&#39;, &#39;avrodeflate&#39;, and &#39;JSON&#39;. Default value is &#39;avro&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encoding(@Nullable String encoding) {
             $.encoding = encoding;
             return this;
         }
 
+        /**
+         * @param endpointUri The url of the storage endpoint. It must include the protocol https://
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(@Nullable String endpointUri) {
             $.endpointUri = endpointUri;
             return this;
         }
 
+        /**
+         * @param fileNameFormat File name format for the blob. Default format is {iothub}/{partition}/{YYYY}/{MM}/{DD}/{HH}/{mm}. All parameters are mandatory but can be reordered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileNameFormat(@Nullable String fileNameFormat) {
             $.fileNameFormat = fileNameFormat;
             return this;
         }
 
+        /**
+         * @param id Id of the storage container endpoint
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param maxChunkSizeInBytes Maximum number of bytes for each blob written to storage. Value should be between 10485760(10MB) and 524288000(500MB). Default value is 314572800(300MB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxChunkSizeInBytes(@Nullable Integer maxChunkSizeInBytes) {
             $.maxChunkSizeInBytes = maxChunkSizeInBytes;
             return this;
         }
 
+        /**
+         * @param name The name that identifies this endpoint. The name can only include alphanumeric characters, periods, underscores, hyphens and has a maximum length of 64 characters. The following names are reserved:  events, fileNotifications, $default. Endpoint names must be unique across endpoint types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resourceGroup The name of the resource group of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable String resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param subscriptionId The subscription identifier of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;

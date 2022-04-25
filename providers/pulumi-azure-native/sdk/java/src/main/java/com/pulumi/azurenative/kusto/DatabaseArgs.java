@@ -24,6 +24,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="clusterName", required=true)
     private Output<String> clusterName;
 
+    /**
+     * @return The name of the Kusto cluster.
+     * 
+     */
     public Output<String> clusterName() {
         return this.clusterName;
     }
@@ -35,6 +39,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The name of the database in the Kusto cluster.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -46,6 +54,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,Kind>> kind;
 
+    /**
+     * @return Kind of the database
+     * 
+     */
     public Output<Either<String,Kind>> kind() {
         return this.kind;
     }
@@ -57,6 +69,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -68,6 +84,10 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the Kusto cluster.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -100,55 +120,127 @@ public final class DatabaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DatabaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(Output<String> clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterName The name of the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             return clusterName(Output.of(clusterName));
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The name of the database in the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param kind Kind of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,Kind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,Kind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind Kind of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind Kind of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Kind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the Kusto cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

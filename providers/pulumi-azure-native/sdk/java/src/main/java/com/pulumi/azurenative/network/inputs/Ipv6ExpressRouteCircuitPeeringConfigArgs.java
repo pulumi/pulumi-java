@@ -30,6 +30,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
     @Import(name="microsoftPeeringConfig")
     private @Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig;
 
+    /**
+     * @return The Microsoft peering configuration.
+     * 
+     */
     public Optional<Output<ExpressRouteCircuitPeeringConfigArgs>> microsoftPeeringConfig() {
         return Optional.ofNullable(this.microsoftPeeringConfig);
     }
@@ -41,6 +45,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
     @Import(name="primaryPeerAddressPrefix")
     private @Nullable Output<String> primaryPeerAddressPrefix;
 
+    /**
+     * @return The primary address prefix.
+     * 
+     */
     public Optional<Output<String>> primaryPeerAddressPrefix() {
         return Optional.ofNullable(this.primaryPeerAddressPrefix);
     }
@@ -52,6 +60,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
     @Import(name="routeFilter")
     private @Nullable Output<SubResourceArgs> routeFilter;
 
+    /**
+     * @return The reference to the RouteFilter resource.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> routeFilter() {
         return Optional.ofNullable(this.routeFilter);
     }
@@ -63,6 +75,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
     @Import(name="secondaryPeerAddressPrefix")
     private @Nullable Output<String> secondaryPeerAddressPrefix;
 
+    /**
+     * @return The secondary address prefix.
+     * 
+     */
     public Optional<Output<String>> secondaryPeerAddressPrefix() {
         return Optional.ofNullable(this.secondaryPeerAddressPrefix);
     }
@@ -74,6 +90,10 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
     @Import(name="state")
     private @Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state;
 
+    /**
+     * @return The state of peering.
+     * 
+     */
     public Optional<Output<Either<String,ExpressRouteCircuitPeeringState>>> state() {
         return Optional.ofNullable(this.state);
     }
@@ -106,55 +126,127 @@ public final class Ipv6ExpressRouteCircuitPeeringConfigArgs extends com.pulumi.r
             $ = new Ipv6ExpressRouteCircuitPeeringConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param microsoftPeeringConfig The Microsoft peering configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftPeeringConfig(@Nullable Output<ExpressRouteCircuitPeeringConfigArgs> microsoftPeeringConfig) {
             $.microsoftPeeringConfig = microsoftPeeringConfig;
             return this;
         }
 
+        /**
+         * @param microsoftPeeringConfig The Microsoft peering configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder microsoftPeeringConfig(ExpressRouteCircuitPeeringConfigArgs microsoftPeeringConfig) {
             return microsoftPeeringConfig(Output.of(microsoftPeeringConfig));
         }
 
+        /**
+         * @param primaryPeerAddressPrefix The primary address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryPeerAddressPrefix(@Nullable Output<String> primaryPeerAddressPrefix) {
             $.primaryPeerAddressPrefix = primaryPeerAddressPrefix;
             return this;
         }
 
+        /**
+         * @param primaryPeerAddressPrefix The primary address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryPeerAddressPrefix(String primaryPeerAddressPrefix) {
             return primaryPeerAddressPrefix(Output.of(primaryPeerAddressPrefix));
         }
 
+        /**
+         * @param routeFilter The reference to the RouteFilter resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilter(@Nullable Output<SubResourceArgs> routeFilter) {
             $.routeFilter = routeFilter;
             return this;
         }
 
+        /**
+         * @param routeFilter The reference to the RouteFilter resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilter(SubResourceArgs routeFilter) {
             return routeFilter(Output.of(routeFilter));
         }
 
+        /**
+         * @param secondaryPeerAddressPrefix The secondary address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryPeerAddressPrefix(@Nullable Output<String> secondaryPeerAddressPrefix) {
             $.secondaryPeerAddressPrefix = secondaryPeerAddressPrefix;
             return this;
         }
 
+        /**
+         * @param secondaryPeerAddressPrefix The secondary address prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryPeerAddressPrefix(String secondaryPeerAddressPrefix) {
             return secondaryPeerAddressPrefix(Output.of(secondaryPeerAddressPrefix));
         }
 
+        /**
+         * @param state The state of peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable Output<Either<String,ExpressRouteCircuitPeeringState>> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state The state of peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Either<String,ExpressRouteCircuitPeeringState> state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param state The state of peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             return state(Either.ofLeft(state));
         }
 
+        /**
+         * @param state The state of peering.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(ExpressRouteCircuitPeeringState state) {
             return state(Either.ofRight(state));
         }

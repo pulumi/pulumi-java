@@ -25,6 +25,10 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -36,6 +40,10 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="connectionTypeName")
     private @Nullable Output<String> connectionTypeName;
 
+    /**
+     * @return The parameters supplied to the create or update connection type operation.
+     * 
+     */
     public Optional<Output<String>> connectionTypeName() {
         return Optional.ofNullable(this.connectionTypeName);
     }
@@ -47,6 +55,10 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="fieldDefinitions", required=true)
     private Output<Map<String,FieldDefinitionArgs>> fieldDefinitions;
 
+    /**
+     * @return Gets or sets the field definitions of the connection type.
+     * 
+     */
     public Output<Map<String,FieldDefinitionArgs>> fieldDefinitions() {
         return this.fieldDefinitions;
     }
@@ -58,6 +70,10 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="isGlobal")
     private @Nullable Output<Boolean> isGlobal;
 
+    /**
+     * @return Gets or sets a Boolean value to indicate if the connection type is global.
+     * 
+     */
     public Optional<Output<Boolean>> isGlobal() {
         return Optional.ofNullable(this.isGlobal);
     }
@@ -69,6 +85,10 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the connection type.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -80,6 +100,10 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -113,56 +137,128 @@ public final class ConnectionTypeArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ConnectionTypeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param connectionTypeName The parameters supplied to the create or update connection type operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionTypeName(@Nullable Output<String> connectionTypeName) {
             $.connectionTypeName = connectionTypeName;
             return this;
         }
 
+        /**
+         * @param connectionTypeName The parameters supplied to the create or update connection type operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionTypeName(String connectionTypeName) {
             return connectionTypeName(Output.of(connectionTypeName));
         }
 
+        /**
+         * @param fieldDefinitions Gets or sets the field definitions of the connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDefinitions(Output<Map<String,FieldDefinitionArgs>> fieldDefinitions) {
             $.fieldDefinitions = fieldDefinitions;
             return this;
         }
 
+        /**
+         * @param fieldDefinitions Gets or sets the field definitions of the connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fieldDefinitions(Map<String,FieldDefinitionArgs> fieldDefinitions) {
             return fieldDefinitions(Output.of(fieldDefinitions));
         }
 
+        /**
+         * @param isGlobal Gets or sets a Boolean value to indicate if the connection type is global.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(@Nullable Output<Boolean> isGlobal) {
             $.isGlobal = isGlobal;
             return this;
         }
 
+        /**
+         * @param isGlobal Gets or sets a Boolean value to indicate if the connection type is global.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isGlobal(Boolean isGlobal) {
             return isGlobal(Output.of(isGlobal));
         }
 
+        /**
+         * @param name Gets or sets the name of the connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the connection type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

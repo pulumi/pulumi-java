@@ -19,6 +19,10 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to get. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="solutionName", required=true)
     private String solutionName;
 
+    /**
+     * @return User Solution Name.
+     * 
+     */
     public String solutionName() {
         return this.solutionName;
     }
@@ -59,11 +67,23 @@ public final class GetSolutionArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSolutionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param solutionName User Solution Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutionName(String solutionName) {
             $.solutionName = solutionName;
             return this;

@@ -23,6 +23,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultIdentifierId")
     private @Nullable Output<String> keyVaultIdentifierId;
 
+    /**
+     * @return The key vault identifier used for encrypted workspaces.
+     * 
+     */
     public Optional<Output<String>> keyVaultIdentifierId() {
         return Optional.ofNullable(this.keyVaultIdentifierId);
     }
@@ -34,6 +38,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -45,6 +53,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ownerEmail", required=true)
     private Output<String> ownerEmail;
 
+    /**
+     * @return The email id of the owner for this workspace.
+     * 
+     */
     public Output<String> ownerEmail() {
         return this.ownerEmail;
     }
@@ -56,6 +68,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the machine learning workspace belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -78,6 +98,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userStorageAccountId", required=true)
     private Output<String> userStorageAccountId;
 
+    /**
+     * @return The fully qualified arm id of the storage account associated with this workspace.
+     * 
+     */
     public Output<String> userStorageAccountId() {
         return this.userStorageAccountId;
     }
@@ -89,6 +113,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
     private @Nullable Output<String> workspaceName;
 
+    /**
+     * @return The name of the machine learning workspace.
+     * 
+     */
     public Optional<Output<String>> workspaceName() {
         return Optional.ofNullable(this.workspaceName);
     }
@@ -123,65 +151,149 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVaultIdentifierId The key vault identifier used for encrypted workspaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultIdentifierId(@Nullable Output<String> keyVaultIdentifierId) {
             $.keyVaultIdentifierId = keyVaultIdentifierId;
             return this;
         }
 
+        /**
+         * @param keyVaultIdentifierId The key vault identifier used for encrypted workspaces.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultIdentifierId(String keyVaultIdentifierId) {
             return keyVaultIdentifierId(Output.of(keyVaultIdentifierId));
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param ownerEmail The email id of the owner for this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerEmail(Output<String> ownerEmail) {
             $.ownerEmail = ownerEmail;
             return this;
         }
 
+        /**
+         * @param ownerEmail The email id of the owner for this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ownerEmail(String ownerEmail) {
             return ownerEmail(Output.of(ownerEmail));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the machine learning workspace belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the machine learning workspace belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param userStorageAccountId The fully qualified arm id of the storage account associated with this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userStorageAccountId(Output<String> userStorageAccountId) {
             $.userStorageAccountId = userStorageAccountId;
             return this;
         }
 
+        /**
+         * @param userStorageAccountId The fully qualified arm id of the storage account associated with this workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userStorageAccountId(String userStorageAccountId) {
             return userStorageAccountId(Output.of(userStorageAccountId));
         }
 
+        /**
+         * @param workspaceName The name of the machine learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the machine learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

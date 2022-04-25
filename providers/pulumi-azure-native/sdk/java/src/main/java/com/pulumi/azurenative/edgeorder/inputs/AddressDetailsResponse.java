@@ -23,6 +23,10 @@ public final class AddressDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="forwardAddress", required=true)
     private AddressPropertiesResponse forwardAddress;
 
+    /**
+     * @return Customer address and contact details. It should be address resource
+     * 
+     */
     public AddressPropertiesResponse forwardAddress() {
         return this.forwardAddress;
     }
@@ -34,6 +38,10 @@ public final class AddressDetailsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="returnAddress", required=true)
     private AddressPropertiesResponse returnAddress;
 
+    /**
+     * @return Return shipping address
+     * 
+     */
     public AddressPropertiesResponse returnAddress() {
         return this.returnAddress;
     }
@@ -63,11 +71,23 @@ public final class AddressDetailsResponse extends com.pulumi.resources.InvokeArg
             $ = new AddressDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forwardAddress Customer address and contact details. It should be address resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder forwardAddress(AddressPropertiesResponse forwardAddress) {
             $.forwardAddress = forwardAddress;
             return this;
         }
 
+        /**
+         * @param returnAddress Return shipping address
+         * 
+         * @return builder
+         * 
+         */
         public Builder returnAddress(AddressPropertiesResponse returnAddress) {
             $.returnAddress = returnAddress;
             return this;

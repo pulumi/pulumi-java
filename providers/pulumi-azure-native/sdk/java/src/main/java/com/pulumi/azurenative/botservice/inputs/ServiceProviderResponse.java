@@ -25,6 +25,10 @@ public final class ServiceProviderResponse extends com.pulumi.resources.InvokeAr
     @Import(name="properties")
     private @Nullable ServiceProviderPropertiesResponse properties;
 
+    /**
+     * @return The Properties of a Service Provider Object
+     * 
+     */
     public Optional<ServiceProviderPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -53,6 +57,12 @@ public final class ServiceProviderResponse extends com.pulumi.resources.InvokeAr
             $ = new ServiceProviderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param properties The Properties of a Service Provider Object
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable ServiceProviderPropertiesResponse properties) {
             $.properties = properties;
             return this;

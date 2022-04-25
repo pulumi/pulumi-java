@@ -26,6 +26,10 @@ public final class RecoveryPlanProtectedItemArgs extends com.pulumi.resources.Re
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return The ARM Id of the recovery plan protected item.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class RecoveryPlanProtectedItemArgs extends com.pulumi.resources.Re
     @Import(name="virtualMachineId")
     private @Nullable Output<String> virtualMachineId;
 
+    /**
+     * @return The virtual machine Id.
+     * 
+     */
     public Optional<Output<String>> virtualMachineId() {
         return Optional.ofNullable(this.virtualMachineId);
     }
@@ -66,20 +74,44 @@ public final class RecoveryPlanProtectedItemArgs extends com.pulumi.resources.Re
             $ = new RecoveryPlanProtectedItemArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ARM Id of the recovery plan protected item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id The ARM Id of the recovery plan protected item.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param virtualMachineId The virtual machine Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineId(@Nullable Output<String> virtualMachineId) {
             $.virtualMachineId = virtualMachineId;
             return this;
         }
 
+        /**
+         * @param virtualMachineId The virtual machine Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineId(String virtualMachineId) {
             return virtualMachineId(Output.of(virtualMachineId));
         }

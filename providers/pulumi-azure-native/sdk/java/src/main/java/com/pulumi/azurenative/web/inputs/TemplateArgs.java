@@ -32,6 +32,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containers")
     private @Nullable Output<List<ContainerArgs>> containers;
 
+    /**
+     * @return List of container definitions for the Container App.
+     * 
+     */
     public Optional<Output<List<ContainerArgs>>> containers() {
         return Optional.ofNullable(this.containers);
     }
@@ -43,6 +47,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dapr")
     private @Nullable Output<DaprArgs> dapr;
 
+    /**
+     * @return Dapr configuration for the Container App.
+     * 
+     */
     public Optional<Output<DaprArgs>> dapr() {
         return Optional.ofNullable(this.dapr);
     }
@@ -54,6 +62,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="revisionSuffix")
     private @Nullable Output<String> revisionSuffix;
 
+    /**
+     * @return User friendly suffix that is appended to the revision name
+     * 
+     */
     public Optional<Output<String>> revisionSuffix() {
         return Optional.ofNullable(this.revisionSuffix);
     }
@@ -65,6 +77,10 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scale")
     private @Nullable Output<ScaleArgs> scale;
 
+    /**
+     * @return Scaling properties for the Container App.
+     * 
+     */
     public Optional<Output<ScaleArgs>> scale() {
         return Optional.ofNullable(this.scale);
     }
@@ -96,42 +112,96 @@ public final class TemplateArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TemplateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containers List of container definitions for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(@Nullable Output<List<ContainerArgs>> containers) {
             $.containers = containers;
             return this;
         }
 
+        /**
+         * @param containers List of container definitions for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(List<ContainerArgs> containers) {
             return containers(Output.of(containers));
         }
 
+        /**
+         * @param containers List of container definitions for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containers(ContainerArgs... containers) {
             return containers(List.of(containers));
         }
 
+        /**
+         * @param dapr Dapr configuration for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dapr(@Nullable Output<DaprArgs> dapr) {
             $.dapr = dapr;
             return this;
         }
 
+        /**
+         * @param dapr Dapr configuration for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dapr(DaprArgs dapr) {
             return dapr(Output.of(dapr));
         }
 
+        /**
+         * @param revisionSuffix User friendly suffix that is appended to the revision name
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionSuffix(@Nullable Output<String> revisionSuffix) {
             $.revisionSuffix = revisionSuffix;
             return this;
         }
 
+        /**
+         * @param revisionSuffix User friendly suffix that is appended to the revision name
+         * 
+         * @return builder
+         * 
+         */
         public Builder revisionSuffix(String revisionSuffix) {
             return revisionSuffix(Output.of(revisionSuffix));
         }
 
+        /**
+         * @param scale Scaling properties for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(@Nullable Output<ScaleArgs> scale) {
             $.scale = scale;
             return this;
         }
 
+        /**
+         * @param scale Scaling properties for the Container App.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scale(ScaleArgs scale) {
             return scale(Output.of(scale));
         }

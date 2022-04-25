@@ -19,6 +19,10 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="invitationName", required=true)
     private String invitationName;
 
+    /**
+     * @return The name of the invitation.
+     * 
+     */
     public String invitationName() {
         return this.invitationName;
     }
@@ -41,6 +49,10 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="shareName", required=true)
     private String shareName;
 
+    /**
+     * @return The name of the share.
+     * 
+     */
     public String shareName() {
         return this.shareName;
     }
@@ -83,21 +99,45 @@ public final class GetInvitationArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetInvitationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param invitationName The name of the invitation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder invitationName(String invitationName) {
             $.invitationName = invitationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             $.shareName = shareName;
             return this;

@@ -11,27 +11,27 @@ import java.util.Objects;
 public final class KeyVaultSigningKeyParametersResponse {
     private final String odataType;
     /**
-     * Resource group of the user&#39;s Key Vault containing the secret
+     * @return Resource group of the user&#39;s Key Vault containing the secret
      * 
      */
     private final String resourceGroupName;
     /**
-     * The name of secret in Key Vault.
+     * @return The name of secret in Key Vault.
      * 
      */
     private final String secretName;
     /**
-     * The version(GUID) of secret in Key Vault.
+     * @return The version(GUID) of secret in Key Vault.
      * 
      */
     private final String secretVersion;
     /**
-     * Subscription Id of the user&#39;s Key Vault containing the secret
+     * @return Subscription Id of the user&#39;s Key Vault containing the secret
      * 
      */
     private final String subscriptionId;
     /**
-     * The name of the user&#39;s Key Vault containing the secret
+     * @return The name of the user&#39;s Key Vault containing the secret
      * 
      */
     private final String vaultName;
@@ -56,37 +56,37 @@ public final class KeyVaultSigningKeyParametersResponse {
         return this.odataType;
     }
     /**
-     * Resource group of the user&#39;s Key Vault containing the secret
+     * @return Resource group of the user&#39;s Key Vault containing the secret
      * 
-    */
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
     /**
-     * The name of secret in Key Vault.
+     * @return The name of secret in Key Vault.
      * 
-    */
+     */
     public String secretName() {
         return this.secretName;
     }
     /**
-     * The version(GUID) of secret in Key Vault.
+     * @return The version(GUID) of secret in Key Vault.
      * 
-    */
+     */
     public String secretVersion() {
         return this.secretVersion;
     }
     /**
-     * Subscription Id of the user&#39;s Key Vault containing the secret
+     * @return Subscription Id of the user&#39;s Key Vault containing the secret
      * 
-    */
+     */
     public String subscriptionId() {
         return this.subscriptionId;
     }
     /**
-     * The name of the user&#39;s Key Vault containing the secret
+     * @return The name of the user&#39;s Key Vault containing the secret
      * 
-    */
+     */
     public String vaultName() {
         return this.vaultName;
     }

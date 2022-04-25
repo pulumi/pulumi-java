@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse {
     /**
-     * List of DNS servers IP addresses
+     * @return List of DNS servers IP addresses
      * 
      */
     private final @Nullable List<String> dnsServers;
@@ -23,9 +23,9 @@ public final class VirtualMachineScaleSetNetworkConfigurationDnsSettingsResponse
     }
 
     /**
-     * List of DNS servers IP addresses
+     * @return List of DNS servers IP addresses
      * 
-    */
+     */
     public List<String> dnsServers() {
         return this.dnsServers == null ? List.of() : this.dnsServers;
     }

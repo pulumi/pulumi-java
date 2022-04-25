@@ -16,22 +16,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BgpSettingsResponse {
     /**
-     * The BGP speaker&#39;s ASN.
+     * @return The BGP speaker&#39;s ASN.
      * 
      */
     private final @Nullable Double asn;
     /**
-     * The BGP peering address and BGP identifier of this BGP speaker.
+     * @return The BGP peering address and BGP identifier of this BGP speaker.
      * 
      */
     private final @Nullable String bgpPeeringAddress;
     /**
-     * BGP peering address with IP configuration ID for virtual network gateway.
+     * @return BGP peering address with IP configuration ID for virtual network gateway.
      * 
      */
     private final @Nullable List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses;
     /**
-     * The weight added to routes learned from this BGP speaker.
+     * @return The weight added to routes learned from this BGP speaker.
      * 
      */
     private final @Nullable Integer peerWeight;
@@ -49,30 +49,30 @@ public final class BgpSettingsResponse {
     }
 
     /**
-     * The BGP speaker&#39;s ASN.
+     * @return The BGP speaker&#39;s ASN.
      * 
-    */
+     */
     public Optional<Double> asn() {
         return Optional.ofNullable(this.asn);
     }
     /**
-     * The BGP peering address and BGP identifier of this BGP speaker.
+     * @return The BGP peering address and BGP identifier of this BGP speaker.
      * 
-    */
+     */
     public Optional<String> bgpPeeringAddress() {
         return Optional.ofNullable(this.bgpPeeringAddress);
     }
     /**
-     * BGP peering address with IP configuration ID for virtual network gateway.
+     * @return BGP peering address with IP configuration ID for virtual network gateway.
      * 
-    */
+     */
     public List<IPConfigurationBgpPeeringAddressResponse> bgpPeeringAddresses() {
         return this.bgpPeeringAddresses == null ? List.of() : this.bgpPeeringAddresses;
     }
     /**
-     * The weight added to routes learned from this BGP speaker.
+     * @return The weight added to routes learned from this BGP speaker.
      * 
-    */
+     */
     public Optional<Integer> peerWeight() {
         return Optional.ofNullable(this.peerWeight);
     }

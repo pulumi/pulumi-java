@@ -15,77 +15,77 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetOrchestratorInstanceServiceDetailsResult {
     /**
-     * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     * @return K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
     private final @Nullable String apiServerEndpoint;
     /**
-     * RootCA certificate of kubernetes cluster base64 encoded
+     * @return RootCA certificate of kubernetes cluster base64 encoded
      * 
      */
     private final @Nullable String clusterRootCA;
     /**
-     * Properties of the controller.
+     * @return Properties of the controller.
      * 
      */
     private final ControllerDetailsResponse controllerDetails;
     /**
-     * An identifier that represents the resource.
+     * @return An identifier that represents the resource.
      * 
      */
     private final String id;
     /**
-     * The identity of the orchestrator
+     * @return The identity of the orchestrator
      * 
      */
     private final @Nullable OrchestratorIdentityResponse identity;
     /**
-     * The kind of workbook. Choices are user and shared.
+     * @return The kind of workbook. Choices are user and shared.
      * 
      */
     private final String kind;
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * AAD ID used with apiserver
+     * @return AAD ID used with apiserver
      * 
      */
     private final @Nullable String orchestratorAppId;
     /**
-     * TenantID of server App ID
+     * @return TenantID of server App ID
      * 
      */
     private final @Nullable String orchestratorTenantId;
     /**
-     * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     * @return private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
      */
     private final @Nullable String privateLinkResourceId;
     /**
-     * The current state of orchestratorInstance resource.
+     * @return The current state of orchestratorInstance resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource guid.
+     * @return Resource guid.
      * 
      */
     private final String resourceGuid;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of resource.
+     * @return The type of resource.
      * 
      */
     private final String type;
@@ -125,107 +125,107 @@ public final class GetOrchestratorInstanceServiceDetailsResult {
     }
 
     /**
-     * K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     * @return K8s APIServer url. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
-    */
+     */
     public Optional<String> apiServerEndpoint() {
         return Optional.ofNullable(this.apiServerEndpoint);
     }
     /**
-     * RootCA certificate of kubernetes cluster base64 encoded
+     * @return RootCA certificate of kubernetes cluster base64 encoded
      * 
-    */
+     */
     public Optional<String> clusterRootCA() {
         return Optional.ofNullable(this.clusterRootCA);
     }
     /**
-     * Properties of the controller.
+     * @return Properties of the controller.
      * 
-    */
+     */
     public ControllerDetailsResponse controllerDetails() {
         return this.controllerDetails;
     }
     /**
-     * An identifier that represents the resource.
+     * @return An identifier that represents the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the orchestrator
+     * @return The identity of the orchestrator
      * 
-    */
+     */
     public Optional<OrchestratorIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The kind of workbook. Choices are user and shared.
+     * @return The kind of workbook. Choices are user and shared.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * AAD ID used with apiserver
+     * @return AAD ID used with apiserver
      * 
-    */
+     */
     public Optional<String> orchestratorAppId() {
         return Optional.ofNullable(this.orchestratorAppId);
     }
     /**
-     * TenantID of server App ID
+     * @return TenantID of server App ID
      * 
-    */
+     */
     public Optional<String> orchestratorTenantId() {
         return Optional.ofNullable(this.orchestratorTenantId);
     }
     /**
-     * private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
+     * @return private link arm resource id. Either one of apiServerEndpoint or privateLinkResourceId can be specified
      * 
-    */
+     */
     public Optional<String> privateLinkResourceId() {
         return Optional.ofNullable(this.privateLinkResourceId);
     }
     /**
-     * The current state of orchestratorInstance resource.
+     * @return The current state of orchestratorInstance resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource guid.
+     * @return Resource guid.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of resource.
+     * @return The type of resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

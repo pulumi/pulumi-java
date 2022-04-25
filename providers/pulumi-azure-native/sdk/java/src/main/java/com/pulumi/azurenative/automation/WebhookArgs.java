@@ -25,6 +25,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="automationAccountName", required=true)
     private Output<String> automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public Output<String> automationAccountName() {
         return this.automationAccountName;
     }
@@ -36,6 +40,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="expiryTime")
     private @Nullable Output<String> expiryTime;
 
+    /**
+     * @return Gets or sets the expiry time.
+     * 
+     */
     public Optional<Output<String>> expiryTime() {
         return Optional.ofNullable(this.expiryTime);
     }
@@ -47,6 +55,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isEnabled")
     private @Nullable Output<Boolean> isEnabled;
 
+    /**
+     * @return Gets or sets the value of the enabled flag of webhook.
+     * 
+     */
     public Optional<Output<Boolean>> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
@@ -58,6 +70,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Gets or sets the name of the webhook.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -69,6 +85,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<Map<String,String>> parameters;
 
+    /**
+     * @return Gets or sets the parameters of the job.
+     * 
+     */
     public Optional<Output<Map<String,String>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -80,6 +100,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -91,6 +115,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runOn")
     private @Nullable Output<String> runOn;
 
+    /**
+     * @return Gets or sets the name of the hybrid worker group the webhook job will run on.
+     * 
+     */
     public Optional<Output<String>> runOn() {
         return Optional.ofNullable(this.runOn);
     }
@@ -102,6 +130,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runbook")
     private @Nullable Output<RunbookAssociationPropertyArgs> runbook;
 
+    /**
+     * @return Gets or sets the runbook.
+     * 
+     */
     public Optional<Output<RunbookAssociationPropertyArgs>> runbook() {
         return Optional.ofNullable(this.runbook);
     }
@@ -113,6 +145,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri")
     private @Nullable Output<String> uri;
 
+    /**
+     * @return Gets or sets the uri.
+     * 
+     */
     public Optional<Output<String>> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -124,6 +160,10 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="webhookName")
     private @Nullable Output<String> webhookName;
 
+    /**
+     * @return The webhook name.
+     * 
+     */
     public Optional<Output<String>> webhookName() {
         return Optional.ofNullable(this.webhookName);
     }
@@ -161,92 +201,212 @@ public final class WebhookArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WebhookArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(Output<String> automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             return automationAccountName(Output.of(automationAccountName));
         }
 
+        /**
+         * @param expiryTime Gets or sets the expiry time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTime(@Nullable Output<String> expiryTime) {
             $.expiryTime = expiryTime;
             return this;
         }
 
+        /**
+         * @param expiryTime Gets or sets the expiry time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryTime(String expiryTime) {
             return expiryTime(Output.of(expiryTime));
         }
 
+        /**
+         * @param isEnabled Gets or sets the value of the enabled flag of webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(@Nullable Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Gets or sets the value of the enabled flag of webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param name Gets or sets the name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Gets or sets the name of the webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters Gets or sets the parameters of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,String>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Gets or sets the parameters of the job.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,String> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param runOn Gets or sets the name of the hybrid worker group the webhook job will run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOn(@Nullable Output<String> runOn) {
             $.runOn = runOn;
             return this;
         }
 
+        /**
+         * @param runOn Gets or sets the name of the hybrid worker group the webhook job will run on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runOn(String runOn) {
             return runOn(Output.of(runOn));
         }
 
+        /**
+         * @param runbook Gets or sets the runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbook(@Nullable Output<RunbookAssociationPropertyArgs> runbook) {
             $.runbook = runbook;
             return this;
         }
 
+        /**
+         * @param runbook Gets or sets the runbook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runbook(RunbookAssociationPropertyArgs runbook) {
             return runbook(Output.of(runbook));
         }
 
+        /**
+         * @param uri Gets or sets the uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri Gets or sets the uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }
 
+        /**
+         * @param webhookName The webhook name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookName(@Nullable Output<String> webhookName) {
             $.webhookName = webhookName;
             return this;
         }
 
+        /**
+         * @param webhookName The webhook name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webhookName(String webhookName) {
             return webhookName(Output.of(webhookName));
         }

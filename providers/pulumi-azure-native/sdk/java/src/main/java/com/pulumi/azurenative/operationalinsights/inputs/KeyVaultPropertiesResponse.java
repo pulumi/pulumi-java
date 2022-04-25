@@ -26,6 +26,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyName")
     private @Nullable String keyName;
 
+    /**
+     * @return The name of the key associated with the Log Analytics cluster.
+     * 
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -37,6 +41,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyRsaSize")
     private @Nullable Integer keyRsaSize;
 
+    /**
+     * @return Selected key minimum required size.
+     * 
+     */
     public Optional<Integer> keyRsaSize() {
         return Optional.ofNullable(this.keyRsaSize);
     }
@@ -48,6 +56,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVaultUri")
     private @Nullable String keyVaultUri;
 
+    /**
+     * @return The Key Vault uri which holds they key associated with the Log Analytics cluster.
+     * 
+     */
     public Optional<String> keyVaultUri() {
         return Optional.ofNullable(this.keyVaultUri);
     }
@@ -59,6 +71,10 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="keyVersion")
     private @Nullable String keyVersion;
 
+    /**
+     * @return The version of the key associated with the Log Analytics cluster.
+     * 
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
@@ -90,21 +106,45 @@ public final class KeyVaultPropertiesResponse extends com.pulumi.resources.Invok
             $ = new KeyVaultPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyName The name of the key associated with the Log Analytics cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable String keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyRsaSize Selected key minimum required size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyRsaSize(@Nullable Integer keyRsaSize) {
             $.keyRsaSize = keyRsaSize;
             return this;
         }
 
+        /**
+         * @param keyVaultUri The Key Vault uri which holds they key associated with the Log Analytics cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUri(@Nullable String keyVaultUri) {
             $.keyVaultUri = keyVaultUri;
             return this;
         }
 
+        /**
+         * @param keyVersion The version of the key associated with the Log Analytics cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVersion(@Nullable String keyVersion) {
             $.keyVersion = keyVersion;
             return this;

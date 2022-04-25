@@ -25,6 +25,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the Cosmos DB Cassandra table column
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the Cosmos DB Cassandra table column
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,11 +73,23 @@ public final class ColumnResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the Cosmos DB Cassandra table column
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type Type of the Cosmos DB Cassandra table column
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

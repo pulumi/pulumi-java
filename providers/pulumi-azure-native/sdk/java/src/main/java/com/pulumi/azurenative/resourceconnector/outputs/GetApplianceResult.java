@@ -16,67 +16,67 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetApplianceResult {
     /**
-     * Represents a supported Fabric/Infra. (AKSEdge etc...).
+     * @return Represents a supported Fabric/Infra. (AKSEdge etc...).
      * 
      */
     private final @Nullable String distro;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * Contains infrastructure information about the Appliance
+     * @return Contains infrastructure information about the Appliance
      * 
      */
     private final @Nullable AppliancePropertiesResponseInfrastructureConfig infrastructureConfig;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
      */
     private final String provisioningState;
     /**
-     * Certificates pair used to download MSI certificate from HIS
+     * @return Certificates pair used to download MSI certificate from HIS
      * 
      */
     private final @Nullable String publicKey;
     /**
-     * Appliance’s health and state of connection to on-prem
+     * @return Appliance’s health and state of connection to on-prem
      * 
      */
     private final String status;
     /**
-     * Metadata pertaining to creation and last modification of the resource
+     * @return Metadata pertaining to creation and last modification of the resource
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
     /**
-     * Version of the Appliance
+     * @return Version of the Appliance
      * 
      */
     private final String version;
@@ -112,93 +112,93 @@ public final class GetApplianceResult {
     }
 
     /**
-     * Represents a supported Fabric/Infra. (AKSEdge etc...).
+     * @return Represents a supported Fabric/Infra. (AKSEdge etc...).
      * 
-    */
+     */
     public Optional<String> distro() {
         return Optional.ofNullable(this.distro);
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Contains infrastructure information about the Appliance
+     * @return Contains infrastructure information about the Appliance
      * 
-    */
+     */
     public Optional<AppliancePropertiesResponseInfrastructureConfig> infrastructureConfig() {
         return Optional.ofNullable(this.infrastructureConfig);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current deployment or provisioning state, which only appears in the response.
+     * @return The current deployment or provisioning state, which only appears in the response.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Certificates pair used to download MSI certificate from HIS
+     * @return Certificates pair used to download MSI certificate from HIS
      * 
-    */
+     */
     public Optional<String> publicKey() {
         return Optional.ofNullable(this.publicKey);
     }
     /**
-     * Appliance’s health and state of connection to on-prem
+     * @return Appliance’s health and state of connection to on-prem
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource
+     * @return Metadata pertaining to creation and last modification of the resource
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Version of the Appliance
+     * @return Version of the Appliance
      * 
-    */
+     */
     public String version() {
         return this.version;
     }

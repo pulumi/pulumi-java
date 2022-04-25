@@ -25,6 +25,10 @@ public final class BackupVaultResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the BackupVault resource
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -36,6 +40,10 @@ public final class BackupVaultResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="storageSettings", required=true)
     private List<StorageSettingResponse> storageSettings;
 
+    /**
+     * @return Storage Settings
+     * 
+     */
     public List<StorageSettingResponse> storageSettings() {
         return this.storageSettings;
     }
@@ -65,16 +73,34 @@ public final class BackupVaultResponse extends com.pulumi.resources.InvokeArgs {
             $ = new BackupVaultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the BackupVault resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param storageSettings Storage Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSettings(List<StorageSettingResponse> storageSettings) {
             $.storageSettings = storageSettings;
             return this;
         }
 
+        /**
+         * @param storageSettings Storage Settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageSettings(StorageSettingResponse... storageSettings) {
             return storageSettings(List.of(storageSettings));
         }

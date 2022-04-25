@@ -21,6 +21,10 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="networkInterfaceName", required=true)
     private String networkInterfaceName;
 
+    /**
+     * @return The name of the network interface.
+     * 
+     */
     public String networkInterfaceName() {
         return this.networkInterfaceName;
     }
@@ -43,6 +51,10 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetNetworkInterfaceArgs extends com.pulumi.resources.InvokeAr
             $ = new GetNetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(String networkInterfaceName) {
             $.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

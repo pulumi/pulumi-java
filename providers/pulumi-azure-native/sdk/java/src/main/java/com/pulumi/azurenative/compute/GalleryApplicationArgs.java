@@ -24,6 +24,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of this gallery Application Definition resource. This property is updatable.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="endOfLifeDate")
     private @Nullable Output<String> endOfLifeDate;
 
+    /**
+     * @return The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
+     * 
+     */
     public Optional<Output<String>> endOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
@@ -46,6 +54,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="eula")
     private @Nullable Output<String> eula;
 
+    /**
+     * @return The Eula agreement for the gallery Application Definition.
+     * 
+     */
     public Optional<Output<String>> eula() {
         return Optional.ofNullable(this.eula);
     }
@@ -57,6 +69,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="galleryApplicationName")
     private @Nullable Output<String> galleryApplicationName;
 
+    /**
+     * @return The name of the gallery Application Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.
+     * 
+     */
     public Optional<Output<String>> galleryApplicationName() {
         return Optional.ofNullable(this.galleryApplicationName);
     }
@@ -68,6 +84,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="galleryName", required=true)
     private Output<String> galleryName;
 
+    /**
+     * @return The name of the Shared Application Gallery in which the Application Definition is to be created.
+     * 
+     */
     public Output<String> galleryName() {
         return this.galleryName;
     }
@@ -79,6 +99,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -90,6 +114,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="privacyStatementUri")
     private @Nullable Output<String> privacyStatementUri;
 
+    /**
+     * @return The privacy statement uri.
+     * 
+     */
     public Optional<Output<String>> privacyStatementUri() {
         return Optional.ofNullable(this.privacyStatementUri);
     }
@@ -101,6 +129,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="releaseNoteUri")
     private @Nullable Output<String> releaseNoteUri;
 
+    /**
+     * @return The release note uri.
+     * 
+     */
     public Optional<Output<String>> releaseNoteUri() {
         return Optional.ofNullable(this.releaseNoteUri);
     }
@@ -112,6 +144,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -123,6 +159,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="supportedOSType", required=true)
     private Output<OperatingSystemTypes> supportedOSType;
 
+    /**
+     * @return This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+     * 
+     */
     public Output<OperatingSystemTypes> supportedOSType() {
         return this.supportedOSType;
     }
@@ -134,6 +174,10 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -172,101 +216,233 @@ public final class GalleryApplicationArgs extends com.pulumi.resources.ResourceA
             $ = new GalleryApplicationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of this gallery Application Definition resource. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of this gallery Application Definition resource. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param endOfLifeDate The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endOfLifeDate(@Nullable Output<String> endOfLifeDate) {
             $.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
+        /**
+         * @param endOfLifeDate The end of life date of the gallery Application Definition. This property can be used for decommissioning purposes. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endOfLifeDate(String endOfLifeDate) {
             return endOfLifeDate(Output.of(endOfLifeDate));
         }
 
+        /**
+         * @param eula The Eula agreement for the gallery Application Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eula(@Nullable Output<String> eula) {
             $.eula = eula;
             return this;
         }
 
+        /**
+         * @param eula The Eula agreement for the gallery Application Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eula(String eula) {
             return eula(Output.of(eula));
         }
 
+        /**
+         * @param galleryApplicationName The name of the gallery Application Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryApplicationName(@Nullable Output<String> galleryApplicationName) {
             $.galleryApplicationName = galleryApplicationName;
             return this;
         }
 
+        /**
+         * @param galleryApplicationName The name of the gallery Application Definition to be created or updated. The allowed characters are alphabets and numbers with dots, dashes, and periods allowed in the middle. The maximum length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryApplicationName(String galleryApplicationName) {
             return galleryApplicationName(Output.of(galleryApplicationName));
         }
 
+        /**
+         * @param galleryName The name of the Shared Application Gallery in which the Application Definition is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(Output<String> galleryName) {
             $.galleryName = galleryName;
             return this;
         }
 
+        /**
+         * @param galleryName The name of the Shared Application Gallery in which the Application Definition is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(String galleryName) {
             return galleryName(Output.of(galleryName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param privacyStatementUri The privacy statement uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacyStatementUri(@Nullable Output<String> privacyStatementUri) {
             $.privacyStatementUri = privacyStatementUri;
             return this;
         }
 
+        /**
+         * @param privacyStatementUri The privacy statement uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privacyStatementUri(String privacyStatementUri) {
             return privacyStatementUri(Output.of(privacyStatementUri));
         }
 
+        /**
+         * @param releaseNoteUri The release note uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseNoteUri(@Nullable Output<String> releaseNoteUri) {
             $.releaseNoteUri = releaseNoteUri;
             return this;
         }
 
+        /**
+         * @param releaseNoteUri The release note uri.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseNoteUri(String releaseNoteUri) {
             return releaseNoteUri(Output.of(releaseNoteUri));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param supportedOSType This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedOSType(Output<OperatingSystemTypes> supportedOSType) {
             $.supportedOSType = supportedOSType;
             return this;
         }
 
+        /**
+         * @param supportedOSType This property allows you to specify the supported type of the OS that application is built for. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **Windows** &lt;br&gt;&lt;br&gt; **Linux**
+         * 
+         * @return builder
+         * 
+         */
         public Builder supportedOSType(OperatingSystemTypes supportedOSType) {
             return supportedOSType(Output.of(supportedOSType));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

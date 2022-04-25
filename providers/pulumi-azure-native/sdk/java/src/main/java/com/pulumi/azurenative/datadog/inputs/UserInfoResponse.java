@@ -25,6 +25,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="emailAddress")
     private @Nullable String emailAddress;
 
+    /**
+     * @return Email of the user used by Datadog for contacting them if needed
+     * 
+     */
     public Optional<String> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -36,6 +40,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the user
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -47,6 +55,10 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="phoneNumber")
     private @Nullable String phoneNumber;
 
+    /**
+     * @return Phone number of the user used by Datadog for contacting them if needed
+     * 
+     */
     public Optional<String> phoneNumber() {
         return Optional.ofNullable(this.phoneNumber);
     }
@@ -77,16 +89,34 @@ public final class UserInfoResponse extends com.pulumi.resources.InvokeArgs {
             $ = new UserInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress Email of the user used by Datadog for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable String emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param name Name of the user
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param phoneNumber Phone number of the user used by Datadog for contacting them if needed
+         * 
+         * @return builder
+         * 
+         */
         public Builder phoneNumber(@Nullable String phoneNumber) {
             $.phoneNumber = phoneNumber;
             return this;

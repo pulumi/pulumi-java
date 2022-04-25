@@ -22,6 +22,10 @@ public final class TagByProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="productId", required=true)
     private Output<String> productId;
 
+    /**
+     * @return Product identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Output<String> productId() {
         return this.productId;
     }
@@ -33,6 +37,10 @@ public final class TagByProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class TagByProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -55,6 +67,10 @@ public final class TagByProductArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tagId")
     private @Nullable Output<String> tagId;
 
+    /**
+     * @return Tag identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> tagId() {
         return Optional.ofNullable(this.tagId);
     }
@@ -86,38 +102,86 @@ public final class TagByProductArgs extends com.pulumi.resources.ResourceArgs {
             $ = new TagByProductArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param productId Product identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(Output<String> productId) {
             $.productId = productId;
             return this;
         }
 
+        /**
+         * @param productId Product identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder productId(String productId) {
             return productId(Output.of(productId));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param tagId Tag identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagId(@Nullable Output<String> tagId) {
             $.tagId = tagId;
             return this;
         }
 
+        /**
+         * @param tagId Tag identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagId(String tagId) {
             return tagId(Output.of(tagId));
         }

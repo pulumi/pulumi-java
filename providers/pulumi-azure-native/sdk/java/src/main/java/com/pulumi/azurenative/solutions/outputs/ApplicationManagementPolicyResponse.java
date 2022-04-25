@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationManagementPolicyResponse {
     /**
-     * The managed application management mode.
+     * @return The managed application management mode.
      * 
      */
     private final @Nullable String mode;
@@ -23,9 +23,9 @@ public final class ApplicationManagementPolicyResponse {
     }
 
     /**
-     * The managed application management mode.
+     * @return The managed application management mode.
      * 
-    */
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }

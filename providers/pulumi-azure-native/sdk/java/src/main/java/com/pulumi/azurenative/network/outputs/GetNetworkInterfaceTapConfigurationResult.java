@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNetworkInterfaceTapConfigurationResult {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the network interface tap configuration resource.
+     * @return The provisioning state of the network interface tap configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Sub Resource type.
+     * @return Sub Resource type.
      * 
      */
     private final String type;
     /**
-     * The reference to the Virtual Network Tap resource.
+     * @return The reference to the Virtual Network Tap resource.
      * 
      */
     private final @Nullable VirtualNetworkTapResponse virtualNetworkTap;
@@ -60,44 +60,44 @@ public final class GetNetworkInterfaceTapConfigurationResult {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the network interface tap configuration resource.
+     * @return The provisioning state of the network interface tap configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Sub Resource type.
+     * @return Sub Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The reference to the Virtual Network Tap resource.
+     * @return The reference to the Virtual Network Tap resource.
      * 
-    */
+     */
     public Optional<VirtualNetworkTapResponse> virtualNetworkTap() {
         return Optional.ofNullable(this.virtualNetworkTap);
     }

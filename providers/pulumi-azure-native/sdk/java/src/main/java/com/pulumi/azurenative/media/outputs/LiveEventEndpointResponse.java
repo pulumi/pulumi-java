@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LiveEventEndpointResponse {
     /**
-     * The endpoint protocol.
+     * @return The endpoint protocol.
      * 
      */
     private final @Nullable String protocol;
     /**
-     * The endpoint URL.
+     * @return The endpoint URL.
      * 
      */
     private final @Nullable String url;
@@ -31,16 +31,16 @@ public final class LiveEventEndpointResponse {
     }
 
     /**
-     * The endpoint protocol.
+     * @return The endpoint protocol.
      * 
-    */
+     */
     public Optional<String> protocol() {
         return Optional.ofNullable(this.protocol);
     }
     /**
-     * The endpoint URL.
+     * @return The endpoint URL.
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

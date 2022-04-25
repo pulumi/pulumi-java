@@ -14,37 +14,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebAppSwiftVirtualNetworkConnectionSlotResult {
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * The Virtual Network subnet&#39;s resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
+     * @return The Virtual Network subnet&#39;s resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
      */
     private final @Nullable String subnetResourceId;
     /**
-     * A flag that specifies if the scale unit this Web App is on supports Swift integration.
+     * @return A flag that specifies if the scale unit this Web App is on supports Swift integration.
      * 
      */
     private final @Nullable Boolean swiftSupported;
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -68,51 +68,51 @@ public final class GetWebAppSwiftVirtualNetworkConnectionSlotResult {
     }
 
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The Virtual Network subnet&#39;s resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
+     * @return The Virtual Network subnet&#39;s resource ID. This is the subnet that this Web App will join. This subnet must have a delegation to Microsoft.Web/serverFarms defined first.
      * 
-    */
+     */
     public Optional<String> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
     /**
-     * A flag that specifies if the scale unit this Web App is on supports Swift integration.
+     * @return A flag that specifies if the scale unit this Web App is on supports Swift integration.
      * 
-    */
+     */
     public Optional<Boolean> swiftSupported() {
         return Optional.ofNullable(this.swiftSupported);
     }
     /**
-     * The system metadata relating to this resource.
+     * @return The system metadata relating to this resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

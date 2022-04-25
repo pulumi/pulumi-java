@@ -23,6 +23,10 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
     @Import(name="fabricName")
     private @Nullable Output<String> fabricName;
 
+    /**
+     * @return Name of the ASR fabric.
+     * 
+     */
     public Optional<Output<String>> fabricName() {
         return Optional.ofNullable(this.fabricName);
     }
@@ -34,6 +38,10 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
     private @Nullable Output<FabricCreationInputPropertiesArgs> properties;
 
+    /**
+     * @return Fabric creation input.
+     * 
+     */
     public Optional<Output<FabricCreationInputPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -87,38 +103,86 @@ public final class ReplicationFabricArgs extends com.pulumi.resources.ResourceAr
             $ = new ReplicationFabricArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Name of the ASR fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(@Nullable Output<String> fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param fabricName Name of the ASR fabric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             return fabricName(Output.of(fabricName));
         }
 
+        /**
+         * @param properties Fabric creation input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<FabricCreationInputPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Fabric creation input.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(FabricCreationInputPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

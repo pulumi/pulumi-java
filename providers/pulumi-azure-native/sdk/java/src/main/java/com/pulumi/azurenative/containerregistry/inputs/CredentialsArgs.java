@@ -31,6 +31,12 @@ public final class CredentialsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customRegistries")
     private @Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries;
 
+    /**
+     * @return Describes the credential parameters for accessing other custom registries. The key
+     * for the dictionary item will be the registry login server (myregistry.azurecr.io) and
+     * the value of the item will be the registry credentials for accessing the registry.
+     * 
+     */
     public Optional<Output<Map<String,CustomRegistryCredentialsArgs>>> customRegistries() {
         return Optional.ofNullable(this.customRegistries);
     }
@@ -42,6 +48,10 @@ public final class CredentialsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRegistry")
     private @Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry;
 
+    /**
+     * @return Describes the credential parameters for accessing the source registry.
+     * 
+     */
     public Optional<Output<SourceRegistryCredentialsArgs>> sourceRegistry() {
         return Optional.ofNullable(this.sourceRegistry);
     }
@@ -71,20 +81,48 @@ public final class CredentialsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CredentialsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customRegistries Describes the credential parameters for accessing other custom registries. The key
+         * for the dictionary item will be the registry login server (myregistry.azurecr.io) and
+         * the value of the item will be the registry credentials for accessing the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRegistries(@Nullable Output<Map<String,CustomRegistryCredentialsArgs>> customRegistries) {
             $.customRegistries = customRegistries;
             return this;
         }
 
+        /**
+         * @param customRegistries Describes the credential parameters for accessing other custom registries. The key
+         * for the dictionary item will be the registry login server (myregistry.azurecr.io) and
+         * the value of the item will be the registry credentials for accessing the registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customRegistries(Map<String,CustomRegistryCredentialsArgs> customRegistries) {
             return customRegistries(Output.of(customRegistries));
         }
 
+        /**
+         * @param sourceRegistry Describes the credential parameters for accessing the source registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegistry(@Nullable Output<SourceRegistryCredentialsArgs> sourceRegistry) {
             $.sourceRegistry = sourceRegistry;
             return this;
         }
 
+        /**
+         * @param sourceRegistry Describes the credential parameters for accessing the source registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegistry(SourceRegistryCredentialsArgs sourceRegistry) {
             return sourceRegistry(Output.of(sourceRegistry));
         }

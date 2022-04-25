@@ -19,6 +19,10 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
     @Import(name="monitorName", required=true)
     private String monitorName;
 
+    /**
+     * @return Monitor resource name
+     * 
+     */
     public String monitorName() {
         return this.monitorName;
     }
@@ -30,6 +34,10 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -48,6 +56,10 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
     @Import(name="subAccountName", required=true)
     private String subAccountName;
 
+    /**
+     * @return Sub Account resource name
+     * 
+     */
     public String subAccountName() {
         return this.subAccountName;
     }
@@ -79,11 +91,23 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
             $ = new GetSubAccountTagRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monitorName Monitor resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorName(String monitorName) {
             $.monitorName = monitorName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
@@ -94,6 +118,12 @@ public final class GetSubAccountTagRuleArgs extends com.pulumi.resources.InvokeA
             return this;
         }
 
+        /**
+         * @param subAccountName Sub Account resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder subAccountName(String subAccountName) {
             $.subAccountName = subAccountName;
             return this;

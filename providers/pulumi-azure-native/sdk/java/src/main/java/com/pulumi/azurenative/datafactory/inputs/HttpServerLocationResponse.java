@@ -27,6 +27,10 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
     @Import(name="fileName")
     private @Nullable Object fileName;
 
+    /**
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -38,6 +42,10 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
     @Import(name="folderPath")
     private @Nullable Object folderPath;
 
+    /**
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -49,6 +57,10 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
     @Import(name="relativeUrl")
     private @Nullable Object relativeUrl;
 
+    /**
+     * @return Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> relativeUrl() {
         return Optional.ofNullable(this.relativeUrl);
     }
@@ -61,6 +73,11 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of dataset storage location.
+     * Expected value is &#39;HttpServerLocation&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -92,21 +109,46 @@ public final class HttpServerLocationResponse extends com.pulumi.resources.Invok
             $ = new HttpServerLocationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Object fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Object folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param relativeUrl Specify the relativeUrl of http server. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeUrl(@Nullable Object relativeUrl) {
             $.relativeUrl = relativeUrl;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;HttpServerLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

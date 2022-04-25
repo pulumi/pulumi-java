@@ -27,6 +27,10 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
     @Import(name="faultDomain")
     private @Nullable Integer faultDomain;
 
+    /**
+     * @return Gets or sets the target fault domain.
+     * 
+     */
     public Optional<Integer> faultDomain() {
         return Optional.ofNullable(this.faultDomain);
     }
@@ -39,6 +43,11 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -50,6 +59,10 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
     @Import(name="targetResourceName", required=true)
     private String targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
@@ -61,6 +74,10 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
     @Import(name="updateDomain")
     private @Nullable Integer updateDomain;
 
+    /**
+     * @return Gets or sets the target update domain.
+     * 
+     */
     public Optional<Integer> updateDomain() {
         return Optional.ofNullable(this.updateDomain);
     }
@@ -92,21 +109,46 @@ public final class AvailabilitySetResourceSettingsResponse extends com.pulumi.re
             $ = new AvailabilitySetResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param faultDomain Gets or sets the target fault domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder faultDomain(@Nullable Integer faultDomain) {
             $.faultDomain = faultDomain;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Compute/availabilitySets&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param updateDomain Gets or sets the target update domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateDomain(@Nullable Integer updateDomain) {
             $.updateDomain = updateDomain;
             return this;

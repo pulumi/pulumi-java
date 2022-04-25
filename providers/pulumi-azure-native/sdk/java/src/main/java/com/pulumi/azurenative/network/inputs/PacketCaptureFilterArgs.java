@@ -29,6 +29,10 @@ public final class PacketCaptureFilterArgs extends com.pulumi.resources.Resource
     @Import(name="localIPAddress")
     private @Nullable Output<String> localIPAddress;
 
+    /**
+     * @return Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5&#34;? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * 
+     */
     public Optional<Output<String>> localIPAddress() {
         return Optional.ofNullable(this.localIPAddress);
     }
@@ -40,6 +44,10 @@ public final class PacketCaptureFilterArgs extends com.pulumi.resources.Resource
     @Import(name="localPort")
     private @Nullable Output<String> localPort;
 
+    /**
+     * @return Local port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * 
+     */
     public Optional<Output<String>> localPort() {
         return Optional.ofNullable(this.localPort);
     }
@@ -51,6 +59,10 @@ public final class PacketCaptureFilterArgs extends com.pulumi.resources.Resource
     @Import(name="protocol")
     private @Nullable Output<Either<String,PcProtocol>> protocol;
 
+    /**
+     * @return Protocol to be filtered on.
+     * 
+     */
     public Optional<Output<Either<String,PcProtocol>>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -62,6 +74,10 @@ public final class PacketCaptureFilterArgs extends com.pulumi.resources.Resource
     @Import(name="remoteIPAddress")
     private @Nullable Output<String> remoteIPAddress;
 
+    /**
+     * @return Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * 
+     */
     public Optional<Output<String>> remoteIPAddress() {
         return Optional.ofNullable(this.remoteIPAddress);
     }
@@ -73,6 +89,10 @@ public final class PacketCaptureFilterArgs extends com.pulumi.resources.Resource
     @Import(name="remotePort")
     private @Nullable Output<String> remotePort;
 
+    /**
+     * @return Remote port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+     * 
+     */
     public Optional<Output<String>> remotePort() {
         return Optional.ofNullable(this.remotePort);
     }
@@ -105,55 +125,127 @@ public final class PacketCaptureFilterArgs extends com.pulumi.resources.Resource
             $ = new PacketCaptureFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localIPAddress Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5&#34;? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localIPAddress(@Nullable Output<String> localIPAddress) {
             $.localIPAddress = localIPAddress;
             return this;
         }
 
+        /**
+         * @param localIPAddress Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5&#34;? for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localIPAddress(String localIPAddress) {
             return localIPAddress(Output.of(localIPAddress));
         }
 
+        /**
+         * @param localPort Local port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPort(@Nullable Output<String> localPort) {
             $.localPort = localPort;
             return this;
         }
 
+        /**
+         * @param localPort Local port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localPort(String localPort) {
             return localPort(Output.of(localPort));
         }
 
+        /**
+         * @param protocol Protocol to be filtered on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<Either<String,PcProtocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol to be filtered on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,PcProtocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol Protocol to be filtered on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol Protocol to be filtered on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(PcProtocol protocol) {
             return protocol(Either.ofRight(protocol));
         }
 
+        /**
+         * @param remoteIPAddress Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteIPAddress(@Nullable Output<String> remoteIPAddress) {
             $.remoteIPAddress = remoteIPAddress;
             return this;
         }
 
+        /**
+         * @param remoteIPAddress Local IP Address to be filtered on. Notation: &#34;127.0.0.1&#34; for single address entry. &#34;127.0.0.1-127.0.0.255&#34; for range. &#34;127.0.0.1;127.0.0.5;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remoteIPAddress(String remoteIPAddress) {
             return remoteIPAddress(Output.of(remoteIPAddress));
         }
 
+        /**
+         * @param remotePort Remote port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remotePort(@Nullable Output<String> remotePort) {
             $.remotePort = remotePort;
             return this;
         }
 
+        /**
+         * @param remotePort Remote port to be filtered on. Notation: &#34;80&#34; for single port entry.&#34;80-85&#34; for range. &#34;80;443;&#34; for multiple entries. Multiple ranges not currently supported. Mixing ranges with multiple entries not currently supported. Default = null.
+         * 
+         * @return builder
+         * 
+         */
         public Builder remotePort(String remotePort) {
             return remotePort(Output.of(remotePort));
         }

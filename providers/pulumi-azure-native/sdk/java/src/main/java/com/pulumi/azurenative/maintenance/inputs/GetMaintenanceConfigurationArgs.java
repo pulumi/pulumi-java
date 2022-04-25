@@ -19,6 +19,10 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Resource Group Name
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return Resource Identifier
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -59,11 +67,23 @@ public final class GetMaintenanceConfigurationArgs extends com.pulumi.resources.
             $ = new GetMaintenanceConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName Resource Identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;

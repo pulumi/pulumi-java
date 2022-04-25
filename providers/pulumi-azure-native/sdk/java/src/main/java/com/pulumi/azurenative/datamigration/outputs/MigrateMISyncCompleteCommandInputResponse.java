@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class MigrateMISyncCompleteCommandInputResponse {
     /**
-     * Name of managed instance database
+     * @return Name of managed instance database
      * 
      */
     private final String sourceDatabaseName;
@@ -21,9 +21,9 @@ public final class MigrateMISyncCompleteCommandInputResponse {
     }
 
     /**
-     * Name of managed instance database
+     * @return Name of managed instance database
      * 
-    */
+     */
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }

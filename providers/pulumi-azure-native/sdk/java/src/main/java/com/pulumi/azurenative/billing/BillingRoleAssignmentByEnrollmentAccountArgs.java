@@ -22,6 +22,10 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
     @Import(name="billingAccountName", required=true)
     private Output<String> billingAccountName;
 
+    /**
+     * @return The ID that uniquely identifies a billing account.
+     * 
+     */
     public Output<String> billingAccountName() {
         return this.billingAccountName;
     }
@@ -33,6 +37,10 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
     @Import(name="billingRoleAssignmentName")
     private @Nullable Output<String> billingRoleAssignmentName;
 
+    /**
+     * @return The ID that uniquely identifies a role assignment.
+     * 
+     */
     public Optional<Output<String>> billingRoleAssignmentName() {
         return Optional.ofNullable(this.billingRoleAssignmentName);
     }
@@ -44,6 +52,10 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
     @Import(name="enrollmentAccountName", required=true)
     private Output<String> enrollmentAccountName;
 
+    /**
+     * @return The ID that uniquely identifies an enrollment account.
+     * 
+     */
     public Output<String> enrollmentAccountName() {
         return this.enrollmentAccountName;
     }
@@ -55,6 +67,10 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return The principal id of the user to whom the role was assigned.
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -66,6 +82,10 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
     @Import(name="principalTenantId")
     private @Nullable Output<String> principalTenantId;
 
+    /**
+     * @return The principal tenant id of the user to whom the role was assigned.
+     * 
+     */
     public Optional<Output<String>> principalTenantId() {
         return Optional.ofNullable(this.principalTenantId);
     }
@@ -77,6 +97,10 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
     @Import(name="roleDefinitionId")
     private @Nullable Output<String> roleDefinitionId;
 
+    /**
+     * @return The ID of the role definition.
+     * 
+     */
     public Optional<Output<String>> roleDefinitionId() {
         return Optional.ofNullable(this.roleDefinitionId);
     }
@@ -88,6 +112,10 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
     @Import(name="userAuthenticationType")
     private @Nullable Output<String> userAuthenticationType;
 
+    /**
+     * @return The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+     * 
+     */
     public Optional<Output<String>> userAuthenticationType() {
         return Optional.ofNullable(this.userAuthenticationType);
     }
@@ -99,6 +127,10 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
     @Import(name="userEmailAddress")
     private @Nullable Output<String> userEmailAddress;
 
+    /**
+     * @return The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+     * 
+     */
     public Optional<Output<String>> userEmailAddress() {
         return Optional.ofNullable(this.userEmailAddress);
     }
@@ -134,74 +166,170 @@ public final class BillingRoleAssignmentByEnrollmentAccountArgs extends com.pulu
             $ = new BillingRoleAssignmentByEnrollmentAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountName(Output<String> billingAccountName) {
             $.billingAccountName = billingAccountName;
             return this;
         }
 
+        /**
+         * @param billingAccountName The ID that uniquely identifies a billing account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingAccountName(String billingAccountName) {
             return billingAccountName(Output.of(billingAccountName));
         }
 
+        /**
+         * @param billingRoleAssignmentName The ID that uniquely identifies a role assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingRoleAssignmentName(@Nullable Output<String> billingRoleAssignmentName) {
             $.billingRoleAssignmentName = billingRoleAssignmentName;
             return this;
         }
 
+        /**
+         * @param billingRoleAssignmentName The ID that uniquely identifies a role assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder billingRoleAssignmentName(String billingRoleAssignmentName) {
             return billingRoleAssignmentName(Output.of(billingRoleAssignmentName));
         }
 
+        /**
+         * @param enrollmentAccountName The ID that uniquely identifies an enrollment account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrollmentAccountName(Output<String> enrollmentAccountName) {
             $.enrollmentAccountName = enrollmentAccountName;
             return this;
         }
 
+        /**
+         * @param enrollmentAccountName The ID that uniquely identifies an enrollment account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enrollmentAccountName(String enrollmentAccountName) {
             return enrollmentAccountName(Output.of(enrollmentAccountName));
         }
 
+        /**
+         * @param principalId The principal id of the user to whom the role was assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The principal id of the user to whom the role was assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param principalTenantId The principal tenant id of the user to whom the role was assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalTenantId(@Nullable Output<String> principalTenantId) {
             $.principalTenantId = principalTenantId;
             return this;
         }
 
+        /**
+         * @param principalTenantId The principal tenant id of the user to whom the role was assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalTenantId(String principalTenantId) {
             return principalTenantId(Output.of(principalTenantId));
         }
 
+        /**
+         * @param roleDefinitionId The ID of the role definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(@Nullable Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId The ID of the role definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }
 
+        /**
+         * @param userAuthenticationType The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAuthenticationType(@Nullable Output<String> userAuthenticationType) {
             $.userAuthenticationType = userAuthenticationType;
             return this;
         }
 
+        /**
+         * @param userAuthenticationType The authentication type of the user, whether Organization or MSA, of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAuthenticationType(String userAuthenticationType) {
             return userAuthenticationType(Output.of(userAuthenticationType));
         }
 
+        /**
+         * @param userEmailAddress The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEmailAddress(@Nullable Output<String> userEmailAddress) {
             $.userEmailAddress = userEmailAddress;
             return this;
         }
 
+        /**
+         * @param userEmailAddress The email address of the user to whom the role was assigned. This is supported only for billing accounts with agreement type Enterprise Agreement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userEmailAddress(String userEmailAddress) {
             return userEmailAddress(Output.of(userEmailAddress));
         }

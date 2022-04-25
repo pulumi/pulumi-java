@@ -38,6 +38,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="additionalCapabilities")
     private @Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities;
 
+    /**
+     * @return Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
+     * 
+     */
     public Optional<Output<AdditionalCapabilitiesArgs>> additionalCapabilities() {
         return Optional.ofNullable(this.additionalCapabilities);
     }
@@ -49,6 +53,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="automaticRepairsPolicy")
     private @Nullable Output<AutomaticRepairsPolicyArgs> automaticRepairsPolicy;
 
+    /**
+     * @return Policy for automatic repairs.
+     * 
+     */
     public Optional<Output<AutomaticRepairsPolicyArgs>> automaticRepairsPolicy() {
         return Optional.ofNullable(this.automaticRepairsPolicy);
     }
@@ -60,6 +68,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="doNotRunExtensionsOnOverprovisionedVMs")
     private @Nullable Output<Boolean> doNotRunExtensionsOnOverprovisionedVMs;
 
+    /**
+     * @return When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
+     * 
+     */
     public Optional<Output<Boolean>> doNotRunExtensionsOnOverprovisionedVMs() {
         return Optional.ofNullable(this.doNotRunExtensionsOnOverprovisionedVMs);
     }
@@ -71,6 +83,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location of the Virtual Machine Scale Set.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -82,6 +98,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="hostGroup")
     private @Nullable Output<SubResourceArgs> hostGroup;
 
+    /**
+     * @return Specifies information about the dedicated host group that the virtual machine scale set resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> hostGroup() {
         return Optional.ofNullable(this.hostGroup);
     }
@@ -93,6 +113,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="identity")
     private @Nullable Output<VirtualMachineScaleSetIdentityArgs> identity;
 
+    /**
+     * @return The identity of the virtual machine scale set, if configured.
+     * 
+     */
     public Optional<Output<VirtualMachineScaleSetIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -104,6 +128,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -115,6 +143,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="orchestrationMode")
     private @Nullable Output<Either<String,OrchestrationMode>> orchestrationMode;
 
+    /**
+     * @return Specifies the orchestration mode for the virtual machine scale set.
+     * 
+     */
     public Optional<Output<Either<String,OrchestrationMode>>> orchestrationMode() {
         return Optional.ofNullable(this.orchestrationMode);
     }
@@ -126,6 +158,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="overprovision")
     private @Nullable Output<Boolean> overprovision;
 
+    /**
+     * @return Specifies whether the Virtual Machine Scale Set should be overprovisioned.
+     * 
+     */
     public Optional<Output<Boolean>> overprovision() {
         return Optional.ofNullable(this.overprovision);
     }
@@ -137,6 +173,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="plan")
     private @Nullable Output<PlanArgs> plan;
 
+    /**
+     * @return Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
+     * 
+     */
     public Optional<Output<PlanArgs>> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -148,6 +188,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="platformFaultDomainCount")
     private @Nullable Output<Integer> platformFaultDomainCount;
 
+    /**
+     * @return Fault Domain count for each placement group.
+     * 
+     */
     public Optional<Output<Integer>> platformFaultDomainCount() {
         return Optional.ofNullable(this.platformFaultDomainCount);
     }
@@ -159,6 +203,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="proximityPlacementGroup")
     private @Nullable Output<SubResourceArgs> proximityPlacementGroup;
 
+    /**
+     * @return Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
+     * 
+     */
     public Optional<Output<SubResourceArgs>> proximityPlacementGroup() {
         return Optional.ofNullable(this.proximityPlacementGroup);
     }
@@ -170,6 +218,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -181,6 +233,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="scaleInPolicy")
     private @Nullable Output<ScaleInPolicyArgs> scaleInPolicy;
 
+    /**
+     * @return Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
+     * 
+     */
     public Optional<Output<ScaleInPolicyArgs>> scaleInPolicy() {
         return Optional.ofNullable(this.scaleInPolicy);
     }
@@ -192,6 +248,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="singlePlacementGroup")
     private @Nullable Output<Boolean> singlePlacementGroup;
 
+    /**
+     * @return When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
+     * 
+     */
     public Optional<Output<Boolean>> singlePlacementGroup() {
         return Optional.ofNullable(this.singlePlacementGroup);
     }
@@ -203,6 +263,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The virtual machine scale set sku.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -214,6 +278,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -225,6 +293,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="upgradePolicy")
     private @Nullable Output<UpgradePolicyArgs> upgradePolicy;
 
+    /**
+     * @return The upgrade policy.
+     * 
+     */
     public Optional<Output<UpgradePolicyArgs>> upgradePolicy() {
         return Optional.ofNullable(this.upgradePolicy);
     }
@@ -236,6 +308,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="virtualMachineProfile")
     private @Nullable Output<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile;
 
+    /**
+     * @return The virtual machine profile.
+     * 
+     */
     public Optional<Output<VirtualMachineScaleSetVMProfileArgs>> virtualMachineProfile() {
         return Optional.ofNullable(this.virtualMachineProfile);
     }
@@ -247,6 +323,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="vmScaleSetName")
     private @Nullable Output<String> vmScaleSetName;
 
+    /**
+     * @return The name of the VM scale set to create or update.
+     * 
+     */
     public Optional<Output<String>> vmScaleSetName() {
         return Optional.ofNullable(this.vmScaleSetName);
     }
@@ -258,6 +338,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="zoneBalance")
     private @Nullable Output<Boolean> zoneBalance;
 
+    /**
+     * @return Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
+     * 
+     */
     public Optional<Output<Boolean>> zoneBalance() {
         return Optional.ofNullable(this.zoneBalance);
     }
@@ -269,6 +353,10 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
     @Import(name="zones")
     private @Nullable Output<List<String>> zones;
 
+    /**
+     * @return The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
+     * 
+     */
     public Optional<Output<List<String>>> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -318,212 +406,494 @@ public final class VirtualMachineScaleSetArgs extends com.pulumi.resources.Resou
             $ = new VirtualMachineScaleSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalCapabilities Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalCapabilities(@Nullable Output<AdditionalCapabilitiesArgs> additionalCapabilities) {
             $.additionalCapabilities = additionalCapabilities;
             return this;
         }
 
+        /**
+         * @param additionalCapabilities Specifies additional capabilities enabled or disabled on the Virtual Machines in the Virtual Machine Scale Set. For instance: whether the Virtual Machines have the capability to support attaching managed data disks with UltraSSD_LRS storage account type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalCapabilities(AdditionalCapabilitiesArgs additionalCapabilities) {
             return additionalCapabilities(Output.of(additionalCapabilities));
         }
 
+        /**
+         * @param automaticRepairsPolicy Policy for automatic repairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRepairsPolicy(@Nullable Output<AutomaticRepairsPolicyArgs> automaticRepairsPolicy) {
             $.automaticRepairsPolicy = automaticRepairsPolicy;
             return this;
         }
 
+        /**
+         * @param automaticRepairsPolicy Policy for automatic repairs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automaticRepairsPolicy(AutomaticRepairsPolicyArgs automaticRepairsPolicy) {
             return automaticRepairsPolicy(Output.of(automaticRepairsPolicy));
         }
 
+        /**
+         * @param doNotRunExtensionsOnOverprovisionedVMs When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotRunExtensionsOnOverprovisionedVMs(@Nullable Output<Boolean> doNotRunExtensionsOnOverprovisionedVMs) {
             $.doNotRunExtensionsOnOverprovisionedVMs = doNotRunExtensionsOnOverprovisionedVMs;
             return this;
         }
 
+        /**
+         * @param doNotRunExtensionsOnOverprovisionedVMs When Overprovision is enabled, extensions are launched only on the requested number of VMs which are finally kept. This property will hence ensure that the extensions do not run on the extra overprovisioned VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder doNotRunExtensionsOnOverprovisionedVMs(Boolean doNotRunExtensionsOnOverprovisionedVMs) {
             return doNotRunExtensionsOnOverprovisionedVMs(Output.of(doNotRunExtensionsOnOverprovisionedVMs));
         }
 
+        /**
+         * @param extendedLocation The extended location of the Virtual Machine Scale Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the Virtual Machine Scale Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param hostGroup Specifies information about the dedicated host group that the virtual machine scale set resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostGroup(@Nullable Output<SubResourceArgs> hostGroup) {
             $.hostGroup = hostGroup;
             return this;
         }
 
+        /**
+         * @param hostGroup Specifies information about the dedicated host group that the virtual machine scale set resides in. &lt;br&gt;&lt;br&gt;Minimum api-version: 2020-06-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostGroup(SubResourceArgs hostGroup) {
             return hostGroup(Output.of(hostGroup));
         }
 
+        /**
+         * @param identity The identity of the virtual machine scale set, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<VirtualMachineScaleSetIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the virtual machine scale set, if configured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(VirtualMachineScaleSetIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param orchestrationMode Specifies the orchestration mode for the virtual machine scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestrationMode(@Nullable Output<Either<String,OrchestrationMode>> orchestrationMode) {
             $.orchestrationMode = orchestrationMode;
             return this;
         }
 
+        /**
+         * @param orchestrationMode Specifies the orchestration mode for the virtual machine scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestrationMode(Either<String,OrchestrationMode> orchestrationMode) {
             return orchestrationMode(Output.of(orchestrationMode));
         }
 
+        /**
+         * @param orchestrationMode Specifies the orchestration mode for the virtual machine scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestrationMode(String orchestrationMode) {
             return orchestrationMode(Either.ofLeft(orchestrationMode));
         }
 
+        /**
+         * @param orchestrationMode Specifies the orchestration mode for the virtual machine scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestrationMode(OrchestrationMode orchestrationMode) {
             return orchestrationMode(Either.ofRight(orchestrationMode));
         }
 
+        /**
+         * @param overprovision Specifies whether the Virtual Machine Scale Set should be overprovisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overprovision(@Nullable Output<Boolean> overprovision) {
             $.overprovision = overprovision;
             return this;
         }
 
+        /**
+         * @param overprovision Specifies whether the Virtual Machine Scale Set should be overprovisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overprovision(Boolean overprovision) {
             return overprovision(Output.of(overprovision));
         }
 
+        /**
+         * @param plan Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable Output<PlanArgs> plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param plan Specifies information about the marketplace image used to create the virtual machine. This element is only used for marketplace images. Before you can use a marketplace image from an API, you must enable the image for programmatic use.  In the Azure portal, find the marketplace image that you want to use and then click **Want to deploy programmatically, Get Started -&gt;**. Enter any required information and then click **Save**.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(PlanArgs plan) {
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param platformFaultDomainCount Fault Domain count for each placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformFaultDomainCount(@Nullable Output<Integer> platformFaultDomainCount) {
             $.platformFaultDomainCount = platformFaultDomainCount;
             return this;
         }
 
+        /**
+         * @param platformFaultDomainCount Fault Domain count for each placement group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder platformFaultDomainCount(Integer platformFaultDomainCount) {
             return platformFaultDomainCount(Output.of(platformFaultDomainCount));
         }
 
+        /**
+         * @param proximityPlacementGroup Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroup(@Nullable Output<SubResourceArgs> proximityPlacementGroup) {
             $.proximityPlacementGroup = proximityPlacementGroup;
             return this;
         }
 
+        /**
+         * @param proximityPlacementGroup Specifies information about the proximity placement group that the virtual machine scale set should be assigned to. &lt;br&gt;&lt;br&gt;Minimum api-version: 2018-04-01.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroup(SubResourceArgs proximityPlacementGroup) {
             return proximityPlacementGroup(Output.of(proximityPlacementGroup));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scaleInPolicy Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleInPolicy(@Nullable Output<ScaleInPolicyArgs> scaleInPolicy) {
             $.scaleInPolicy = scaleInPolicy;
             return this;
         }
 
+        /**
+         * @param scaleInPolicy Specifies the scale-in policy that decides which virtual machines are chosen for removal when a Virtual Machine Scale Set is scaled-in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleInPolicy(ScaleInPolicyArgs scaleInPolicy) {
             return scaleInPolicy(Output.of(scaleInPolicy));
         }
 
+        /**
+         * @param singlePlacementGroup When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singlePlacementGroup(@Nullable Output<Boolean> singlePlacementGroup) {
             $.singlePlacementGroup = singlePlacementGroup;
             return this;
         }
 
+        /**
+         * @param singlePlacementGroup When true this limits the scale set to a single placement group, of max size 100 virtual machines. NOTE: If singlePlacementGroup is true, it may be modified to false. However, if singlePlacementGroup is false, it may not be modified to true.
+         * 
+         * @return builder
+         * 
+         */
         public Builder singlePlacementGroup(Boolean singlePlacementGroup) {
             return singlePlacementGroup(Output.of(singlePlacementGroup));
         }
 
+        /**
+         * @param sku The virtual machine scale set sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The virtual machine scale set sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param upgradePolicy The upgrade policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradePolicy(@Nullable Output<UpgradePolicyArgs> upgradePolicy) {
             $.upgradePolicy = upgradePolicy;
             return this;
         }
 
+        /**
+         * @param upgradePolicy The upgrade policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradePolicy(UpgradePolicyArgs upgradePolicy) {
             return upgradePolicy(Output.of(upgradePolicy));
         }
 
+        /**
+         * @param virtualMachineProfile The virtual machine profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineProfile(@Nullable Output<VirtualMachineScaleSetVMProfileArgs> virtualMachineProfile) {
             $.virtualMachineProfile = virtualMachineProfile;
             return this;
         }
 
+        /**
+         * @param virtualMachineProfile The virtual machine profile.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualMachineProfile(VirtualMachineScaleSetVMProfileArgs virtualMachineProfile) {
             return virtualMachineProfile(Output.of(virtualMachineProfile));
         }
 
+        /**
+         * @param vmScaleSetName The name of the VM scale set to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmScaleSetName(@Nullable Output<String> vmScaleSetName) {
             $.vmScaleSetName = vmScaleSetName;
             return this;
         }
 
+        /**
+         * @param vmScaleSetName The name of the VM scale set to create or update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmScaleSetName(String vmScaleSetName) {
             return vmScaleSetName(Output.of(vmScaleSetName));
         }
 
+        /**
+         * @param zoneBalance Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneBalance(@Nullable Output<Boolean> zoneBalance) {
             $.zoneBalance = zoneBalance;
             return this;
         }
 
+        /**
+         * @param zoneBalance Whether to force strictly even Virtual Machine distribution cross x-zones in case there is zone outage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneBalance(Boolean zoneBalance) {
             return zoneBalance(Output.of(zoneBalance));
         }
 
+        /**
+         * @param zones The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable Output<List<String>> zones) {
             $.zones = zones;
             return this;
         }
 
+        /**
+         * @param zones The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(List<String> zones) {
             return zones(Output.of(zones));
         }
 
+        /**
+         * @param zones The virtual machine scale set zones. NOTE: Availability zones can only be set when you create the scale set
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(String... zones) {
             return zones(List.of(zones));
         }

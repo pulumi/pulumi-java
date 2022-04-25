@@ -24,6 +24,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
     @Import(name="allowProtectedAppendWrites")
     private @Nullable Output<Boolean> allowProtectedAppendWrites;
 
+    /**
+     * @return This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+     * 
+     */
     public Optional<Output<Boolean>> allowProtectedAppendWrites() {
         return Optional.ofNullable(this.allowProtectedAppendWrites);
     }
@@ -46,6 +54,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
     @Import(name="containerName", required=true)
     private Output<String> containerName;
 
+    /**
+     * @return The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+     * 
+     */
     public Output<String> containerName() {
         return this.containerName;
     }
@@ -57,6 +69,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
     @Import(name="immutabilityPeriodSinceCreationInDays")
     private @Nullable Output<Integer> immutabilityPeriodSinceCreationInDays;
 
+    /**
+     * @return The immutability period for the blobs in the container since the policy creation, in days.
+     * 
+     */
     public Optional<Output<Integer>> immutabilityPeriodSinceCreationInDays() {
         return Optional.ofNullable(this.immutabilityPeriodSinceCreationInDays);
     }
@@ -68,6 +84,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
     @Import(name="immutabilityPolicyName")
     private @Nullable Output<String> immutabilityPolicyName;
 
+    /**
+     * @return The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be &#39;default&#39;
+     * 
+     */
     public Optional<Output<String>> immutabilityPolicyName() {
         return Optional.ofNullable(this.immutabilityPolicyName);
     }
@@ -79,6 +99,10 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -112,56 +136,128 @@ public final class BlobContainerImmutabilityPolicyArgs extends com.pulumi.resour
             $ = new BlobContainerImmutabilityPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param allowProtectedAppendWrites This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowProtectedAppendWrites(@Nullable Output<Boolean> allowProtectedAppendWrites) {
             $.allowProtectedAppendWrites = allowProtectedAppendWrites;
             return this;
         }
 
+        /**
+         * @param allowProtectedAppendWrites This property can only be changed for unlocked time-based retention policies. When enabled, new blocks can be written to an append blob while maintaining immutability protection and compliance. Only new blocks can be added and any existing blocks cannot be modified or deleted. This property cannot be changed with ExtendImmutabilityPolicy API
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowProtectedAppendWrites(Boolean allowProtectedAppendWrites) {
             return allowProtectedAppendWrites(Output.of(allowProtectedAppendWrites));
         }
 
+        /**
+         * @param containerName The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param immutabilityPeriodSinceCreationInDays The immutability period for the blobs in the container since the policy creation, in days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutabilityPeriodSinceCreationInDays(@Nullable Output<Integer> immutabilityPeriodSinceCreationInDays) {
             $.immutabilityPeriodSinceCreationInDays = immutabilityPeriodSinceCreationInDays;
             return this;
         }
 
+        /**
+         * @param immutabilityPeriodSinceCreationInDays The immutability period for the blobs in the container since the policy creation, in days.
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutabilityPeriodSinceCreationInDays(Integer immutabilityPeriodSinceCreationInDays) {
             return immutabilityPeriodSinceCreationInDays(Output.of(immutabilityPeriodSinceCreationInDays));
         }
 
+        /**
+         * @param immutabilityPolicyName The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutabilityPolicyName(@Nullable Output<String> immutabilityPolicyName) {
             $.immutabilityPolicyName = immutabilityPolicyName;
             return this;
         }
 
+        /**
+         * @param immutabilityPolicyName The name of the blob container immutabilityPolicy within the specified storage account. ImmutabilityPolicy Name must be &#39;default&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder immutabilityPolicyName(String immutabilityPolicyName) {
             return immutabilityPolicyName(Output.of(immutabilityPolicyName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

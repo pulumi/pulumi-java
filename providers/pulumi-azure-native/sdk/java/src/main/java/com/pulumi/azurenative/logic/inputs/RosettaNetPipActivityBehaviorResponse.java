@@ -25,6 +25,10 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
     @Import(name="actionType", required=true)
     private String actionType;
 
+    /**
+     * @return The value indicating whether the RosettaNet PIP is used for a single action.
+     * 
+     */
     public String actionType() {
         return this.actionType;
     }
@@ -36,6 +40,10 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
     @Import(name="isAuthorizationRequired", required=true)
     private Boolean isAuthorizationRequired;
 
+    /**
+     * @return The value indicating whether authorization is required.
+     * 
+     */
     public Boolean isAuthorizationRequired() {
         return this.isAuthorizationRequired;
     }
@@ -47,6 +55,10 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
     @Import(name="isSecuredTransportRequired", required=true)
     private Boolean isSecuredTransportRequired;
 
+    /**
+     * @return The value indicating whether secured transport is required.
+     * 
+     */
     public Boolean isSecuredTransportRequired() {
         return this.isSecuredTransportRequired;
     }
@@ -58,6 +70,10 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
     @Import(name="nonRepudiationOfOriginAndContent", required=true)
     private Boolean nonRepudiationOfOriginAndContent;
 
+    /**
+     * @return The value indicating whether non-repudiation is for origin and content.
+     * 
+     */
     public Boolean nonRepudiationOfOriginAndContent() {
         return this.nonRepudiationOfOriginAndContent;
     }
@@ -69,6 +85,10 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
     @Import(name="persistentConfidentialityScope", required=true)
     private String persistentConfidentialityScope;
 
+    /**
+     * @return The persistent confidentiality encryption scope.
+     * 
+     */
     public String persistentConfidentialityScope() {
         return this.persistentConfidentialityScope;
     }
@@ -80,6 +100,10 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
     @Import(name="responseType", required=true)
     private String responseType;
 
+    /**
+     * @return The value indicating whether the RosettaNet PIP communication is synchronous.
+     * 
+     */
     public String responseType() {
         return this.responseType;
     }
@@ -91,6 +115,10 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
     @Import(name="retryCount", required=true)
     private Integer retryCount;
 
+    /**
+     * @return The value indicating retry count.
+     * 
+     */
     public Integer retryCount() {
         return this.retryCount;
     }
@@ -102,6 +130,10 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
     @Import(name="timeToPerformInSeconds", required=true)
     private Integer timeToPerformInSeconds;
 
+    /**
+     * @return The time to perform in seconds.
+     * 
+     */
     public Integer timeToPerformInSeconds() {
         return this.timeToPerformInSeconds;
     }
@@ -137,41 +169,89 @@ public final class RosettaNetPipActivityBehaviorResponse extends com.pulumi.reso
             $ = new RosettaNetPipActivityBehaviorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionType The value indicating whether the RosettaNet PIP is used for a single action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionType(String actionType) {
             $.actionType = actionType;
             return this;
         }
 
+        /**
+         * @param isAuthorizationRequired The value indicating whether authorization is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAuthorizationRequired(Boolean isAuthorizationRequired) {
             $.isAuthorizationRequired = isAuthorizationRequired;
             return this;
         }
 
+        /**
+         * @param isSecuredTransportRequired The value indicating whether secured transport is required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isSecuredTransportRequired(Boolean isSecuredTransportRequired) {
             $.isSecuredTransportRequired = isSecuredTransportRequired;
             return this;
         }
 
+        /**
+         * @param nonRepudiationOfOriginAndContent The value indicating whether non-repudiation is for origin and content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonRepudiationOfOriginAndContent(Boolean nonRepudiationOfOriginAndContent) {
             $.nonRepudiationOfOriginAndContent = nonRepudiationOfOriginAndContent;
             return this;
         }
 
+        /**
+         * @param persistentConfidentialityScope The persistent confidentiality encryption scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder persistentConfidentialityScope(String persistentConfidentialityScope) {
             $.persistentConfidentialityScope = persistentConfidentialityScope;
             return this;
         }
 
+        /**
+         * @param responseType The value indicating whether the RosettaNet PIP communication is synchronous.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseType(String responseType) {
             $.responseType = responseType;
             return this;
         }
 
+        /**
+         * @param retryCount The value indicating retry count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retryCount(Integer retryCount) {
             $.retryCount = retryCount;
             return this;
         }
 
+        /**
+         * @param timeToPerformInSeconds The time to perform in seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToPerformInSeconds(Integer timeToPerformInSeconds) {
             $.timeToPerformInSeconds = timeToPerformInSeconds;
             return this;

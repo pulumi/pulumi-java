@@ -19,6 +19,10 @@ public final class GetArtifactArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="artifactName", required=true)
     private String artifactName;
 
+    /**
+     * @return Name of the blueprint artifact.
+     * 
+     */
     public String artifactName() {
         return this.artifactName;
     }
@@ -30,6 +34,10 @@ public final class GetArtifactArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="blueprintName", required=true)
     private String blueprintName;
 
+    /**
+     * @return Name of the blueprint definition.
+     * 
+     */
     public String blueprintName() {
         return this.blueprintName;
     }
@@ -41,6 +49,10 @@ public final class GetArtifactArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceScope", required=true)
     private String resourceScope;
 
+    /**
+     * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+     * 
+     */
     public String resourceScope() {
         return this.resourceScope;
     }
@@ -71,16 +83,34 @@ public final class GetArtifactArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactName Name of the blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactName(String artifactName) {
             $.artifactName = artifactName;
             return this;
         }
 
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintName(String blueprintName) {
             $.blueprintName = blueprintName;
             return this;
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(String resourceScope) {
             $.resourceScope = resourceScope;
             return this;

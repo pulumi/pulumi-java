@@ -24,6 +24,10 @@ public final class ReportDeliveryInfoArgs extends com.pulumi.resources.ResourceA
     @Import(name="destination", required=true)
     private Output<ReportDeliveryDestinationArgs> destination;
 
+    /**
+     * @return Has destination for the report being delivered.
+     * 
+     */
     public Output<ReportDeliveryDestinationArgs> destination() {
         return this.destination;
     }
@@ -52,11 +56,23 @@ public final class ReportDeliveryInfoArgs extends com.pulumi.resources.ResourceA
             $ = new ReportDeliveryInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param destination Has destination for the report being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(Output<ReportDeliveryDestinationArgs> destination) {
             $.destination = destination;
             return this;
         }
 
+        /**
+         * @param destination Has destination for the report being delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder destination(ReportDeliveryDestinationArgs destination) {
             return destination(Output.of(destination));
         }

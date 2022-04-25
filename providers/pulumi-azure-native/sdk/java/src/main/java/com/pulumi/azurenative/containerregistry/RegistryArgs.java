@@ -29,6 +29,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="adminUserEnabled")
     private @Nullable Output<Boolean> adminUserEnabled;
 
+    /**
+     * @return The value that indicates whether the admin user is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> adminUserEnabled() {
         return Optional.ofNullable(this.adminUserEnabled);
     }
@@ -40,6 +44,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource. This cannot be changed after the resource is created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -51,6 +59,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="networkRuleSet")
     private @Nullable Output<NetworkRuleSetArgs> networkRuleSet;
 
+    /**
+     * @return The network rule set for a container registry.
+     * 
+     */
     public Optional<Output<NetworkRuleSetArgs>> networkRuleSet() {
         return Optional.ofNullable(this.networkRuleSet);
     }
@@ -62,6 +74,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="policies")
     private @Nullable Output<PoliciesArgs> policies;
 
+    /**
+     * @return The policies for a container registry.
+     * 
+     */
     public Optional<Output<PoliciesArgs>> policies() {
         return Optional.ofNullable(this.policies);
     }
@@ -73,6 +89,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="registryName")
     private @Nullable Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Optional<Output<String>> registryName() {
         return Optional.ofNullable(this.registryName);
     }
@@ -84,6 +104,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -95,6 +119,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku", required=true)
     private Output<SkuArgs> sku;
 
+    /**
+     * @return The SKU of the container registry.
+     * 
+     */
     public Output<SkuArgs> sku() {
         return this.sku;
     }
@@ -106,6 +134,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="storageAccount")
     private @Nullable Output<StorageAccountPropertiesArgs> storageAccount;
 
+    /**
+     * @return The properties of the storage account for the container registry. Only applicable to Classic SKU.
+     * 
+     */
     public Optional<Output<StorageAccountPropertiesArgs>> storageAccount() {
         return Optional.ofNullable(this.storageAccount);
     }
@@ -117,6 +149,10 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -153,83 +189,191 @@ public final class RegistryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RegistryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param adminUserEnabled The value that indicates whether the admin user is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserEnabled(@Nullable Output<Boolean> adminUserEnabled) {
             $.adminUserEnabled = adminUserEnabled;
             return this;
         }
 
+        /**
+         * @param adminUserEnabled The value that indicates whether the admin user is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder adminUserEnabled(Boolean adminUserEnabled) {
             return adminUserEnabled(Output.of(adminUserEnabled));
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource. This cannot be changed after the resource is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param networkRuleSet The network rule set for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRuleSet(@Nullable Output<NetworkRuleSetArgs> networkRuleSet) {
             $.networkRuleSet = networkRuleSet;
             return this;
         }
 
+        /**
+         * @param networkRuleSet The network rule set for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkRuleSet(NetworkRuleSetArgs networkRuleSet) {
             return networkRuleSet(Output.of(networkRuleSet));
         }
 
+        /**
+         * @param policies The policies for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(@Nullable Output<PoliciesArgs> policies) {
             $.policies = policies;
             return this;
         }
 
+        /**
+         * @param policies The policies for a container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(PoliciesArgs policies) {
             return policies(Output.of(policies));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(@Nullable Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param storageAccount The properties of the storage account for the container registry. Only applicable to Classic SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(@Nullable Output<StorageAccountPropertiesArgs> storageAccount) {
             $.storageAccount = storageAccount;
             return this;
         }
 
+        /**
+         * @param storageAccount The properties of the storage account for the container registry. Only applicable to Classic SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccount(StorageAccountPropertiesArgs storageAccount) {
             return storageAccount(Output.of(storageAccount));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

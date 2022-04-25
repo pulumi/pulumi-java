@@ -27,6 +27,10 @@ public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceA
     @Import(name="cpu")
     private @Nullable Output<Double> cpu;
 
+    /**
+     * @return Required CPU in cores, e.g. 0.5
+     * 
+     */
     public Optional<Output<Double>> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -38,6 +42,10 @@ public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceA
     @Import(name="memory")
     private @Nullable Output<String> memory;
 
+    /**
+     * @return Required memory, e.g. &#34;250Mb&#34;
+     * 
+     */
     public Optional<Output<String>> memory() {
         return Optional.ofNullable(this.memory);
     }
@@ -67,20 +75,44 @@ public final class ContainerResourcesArgs extends com.pulumi.resources.ResourceA
             $ = new ContainerResourcesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu Required CPU in cores, e.g. 0.5
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Output<Double> cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param cpu Required CPU in cores, e.g. 0.5
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(Double cpu) {
             return cpu(Output.of(cpu));
         }
 
+        /**
+         * @param memory Required memory, e.g. &#34;250Mb&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(@Nullable Output<String> memory) {
             $.memory = memory;
             return this;
         }
 
+        /**
+         * @param memory Required memory, e.g. &#34;250Mb&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder memory(String memory) {
             return memory(Output.of(memory));
         }

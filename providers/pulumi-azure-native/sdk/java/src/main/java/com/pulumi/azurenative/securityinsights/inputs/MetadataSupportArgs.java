@@ -28,6 +28,10 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="email")
     private @Nullable Output<String> email;
 
+    /**
+     * @return Email of support contact
+     * 
+     */
     public Optional<Output<String>> email() {
         return Optional.ofNullable(this.email);
     }
@@ -39,6 +43,10 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="link")
     private @Nullable Output<String> link;
 
+    /**
+     * @return Link for support help, like to support page to open a ticket etc.
+     * 
+     */
     public Optional<Output<String>> link() {
         return Optional.ofNullable(this.link);
     }
@@ -50,6 +58,10 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the support contact. Company or person.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -61,6 +73,10 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tier", required=true)
     private Output<Either<String,SupportTier>> tier;
 
+    /**
+     * @return Type of support for content item
+     * 
+     */
     public Output<Either<String,SupportTier>> tier() {
         return this.tier;
     }
@@ -92,46 +108,106 @@ public final class MetadataSupportArgs extends com.pulumi.resources.ResourceArgs
             $ = new MetadataSupportArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param email Email of support contact
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Output<String> email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param email Email of support contact
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(String email) {
             return email(Output.of(email));
         }
 
+        /**
+         * @param link Link for support help, like to support page to open a ticket etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder link(@Nullable Output<String> link) {
             $.link = link;
             return this;
         }
 
+        /**
+         * @param link Link for support help, like to support page to open a ticket etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder link(String link) {
             return link(Output.of(link));
         }
 
+        /**
+         * @param name Name of the support contact. Company or person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the support contact. Company or person.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param tier Type of support for content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Output<Either<String,SupportTier>> tier) {
             $.tier = tier;
             return this;
         }
 
+        /**
+         * @param tier Type of support for content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(Either<String,SupportTier> tier) {
             return tier(Output.of(tier));
         }
 
+        /**
+         * @param tier Type of support for content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(String tier) {
             return tier(Either.ofLeft(tier));
         }
 
+        /**
+         * @param tier Type of support for content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(SupportTier tier) {
             return tier(Either.ofRight(tier));
         }

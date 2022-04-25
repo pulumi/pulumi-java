@@ -29,6 +29,10 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
     @Import(name="protocol")
     private @Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol;
 
+    /**
+     * @return The protocol for which the DDoS protection policy is being customized.
+     * 
+     */
     public Optional<Output<Either<String,DdosCustomPolicyProtocol>>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -40,6 +44,10 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
     @Import(name="sourceRateOverride")
     private @Nullable Output<String> sourceRateOverride;
 
+    /**
+     * @return The customized DDoS protection source rate.
+     * 
+     */
     public Optional<Output<String>> sourceRateOverride() {
         return Optional.ofNullable(this.sourceRateOverride);
     }
@@ -51,6 +59,10 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
     @Import(name="triggerRateOverride")
     private @Nullable Output<String> triggerRateOverride;
 
+    /**
+     * @return The customized DDoS protection trigger rate.
+     * 
+     */
     public Optional<Output<String>> triggerRateOverride() {
         return Optional.ofNullable(this.triggerRateOverride);
     }
@@ -62,6 +74,10 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
     @Import(name="triggerSensitivityOverride")
     private @Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride;
 
+    /**
+     * @return The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
+     * 
+     */
     public Optional<Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>>> triggerSensitivityOverride() {
         return Optional.ofNullable(this.triggerSensitivityOverride);
     }
@@ -93,54 +109,126 @@ public final class ProtocolCustomSettingsFormatArgs extends com.pulumi.resources
             $ = new ProtocolCustomSettingsFormatArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param protocol The protocol for which the DDoS protection policy is being customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<Either<String,DdosCustomPolicyProtocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol The protocol for which the DDoS protection policy is being customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,DdosCustomPolicyProtocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol The protocol for which the DDoS protection policy is being customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol The protocol for which the DDoS protection policy is being customized.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(DdosCustomPolicyProtocol protocol) {
             return protocol(Either.ofRight(protocol));
         }
 
+        /**
+         * @param sourceRateOverride The customized DDoS protection source rate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRateOverride(@Nullable Output<String> sourceRateOverride) {
             $.sourceRateOverride = sourceRateOverride;
             return this;
         }
 
+        /**
+         * @param sourceRateOverride The customized DDoS protection source rate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRateOverride(String sourceRateOverride) {
             return sourceRateOverride(Output.of(sourceRateOverride));
         }
 
+        /**
+         * @param triggerRateOverride The customized DDoS protection trigger rate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerRateOverride(@Nullable Output<String> triggerRateOverride) {
             $.triggerRateOverride = triggerRateOverride;
             return this;
         }
 
+        /**
+         * @param triggerRateOverride The customized DDoS protection trigger rate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerRateOverride(String triggerRateOverride) {
             return triggerRateOverride(Output.of(triggerRateOverride));
         }
 
+        /**
+         * @param triggerSensitivityOverride The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerSensitivityOverride(@Nullable Output<Either<String,DdosCustomPolicyTriggerSensitivityOverride>> triggerSensitivityOverride) {
             $.triggerSensitivityOverride = triggerSensitivityOverride;
             return this;
         }
 
+        /**
+         * @param triggerSensitivityOverride The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerSensitivityOverride(Either<String,DdosCustomPolicyTriggerSensitivityOverride> triggerSensitivityOverride) {
             return triggerSensitivityOverride(Output.of(triggerSensitivityOverride));
         }
 
+        /**
+         * @param triggerSensitivityOverride The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerSensitivityOverride(String triggerSensitivityOverride) {
             return triggerSensitivityOverride(Either.ofLeft(triggerSensitivityOverride));
         }
 
+        /**
+         * @param triggerSensitivityOverride The customized DDoS protection trigger rate sensitivity degrees. High: Trigger rate set with most sensitivity w.r.t. normal traffic. Default: Trigger rate set with moderate sensitivity w.r.t. normal traffic. Low: Trigger rate set with less sensitivity w.r.t. normal traffic. Relaxed: Trigger rate set with least sensitivity w.r.t. normal traffic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerSensitivityOverride(DdosCustomPolicyTriggerSensitivityOverride triggerSensitivityOverride) {
             return triggerSensitivityOverride(Either.ofRight(triggerSensitivityOverride));
         }

@@ -29,6 +29,10 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="backupManagementType")
     private @Nullable Output<Either<String,BackupManagementType>> backupManagementType;
 
+    /**
+     * @return Type of backup management for the container.
+     * 
+     */
     public Optional<Output<Either<String,BackupManagementType>>> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -44,6 +48,14 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="containerType", required=true)
     private Output<String> containerType;
 
+    /**
+     * @return Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+     * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+     * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+     * Backup is VMAppContainer
+     * Expected value is &#39;AzureSqlContainer&#39;.
+     * 
+     */
     public Output<String> containerType() {
         return this.containerType;
     }
@@ -55,6 +67,10 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="friendlyName")
     private @Nullable Output<String> friendlyName;
 
+    /**
+     * @return Friendly name of the container.
+     * 
+     */
     public Optional<Output<String>> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -66,6 +82,10 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="healthStatus")
     private @Nullable Output<String> healthStatus;
 
+    /**
+     * @return Status of health of the container.
+     * 
+     */
     public Optional<Output<String>> healthStatus() {
         return Optional.ofNullable(this.healthStatus);
     }
@@ -77,6 +97,10 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
     @Import(name="registrationStatus")
     private @Nullable Output<String> registrationStatus;
 
+    /**
+     * @return Status of registration of the container with the Recovery Services Vault.
+     * 
+     */
     public Optional<Output<String>> registrationStatus() {
         return Optional.ofNullable(this.registrationStatus);
     }
@@ -109,55 +133,135 @@ public final class AzureSqlContainerArgs extends com.pulumi.resources.ResourceAr
             $ = new AzureSqlContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable Output<Either<String,BackupManagementType>> backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(Either<String,BackupManagementType> backupManagementType) {
             return backupManagementType(Output.of(backupManagementType));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             return backupManagementType(Either.ofLeft(backupManagementType));
         }
 
+        /**
+         * @param backupManagementType Type of backup management for the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(BackupManagementType backupManagementType) {
             return backupManagementType(Either.ofRight(backupManagementType));
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;AzureSqlContainer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(Output<String> containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param containerType Type of the container. The value of this property for: 1. Compute Azure VM is Microsoft.Compute/virtualMachines 2.
+         * Classic Compute Azure VM is Microsoft.ClassicCompute/virtualMachines 3. Windows machines (like MAB, DPM etc) is
+         * Windows 4. Azure SQL instance is AzureSqlContainer. 5. Storage containers is StorageContainer. 6. Azure workload
+         * Backup is VMAppContainer
+         * Expected value is &#39;AzureSqlContainer&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(String containerType) {
             return containerType(Output.of(containerType));
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable Output<String> friendlyName) {
             $.friendlyName = friendlyName;
             return this;
         }
 
+        /**
+         * @param friendlyName Friendly name of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(String friendlyName) {
             return friendlyName(Output.of(friendlyName));
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(@Nullable Output<String> healthStatus) {
             $.healthStatus = healthStatus;
             return this;
         }
 
+        /**
+         * @param healthStatus Status of health of the container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStatus(String healthStatus) {
             return healthStatus(Output.of(healthStatus));
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(@Nullable Output<String> registrationStatus) {
             $.registrationStatus = registrationStatus;
             return this;
         }
 
+        /**
+         * @param registrationStatus Status of registration of the container with the Recovery Services Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationStatus(String registrationStatus) {
             return registrationStatus(Output.of(registrationStatus));
         }

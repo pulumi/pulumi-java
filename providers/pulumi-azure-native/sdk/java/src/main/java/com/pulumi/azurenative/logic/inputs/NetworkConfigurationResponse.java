@@ -28,6 +28,10 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="accessEndpoint")
     private @Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint;
 
+    /**
+     * @return The access endpoint.
+     * 
+     */
     public Optional<IntegrationServiceEnvironmentAccessEndpointResponse> accessEndpoint() {
         return Optional.ofNullable(this.accessEndpoint);
     }
@@ -39,6 +43,10 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="subnets")
     private @Nullable List<ResourceReferenceResponse> subnets;
 
+    /**
+     * @return The subnets.
+     * 
+     */
     public Optional<List<ResourceReferenceResponse>> subnets() {
         return Optional.ofNullable(this.subnets);
     }
@@ -50,6 +58,10 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
     @Import(name="virtualNetworkAddressSpace")
     private @Nullable String virtualNetworkAddressSpace;
 
+    /**
+     * @return Gets the virtual network address space.
+     * 
+     */
     public Optional<String> virtualNetworkAddressSpace() {
         return Optional.ofNullable(this.virtualNetworkAddressSpace);
     }
@@ -80,20 +92,44 @@ public final class NetworkConfigurationResponse extends com.pulumi.resources.Inv
             $ = new NetworkConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessEndpoint The access endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessEndpoint(@Nullable IntegrationServiceEnvironmentAccessEndpointResponse accessEndpoint) {
             $.accessEndpoint = accessEndpoint;
             return this;
         }
 
+        /**
+         * @param subnets The subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(@Nullable List<ResourceReferenceResponse> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets The subnets.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(ResourceReferenceResponse... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param virtualNetworkAddressSpace Gets the virtual network address space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkAddressSpace(@Nullable String virtualNetworkAddressSpace) {
             $.virtualNetworkAddressSpace = virtualNetworkAddressSpace;
             return this;

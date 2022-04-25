@@ -25,6 +25,10 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="isMaster", required=true)
     private Boolean isMaster;
 
+    /**
+     * @return Specifies whether the instance is a master node.
+     * 
+     */
     public Boolean isMaster() {
         return this.isMaster;
     }
@@ -36,6 +40,10 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="nonSslPort", required=true)
     private Integer nonSslPort;
 
+    /**
+     * @return If enableNonSslPort is true, provides Redis instance Non-SSL port.
+     * 
+     */
     public Integer nonSslPort() {
         return this.nonSslPort;
     }
@@ -47,6 +55,10 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="shardId", required=true)
     private Integer shardId;
 
+    /**
+     * @return If clustering is enabled, the Shard ID of Redis Instance
+     * 
+     */
     public Integer shardId() {
         return this.shardId;
     }
@@ -58,6 +70,10 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="sslPort", required=true)
     private Integer sslPort;
 
+    /**
+     * @return Redis instance SSL port.
+     * 
+     */
     public Integer sslPort() {
         return this.sslPort;
     }
@@ -69,6 +85,10 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="zone", required=true)
     private String zone;
 
+    /**
+     * @return If the Cache uses availability zones, specifies availability zone where this instance is located.
+     * 
+     */
     public String zone() {
         return this.zone;
     }
@@ -101,26 +121,56 @@ public final class RedisInstanceDetailsResponse extends com.pulumi.resources.Inv
             $ = new RedisInstanceDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isMaster Specifies whether the instance is a master node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isMaster(Boolean isMaster) {
             $.isMaster = isMaster;
             return this;
         }
 
+        /**
+         * @param nonSslPort If enableNonSslPort is true, provides Redis instance Non-SSL port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonSslPort(Integer nonSslPort) {
             $.nonSslPort = nonSslPort;
             return this;
         }
 
+        /**
+         * @param shardId If clustering is enabled, the Shard ID of Redis Instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardId(Integer shardId) {
             $.shardId = shardId;
             return this;
         }
 
+        /**
+         * @param sslPort Redis instance SSL port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslPort(Integer sslPort) {
             $.sslPort = sslPort;
             return this;
         }
 
+        /**
+         * @param zone If the Cache uses availability zones, specifies availability zone where this instance is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zone(String zone) {
             $.zone = zone;
             return this;

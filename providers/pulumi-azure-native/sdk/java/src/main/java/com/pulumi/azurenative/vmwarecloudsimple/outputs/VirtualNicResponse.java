@@ -16,42 +16,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualNicResponse {
     /**
-     * guest OS customization for nic
+     * @return guest OS customization for nic
      * 
      */
     private final @Nullable GuestOSNICCustomizationResponse customization;
     /**
-     * NIC ip address
+     * @return NIC ip address
      * 
      */
     private final @Nullable List<String> ipAddresses;
     /**
-     * NIC MAC address
+     * @return NIC MAC address
      * 
      */
     private final @Nullable String macAddress;
     /**
-     * Virtual Network
+     * @return Virtual Network
      * 
      */
     private final VirtualNetworkResponse network;
     /**
-     * NIC type
+     * @return NIC type
      * 
      */
     private final String nicType;
     /**
-     * Is NIC powered on/off on boot
+     * @return Is NIC powered on/off on boot
      * 
      */
     private final @Nullable Boolean powerOnBoot;
     /**
-     * NIC id
+     * @return NIC id
      * 
      */
     private final @Nullable String virtualNicId;
     /**
-     * NIC name
+     * @return NIC name
      * 
      */
     private final String virtualNicName;
@@ -77,58 +77,58 @@ public final class VirtualNicResponse {
     }
 
     /**
-     * guest OS customization for nic
+     * @return guest OS customization for nic
      * 
-    */
+     */
     public Optional<GuestOSNICCustomizationResponse> customization() {
         return Optional.ofNullable(this.customization);
     }
     /**
-     * NIC ip address
+     * @return NIC ip address
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
-     * NIC MAC address
+     * @return NIC MAC address
      * 
-    */
+     */
     public Optional<String> macAddress() {
         return Optional.ofNullable(this.macAddress);
     }
     /**
-     * Virtual Network
+     * @return Virtual Network
      * 
-    */
+     */
     public VirtualNetworkResponse network() {
         return this.network;
     }
     /**
-     * NIC type
+     * @return NIC type
      * 
-    */
+     */
     public String nicType() {
         return this.nicType;
     }
     /**
-     * Is NIC powered on/off on boot
+     * @return Is NIC powered on/off on boot
      * 
-    */
+     */
     public Optional<Boolean> powerOnBoot() {
         return Optional.ofNullable(this.powerOnBoot);
     }
     /**
-     * NIC id
+     * @return NIC id
      * 
-    */
+     */
     public Optional<String> virtualNicId() {
         return Optional.ofNullable(this.virtualNicId);
     }
     /**
-     * NIC name
+     * @return NIC name
      * 
-    */
+     */
     public String virtualNicName() {
         return this.virtualNicName;
     }

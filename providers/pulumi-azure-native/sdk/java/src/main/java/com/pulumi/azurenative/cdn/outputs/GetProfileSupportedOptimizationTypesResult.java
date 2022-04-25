@@ -11,7 +11,7 @@ import java.util.Objects;
 @CustomType
 public final class GetProfileSupportedOptimizationTypesResult {
     /**
-     * Supported optimization types for a profile.
+     * @return Supported optimization types for a profile.
      * 
      */
     private final List<String> supportedOptimizationTypes;
@@ -22,9 +22,9 @@ public final class GetProfileSupportedOptimizationTypesResult {
     }
 
     /**
-     * Supported optimization types for a profile.
+     * @return Supported optimization types for a profile.
      * 
-    */
+     */
     public List<String> supportedOptimizationTypes() {
         return this.supportedOptimizationTypes;
     }

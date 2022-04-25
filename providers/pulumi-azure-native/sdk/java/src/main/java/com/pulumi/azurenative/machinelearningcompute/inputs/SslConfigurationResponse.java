@@ -26,6 +26,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="cert")
     private @Nullable String cert;
 
+    /**
+     * @return The SSL cert data in PEM format.
+     * 
+     */
     public Optional<String> cert() {
         return Optional.ofNullable(this.cert);
     }
@@ -37,6 +41,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="cname")
     private @Nullable String cname;
 
+    /**
+     * @return The CName of the certificate.
+     * 
+     */
     public Optional<String> cname() {
         return Optional.ofNullable(this.cname);
     }
@@ -48,6 +56,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="key")
     private @Nullable String key;
 
+    /**
+     * @return The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+     * 
+     */
     public Optional<String> key() {
         return Optional.ofNullable(this.key);
     }
@@ -59,6 +71,10 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return SSL status. Allowed values are Enabled and Disabled.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -90,21 +106,45 @@ public final class SslConfigurationResponse extends com.pulumi.resources.InvokeA
             $ = new SslConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert The SSL cert data in PEM format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(@Nullable String cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param cname The CName of the certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cname(@Nullable String cname) {
             $.cname = cname;
             return this;
         }
 
+        /**
+         * @param key The SSL key data in PEM format. This is not returned in response of GET/PUT on the resource. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param status SSL status. Allowed values are Enabled and Disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

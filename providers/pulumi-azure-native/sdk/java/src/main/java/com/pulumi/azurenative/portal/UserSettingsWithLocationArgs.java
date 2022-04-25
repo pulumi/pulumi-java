@@ -23,6 +23,10 @@ public final class UserSettingsWithLocationArgs extends com.pulumi.resources.Res
     @Import(name="location", required=true)
     private Output<String> location;
 
+    /**
+     * @return The provider location
+     * 
+     */
     public Output<String> location() {
         return this.location;
     }
@@ -34,6 +38,10 @@ public final class UserSettingsWithLocationArgs extends com.pulumi.resources.Res
     @Import(name="properties", required=true)
     private Output<UserPropertiesArgs> properties;
 
+    /**
+     * @return The cloud shell user settings properties.
+     * 
+     */
     public Output<UserPropertiesArgs> properties() {
         return this.properties;
     }
@@ -45,6 +53,10 @@ public final class UserSettingsWithLocationArgs extends com.pulumi.resources.Res
     @Import(name="userSettingsName")
     private @Nullable Output<String> userSettingsName;
 
+    /**
+     * @return The name of the user settings
+     * 
+     */
     public Optional<Output<String>> userSettingsName() {
         return Optional.ofNullable(this.userSettingsName);
     }
@@ -75,29 +87,65 @@ public final class UserSettingsWithLocationArgs extends com.pulumi.resources.Res
             $ = new UserSettingsWithLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The provider location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The provider location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The cloud shell user settings properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<UserPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The cloud shell user settings properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(UserPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param userSettingsName The name of the user settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettingsName(@Nullable Output<String> userSettingsName) {
             $.userSettingsName = userSettingsName;
             return this;
         }
 
+        /**
+         * @param userSettingsName The name of the user settings
+         * 
+         * @return builder
+         * 
+         */
         public Builder userSettingsName(String userSettingsName) {
             return userSettingsName(Output.of(userSettingsName));
         }

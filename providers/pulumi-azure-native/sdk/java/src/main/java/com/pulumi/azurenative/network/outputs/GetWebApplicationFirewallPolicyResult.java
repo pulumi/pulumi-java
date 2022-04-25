@@ -19,72 +19,72 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWebApplicationFirewallPolicyResult {
     /**
-     * A collection of references to application gateways.
+     * @return A collection of references to application gateways.
      * 
      */
     private final List<ApplicationGatewayResponse> applicationGateways;
     /**
-     * The custom rules inside the policy.
+     * @return The custom rules inside the policy.
      * 
      */
     private final @Nullable List<WebApplicationFirewallCustomRuleResponse> customRules;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * A collection of references to application gateway http listeners.
+     * @return A collection of references to application gateway http listeners.
      * 
      */
     private final List<SubResourceResponse> httpListeners;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * Describes the managedRules structure.
+     * @return Describes the managedRules structure.
      * 
      */
     private final ManagedRulesDefinitionResponse managedRules;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * A collection of references to application gateway path rules.
+     * @return A collection of references to application gateway path rules.
      * 
      */
     private final List<SubResourceResponse> pathBasedRules;
     /**
-     * The PolicySettings for policy.
+     * @return The PolicySettings for policy.
      * 
      */
     private final @Nullable PolicySettingsResponse policySettings;
     /**
-     * The provisioning state of the web application firewall policy resource.
+     * @return The provisioning state of the web application firewall policy resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource status of the policy.
+     * @return Resource status of the policy.
      * 
      */
     private final String resourceState;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -122,100 +122,100 @@ public final class GetWebApplicationFirewallPolicyResult {
     }
 
     /**
-     * A collection of references to application gateways.
+     * @return A collection of references to application gateways.
      * 
-    */
+     */
     public List<ApplicationGatewayResponse> applicationGateways() {
         return this.applicationGateways;
     }
     /**
-     * The custom rules inside the policy.
+     * @return The custom rules inside the policy.
      * 
-    */
+     */
     public List<WebApplicationFirewallCustomRuleResponse> customRules() {
         return this.customRules == null ? List.of() : this.customRules;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * A collection of references to application gateway http listeners.
+     * @return A collection of references to application gateway http listeners.
      * 
-    */
+     */
     public List<SubResourceResponse> httpListeners() {
         return this.httpListeners;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Describes the managedRules structure.
+     * @return Describes the managedRules structure.
      * 
-    */
+     */
     public ManagedRulesDefinitionResponse managedRules() {
         return this.managedRules;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A collection of references to application gateway path rules.
+     * @return A collection of references to application gateway path rules.
      * 
-    */
+     */
     public List<SubResourceResponse> pathBasedRules() {
         return this.pathBasedRules;
     }
     /**
-     * The PolicySettings for policy.
+     * @return The PolicySettings for policy.
      * 
-    */
+     */
     public Optional<PolicySettingsResponse> policySettings() {
         return Optional.ofNullable(this.policySettings);
     }
     /**
-     * The provisioning state of the web application firewall policy resource.
+     * @return The provisioning state of the web application firewall policy resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource status of the policy.
+     * @return Resource status of the policy.
      * 
-    */
+     */
     public String resourceState() {
         return this.resourceState;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

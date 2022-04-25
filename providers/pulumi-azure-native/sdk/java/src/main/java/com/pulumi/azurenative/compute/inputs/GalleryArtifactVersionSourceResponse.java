@@ -25,6 +25,10 @@ public final class GalleryArtifactVersionSourceResponse extends com.pulumi.resou
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -36,6 +40,10 @@ public final class GalleryArtifactVersionSourceResponse extends com.pulumi.resou
     @Import(name="uri")
     private @Nullable String uri;
 
+    /**
+     * @return The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
+     * 
+     */
     public Optional<String> uri() {
         return Optional.ofNullable(this.uri);
     }
@@ -65,11 +73,23 @@ public final class GalleryArtifactVersionSourceResponse extends com.pulumi.resou
             $ = new GalleryArtifactVersionSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The id of the gallery artifact version source. Can specify a disk uri, snapshot uri, user image or storage account resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param uri The uri of the gallery artifact version source. Currently used to specify vhd/blob source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(@Nullable String uri) {
             $.uri = uri;
             return this;

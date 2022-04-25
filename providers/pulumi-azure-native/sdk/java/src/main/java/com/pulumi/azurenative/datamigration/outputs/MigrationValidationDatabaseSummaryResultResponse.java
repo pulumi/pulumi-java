@@ -10,37 +10,37 @@ import java.util.Objects;
 @CustomType
 public final class MigrationValidationDatabaseSummaryResultResponse {
     /**
-     * Validation end time
+     * @return Validation end time
      * 
      */
     private final String endedOn;
     /**
-     * Result identifier
+     * @return Result identifier
      * 
      */
     private final String id;
     /**
-     * Migration Identifier
+     * @return Migration Identifier
      * 
      */
     private final String migrationId;
     /**
-     * Name of the source database
+     * @return Name of the source database
      * 
      */
     private final String sourceDatabaseName;
     /**
-     * Validation start time
+     * @return Validation start time
      * 
      */
     private final String startedOn;
     /**
-     * Current status of validation at the database level
+     * @return Current status of validation at the database level
      * 
      */
     private final String status;
     /**
-     * Name of the target database
+     * @return Name of the target database
      * 
      */
     private final String targetDatabaseName;
@@ -64,51 +64,51 @@ public final class MigrationValidationDatabaseSummaryResultResponse {
     }
 
     /**
-     * Validation end time
+     * @return Validation end time
      * 
-    */
+     */
     public String endedOn() {
         return this.endedOn;
     }
     /**
-     * Result identifier
+     * @return Result identifier
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Migration Identifier
+     * @return Migration Identifier
      * 
-    */
+     */
     public String migrationId() {
         return this.migrationId;
     }
     /**
-     * Name of the source database
+     * @return Name of the source database
      * 
-    */
+     */
     public String sourceDatabaseName() {
         return this.sourceDatabaseName;
     }
     /**
-     * Validation start time
+     * @return Validation start time
      * 
-    */
+     */
     public String startedOn() {
         return this.startedOn;
     }
     /**
-     * Current status of validation at the database level
+     * @return Current status of validation at the database level
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Name of the target database
+     * @return Name of the target database
      * 
-    */
+     */
     public String targetDatabaseName() {
         return this.targetDatabaseName;
     }

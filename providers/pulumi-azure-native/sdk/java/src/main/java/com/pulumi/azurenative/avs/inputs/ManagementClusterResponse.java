@@ -25,6 +25,10 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterId", required=true)
     private Integer clusterId;
 
+    /**
+     * @return The identity
+     * 
+     */
     public Integer clusterId() {
         return this.clusterId;
     }
@@ -36,6 +40,10 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="clusterSize", required=true)
     private Integer clusterSize;
 
+    /**
+     * @return The cluster size
+     * 
+     */
     public Integer clusterSize() {
         return this.clusterSize;
     }
@@ -47,6 +55,10 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="hosts", required=true)
     private List<String> hosts;
 
+    /**
+     * @return The hosts
+     * 
+     */
     public List<String> hosts() {
         return this.hosts;
     }
@@ -58,6 +70,10 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The state of the cluster provisioning
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -89,25 +105,55 @@ public final class ManagementClusterResponse extends com.pulumi.resources.Invoke
             $ = new ManagementClusterResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterId The identity
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterId(Integer clusterId) {
             $.clusterId = clusterId;
             return this;
         }
 
+        /**
+         * @param clusterSize The cluster size
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSize(Integer clusterSize) {
             $.clusterSize = clusterSize;
             return this;
         }
 
+        /**
+         * @param hosts The hosts
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(List<String> hosts) {
             $.hosts = hosts;
             return this;
         }
 
+        /**
+         * @param hosts The hosts
+         * 
+         * @return builder
+         * 
+         */
         public Builder hosts(String... hosts) {
             return hosts(List.of(hosts));
         }
 
+        /**
+         * @param provisioningState The state of the cluster provisioning
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

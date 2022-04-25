@@ -25,6 +25,10 @@ public final class LineChannelPropertiesArgs extends com.pulumi.resources.Resour
     @Import(name="lineRegistrations", required=true)
     private Output<List<LineRegistrationArgs>> lineRegistrations;
 
+    /**
+     * @return The list of line channel registrations
+     * 
+     */
     public Output<List<LineRegistrationArgs>> lineRegistrations() {
         return this.lineRegistrations;
     }
@@ -53,15 +57,33 @@ public final class LineChannelPropertiesArgs extends com.pulumi.resources.Resour
             $ = new LineChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lineRegistrations The list of line channel registrations
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineRegistrations(Output<List<LineRegistrationArgs>> lineRegistrations) {
             $.lineRegistrations = lineRegistrations;
             return this;
         }
 
+        /**
+         * @param lineRegistrations The list of line channel registrations
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineRegistrations(List<LineRegistrationArgs> lineRegistrations) {
             return lineRegistrations(Output.of(lineRegistrations));
         }
 
+        /**
+         * @param lineRegistrations The list of line channel registrations
+         * 
+         * @return builder
+         * 
+         */
         public Builder lineRegistrations(LineRegistrationArgs... lineRegistrations) {
             return lineRegistrations(List.of(lineRegistrations));
         }

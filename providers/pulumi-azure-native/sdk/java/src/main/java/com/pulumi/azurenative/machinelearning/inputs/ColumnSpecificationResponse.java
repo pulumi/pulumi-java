@@ -28,6 +28,10 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
     @Import(name="enum")
     private @Nullable List<Object> enum_;
 
+    /**
+     * @return If the data type is categorical, this provides the list of accepted categories.
+     * 
+     */
     public Optional<List<Object>> enum_() {
         return Optional.ofNullable(this.enum_);
     }
@@ -39,6 +43,10 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
     @Import(name="format")
     private @Nullable String format;
 
+    /**
+     * @return Additional format information for the data type.
+     * 
+     */
     public Optional<String> format() {
         return Optional.ofNullable(this.format);
     }
@@ -50,6 +58,10 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Data type of the column.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -61,6 +73,10 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
     @Import(name="xMsIsnullable")
     private @Nullable Boolean xMsIsnullable;
 
+    /**
+     * @return Flag indicating if the type supports null values or not.
+     * 
+     */
     public Optional<Boolean> xMsIsnullable() {
         return Optional.ofNullable(this.xMsIsnullable);
     }
@@ -72,6 +88,10 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
     @Import(name="xMsIsordered")
     private @Nullable Boolean xMsIsordered;
 
+    /**
+     * @return Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
+     * 
+     */
     public Optional<Boolean> xMsIsordered() {
         return Optional.ofNullable(this.xMsIsordered);
     }
@@ -104,30 +124,66 @@ public final class ColumnSpecificationResponse extends com.pulumi.resources.Invo
             $ = new ColumnSpecificationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enum_ If the data type is categorical, this provides the list of accepted categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enum_(@Nullable List<Object> enum_) {
             $.enum_ = enum_;
             return this;
         }
 
+        /**
+         * @param enum_ If the data type is categorical, this provides the list of accepted categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enum_(Object... enum_) {
             return enum_(List.of(enum_));
         }
 
+        /**
+         * @param format Additional format information for the data type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable String format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param type Data type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param xMsIsnullable Flag indicating if the type supports null values or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xMsIsnullable(@Nullable Boolean xMsIsnullable) {
             $.xMsIsnullable = xMsIsnullable;
             return this;
         }
 
+        /**
+         * @param xMsIsordered Flag indicating whether the categories are treated as an ordered set or not, if this is a categorical column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder xMsIsordered(@Nullable Boolean xMsIsordered) {
             $.xMsIsordered = xMsIsordered;
             return this;

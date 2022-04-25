@@ -27,6 +27,10 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
     @Import(name="expirationDate", required=true)
     private String expirationDate;
 
+    /**
+     * @return When the recurrence will expire. This date is inclusive.
+     * 
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
@@ -38,6 +42,10 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
     @Import(name="frequency", required=true)
     private String frequency;
 
+    /**
+     * @return The frequency of the recurrence.
+     * 
+     */
     public String frequency() {
         return this.frequency;
     }
@@ -49,6 +57,10 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
     @Import(name="interval")
     private @Nullable Integer interval;
 
+    /**
+     * @return The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
+     * 
+     */
     public Optional<Integer> interval() {
         return Optional.ofNullable(this.interval);
     }
@@ -60,6 +72,10 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
     @Import(name="weekDays")
     private @Nullable List<String> weekDays;
 
+    /**
+     * @return The week days the schedule runs. Used for when the Frequency is set to Weekly.
+     * 
+     */
     public Optional<List<String>> weekDays() {
         return Optional.ofNullable(this.weekDays);
     }
@@ -91,26 +107,56 @@ public final class RecurrencePatternResponse extends com.pulumi.resources.Invoke
             $ = new RecurrencePatternResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationDate When the recurrence will expire. This date is inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationDate(String expirationDate) {
             $.expirationDate = expirationDate;
             return this;
         }
 
+        /**
+         * @param frequency The frequency of the recurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frequency(String frequency) {
             $.frequency = frequency;
             return this;
         }
 
+        /**
+         * @param interval The interval to invoke the schedule on. For example, interval = 2 and RecurrenceFrequency.Daily will run every 2 days. When no interval is supplied, an interval of 1 is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interval(@Nullable Integer interval) {
             $.interval = interval;
             return this;
         }
 
+        /**
+         * @param weekDays The week days the schedule runs. Used for when the Frequency is set to Weekly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(@Nullable List<String> weekDays) {
             $.weekDays = weekDays;
             return this;
         }
 
+        /**
+         * @param weekDays The week days the schedule runs. Used for when the Frequency is set to Weekly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weekDays(String... weekDays) {
             return weekDays(List.of(weekDays));
         }

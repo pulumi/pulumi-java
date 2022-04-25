@@ -21,6 +21,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="databaseCount", required=true)
     private Integer databaseCount;
 
+    /**
+     * @return Count of databases
+     * 
+     */
     public Integer databaseCount() {
         return this.databaseCount;
     }
@@ -32,6 +36,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -43,6 +51,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -55,6 +67,11 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;MigrationLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -66,6 +83,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServer", required=true)
     private String sourceServer;
 
+    /**
+     * @return Source server name
+     * 
+     */
     public String sourceServer() {
         return this.sourceServer;
     }
@@ -77,6 +98,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="sourceServerVersion", required=true)
     private String sourceServerVersion;
 
+    /**
+     * @return Source server version
+     * 
+     */
     public String sourceServerVersion() {
         return this.sourceServerVersion;
     }
@@ -88,6 +113,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -99,6 +128,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServer", required=true)
     private String targetServer;
 
+    /**
+     * @return Target server name
+     * 
+     */
     public String targetServer() {
         return this.targetServer;
     }
@@ -110,6 +143,10 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
     @Import(name="targetServerVersion", required=true)
     private String targetServerVersion;
 
+    /**
+     * @return Target server version
+     * 
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
@@ -146,46 +183,101 @@ public final class MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse ext
             $ = new MigrateSqlServerSqlDbSyncTaskOutputMigrationLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param databaseCount Count of databases
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseCount(Integer databaseCount) {
             $.databaseCount = databaseCount;
             return this;
         }
 
+        /**
+         * @param endedOn Migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;MigrationLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param sourceServer Source server name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServer(String sourceServer) {
             $.sourceServer = sourceServer;
             return this;
         }
 
+        /**
+         * @param sourceServerVersion Source server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceServerVersion(String sourceServerVersion) {
             $.sourceServerVersion = sourceServerVersion;
             return this;
         }
 
+        /**
+         * @param startedOn Migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param targetServer Target server name
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServer(String targetServer) {
             $.targetServer = targetServer;
             return this;
         }
 
+        /**
+         * @param targetServerVersion Target server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerVersion(String targetServerVersion) {
             $.targetServerVersion = targetServerVersion;
             return this;

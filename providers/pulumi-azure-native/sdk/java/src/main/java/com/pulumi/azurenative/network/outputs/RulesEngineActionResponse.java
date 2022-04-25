@@ -16,17 +16,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RulesEngineActionResponse {
     /**
-     * A list of header actions to apply from the request from AFD to the origin.
+     * @return A list of header actions to apply from the request from AFD to the origin.
      * 
      */
     private final @Nullable List<HeaderActionResponse> requestHeaderActions;
     /**
-     * A list of header actions to apply from the response from AFD to the client.
+     * @return A list of header actions to apply from the response from AFD to the client.
      * 
      */
     private final @Nullable List<HeaderActionResponse> responseHeaderActions;
     /**
-     * Override the route configuration.
+     * @return Override the route configuration.
      * 
      */
     private final @Nullable Either<ForwardingConfigurationResponse,RedirectConfigurationResponse> routeConfigurationOverride;
@@ -42,23 +42,23 @@ public final class RulesEngineActionResponse {
     }
 
     /**
-     * A list of header actions to apply from the request from AFD to the origin.
+     * @return A list of header actions to apply from the request from AFD to the origin.
      * 
-    */
+     */
     public List<HeaderActionResponse> requestHeaderActions() {
         return this.requestHeaderActions == null ? List.of() : this.requestHeaderActions;
     }
     /**
-     * A list of header actions to apply from the response from AFD to the client.
+     * @return A list of header actions to apply from the response from AFD to the client.
      * 
-    */
+     */
     public List<HeaderActionResponse> responseHeaderActions() {
         return this.responseHeaderActions == null ? List.of() : this.responseHeaderActions;
     }
     /**
-     * Override the route configuration.
+     * @return Override the route configuration.
      * 
-    */
+     */
     public Optional<Either<ForwardingConfigurationResponse,RedirectConfigurationResponse>> routeConfigurationOverride() {
         return Optional.ofNullable(this.routeConfigurationOverride);
     }

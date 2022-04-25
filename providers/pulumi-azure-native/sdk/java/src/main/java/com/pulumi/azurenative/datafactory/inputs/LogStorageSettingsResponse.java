@@ -26,6 +26,10 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="enableReliableLogging")
     private @Nullable Object enableReliableLogging;
 
+    /**
+     * @return Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableReliableLogging() {
         return Optional.ofNullable(this.enableReliableLogging);
     }
@@ -37,6 +41,10 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Log storage linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -48,6 +56,10 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="logLevel")
     private @Nullable Object logLevel;
 
+    /**
+     * @return Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> logLevel() {
         return Optional.ofNullable(this.logLevel);
     }
@@ -59,6 +71,10 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
     @Import(name="path")
     private @Nullable Object path;
 
+    /**
+     * @return The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }
@@ -90,21 +106,45 @@ public final class LogStorageSettingsResponse extends com.pulumi.resources.Invok
             $ = new LogStorageSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableReliableLogging Specifies whether to enable reliable logging. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableReliableLogging(@Nullable Object enableReliableLogging) {
             $.enableReliableLogging = enableReliableLogging;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Log storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param logLevel Gets or sets the log level, support: Info, Warning. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder logLevel(@Nullable Object logLevel) {
             $.logLevel = logLevel;
             return this;
         }
 
+        /**
+         * @param path The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Object path) {
             $.path = path;
             return this;

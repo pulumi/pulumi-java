@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OrphanedUserInfoResponse {
     /**
-     * Parent database of the user
+     * @return Parent database of the user
      * 
      */
     private final @Nullable String databaseName;
     /**
-     * Name of the orphaned user
+     * @return Name of the orphaned user
      * 
      */
     private final @Nullable String name;
@@ -31,16 +31,16 @@ public final class OrphanedUserInfoResponse {
     }
 
     /**
-     * Parent database of the user
+     * @return Parent database of the user
      * 
-    */
+     */
     public Optional<String> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
     /**
-     * Name of the orphaned user
+     * @return Name of the orphaned user
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }

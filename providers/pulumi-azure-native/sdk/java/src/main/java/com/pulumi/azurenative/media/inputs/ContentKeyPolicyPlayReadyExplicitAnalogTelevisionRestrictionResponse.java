@@ -24,6 +24,10 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
     @Import(name="bestEffort", required=true)
     private Boolean bestEffort;
 
+    /**
+     * @return Indicates whether this restriction is enforced on a Best Effort basis.
+     * 
+     */
     public Boolean bestEffort() {
         return this.bestEffort;
     }
@@ -35,6 +39,10 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
     @Import(name="configurationData", required=true)
     private Integer configurationData;
 
+    /**
+     * @return Configures the restriction control bits. Must be between 0 and 3 inclusive.
+     * 
+     */
     public Integer configurationData() {
         return this.configurationData;
     }
@@ -64,11 +72,23 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
             $ = new ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bestEffort Indicates whether this restriction is enforced on a Best Effort basis.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bestEffort(Boolean bestEffort) {
             $.bestEffort = bestEffort;
             return this;
         }
 
+        /**
+         * @param configurationData Configures the restriction control bits. Must be between 0 and 3 inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationData(Integer configurationData) {
             $.configurationData = configurationData;
             return this;

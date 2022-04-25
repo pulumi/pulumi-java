@@ -27,6 +27,11 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="authType", required=true)
     private String authType;
 
+    /**
+     * @return The authentication type.
+     * Expected value is &#39;secret&#39;.
+     * 
+     */
     public String authType() {
         return this.authType;
     }
@@ -38,6 +43,10 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Username or account name for secret auth.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +58,10 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="secret")
     private @Nullable String secret;
 
+    /**
+     * @return Password or account key for secret auth.
+     * 
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }
@@ -79,16 +92,35 @@ public final class SecretAuthInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new SecretAuthInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType The authentication type.
+         * Expected value is &#39;secret&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param name Username or account name for secret auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param secret Password or account key for secret auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secret(@Nullable String secret) {
             $.secret = secret;
             return this;

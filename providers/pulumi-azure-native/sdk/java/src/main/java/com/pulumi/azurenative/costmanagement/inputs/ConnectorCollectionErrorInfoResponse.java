@@ -23,6 +23,10 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
     @Import(name="errorCode", required=true)
     private String errorCode;
 
+    /**
+     * @return Short error code
+     * 
+     */
     public String errorCode() {
         return this.errorCode;
     }
@@ -34,6 +38,10 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
     @Import(name="errorInnerMessage", required=true)
     private String errorInnerMessage;
 
+    /**
+     * @return External Provider error message
+     * 
+     */
     public String errorInnerMessage() {
         return this.errorInnerMessage;
     }
@@ -45,6 +53,10 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return Detailed error message
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -56,6 +68,10 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
     @Import(name="errorStartTime", required=true)
     private String errorStartTime;
 
+    /**
+     * @return Time the error started occurring (Last time error occurred in lastChecked)
+     * 
+     */
     public String errorStartTime() {
         return this.errorStartTime;
     }
@@ -87,21 +103,45 @@ public final class ConnectorCollectionErrorInfoResponse extends com.pulumi.resou
             $ = new ConnectorCollectionErrorInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorCode Short error code
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorCode(String errorCode) {
             $.errorCode = errorCode;
             return this;
         }
 
+        /**
+         * @param errorInnerMessage External Provider error message
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorInnerMessage(String errorInnerMessage) {
             $.errorInnerMessage = errorInnerMessage;
             return this;
         }
 
+        /**
+         * @param errorMessage Detailed error message
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param errorStartTime Time the error started occurring (Last time error occurred in lastChecked)
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorStartTime(String errorStartTime) {
             $.errorStartTime = errorStartTime;
             return this;

@@ -26,6 +26,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="migrationSetting")
     private @Nullable Map<String,String> migrationSetting;
 
+    /**
+     * @return Migration settings which tune the migration behavior
+     * 
+     */
     public Optional<Map<String,String>> migrationSetting() {
         return Optional.ofNullable(this.migrationSetting);
     }
@@ -37,6 +41,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the database
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="sourceSetting")
     private @Nullable Map<String,String> sourceSetting;
 
+    /**
+     * @return Source settings to tune source endpoint migration behavior
+     * 
+     */
     public Optional<Map<String,String>> sourceSetting() {
         return Optional.ofNullable(this.sourceSetting);
     }
@@ -59,6 +71,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="targetDatabaseName")
     private @Nullable String targetDatabaseName;
 
+    /**
+     * @return Name of target database. Note: Target database will be truncated before starting migration.
+     * 
+     */
     public Optional<String> targetDatabaseName() {
         return Optional.ofNullable(this.targetDatabaseName);
     }
@@ -70,6 +86,10 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
     @Import(name="targetSetting")
     private @Nullable Map<String,String> targetSetting;
 
+    /**
+     * @return Target settings to tune target endpoint migration behavior
+     * 
+     */
     public Optional<Map<String,String>> targetSetting() {
         return Optional.ofNullable(this.targetSetting);
     }
@@ -102,26 +122,56 @@ public final class MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse extends 
             $ = new MigrateMySqlAzureDbForMySqlSyncDatabaseInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param migrationSetting Migration settings which tune the migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationSetting(@Nullable Map<String,String> migrationSetting) {
             $.migrationSetting = migrationSetting;
             return this;
         }
 
+        /**
+         * @param name Name of the database
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sourceSetting Source settings to tune source endpoint migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceSetting(@Nullable Map<String,String> sourceSetting) {
             $.sourceSetting = sourceSetting;
             return this;
         }
 
+        /**
+         * @param targetDatabaseName Name of target database. Note: Target database will be truncated before starting migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetDatabaseName(@Nullable String targetDatabaseName) {
             $.targetDatabaseName = targetDatabaseName;
             return this;
         }
 
+        /**
+         * @param targetSetting Target settings to tune target endpoint migration behavior
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetSetting(@Nullable Map<String,String> targetSetting) {
             $.targetSetting = targetSetting;
             return this;

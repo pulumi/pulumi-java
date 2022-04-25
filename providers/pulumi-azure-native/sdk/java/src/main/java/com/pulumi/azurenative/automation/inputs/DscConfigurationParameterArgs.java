@@ -28,6 +28,10 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
     @Import(name="defaultValue")
     private @Nullable Output<String> defaultValue;
 
+    /**
+     * @return Gets or sets the default value of parameter.
+     * 
+     */
     public Optional<Output<String>> defaultValue() {
         return Optional.ofNullable(this.defaultValue);
     }
@@ -39,6 +43,10 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
     @Import(name="isMandatory")
     private @Nullable Output<Boolean> isMandatory;
 
+    /**
+     * @return Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+     * 
+     */
     public Optional<Output<Boolean>> isMandatory() {
         return Optional.ofNullable(this.isMandatory);
     }
@@ -50,6 +58,10 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
     @Import(name="position")
     private @Nullable Output<Integer> position;
 
+    /**
+     * @return Get or sets the position of the parameter.
+     * 
+     */
     public Optional<Output<Integer>> position() {
         return Optional.ofNullable(this.position);
     }
@@ -61,6 +73,10 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
     @Import(name="type")
     private @Nullable Output<String> type;
 
+    /**
+     * @return Gets or sets the type of the parameter.
+     * 
+     */
     public Optional<Output<String>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -92,38 +108,86 @@ public final class DscConfigurationParameterArgs extends com.pulumi.resources.Re
             $ = new DscConfigurationParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultValue Gets or sets the default value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(@Nullable Output<String> defaultValue) {
             $.defaultValue = defaultValue;
             return this;
         }
 
+        /**
+         * @param defaultValue Gets or sets the default value of parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultValue(String defaultValue) {
             return defaultValue(Output.of(defaultValue));
         }
 
+        /**
+         * @param isMandatory Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isMandatory(@Nullable Output<Boolean> isMandatory) {
             $.isMandatory = isMandatory;
             return this;
         }
 
+        /**
+         * @param isMandatory Gets or sets a Boolean value to indicate whether the parameter is mandatory or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isMandatory(Boolean isMandatory) {
             return isMandatory(Output.of(isMandatory));
         }
 
+        /**
+         * @param position Get or sets the position of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(@Nullable Output<Integer> position) {
             $.position = position;
             return this;
         }
 
+        /**
+         * @param position Get or sets the position of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder position(Integer position) {
             return position(Output.of(position));
         }
 
+        /**
+         * @param type Gets or sets the type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Gets or sets the type of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -29,6 +29,10 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
     @Import(name="networkInterfaces")
     private @Nullable List<NetworkInterfaceResponse> networkInterfaces;
 
+    /**
+     * @return The network interface configuration.
+     * 
+     */
     public Optional<List<NetworkInterfaceResponse>> networkInterfaces() {
         return Optional.ofNullable(this.networkInterfaces);
     }
@@ -40,6 +44,10 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
     @Import(name="osProfile")
     private @Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile;
 
+    /**
+     * @return Specifies the operating system settings for the role instance.
+     * 
+     */
     public Optional<NetworkFunctionUserConfigurationResponseOsProfile> osProfile() {
         return Optional.ofNullable(this.osProfile);
     }
@@ -51,6 +59,10 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
     @Import(name="roleName")
     private @Nullable String roleName;
 
+    /**
+     * @return The name of the network function role.
+     * 
+     */
     public Optional<String> roleName() {
         return Optional.ofNullable(this.roleName);
     }
@@ -62,6 +74,10 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
     @Import(name="userDataParameters")
     private @Nullable Object userDataParameters;
 
+    /**
+     * @return The user data parameters from the customer.
+     * 
+     */
     public Optional<Object> userDataParameters() {
         return Optional.ofNullable(this.userDataParameters);
     }
@@ -93,25 +109,55 @@ public final class NetworkFunctionUserConfigurationResponse extends com.pulumi.r
             $ = new NetworkFunctionUserConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param networkInterfaces The network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(@Nullable List<NetworkInterfaceResponse> networkInterfaces) {
             $.networkInterfaces = networkInterfaces;
             return this;
         }
 
+        /**
+         * @param networkInterfaces The network interface configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaces(NetworkInterfaceResponse... networkInterfaces) {
             return networkInterfaces(List.of(networkInterfaces));
         }
 
+        /**
+         * @param osProfile Specifies the operating system settings for the role instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osProfile(@Nullable NetworkFunctionUserConfigurationResponseOsProfile osProfile) {
             $.osProfile = osProfile;
             return this;
         }
 
+        /**
+         * @param roleName The name of the network function role.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(@Nullable String roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param userDataParameters The user data parameters from the customer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userDataParameters(@Nullable Object userDataParameters) {
             $.userDataParameters = userDataParameters;
             return this;

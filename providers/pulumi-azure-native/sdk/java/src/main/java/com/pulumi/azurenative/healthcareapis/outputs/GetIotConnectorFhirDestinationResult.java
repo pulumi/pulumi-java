@@ -14,47 +14,47 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIotConnectorFhirDestinationResult {
     /**
-     * An etag associated with the resource, used for optimistic concurrency when editing it.
+     * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
      */
     private final @Nullable String etag;
     /**
-     * FHIR Mappings
+     * @return FHIR Mappings
      * 
      */
     private final IotMappingPropertiesResponse fhirMapping;
     /**
-     * Fully qualified resource id of the FHIR service to connect to.
+     * @return Fully qualified resource id of the FHIR service to connect to.
      * 
      */
     private final String fhirServiceResourceId;
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
      */
     private final String id;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The resource name.
+     * @return The resource name.
      * 
      */
     private final String name;
     /**
-     * Determines how resource identity is resolved on the destination.
+     * @return Determines how resource identity is resolved on the destination.
      * 
      */
     private final String resourceIdentityResolutionType;
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The resource type.
+     * @return The resource type.
      * 
      */
     private final String type;
@@ -82,65 +82,65 @@ public final class GetIotConnectorFhirDestinationResult {
     }
 
     /**
-     * An etag associated with the resource, used for optimistic concurrency when editing it.
+     * @return An etag associated with the resource, used for optimistic concurrency when editing it.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * FHIR Mappings
+     * @return FHIR Mappings
      * 
-    */
+     */
     public IotMappingPropertiesResponse fhirMapping() {
         return this.fhirMapping;
     }
     /**
-     * Fully qualified resource id of the FHIR service to connect to.
+     * @return Fully qualified resource id of the FHIR service to connect to.
      * 
-    */
+     */
     public String fhirServiceResourceId() {
         return this.fhirServiceResourceId;
     }
     /**
-     * The resource identifier.
+     * @return The resource identifier.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The resource name.
+     * @return The resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Determines how resource identity is resolved on the destination.
+     * @return Determines how resource identity is resolved on the destination.
      * 
-    */
+     */
     public String resourceIdentityResolutionType() {
         return this.resourceIdentityResolutionType;
     }
     /**
-     * Metadata pertaining to creation and last modification of the resource.
+     * @return Metadata pertaining to creation and last modification of the resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The resource type.
+     * @return The resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

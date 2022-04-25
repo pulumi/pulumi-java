@@ -30,6 +30,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="datadogOrganizationProperties")
     private @Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties;
 
+    /**
+     * @return Datadog organization properties
+     * 
+     */
     public Optional<Output<DatadogOrganizationPropertiesArgs>> datadogOrganizationProperties() {
         return Optional.ofNullable(this.datadogOrganizationProperties);
     }
@@ -41,6 +45,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="monitoringStatus")
     private @Nullable Output<Either<String,MonitoringStatus>> monitoringStatus;
 
+    /**
+     * @return Flag specifying if the resource monitoring is enabled or disabled.
+     * 
+     */
     public Optional<Output<Either<String,MonitoringStatus>>> monitoringStatus() {
         return Optional.ofNullable(this.monitoringStatus);
     }
@@ -52,6 +60,10 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="userInfo")
     private @Nullable Output<UserInfoArgs> userInfo;
 
+    /**
+     * @return User info
+     * 
+     */
     public Optional<Output<UserInfoArgs>> userInfo() {
         return Optional.ofNullable(this.userInfo);
     }
@@ -82,37 +94,85 @@ public final class MonitorPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new MonitorPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param datadogOrganizationProperties Datadog organization properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder datadogOrganizationProperties(@Nullable Output<DatadogOrganizationPropertiesArgs> datadogOrganizationProperties) {
             $.datadogOrganizationProperties = datadogOrganizationProperties;
             return this;
         }
 
+        /**
+         * @param datadogOrganizationProperties Datadog organization properties
+         * 
+         * @return builder
+         * 
+         */
         public Builder datadogOrganizationProperties(DatadogOrganizationPropertiesArgs datadogOrganizationProperties) {
             return datadogOrganizationProperties(Output.of(datadogOrganizationProperties));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(@Nullable Output<Either<String,MonitoringStatus>> monitoringStatus) {
             $.monitoringStatus = monitoringStatus;
             return this;
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(Either<String,MonitoringStatus> monitoringStatus) {
             return monitoringStatus(Output.of(monitoringStatus));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(String monitoringStatus) {
             return monitoringStatus(Either.ofLeft(monitoringStatus));
         }
 
+        /**
+         * @param monitoringStatus Flag specifying if the resource monitoring is enabled or disabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitoringStatus(MonitoringStatus monitoringStatus) {
             return monitoringStatus(Either.ofRight(monitoringStatus));
         }
 
+        /**
+         * @param userInfo User info
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInfo(@Nullable Output<UserInfoArgs> userInfo) {
             $.userInfo = userInfo;
             return this;
         }
 
+        /**
+         * @param userInfo User info
+         * 
+         * @return builder
+         * 
+         */
         public Builder userInfo(UserInfoArgs userInfo) {
             return userInfo(Output.of(userInfo));
         }

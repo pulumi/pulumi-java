@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class TelegramChannelPropertiesResponse {
     /**
-     * The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final @Nullable String accessToken;
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
      */
     private final Boolean isEnabled;
     /**
-     * Whether this channel is validated for the bot
+     * @return Whether this channel is validated for the bot
      * 
      */
     private final @Nullable Boolean isValidated;
@@ -39,23 +39,23 @@ public final class TelegramChannelPropertiesResponse {
     }
 
     /**
-     * The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return The Telegram access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
-     * Whether this channel is enabled for the bot
+     * @return Whether this channel is enabled for the bot
      * 
-    */
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
     /**
-     * Whether this channel is validated for the bot
+     * @return Whether this channel is validated for the bot
      * 
-    */
+     */
     public Optional<Boolean> isValidated() {
         return Optional.ofNullable(this.isValidated);
     }

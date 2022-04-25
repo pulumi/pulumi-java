@@ -26,6 +26,10 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
     @Import(name="columnName", required=true)
     private String columnName;
 
+    /**
+     * @return The column name of the import file.
+     * 
+     */
     public String columnName() {
         return this.columnName;
     }
@@ -37,6 +41,10 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
     @Import(name="customFormatSpecifier")
     private @Nullable String customFormatSpecifier;
 
+    /**
+     * @return Custom format specifier for input parsing.
+     * 
+     */
     public Optional<String> customFormatSpecifier() {
         return Optional.ofNullable(this.customFormatSpecifier);
     }
@@ -48,6 +56,10 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
     @Import(name="isEncrypted")
     private @Nullable Boolean isEncrypted;
 
+    /**
+     * @return Indicates if the column is encrypted.
+     * 
+     */
     public Optional<Boolean> isEncrypted() {
         return Optional.ofNullable(this.isEncrypted);
     }
@@ -59,6 +71,10 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
     @Import(name="propertyName", required=true)
     private String propertyName;
 
+    /**
+     * @return The property name of the mapping entity.
+     * 
+     */
     public String propertyName() {
         return this.propertyName;
     }
@@ -90,21 +106,45 @@ public final class ConnectorMappingStructureResponse extends com.pulumi.resource
             $ = new ConnectorMappingStructureResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param columnName The column name of the import file.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnName(String columnName) {
             $.columnName = columnName;
             return this;
         }
 
+        /**
+         * @param customFormatSpecifier Custom format specifier for input parsing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customFormatSpecifier(@Nullable String customFormatSpecifier) {
             $.customFormatSpecifier = customFormatSpecifier;
             return this;
         }
 
+        /**
+         * @param isEncrypted Indicates if the column is encrypted.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEncrypted(@Nullable Boolean isEncrypted) {
             $.isEncrypted = isEncrypted;
             return this;
         }
 
+        /**
+         * @param propertyName The property name of the mapping entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder propertyName(String propertyName) {
             $.propertyName = propertyName;
             return this;

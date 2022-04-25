@@ -28,6 +28,10 @@ public final class ModuleAssetParameterArgs extends com.pulumi.resources.Resourc
     @Import(name="modeValuesInfo")
     private @Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo;
 
+    /**
+     * @return Definitions for nested interface parameters if this is a complex module parameter.
+     * 
+     */
     public Optional<Output<Map<String,ModeValueInfoArgs>>> modeValuesInfo() {
         return Optional.ofNullable(this.modeValuesInfo);
     }
@@ -39,6 +43,10 @@ public final class ModuleAssetParameterArgs extends com.pulumi.resources.Resourc
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Parameter name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -50,6 +58,10 @@ public final class ModuleAssetParameterArgs extends com.pulumi.resources.Resourc
     @Import(name="parameterType")
     private @Nullable Output<String> parameterType;
 
+    /**
+     * @return Parameter type.
+     * 
+     */
     public Optional<Output<String>> parameterType() {
         return Optional.ofNullable(this.parameterType);
     }
@@ -80,29 +92,65 @@ public final class ModuleAssetParameterArgs extends com.pulumi.resources.Resourc
             $ = new ModuleAssetParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param modeValuesInfo Definitions for nested interface parameters if this is a complex module parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modeValuesInfo(@Nullable Output<Map<String,ModeValueInfoArgs>> modeValuesInfo) {
             $.modeValuesInfo = modeValuesInfo;
             return this;
         }
 
+        /**
+         * @param modeValuesInfo Definitions for nested interface parameters if this is a complex module parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder modeValuesInfo(Map<String,ModeValueInfoArgs> modeValuesInfo) {
             return modeValuesInfo(Output.of(modeValuesInfo));
         }
 
+        /**
+         * @param name Parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Parameter name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameterType Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterType(@Nullable Output<String> parameterType) {
             $.parameterType = parameterType;
             return this;
         }
 
+        /**
+         * @param parameterType Parameter type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterType(String parameterType) {
             return parameterType(Output.of(parameterType));
         }

@@ -25,6 +25,11 @@ public final class ContentKeyPolicyUnknownConfigurationResponse extends com.pulu
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyUnknownConfiguration&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -53,6 +58,13 @@ public final class ContentKeyPolicyUnknownConfigurationResponse extends com.pulu
             $ = new ContentKeyPolicyUnknownConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.ContentKeyPolicyUnknownConfiguration&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

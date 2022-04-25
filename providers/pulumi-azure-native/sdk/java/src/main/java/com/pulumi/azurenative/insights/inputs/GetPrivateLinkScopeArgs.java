@@ -19,6 +19,10 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
     @Import(name="scopeName", required=true)
     private String scopeName;
 
+    /**
+     * @return The name of the Azure Monitor PrivateLinkScope resource.
+     * 
+     */
     public String scopeName() {
         return this.scopeName;
     }
@@ -59,11 +67,23 @@ public final class GetPrivateLinkScopeArgs extends com.pulumi.resources.InvokeAr
             $ = new GetPrivateLinkScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param scopeName The name of the Azure Monitor PrivateLinkScope resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopeName(String scopeName) {
             $.scopeName = scopeName;
             return this;

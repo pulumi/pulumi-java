@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ManagedVirtualNetworkSettingsResponse {
     /**
-     * Allowed Aad Tenant Ids For Linking
+     * @return Allowed Aad Tenant Ids For Linking
      * 
      */
     private final @Nullable List<String> allowedAadTenantIdsForLinking;
     /**
-     * Linked Access Check On Target Resource
+     * @return Linked Access Check On Target Resource
      * 
      */
     private final @Nullable Boolean linkedAccessCheckOnTargetResource;
     /**
-     * Prevent Data Exfiltration
+     * @return Prevent Data Exfiltration
      * 
      */
     private final @Nullable Boolean preventDataExfiltration;
@@ -40,23 +40,23 @@ public final class ManagedVirtualNetworkSettingsResponse {
     }
 
     /**
-     * Allowed Aad Tenant Ids For Linking
+     * @return Allowed Aad Tenant Ids For Linking
      * 
-    */
+     */
     public List<String> allowedAadTenantIdsForLinking() {
         return this.allowedAadTenantIdsForLinking == null ? List.of() : this.allowedAadTenantIdsForLinking;
     }
     /**
-     * Linked Access Check On Target Resource
+     * @return Linked Access Check On Target Resource
      * 
-    */
+     */
     public Optional<Boolean> linkedAccessCheckOnTargetResource() {
         return Optional.ofNullable(this.linkedAccessCheckOnTargetResource);
     }
     /**
-     * Prevent Data Exfiltration
+     * @return Prevent Data Exfiltration
      * 
-    */
+     */
     public Optional<Boolean> preventDataExfiltration() {
         return Optional.ofNullable(this.preventDataExfiltration);
     }

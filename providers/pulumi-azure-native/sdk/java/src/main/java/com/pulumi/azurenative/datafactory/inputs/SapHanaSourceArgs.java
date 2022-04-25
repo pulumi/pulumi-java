@@ -29,6 +29,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="additionalColumns")
     private @Nullable Output<Object> additionalColumns;
 
+    /**
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     public Optional<Output<Object>> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
@@ -40,6 +44,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -51,6 +59,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -62,6 +74,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="packetSize")
     private @Nullable Output<Object> packetSize;
 
+    /**
+     * @return The packet size of data read from SAP HANA. Type: integer(or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> packetSize() {
         return Optional.ofNullable(this.packetSize);
     }
@@ -73,6 +89,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionOption")
     private @Nullable Output<Object> partitionOption;
 
+    /**
+     * @return The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;SapHanaDynamicRange&#34;.
+     * 
+     */
     public Optional<Output<Object>> partitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
@@ -84,6 +104,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="partitionSettings")
     private @Nullable Output<SapHanaPartitionSettingsArgs> partitionSettings;
 
+    /**
+     * @return The settings that will be leveraged for SAP HANA source partitioning.
+     * 
+     */
     public Optional<Output<SapHanaPartitionSettingsArgs>> partitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
@@ -95,6 +119,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="query")
     private @Nullable Output<Object> query;
 
+    /**
+     * @return SAP HANA Sql query. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> query() {
         return Optional.ofNullable(this.query);
     }
@@ -106,6 +134,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="queryTimeout")
     private @Nullable Output<Object> queryTimeout;
 
+    /**
+     * @return Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
@@ -117,6 +149,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryCount")
     private @Nullable Output<Object> sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -128,6 +164,10 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceRetryWait")
     private @Nullable Output<Object> sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -140,6 +180,11 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;SapHanaSource&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -178,101 +223,235 @@ public final class SapHanaSourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SapHanaSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalColumns Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
             $.additionalColumns = additionalColumns;
             return this;
         }
 
+        /**
+         * @param additionalColumns Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalColumns(Object additionalColumns) {
             return additionalColumns(Output.of(additionalColumns));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param packetSize The packet size of data read from SAP HANA. Type: integer(or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packetSize(@Nullable Output<Object> packetSize) {
             $.packetSize = packetSize;
             return this;
         }
 
+        /**
+         * @param packetSize The packet size of data read from SAP HANA. Type: integer(or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder packetSize(Object packetSize) {
             return packetSize(Output.of(packetSize));
         }
 
+        /**
+         * @param partitionOption The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;SapHanaDynamicRange&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionOption(@Nullable Output<Object> partitionOption) {
             $.partitionOption = partitionOption;
             return this;
         }
 
+        /**
+         * @param partitionOption The partition mechanism that will be used for SAP HANA read in parallel. Possible values include: &#34;None&#34;, &#34;PhysicalPartitionsOfTable&#34;, &#34;SapHanaDynamicRange&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionOption(Object partitionOption) {
             return partitionOption(Output.of(partitionOption));
         }
 
+        /**
+         * @param partitionSettings The settings that will be leveraged for SAP HANA source partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionSettings(@Nullable Output<SapHanaPartitionSettingsArgs> partitionSettings) {
             $.partitionSettings = partitionSettings;
             return this;
         }
 
+        /**
+         * @param partitionSettings The settings that will be leveraged for SAP HANA source partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionSettings(SapHanaPartitionSettingsArgs partitionSettings) {
             return partitionSettings(Output.of(partitionSettings));
         }
 
+        /**
+         * @param query SAP HANA Sql query. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable Output<Object> query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param query SAP HANA Sql query. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(Object query) {
             return query(Output.of(query));
         }
 
+        /**
+         * @param queryTimeout Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
             $.queryTimeout = queryTimeout;
             return this;
         }
 
+        /**
+         * @param queryTimeout Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(Object queryTimeout) {
             return queryTimeout(Output.of(queryTimeout));
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(Object sourceRetryCount) {
             return sourceRetryCount(Output.of(sourceRetryCount));
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(Object sourceRetryWait) {
             return sourceRetryWait(Output.of(sourceRetryWait));
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;SapHanaSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;SapHanaSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

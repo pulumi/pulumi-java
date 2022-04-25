@@ -29,6 +29,10 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
     @Import(name="backendAddressPools")
     private @Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools;
 
+    /**
+     * @return Gets or sets the backend address pools of the load balancer.
+     * 
+     */
     public Optional<List<LBBackendAddressPoolResourceSettingsResponse>> backendAddressPools() {
         return Optional.ofNullable(this.backendAddressPools);
     }
@@ -40,6 +44,10 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
     @Import(name="frontendIPConfigurations")
     private @Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations;
 
+    /**
+     * @return Gets or sets the frontend IP configurations of the load balancer.
+     * 
+     */
     public Optional<List<LBFrontendIPConfigurationResourceSettingsResponse>> frontendIPConfigurations() {
         return Optional.ofNullable(this.frontendIPConfigurations);
     }
@@ -52,6 +60,11 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Network/loadBalancers&#39;.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -63,6 +76,10 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
     @Import(name="sku")
     private @Nullable String sku;
 
+    /**
+     * @return Gets or sets load balancer sku (Basic/Standard).
+     * 
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -74,6 +91,10 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
     @Import(name="targetResourceName", required=true)
     private String targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public String targetResourceName() {
         return this.targetResourceName;
     }
@@ -86,6 +107,11 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
     @Import(name="zones")
     private @Nullable String zones;
 
+    /**
+     * @return Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+     *  precedence only if frontend IP configurations settings are not present.
+     * 
+     */
     public Optional<String> zones() {
         return Optional.ofNullable(this.zones);
     }
@@ -119,39 +145,89 @@ public final class LoadBalancerResourceSettingsResponse extends com.pulumi.resou
             $ = new LoadBalancerResourceSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendAddressPools Gets or sets the backend address pools of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(@Nullable List<LBBackendAddressPoolResourceSettingsResponse> backendAddressPools) {
             $.backendAddressPools = backendAddressPools;
             return this;
         }
 
+        /**
+         * @param backendAddressPools Gets or sets the backend address pools of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddressPools(LBBackendAddressPoolResourceSettingsResponse... backendAddressPools) {
             return backendAddressPools(List.of(backendAddressPools));
         }
 
+        /**
+         * @param frontendIPConfigurations Gets or sets the frontend IP configurations of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(@Nullable List<LBFrontendIPConfigurationResourceSettingsResponse> frontendIPConfigurations) {
             $.frontendIPConfigurations = frontendIPConfigurations;
             return this;
         }
 
+        /**
+         * @param frontendIPConfigurations Gets or sets the frontend IP configurations of the load balancer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder frontendIPConfigurations(LBFrontendIPConfigurationResourceSettingsResponse... frontendIPConfigurations) {
             return frontendIPConfigurations(List.of(frontendIPConfigurations));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Network/loadBalancers&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets load balancer sku (Basic/Standard).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable String sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param zones Gets or sets the csv list of zones common for all frontend IP configurations. Note this is given
+         *  precedence only if frontend IP configurations settings are not present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zones(@Nullable String zones) {
             $.zones = zones;
             return this;

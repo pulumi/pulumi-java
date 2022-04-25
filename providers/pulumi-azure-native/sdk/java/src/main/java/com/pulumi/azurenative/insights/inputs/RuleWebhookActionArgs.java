@@ -29,6 +29,11 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -40,6 +45,10 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -51,6 +60,10 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
     @Import(name="serviceUri")
     private @Nullable Output<String> serviceUri;
 
+    /**
+     * @return the service uri to Post the notification when the alert activates or resolves.
+     * 
+     */
     public Optional<Output<String>> serviceUri() {
         return Optional.ofNullable(this.serviceUri);
     }
@@ -81,29 +94,67 @@ public final class RuleWebhookActionArgs extends com.pulumi.resources.ResourceAr
             $ = new RuleWebhookActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType specifies the type of the action. There are two types of actions: RuleEmailAction and RuleWebhookAction.
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleWebhookAction&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param properties the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties the dictionary of custom properties to include with the post operation. These data are appended to the webhook payload.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param serviceUri the service uri to Post the notification when the alert activates or resolves.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(@Nullable Output<String> serviceUri) {
             $.serviceUri = serviceUri;
             return this;
         }
 
+        /**
+         * @param serviceUri the service uri to Post the notification when the alert activates or resolves.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(String serviceUri) {
             return serviceUri(Output.of(serviceUri));
         }

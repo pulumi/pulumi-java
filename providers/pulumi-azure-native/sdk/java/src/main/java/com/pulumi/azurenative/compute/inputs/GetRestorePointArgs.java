@@ -19,6 +19,10 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restorePointCollectionName", required=true)
     private String restorePointCollectionName;
 
+    /**
+     * @return The name of the restore point collection.
+     * 
+     */
     public String restorePointCollectionName() {
         return this.restorePointCollectionName;
     }
@@ -41,6 +49,10 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="restorePointName", required=true)
     private String restorePointName;
 
+    /**
+     * @return The name of the restore point.
+     * 
+     */
     public String restorePointName() {
         return this.restorePointName;
     }
@@ -71,16 +83,34 @@ public final class GetRestorePointArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRestorePointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param restorePointCollectionName The name of the restore point collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointCollectionName(String restorePointCollectionName) {
             $.restorePointCollectionName = restorePointCollectionName;
             return this;
         }
 
+        /**
+         * @param restorePointName The name of the restore point.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointName(String restorePointName) {
             $.restorePointName = restorePointName;
             return this;

@@ -30,6 +30,10 @@ public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="apiMetadataProperties")
     private @Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties;
 
+    /**
+     * @return API metadata property for Spring Cloud Gateway
+     * 
+     */
     public Optional<Output<GatewayApiMetadataPropertiesArgs>> apiMetadataProperties() {
         return Optional.ofNullable(this.apiMetadataProperties);
     }
@@ -41,6 +45,10 @@ public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="corsProperties")
     private @Nullable Output<GatewayCorsPropertiesArgs> corsProperties;
 
+    /**
+     * @return Cross-Origin Resource Sharing property
+     * 
+     */
     public Optional<Output<GatewayCorsPropertiesArgs>> corsProperties() {
         return Optional.ofNullable(this.corsProperties);
     }
@@ -52,6 +60,10 @@ public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="httpsOnly")
     private @Nullable Output<Boolean> httpsOnly;
 
+    /**
+     * @return Indicate if only https is allowed.
+     * 
+     */
     public Optional<Output<Boolean>> httpsOnly() {
         return Optional.ofNullable(this.httpsOnly);
     }
@@ -63,6 +75,10 @@ public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="public")
     private @Nullable Output<Boolean> public_;
 
+    /**
+     * @return Indicates whether the Spring Cloud Gateway exposes endpoint.
+     * 
+     */
     public Optional<Output<Boolean>> public_() {
         return Optional.ofNullable(this.public_);
     }
@@ -74,6 +90,10 @@ public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="resourceRequests")
     private @Nullable Output<GatewayResourceRequestsArgs> resourceRequests;
 
+    /**
+     * @return The requested resource quantity for required CPU and Memory.
+     * 
+     */
     public Optional<Output<GatewayResourceRequestsArgs>> resourceRequests() {
         return Optional.ofNullable(this.resourceRequests);
     }
@@ -85,6 +105,10 @@ public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceAr
     @Import(name="ssoProperties")
     private @Nullable Output<SsoPropertiesArgs> ssoProperties;
 
+    /**
+     * @return Single sign-on related configuration
+     * 
+     */
     public Optional<Output<SsoPropertiesArgs>> ssoProperties() {
         return Optional.ofNullable(this.ssoProperties);
     }
@@ -118,56 +142,128 @@ public final class GatewayPropertiesArgs extends com.pulumi.resources.ResourceAr
             $ = new GatewayPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiMetadataProperties API metadata property for Spring Cloud Gateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiMetadataProperties(@Nullable Output<GatewayApiMetadataPropertiesArgs> apiMetadataProperties) {
             $.apiMetadataProperties = apiMetadataProperties;
             return this;
         }
 
+        /**
+         * @param apiMetadataProperties API metadata property for Spring Cloud Gateway
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiMetadataProperties(GatewayApiMetadataPropertiesArgs apiMetadataProperties) {
             return apiMetadataProperties(Output.of(apiMetadataProperties));
         }
 
+        /**
+         * @param corsProperties Cross-Origin Resource Sharing property
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsProperties(@Nullable Output<GatewayCorsPropertiesArgs> corsProperties) {
             $.corsProperties = corsProperties;
             return this;
         }
 
+        /**
+         * @param corsProperties Cross-Origin Resource Sharing property
+         * 
+         * @return builder
+         * 
+         */
         public Builder corsProperties(GatewayCorsPropertiesArgs corsProperties) {
             return corsProperties(Output.of(corsProperties));
         }
 
+        /**
+         * @param httpsOnly Indicate if only https is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsOnly(@Nullable Output<Boolean> httpsOnly) {
             $.httpsOnly = httpsOnly;
             return this;
         }
 
+        /**
+         * @param httpsOnly Indicate if only https is allowed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpsOnly(Boolean httpsOnly) {
             return httpsOnly(Output.of(httpsOnly));
         }
 
+        /**
+         * @param public_ Indicates whether the Spring Cloud Gateway exposes endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(@Nullable Output<Boolean> public_) {
             $.public_ = public_;
             return this;
         }
 
+        /**
+         * @param public_ Indicates whether the Spring Cloud Gateway exposes endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder public_(Boolean public_) {
             return public_(Output.of(public_));
         }
 
+        /**
+         * @param resourceRequests The requested resource quantity for required CPU and Memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRequests(@Nullable Output<GatewayResourceRequestsArgs> resourceRequests) {
             $.resourceRequests = resourceRequests;
             return this;
         }
 
+        /**
+         * @param resourceRequests The requested resource quantity for required CPU and Memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRequests(GatewayResourceRequestsArgs resourceRequests) {
             return resourceRequests(Output.of(resourceRequests));
         }
 
+        /**
+         * @param ssoProperties Single sign-on related configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoProperties(@Nullable Output<SsoPropertiesArgs> ssoProperties) {
             $.ssoProperties = ssoProperties;
             return this;
         }
 
+        /**
+         * @param ssoProperties Single sign-on related configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder ssoProperties(SsoPropertiesArgs ssoProperties) {
             return ssoProperties(Output.of(ssoProperties));
         }

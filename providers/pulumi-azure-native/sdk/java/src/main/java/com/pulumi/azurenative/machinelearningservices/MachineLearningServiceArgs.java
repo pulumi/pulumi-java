@@ -27,6 +27,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="computeType", required=true)
     private Output<Either<String,ComputeEnvironmentType>> computeType;
 
+    /**
+     * @return The compute environment type for the service.
+     * 
+     */
     public Output<Either<String,ComputeEnvironmentType>> computeType() {
         return this.computeType;
     }
@@ -38,6 +42,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the service.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -49,6 +57,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="environmentImageRequest")
     private @Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest;
 
+    /**
+     * @return The Environment, models and assets needed for inferencing.
+     * 
+     */
     public Optional<Output<CreateServiceRequestEnvironmentImageRequestArgs>> environmentImageRequest() {
         return Optional.ofNullable(this.environmentImageRequest);
     }
@@ -60,6 +72,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="keys")
     private @Nullable Output<CreateServiceRequestKeysArgs> keys;
 
+    /**
+     * @return The authentication keys.
+     * 
+     */
     public Optional<Output<CreateServiceRequestKeysArgs>> keys() {
         return Optional.ofNullable(this.keys);
     }
@@ -71,6 +87,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="kvTags")
     private @Nullable Output<Map<String,String>> kvTags;
 
+    /**
+     * @return The service tag dictionary. Tags are mutable.
+     * 
+     */
     public Optional<Output<Map<String,String>>> kvTags() {
         return Optional.ofNullable(this.kvTags);
     }
@@ -82,6 +102,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The name of the Azure location/region.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -93,6 +117,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="properties")
     private @Nullable Output<Map<String,String>> properties;
 
+    /**
+     * @return The service properties dictionary. Properties are immutable.
+     * 
+     */
     public Optional<Output<Map<String,String>>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -104,6 +132,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -115,6 +147,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="serviceName")
     private @Nullable Output<String> serviceName;
 
+    /**
+     * @return Name of the Azure Machine Learning service.
+     * 
+     */
     public Optional<Output<String>> serviceName() {
         return Optional.ofNullable(this.serviceName);
     }
@@ -126,6 +162,10 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -163,100 +203,232 @@ public final class MachineLearningServiceArgs extends com.pulumi.resources.Resou
             $ = new MachineLearningServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(Output<Either<String,ComputeEnvironmentType>> computeType) {
             $.computeType = computeType;
             return this;
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(Either<String,ComputeEnvironmentType> computeType) {
             return computeType(Output.of(computeType));
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(String computeType) {
             return computeType(Either.ofLeft(computeType));
         }
 
+        /**
+         * @param computeType The compute environment type for the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder computeType(ComputeEnvironmentType computeType) {
             return computeType(Either.ofRight(computeType));
         }
 
+        /**
+         * @param description The description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param environmentImageRequest The Environment, models and assets needed for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentImageRequest(@Nullable Output<CreateServiceRequestEnvironmentImageRequestArgs> environmentImageRequest) {
             $.environmentImageRequest = environmentImageRequest;
             return this;
         }
 
+        /**
+         * @param environmentImageRequest The Environment, models and assets needed for inferencing.
+         * 
+         * @return builder
+         * 
+         */
         public Builder environmentImageRequest(CreateServiceRequestEnvironmentImageRequestArgs environmentImageRequest) {
             return environmentImageRequest(Output.of(environmentImageRequest));
         }
 
+        /**
+         * @param keys The authentication keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(@Nullable Output<CreateServiceRequestKeysArgs> keys) {
             $.keys = keys;
             return this;
         }
 
+        /**
+         * @param keys The authentication keys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keys(CreateServiceRequestKeysArgs keys) {
             return keys(Output.of(keys));
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(@Nullable Output<Map<String,String>> kvTags) {
             $.kvTags = kvTags;
             return this;
         }
 
+        /**
+         * @param kvTags The service tag dictionary. Tags are mutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kvTags(Map<String,String> kvTags) {
             return kvTags(Output.of(kvTags));
         }
 
+        /**
+         * @param location The name of the Azure location/region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The name of the Azure location/region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The service properties dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Map<String,String>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The service properties dictionary. Properties are immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Map<String,String> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName Name of the Azure Machine Learning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(@Nullable Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the Azure Machine Learning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

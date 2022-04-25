@@ -24,6 +24,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return For optimistic concurrency control.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -35,6 +39,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Azure location in which project is created.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="projectName")
     private @Nullable Output<String> projectName;
 
+    /**
+     * @return Name of the Azure Migrate project.
+     * 
+     */
     public Optional<Output<String>> projectName() {
         return Optional.ofNullable(this.projectName);
     }
@@ -57,6 +69,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<ProjectPropertiesArgs> properties;
 
+    /**
+     * @return Properties of the project.
+     * 
+     */
     public Optional<Output<ProjectPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -68,6 +84,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Azure Resource Group that project is part of.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Object> tags;
 
+    /**
+     * @return Tags provided by Azure Tagging service.
+     * 
+     */
     public Optional<Output<Object>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,56 +136,128 @@ public final class ProjectArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ProjectArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag For optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag For optimistic concurrency control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param location Azure location in which project is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Azure location in which project is created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(@Nullable Output<String> projectName) {
             $.projectName = projectName;
             return this;
         }
 
+        /**
+         * @param projectName Name of the Azure Migrate project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder projectName(String projectName) {
             return projectName(Output.of(projectName));
         }
 
+        /**
+         * @param properties Properties of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ProjectPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Properties of the project.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ProjectPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Azure Resource Group that project is part of.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Tags provided by Azure Tagging service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Object> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags provided by Azure Tagging service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Object tags) {
             return tags(Output.of(tags));
         }

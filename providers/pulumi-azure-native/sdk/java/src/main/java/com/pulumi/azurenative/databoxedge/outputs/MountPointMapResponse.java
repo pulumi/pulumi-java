@@ -10,27 +10,27 @@ import java.util.Objects;
 @CustomType
 public final class MountPointMapResponse {
     /**
-     * Mount point for the share.
+     * @return Mount point for the share.
      * 
      */
     private final String mountPoint;
     /**
-     * Mounting type.
+     * @return Mounting type.
      * 
      */
     private final String mountType;
     /**
-     * ID of the role to which share is mounted.
+     * @return ID of the role to which share is mounted.
      * 
      */
     private final String roleId;
     /**
-     * Role type.
+     * @return Role type.
      * 
      */
     private final String roleType;
     /**
-     * ID of the share mounted to the role VM.
+     * @return ID of the share mounted to the role VM.
      * 
      */
     private final String shareId;
@@ -50,37 +50,37 @@ public final class MountPointMapResponse {
     }
 
     /**
-     * Mount point for the share.
+     * @return Mount point for the share.
      * 
-    */
+     */
     public String mountPoint() {
         return this.mountPoint;
     }
     /**
-     * Mounting type.
+     * @return Mounting type.
      * 
-    */
+     */
     public String mountType() {
         return this.mountType;
     }
     /**
-     * ID of the role to which share is mounted.
+     * @return ID of the role to which share is mounted.
      * 
-    */
+     */
     public String roleId() {
         return this.roleId;
     }
     /**
-     * Role type.
+     * @return Role type.
      * 
-    */
+     */
     public String roleType() {
         return this.roleType;
     }
     /**
-     * ID of the share mounted to the role VM.
+     * @return ID of the share mounted to the role VM.
      * 
-    */
+     */
     public String shareId() {
         return this.shareId;
     }

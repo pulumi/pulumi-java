@@ -31,6 +31,10 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="enableHealthCheck")
     private @Nullable Boolean enableHealthCheck;
 
+    /**
+     * @return Optional. Whether or not this application reports health.
+     * 
+     */
     public Optional<Boolean> enableHealthCheck() {
         return Optional.ofNullable(this.enableHealthCheck);
     }
@@ -42,6 +46,10 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="endOfLifeDate")
     private @Nullable String endOfLifeDate;
 
+    /**
+     * @return The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
+     * 
+     */
     public Optional<String> endOfLifeDate() {
         return Optional.ofNullable(this.endOfLifeDate);
     }
@@ -53,6 +61,10 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="excludeFromLatest")
     private @Nullable Boolean excludeFromLatest;
 
+    /**
+     * @return If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
+     * 
+     */
     public Optional<Boolean> excludeFromLatest() {
         return Optional.ofNullable(this.excludeFromLatest);
     }
@@ -71,6 +83,10 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="publishedDate", required=true)
     private String publishedDate;
 
+    /**
+     * @return The timestamp for when the gallery image version is published.
+     * 
+     */
     public String publishedDate() {
         return this.publishedDate;
     }
@@ -82,6 +98,10 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="replicaCount")
     private @Nullable Integer replicaCount;
 
+    /**
+     * @return The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
+     * 
+     */
     public Optional<Integer> replicaCount() {
         return Optional.ofNullable(this.replicaCount);
     }
@@ -93,6 +113,10 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="source", required=true)
     private UserArtifactSourceResponse source;
 
+    /**
+     * @return The source image from which the Image Version is going to be created.
+     * 
+     */
     public UserArtifactSourceResponse source() {
         return this.source;
     }
@@ -104,6 +128,10 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="storageAccountType")
     private @Nullable String storageAccountType;
 
+    /**
+     * @return Specifies the storage account type to be used to store the image. This property is not updatable.
+     * 
+     */
     public Optional<String> storageAccountType() {
         return Optional.ofNullable(this.storageAccountType);
     }
@@ -115,6 +143,10 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
     @Import(name="targetRegions")
     private @Nullable List<TargetRegionResponse> targetRegions;
 
+    /**
+     * @return The target regions where the Image Version is going to be replicated to. This property is updatable.
+     * 
+     */
     public Optional<List<TargetRegionResponse>> targetRegions() {
         return Optional.ofNullable(this.targetRegions);
     }
@@ -151,16 +183,34 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
             $ = new GalleryApplicationVersionPublishingProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableHealthCheck Optional. Whether or not this application reports health.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableHealthCheck(@Nullable Boolean enableHealthCheck) {
             $.enableHealthCheck = enableHealthCheck;
             return this;
         }
 
+        /**
+         * @param endOfLifeDate The end of life date of the gallery image version. This property can be used for decommissioning purposes. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endOfLifeDate(@Nullable String endOfLifeDate) {
             $.endOfLifeDate = endOfLifeDate;
             return this;
         }
 
+        /**
+         * @param excludeFromLatest If set to true, Virtual Machines deployed from the latest version of the Image Definition won&#39;t use this Image Version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludeFromLatest(@Nullable Boolean excludeFromLatest) {
             $.excludeFromLatest = excludeFromLatest;
             return this;
@@ -171,31 +221,67 @@ public final class GalleryApplicationVersionPublishingProfileResponse extends co
             return this;
         }
 
+        /**
+         * @param publishedDate The timestamp for when the gallery image version is published.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publishedDate(String publishedDate) {
             $.publishedDate = publishedDate;
             return this;
         }
 
+        /**
+         * @param replicaCount The number of replicas of the Image Version to be created per region. This property would take effect for a region when regionalReplicaCount is not specified. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaCount(@Nullable Integer replicaCount) {
             $.replicaCount = replicaCount;
             return this;
         }
 
+        /**
+         * @param source The source image from which the Image Version is going to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(UserArtifactSourceResponse source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param storageAccountType Specifies the storage account type to be used to store the image. This property is not updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(@Nullable String storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;
         }
 
+        /**
+         * @param targetRegions The target regions where the Image Version is going to be replicated to. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRegions(@Nullable List<TargetRegionResponse> targetRegions) {
             $.targetRegions = targetRegions;
             return this;
         }
 
+        /**
+         * @param targetRegions The target regions where the Image Version is going to be replicated to. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRegions(TargetRegionResponse... targetRegions) {
             return targetRegions(List.of(targetRegions));
         }

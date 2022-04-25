@@ -26,6 +26,10 @@ public final class SecretValueReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="keyVault", required=true)
     private KeyVaultReferenceResponse keyVault;
 
+    /**
+     * @return Specifies the reference to a given Azure Key Vault.
+     * 
+     */
     public KeyVaultReferenceResponse keyVault() {
         return this.keyVault;
     }
@@ -37,6 +41,10 @@ public final class SecretValueReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="secretName", required=true)
     private String secretName;
 
+    /**
+     * @return Name of the secret.
+     * 
+     */
     public String secretName() {
         return this.secretName;
     }
@@ -48,6 +56,10 @@ public final class SecretValueReferenceResponse extends com.pulumi.resources.Inv
     @Import(name="secretVersion")
     private @Nullable String secretVersion;
 
+    /**
+     * @return The version of the secret to use. If left blank, the latest version of the secret is used.
+     * 
+     */
     public Optional<String> secretVersion() {
         return Optional.ofNullable(this.secretVersion);
     }
@@ -78,16 +90,34 @@ public final class SecretValueReferenceResponse extends com.pulumi.resources.Inv
             $ = new SecretValueReferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param keyVault Specifies the reference to a given Azure Key Vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVault(KeyVaultReferenceResponse keyVault) {
             $.keyVault = keyVault;
             return this;
         }
 
+        /**
+         * @param secretName Name of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretVersion The version of the secret to use. If left blank, the latest version of the secret is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretVersion(@Nullable String secretVersion) {
             $.secretVersion = secretVersion;
             return this;

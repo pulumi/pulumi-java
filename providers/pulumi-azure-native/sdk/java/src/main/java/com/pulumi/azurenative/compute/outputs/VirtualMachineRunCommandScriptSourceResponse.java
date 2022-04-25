@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class VirtualMachineRunCommandScriptSourceResponse {
     /**
-     * Specifies a commandId of predefined built-in script.
+     * @return Specifies a commandId of predefined built-in script.
      * 
      */
     private final @Nullable String commandId;
     /**
-     * Specifies the script content to be executed on the VM.
+     * @return Specifies the script content to be executed on the VM.
      * 
      */
     private final @Nullable String script;
     /**
-     * Specifies the script download location.
+     * @return Specifies the script download location.
      * 
      */
     private final @Nullable String scriptUri;
@@ -38,23 +38,23 @@ public final class VirtualMachineRunCommandScriptSourceResponse {
     }
 
     /**
-     * Specifies a commandId of predefined built-in script.
+     * @return Specifies a commandId of predefined built-in script.
      * 
-    */
+     */
     public Optional<String> commandId() {
         return Optional.ofNullable(this.commandId);
     }
     /**
-     * Specifies the script content to be executed on the VM.
+     * @return Specifies the script content to be executed on the VM.
      * 
-    */
+     */
     public Optional<String> script() {
         return Optional.ofNullable(this.script);
     }
     /**
-     * Specifies the script download location.
+     * @return Specifies the script download location.
      * 
-    */
+     */
     public Optional<String> scriptUri() {
         return Optional.ofNullable(this.scriptUri);
     }

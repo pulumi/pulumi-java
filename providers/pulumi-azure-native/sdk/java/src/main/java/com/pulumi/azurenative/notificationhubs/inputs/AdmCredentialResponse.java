@@ -25,6 +25,10 @@ public final class AdmCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="authTokenUrl")
     private @Nullable String authTokenUrl;
 
+    /**
+     * @return The URL of the authorization token.
+     * 
+     */
     public Optional<String> authTokenUrl() {
         return Optional.ofNullable(this.authTokenUrl);
     }
@@ -36,6 +40,10 @@ public final class AdmCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return The client identifier.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -47,6 +55,10 @@ public final class AdmCredentialResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="clientSecret")
     private @Nullable String clientSecret;
 
+    /**
+     * @return The credential secret access key.
+     * 
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -77,16 +89,34 @@ public final class AdmCredentialResponse extends com.pulumi.resources.InvokeArgs
             $ = new AdmCredentialResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authTokenUrl The URL of the authorization token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authTokenUrl(@Nullable String authTokenUrl) {
             $.authTokenUrl = authTokenUrl;
             return this;
         }
 
+        /**
+         * @param clientId The client identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret The credential secret access key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable String clientSecret) {
             $.clientSecret = clientSecret;
             return this;

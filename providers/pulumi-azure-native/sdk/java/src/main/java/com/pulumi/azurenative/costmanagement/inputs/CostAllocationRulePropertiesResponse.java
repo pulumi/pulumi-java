@@ -26,6 +26,10 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="createdDate", required=true)
     private String createdDate;
 
+    /**
+     * @return Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
+     * 
+     */
     public String createdDate() {
         return this.createdDate;
     }
@@ -37,6 +41,10 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Description of a cost allocation rule.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="details", required=true)
     private CostAllocationRuleDetailsResponse details;
 
+    /**
+     * @return Resource information for the cost allocation rule
+     * 
+     */
     public CostAllocationRuleDetailsResponse details() {
         return this.details;
     }
@@ -59,6 +71,10 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return Status of the rule
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -70,6 +86,10 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
     @Import(name="updatedDate", required=true)
     private String updatedDate;
 
+    /**
+     * @return Time at which the rule was last updated.
+     * 
+     */
     public String updatedDate() {
         return this.updatedDate;
     }
@@ -102,26 +122,56 @@ public final class CostAllocationRulePropertiesResponse extends com.pulumi.resou
             $ = new CostAllocationRulePropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdDate Time at which the rule was created. Rules that change cost for the same resource are applied in order of creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdDate(String createdDate) {
             $.createdDate = createdDate;
             return this;
         }
 
+        /**
+         * @param description Description of a cost allocation rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param details Resource information for the cost allocation rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(CostAllocationRuleDetailsResponse details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param status Status of the rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param updatedDate Time at which the rule was last updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updatedDate(String updatedDate) {
             $.updatedDate = updatedDate;
             return this;

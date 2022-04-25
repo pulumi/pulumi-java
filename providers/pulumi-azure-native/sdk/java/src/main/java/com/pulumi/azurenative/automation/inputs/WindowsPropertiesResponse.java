@@ -26,6 +26,10 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="excludedKbNumbers")
     private @Nullable List<String> excludedKbNumbers;
 
+    /**
+     * @return KB numbers excluded from the software update configuration.
+     * 
+     */
     public Optional<List<String>> excludedKbNumbers() {
         return Optional.ofNullable(this.excludedKbNumbers);
     }
@@ -37,6 +41,10 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="includedKbNumbers")
     private @Nullable List<String> includedKbNumbers;
 
+    /**
+     * @return KB numbers included from the software update configuration.
+     * 
+     */
     public Optional<List<String>> includedKbNumbers() {
         return Optional.ofNullable(this.includedKbNumbers);
     }
@@ -48,6 +56,10 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="includedUpdateClassifications")
     private @Nullable String includedUpdateClassifications;
 
+    /**
+     * @return Update classification included in the software update configuration. A comma separated string with required values
+     * 
+     */
     public Optional<String> includedUpdateClassifications() {
         return Optional.ofNullable(this.includedUpdateClassifications);
     }
@@ -59,6 +71,10 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
     @Import(name="rebootSetting")
     private @Nullable String rebootSetting;
 
+    /**
+     * @return Reboot setting for the software update configuration.
+     * 
+     */
     public Optional<String> rebootSetting() {
         return Optional.ofNullable(this.rebootSetting);
     }
@@ -90,29 +106,65 @@ public final class WindowsPropertiesResponse extends com.pulumi.resources.Invoke
             $ = new WindowsPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedKbNumbers KB numbers excluded from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedKbNumbers(@Nullable List<String> excludedKbNumbers) {
             $.excludedKbNumbers = excludedKbNumbers;
             return this;
         }
 
+        /**
+         * @param excludedKbNumbers KB numbers excluded from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedKbNumbers(String... excludedKbNumbers) {
             return excludedKbNumbers(List.of(excludedKbNumbers));
         }
 
+        /**
+         * @param includedKbNumbers KB numbers included from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedKbNumbers(@Nullable List<String> includedKbNumbers) {
             $.includedKbNumbers = includedKbNumbers;
             return this;
         }
 
+        /**
+         * @param includedKbNumbers KB numbers included from the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedKbNumbers(String... includedKbNumbers) {
             return includedKbNumbers(List.of(includedKbNumbers));
         }
 
+        /**
+         * @param includedUpdateClassifications Update classification included in the software update configuration. A comma separated string with required values
+         * 
+         * @return builder
+         * 
+         */
         public Builder includedUpdateClassifications(@Nullable String includedUpdateClassifications) {
             $.includedUpdateClassifications = includedUpdateClassifications;
             return this;
         }
 
+        /**
+         * @param rebootSetting Reboot setting for the software update configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rebootSetting(@Nullable String rebootSetting) {
             $.rebootSetting = rebootSetting;
             return this;

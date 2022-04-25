@@ -25,6 +25,10 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends com.pulumi
     @Import(name="targetServerBrandVersion", required=true)
     private String targetServerBrandVersion;
 
+    /**
+     * @return Target server brand version
+     * 
+     */
     public String targetServerBrandVersion() {
         return this.targetServerBrandVersion;
     }
@@ -36,6 +40,10 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends com.pulumi
     @Import(name="targetServerVersion", required=true)
     private String targetServerVersion;
 
+    /**
+     * @return Target server version
+     * 
+     */
     public String targetServerVersion() {
         return this.targetServerVersion;
     }
@@ -47,6 +55,10 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends com.pulumi
     @Import(name="validationErrors", required=true)
     private List<ReportableExceptionResponse> validationErrors;
 
+    /**
+     * @return Validation errors
+     * 
+     */
     public List<ReportableExceptionResponse> validationErrors() {
         return this.validationErrors;
     }
@@ -77,21 +89,45 @@ public final class ConnectToTargetSqlMISyncTaskOutputResponse extends com.pulumi
             $ = new ConnectToTargetSqlMISyncTaskOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param targetServerBrandVersion Target server brand version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerBrandVersion(String targetServerBrandVersion) {
             $.targetServerBrandVersion = targetServerBrandVersion;
             return this;
         }
 
+        /**
+         * @param targetServerVersion Target server version
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetServerVersion(String targetServerVersion) {
             $.targetServerVersion = targetServerVersion;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(List<ReportableExceptionResponse> validationErrors) {
             $.validationErrors = validationErrors;
             return this;
         }
 
+        /**
+         * @param validationErrors Validation errors
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationErrors(ReportableExceptionResponse... validationErrors) {
             return validationErrors(List.of(validationErrors));
         }

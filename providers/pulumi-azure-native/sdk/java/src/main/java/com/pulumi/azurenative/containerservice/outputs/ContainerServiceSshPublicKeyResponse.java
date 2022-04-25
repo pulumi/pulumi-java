@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ContainerServiceSshPublicKeyResponse {
     /**
-     * Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+     * @return Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
      * 
      */
     private final String keyData;
@@ -21,9 +21,9 @@ public final class ContainerServiceSshPublicKeyResponse {
     }
 
     /**
-     * Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
+     * @return Certificate public key used to authenticate with VMs through SSH. The certificate must be in PEM format with or without headers.
      * 
-    */
+     */
     public String keyData() {
         return this.keyData;
     }

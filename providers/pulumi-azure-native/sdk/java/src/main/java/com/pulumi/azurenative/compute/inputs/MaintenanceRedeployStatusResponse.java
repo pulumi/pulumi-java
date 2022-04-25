@@ -26,6 +26,10 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="isCustomerInitiatedMaintenanceAllowed")
     private @Nullable Boolean isCustomerInitiatedMaintenanceAllowed;
 
+    /**
+     * @return True, if customer is allowed to perform Maintenance.
+     * 
+     */
     public Optional<Boolean> isCustomerInitiatedMaintenanceAllowed() {
         return Optional.ofNullable(this.isCustomerInitiatedMaintenanceAllowed);
     }
@@ -37,6 +41,10 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="lastOperationMessage")
     private @Nullable String lastOperationMessage;
 
+    /**
+     * @return Message returned for the last Maintenance Operation.
+     * 
+     */
     public Optional<String> lastOperationMessage() {
         return Optional.ofNullable(this.lastOperationMessage);
     }
@@ -48,6 +56,10 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="lastOperationResultCode")
     private @Nullable String lastOperationResultCode;
 
+    /**
+     * @return The Last Maintenance Operation Result Code.
+     * 
+     */
     public Optional<String> lastOperationResultCode() {
         return Optional.ofNullable(this.lastOperationResultCode);
     }
@@ -59,6 +71,10 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="maintenanceWindowEndTime")
     private @Nullable String maintenanceWindowEndTime;
 
+    /**
+     * @return End Time for the Maintenance Window.
+     * 
+     */
     public Optional<String> maintenanceWindowEndTime() {
         return Optional.ofNullable(this.maintenanceWindowEndTime);
     }
@@ -70,6 +86,10 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="maintenanceWindowStartTime")
     private @Nullable String maintenanceWindowStartTime;
 
+    /**
+     * @return Start Time for the Maintenance Window.
+     * 
+     */
     public Optional<String> maintenanceWindowStartTime() {
         return Optional.ofNullable(this.maintenanceWindowStartTime);
     }
@@ -81,6 +101,10 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="preMaintenanceWindowEndTime")
     private @Nullable String preMaintenanceWindowEndTime;
 
+    /**
+     * @return End Time for the Pre Maintenance Window.
+     * 
+     */
     public Optional<String> preMaintenanceWindowEndTime() {
         return Optional.ofNullable(this.preMaintenanceWindowEndTime);
     }
@@ -92,6 +116,10 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
     @Import(name="preMaintenanceWindowStartTime")
     private @Nullable String preMaintenanceWindowStartTime;
 
+    /**
+     * @return Start Time for the Pre Maintenance Window.
+     * 
+     */
     public Optional<String> preMaintenanceWindowStartTime() {
         return Optional.ofNullable(this.preMaintenanceWindowStartTime);
     }
@@ -126,36 +154,78 @@ public final class MaintenanceRedeployStatusResponse extends com.pulumi.resource
             $ = new MaintenanceRedeployStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isCustomerInitiatedMaintenanceAllowed True, if customer is allowed to perform Maintenance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isCustomerInitiatedMaintenanceAllowed(@Nullable Boolean isCustomerInitiatedMaintenanceAllowed) {
             $.isCustomerInitiatedMaintenanceAllowed = isCustomerInitiatedMaintenanceAllowed;
             return this;
         }
 
+        /**
+         * @param lastOperationMessage Message returned for the last Maintenance Operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastOperationMessage(@Nullable String lastOperationMessage) {
             $.lastOperationMessage = lastOperationMessage;
             return this;
         }
 
+        /**
+         * @param lastOperationResultCode The Last Maintenance Operation Result Code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastOperationResultCode(@Nullable String lastOperationResultCode) {
             $.lastOperationResultCode = lastOperationResultCode;
             return this;
         }
 
+        /**
+         * @param maintenanceWindowEndTime End Time for the Maintenance Window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowEndTime(@Nullable String maintenanceWindowEndTime) {
             $.maintenanceWindowEndTime = maintenanceWindowEndTime;
             return this;
         }
 
+        /**
+         * @param maintenanceWindowStartTime Start Time for the Maintenance Window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maintenanceWindowStartTime(@Nullable String maintenanceWindowStartTime) {
             $.maintenanceWindowStartTime = maintenanceWindowStartTime;
             return this;
         }
 
+        /**
+         * @param preMaintenanceWindowEndTime End Time for the Pre Maintenance Window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preMaintenanceWindowEndTime(@Nullable String preMaintenanceWindowEndTime) {
             $.preMaintenanceWindowEndTime = preMaintenanceWindowEndTime;
             return this;
         }
 
+        /**
+         * @param preMaintenanceWindowStartTime Start Time for the Pre Maintenance Window.
+         * 
+         * @return builder
+         * 
+         */
         public Builder preMaintenanceWindowStartTime(@Nullable String preMaintenanceWindowStartTime) {
             $.preMaintenanceWindowStartTime = preMaintenanceWindowStartTime;
             return this;

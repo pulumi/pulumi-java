@@ -27,6 +27,10 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return Commitment period commitment count.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="endDate", required=true)
     private String endDate;
 
+    /**
+     * @return Commitment period end date.
+     * 
+     */
     public String endDate() {
         return this.endDate;
     }
@@ -49,6 +57,10 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="quota", required=true)
     private CommitmentQuotaResponse quota;
 
+    /**
+     * @return Cognitive Services account commitment quota.
+     * 
+     */
     public CommitmentQuotaResponse quota() {
         return this.quota;
     }
@@ -60,6 +72,10 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="startDate", required=true)
     private String startDate;
 
+    /**
+     * @return Commitment period start date.
+     * 
+     */
     public String startDate() {
         return this.startDate;
     }
@@ -71,6 +87,10 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Commitment period commitment tier.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -103,26 +123,56 @@ public final class CommitmentPeriodResponse extends com.pulumi.resources.InvokeA
             $ = new CommitmentPeriodResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Commitment period commitment count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param endDate Commitment period end date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endDate(String endDate) {
             $.endDate = endDate;
             return this;
         }
 
+        /**
+         * @param quota Cognitive Services account commitment quota.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(CommitmentQuotaResponse quota) {
             $.quota = quota;
             return this;
         }
 
+        /**
+         * @param startDate Commitment period start date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startDate(String startDate) {
             $.startDate = startDate;
             return this;
         }
 
+        /**
+         * @param tier Commitment period commitment tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

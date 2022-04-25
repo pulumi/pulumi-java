@@ -32,6 +32,10 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
     @Import(name="binding")
     private @Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding;
 
+    /**
+     * @return The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+     * 
+     */
     public Optional<Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse>> binding() {
         return Optional.ofNullable(this.binding);
     }
@@ -43,6 +47,10 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -54,6 +62,10 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
     @Import(name="inputs")
     private @Nullable List<FunctionInputResponse> inputs;
 
+    /**
+     * @return A list of inputs describing the parameters of the function.
+     * 
+     */
     public Optional<List<FunctionInputResponse>> inputs() {
         return Optional.ofNullable(this.inputs);
     }
@@ -65,6 +77,10 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
     @Import(name="output")
     private @Nullable FunctionOutputResponse output;
 
+    /**
+     * @return The output of the function.
+     * 
+     */
     public Optional<FunctionOutputResponse> output() {
         return Optional.ofNullable(this.output);
     }
@@ -77,6 +93,11 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Indicates the type of function.
+     * Expected value is &#39;Scalar&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -109,38 +130,87 @@ public final class ScalarFunctionPropertiesResponse extends com.pulumi.resources
             $ = new ScalarFunctionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param binding The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binding(@Nullable Either<AzureMachineLearningWebServiceFunctionBindingResponse,JavaScriptFunctionBindingResponse> binding) {
             $.binding = binding;
             return this;
         }
 
+        /**
+         * @param binding The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binding(AzureMachineLearningWebServiceFunctionBindingResponse binding) {
             return binding(Either.ofLeft(binding));
         }
 
+        /**
+         * @param binding The physical binding of the function. For example, in the Azure Machine Learning web service’s case, this describes the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder binding(JavaScriptFunctionBindingResponse binding) {
             return binding(Either.ofRight(binding));
         }
 
+        /**
+         * @param etag The current entity tag for the function. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param inputs A list of inputs describing the parameters of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(@Nullable List<FunctionInputResponse> inputs) {
             $.inputs = inputs;
             return this;
         }
 
+        /**
+         * @param inputs A list of inputs describing the parameters of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputs(FunctionInputResponse... inputs) {
             return inputs(List.of(inputs));
         }
 
+        /**
+         * @param output The output of the function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder output(@Nullable FunctionOutputResponse output) {
             $.output = output;
             return this;
         }
 
+        /**
+         * @param type Indicates the type of function.
+         * Expected value is &#39;Scalar&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

@@ -14,23 +14,23 @@ import java.util.Objects;
 @CustomType
 public final class WebClientCertificateAuthenticationResponse {
     /**
-     * Type of authentication used to connect to the web table source.
+     * @return Type of authentication used to connect to the web table source.
      * Expected value is &#39;ClientCertificate&#39;.
      * 
      */
     private final String authenticationType;
     /**
-     * Password for the PFX file.
+     * @return Password for the PFX file.
      * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
     /**
-     * Base64-encoded contents of a PFX file.
+     * @return Base64-encoded contents of a PFX file.
      * 
      */
     private final Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx;
     /**
-     * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
      */
     private final Object url;
@@ -48,31 +48,31 @@ public final class WebClientCertificateAuthenticationResponse {
     }
 
     /**
-     * Type of authentication used to connect to the web table source.
+     * @return Type of authentication used to connect to the web table source.
      * Expected value is &#39;ClientCertificate&#39;.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * Password for the PFX file.
+     * @return Password for the PFX file.
      * 
-    */
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password() {
         return this.password;
     }
     /**
-     * Base64-encoded contents of a PFX file.
+     * @return Base64-encoded contents of a PFX file.
      * 
-    */
+     */
     public Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> pfx() {
         return this.pfx;
     }
     /**
-     * The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
+     * @return The URL of the web service endpoint, e.g. http://www.microsoft.com . Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object url() {
         return this.url;
     }

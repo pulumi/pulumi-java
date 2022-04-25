@@ -23,6 +23,10 @@ public final class QueryKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="key", required=true)
     private String key;
 
+    /**
+     * @return The value of the query API key.
+     * 
+     */
     public String key() {
         return this.key;
     }
@@ -34,6 +38,10 @@ public final class QueryKeyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the query API key; may be empty.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class QueryKeyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new QueryKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key The value of the query API key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param name The name of the query API key; may be empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

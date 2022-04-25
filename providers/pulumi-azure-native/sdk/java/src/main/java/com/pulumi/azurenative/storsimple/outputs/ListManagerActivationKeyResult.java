@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ListManagerActivationKeyResult {
     /**
-     * The activation key for the device.
+     * @return The activation key for the device.
      * 
      */
     private final String activationKey;
@@ -21,9 +21,9 @@ public final class ListManagerActivationKeyResult {
     }
 
     /**
-     * The activation key for the device.
+     * @return The activation key for the device.
      * 
-    */
+     */
     public String activationKey() {
         return this.activationKey;
     }

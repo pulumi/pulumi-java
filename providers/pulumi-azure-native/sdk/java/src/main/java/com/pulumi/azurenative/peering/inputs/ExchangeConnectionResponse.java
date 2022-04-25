@@ -27,6 +27,10 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
     @Import(name="bgpSession")
     private @Nullable BgpSessionResponse bgpSession;
 
+    /**
+     * @return The BGP session associated with the connection.
+     * 
+     */
     public Optional<BgpSessionResponse> bgpSession() {
         return Optional.ofNullable(this.bgpSession);
     }
@@ -38,6 +42,10 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
     @Import(name="connectionIdentifier")
     private @Nullable String connectionIdentifier;
 
+    /**
+     * @return The unique identifier (GUID) for the connection.
+     * 
+     */
     public Optional<String> connectionIdentifier() {
         return Optional.ofNullable(this.connectionIdentifier);
     }
@@ -49,6 +57,10 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
     @Import(name="connectionState", required=true)
     private String connectionState;
 
+    /**
+     * @return The state of the connection.
+     * 
+     */
     public String connectionState() {
         return this.connectionState;
     }
@@ -60,6 +72,10 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
     @Import(name="errorMessage", required=true)
     private String errorMessage;
 
+    /**
+     * @return The error message related to the connection state, if any.
+     * 
+     */
     public String errorMessage() {
         return this.errorMessage;
     }
@@ -71,6 +87,10 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
     @Import(name="peeringDBFacilityId")
     private @Nullable Integer peeringDBFacilityId;
 
+    /**
+     * @return The PeeringDB.com ID of the facility at which the connection has to be set up.
+     * 
+     */
     public Optional<Integer> peeringDBFacilityId() {
         return Optional.ofNullable(this.peeringDBFacilityId);
     }
@@ -103,26 +123,56 @@ public final class ExchangeConnectionResponse extends com.pulumi.resources.Invok
             $ = new ExchangeConnectionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bgpSession The BGP session associated with the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bgpSession(@Nullable BgpSessionResponse bgpSession) {
             $.bgpSession = bgpSession;
             return this;
         }
 
+        /**
+         * @param connectionIdentifier The unique identifier (GUID) for the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionIdentifier(@Nullable String connectionIdentifier) {
             $.connectionIdentifier = connectionIdentifier;
             return this;
         }
 
+        /**
+         * @param connectionState The state of the connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionState(String connectionState) {
             $.connectionState = connectionState;
             return this;
         }
 
+        /**
+         * @param errorMessage The error message related to the connection state, if any.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param peeringDBFacilityId The PeeringDB.com ID of the facility at which the connection has to be set up.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringDBFacilityId(@Nullable Integer peeringDBFacilityId) {
             $.peeringDBFacilityId = peeringDBFacilityId;
             return this;

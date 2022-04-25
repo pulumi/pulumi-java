@@ -26,6 +26,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the parameter declared in the pipeline topology.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -37,6 +41,10 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Parameter value to be applied on this specific pipeline.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -66,20 +74,44 @@ public final class ParameterDefinitionArgs extends com.pulumi.resources.Resource
             $ = new ParameterDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the parameter declared in the pipeline topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the parameter declared in the pipeline topology.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value Parameter value to be applied on this specific pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Parameter value to be applied on this specific pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

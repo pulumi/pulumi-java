@@ -26,6 +26,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
     @Import(name="address")
     private @Nullable String address;
 
+    /**
+     * @return IP address or FQDN of backend server.
+     * 
+     */
     public Optional<String> address() {
         return Optional.ofNullable(this.address);
     }
@@ -37,6 +41,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
     @Import(name="health")
     private @Nullable String health;
 
+    /**
+     * @return Health of backend server.
+     * 
+     */
     public Optional<String> health() {
         return Optional.ofNullable(this.health);
     }
@@ -48,6 +56,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
     @Import(name="healthProbeLog")
     private @Nullable String healthProbeLog;
 
+    /**
+     * @return Health Probe Log.
+     * 
+     */
     public Optional<String> healthProbeLog() {
         return Optional.ofNullable(this.healthProbeLog);
     }
@@ -59,6 +71,10 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
     @Import(name="ipConfiguration")
     private @Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration;
 
+    /**
+     * @return Reference to IP configuration of backend server.
+     * 
+     */
     public Optional<NetworkInterfaceIPConfigurationResponse> ipConfiguration() {
         return Optional.ofNullable(this.ipConfiguration);
     }
@@ -90,21 +106,45 @@ public final class ApplicationGatewayBackendHealthServerResponse extends com.pul
             $ = new ApplicationGatewayBackendHealthServerResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address IP address or FQDN of backend server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable String address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param health Health of backend server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(@Nullable String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthProbeLog Health Probe Log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeLog(@Nullable String healthProbeLog) {
             $.healthProbeLog = healthProbeLog;
             return this;
         }
 
+        /**
+         * @param ipConfiguration Reference to IP configuration of backend server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfiguration(@Nullable NetworkInterfaceIPConfigurationResponse ipConfiguration) {
             $.ipConfiguration = ipConfiguration;
             return this;

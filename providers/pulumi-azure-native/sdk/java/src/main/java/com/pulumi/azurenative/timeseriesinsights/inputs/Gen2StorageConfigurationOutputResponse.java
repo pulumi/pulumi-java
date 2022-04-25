@@ -23,6 +23,10 @@ public final class Gen2StorageConfigurationOutputResponse extends com.pulumi.res
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the storage account that will hold the environment&#39;s Gen2 data.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -51,6 +55,12 @@ public final class Gen2StorageConfigurationOutputResponse extends com.pulumi.res
             $ = new Gen2StorageConfigurationOutputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account that will hold the environment&#39;s Gen2 data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;

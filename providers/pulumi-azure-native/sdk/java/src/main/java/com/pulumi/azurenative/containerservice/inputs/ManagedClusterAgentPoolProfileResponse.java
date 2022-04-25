@@ -34,6 +34,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="availabilityZones")
     private @Nullable List<String> availabilityZones;
 
+    /**
+     * @return Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
+     * 
+     */
     public Optional<List<String>> availabilityZones() {
         return Optional.ofNullable(this.availabilityZones);
     }
@@ -45,6 +49,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="count")
     private @Nullable Integer count;
 
+    /**
+     * @return Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
+     * 
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
@@ -56,6 +64,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="enableAutoScaling")
     private @Nullable Boolean enableAutoScaling;
 
+    /**
+     * @return Whether to enable auto-scaler
+     * 
+     */
     public Optional<Boolean> enableAutoScaling() {
         return Optional.ofNullable(this.enableAutoScaling);
     }
@@ -67,6 +79,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="enableEncryptionAtHost")
     private @Nullable Boolean enableEncryptionAtHost;
 
+    /**
+     * @return Whether to enable EncryptionAtHost
+     * 
+     */
     public Optional<Boolean> enableEncryptionAtHost() {
         return Optional.ofNullable(this.enableEncryptionAtHost);
     }
@@ -78,6 +94,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="enableFIPS")
     private @Nullable Boolean enableFIPS;
 
+    /**
+     * @return Whether to use FIPS enabled OS
+     * 
+     */
     public Optional<Boolean> enableFIPS() {
         return Optional.ofNullable(this.enableFIPS);
     }
@@ -89,6 +109,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="enableNodePublicIP")
     private @Nullable Boolean enableNodePublicIP;
 
+    /**
+     * @return Enable public IP for nodes
+     * 
+     */
     public Optional<Boolean> enableNodePublicIP() {
         return Optional.ofNullable(this.enableNodePublicIP);
     }
@@ -100,6 +124,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="gpuInstanceProfile")
     private @Nullable String gpuInstanceProfile;
 
+    /**
+     * @return GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
+     * 
+     */
     public Optional<String> gpuInstanceProfile() {
         return Optional.ofNullable(this.gpuInstanceProfile);
     }
@@ -111,6 +139,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="kubeletConfig")
     private @Nullable KubeletConfigResponse kubeletConfig;
 
+    /**
+     * @return KubeletConfig specifies the configuration of kubelet on agent nodes.
+     * 
+     */
     public Optional<KubeletConfigResponse> kubeletConfig() {
         return Optional.ofNullable(this.kubeletConfig);
     }
@@ -122,6 +154,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="kubeletDiskType")
     private @Nullable String kubeletDiskType;
 
+    /**
+     * @return KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+     * 
+     */
     public Optional<String> kubeletDiskType() {
         return Optional.ofNullable(this.kubeletDiskType);
     }
@@ -133,6 +169,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="linuxOSConfig")
     private @Nullable LinuxOSConfigResponse linuxOSConfig;
 
+    /**
+     * @return LinuxOSConfig specifies the OS configuration of linux agent nodes.
+     * 
+     */
     public Optional<LinuxOSConfigResponse> linuxOSConfig() {
         return Optional.ofNullable(this.linuxOSConfig);
     }
@@ -144,6 +184,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="maxCount")
     private @Nullable Integer maxCount;
 
+    /**
+     * @return Maximum number of nodes for auto-scaling
+     * 
+     */
     public Optional<Integer> maxCount() {
         return Optional.ofNullable(this.maxCount);
     }
@@ -155,6 +199,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="maxPods")
     private @Nullable Integer maxPods;
 
+    /**
+     * @return Maximum number of pods that can run on a node.
+     * 
+     */
     public Optional<Integer> maxPods() {
         return Optional.ofNullable(this.maxPods);
     }
@@ -166,6 +214,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="minCount")
     private @Nullable Integer minCount;
 
+    /**
+     * @return Minimum number of nodes for auto-scaling
+     * 
+     */
     public Optional<Integer> minCount() {
         return Optional.ofNullable(this.minCount);
     }
@@ -177,6 +229,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return AgentPoolMode represents mode of an agent pool
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -188,6 +244,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Unique name of the agent pool profile in the context of the subscription and resource group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -199,6 +259,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="nodeImageVersion", required=true)
     private String nodeImageVersion;
 
+    /**
+     * @return Version of node image
+     * 
+     */
     public String nodeImageVersion() {
         return this.nodeImageVersion;
     }
@@ -210,6 +274,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="nodeLabels")
     private @Nullable Map<String,String> nodeLabels;
 
+    /**
+     * @return Agent pool node labels to be persisted across all nodes in agent pool.
+     * 
+     */
     public Optional<Map<String,String>> nodeLabels() {
         return Optional.ofNullable(this.nodeLabels);
     }
@@ -221,6 +289,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="nodePublicIPPrefixID")
     private @Nullable String nodePublicIPPrefixID;
 
+    /**
+     * @return Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
+     * 
+     */
     public Optional<String> nodePublicIPPrefixID() {
         return Optional.ofNullable(this.nodePublicIPPrefixID);
     }
@@ -232,6 +304,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="nodeTaints")
     private @Nullable List<String> nodeTaints;
 
+    /**
+     * @return Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
+     * 
+     */
     public Optional<List<String>> nodeTaints() {
         return Optional.ofNullable(this.nodeTaints);
     }
@@ -243,6 +319,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="orchestratorVersion")
     private @Nullable String orchestratorVersion;
 
+    /**
+     * @return Version of orchestrator specified when creating the managed cluster.
+     * 
+     */
     public Optional<String> orchestratorVersion() {
         return Optional.ofNullable(this.orchestratorVersion);
     }
@@ -254,6 +334,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="osDiskSizeGB")
     private @Nullable Integer osDiskSizeGB;
 
+    /**
+     * @return OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+     * 
+     */
     public Optional<Integer> osDiskSizeGB() {
         return Optional.ofNullable(this.osDiskSizeGB);
     }
@@ -265,6 +349,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="osDiskType")
     private @Nullable String osDiskType;
 
+    /**
+     * @return OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
+     * 
+     */
     public Optional<String> osDiskType() {
         return Optional.ofNullable(this.osDiskType);
     }
@@ -276,6 +364,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="osSKU")
     private @Nullable String osSKU;
 
+    /**
+     * @return OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
+     * 
+     */
     public Optional<String> osSKU() {
         return Optional.ofNullable(this.osSKU);
     }
@@ -287,6 +379,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="osType")
     private @Nullable String osType;
 
+    /**
+     * @return OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+     * 
+     */
     public Optional<String> osType() {
         return Optional.ofNullable(this.osType);
     }
@@ -298,6 +394,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="podSubnetID")
     private @Nullable String podSubnetID;
 
+    /**
+     * @return Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
+     * 
+     */
     public Optional<String> podSubnetID() {
         return Optional.ofNullable(this.podSubnetID);
     }
@@ -309,6 +409,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="powerState", required=true)
     private PowerStateResponse powerState;
 
+    /**
+     * @return Describes whether the Agent Pool is Running or Stopped
+     * 
+     */
     public PowerStateResponse powerState() {
         return this.powerState;
     }
@@ -320,6 +424,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The current deployment or provisioning state, which only appears in the response.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -331,6 +439,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="proximityPlacementGroupID")
     private @Nullable String proximityPlacementGroupID;
 
+    /**
+     * @return The ID for Proximity Placement Group.
+     * 
+     */
     public Optional<String> proximityPlacementGroupID() {
         return Optional.ofNullable(this.proximityPlacementGroupID);
     }
@@ -342,6 +454,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="scaleSetEvictionPolicy")
     private @Nullable String scaleSetEvictionPolicy;
 
+    /**
+     * @return ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+     * 
+     */
     public Optional<String> scaleSetEvictionPolicy() {
         return Optional.ofNullable(this.scaleSetEvictionPolicy);
     }
@@ -353,6 +469,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="scaleSetPriority")
     private @Nullable String scaleSetPriority;
 
+    /**
+     * @return ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
+     * 
+     */
     public Optional<String> scaleSetPriority() {
         return Optional.ofNullable(this.scaleSetPriority);
     }
@@ -364,6 +484,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="spotMaxPrice")
     private @Nullable Double spotMaxPrice;
 
+    /**
+     * @return SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
+     * 
+     */
     public Optional<Double> spotMaxPrice() {
         return Optional.ofNullable(this.spotMaxPrice);
     }
@@ -375,6 +499,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="tags")
     private @Nullable Map<String,String> tags;
 
+    /**
+     * @return Agent pool tags to be persisted on the agent pool virtual machine scale set.
+     * 
+     */
     public Optional<Map<String,String>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -386,6 +514,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return AgentPoolType represents types of an agent pool
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -397,6 +529,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="upgradeSettings")
     private @Nullable AgentPoolUpgradeSettingsResponse upgradeSettings;
 
+    /**
+     * @return Settings for upgrading the agentpool
+     * 
+     */
     public Optional<AgentPoolUpgradeSettingsResponse> upgradeSettings() {
         return Optional.ofNullable(this.upgradeSettings);
     }
@@ -408,6 +544,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="vmSize")
     private @Nullable String vmSize;
 
+    /**
+     * @return Size of agent VMs.
+     * 
+     */
     public Optional<String> vmSize() {
         return Optional.ofNullable(this.vmSize);
     }
@@ -419,6 +559,10 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
     @Import(name="vnetSubnetID")
     private @Nullable String vnetSubnetID;
 
+    /**
+     * @return VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
+     * 
+     */
     public Optional<String> vnetSubnetID() {
         return Optional.ofNullable(this.vnetSubnetID);
     }
@@ -482,189 +626,417 @@ public final class ManagedClusterAgentPoolProfileResponse extends com.pulumi.res
             $ = new ManagedClusterAgentPoolProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityZones Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(@Nullable List<String> availabilityZones) {
             $.availabilityZones = availabilityZones;
             return this;
         }
 
+        /**
+         * @param availabilityZones Availability zones for nodes. Must use VirtualMachineScaleSets AgentPoolType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityZones(String... availabilityZones) {
             return availabilityZones(List.of(availabilityZones));
         }
 
+        /**
+         * @param count Number of agents (VMs) to host docker containers. Allowed values must be in the range of 0 to 100 (inclusive) for user pools and in the range of 1 to 100 (inclusive) for system pools. The default value is 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Integer count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param enableAutoScaling Whether to enable auto-scaler
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAutoScaling(@Nullable Boolean enableAutoScaling) {
             $.enableAutoScaling = enableAutoScaling;
             return this;
         }
 
+        /**
+         * @param enableEncryptionAtHost Whether to enable EncryptionAtHost
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableEncryptionAtHost(@Nullable Boolean enableEncryptionAtHost) {
             $.enableEncryptionAtHost = enableEncryptionAtHost;
             return this;
         }
 
+        /**
+         * @param enableFIPS Whether to use FIPS enabled OS
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableFIPS(@Nullable Boolean enableFIPS) {
             $.enableFIPS = enableFIPS;
             return this;
         }
 
+        /**
+         * @param enableNodePublicIP Enable public IP for nodes
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableNodePublicIP(@Nullable Boolean enableNodePublicIP) {
             $.enableNodePublicIP = enableNodePublicIP;
             return this;
         }
 
+        /**
+         * @param gpuInstanceProfile GPUInstanceProfile to be used to specify GPU MIG instance profile for supported GPU VM SKU. Supported values are MIG1g, MIG2g, MIG3g, MIG4g and MIG7g.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gpuInstanceProfile(@Nullable String gpuInstanceProfile) {
             $.gpuInstanceProfile = gpuInstanceProfile;
             return this;
         }
 
+        /**
+         * @param kubeletConfig KubeletConfig specifies the configuration of kubelet on agent nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletConfig(@Nullable KubeletConfigResponse kubeletConfig) {
             $.kubeletConfig = kubeletConfig;
             return this;
         }
 
+        /**
+         * @param kubeletDiskType KubeletDiskType determines the placement of emptyDir volumes, container runtime data root, and Kubelet ephemeral storage. Currently allows one value, OS, resulting in Kubelet using the OS disk for data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletDiskType(@Nullable String kubeletDiskType) {
             $.kubeletDiskType = kubeletDiskType;
             return this;
         }
 
+        /**
+         * @param linuxOSConfig LinuxOSConfig specifies the OS configuration of linux agent nodes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linuxOSConfig(@Nullable LinuxOSConfigResponse linuxOSConfig) {
             $.linuxOSConfig = linuxOSConfig;
             return this;
         }
 
+        /**
+         * @param maxCount Maximum number of nodes for auto-scaling
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxCount(@Nullable Integer maxCount) {
             $.maxCount = maxCount;
             return this;
         }
 
+        /**
+         * @param maxPods Maximum number of pods that can run on a node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxPods(@Nullable Integer maxPods) {
             $.maxPods = maxPods;
             return this;
         }
 
+        /**
+         * @param minCount Minimum number of nodes for auto-scaling
+         * 
+         * @return builder
+         * 
+         */
         public Builder minCount(@Nullable Integer minCount) {
             $.minCount = minCount;
             return this;
         }
 
+        /**
+         * @param mode AgentPoolMode represents mode of an agent pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param name Unique name of the agent pool profile in the context of the subscription and resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param nodeImageVersion Version of node image
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeImageVersion(String nodeImageVersion) {
             $.nodeImageVersion = nodeImageVersion;
             return this;
         }
 
+        /**
+         * @param nodeLabels Agent pool node labels to be persisted across all nodes in agent pool.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeLabels(@Nullable Map<String,String> nodeLabels) {
             $.nodeLabels = nodeLabels;
             return this;
         }
 
+        /**
+         * @param nodePublicIPPrefixID Public IP Prefix ID. VM nodes use IPs assigned from this Public IP Prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodePublicIPPrefixID(@Nullable String nodePublicIPPrefixID) {
             $.nodePublicIPPrefixID = nodePublicIPPrefixID;
             return this;
         }
 
+        /**
+         * @param nodeTaints Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTaints(@Nullable List<String> nodeTaints) {
             $.nodeTaints = nodeTaints;
             return this;
         }
 
+        /**
+         * @param nodeTaints Taints added to new nodes during node pool create and scale. For example, key=value:NoSchedule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodeTaints(String... nodeTaints) {
             return nodeTaints(List.of(nodeTaints));
         }
 
+        /**
+         * @param orchestratorVersion Version of orchestrator specified when creating the managed cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder orchestratorVersion(@Nullable String orchestratorVersion) {
             $.orchestratorVersion = orchestratorVersion;
             return this;
         }
 
+        /**
+         * @param osDiskSizeGB OS Disk Size in GB to be used to specify the disk size for every machine in this master/agent pool. If you specify 0, it will apply the default osDisk size according to the vmSize specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskSizeGB(@Nullable Integer osDiskSizeGB) {
             $.osDiskSizeGB = osDiskSizeGB;
             return this;
         }
 
+        /**
+         * @param osDiskType OS disk type to be used for machines in a given agent pool. Allowed values are &#39;Ephemeral&#39; and &#39;Managed&#39;. If unspecified, defaults to &#39;Ephemeral&#39; when the VM supports ephemeral OS and has a cache disk larger than the requested OSDiskSizeGB. Otherwise, defaults to &#39;Managed&#39;. May not be changed after creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDiskType(@Nullable String osDiskType) {
             $.osDiskType = osDiskType;
             return this;
         }
 
+        /**
+         * @param osSKU OsSKU to be used to specify os sku. Choose from Ubuntu(default) and CBLMariner for Linux OSType. Not applicable to Windows OSType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osSKU(@Nullable String osSKU) {
             $.osSKU = osSKU;
             return this;
         }
 
+        /**
+         * @param osType OsType to be used to specify os type. Choose from Linux and Windows. Default to Linux.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(@Nullable String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param podSubnetID Pod SubnetID specifies the VNet&#39;s subnet identifier for pods.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podSubnetID(@Nullable String podSubnetID) {
             $.podSubnetID = podSubnetID;
             return this;
         }
 
+        /**
+         * @param powerState Describes whether the Agent Pool is Running or Stopped
+         * 
+         * @return builder
+         * 
+         */
         public Builder powerState(PowerStateResponse powerState) {
             $.powerState = powerState;
             return this;
         }
 
+        /**
+         * @param provisioningState The current deployment or provisioning state, which only appears in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param proximityPlacementGroupID The ID for Proximity Placement Group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder proximityPlacementGroupID(@Nullable String proximityPlacementGroupID) {
             $.proximityPlacementGroupID = proximityPlacementGroupID;
             return this;
         }
 
+        /**
+         * @param scaleSetEvictionPolicy ScaleSetEvictionPolicy to be used to specify eviction policy for Spot virtual machine scale set. Default to Delete.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSetEvictionPolicy(@Nullable String scaleSetEvictionPolicy) {
             $.scaleSetEvictionPolicy = scaleSetEvictionPolicy;
             return this;
         }
 
+        /**
+         * @param scaleSetPriority ScaleSetPriority to be used to specify virtual machine scale set priority. Default to regular.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scaleSetPriority(@Nullable String scaleSetPriority) {
             $.scaleSetPriority = scaleSetPriority;
             return this;
         }
 
+        /**
+         * @param spotMaxPrice SpotMaxPrice to be used to specify the maximum price you are willing to pay in US Dollars. Possible values are any decimal value greater than zero or -1 which indicates default price to be up-to on-demand.
+         * 
+         * @return builder
+         * 
+         */
         public Builder spotMaxPrice(@Nullable Double spotMaxPrice) {
             $.spotMaxPrice = spotMaxPrice;
             return this;
         }
 
+        /**
+         * @param tags Agent pool tags to be persisted on the agent pool virtual machine scale set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param type AgentPoolType represents types of an agent pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param upgradeSettings Settings for upgrading the agentpool
+         * 
+         * @return builder
+         * 
+         */
         public Builder upgradeSettings(@Nullable AgentPoolUpgradeSettingsResponse upgradeSettings) {
             $.upgradeSettings = upgradeSettings;
             return this;
         }
 
+        /**
+         * @param vmSize Size of agent VMs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmSize(@Nullable String vmSize) {
             $.vmSize = vmSize;
             return this;
         }
 
+        /**
+         * @param vnetSubnetID VNet SubnetID specifies the VNet&#39;s subnet identifier for nodes and maybe pods
+         * 
+         * @return builder
+         * 
+         */
         public Builder vnetSubnetID(@Nullable String vnetSubnetID) {
             $.vnetSubnetID = vnetSubnetID;
             return this;

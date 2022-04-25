@@ -26,6 +26,10 @@ public final class CustomImagePropertiesCustomResponse extends com.pulumi.resour
     @Import(name="imageName")
     private @Nullable String imageName;
 
+    /**
+     * @return The image name.
+     * 
+     */
     public Optional<String> imageName() {
         return Optional.ofNullable(this.imageName);
     }
@@ -37,6 +41,10 @@ public final class CustomImagePropertiesCustomResponse extends com.pulumi.resour
     @Import(name="osType", required=true)
     private String osType;
 
+    /**
+     * @return The OS type of the custom image (i.e. Windows, Linux)
+     * 
+     */
     public String osType() {
         return this.osType;
     }
@@ -48,6 +56,10 @@ public final class CustomImagePropertiesCustomResponse extends com.pulumi.resour
     @Import(name="sysPrep")
     private @Nullable Boolean sysPrep;
 
+    /**
+     * @return Indicates whether sysprep has been run on the VHD.
+     * 
+     */
     public Optional<Boolean> sysPrep() {
         return Optional.ofNullable(this.sysPrep);
     }
@@ -78,16 +90,34 @@ public final class CustomImagePropertiesCustomResponse extends com.pulumi.resour
             $ = new CustomImagePropertiesCustomResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageName The image name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageName(@Nullable String imageName) {
             $.imageName = imageName;
             return this;
         }
 
+        /**
+         * @param osType The OS type of the custom image (i.e. Windows, Linux)
+         * 
+         * @return builder
+         * 
+         */
         public Builder osType(String osType) {
             $.osType = osType;
             return this;
         }
 
+        /**
+         * @param sysPrep Indicates whether sysprep has been run on the VHD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sysPrep(@Nullable Boolean sysPrep) {
             $.sysPrep = sysPrep;
             return this;

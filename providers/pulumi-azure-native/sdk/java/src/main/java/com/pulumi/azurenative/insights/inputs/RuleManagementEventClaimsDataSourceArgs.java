@@ -26,6 +26,10 @@ public final class RuleManagementEventClaimsDataSourceArgs extends com.pulumi.re
     @Import(name="emailAddress")
     private @Nullable Output<String> emailAddress;
 
+    /**
+     * @return the email address.
+     * 
+     */
     public Optional<Output<String>> emailAddress() {
         return Optional.ofNullable(this.emailAddress);
     }
@@ -54,11 +58,23 @@ public final class RuleManagementEventClaimsDataSourceArgs extends com.pulumi.re
             $ = new RuleManagementEventClaimsDataSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param emailAddress the email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(@Nullable Output<String> emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param emailAddress the email address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             return emailAddress(Output.of(emailAddress));
         }

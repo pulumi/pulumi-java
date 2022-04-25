@@ -19,6 +19,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="parentResourcePath", required=true)
     private String parentResourcePath;
 
+    /**
+     * @return The parent resource identity.
+     * 
+     */
     public String parentResourcePath() {
         return this.parentResourcePath;
     }
@@ -30,6 +34,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group containing the resource to get. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceName", required=true)
     private String resourceName;
 
+    /**
+     * @return The name of the resource to get.
+     * 
+     */
     public String resourceName() {
         return this.resourceName;
     }
@@ -52,6 +64,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceProviderNamespace", required=true)
     private String resourceProviderNamespace;
 
+    /**
+     * @return The namespace of the resource provider.
+     * 
+     */
     public String resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
@@ -63,6 +79,10 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceType", required=true)
     private String resourceType;
 
+    /**
+     * @return The resource type of the resource.
+     * 
+     */
     public String resourceType() {
         return this.resourceType;
     }
@@ -95,26 +115,56 @@ public final class GetResourceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parentResourcePath The parent resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourcePath(String parentResourcePath) {
             $.parentResourcePath = parentResourcePath;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group containing the resource to get. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             $.resourceType = resourceType;
             return this;

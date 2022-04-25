@@ -38,6 +38,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="additionalLinkedServiceNames")
     private @Nullable Output<List<LinkedServiceReferenceArgs>> additionalLinkedServiceNames;
 
+    /**
+     * @return Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
+     * 
+     */
     public Optional<Output<List<LinkedServiceReferenceArgs>>> additionalLinkedServiceNames() {
         return Optional.ofNullable(this.additionalLinkedServiceNames);
     }
@@ -49,6 +53,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="annotations")
     private @Nullable Output<List<Object>> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<Output<List<Object>>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -60,6 +68,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterNamePrefix")
     private @Nullable Output<Object> clusterNamePrefix;
 
+    /**
+     * @return The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> clusterNamePrefix() {
         return Optional.ofNullable(this.clusterNamePrefix);
     }
@@ -71,6 +83,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterPassword")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterPassword;
 
+    /**
+     * @return The password to access the cluster.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> clusterPassword() {
         return Optional.ofNullable(this.clusterPassword);
     }
@@ -82,6 +98,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterResourceGroup", required=true)
     private Output<Object> clusterResourceGroup;
 
+    /**
+     * @return The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> clusterResourceGroup() {
         return this.clusterResourceGroup;
     }
@@ -93,6 +113,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterSize", required=true)
     private Output<Object> clusterSize;
 
+    /**
+     * @return Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> clusterSize() {
         return this.clusterSize;
     }
@@ -104,6 +128,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterSshPassword")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterSshPassword;
 
+    /**
+     * @return The password to SSH remotely connect cluster’s node (for Linux).
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> clusterSshPassword() {
         return Optional.ofNullable(this.clusterSshPassword);
     }
@@ -115,6 +143,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterSshUserName")
     private @Nullable Output<Object> clusterSshUserName;
 
+    /**
+     * @return The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> clusterSshUserName() {
         return Optional.ofNullable(this.clusterSshUserName);
     }
@@ -126,6 +158,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterType")
     private @Nullable Output<Object> clusterType;
 
+    /**
+     * @return The cluster type. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> clusterType() {
         return Optional.ofNullable(this.clusterType);
     }
@@ -137,6 +173,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="clusterUserName")
     private @Nullable Output<Object> clusterUserName;
 
+    /**
+     * @return The username to access the cluster. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> clusterUserName() {
         return Optional.ofNullable(this.clusterUserName);
     }
@@ -148,6 +188,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="connectVia")
     private @Nullable Output<IntegrationRuntimeReferenceArgs> connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<Output<IntegrationRuntimeReferenceArgs>> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -159,6 +203,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="coreConfiguration")
     private @Nullable Output<Object> coreConfiguration;
 
+    /**
+     * @return Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
+     * 
+     */
     public Optional<Output<Object>> coreConfiguration() {
         return Optional.ofNullable(this.coreConfiguration);
     }
@@ -170,6 +218,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="credential")
     private @Nullable Output<CredentialReferenceArgs> credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<Output<CredentialReferenceArgs>> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -181,6 +233,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="dataNodeSize")
     private @Nullable Output<Object> dataNodeSize;
 
+    /**
+     * @return Specifies the size of the data node for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> dataNodeSize() {
         return Optional.ofNullable(this.dataNodeSize);
     }
@@ -192,6 +248,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -203,6 +263,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="encryptedCredential")
     private @Nullable Output<Object> encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -214,6 +278,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hBaseConfiguration")
     private @Nullable Output<Object> hBaseConfiguration;
 
+    /**
+     * @return Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> hBaseConfiguration() {
         return Optional.ofNullable(this.hBaseConfiguration);
     }
@@ -225,6 +293,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hcatalogLinkedServiceName")
     private @Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName;
 
+    /**
+     * @return The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> hcatalogLinkedServiceName() {
         return Optional.ofNullable(this.hcatalogLinkedServiceName);
     }
@@ -236,6 +308,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hdfsConfiguration")
     private @Nullable Output<Object> hdfsConfiguration;
 
+    /**
+     * @return Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> hdfsConfiguration() {
         return Optional.ofNullable(this.hdfsConfiguration);
     }
@@ -247,6 +323,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="headNodeSize")
     private @Nullable Output<Object> headNodeSize;
 
+    /**
+     * @return Specifies the size of the head node for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> headNodeSize() {
         return Optional.ofNullable(this.headNodeSize);
     }
@@ -258,6 +338,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hiveConfiguration")
     private @Nullable Output<Object> hiveConfiguration;
 
+    /**
+     * @return Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> hiveConfiguration() {
         return Optional.ofNullable(this.hiveConfiguration);
     }
@@ -269,6 +353,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="hostSubscriptionId", required=true)
     private Output<Object> hostSubscriptionId;
 
+    /**
+     * @return The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> hostSubscriptionId() {
         return this.hostSubscriptionId;
     }
@@ -280,6 +368,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="linkedServiceName", required=true)
     private Output<LinkedServiceReferenceArgs> linkedServiceName;
 
+    /**
+     * @return Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
+     * 
+     */
     public Output<LinkedServiceReferenceArgs> linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -291,6 +383,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="mapReduceConfiguration")
     private @Nullable Output<Object> mapReduceConfiguration;
 
+    /**
+     * @return Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> mapReduceConfiguration() {
         return Optional.ofNullable(this.mapReduceConfiguration);
     }
@@ -302,6 +398,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="oozieConfiguration")
     private @Nullable Output<Object> oozieConfiguration;
 
+    /**
+     * @return Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> oozieConfiguration() {
         return Optional.ofNullable(this.oozieConfiguration);
     }
@@ -313,6 +413,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="parameters")
     private @Nullable Output<Map<String,ParameterSpecificationArgs>> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Output<Map<String,ParameterSpecificationArgs>>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -324,6 +428,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="scriptActions")
     private @Nullable Output<List<ScriptActionArgs>> scriptActions;
 
+    /**
+     * @return Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+     * 
+     */
     public Optional<Output<List<ScriptActionArgs>>> scriptActions() {
         return Optional.ofNullable(this.scriptActions);
     }
@@ -335,6 +443,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="servicePrincipalId")
     private @Nullable Output<Object> servicePrincipalId;
 
+    /**
+     * @return The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
@@ -346,6 +458,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="servicePrincipalKey")
     private @Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey;
 
+    /**
+     * @return The key for the service principal id.
+     * 
+     */
     public Optional<Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
@@ -357,6 +473,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="sparkVersion")
     private @Nullable Output<Object> sparkVersion;
 
+    /**
+     * @return The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> sparkVersion() {
         return Optional.ofNullable(this.sparkVersion);
     }
@@ -368,6 +488,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="stormConfiguration")
     private @Nullable Output<Object> stormConfiguration;
 
+    /**
+     * @return Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> stormConfiguration() {
         return Optional.ofNullable(this.stormConfiguration);
     }
@@ -379,6 +503,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="subnetName")
     private @Nullable Output<Object> subnetName;
 
+    /**
+     * @return The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> subnetName() {
         return Optional.ofNullable(this.subnetName);
     }
@@ -390,6 +518,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="tenant", required=true)
     private Output<Object> tenant;
 
+    /**
+     * @return The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> tenant() {
         return this.tenant;
     }
@@ -401,6 +533,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="timeToLive", required=true)
     private Output<Object> timeToLive;
 
+    /**
+     * @return The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> timeToLive() {
         return this.timeToLive;
     }
@@ -413,6 +549,11 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;HDInsightOnDemand&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -424,6 +565,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="version", required=true)
     private Output<Object> version;
 
+    /**
+     * @return Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
+     * 
+     */
     public Output<Object> version() {
         return this.version;
     }
@@ -435,6 +580,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="virtualNetworkId")
     private @Nullable Output<Object> virtualNetworkId;
 
+    /**
+     * @return The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> virtualNetworkId() {
         return Optional.ofNullable(this.virtualNetworkId);
     }
@@ -446,6 +595,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="yarnConfiguration")
     private @Nullable Output<Object> yarnConfiguration;
 
+    /**
+     * @return Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> yarnConfiguration() {
         return Optional.ofNullable(this.yarnConfiguration);
     }
@@ -457,6 +610,10 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
     @Import(name="zookeeperNodeSize")
     private @Nullable Output<Object> zookeeperNodeSize;
 
+    /**
+     * @return Specifies the size of the Zoo Keeper node for the HDInsight cluster.
+     * 
+     */
     public Optional<Output<Object>> zookeeperNodeSize() {
         return Optional.ofNullable(this.zookeeperNodeSize);
     }
@@ -523,389 +680,913 @@ public final class HDInsightOnDemandLinkedServiceArgs extends com.pulumi.resourc
             $ = new HDInsightOnDemandLinkedServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalLinkedServiceNames Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLinkedServiceNames(@Nullable Output<List<LinkedServiceReferenceArgs>> additionalLinkedServiceNames) {
             $.additionalLinkedServiceNames = additionalLinkedServiceNames;
             return this;
         }
 
+        /**
+         * @param additionalLinkedServiceNames Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLinkedServiceNames(List<LinkedServiceReferenceArgs> additionalLinkedServiceNames) {
             return additionalLinkedServiceNames(Output.of(additionalLinkedServiceNames));
         }
 
+        /**
+         * @param additionalLinkedServiceNames Specifies additional storage accounts for the HDInsight linked service so that the Data Factory service can register them on your behalf.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalLinkedServiceNames(LinkedServiceReferenceArgs... additionalLinkedServiceNames) {
             return additionalLinkedServiceNames(List.of(additionalLinkedServiceNames));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable Output<List<Object>> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(List<Object> annotations) {
             return annotations(Output.of(annotations));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param clusterNamePrefix The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterNamePrefix(@Nullable Output<Object> clusterNamePrefix) {
             $.clusterNamePrefix = clusterNamePrefix;
             return this;
         }
 
+        /**
+         * @param clusterNamePrefix The prefix of cluster name, postfix will be distinct with timestamp. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterNamePrefix(Object clusterNamePrefix) {
             return clusterNamePrefix(Output.of(clusterNamePrefix));
         }
 
+        /**
+         * @param clusterPassword The password to access the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterPassword(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterPassword) {
             $.clusterPassword = clusterPassword;
             return this;
         }
 
+        /**
+         * @param clusterPassword The password to access the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterPassword(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clusterPassword) {
             return clusterPassword(Output.of(clusterPassword));
         }
 
+        /**
+         * @param clusterPassword The password to access the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterPassword(AzureKeyVaultSecretReferenceArgs clusterPassword) {
             return clusterPassword(Either.ofLeft(clusterPassword));
         }
 
+        /**
+         * @param clusterPassword The password to access the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterPassword(SecureStringArgs clusterPassword) {
             return clusterPassword(Either.ofRight(clusterPassword));
         }
 
+        /**
+         * @param clusterResourceGroup The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceGroup(Output<Object> clusterResourceGroup) {
             $.clusterResourceGroup = clusterResourceGroup;
             return this;
         }
 
+        /**
+         * @param clusterResourceGroup The resource group where the cluster belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceGroup(Object clusterResourceGroup) {
             return clusterResourceGroup(Output.of(clusterResourceGroup));
         }
 
+        /**
+         * @param clusterSize Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSize(Output<Object> clusterSize) {
             $.clusterSize = clusterSize;
             return this;
         }
 
+        /**
+         * @param clusterSize Number of worker/data nodes in the cluster. Suggestion value: 4. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSize(Object clusterSize) {
             return clusterSize(Output.of(clusterSize));
         }
 
+        /**
+         * @param clusterSshPassword The password to SSH remotely connect cluster’s node (for Linux).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSshPassword(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> clusterSshPassword) {
             $.clusterSshPassword = clusterSshPassword;
             return this;
         }
 
+        /**
+         * @param clusterSshPassword The password to SSH remotely connect cluster’s node (for Linux).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSshPassword(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> clusterSshPassword) {
             return clusterSshPassword(Output.of(clusterSshPassword));
         }
 
+        /**
+         * @param clusterSshPassword The password to SSH remotely connect cluster’s node (for Linux).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSshPassword(AzureKeyVaultSecretReferenceArgs clusterSshPassword) {
             return clusterSshPassword(Either.ofLeft(clusterSshPassword));
         }
 
+        /**
+         * @param clusterSshPassword The password to SSH remotely connect cluster’s node (for Linux).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSshPassword(SecureStringArgs clusterSshPassword) {
             return clusterSshPassword(Either.ofRight(clusterSshPassword));
         }
 
+        /**
+         * @param clusterSshUserName The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSshUserName(@Nullable Output<Object> clusterSshUserName) {
             $.clusterSshUserName = clusterSshUserName;
             return this;
         }
 
+        /**
+         * @param clusterSshUserName The username to SSH remotely connect to cluster’s node (for Linux). Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterSshUserName(Object clusterSshUserName) {
             return clusterSshUserName(Output.of(clusterSshUserName));
         }
 
+        /**
+         * @param clusterType The cluster type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterType(@Nullable Output<Object> clusterType) {
             $.clusterType = clusterType;
             return this;
         }
 
+        /**
+         * @param clusterType The cluster type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterType(Object clusterType) {
             return clusterType(Output.of(clusterType));
         }
 
+        /**
+         * @param clusterUserName The username to access the cluster. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterUserName(@Nullable Output<Object> clusterUserName) {
             $.clusterUserName = clusterUserName;
             return this;
         }
 
+        /**
+         * @param clusterUserName The username to access the cluster. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterUserName(Object clusterUserName) {
             return clusterUserName(Output.of(clusterUserName));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable Output<IntegrationRuntimeReferenceArgs> connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(IntegrationRuntimeReferenceArgs connectVia) {
             return connectVia(Output.of(connectVia));
         }
 
+        /**
+         * @param coreConfiguration Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreConfiguration(@Nullable Output<Object> coreConfiguration) {
             $.coreConfiguration = coreConfiguration;
             return this;
         }
 
+        /**
+         * @param coreConfiguration Specifies the core configuration parameters (as in core-site.xml) for the HDInsight cluster to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreConfiguration(Object coreConfiguration) {
             return coreConfiguration(Output.of(coreConfiguration));
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable Output<CredentialReferenceArgs> credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(CredentialReferenceArgs credential) {
             return credential(Output.of(credential));
         }
 
+        /**
+         * @param dataNodeSize Specifies the size of the data node for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataNodeSize(@Nullable Output<Object> dataNodeSize) {
             $.dataNodeSize = dataNodeSize;
             return this;
         }
 
+        /**
+         * @param dataNodeSize Specifies the size of the data node for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataNodeSize(Object dataNodeSize) {
             return dataNodeSize(Output.of(dataNodeSize));
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Output<Object> encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(Object encryptedCredential) {
             return encryptedCredential(Output.of(encryptedCredential));
         }
 
+        /**
+         * @param hBaseConfiguration Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hBaseConfiguration(@Nullable Output<Object> hBaseConfiguration) {
             $.hBaseConfiguration = hBaseConfiguration;
             return this;
         }
 
+        /**
+         * @param hBaseConfiguration Specifies the HBase configuration parameters (hbase-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hBaseConfiguration(Object hBaseConfiguration) {
             return hBaseConfiguration(Output.of(hBaseConfiguration));
         }
 
+        /**
+         * @param hcatalogLinkedServiceName The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcatalogLinkedServiceName(@Nullable Output<LinkedServiceReferenceArgs> hcatalogLinkedServiceName) {
             $.hcatalogLinkedServiceName = hcatalogLinkedServiceName;
             return this;
         }
 
+        /**
+         * @param hcatalogLinkedServiceName The name of Azure SQL linked service that point to the HCatalog database. The on-demand HDInsight cluster is created by using the Azure SQL database as the metastore.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hcatalogLinkedServiceName(LinkedServiceReferenceArgs hcatalogLinkedServiceName) {
             return hcatalogLinkedServiceName(Output.of(hcatalogLinkedServiceName));
         }
 
+        /**
+         * @param hdfsConfiguration Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hdfsConfiguration(@Nullable Output<Object> hdfsConfiguration) {
             $.hdfsConfiguration = hdfsConfiguration;
             return this;
         }
 
+        /**
+         * @param hdfsConfiguration Specifies the HDFS configuration parameters (hdfs-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hdfsConfiguration(Object hdfsConfiguration) {
             return hdfsConfiguration(Output.of(hdfsConfiguration));
         }
 
+        /**
+         * @param headNodeSize Specifies the size of the head node for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headNodeSize(@Nullable Output<Object> headNodeSize) {
             $.headNodeSize = headNodeSize;
             return this;
         }
 
+        /**
+         * @param headNodeSize Specifies the size of the head node for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headNodeSize(Object headNodeSize) {
             return headNodeSize(Output.of(headNodeSize));
         }
 
+        /**
+         * @param hiveConfiguration Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiveConfiguration(@Nullable Output<Object> hiveConfiguration) {
             $.hiveConfiguration = hiveConfiguration;
             return this;
         }
 
+        /**
+         * @param hiveConfiguration Specifies the hive configuration parameters (hive-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hiveConfiguration(Object hiveConfiguration) {
             return hiveConfiguration(Output.of(hiveConfiguration));
         }
 
+        /**
+         * @param hostSubscriptionId The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostSubscriptionId(Output<Object> hostSubscriptionId) {
             $.hostSubscriptionId = hostSubscriptionId;
             return this;
         }
 
+        /**
+         * @param hostSubscriptionId The customer’s subscription to host the cluster. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostSubscriptionId(Object hostSubscriptionId) {
             return hostSubscriptionId(Output.of(hostSubscriptionId));
         }
 
+        /**
+         * @param linkedServiceName Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(Output<LinkedServiceReferenceArgs> linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Azure Storage linked service to be used by the on-demand cluster for storing and processing data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceArgs linkedServiceName) {
             return linkedServiceName(Output.of(linkedServiceName));
         }
 
+        /**
+         * @param mapReduceConfiguration Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapReduceConfiguration(@Nullable Output<Object> mapReduceConfiguration) {
             $.mapReduceConfiguration = mapReduceConfiguration;
             return this;
         }
 
+        /**
+         * @param mapReduceConfiguration Specifies the MapReduce configuration parameters (mapred-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mapReduceConfiguration(Object mapReduceConfiguration) {
             return mapReduceConfiguration(Output.of(mapReduceConfiguration));
         }
 
+        /**
+         * @param oozieConfiguration Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oozieConfiguration(@Nullable Output<Object> oozieConfiguration) {
             $.oozieConfiguration = oozieConfiguration;
             return this;
         }
 
+        /**
+         * @param oozieConfiguration Specifies the Oozie configuration parameters (oozie-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder oozieConfiguration(Object oozieConfiguration) {
             return oozieConfiguration(Output.of(oozieConfiguration));
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<Map<String,ParameterSpecificationArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterSpecificationArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param scriptActions Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptActions(@Nullable Output<List<ScriptActionArgs>> scriptActions) {
             $.scriptActions = scriptActions;
             return this;
         }
 
+        /**
+         * @param scriptActions Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptActions(List<ScriptActionArgs> scriptActions) {
             return scriptActions(Output.of(scriptActions));
         }
 
+        /**
+         * @param scriptActions Custom script actions to run on HDI ondemand cluster once it&#39;s up. Please refer to https://docs.microsoft.com/en-us/azure/hdinsight/hdinsight-hadoop-customize-cluster-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fr-server%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json#understanding-script-actions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptActions(ScriptActionArgs... scriptActions) {
             return scriptActions(List.of(scriptActions));
         }
 
+        /**
+         * @param servicePrincipalId The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Output<Object> servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalId The service principal id for the hostSubscriptionId. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(Object servicePrincipalId) {
             return servicePrincipalId(Output.of(servicePrincipalId));
         }
 
+        /**
+         * @param servicePrincipalKey The key for the service principal id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(@Nullable Output<Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs>> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The key for the service principal id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(Either<AzureKeyVaultSecretReferenceArgs,SecureStringArgs> servicePrincipalKey) {
             return servicePrincipalKey(Output.of(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The key for the service principal id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The key for the service principal id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringArgs servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
+        /**
+         * @param sparkVersion The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkVersion(@Nullable Output<Object> sparkVersion) {
             $.sparkVersion = sparkVersion;
             return this;
         }
 
+        /**
+         * @param sparkVersion The version of spark if the cluster type is &#39;spark&#39;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sparkVersion(Object sparkVersion) {
             return sparkVersion(Output.of(sparkVersion));
         }
 
+        /**
+         * @param stormConfiguration Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stormConfiguration(@Nullable Output<Object> stormConfiguration) {
             $.stormConfiguration = stormConfiguration;
             return this;
         }
 
+        /**
+         * @param stormConfiguration Specifies the Storm configuration parameters (storm-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stormConfiguration(Object stormConfiguration) {
             return stormConfiguration(Output.of(stormConfiguration));
         }
 
+        /**
+         * @param subnetName The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetName(@Nullable Output<Object> subnetName) {
             $.subnetName = subnetName;
             return this;
         }
 
+        /**
+         * @param subnetName The ARM resource ID for the subnet in the vNet. If virtualNetworkId was specified, then this property is required. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetName(Object subnetName) {
             return subnetName(Output.of(subnetName));
         }
 
+        /**
+         * @param tenant The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(Output<Object> tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param tenant The Tenant id/name to which the service principal belongs. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(Object tenant) {
             return tenant(Output.of(tenant));
         }
 
+        /**
+         * @param timeToLive The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToLive(Output<Object> timeToLive) {
             $.timeToLive = timeToLive;
             return this;
         }
 
+        /**
+         * @param timeToLive The allowed idle time for the on-demand HDInsight cluster. Specifies how long the on-demand HDInsight cluster stays alive after completion of an activity run if there are no other active jobs in the cluster. The minimum value is 5 mins. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeToLive(Object timeToLive) {
             return timeToLive(Output.of(timeToLive));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;HDInsightOnDemand&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;HDInsightOnDemand&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param version Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Output<Object> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version of the HDInsight cluster.  Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(Object version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param virtualNetworkId The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkId(@Nullable Output<Object> virtualNetworkId) {
             $.virtualNetworkId = virtualNetworkId;
             return this;
         }
 
+        /**
+         * @param virtualNetworkId The ARM resource ID for the vNet to which the cluster should be joined after creation. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkId(Object virtualNetworkId) {
             return virtualNetworkId(Output.of(virtualNetworkId));
         }
 
+        /**
+         * @param yarnConfiguration Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yarnConfiguration(@Nullable Output<Object> yarnConfiguration) {
             $.yarnConfiguration = yarnConfiguration;
             return this;
         }
 
+        /**
+         * @param yarnConfiguration Specifies the Yarn configuration parameters (yarn-site.xml) for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder yarnConfiguration(Object yarnConfiguration) {
             return yarnConfiguration(Output.of(yarnConfiguration));
         }
 
+        /**
+         * @param zookeeperNodeSize Specifies the size of the Zoo Keeper node for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zookeeperNodeSize(@Nullable Output<Object> zookeeperNodeSize) {
             $.zookeeperNodeSize = zookeeperNodeSize;
             return this;
         }
 
+        /**
+         * @param zookeeperNodeSize Specifies the size of the Zoo Keeper node for the HDInsight cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zookeeperNodeSize(Object zookeeperNodeSize) {
             return zookeeperNodeSize(Output.of(zookeeperNodeSize));
         }

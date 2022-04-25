@@ -24,6 +24,10 @@ public final class DimensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the dimension
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -35,6 +39,10 @@ public final class DimensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return Operator for dimension values
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -46,6 +54,10 @@ public final class DimensionResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="values", required=true)
     private List<String> values;
 
+    /**
+     * @return List of dimension values
+     * 
+     */
     public List<String> values() {
         return this.values;
     }
@@ -76,21 +88,45 @@ public final class DimensionResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DimensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param operator Operator for dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param values List of dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(List<String> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values List of dimension values
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(String... values) {
             return values(List.of(values));
         }

@@ -20,97 +20,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAutomationAccountResult {
     /**
-     * URL of automation hybrid service which is used for hybrid worker on-boarding.
+     * @return URL of automation hybrid service which is used for hybrid worker on-boarding.
      * 
      */
     private final @Nullable String automationHybridServiceUrl;
     /**
-     * Gets the creation time.
+     * @return Gets the creation time.
      * 
      */
     private final String creationTime;
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Indicates whether requests using non-AAD authentication are blocked
+     * @return Indicates whether requests using non-AAD authentication are blocked
      * 
      */
     private final @Nullable Boolean disableLocalAuth;
     /**
-     * Encryption properties for the automation account
+     * @return Encryption properties for the automation account
      * 
      */
     private final @Nullable EncryptionPropertiesResponse encryption;
     /**
-     * Gets or sets the etag of the resource.
+     * @return Gets or sets the etag of the resource.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
      */
     private final String id;
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * Gets or sets the last modified by.
+     * @return Gets or sets the last modified by.
      * 
      */
     private final @Nullable String lastModifiedBy;
     /**
-     * Gets the last modified time.
+     * @return Gets the last modified time.
      * 
      */
     private final String lastModifiedTime;
     /**
-     * The Azure Region where the resource lives
+     * @return The Azure Region where the resource lives
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * List of Automation operations supported by the Automation resource provider.
+     * @return List of Automation operations supported by the Automation resource provider.
      * 
      */
     private final @Nullable List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
+     * @return Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
      * 
      */
     private final @Nullable Boolean publicNetworkAccess;
     /**
-     * Gets or sets the SKU of account.
+     * @return Gets or sets the SKU of account.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Gets status of account.
+     * @return Gets status of account.
      * 
      */
     private final String state;
     /**
-     * Resource system metadata.
+     * @return Resource system metadata.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
      */
     private final String type;
@@ -158,135 +158,135 @@ public final class GetAutomationAccountResult {
     }
 
     /**
-     * URL of automation hybrid service which is used for hybrid worker on-boarding.
+     * @return URL of automation hybrid service which is used for hybrid worker on-boarding.
      * 
-    */
+     */
     public Optional<String> automationHybridServiceUrl() {
         return Optional.ofNullable(this.automationHybridServiceUrl);
     }
     /**
-     * Gets the creation time.
+     * @return Gets the creation time.
      * 
-    */
+     */
     public String creationTime() {
         return this.creationTime;
     }
     /**
-     * Gets or sets the description.
+     * @return Gets or sets the description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Indicates whether requests using non-AAD authentication are blocked
+     * @return Indicates whether requests using non-AAD authentication are blocked
      * 
-    */
+     */
     public Optional<Boolean> disableLocalAuth() {
         return Optional.ofNullable(this.disableLocalAuth);
     }
     /**
-     * Encryption properties for the automation account
+     * @return Encryption properties for the automation account
      * 
-    */
+     */
     public Optional<EncryptionPropertiesResponse> encryption() {
         return Optional.ofNullable(this.encryption);
     }
     /**
-     * Gets or sets the etag of the resource.
+     * @return Gets or sets the etag of the resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Fully qualified resource Id for the resource
+     * @return Fully qualified resource Id for the resource
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Identity for the resource.
+     * @return Identity for the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Gets or sets the last modified by.
+     * @return Gets or sets the last modified by.
      * 
-    */
+     */
     public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
-     * Gets the last modified time.
+     * @return Gets the last modified time.
      * 
-    */
+     */
     public String lastModifiedTime() {
         return this.lastModifiedTime;
     }
     /**
-     * The Azure Region where the resource lives
+     * @return The Azure Region where the resource lives
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of Automation operations supported by the Automation resource provider.
+     * @return List of Automation operations supported by the Automation resource provider.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections == null ? List.of() : this.privateEndpointConnections;
     }
     /**
-     * Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
+     * @return Indicates whether traffic on the non-ARM endpoint (Webhook/Agent) is allowed from the public internet
      * 
-    */
+     */
     public Optional<Boolean> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * Gets or sets the SKU of account.
+     * @return Gets or sets the SKU of account.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Gets status of account.
+     * @return Gets status of account.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Resource system metadata.
+     * @return Resource system metadata.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource.
+     * @return The type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

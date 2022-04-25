@@ -29,6 +29,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="author")
     private @Nullable Output<String> author;
 
+    /**
+     * @return The author of the custom image.
+     * 
+     */
     public Optional<Output<String>> author() {
         return Optional.ofNullable(this.author);
     }
@@ -40,6 +44,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customImagePlan")
     private @Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan;
 
+    /**
+     * @return Storage information about the plan related to this custom image
+     * 
+     */
     public Optional<Output<CustomImagePropertiesFromPlanArgs>> customImagePlan() {
         return Optional.ofNullable(this.customImagePlan);
     }
@@ -51,6 +59,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataDiskStorageInfo")
     private @Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo;
 
+    /**
+     * @return Storage information about the data disks present in the custom image
+     * 
+     */
     public Optional<Output<List<DataDiskStorageTypeInfoArgs>>> dataDiskStorageInfo() {
         return Optional.ofNullable(this.dataDiskStorageInfo);
     }
@@ -62,6 +74,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of the custom image.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -73,6 +89,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isPlanAuthorized")
     private @Nullable Output<Boolean> isPlanAuthorized;
 
+    /**
+     * @return Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
+     * 
+     */
     public Optional<Output<Boolean>> isPlanAuthorized() {
         return Optional.ofNullable(this.isPlanAuthorized);
     }
@@ -84,6 +104,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="labName", required=true)
     private Output<String> labName;
 
+    /**
+     * @return The name of the lab.
+     * 
+     */
     public Output<String> labName() {
         return this.labName;
     }
@@ -95,6 +119,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the resource.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -106,6 +134,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedImageId")
     private @Nullable Output<String> managedImageId;
 
+    /**
+     * @return The Managed Image Id backing the custom image.
+     * 
+     */
     public Optional<Output<String>> managedImageId() {
         return Optional.ofNullable(this.managedImageId);
     }
@@ -117,6 +149,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedSnapshotId")
     private @Nullable Output<String> managedSnapshotId;
 
+    /**
+     * @return The Managed Snapshot Id backing the custom image.
+     * 
+     */
     public Optional<Output<String>> managedSnapshotId() {
         return Optional.ofNullable(this.managedSnapshotId);
     }
@@ -128,6 +164,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the custom image.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -139,6 +179,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -150,6 +194,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The tags of the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -161,6 +209,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vhd")
     private @Nullable Output<CustomImagePropertiesCustomArgs> vhd;
 
+    /**
+     * @return The VHD from which the image is to be created.
+     * 
+     */
     public Optional<Output<CustomImagePropertiesCustomArgs>> vhd() {
         return Optional.ofNullable(this.vhd);
     }
@@ -172,6 +224,10 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vm")
     private @Nullable Output<CustomImagePropertiesFromVmArgs> vm;
 
+    /**
+     * @return The virtual machine from which the image is to be created.
+     * 
+     */
     public Optional<Output<CustomImagePropertiesFromVmArgs>> vm() {
         return Optional.ofNullable(this.vm);
     }
@@ -213,132 +269,306 @@ public final class CustomImageArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CustomImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param author The author of the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder author(@Nullable Output<String> author) {
             $.author = author;
             return this;
         }
 
+        /**
+         * @param author The author of the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder author(String author) {
             return author(Output.of(author));
         }
 
+        /**
+         * @param customImagePlan Storage information about the plan related to this custom image
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImagePlan(@Nullable Output<CustomImagePropertiesFromPlanArgs> customImagePlan) {
             $.customImagePlan = customImagePlan;
             return this;
         }
 
+        /**
+         * @param customImagePlan Storage information about the plan related to this custom image
+         * 
+         * @return builder
+         * 
+         */
         public Builder customImagePlan(CustomImagePropertiesFromPlanArgs customImagePlan) {
             return customImagePlan(Output.of(customImagePlan));
         }
 
+        /**
+         * @param dataDiskStorageInfo Storage information about the data disks present in the custom image
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskStorageInfo(@Nullable Output<List<DataDiskStorageTypeInfoArgs>> dataDiskStorageInfo) {
             $.dataDiskStorageInfo = dataDiskStorageInfo;
             return this;
         }
 
+        /**
+         * @param dataDiskStorageInfo Storage information about the data disks present in the custom image
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskStorageInfo(List<DataDiskStorageTypeInfoArgs> dataDiskStorageInfo) {
             return dataDiskStorageInfo(Output.of(dataDiskStorageInfo));
         }
 
+        /**
+         * @param dataDiskStorageInfo Storage information about the data disks present in the custom image
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDiskStorageInfo(DataDiskStorageTypeInfoArgs... dataDiskStorageInfo) {
             return dataDiskStorageInfo(List.of(dataDiskStorageInfo));
         }
 
+        /**
+         * @param description The description of the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param isPlanAuthorized Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPlanAuthorized(@Nullable Output<Boolean> isPlanAuthorized) {
             $.isPlanAuthorized = isPlanAuthorized;
             return this;
         }
 
+        /**
+         * @param isPlanAuthorized Whether or not the custom images underlying offer/plan has been enabled for programmatic deployment
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPlanAuthorized(Boolean isPlanAuthorized) {
             return isPlanAuthorized(Output.of(isPlanAuthorized));
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(Output<String> labName) {
             $.labName = labName;
             return this;
         }
 
+        /**
+         * @param labName The name of the lab.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labName(String labName) {
             return labName(Output.of(labName));
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedImageId The Managed Image Id backing the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedImageId(@Nullable Output<String> managedImageId) {
             $.managedImageId = managedImageId;
             return this;
         }
 
+        /**
+         * @param managedImageId The Managed Image Id backing the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedImageId(String managedImageId) {
             return managedImageId(Output.of(managedImageId));
         }
 
+        /**
+         * @param managedSnapshotId The Managed Snapshot Id backing the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedSnapshotId(@Nullable Output<String> managedSnapshotId) {
             $.managedSnapshotId = managedSnapshotId;
             return this;
         }
 
+        /**
+         * @param managedSnapshotId The Managed Snapshot Id backing the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedSnapshotId(String managedSnapshotId) {
             return managedSnapshotId(Output.of(managedSnapshotId));
         }
 
+        /**
+         * @param name The name of the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the custom image.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The tags of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param vhd The VHD from which the image is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhd(@Nullable Output<CustomImagePropertiesCustomArgs> vhd) {
             $.vhd = vhd;
             return this;
         }
 
+        /**
+         * @param vhd The VHD from which the image is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhd(CustomImagePropertiesCustomArgs vhd) {
             return vhd(Output.of(vhd));
         }
 
+        /**
+         * @param vm The virtual machine from which the image is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vm(@Nullable Output<CustomImagePropertiesFromVmArgs> vm) {
             $.vm = vm;
             return this;
         }
 
+        /**
+         * @param vm The virtual machine from which the image is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vm(CustomImagePropertiesFromVmArgs vm) {
             return vm(Output.of(vm));
         }

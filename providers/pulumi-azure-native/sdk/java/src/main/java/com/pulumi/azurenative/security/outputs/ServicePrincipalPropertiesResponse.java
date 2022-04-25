@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ServicePrincipalPropertiesResponse {
     /**
-     * Application ID of service principal.
+     * @return Application ID of service principal.
      * 
      */
     private final @Nullable String applicationId;
     /**
-     * A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+     * @return A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
      * 
      */
     private final @Nullable String secret;
@@ -31,16 +31,16 @@ public final class ServicePrincipalPropertiesResponse {
     }
 
     /**
-     * Application ID of service principal.
+     * @return Application ID of service principal.
      * 
-    */
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
-     * A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
+     * @return A secret string that the application uses to prove its identity, also can be referred to as application password (write only).
      * 
-    */
+     */
     public Optional<String> secret() {
         return Optional.ofNullable(this.secret);
     }

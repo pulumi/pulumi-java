@@ -24,6 +24,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -35,6 +39,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipAddresses")
     private @Nullable Output<List<String>> ipAddresses;
 
+    /**
+     * @return IpAddresses/IpAddressPrefixes in the IpGroups resource.
+     * 
+     */
     public Optional<Output<List<String>>> ipAddresses() {
         return Optional.ofNullable(this.ipAddresses);
     }
@@ -46,6 +54,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ipGroupsName")
     private @Nullable Output<String> ipGroupsName;
 
+    /**
+     * @return The name of the ipGroups.
+     * 
+     */
     public Optional<Output<String>> ipGroupsName() {
         return Optional.ofNullable(this.ipGroupsName);
     }
@@ -57,6 +69,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -68,6 +84,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,60 +136,138 @@ public final class IpGroupArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IpGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipAddresses IpAddresses/IpAddressPrefixes in the IpGroups resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(@Nullable Output<List<String>> ipAddresses) {
             $.ipAddresses = ipAddresses;
             return this;
         }
 
+        /**
+         * @param ipAddresses IpAddresses/IpAddressPrefixes in the IpGroups resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(List<String> ipAddresses) {
             return ipAddresses(Output.of(ipAddresses));
         }
 
+        /**
+         * @param ipAddresses IpAddresses/IpAddressPrefixes in the IpGroups resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddresses(String... ipAddresses) {
             return ipAddresses(List.of(ipAddresses));
         }
 
+        /**
+         * @param ipGroupsName The name of the ipGroups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipGroupsName(@Nullable Output<String> ipGroupsName) {
             $.ipGroupsName = ipGroupsName;
             return this;
         }
 
+        /**
+         * @param ipGroupsName The name of the ipGroups.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipGroupsName(String ipGroupsName) {
             return ipGroupsName(Output.of(ipGroupsName));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

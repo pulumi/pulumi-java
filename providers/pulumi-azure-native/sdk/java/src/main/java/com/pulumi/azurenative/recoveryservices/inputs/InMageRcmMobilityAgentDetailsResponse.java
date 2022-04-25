@@ -24,6 +24,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="agentVersionExpiryDate", required=true)
     private String agentVersionExpiryDate;
 
+    /**
+     * @return The agent version expiry date.
+     * 
+     */
     public String agentVersionExpiryDate() {
         return this.agentVersionExpiryDate;
     }
@@ -35,6 +39,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="driverVersion", required=true)
     private String driverVersion;
 
+    /**
+     * @return The driver version.
+     * 
+     */
     public String driverVersion() {
         return this.driverVersion;
     }
@@ -46,6 +54,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="driverVersionExpiryDate", required=true)
     private String driverVersionExpiryDate;
 
+    /**
+     * @return The driver version expiry date.
+     * 
+     */
     public String driverVersionExpiryDate() {
         return this.driverVersionExpiryDate;
     }
@@ -57,6 +69,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="isUpgradeable", required=true)
     private String isUpgradeable;
 
+    /**
+     * @return A value indicating whether agent is upgradeable or not.
+     * 
+     */
     public String isUpgradeable() {
         return this.isUpgradeable;
     }
@@ -68,6 +84,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="lastHeartbeatUtc", required=true)
     private String lastHeartbeatUtc;
 
+    /**
+     * @return The time of the last heartbeat received from the agent.
+     * 
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
@@ -79,6 +99,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="latestUpgradableVersionWithoutReboot", required=true)
     private String latestUpgradableVersionWithoutReboot;
 
+    /**
+     * @return The latest upgradeable version available without reboot.
+     * 
+     */
     public String latestUpgradableVersionWithoutReboot() {
         return this.latestUpgradableVersionWithoutReboot;
     }
@@ -90,6 +114,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="latestVersion", required=true)
     private String latestVersion;
 
+    /**
+     * @return The latest agent version available.
+     * 
+     */
     public String latestVersion() {
         return this.latestVersion;
     }
@@ -101,6 +129,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="reasonsBlockingUpgrade", required=true)
     private List<String> reasonsBlockingUpgrade;
 
+    /**
+     * @return The whether update is possible or not.
+     * 
+     */
     public List<String> reasonsBlockingUpgrade() {
         return this.reasonsBlockingUpgrade;
     }
@@ -112,6 +144,10 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The agent version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -148,50 +184,110 @@ public final class InMageRcmMobilityAgentDetailsResponse extends com.pulumi.reso
             $ = new InMageRcmMobilityAgentDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param agentVersionExpiryDate The agent version expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder agentVersionExpiryDate(String agentVersionExpiryDate) {
             $.agentVersionExpiryDate = agentVersionExpiryDate;
             return this;
         }
 
+        /**
+         * @param driverVersion The driver version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverVersion(String driverVersion) {
             $.driverVersion = driverVersion;
             return this;
         }
 
+        /**
+         * @param driverVersionExpiryDate The driver version expiry date.
+         * 
+         * @return builder
+         * 
+         */
         public Builder driverVersionExpiryDate(String driverVersionExpiryDate) {
             $.driverVersionExpiryDate = driverVersionExpiryDate;
             return this;
         }
 
+        /**
+         * @param isUpgradeable A value indicating whether agent is upgradeable or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isUpgradeable(String isUpgradeable) {
             $.isUpgradeable = isUpgradeable;
             return this;
         }
 
+        /**
+         * @param lastHeartbeatUtc The time of the last heartbeat received from the agent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             $.lastHeartbeatUtc = lastHeartbeatUtc;
             return this;
         }
 
+        /**
+         * @param latestUpgradableVersionWithoutReboot The latest upgradeable version available without reboot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestUpgradableVersionWithoutReboot(String latestUpgradableVersionWithoutReboot) {
             $.latestUpgradableVersionWithoutReboot = latestUpgradableVersionWithoutReboot;
             return this;
         }
 
+        /**
+         * @param latestVersion The latest agent version available.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(String latestVersion) {
             $.latestVersion = latestVersion;
             return this;
         }
 
+        /**
+         * @param reasonsBlockingUpgrade The whether update is possible or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reasonsBlockingUpgrade(List<String> reasonsBlockingUpgrade) {
             $.reasonsBlockingUpgrade = reasonsBlockingUpgrade;
             return this;
         }
 
+        /**
+         * @param reasonsBlockingUpgrade The whether update is possible or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reasonsBlockingUpgrade(String... reasonsBlockingUpgrade) {
             return reasonsBlockingUpgrade(List.of(reasonsBlockingUpgrade));
         }
 
+        /**
+         * @param version The agent version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

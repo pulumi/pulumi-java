@@ -24,6 +24,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Account Name
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -35,6 +39,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelFunctions")
     private @Nullable Output<List<String>> channelFunctions;
 
+    /**
+     * @return The functions to be enabled for the channel
+     * 
+     */
     public Optional<Output<List<String>>> channelFunctions() {
         return Optional.ofNullable(this.channelFunctions);
     }
@@ -46,6 +54,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelName")
     private @Nullable Output<String> channelName;
 
+    /**
+     * @return Channel Name
+     * 
+     */
     public Optional<Output<String>> channelName() {
         return Optional.ofNullable(this.channelName);
     }
@@ -57,6 +69,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channelType", required=true)
     private Output<String> channelType;
 
+    /**
+     * @return The channel type
+     * 
+     */
     public Output<String> channelType() {
         return this.channelType;
     }
@@ -68,6 +84,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="credentials")
     private @Nullable Output<Map<String,String>> credentials;
 
+    /**
+     * @return The channel credentials
+     * 
+     */
     public Optional<Output<Map<String,String>>> credentials() {
         return Optional.ofNullable(this.credentials);
     }
@@ -79,6 +99,10 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Resource Group Name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -112,60 +136,138 @@ public final class ChannelArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ChannelArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Account Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param channelFunctions The functions to be enabled for the channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelFunctions(@Nullable Output<List<String>> channelFunctions) {
             $.channelFunctions = channelFunctions;
             return this;
         }
 
+        /**
+         * @param channelFunctions The functions to be enabled for the channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelFunctions(List<String> channelFunctions) {
             return channelFunctions(Output.of(channelFunctions));
         }
 
+        /**
+         * @param channelFunctions The functions to be enabled for the channel
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelFunctions(String... channelFunctions) {
             return channelFunctions(List.of(channelFunctions));
         }
 
+        /**
+         * @param channelName Channel Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(@Nullable Output<String> channelName) {
             $.channelName = channelName;
             return this;
         }
 
+        /**
+         * @param channelName Channel Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(String channelName) {
             return channelName(Output.of(channelName));
         }
 
+        /**
+         * @param channelType The channel type
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelType(Output<String> channelType) {
             $.channelType = channelType;
             return this;
         }
 
+        /**
+         * @param channelType The channel type
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelType(String channelType) {
             return channelType(Output.of(channelType));
         }
 
+        /**
+         * @param credentials The channel credentials
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(@Nullable Output<Map<String,String>> credentials) {
             $.credentials = credentials;
             return this;
         }
 
+        /**
+         * @param credentials The channel credentials
+         * 
+         * @return builder
+         * 
+         */
         public Builder credentials(Map<String,String> credentials) {
             return credentials(Output.of(credentials));
         }
 
+        /**
+         * @param resourceGroupName Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

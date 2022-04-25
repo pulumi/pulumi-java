@@ -25,6 +25,10 @@ public final class Office365PolicyPropertiesResponse extends com.pulumi.resource
     @Import(name="breakOutCategories")
     private @Nullable BreakOutCategoryPoliciesResponse breakOutCategories;
 
+    /**
+     * @return Office 365 breakout categories.
+     * 
+     */
     public Optional<BreakOutCategoryPoliciesResponse> breakOutCategories() {
         return Optional.ofNullable(this.breakOutCategories);
     }
@@ -53,6 +57,12 @@ public final class Office365PolicyPropertiesResponse extends com.pulumi.resource
             $ = new Office365PolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param breakOutCategories Office 365 breakout categories.
+         * 
+         * @return builder
+         * 
+         */
         public Builder breakOutCategories(@Nullable BreakOutCategoryPoliciesResponse breakOutCategories) {
             $.breakOutCategories = breakOutCategories;
             return this;

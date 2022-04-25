@@ -26,6 +26,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return Specifies the authentication type being used for connecting to the endpoint.
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -37,6 +41,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectionStringPrimaryKey")
     private @Nullable String connectionStringPrimaryKey;
 
+    /**
+     * @return PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     * 
+     */
     public Optional<String> connectionStringPrimaryKey() {
         return Optional.ofNullable(this.connectionStringPrimaryKey);
     }
@@ -48,6 +56,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="connectionStringSecondaryKey")
     private @Nullable String connectionStringSecondaryKey;
 
+    /**
+     * @return SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+     * 
+     */
     public Optional<String> connectionStringSecondaryKey() {
         return Optional.ofNullable(this.connectionStringSecondaryKey);
     }
@@ -59,6 +71,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="createdTime", required=true)
     private String createdTime;
 
+    /**
+     * @return Time when the Endpoint was added to DigitalTwinsInstance.
+     * 
+     */
     public String createdTime() {
         return this.createdTime;
     }
@@ -70,6 +86,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deadLetterSecret")
     private @Nullable String deadLetterSecret;
 
+    /**
+     * @return Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+     * 
+     */
     public Optional<String> deadLetterSecret() {
         return Optional.ofNullable(this.deadLetterSecret);
     }
@@ -81,6 +101,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="deadLetterUri")
     private @Nullable String deadLetterUri;
 
+    /**
+     * @return Dead letter storage URL for identity-based authentication.
+     * 
+     */
     public Optional<String> deadLetterUri() {
         return Optional.ofNullable(this.deadLetterUri);
     }
@@ -93,6 +117,11 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointType", required=true)
     private String endpointType;
 
+    /**
+     * @return The type of Digital Twins endpoint
+     * Expected value is &#39;EventHub&#39;.
+     * 
+     */
     public String endpointType() {
         return this.endpointType;
     }
@@ -104,6 +133,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointUri")
     private @Nullable String endpointUri;
 
+    /**
+     * @return The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+     * 
+     */
     public Optional<String> endpointUri() {
         return Optional.ofNullable(this.endpointUri);
     }
@@ -115,6 +148,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="entityPath")
     private @Nullable String entityPath;
 
+    /**
+     * @return The EventHub name in the EventHub namespace for identity-based authentication.
+     * 
+     */
     public Optional<String> entityPath() {
         return Optional.ofNullable(this.entityPath);
     }
@@ -126,6 +163,10 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -163,51 +204,112 @@ public final class EventHubResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EventHubResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authenticationType Specifies the authentication type being used for connecting to the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param connectionStringPrimaryKey PrimaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStringPrimaryKey(@Nullable String connectionStringPrimaryKey) {
             $.connectionStringPrimaryKey = connectionStringPrimaryKey;
             return this;
         }
 
+        /**
+         * @param connectionStringSecondaryKey SecondaryConnectionString of the endpoint for key-based authentication. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionStringSecondaryKey(@Nullable String connectionStringSecondaryKey) {
             $.connectionStringSecondaryKey = connectionStringSecondaryKey;
             return this;
         }
 
+        /**
+         * @param createdTime Time when the Endpoint was added to DigitalTwinsInstance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param deadLetterSecret Dead letter storage secret for key-based authentication. Will be obfuscated during read.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterSecret(@Nullable String deadLetterSecret) {
             $.deadLetterSecret = deadLetterSecret;
             return this;
         }
 
+        /**
+         * @param deadLetterUri Dead letter storage URL for identity-based authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deadLetterUri(@Nullable String deadLetterUri) {
             $.deadLetterUri = deadLetterUri;
             return this;
         }
 
+        /**
+         * @param endpointType The type of Digital Twins endpoint
+         * Expected value is &#39;EventHub&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointType(String endpointType) {
             $.endpointType = endpointType;
             return this;
         }
 
+        /**
+         * @param endpointUri The URL of the EventHub namespace for identity-based authentication. It must include the protocol sb://
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointUri(@Nullable String endpointUri) {
             $.endpointUri = endpointUri;
             return this;
         }
 
+        /**
+         * @param entityPath The EventHub name in the EventHub namespace for identity-based authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder entityPath(@Nullable String entityPath) {
             $.entityPath = entityPath;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

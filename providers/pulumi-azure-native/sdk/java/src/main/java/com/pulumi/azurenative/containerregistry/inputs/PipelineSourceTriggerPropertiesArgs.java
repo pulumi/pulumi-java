@@ -23,6 +23,10 @@ public final class PipelineSourceTriggerPropertiesArgs extends com.pulumi.resour
     @Import(name="status", required=true)
     private Output<Either<String,TriggerStatus>> status;
 
+    /**
+     * @return The current status of the source trigger.
+     * 
+     */
     public Output<Either<String,TriggerStatus>> status() {
         return this.status;
     }
@@ -51,19 +55,43 @@ public final class PipelineSourceTriggerPropertiesArgs extends com.pulumi.resour
             $ = new PipelineSourceTriggerPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param status The current status of the source trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Output<Either<String,TriggerStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status The current status of the source trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,TriggerStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status The current status of the source trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status The current status of the source trigger.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(TriggerStatus status) {
             return status(Either.ofRight(status));
         }

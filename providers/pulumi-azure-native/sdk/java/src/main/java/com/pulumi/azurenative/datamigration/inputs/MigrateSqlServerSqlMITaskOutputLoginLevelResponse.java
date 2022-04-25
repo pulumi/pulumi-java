@@ -22,6 +22,10 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="endedOn", required=true)
     private String endedOn;
 
+    /**
+     * @return Login migration end time
+     * 
+     */
     public String endedOn() {
         return this.endedOn;
     }
@@ -33,6 +37,10 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="exceptionsAndWarnings", required=true)
     private List<ReportableExceptionResponse> exceptionsAndWarnings;
 
+    /**
+     * @return Login migration errors and warnings per login
+     * 
+     */
     public List<ReportableExceptionResponse> exceptionsAndWarnings() {
         return this.exceptionsAndWarnings;
     }
@@ -44,6 +52,10 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -55,6 +67,10 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="loginName", required=true)
     private String loginName;
 
+    /**
+     * @return Login name.
+     * 
+     */
     public String loginName() {
         return this.loginName;
     }
@@ -66,6 +82,10 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="message", required=true)
     private String message;
 
+    /**
+     * @return Login migration progress message
+     * 
+     */
     public String message() {
         return this.message;
     }
@@ -78,6 +98,11 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Result type
+     * Expected value is &#39;LoginLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -89,6 +114,10 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="stage", required=true)
     private String stage;
 
+    /**
+     * @return Current stage of login
+     * 
+     */
     public String stage() {
         return this.stage;
     }
@@ -100,6 +129,10 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="startedOn", required=true)
     private String startedOn;
 
+    /**
+     * @return Login migration start time
+     * 
+     */
     public String startedOn() {
         return this.startedOn;
     }
@@ -111,6 +144,10 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return Current state of login
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -147,50 +184,111 @@ public final class MigrateSqlServerSqlMITaskOutputLoginLevelResponse extends com
             $ = new MigrateSqlServerSqlMITaskOutputLoginLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endedOn Login migration end time
+         * 
+         * @return builder
+         * 
+         */
         public Builder endedOn(String endedOn) {
             $.endedOn = endedOn;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Login migration errors and warnings per login
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(List<ReportableExceptionResponse> exceptionsAndWarnings) {
             $.exceptionsAndWarnings = exceptionsAndWarnings;
             return this;
         }
 
+        /**
+         * @param exceptionsAndWarnings Login migration errors and warnings per login
+         * 
+         * @return builder
+         * 
+         */
         public Builder exceptionsAndWarnings(ReportableExceptionResponse... exceptionsAndWarnings) {
             return exceptionsAndWarnings(List.of(exceptionsAndWarnings));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param loginName Login name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loginName(String loginName) {
             $.loginName = loginName;
             return this;
         }
 
+        /**
+         * @param message Login migration progress message
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param resultType Result type
+         * Expected value is &#39;LoginLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;
         }
 
+        /**
+         * @param stage Current stage of login
+         * 
+         * @return builder
+         * 
+         */
         public Builder stage(String stage) {
             $.stage = stage;
             return this;
         }
 
+        /**
+         * @param startedOn Login migration start time
+         * 
+         * @return builder
+         * 
+         */
         public Builder startedOn(String startedOn) {
             $.startedOn = startedOn;
             return this;
         }
 
+        /**
+         * @param state Current state of login
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

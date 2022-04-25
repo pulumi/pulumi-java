@@ -28,6 +28,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="branch")
     private @Nullable Output<String> branch;
 
+    /**
+     * @return Branch name of repository.
+     * 
+     */
     public Optional<Output<String>> branch() {
         return Optional.ofNullable(this.branch);
     }
@@ -39,6 +43,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deploymentLogsUrl")
     private @Nullable Output<String> deploymentLogsUrl;
 
+    /**
+     * @return Url to access repository action logs.
+     * 
+     */
     public Optional<Output<String>> deploymentLogsUrl() {
         return Optional.ofNullable(this.deploymentLogsUrl);
     }
@@ -50,6 +58,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="displayUrl")
     private @Nullable Output<String> displayUrl;
 
+    /**
+     * @return Display url of repository.
+     * 
+     */
     public Optional<Output<String>> displayUrl() {
         return Optional.ofNullable(this.displayUrl);
     }
@@ -61,6 +73,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="pathMapping")
     private @Nullable Output<List<ContentPathMapArgs>> pathMapping;
 
+    /**
+     * @return Dictionary of source control content type and path mapping.
+     * 
+     */
     public Optional<Output<List<ContentPathMapArgs>>> pathMapping() {
         return Optional.ofNullable(this.pathMapping);
     }
@@ -72,6 +88,10 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return Url of repository.
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -104,51 +124,117 @@ public final class RepositoryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RepositoryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branch Branch name of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(@Nullable Output<String> branch) {
             $.branch = branch;
             return this;
         }
 
+        /**
+         * @param branch Branch name of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branch(String branch) {
             return branch(Output.of(branch));
         }
 
+        /**
+         * @param deploymentLogsUrl Url to access repository action logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentLogsUrl(@Nullable Output<String> deploymentLogsUrl) {
             $.deploymentLogsUrl = deploymentLogsUrl;
             return this;
         }
 
+        /**
+         * @param deploymentLogsUrl Url to access repository action logs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentLogsUrl(String deploymentLogsUrl) {
             return deploymentLogsUrl(Output.of(deploymentLogsUrl));
         }
 
+        /**
+         * @param displayUrl Display url of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayUrl(@Nullable Output<String> displayUrl) {
             $.displayUrl = displayUrl;
             return this;
         }
 
+        /**
+         * @param displayUrl Display url of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayUrl(String displayUrl) {
             return displayUrl(Output.of(displayUrl));
         }
 
+        /**
+         * @param pathMapping Dictionary of source control content type and path mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMapping(@Nullable Output<List<ContentPathMapArgs>> pathMapping) {
             $.pathMapping = pathMapping;
             return this;
         }
 
+        /**
+         * @param pathMapping Dictionary of source control content type and path mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMapping(List<ContentPathMapArgs> pathMapping) {
             return pathMapping(Output.of(pathMapping));
         }
 
+        /**
+         * @param pathMapping Dictionary of source control content type and path mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pathMapping(ContentPathMapArgs... pathMapping) {
             return pathMapping(List.of(pathMapping));
         }
 
+        /**
+         * @param url Url of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url Url of repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

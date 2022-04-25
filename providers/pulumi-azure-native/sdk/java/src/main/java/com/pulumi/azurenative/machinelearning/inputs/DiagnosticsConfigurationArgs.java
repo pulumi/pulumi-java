@@ -28,6 +28,10 @@ public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="expiry")
     private @Nullable Output<String> expiry;
 
+    /**
+     * @return Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
+     * 
+     */
     public Optional<Output<String>> expiry() {
         return Optional.ofNullable(this.expiry);
     }
@@ -39,6 +43,10 @@ public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.Res
     @Import(name="level", required=true)
     private Output<Either<String,DiagnosticsLevel>> level;
 
+    /**
+     * @return Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
+     * 
+     */
     public Output<Either<String,DiagnosticsLevel>> level() {
         return this.level;
     }
@@ -68,28 +76,64 @@ public final class DiagnosticsConfigurationArgs extends com.pulumi.resources.Res
             $ = new DiagnosticsConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiry Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(@Nullable Output<String> expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param expiry Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(String expiry) {
             return expiry(Output.of(expiry));
         }
 
+        /**
+         * @param level Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Output<Either<String,DiagnosticsLevel>> level) {
             $.level = level;
             return this;
         }
 
+        /**
+         * @param level Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(Either<String,DiagnosticsLevel> level) {
             return level(Output.of(level));
         }
 
+        /**
+         * @param level Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             return level(Either.ofLeft(level));
         }
 
+        /**
+         * @param level Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(DiagnosticsLevel level) {
             return level(Either.ofRight(level));
         }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class BackendAuthorizationHeaderCredentialsResponse {
     /**
-     * Authentication Parameter value.
+     * @return Authentication Parameter value.
      * 
      */
     private final String parameter;
     /**
-     * Authentication Scheme name.
+     * @return Authentication Scheme name.
      * 
      */
     private final String scheme;
@@ -29,16 +29,16 @@ public final class BackendAuthorizationHeaderCredentialsResponse {
     }
 
     /**
-     * Authentication Parameter value.
+     * @return Authentication Parameter value.
      * 
-    */
+     */
     public String parameter() {
         return this.parameter;
     }
     /**
-     * Authentication Scheme name.
+     * @return Authentication Scheme name.
      * 
-    */
+     */
     public String scheme() {
         return this.scheme;
     }

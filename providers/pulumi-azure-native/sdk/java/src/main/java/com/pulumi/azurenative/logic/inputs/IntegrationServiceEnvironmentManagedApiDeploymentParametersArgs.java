@@ -26,6 +26,10 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
     @Import(name="contentLinkDefinition")
     private @Nullable Output<ContentLinkArgs> contentLinkDefinition;
 
+    /**
+     * @return The integration service environment managed api content link for deployment.
+     * 
+     */
     public Optional<Output<ContentLinkArgs>> contentLinkDefinition() {
         return Optional.ofNullable(this.contentLinkDefinition);
     }
@@ -54,11 +58,23 @@ public final class IntegrationServiceEnvironmentManagedApiDeploymentParametersAr
             $ = new IntegrationServiceEnvironmentManagedApiDeploymentParametersArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param contentLinkDefinition The integration service environment managed api content link for deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLinkDefinition(@Nullable Output<ContentLinkArgs> contentLinkDefinition) {
             $.contentLinkDefinition = contentLinkDefinition;
             return this;
         }
 
+        /**
+         * @param contentLinkDefinition The integration service environment managed api content link for deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentLinkDefinition(ContentLinkArgs contentLinkDefinition) {
             return contentLinkDefinition(Output.of(contentLinkDefinition));
         }

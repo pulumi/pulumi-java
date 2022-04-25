@@ -21,6 +21,10 @@ public final class DatadogLogsAgentResponse extends com.pulumi.resources.InvokeA
     @Import(name="transport")
     private @Nullable String transport;
 
+    /**
+     * @return The transport.
+     * 
+     */
     public Optional<String> transport() {
         return Optional.ofNullable(this.transport);
     }
@@ -49,6 +53,12 @@ public final class DatadogLogsAgentResponse extends com.pulumi.resources.InvokeA
             $ = new DatadogLogsAgentResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param transport The transport.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transport(@Nullable String transport) {
             $.transport = transport;
             return this;

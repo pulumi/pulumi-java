@@ -25,6 +25,10 @@ public final class ApplicationGatewayConnectionDrainingArgs extends com.pulumi.r
     @Import(name="drainTimeoutInSec", required=true)
     private Output<Integer> drainTimeoutInSec;
 
+    /**
+     * @return The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+     * 
+     */
     public Output<Integer> drainTimeoutInSec() {
         return this.drainTimeoutInSec;
     }
@@ -36,6 +40,10 @@ public final class ApplicationGatewayConnectionDrainingArgs extends com.pulumi.r
     @Import(name="enabled", required=true)
     private Output<Boolean> enabled;
 
+    /**
+     * @return Whether connection draining is enabled or not.
+     * 
+     */
     public Output<Boolean> enabled() {
         return this.enabled;
     }
@@ -65,20 +73,44 @@ public final class ApplicationGatewayConnectionDrainingArgs extends com.pulumi.r
             $ = new ApplicationGatewayConnectionDrainingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param drainTimeoutInSec The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainTimeoutInSec(Output<Integer> drainTimeoutInSec) {
             $.drainTimeoutInSec = drainTimeoutInSec;
             return this;
         }
 
+        /**
+         * @param drainTimeoutInSec The number of seconds connection draining is active. Acceptable values are from 1 second to 3600 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drainTimeoutInSec(Integer drainTimeoutInSec) {
             return drainTimeoutInSec(Output.of(drainTimeoutInSec));
         }
 
+        /**
+         * @param enabled Whether connection draining is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Output<Boolean> enabled) {
             $.enabled = enabled;
             return this;
         }
 
+        /**
+         * @param enabled Whether connection draining is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabled(Boolean enabled) {
             return enabled(Output.of(enabled));
         }

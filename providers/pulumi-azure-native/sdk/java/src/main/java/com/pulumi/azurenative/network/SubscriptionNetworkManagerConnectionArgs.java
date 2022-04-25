@@ -22,6 +22,10 @@ public final class SubscriptionNetworkManagerConnectionArgs extends com.pulumi.r
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return A description of the scope connection.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -33,6 +37,10 @@ public final class SubscriptionNetworkManagerConnectionArgs extends com.pulumi.r
     @Import(name="networkManagerConnectionName")
     private @Nullable Output<String> networkManagerConnectionName;
 
+    /**
+     * @return Name for the network manager connection.
+     * 
+     */
     public Optional<Output<String>> networkManagerConnectionName() {
         return Optional.ofNullable(this.networkManagerConnectionName);
     }
@@ -44,6 +52,10 @@ public final class SubscriptionNetworkManagerConnectionArgs extends com.pulumi.r
     @Import(name="networkManagerId")
     private @Nullable Output<String> networkManagerId;
 
+    /**
+     * @return Network Manager Id.
+     * 
+     */
     public Optional<Output<String>> networkManagerId() {
         return Optional.ofNullable(this.networkManagerId);
     }
@@ -74,29 +86,65 @@ public final class SubscriptionNetworkManagerConnectionArgs extends com.pulumi.r
             $ = new SubscriptionNetworkManagerConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description of the scope connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description A description of the scope connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param networkManagerConnectionName Name for the network manager connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerConnectionName(@Nullable Output<String> networkManagerConnectionName) {
             $.networkManagerConnectionName = networkManagerConnectionName;
             return this;
         }
 
+        /**
+         * @param networkManagerConnectionName Name for the network manager connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerConnectionName(String networkManagerConnectionName) {
             return networkManagerConnectionName(Output.of(networkManagerConnectionName));
         }
 
+        /**
+         * @param networkManagerId Network Manager Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerId(@Nullable Output<String> networkManagerId) {
             $.networkManagerId = networkManagerId;
             return this;
         }
 
+        /**
+         * @param networkManagerId Network Manager Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerId(String networkManagerId) {
             return networkManagerId(Output.of(networkManagerId));
         }

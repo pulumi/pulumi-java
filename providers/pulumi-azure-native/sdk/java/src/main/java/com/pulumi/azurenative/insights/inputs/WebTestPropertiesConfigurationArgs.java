@@ -26,6 +26,10 @@ public final class WebTestPropertiesConfigurationArgs extends com.pulumi.resourc
     @Import(name="webTest")
     private @Nullable Output<String> webTest;
 
+    /**
+     * @return The XML specification of a WebTest to run against an application.
+     * 
+     */
     public Optional<Output<String>> webTest() {
         return Optional.ofNullable(this.webTest);
     }
@@ -54,11 +58,23 @@ public final class WebTestPropertiesConfigurationArgs extends com.pulumi.resourc
             $ = new WebTestPropertiesConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param webTest The XML specification of a WebTest to run against an application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webTest(@Nullable Output<String> webTest) {
             $.webTest = webTest;
             return this;
         }
 
+        /**
+         * @param webTest The XML specification of a WebTest to run against an application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webTest(String webTest) {
             return webTest(Output.of(webTest));
         }

@@ -25,6 +25,10 @@ public final class NotificationPreferenceResponse extends com.pulumi.resources.I
     @Import(name="sendNotification", required=true)
     private Boolean sendNotification;
 
+    /**
+     * @return Notification is required or not.
+     * 
+     */
     public Boolean sendNotification() {
         return this.sendNotification;
     }
@@ -36,6 +40,10 @@ public final class NotificationPreferenceResponse extends com.pulumi.resources.I
     @Import(name="stageName", required=true)
     private String stageName;
 
+    /**
+     * @return Name of the stage.
+     * 
+     */
     public String stageName() {
         return this.stageName;
     }
@@ -65,11 +73,23 @@ public final class NotificationPreferenceResponse extends com.pulumi.resources.I
             $ = new NotificationPreferenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sendNotification Notification is required or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendNotification(Boolean sendNotification) {
             $.sendNotification = sendNotification;
             return this;
         }
 
+        /**
+         * @param stageName Name of the stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(String stageName) {
             $.stageName = stageName;
             return this;

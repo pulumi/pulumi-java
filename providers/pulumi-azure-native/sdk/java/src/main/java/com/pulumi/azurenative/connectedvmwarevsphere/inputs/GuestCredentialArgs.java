@@ -26,6 +26,10 @@ public final class GuestCredentialArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Gets or sets the password to connect with the guest.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -37,6 +41,10 @@ public final class GuestCredentialArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Gets or sets username to connect with the guest.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -66,20 +74,44 @@ public final class GuestCredentialArgs extends com.pulumi.resources.ResourceArgs
             $ = new GuestCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param password Gets or sets the password to connect with the guest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Gets or sets the password to connect with the guest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param username Gets or sets username to connect with the guest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Gets or sets username to connect with the guest.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

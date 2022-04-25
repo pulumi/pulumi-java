@@ -26,6 +26,10 @@ public final class DataFlowFolderArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the folder that this data flow is in.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -54,11 +58,23 @@ public final class DataFlowFolderArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DataFlowFolderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the folder that this data flow is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the folder that this data flow is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

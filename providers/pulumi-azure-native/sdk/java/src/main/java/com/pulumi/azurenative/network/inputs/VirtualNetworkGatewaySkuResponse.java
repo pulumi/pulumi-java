@@ -26,6 +26,10 @@ public final class VirtualNetworkGatewaySkuResponse extends com.pulumi.resources
     @Import(name="capacity", required=true)
     private Integer capacity;
 
+    /**
+     * @return The capacity.
+     * 
+     */
     public Integer capacity() {
         return this.capacity;
     }
@@ -37,6 +41,10 @@ public final class VirtualNetworkGatewaySkuResponse extends com.pulumi.resources
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Gateway SKU name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class VirtualNetworkGatewaySkuResponse extends com.pulumi.resources
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Gateway SKU tier.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -78,16 +90,34 @@ public final class VirtualNetworkGatewaySkuResponse extends com.pulumi.resources
             $ = new VirtualNetworkGatewaySkuResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param name Gateway SKU name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param tier Gateway SKU tier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

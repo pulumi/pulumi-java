@@ -19,6 +19,10 @@ public final class GetDscpConfigurationArgs extends com.pulumi.resources.InvokeA
     @Import(name="dscpConfigurationName", required=true)
     private String dscpConfigurationName;
 
+    /**
+     * @return The name of the resource.
+     * 
+     */
     public String dscpConfigurationName() {
         return this.dscpConfigurationName;
     }
@@ -30,6 +34,10 @@ public final class GetDscpConfigurationArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetDscpConfigurationArgs extends com.pulumi.resources.InvokeA
             $ = new GetDscpConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dscpConfigurationName The name of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dscpConfigurationName(String dscpConfigurationName) {
             $.dscpConfigurationName = dscpConfigurationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

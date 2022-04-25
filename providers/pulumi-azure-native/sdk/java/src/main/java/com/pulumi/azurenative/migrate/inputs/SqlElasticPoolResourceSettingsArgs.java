@@ -30,6 +30,11 @@ public final class SqlElasticPoolResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+     * Expected value is &#39;Microsoft.Sql/servers/elasticPools&#39;.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -41,6 +46,10 @@ public final class SqlElasticPoolResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="targetResourceName", required=true)
     private Output<String> targetResourceName;
 
+    /**
+     * @return Gets or sets the target Resource name.
+     * 
+     */
     public Output<String> targetResourceName() {
         return this.targetResourceName;
     }
@@ -52,6 +61,10 @@ public final class SqlElasticPoolResourceSettingsArgs extends com.pulumi.resourc
     @Import(name="zoneRedundant")
     private @Nullable Output<Either<String,ZoneRedundant>> zoneRedundant;
 
+    /**
+     * @return Defines the zone redundant resource setting.
+     * 
+     */
     public Optional<Output<Either<String,ZoneRedundant>>> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }
@@ -82,37 +95,87 @@ public final class SqlElasticPoolResourceSettingsArgs extends com.pulumi.resourc
             $ = new SqlElasticPoolResourceSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Sql/servers/elasticPools&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type. For example, the value can be Microsoft.Compute/virtualMachines.
+         * Expected value is &#39;Microsoft.Sql/servers/elasticPools&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(Output<String> targetResourceName) {
             $.targetResourceName = targetResourceName;
             return this;
         }
 
+        /**
+         * @param targetResourceName Gets or sets the target Resource name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceName(String targetResourceName) {
             return targetResourceName(Output.of(targetResourceName));
         }
 
+        /**
+         * @param zoneRedundant Defines the zone redundant resource setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneRedundant(@Nullable Output<Either<String,ZoneRedundant>> zoneRedundant) {
             $.zoneRedundant = zoneRedundant;
             return this;
         }
 
+        /**
+         * @param zoneRedundant Defines the zone redundant resource setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneRedundant(Either<String,ZoneRedundant> zoneRedundant) {
             return zoneRedundant(Output.of(zoneRedundant));
         }
 
+        /**
+         * @param zoneRedundant Defines the zone redundant resource setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneRedundant(String zoneRedundant) {
             return zoneRedundant(Either.ofLeft(zoneRedundant));
         }
 
+        /**
+         * @param zoneRedundant Defines the zone redundant resource setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneRedundant(ZoneRedundant zoneRedundant) {
             return zoneRedundant(Either.ofRight(zoneRedundant));
         }

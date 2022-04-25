@@ -26,6 +26,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="consumerEmail")
     private @Nullable String consumerEmail;
 
+    /**
+     * @return Email of the user who created the synchronization
+     * 
+     */
     public Optional<String> consumerEmail() {
         return Optional.ofNullable(this.consumerEmail);
     }
@@ -37,6 +41,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="consumerName")
     private @Nullable String consumerName;
 
+    /**
+     * @return Name of the user who created the synchronization
+     * 
+     */
     public Optional<String> consumerName() {
         return Optional.ofNullable(this.consumerName);
     }
@@ -48,6 +56,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="consumerTenantName")
     private @Nullable String consumerTenantName;
 
+    /**
+     * @return Tenant name of the consumer who created the synchronization
+     * 
+     */
     public Optional<String> consumerTenantName() {
         return Optional.ofNullable(this.consumerTenantName);
     }
@@ -59,6 +71,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="durationMs")
     private @Nullable Integer durationMs;
 
+    /**
+     * @return synchronization duration
+     * 
+     */
     public Optional<Integer> durationMs() {
         return Optional.ofNullable(this.durationMs);
     }
@@ -70,6 +86,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="endTime")
     private @Nullable String endTime;
 
+    /**
+     * @return End time of synchronization
+     * 
+     */
     public Optional<String> endTime() {
         return Optional.ofNullable(this.endTime);
     }
@@ -81,6 +101,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="message")
     private @Nullable String message;
 
+    /**
+     * @return message of synchronization
+     * 
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
@@ -92,6 +116,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="startTime")
     private @Nullable String startTime;
 
+    /**
+     * @return start time of synchronization
+     * 
+     */
     public Optional<String> startTime() {
         return Optional.ofNullable(this.startTime);
     }
@@ -103,6 +131,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Raw Status
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -114,6 +146,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="synchronizationId")
     private @Nullable String synchronizationId;
 
+    /**
+     * @return Synchronization id
+     * 
+     */
     public Optional<String> synchronizationId() {
         return Optional.ofNullable(this.synchronizationId);
     }
@@ -125,6 +161,10 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
     @Import(name="synchronizationMode", required=true)
     private String synchronizationMode;
 
+    /**
+     * @return Synchronization mode
+     * 
+     */
     public String synchronizationMode() {
         return this.synchronizationMode;
     }
@@ -162,51 +202,111 @@ public final class ShareSynchronizationResponse extends com.pulumi.resources.Inv
             $ = new ShareSynchronizationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param consumerEmail Email of the user who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerEmail(@Nullable String consumerEmail) {
             $.consumerEmail = consumerEmail;
             return this;
         }
 
+        /**
+         * @param consumerName Name of the user who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerName(@Nullable String consumerName) {
             $.consumerName = consumerName;
             return this;
         }
 
+        /**
+         * @param consumerTenantName Tenant name of the consumer who created the synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder consumerTenantName(@Nullable String consumerTenantName) {
             $.consumerTenantName = consumerTenantName;
             return this;
         }
 
+        /**
+         * @param durationMs synchronization duration
+         * 
+         * @return builder
+         * 
+         */
         public Builder durationMs(@Nullable Integer durationMs) {
             $.durationMs = durationMs;
             return this;
         }
 
+        /**
+         * @param endTime End time of synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder endTime(@Nullable String endTime) {
             $.endTime = endTime;
             return this;
         }
 
+        /**
+         * @param message message of synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable String message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param startTime start time of synchronization
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(@Nullable String startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param status Raw Status
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param synchronizationId Synchronization id
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationId(@Nullable String synchronizationId) {
             $.synchronizationId = synchronizationId;
             return this;
         }
 
+        /**
+         * @param synchronizationMode Synchronization mode
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationMode(String synchronizationMode) {
             $.synchronizationMode = synchronizationMode;
             return this;

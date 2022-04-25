@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AccessPolicyEntryResponse {
     /**
-     *  Application ID of the client making request on behalf of a principal
+     * @return  Application ID of the client making request on behalf of a principal
      * 
      */
     private final @Nullable String applicationId;
     /**
-     * The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
+     * @return The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
      * 
      */
     private final String objectId;
     /**
-     * Permissions the identity has for keys, secrets and certificates.
+     * @return Permissions the identity has for keys, secrets and certificates.
      * 
      */
     private final PermissionsResponse permissions;
     /**
-     * The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+     * @return The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
      * 
      */
     private final String tenantId;
@@ -46,30 +46,30 @@ public final class AccessPolicyEntryResponse {
     }
 
     /**
-     *  Application ID of the client making request on behalf of a principal
+     * @return  Application ID of the client making request on behalf of a principal
      * 
-    */
+     */
     public Optional<String> applicationId() {
         return Optional.ofNullable(this.applicationId);
     }
     /**
-     * The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
+     * @return The object ID of a user, service principal or security group in the Azure Active Directory tenant for the vault. The object ID must be unique for the list of access policies.
      * 
-    */
+     */
     public String objectId() {
         return this.objectId;
     }
     /**
-     * Permissions the identity has for keys, secrets and certificates.
+     * @return Permissions the identity has for keys, secrets and certificates.
      * 
-    */
+     */
     public PermissionsResponse permissions() {
         return this.permissions;
     }
     /**
-     * The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
+     * @return The Azure Active Directory tenant ID that should be used for authenticating requests to the key vault.
      * 
-    */
+     */
     public String tenantId() {
         return this.tenantId;
     }

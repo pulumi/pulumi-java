@@ -19,6 +19,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="configStoreName", required=true)
     private String configStoreName;
 
+    /**
+     * @return The name of the configuration store.
+     * 
+     */
     public String configStoreName() {
         return this.configStoreName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="privateEndpointConnectionName", required=true)
     private String privateEndpointConnectionName;
 
+    /**
+     * @return Private endpoint connection name
+     * 
+     */
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
             $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configStoreName The name of the configuration store.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configStoreName(String configStoreName) {
             $.configStoreName = configStoreName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName Private endpoint connection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

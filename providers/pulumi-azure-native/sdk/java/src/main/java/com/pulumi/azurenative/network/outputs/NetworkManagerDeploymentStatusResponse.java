@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkManagerDeploymentStatusResponse {
     /**
-     * Commit Time.
+     * @return Commit Time.
      * 
      */
     private final @Nullable String commitTime;
     /**
-     * List of configuration ids.
+     * @return List of configuration ids.
      * 
      */
     private final @Nullable List<String> configurationIds;
     /**
-     * Deployment Status.
+     * @return Deployment Status.
      * 
      */
     private final @Nullable String deploymentStatus;
     /**
-     * Configuration Deployment Type.
+     * @return Configuration Deployment Type.
      * 
      */
     private final @Nullable String deploymentType;
     /**
-     * Error Message.
+     * @return Error Message.
      * 
      */
     private final @Nullable String errorMessage;
     /**
-     * Region Name.
+     * @return Region Name.
      * 
      */
     private final @Nullable String region;
@@ -60,44 +60,44 @@ public final class NetworkManagerDeploymentStatusResponse {
     }
 
     /**
-     * Commit Time.
+     * @return Commit Time.
      * 
-    */
+     */
     public Optional<String> commitTime() {
         return Optional.ofNullable(this.commitTime);
     }
     /**
-     * List of configuration ids.
+     * @return List of configuration ids.
      * 
-    */
+     */
     public List<String> configurationIds() {
         return this.configurationIds == null ? List.of() : this.configurationIds;
     }
     /**
-     * Deployment Status.
+     * @return Deployment Status.
      * 
-    */
+     */
     public Optional<String> deploymentStatus() {
         return Optional.ofNullable(this.deploymentStatus);
     }
     /**
-     * Configuration Deployment Type.
+     * @return Configuration Deployment Type.
      * 
-    */
+     */
     public Optional<String> deploymentType() {
         return Optional.ofNullable(this.deploymentType);
     }
     /**
-     * Error Message.
+     * @return Error Message.
      * 
-    */
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
     /**
-     * Region Name.
+     * @return Region Name.
      * 
-    */
+     */
     public Optional<String> region() {
         return Optional.ofNullable(this.region);
     }

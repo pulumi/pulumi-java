@@ -23,6 +23,10 @@ public final class OperationBatchStatusResponseItemResponse extends com.pulumi.r
     @Import(name="operationUrl", required=true)
     private String operationUrl;
 
+    /**
+     * @return status of the long running operation for an environment
+     * 
+     */
     public String operationUrl() {
         return this.operationUrl;
     }
@@ -34,6 +38,10 @@ public final class OperationBatchStatusResponseItemResponse extends com.pulumi.r
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return status of the long running operation for an environment
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -63,11 +71,23 @@ public final class OperationBatchStatusResponseItemResponse extends com.pulumi.r
             $ = new OperationBatchStatusResponseItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operationUrl status of the long running operation for an environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationUrl(String operationUrl) {
             $.operationUrl = operationUrl;
             return this;
         }
 
+        /**
+         * @param status status of the long running operation for an environment
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

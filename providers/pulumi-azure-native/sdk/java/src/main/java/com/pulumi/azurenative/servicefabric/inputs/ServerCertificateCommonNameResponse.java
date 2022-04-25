@@ -23,6 +23,10 @@ public final class ServerCertificateCommonNameResponse extends com.pulumi.resour
     @Import(name="certificateCommonName", required=true)
     private String certificateCommonName;
 
+    /**
+     * @return The common name of the server certificate.
+     * 
+     */
     public String certificateCommonName() {
         return this.certificateCommonName;
     }
@@ -34,6 +38,10 @@ public final class ServerCertificateCommonNameResponse extends com.pulumi.resour
     @Import(name="certificateIssuerThumbprint", required=true)
     private String certificateIssuerThumbprint;
 
+    /**
+     * @return The issuer thumbprint of the server certificate.
+     * 
+     */
     public String certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
@@ -63,11 +71,23 @@ public final class ServerCertificateCommonNameResponse extends com.pulumi.resour
             $ = new ServerCertificateCommonNameResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateCommonName The common name of the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateCommonName(String certificateCommonName) {
             $.certificateCommonName = certificateCommonName;
             return this;
         }
 
+        /**
+         * @param certificateIssuerThumbprint The issuer thumbprint of the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             $.certificateIssuerThumbprint = certificateIssuerThumbprint;
             return this;

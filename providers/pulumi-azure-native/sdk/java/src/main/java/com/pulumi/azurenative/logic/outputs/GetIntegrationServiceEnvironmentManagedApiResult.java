@@ -22,92 +22,92 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetIntegrationServiceEnvironmentManagedApiResult {
     /**
-     * The API definition.
+     * @return The API definition.
      * 
      */
     private final String apiDefinitionUrl;
     /**
-     * The api definitions.
+     * @return The api definitions.
      * 
      */
     private final ApiResourceDefinitionsResponse apiDefinitions;
     /**
-     * The backend service.
+     * @return The backend service.
      * 
      */
     private final ApiResourceBackendServiceResponse backendService;
     /**
-     * The capabilities.
+     * @return The capabilities.
      * 
      */
     private final List<String> capabilities;
     /**
-     * The category.
+     * @return The category.
      * 
      */
     private final String category;
     /**
-     * The connection parameters.
+     * @return The connection parameters.
      * 
      */
     private final Map<String,Object> connectionParameters;
     /**
-     * The integration service environment managed api deployment parameters.
+     * @return The integration service environment managed api deployment parameters.
      * 
      */
     private final @Nullable IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse deploymentParameters;
     /**
-     * The api general information.
+     * @return The api general information.
      * 
      */
     private final ApiResourceGeneralInformationResponse generalInformation;
     /**
-     * The resource id.
+     * @return The resource id.
      * 
      */
     private final String id;
     /**
-     * The integration service environment reference.
+     * @return The integration service environment reference.
      * 
      */
     private final @Nullable ResourceReferenceResponse integrationServiceEnvironment;
     /**
-     * The resource location.
+     * @return The resource location.
      * 
      */
     private final @Nullable String location;
     /**
-     * The metadata.
+     * @return The metadata.
      * 
      */
     private final ApiResourceMetadataResponse metadata;
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
      */
     private final String name;
     /**
-     * The policies for the API.
+     * @return The policies for the API.
      * 
      */
     private final ApiResourcePoliciesResponse policies;
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
      */
     private final String provisioningState;
     /**
-     * The runtime urls.
+     * @return The runtime urls.
      * 
      */
     private final List<String> runtimeUrls;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
      */
     private final String type;
@@ -153,128 +153,128 @@ public final class GetIntegrationServiceEnvironmentManagedApiResult {
     }
 
     /**
-     * The API definition.
+     * @return The API definition.
      * 
-    */
+     */
     public String apiDefinitionUrl() {
         return this.apiDefinitionUrl;
     }
     /**
-     * The api definitions.
+     * @return The api definitions.
      * 
-    */
+     */
     public ApiResourceDefinitionsResponse apiDefinitions() {
         return this.apiDefinitions;
     }
     /**
-     * The backend service.
+     * @return The backend service.
      * 
-    */
+     */
     public ApiResourceBackendServiceResponse backendService() {
         return this.backendService;
     }
     /**
-     * The capabilities.
+     * @return The capabilities.
      * 
-    */
+     */
     public List<String> capabilities() {
         return this.capabilities;
     }
     /**
-     * The category.
+     * @return The category.
      * 
-    */
+     */
     public String category() {
         return this.category;
     }
     /**
-     * The connection parameters.
+     * @return The connection parameters.
      * 
-    */
+     */
     public Map<String,Object> connectionParameters() {
         return this.connectionParameters;
     }
     /**
-     * The integration service environment managed api deployment parameters.
+     * @return The integration service environment managed api deployment parameters.
      * 
-    */
+     */
     public Optional<IntegrationServiceEnvironmentManagedApiDeploymentParametersResponse> deploymentParameters() {
         return Optional.ofNullable(this.deploymentParameters);
     }
     /**
-     * The api general information.
+     * @return The api general information.
      * 
-    */
+     */
     public ApiResourceGeneralInformationResponse generalInformation() {
         return this.generalInformation;
     }
     /**
-     * The resource id.
+     * @return The resource id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The integration service environment reference.
+     * @return The integration service environment reference.
      * 
-    */
+     */
     public Optional<ResourceReferenceResponse> integrationServiceEnvironment() {
         return Optional.ofNullable(this.integrationServiceEnvironment);
     }
     /**
-     * The resource location.
+     * @return The resource location.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The metadata.
+     * @return The metadata.
      * 
-    */
+     */
     public ApiResourceMetadataResponse metadata() {
         return this.metadata;
     }
     /**
-     * Gets the resource name.
+     * @return Gets the resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The policies for the API.
+     * @return The policies for the API.
      * 
-    */
+     */
     public ApiResourcePoliciesResponse policies() {
         return this.policies;
     }
     /**
-     * The provisioning state.
+     * @return The provisioning state.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The runtime urls.
+     * @return The runtime urls.
      * 
-    */
+     */
     public List<String> runtimeUrls() {
         return this.runtimeUrls;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Gets the resource type.
+     * @return Gets the resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

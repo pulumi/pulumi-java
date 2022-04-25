@@ -26,6 +26,10 @@ public final class VaultPropertiesArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="encryption")
     private @Nullable Output<VaultPropertiesEncryptionArgs> encryption;
 
+    /**
+     * @return Customer Managed Key details of the resource.
+     * 
+     */
     public Optional<Output<VaultPropertiesEncryptionArgs>> encryption() {
         return Optional.ofNullable(this.encryption);
     }
@@ -54,11 +58,23 @@ public final class VaultPropertiesArgs extends com.pulumi.resources.ResourceArgs
             $ = new VaultPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryption Customer Managed Key details of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(@Nullable Output<VaultPropertiesEncryptionArgs> encryption) {
             $.encryption = encryption;
             return this;
         }
 
+        /**
+         * @param encryption Customer Managed Key details of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryption(VaultPropertiesEncryptionArgs encryption) {
             return encryption(Output.of(encryption));
         }

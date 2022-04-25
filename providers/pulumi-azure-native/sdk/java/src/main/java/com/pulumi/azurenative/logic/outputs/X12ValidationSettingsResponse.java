@@ -12,52 +12,52 @@ import java.util.Objects;
 @CustomType
 public final class X12ValidationSettingsResponse {
     /**
-     * The value indicating whether to allow leading and trailing spaces and zeroes.
+     * @return The value indicating whether to allow leading and trailing spaces and zeroes.
      * 
      */
     private final Boolean allowLeadingAndTrailingSpacesAndZeroes;
     /**
-     * The value indicating whether to check for duplicate group control number.
+     * @return The value indicating whether to check for duplicate group control number.
      * 
      */
     private final Boolean checkDuplicateGroupControlNumber;
     /**
-     * The value indicating whether to check for duplicate interchange control number.
+     * @return The value indicating whether to check for duplicate interchange control number.
      * 
      */
     private final Boolean checkDuplicateInterchangeControlNumber;
     /**
-     * The value indicating whether to check for duplicate transaction set control number.
+     * @return The value indicating whether to check for duplicate transaction set control number.
      * 
      */
     private final Boolean checkDuplicateTransactionSetControlNumber;
     /**
-     * The validity period of interchange control number.
+     * @return The validity period of interchange control number.
      * 
      */
     private final Integer interchangeControlNumberValidityDays;
     /**
-     * The trailing separator policy.
+     * @return The trailing separator policy.
      * 
      */
     private final String trailingSeparatorPolicy;
     /**
-     * The value indicating whether to trim leading and trailing spaces and zeroes.
+     * @return The value indicating whether to trim leading and trailing spaces and zeroes.
      * 
      */
     private final Boolean trimLeadingAndTrailingSpacesAndZeroes;
     /**
-     * The value indicating whether to validate character set in the message.
+     * @return The value indicating whether to validate character set in the message.
      * 
      */
     private final Boolean validateCharacterSet;
     /**
-     * The value indicating whether to Whether to validate EDI types.
+     * @return The value indicating whether to Whether to validate EDI types.
      * 
      */
     private final Boolean validateEDITypes;
     /**
-     * The value indicating whether to Whether to validate XSD types.
+     * @return The value indicating whether to Whether to validate XSD types.
      * 
      */
     private final Boolean validateXSDTypes;
@@ -87,72 +87,72 @@ public final class X12ValidationSettingsResponse {
     }
 
     /**
-     * The value indicating whether to allow leading and trailing spaces and zeroes.
+     * @return The value indicating whether to allow leading and trailing spaces and zeroes.
      * 
-    */
+     */
     public Boolean allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
     /**
-     * The value indicating whether to check for duplicate group control number.
+     * @return The value indicating whether to check for duplicate group control number.
      * 
-    */
+     */
     public Boolean checkDuplicateGroupControlNumber() {
         return this.checkDuplicateGroupControlNumber;
     }
     /**
-     * The value indicating whether to check for duplicate interchange control number.
+     * @return The value indicating whether to check for duplicate interchange control number.
      * 
-    */
+     */
     public Boolean checkDuplicateInterchangeControlNumber() {
         return this.checkDuplicateInterchangeControlNumber;
     }
     /**
-     * The value indicating whether to check for duplicate transaction set control number.
+     * @return The value indicating whether to check for duplicate transaction set control number.
      * 
-    */
+     */
     public Boolean checkDuplicateTransactionSetControlNumber() {
         return this.checkDuplicateTransactionSetControlNumber;
     }
     /**
-     * The validity period of interchange control number.
+     * @return The validity period of interchange control number.
      * 
-    */
+     */
     public Integer interchangeControlNumberValidityDays() {
         return this.interchangeControlNumberValidityDays;
     }
     /**
-     * The trailing separator policy.
+     * @return The trailing separator policy.
      * 
-    */
+     */
     public String trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
     /**
-     * The value indicating whether to trim leading and trailing spaces and zeroes.
+     * @return The value indicating whether to trim leading and trailing spaces and zeroes.
      * 
-    */
+     */
     public Boolean trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
     /**
-     * The value indicating whether to validate character set in the message.
+     * @return The value indicating whether to validate character set in the message.
      * 
-    */
+     */
     public Boolean validateCharacterSet() {
         return this.validateCharacterSet;
     }
     /**
-     * The value indicating whether to Whether to validate EDI types.
+     * @return The value indicating whether to Whether to validate EDI types.
      * 
-    */
+     */
     public Boolean validateEDITypes() {
         return this.validateEDITypes;
     }
     /**
-     * The value indicating whether to Whether to validate XSD types.
+     * @return The value indicating whether to Whether to validate XSD types.
      * 
-    */
+     */
     public Boolean validateXSDTypes() {
         return this.validateXSDTypes;
     }

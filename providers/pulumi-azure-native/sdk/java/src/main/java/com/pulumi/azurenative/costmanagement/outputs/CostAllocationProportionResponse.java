@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class CostAllocationProportionResponse {
     /**
-     * Target resource for cost allocation
+     * @return Target resource for cost allocation
      * 
      */
     private final String name;
     /**
-     * Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
+     * @return Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
      * 
      */
     private final Double percentage;
@@ -30,16 +30,16 @@ public final class CostAllocationProportionResponse {
     }
 
     /**
-     * Target resource for cost allocation
+     * @return Target resource for cost allocation
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
+     * @return Percentage of source cost to allocate to this resource. This value can be specified to two decimal places and the total percentage of all resources in this rule must sum to 100.00.
      * 
-    */
+     */
     public Double percentage() {
         return this.percentage;
     }

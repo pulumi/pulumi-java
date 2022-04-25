@@ -26,6 +26,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="componentSeparator", required=true)
     private Integer componentSeparator;
 
+    /**
+     * @return The component separator.
+     * 
+     */
     public Integer componentSeparator() {
         return this.componentSeparator;
     }
@@ -37,6 +41,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="dataElementSeparator", required=true)
     private Integer dataElementSeparator;
 
+    /**
+     * @return The data element separator.
+     * 
+     */
     public Integer dataElementSeparator() {
         return this.dataElementSeparator;
     }
@@ -48,6 +56,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="decimalPointIndicator", required=true)
     private String decimalPointIndicator;
 
+    /**
+     * @return The decimal point indicator.
+     * 
+     */
     public String decimalPointIndicator() {
         return this.decimalPointIndicator;
     }
@@ -59,6 +71,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="messageAssociationAssignedCode")
     private @Nullable String messageAssociationAssignedCode;
 
+    /**
+     * @return The message association assigned code.
+     * 
+     */
     public Optional<String> messageAssociationAssignedCode() {
         return Optional.ofNullable(this.messageAssociationAssignedCode);
     }
@@ -70,6 +86,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="messageId")
     private @Nullable String messageId;
 
+    /**
+     * @return The message id.
+     * 
+     */
     public Optional<String> messageId() {
         return Optional.ofNullable(this.messageId);
     }
@@ -81,6 +101,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="messageRelease")
     private @Nullable String messageRelease;
 
+    /**
+     * @return The message release.
+     * 
+     */
     public Optional<String> messageRelease() {
         return Optional.ofNullable(this.messageRelease);
     }
@@ -92,6 +116,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="messageVersion")
     private @Nullable String messageVersion;
 
+    /**
+     * @return The message version.
+     * 
+     */
     public Optional<String> messageVersion() {
         return Optional.ofNullable(this.messageVersion);
     }
@@ -103,6 +131,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="releaseIndicator", required=true)
     private Integer releaseIndicator;
 
+    /**
+     * @return The release indicator.
+     * 
+     */
     public Integer releaseIndicator() {
         return this.releaseIndicator;
     }
@@ -114,6 +146,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="repetitionSeparator", required=true)
     private Integer repetitionSeparator;
 
+    /**
+     * @return The repetition separator.
+     * 
+     */
     public Integer repetitionSeparator() {
         return this.repetitionSeparator;
     }
@@ -125,6 +161,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="segmentTerminator", required=true)
     private Integer segmentTerminator;
 
+    /**
+     * @return The segment terminator.
+     * 
+     */
     public Integer segmentTerminator() {
         return this.segmentTerminator;
     }
@@ -136,6 +176,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="segmentTerminatorSuffix", required=true)
     private String segmentTerminatorSuffix;
 
+    /**
+     * @return The segment terminator suffix.
+     * 
+     */
     public String segmentTerminatorSuffix() {
         return this.segmentTerminatorSuffix;
     }
@@ -147,6 +191,10 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
     @Import(name="targetNamespace")
     private @Nullable String targetNamespace;
 
+    /**
+     * @return The target namespace on which this delimiter settings has to be applied.
+     * 
+     */
     public Optional<String> targetNamespace() {
         return Optional.ofNullable(this.targetNamespace);
     }
@@ -186,61 +234,133 @@ public final class EdifactDelimiterOverrideResponse extends com.pulumi.resources
             $ = new EdifactDelimiterOverrideResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param componentSeparator The component separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder componentSeparator(Integer componentSeparator) {
             $.componentSeparator = componentSeparator;
             return this;
         }
 
+        /**
+         * @param dataElementSeparator The data element separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataElementSeparator(Integer dataElementSeparator) {
             $.dataElementSeparator = dataElementSeparator;
             return this;
         }
 
+        /**
+         * @param decimalPointIndicator The decimal point indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decimalPointIndicator(String decimalPointIndicator) {
             $.decimalPointIndicator = decimalPointIndicator;
             return this;
         }
 
+        /**
+         * @param messageAssociationAssignedCode The message association assigned code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageAssociationAssignedCode(@Nullable String messageAssociationAssignedCode) {
             $.messageAssociationAssignedCode = messageAssociationAssignedCode;
             return this;
         }
 
+        /**
+         * @param messageId The message id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(@Nullable String messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageRelease The message release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageRelease(@Nullable String messageRelease) {
             $.messageRelease = messageRelease;
             return this;
         }
 
+        /**
+         * @param messageVersion The message version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageVersion(@Nullable String messageVersion) {
             $.messageVersion = messageVersion;
             return this;
         }
 
+        /**
+         * @param releaseIndicator The release indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder releaseIndicator(Integer releaseIndicator) {
             $.releaseIndicator = releaseIndicator;
             return this;
         }
 
+        /**
+         * @param repetitionSeparator The repetition separator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repetitionSeparator(Integer repetitionSeparator) {
             $.repetitionSeparator = repetitionSeparator;
             return this;
         }
 
+        /**
+         * @param segmentTerminator The segment terminator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminator(Integer segmentTerminator) {
             $.segmentTerminator = segmentTerminator;
             return this;
         }
 
+        /**
+         * @param segmentTerminatorSuffix The segment terminator suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder segmentTerminatorSuffix(String segmentTerminatorSuffix) {
             $.segmentTerminatorSuffix = segmentTerminatorSuffix;
             return this;
         }
 
+        /**
+         * @param targetNamespace The target namespace on which this delimiter settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(@Nullable String targetNamespace) {
             $.targetNamespace = targetNamespace;
             return this;

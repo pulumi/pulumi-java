@@ -23,6 +23,10 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
     @Import(name="elasticCloudSsoDefaultUrl", required=true)
     private String elasticCloudSsoDefaultUrl;
 
+    /**
+     * @return Elastic cloud default dashboard sso URL of the Elastic user account.
+     * 
+     */
     public String elasticCloudSsoDefaultUrl() {
         return this.elasticCloudSsoDefaultUrl;
     }
@@ -34,6 +38,10 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
     @Import(name="emailAddress", required=true)
     private String emailAddress;
 
+    /**
+     * @return Email of the Elastic User Account.
+     * 
+     */
     public String emailAddress() {
         return this.emailAddress;
     }
@@ -45,6 +53,10 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return User Id of the elastic account of the User.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -75,16 +87,34 @@ public final class ElasticCloudUserResponse extends com.pulumi.resources.InvokeA
             $ = new ElasticCloudUserResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param elasticCloudSsoDefaultUrl Elastic cloud default dashboard sso URL of the Elastic user account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder elasticCloudSsoDefaultUrl(String elasticCloudSsoDefaultUrl) {
             $.elasticCloudSsoDefaultUrl = elasticCloudSsoDefaultUrl;
             return this;
         }
 
+        /**
+         * @param emailAddress Email of the Elastic User Account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailAddress(String emailAddress) {
             $.emailAddress = emailAddress;
             return this;
         }
 
+        /**
+         * @param id User Id of the elastic account of the User.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

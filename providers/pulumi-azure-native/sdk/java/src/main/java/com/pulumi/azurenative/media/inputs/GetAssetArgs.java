@@ -19,6 +19,10 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The Media Services account name.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="assetName", required=true)
     private String assetName;
 
+    /**
+     * @return The Asset name.
+     * 
+     */
     public String assetName() {
         return this.assetName;
     }
@@ -41,6 +49,10 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetAssetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAssetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The Media Services account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param assetName The Asset name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

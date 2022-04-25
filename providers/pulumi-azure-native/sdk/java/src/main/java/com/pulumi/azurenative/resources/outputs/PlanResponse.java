@@ -12,27 +12,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PlanResponse {
     /**
-     * The plan ID.
+     * @return The plan ID.
      * 
      */
     private final @Nullable String name;
     /**
-     * The offer ID.
+     * @return The offer ID.
      * 
      */
     private final @Nullable String product;
     /**
-     * The promotion code.
+     * @return The promotion code.
      * 
      */
     private final @Nullable String promotionCode;
     /**
-     * The publisher ID.
+     * @return The publisher ID.
      * 
      */
     private final @Nullable String publisher;
     /**
-     * The plan&#39;s version.
+     * @return The plan&#39;s version.
      * 
      */
     private final @Nullable String version;
@@ -52,37 +52,37 @@ public final class PlanResponse {
     }
 
     /**
-     * The plan ID.
+     * @return The plan ID.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The offer ID.
+     * @return The offer ID.
      * 
-    */
+     */
     public Optional<String> product() {
         return Optional.ofNullable(this.product);
     }
     /**
-     * The promotion code.
+     * @return The promotion code.
      * 
-    */
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
     /**
-     * The publisher ID.
+     * @return The publisher ID.
      * 
-    */
+     */
     public Optional<String> publisher() {
         return Optional.ofNullable(this.publisher);
     }
     /**
-     * The plan&#39;s version.
+     * @return The plan&#39;s version.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

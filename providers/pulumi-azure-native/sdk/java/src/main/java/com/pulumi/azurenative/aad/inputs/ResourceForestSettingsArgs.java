@@ -28,6 +28,10 @@ public final class ResourceForestSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="resourceForest")
     private @Nullable Output<String> resourceForest;
 
+    /**
+     * @return Resource Forest
+     * 
+     */
     public Optional<Output<String>> resourceForest() {
         return Optional.ofNullable(this.resourceForest);
     }
@@ -39,6 +43,10 @@ public final class ResourceForestSettingsArgs extends com.pulumi.resources.Resou
     @Import(name="settings")
     private @Nullable Output<List<ForestTrustArgs>> settings;
 
+    /**
+     * @return List of settings for Resource Forest
+     * 
+     */
     public Optional<Output<List<ForestTrustArgs>>> settings() {
         return Optional.ofNullable(this.settings);
     }
@@ -68,24 +76,54 @@ public final class ResourceForestSettingsArgs extends com.pulumi.resources.Resou
             $ = new ResourceForestSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceForest Resource Forest
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceForest(@Nullable Output<String> resourceForest) {
             $.resourceForest = resourceForest;
             return this;
         }
 
+        /**
+         * @param resourceForest Resource Forest
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceForest(String resourceForest) {
             return resourceForest(Output.of(resourceForest));
         }
 
+        /**
+         * @param settings List of settings for Resource Forest
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(@Nullable Output<List<ForestTrustArgs>> settings) {
             $.settings = settings;
             return this;
         }
 
+        /**
+         * @param settings List of settings for Resource Forest
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(List<ForestTrustArgs> settings) {
             return settings(Output.of(settings));
         }
 
+        /**
+         * @param settings List of settings for Resource Forest
+         * 
+         * @return builder
+         * 
+         */
         public Builder settings(ForestTrustArgs... settings) {
             return settings(List.of(settings));
         }

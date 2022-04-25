@@ -25,6 +25,10 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
     @Import(name="deploymentName")
     private @Nullable String deploymentName;
 
+    /**
+     * @return The deployment to be used on error case.
+     * 
+     */
     public Optional<String> deploymentName() {
         return Optional.ofNullable(this.deploymentName);
     }
@@ -36,6 +40,10 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The state of the provisioning for the on error deployment.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -47,6 +55,10 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -77,16 +89,34 @@ public final class OnErrorDeploymentExtendedResponse extends com.pulumi.resource
             $ = new OnErrorDeploymentExtendedResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentName The deployment to be used on error case.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(@Nullable String deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param provisioningState The state of the provisioning for the on error deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param type The deployment on error behavior type. Possible values are LastSuccessful and SpecificDeployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -34,6 +34,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="authenticationType")
     private @Nullable String authenticationType;
 
+    /**
+     * @return The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+     * 
+     */
     public Optional<String> authenticationType() {
         return Optional.ofNullable(this.authenticationType);
     }
@@ -56,6 +64,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="clientCustomerID")
     private @Nullable Object clientCustomerID;
 
+    /**
+     * @return The Client customer ID of the AdWords account that you want to fetch report data for.
+     * 
+     */
     public Optional<Object> clientCustomerID() {
         return Optional.ofNullable(this.clientCustomerID);
     }
@@ -67,6 +79,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="clientId")
     private @Nullable Object clientId;
 
+    /**
+     * @return The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -78,6 +94,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="clientSecret")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
 
+    /**
+     * @return The client secret of the google application used to acquire the refresh token.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -89,6 +109,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -100,6 +124,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="connectionProperties")
     private @Nullable Object connectionProperties;
 
+    /**
+     * @return Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
+     * 
+     */
     public Optional<Object> connectionProperties() {
         return Optional.ofNullable(this.connectionProperties);
     }
@@ -111,6 +139,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -122,6 +154,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="developerToken")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken;
 
+    /**
+     * @return The developer token associated with the manager account that you use to grant access to the AdWords API.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> developerToken() {
         return Optional.ofNullable(this.developerToken);
     }
@@ -133,6 +169,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="email")
     private @Nullable Object email;
 
+    /**
+     * @return The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+     * 
+     */
     public Optional<Object> email() {
         return Optional.ofNullable(this.email);
     }
@@ -144,6 +184,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -155,6 +199,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="keyFilePath")
     private @Nullable Object keyFilePath;
 
+    /**
+     * @return The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+     * 
+     */
     public Optional<Object> keyFilePath() {
         return Optional.ofNullable(this.keyFilePath);
     }
@@ -166,6 +214,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -177,6 +229,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="refreshToken")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
 
+    /**
+     * @return The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
@@ -188,6 +244,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="trustedCertPath")
     private @Nullable Object trustedCertPath;
 
+    /**
+     * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * 
+     */
     public Optional<Object> trustedCertPath() {
         return Optional.ofNullable(this.trustedCertPath);
     }
@@ -200,6 +260,11 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;GoogleAdWords&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -211,6 +276,10 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
     @Import(name="useSystemTrustStore")
     private @Nullable Object useSystemTrustStore;
 
+    /**
+     * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * 
+     */
     public Optional<Object> useSystemTrustStore() {
         return Optional.ofNullable(this.useSystemTrustStore);
     }
@@ -255,114 +324,259 @@ public final class GoogleAdWordsLinkedServiceResponse extends com.pulumi.resourc
             $ = new GoogleAdWordsLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authenticationType The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(@Nullable String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param clientCustomerID The Client customer ID of the AdWords account that you want to fetch report data for.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientCustomerID(@Nullable Object clientCustomerID) {
             $.clientCustomerID = clientCustomerID;
             return this;
         }
 
+        /**
+         * @param clientId The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Object clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret The client secret of the google application used to acquire the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The client secret of the google application used to acquire the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(AzureKeyVaultSecretReferenceResponse clientSecret) {
             return clientSecret(Either.ofLeft(clientSecret));
         }
 
+        /**
+         * @param clientSecret The client secret of the google application used to acquire the refresh token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(SecureStringResponse clientSecret) {
             return clientSecret(Either.ofRight(clientSecret));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param connectionProperties Properties used to connect to GoogleAds. It is mutually exclusive with any other properties in the linked service. Type: object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionProperties(@Nullable Object connectionProperties) {
             $.connectionProperties = connectionProperties;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param developerToken The developer token associated with the manager account that you use to grant access to the AdWords API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> developerToken) {
             $.developerToken = developerToken;
             return this;
         }
 
+        /**
+         * @param developerToken The developer token associated with the manager account that you use to grant access to the AdWords API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerToken(AzureKeyVaultSecretReferenceResponse developerToken) {
             return developerToken(Either.ofLeft(developerToken));
         }
 
+        /**
+         * @param developerToken The developer token associated with the manager account that you use to grant access to the AdWords API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder developerToken(SecureStringResponse developerToken) {
             return developerToken(Either.ofRight(developerToken));
         }
 
+        /**
+         * @param email The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder email(@Nullable Object email) {
             $.email = email;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param keyFilePath The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyFilePath(@Nullable Object keyFilePath) {
             $.keyFilePath = keyFilePath;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param refreshToken The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken) {
             $.refreshToken = refreshToken;
             return this;
         }
 
+        /**
+         * @param refreshToken The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(AzureKeyVaultSecretReferenceResponse refreshToken) {
             return refreshToken(Either.ofLeft(refreshToken));
         }
 
+        /**
+         * @param refreshToken The refresh token obtained from Google for authorizing access to AdWords for UserAuthentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshToken(SecureStringResponse refreshToken) {
             return refreshToken(Either.ofRight(refreshToken));
         }
 
+        /**
+         * @param trustedCertPath The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trustedCertPath(@Nullable Object trustedCertPath) {
             $.trustedCertPath = trustedCertPath;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;GoogleAdWords&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param useSystemTrustStore Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useSystemTrustStore(@Nullable Object useSystemTrustStore) {
             $.useSystemTrustStore = useSystemTrustStore;
             return this;

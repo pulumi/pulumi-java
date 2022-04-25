@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class IpFilterRuleResponse {
     /**
-     * The desired action for requests captured by this rule.
+     * @return The desired action for requests captured by this rule.
      * 
      */
     private final String action;
     /**
-     * The name of the IP filter rule.
+     * @return The name of the IP filter rule.
      * 
      */
     private final String filterName;
     /**
-     * A string that contains the IP address range in CIDR notation for the rule.
+     * @return A string that contains the IP address range in CIDR notation for the rule.
      * 
      */
     private final String ipMask;
@@ -36,23 +36,23 @@ public final class IpFilterRuleResponse {
     }
 
     /**
-     * The desired action for requests captured by this rule.
+     * @return The desired action for requests captured by this rule.
      * 
-    */
+     */
     public String action() {
         return this.action;
     }
     /**
-     * The name of the IP filter rule.
+     * @return The name of the IP filter rule.
      * 
-    */
+     */
     public String filterName() {
         return this.filterName;
     }
     /**
-     * A string that contains the IP address range in CIDR notation for the rule.
+     * @return A string that contains the IP address range in CIDR notation for the rule.
      * 
-    */
+     */
     public String ipMask() {
         return this.ipMask;
     }

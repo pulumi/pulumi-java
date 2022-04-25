@@ -27,6 +27,10 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="commonName")
     private @Nullable Output<String> commonName;
 
+    /**
+     * @return Certificate Common name.
+     * 
+     */
     public Optional<Output<String>> commonName() {
         return Optional.ofNullable(this.commonName);
     }
@@ -38,6 +42,10 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="isAdmin", required=true)
     private Output<Boolean> isAdmin;
 
+    /**
+     * @return Whether the certificate is admin or not.
+     * 
+     */
     public Output<Boolean> isAdmin() {
         return this.isAdmin;
     }
@@ -49,6 +57,10 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="issuerThumbprint")
     private @Nullable Output<String> issuerThumbprint;
 
+    /**
+     * @return Issuer thumbprint for the certificate. Only used together with CommonName.
+     * 
+     */
     public Optional<Output<String>> issuerThumbprint() {
         return Optional.ofNullable(this.issuerThumbprint);
     }
@@ -60,6 +72,10 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
     @Import(name="thumbprint")
     private @Nullable Output<String> thumbprint;
 
+    /**
+     * @return Certificate Thumbprint.
+     * 
+     */
     public Optional<Output<String>> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -91,38 +107,86 @@ public final class ClientCertificateArgs extends com.pulumi.resources.ResourceAr
             $ = new ClientCertificateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commonName Certificate Common name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(@Nullable Output<String> commonName) {
             $.commonName = commonName;
             return this;
         }
 
+        /**
+         * @param commonName Certificate Common name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder commonName(String commonName) {
             return commonName(Output.of(commonName));
         }
 
+        /**
+         * @param isAdmin Whether the certificate is admin or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAdmin(Output<Boolean> isAdmin) {
             $.isAdmin = isAdmin;
             return this;
         }
 
+        /**
+         * @param isAdmin Whether the certificate is admin or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isAdmin(Boolean isAdmin) {
             return isAdmin(Output.of(isAdmin));
         }
 
+        /**
+         * @param issuerThumbprint Issuer thumbprint for the certificate. Only used together with CommonName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerThumbprint(@Nullable Output<String> issuerThumbprint) {
             $.issuerThumbprint = issuerThumbprint;
             return this;
         }
 
+        /**
+         * @param issuerThumbprint Issuer thumbprint for the certificate. Only used together with CommonName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder issuerThumbprint(String issuerThumbprint) {
             return issuerThumbprint(Output.of(issuerThumbprint));
         }
 
+        /**
+         * @param thumbprint Certificate Thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable Output<String> thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param thumbprint Certificate Thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(String thumbprint) {
             return thumbprint(Output.of(thumbprint));
         }

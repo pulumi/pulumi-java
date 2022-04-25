@@ -17,132 +17,132 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetWatchlistResult {
     /**
-     * The content type of the raw content. Example : text/csv or text/tsv
+     * @return The content type of the raw content. Example : text/csv or text/tsv
      * 
      */
     private final @Nullable String contentType;
     /**
-     * The time the watchlist was created
+     * @return The time the watchlist was created
      * 
      */
     private final @Nullable String created;
     /**
-     * Describes a user that created the watchlist
+     * @return Describes a user that created the watchlist
      * 
      */
     private final @Nullable WatchlistUserInfoResponse createdBy;
     /**
-     * The default duration of a watchlist (in ISO 8601 duration format)
+     * @return The default duration of a watchlist (in ISO 8601 duration format)
      * 
      */
     private final @Nullable String defaultDuration;
     /**
-     * A description of the watchlist
+     * @return A description of the watchlist
      * 
      */
     private final @Nullable String description;
     /**
-     * The display name of the watchlist
+     * @return The display name of the watchlist
      * 
      */
     private final String displayName;
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * A flag that indicates if the watchlist is deleted or not
+     * @return A flag that indicates if the watchlist is deleted or not
      * 
      */
     private final @Nullable Boolean isDeleted;
     /**
-     * The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
+     * @return The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
      * 
      */
     private final String itemsSearchKey;
     /**
-     * List of labels relevant to this watchlist
+     * @return List of labels relevant to this watchlist
      * 
      */
     private final @Nullable List<String> labels;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * The number of lines in a csv/tsv content to skip before the header
+     * @return The number of lines in a csv/tsv content to skip before the header
      * 
      */
     private final @Nullable Integer numberOfLinesToSkip;
     /**
-     * The provider of the watchlist
+     * @return The provider of the watchlist
      * 
      */
     private final String provider;
     /**
-     * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it&#39;s the content of the file that will parsed by the endpoint
+     * @return The raw content that represents to watchlist items to create. In case of csv/tsv content type, it&#39;s the content of the file that will parsed by the endpoint
      * 
      */
     private final @Nullable String rawContent;
     /**
-     * The source of the watchlist
+     * @return The source of the watchlist
      * 
      */
     private final String source;
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * The tenantId where the watchlist belongs to
+     * @return The tenantId where the watchlist belongs to
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
     /**
-     * The last time the watchlist was updated
+     * @return The last time the watchlist was updated
      * 
      */
     private final @Nullable String updated;
     /**
-     * Describes a user that updated the watchlist
+     * @return Describes a user that updated the watchlist
      * 
      */
     private final @Nullable WatchlistUserInfoResponse updatedBy;
     /**
-     * The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
+     * @return The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
      * 
      */
     private final @Nullable String uploadStatus;
     /**
-     * The alias of the watchlist
+     * @return The alias of the watchlist
      * 
      */
     private final @Nullable String watchlistAlias;
     /**
-     * The id (a Guid) of the watchlist
+     * @return The id (a Guid) of the watchlist
      * 
      */
     private final @Nullable String watchlistId;
     /**
-     * The number of Watchlist Items in the Watchlist
+     * @return The number of Watchlist Items in the Watchlist
      * 
      */
     private final @Nullable Integer watchlistItemsCount;
     /**
-     * The type of the watchlist
+     * @return The type of the watchlist
      * 
      */
     private final @Nullable String watchlistType;
@@ -204,184 +204,184 @@ public final class GetWatchlistResult {
     }
 
     /**
-     * The content type of the raw content. Example : text/csv or text/tsv
+     * @return The content type of the raw content. Example : text/csv or text/tsv
      * 
-    */
+     */
     public Optional<String> contentType() {
         return Optional.ofNullable(this.contentType);
     }
     /**
-     * The time the watchlist was created
+     * @return The time the watchlist was created
      * 
-    */
+     */
     public Optional<String> created() {
         return Optional.ofNullable(this.created);
     }
     /**
-     * Describes a user that created the watchlist
+     * @return Describes a user that created the watchlist
      * 
-    */
+     */
     public Optional<WatchlistUserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The default duration of a watchlist (in ISO 8601 duration format)
+     * @return The default duration of a watchlist (in ISO 8601 duration format)
      * 
-    */
+     */
     public Optional<String> defaultDuration() {
         return Optional.ofNullable(this.defaultDuration);
     }
     /**
-     * A description of the watchlist
+     * @return A description of the watchlist
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name of the watchlist
+     * @return The display name of the watchlist
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * A flag that indicates if the watchlist is deleted or not
+     * @return A flag that indicates if the watchlist is deleted or not
      * 
-    */
+     */
     public Optional<Boolean> isDeleted() {
         return Optional.ofNullable(this.isDeleted);
     }
     /**
-     * The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
+     * @return The search key is used to optimize query performance when using watchlists for joins with other data. For example, enable a column with IP addresses to be the designated SearchKey field, then use this field as the key field when joining to other event data by IP address.
      * 
-    */
+     */
     public String itemsSearchKey() {
         return this.itemsSearchKey;
     }
     /**
-     * List of labels relevant to this watchlist
+     * @return List of labels relevant to this watchlist
      * 
-    */
+     */
     public List<String> labels() {
         return this.labels == null ? List.of() : this.labels;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The number of lines in a csv/tsv content to skip before the header
+     * @return The number of lines in a csv/tsv content to skip before the header
      * 
-    */
+     */
     public Optional<Integer> numberOfLinesToSkip() {
         return Optional.ofNullable(this.numberOfLinesToSkip);
     }
     /**
-     * The provider of the watchlist
+     * @return The provider of the watchlist
      * 
-    */
+     */
     public String provider() {
         return this.provider;
     }
     /**
-     * The raw content that represents to watchlist items to create. In case of csv/tsv content type, it&#39;s the content of the file that will parsed by the endpoint
+     * @return The raw content that represents to watchlist items to create. In case of csv/tsv content type, it&#39;s the content of the file that will parsed by the endpoint
      * 
-    */
+     */
     public Optional<String> rawContent() {
         return Optional.ofNullable(this.rawContent);
     }
     /**
-     * The source of the watchlist
+     * @return The source of the watchlist
      * 
-    */
+     */
     public String source() {
         return this.source;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * The tenantId where the watchlist belongs to
+     * @return The tenantId where the watchlist belongs to
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The last time the watchlist was updated
+     * @return The last time the watchlist was updated
      * 
-    */
+     */
     public Optional<String> updated() {
         return Optional.ofNullable(this.updated);
     }
     /**
-     * Describes a user that updated the watchlist
+     * @return Describes a user that updated the watchlist
      * 
-    */
+     */
     public Optional<WatchlistUserInfoResponse> updatedBy() {
         return Optional.ofNullable(this.updatedBy);
     }
     /**
-     * The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
+     * @return The status of the Watchlist upload : New, InProgress or Complete. Pls note : When a Watchlist upload status is equal to InProgress, the Watchlist cannot be deleted
      * 
-    */
+     */
     public Optional<String> uploadStatus() {
         return Optional.ofNullable(this.uploadStatus);
     }
     /**
-     * The alias of the watchlist
+     * @return The alias of the watchlist
      * 
-    */
+     */
     public Optional<String> watchlistAlias() {
         return Optional.ofNullable(this.watchlistAlias);
     }
     /**
-     * The id (a Guid) of the watchlist
+     * @return The id (a Guid) of the watchlist
      * 
-    */
+     */
     public Optional<String> watchlistId() {
         return Optional.ofNullable(this.watchlistId);
     }
     /**
-     * The number of Watchlist Items in the Watchlist
+     * @return The number of Watchlist Items in the Watchlist
      * 
-    */
+     */
     public Optional<Integer> watchlistItemsCount() {
         return Optional.ofNullable(this.watchlistItemsCount);
     }
     /**
-     * The type of the watchlist
+     * @return The type of the watchlist
      * 
-    */
+     */
     public Optional<String> watchlistType() {
         return Optional.ofNullable(this.watchlistType);
     }

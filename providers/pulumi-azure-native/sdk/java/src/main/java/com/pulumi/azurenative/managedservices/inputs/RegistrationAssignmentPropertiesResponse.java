@@ -24,6 +24,10 @@ public final class RegistrationAssignmentPropertiesResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Current state of the registration assignment.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -35,6 +39,10 @@ public final class RegistrationAssignmentPropertiesResponse extends com.pulumi.r
     @Import(name="registrationDefinition", required=true)
     private RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition;
 
+    /**
+     * @return Registration definition inside registration assignment.
+     * 
+     */
     public RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition() {
         return this.registrationDefinition;
     }
@@ -46,6 +54,10 @@ public final class RegistrationAssignmentPropertiesResponse extends com.pulumi.r
     @Import(name="registrationDefinitionId", required=true)
     private String registrationDefinitionId;
 
+    /**
+     * @return Fully qualified path of the registration definition.
+     * 
+     */
     public String registrationDefinitionId() {
         return this.registrationDefinitionId;
     }
@@ -76,16 +88,34 @@ public final class RegistrationAssignmentPropertiesResponse extends com.pulumi.r
             $ = new RegistrationAssignmentPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param provisioningState Current state of the registration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param registrationDefinition Registration definition inside registration assignment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinition(RegistrationAssignmentPropertiesResponseRegistrationDefinition registrationDefinition) {
             $.registrationDefinition = registrationDefinition;
             return this;
         }
 
+        /**
+         * @param registrationDefinitionId Fully qualified path of the registration definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationDefinitionId(String registrationDefinitionId) {
             $.registrationDefinitionId = registrationDefinitionId;
             return this;

@@ -16,58 +16,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetKeyResult {
     /**
-     * The attributes of the key.
+     * @return The attributes of the key.
      * 
      */
     private final @Nullable KeyAttributesResponse attributes;
     /**
-     * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+     * @return The elliptic curve name. For valid values, see JsonWebKeyCurveName.
      * 
      */
     private final @Nullable String curveName;
     /**
-     * Fully qualified identifier of the key vault resource.
+     * @return Fully qualified identifier of the key vault resource.
      * 
      */
     private final String id;
     private final @Nullable List<String> keyOps;
     /**
-     * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+     * @return The key size in bits. For example: 2048, 3072, or 4096 for RSA.
      * 
      */
     private final @Nullable Integer keySize;
     /**
-     * The URI to retrieve the current version of the key.
+     * @return The URI to retrieve the current version of the key.
      * 
      */
     private final String keyUri;
     /**
-     * The URI to retrieve the specific version of the key.
+     * @return The URI to retrieve the specific version of the key.
      * 
      */
     private final String keyUriWithVersion;
     /**
-     * The type of the key. For valid values, see JsonWebKeyType.
+     * @return The type of the key. For valid values, see JsonWebKeyType.
      * 
      */
     private final @Nullable String kty;
     /**
-     * Azure location of the key vault resource.
+     * @return Azure location of the key vault resource.
      * 
      */
     private final String location;
     /**
-     * Name of the key vault resource.
+     * @return Name of the key vault resource.
      * 
      */
     private final String name;
     /**
-     * Tags assigned to the key vault resource.
+     * @return Tags assigned to the key vault resource.
      * 
      */
     private final Map<String,String> tags;
     /**
-     * Resource type of the key vault resource.
+     * @return Resource type of the key vault resource.
      * 
      */
     private final String type;
@@ -101,23 +101,23 @@ public final class GetKeyResult {
     }
 
     /**
-     * The attributes of the key.
+     * @return The attributes of the key.
      * 
-    */
+     */
     public Optional<KeyAttributesResponse> attributes() {
         return Optional.ofNullable(this.attributes);
     }
     /**
-     * The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+     * @return The elliptic curve name. For valid values, see JsonWebKeyCurveName.
      * 
-    */
+     */
     public Optional<String> curveName() {
         return Optional.ofNullable(this.curveName);
     }
     /**
-     * Fully qualified identifier of the key vault resource.
+     * @return Fully qualified identifier of the key vault resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -125,58 +125,58 @@ public final class GetKeyResult {
         return this.keyOps == null ? List.of() : this.keyOps;
     }
     /**
-     * The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+     * @return The key size in bits. For example: 2048, 3072, or 4096 for RSA.
      * 
-    */
+     */
     public Optional<Integer> keySize() {
         return Optional.ofNullable(this.keySize);
     }
     /**
-     * The URI to retrieve the current version of the key.
+     * @return The URI to retrieve the current version of the key.
      * 
-    */
+     */
     public String keyUri() {
         return this.keyUri;
     }
     /**
-     * The URI to retrieve the specific version of the key.
+     * @return The URI to retrieve the specific version of the key.
      * 
-    */
+     */
     public String keyUriWithVersion() {
         return this.keyUriWithVersion;
     }
     /**
-     * The type of the key. For valid values, see JsonWebKeyType.
+     * @return The type of the key. For valid values, see JsonWebKeyType.
      * 
-    */
+     */
     public Optional<String> kty() {
         return Optional.ofNullable(this.kty);
     }
     /**
-     * Azure location of the key vault resource.
+     * @return Azure location of the key vault resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Name of the key vault resource.
+     * @return Name of the key vault resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Tags assigned to the key vault resource.
+     * @return Tags assigned to the key vault resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
     /**
-     * Resource type of the key vault resource.
+     * @return Resource type of the key vault resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -30,6 +30,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="additionalProperties")
     private @Nullable Map<String,Object> additionalProperties;
 
+    /**
+     * @return Additional Properties.
+     * 
+     */
     public Optional<Map<String,Object>> additionalProperties() {
         return Optional.ofNullable(this.additionalProperties);
     }
@@ -41,6 +45,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="azureFilePath", required=true)
     private String azureFilePath;
 
+    /**
+     * @return Azure path for Azure Blob or File
+     * 
+     */
     public String azureFilePath() {
         return this.azureFilePath;
     }
@@ -52,6 +60,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="datastoreName", required=true)
     private String datastoreName;
 
+    /**
+     * @return Data store Name
+     * 
+     */
     public String datastoreName() {
         return this.datastoreName;
     }
@@ -63,6 +75,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="httpUrl", required=true)
     private String httpUrl;
 
+    /**
+     * @return HTTP URL.
+     * 
+     */
     public String httpUrl() {
         return this.httpUrl;
     }
@@ -74,6 +90,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="partitionFormat", required=true)
     private String partitionFormat;
 
+    /**
+     * @return Specify the partition format of path. Defaults to None.
+     * 
+     */
     public String partitionFormat() {
         return this.partitionFormat;
     }
@@ -85,6 +105,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="partitionFormatIgnoreError", required=true)
     private Boolean partitionFormatIgnoreError;
 
+    /**
+     * @return Whether or not to ignore unmatched path.
+     * 
+     */
     public Boolean partitionFormatIgnoreError() {
         return this.partitionFormatIgnoreError;
     }
@@ -96,6 +120,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="paths", required=true)
     private List<String> paths;
 
+    /**
+     * @return List of files expanded from a file GLOB specified
+     * 
+     */
     public List<String> paths() {
         return this.paths;
     }
@@ -107,6 +135,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="relativePath", required=true)
     private String relativePath;
 
+    /**
+     * @return Relative path in the data store
+     * 
+     */
     public String relativePath() {
         return this.relativePath;
     }
@@ -118,6 +150,10 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
     @Import(name="sqlDataPath")
     private @Nullable DatasetResponseSqlDataPath sqlDataPath;
 
+    /**
+     * @return Sql Query/Table/Stored Procedure details.
+     * 
+     */
     public Optional<DatasetResponseSqlDataPath> sqlDataPath() {
         return Optional.ofNullable(this.sqlDataPath);
     }
@@ -154,50 +190,110 @@ public final class DatasetResponseDataPath extends com.pulumi.resources.InvokeAr
             $ = new DatasetResponseDataPath(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalProperties Additional Properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalProperties(@Nullable Map<String,Object> additionalProperties) {
             $.additionalProperties = additionalProperties;
             return this;
         }
 
+        /**
+         * @param azureFilePath Azure path for Azure Blob or File
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureFilePath(String azureFilePath) {
             $.azureFilePath = azureFilePath;
             return this;
         }
 
+        /**
+         * @param datastoreName Data store Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder datastoreName(String datastoreName) {
             $.datastoreName = datastoreName;
             return this;
         }
 
+        /**
+         * @param httpUrl HTTP URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder httpUrl(String httpUrl) {
             $.httpUrl = httpUrl;
             return this;
         }
 
+        /**
+         * @param partitionFormat Specify the partition format of path. Defaults to None.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionFormat(String partitionFormat) {
             $.partitionFormat = partitionFormat;
             return this;
         }
 
+        /**
+         * @param partitionFormatIgnoreError Whether or not to ignore unmatched path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionFormatIgnoreError(Boolean partitionFormatIgnoreError) {
             $.partitionFormatIgnoreError = partitionFormatIgnoreError;
             return this;
         }
 
+        /**
+         * @param paths List of files expanded from a file GLOB specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(List<String> paths) {
             $.paths = paths;
             return this;
         }
 
+        /**
+         * @param paths List of files expanded from a file GLOB specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder paths(String... paths) {
             return paths(List.of(paths));
         }
 
+        /**
+         * @param relativePath Relative path in the data store
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativePath(String relativePath) {
             $.relativePath = relativePath;
             return this;
         }
 
+        /**
+         * @param sqlDataPath Sql Query/Table/Stored Procedure details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlDataPath(@Nullable DatasetResponseSqlDataPath sqlDataPath) {
             $.sqlDataPath = sqlDataPath;
             return this;

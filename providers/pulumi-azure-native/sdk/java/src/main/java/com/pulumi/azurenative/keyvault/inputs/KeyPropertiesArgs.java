@@ -33,6 +33,10 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="attributes")
     private @Nullable Output<KeyAttributesArgs> attributes;
 
+    /**
+     * @return The attributes of the key.
+     * 
+     */
     public Optional<Output<KeyAttributesArgs>> attributes() {
         return Optional.ofNullable(this.attributes);
     }
@@ -44,6 +48,10 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="curveName")
     private @Nullable Output<Either<String,JsonWebKeyCurveName>> curveName;
 
+    /**
+     * @return The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+     * 
+     */
     public Optional<Output<Either<String,JsonWebKeyCurveName>>> curveName() {
         return Optional.ofNullable(this.curveName);
     }
@@ -62,6 +70,10 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keySize")
     private @Nullable Output<Integer> keySize;
 
+    /**
+     * @return The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+     * 
+     */
     public Optional<Output<Integer>> keySize() {
         return Optional.ofNullable(this.keySize);
     }
@@ -73,6 +85,10 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kty")
     private @Nullable Output<Either<String,JsonWebKeyType>> kty;
 
+    /**
+     * @return The type of the key. For valid values, see JsonWebKeyType.
+     * 
+     */
     public Optional<Output<Either<String,JsonWebKeyType>>> kty() {
         return Optional.ofNullable(this.kty);
     }
@@ -105,28 +121,64 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param attributes The attributes of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(@Nullable Output<KeyAttributesArgs> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes The attributes of the key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(KeyAttributesArgs attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param curveName The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder curveName(@Nullable Output<Either<String,JsonWebKeyCurveName>> curveName) {
             $.curveName = curveName;
             return this;
         }
 
+        /**
+         * @param curveName The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder curveName(Either<String,JsonWebKeyCurveName> curveName) {
             return curveName(Output.of(curveName));
         }
 
+        /**
+         * @param curveName The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder curveName(String curveName) {
             return curveName(Either.ofLeft(curveName));
         }
 
+        /**
+         * @param curveName The elliptic curve name. For valid values, see JsonWebKeyCurveName.
+         * 
+         * @return builder
+         * 
+         */
         public Builder curveName(JsonWebKeyCurveName curveName) {
             return curveName(Either.ofRight(curveName));
         }
@@ -144,28 +196,64 @@ public final class KeyPropertiesArgs extends com.pulumi.resources.ResourceArgs {
             return keyOps(List.of(keyOps));
         }
 
+        /**
+         * @param keySize The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySize(@Nullable Output<Integer> keySize) {
             $.keySize = keySize;
             return this;
         }
 
+        /**
+         * @param keySize The key size in bits. For example: 2048, 3072, or 4096 for RSA.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keySize(Integer keySize) {
             return keySize(Output.of(keySize));
         }
 
+        /**
+         * @param kty The type of the key. For valid values, see JsonWebKeyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kty(@Nullable Output<Either<String,JsonWebKeyType>> kty) {
             $.kty = kty;
             return this;
         }
 
+        /**
+         * @param kty The type of the key. For valid values, see JsonWebKeyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kty(Either<String,JsonWebKeyType> kty) {
             return kty(Output.of(kty));
         }
 
+        /**
+         * @param kty The type of the key. For valid values, see JsonWebKeyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kty(String kty) {
             return kty(Either.ofLeft(kty));
         }
 
+        /**
+         * @param kty The type of the key. For valid values, see JsonWebKeyType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kty(JsonWebKeyType kty) {
             return kty(Either.ofRight(kty));
         }

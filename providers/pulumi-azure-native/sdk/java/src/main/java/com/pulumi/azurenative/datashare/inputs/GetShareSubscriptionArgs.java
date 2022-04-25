@@ -19,6 +19,10 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
     @Import(name="shareSubscriptionName", required=true)
     private String shareSubscriptionName;
 
+    /**
+     * @return The name of the shareSubscription.
+     * 
+     */
     public String shareSubscriptionName() {
         return this.shareSubscriptionName;
     }
@@ -71,16 +83,34 @@ public final class GetShareSubscriptionArgs extends com.pulumi.resources.InvokeA
             $ = new GetShareSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param shareSubscriptionName The name of the shareSubscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareSubscriptionName(String shareSubscriptionName) {
             $.shareSubscriptionName = shareSubscriptionName;
             return this;

@@ -13,22 +13,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class WsdlDefinitionResponse {
     /**
-     * The WSDL content
+     * @return The WSDL content
      * 
      */
     private final @Nullable String content;
     /**
-     * The WSDL import method
+     * @return The WSDL import method
      * 
      */
     private final @Nullable String importMethod;
     /**
-     * The service with name and endpoint names
+     * @return The service with name and endpoint names
      * 
      */
     private final @Nullable WsdlServiceResponse service;
     /**
-     * The WSDL URL
+     * @return The WSDL URL
      * 
      */
     private final @Nullable String url;
@@ -46,30 +46,30 @@ public final class WsdlDefinitionResponse {
     }
 
     /**
-     * The WSDL content
+     * @return The WSDL content
      * 
-    */
+     */
     public Optional<String> content() {
         return Optional.ofNullable(this.content);
     }
     /**
-     * The WSDL import method
+     * @return The WSDL import method
      * 
-    */
+     */
     public Optional<String> importMethod() {
         return Optional.ofNullable(this.importMethod);
     }
     /**
-     * The service with name and endpoint names
+     * @return The service with name and endpoint names
      * 
-    */
+     */
     public Optional<WsdlServiceResponse> service() {
         return Optional.ofNullable(this.service);
     }
     /**
-     * The WSDL URL
+     * @return The WSDL URL
      * 
-    */
+     */
     public Optional<String> url() {
         return Optional.ofNullable(this.url);
     }

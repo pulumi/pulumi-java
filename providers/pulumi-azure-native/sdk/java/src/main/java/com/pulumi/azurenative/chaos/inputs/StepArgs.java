@@ -26,6 +26,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="branches", required=true)
     private Output<List<BranchArgs>> branches;
 
+    /**
+     * @return List of branches.
+     * 
+     */
     public Output<List<BranchArgs>> branches() {
         return this.branches;
     }
@@ -37,6 +41,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return String of the step name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -66,24 +74,54 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param branches List of branches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branches(Output<List<BranchArgs>> branches) {
             $.branches = branches;
             return this;
         }
 
+        /**
+         * @param branches List of branches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branches(List<BranchArgs> branches) {
             return branches(Output.of(branches));
         }
 
+        /**
+         * @param branches List of branches.
+         * 
+         * @return builder
+         * 
+         */
         public Builder branches(BranchArgs... branches) {
             return branches(List.of(branches));
         }
 
+        /**
+         * @param name String of the step name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name String of the step name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

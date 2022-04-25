@@ -27,6 +27,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="clientId")
     private @Nullable Output<String> clientId;
 
+    /**
+     * @return The Slack client id
+     * 
+     */
     public Optional<Output<String>> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -38,6 +42,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="clientSecret")
     private @Nullable Output<String> clientSecret;
 
+    /**
+     * @return The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<Output<String>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -49,6 +57,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="isEnabled", required=true)
     private Output<Boolean> isEnabled;
 
+    /**
+     * @return Whether this channel is enabled for the bot
+     * 
+     */
     public Output<Boolean> isEnabled() {
         return this.isEnabled;
     }
@@ -60,6 +72,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="landingPageUrl")
     private @Nullable Output<String> landingPageUrl;
 
+    /**
+     * @return The Slack landing page Url
+     * 
+     */
     public Optional<Output<String>> landingPageUrl() {
         return Optional.ofNullable(this.landingPageUrl);
     }
@@ -71,6 +87,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="signingSecret")
     private @Nullable Output<String> signingSecret;
 
+    /**
+     * @return The Slack signing secret.
+     * 
+     */
     public Optional<Output<String>> signingSecret() {
         return Optional.ofNullable(this.signingSecret);
     }
@@ -82,6 +102,10 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
     @Import(name="verificationToken")
     private @Nullable Output<String> verificationToken;
 
+    /**
+     * @return The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * 
+     */
     public Optional<Output<String>> verificationToken() {
         return Optional.ofNullable(this.verificationToken);
     }
@@ -115,56 +139,128 @@ public final class SlackChannelPropertiesArgs extends com.pulumi.resources.Resou
             $ = new SlackChannelPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId The Slack client id
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable Output<String> clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientId The Slack client id
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(String clientId) {
             return clientId(Output.of(clientId));
         }
 
+        /**
+         * @param clientSecret The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable Output<String> clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param clientSecret The Slack client secret. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(String clientSecret) {
             return clientSecret(Output.of(clientSecret));
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Output<Boolean> isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param isEnabled Whether this channel is enabled for the bot
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             return isEnabled(Output.of(isEnabled));
         }
 
+        /**
+         * @param landingPageUrl The Slack landing page Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder landingPageUrl(@Nullable Output<String> landingPageUrl) {
             $.landingPageUrl = landingPageUrl;
             return this;
         }
 
+        /**
+         * @param landingPageUrl The Slack landing page Url
+         * 
+         * @return builder
+         * 
+         */
         public Builder landingPageUrl(String landingPageUrl) {
             return landingPageUrl(Output.of(landingPageUrl));
         }
 
+        /**
+         * @param signingSecret The Slack signing secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingSecret(@Nullable Output<String> signingSecret) {
             $.signingSecret = signingSecret;
             return this;
         }
 
+        /**
+         * @param signingSecret The Slack signing secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signingSecret(String signingSecret) {
             return signingSecret(Output.of(signingSecret));
         }
 
+        /**
+         * @param verificationToken The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationToken(@Nullable Output<String> verificationToken) {
             $.verificationToken = verificationToken;
             return this;
         }
 
+        /**
+         * @param verificationToken The Slack verification token. Value only returned through POST to the action Channel List API, otherwise empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verificationToken(String verificationToken) {
             return verificationToken(Output.of(verificationToken));
         }

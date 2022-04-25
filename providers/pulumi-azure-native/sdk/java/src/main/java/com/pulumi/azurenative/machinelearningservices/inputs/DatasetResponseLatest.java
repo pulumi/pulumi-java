@@ -31,6 +31,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="createdBy")
     private @Nullable UserInfoResponse createdBy;
 
+    /**
+     * @return User who created.
+     * 
+     */
     public Optional<UserInfoResponse> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
@@ -42,6 +46,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="createdTime", required=true)
     private String createdTime;
 
+    /**
+     * @return The dataset creation time (UTC).
+     * 
+     */
     public String createdTime() {
         return this.createdTime;
     }
@@ -53,6 +61,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="dataPath")
     private @Nullable DatasetResponseDataPath dataPath;
 
+    /**
+     * @return  Datastore and reference to location of data such as relativePath, Sql Query and etc.
+     * 
+     */
     public Optional<DatasetResponseDataPath> dataPath() {
         return Optional.ofNullable(this.dataPath);
     }
@@ -64,6 +76,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="dataflow", required=true)
     private String dataflow;
 
+    /**
+     * @return Dataflow Json
+     * 
+     */
     public String dataflow() {
         return this.dataflow;
     }
@@ -75,6 +91,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="datasetDefinitionState")
     private @Nullable DatasetStateResponse datasetDefinitionState;
 
+    /**
+     * @return Dataset state
+     * 
+     */
     public Optional<DatasetStateResponse> datasetDefinitionState() {
         return Optional.ofNullable(this.datasetDefinitionState);
     }
@@ -86,6 +106,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="datasetId", required=true)
     private String datasetId;
 
+    /**
+     * @return Unique Dataset identifier.
+     * 
+     */
     public String datasetId() {
         return this.datasetId;
     }
@@ -97,6 +121,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return Description about the dataset.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -108,6 +136,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return eTag description
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -119,6 +151,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="fileType", required=true)
     private String fileType;
 
+    /**
+     * @return Dataset FileType, specified by user.
+     * 
+     */
     public String fileType() {
         return this.fileType;
     }
@@ -130,6 +166,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="modifiedTime", required=true)
     private String modifiedTime;
 
+    /**
+     * @return The dataset last modified time (UTC).
+     * 
+     */
     public String modifiedTime() {
         return this.modifiedTime;
     }
@@ -141,6 +181,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="notes", required=true)
     private String notes;
 
+    /**
+     * @return Summary of Definition changes.
+     * 
+     */
     public String notes() {
         return this.notes;
     }
@@ -152,6 +196,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="partitionFormatInPath", required=true)
     private Boolean partitionFormatInPath;
 
+    /**
+     * @return Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
+     * 
+     */
     public Boolean partitionFormatInPath() {
         return this.partitionFormatInPath;
     }
@@ -163,6 +211,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="properties")
     private @Nullable Map<String,Object> properties;
 
+    /**
+     * @return Properties stores information like name of time series column for time series dataset.
+     * 
+     */
     public Optional<Map<String,Object>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -174,6 +226,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="savedDatasetId", required=true)
     private String savedDatasetId;
 
+    /**
+     * @return Indicates the saved dataset this definition is mapping to, populated on Get.
+     * 
+     */
     public String savedDatasetId() {
         return this.savedDatasetId;
     }
@@ -185,6 +241,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="tags", required=true)
     private Map<String,String> tags;
 
+    /**
+     * @return Tags associated with the dataset.
+     * 
+     */
     public Map<String,String> tags() {
         return this.tags;
     }
@@ -196,6 +256,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="telemetryInfo", required=true)
     private Map<String,String> telemetryInfo;
 
+    /**
+     * @return  Telemetry information about the dataset including information like which service the dataset was created from.
+     * 
+     */
     public Map<String,String> telemetryInfo() {
         return this.telemetryInfo;
     }
@@ -207,6 +271,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="useDescriptionTagsFromDefinition", required=true)
     private Boolean useDescriptionTagsFromDefinition;
 
+    /**
+     * @return  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
+     * 
+     */
     public Boolean useDescriptionTagsFromDefinition() {
         return this.useDescriptionTagsFromDefinition;
     }
@@ -218,6 +286,10 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
     @Import(name="versionId", required=true)
     private String versionId;
 
+    /**
+     * @return An identifier uniquely identifies a definition change.
+     * 
+     */
     public String versionId() {
         return this.versionId;
     }
@@ -263,91 +335,199 @@ public final class DatasetResponseLatest extends com.pulumi.resources.InvokeArgs
             $ = new DatasetResponseLatest(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createdBy User who created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdBy(@Nullable UserInfoResponse createdBy) {
             $.createdBy = createdBy;
             return this;
         }
 
+        /**
+         * @param createdTime The dataset creation time (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder createdTime(String createdTime) {
             $.createdTime = createdTime;
             return this;
         }
 
+        /**
+         * @param dataPath  Datastore and reference to location of data such as relativePath, Sql Query and etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataPath(@Nullable DatasetResponseDataPath dataPath) {
             $.dataPath = dataPath;
             return this;
         }
 
+        /**
+         * @param dataflow Dataflow Json
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataflow(String dataflow) {
             $.dataflow = dataflow;
             return this;
         }
 
+        /**
+         * @param datasetDefinitionState Dataset state
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetDefinitionState(@Nullable DatasetStateResponse datasetDefinitionState) {
             $.datasetDefinitionState = datasetDefinitionState;
             return this;
         }
 
+        /**
+         * @param datasetId Unique Dataset identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasetId(String datasetId) {
             $.datasetId = datasetId;
             return this;
         }
 
+        /**
+         * @param description Description about the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param etag eTag description
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param fileType Dataset FileType, specified by user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileType(String fileType) {
             $.fileType = fileType;
             return this;
         }
 
+        /**
+         * @param modifiedTime The dataset last modified time (UTC).
+         * 
+         * @return builder
+         * 
+         */
         public Builder modifiedTime(String modifiedTime) {
             $.modifiedTime = modifiedTime;
             return this;
         }
 
+        /**
+         * @param notes Summary of Definition changes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notes(String notes) {
             $.notes = notes;
             return this;
         }
 
+        /**
+         * @param partitionFormatInPath Indicates how the source data is partitioned. This is defined to filter on a range of partitioned data before performing actions or materialization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionFormatInPath(Boolean partitionFormatInPath) {
             $.partitionFormatInPath = partitionFormatInPath;
             return this;
         }
 
+        /**
+         * @param properties Properties stores information like name of time series column for time series dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param savedDatasetId Indicates the saved dataset this definition is mapping to, populated on Get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder savedDatasetId(String savedDatasetId) {
             $.savedDatasetId = savedDatasetId;
             return this;
         }
 
+        /**
+         * @param tags Tags associated with the dataset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param telemetryInfo  Telemetry information about the dataset including information like which service the dataset was created from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder telemetryInfo(Map<String,String> telemetryInfo) {
             $.telemetryInfo = telemetryInfo;
             return this;
         }
 
+        /**
+         * @param useDescriptionTagsFromDefinition  Whether to use description and tags from the definition level as opposed to dataset level (old behavior).
+         * 
+         * @return builder
+         * 
+         */
         public Builder useDescriptionTagsFromDefinition(Boolean useDescriptionTagsFromDefinition) {
             $.useDescriptionTagsFromDefinition = useDescriptionTagsFromDefinition;
             return this;
         }
 
+        /**
+         * @param versionId An identifier uniquely identifies a definition change.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionId(String versionId) {
             $.versionId = versionId;
             return this;

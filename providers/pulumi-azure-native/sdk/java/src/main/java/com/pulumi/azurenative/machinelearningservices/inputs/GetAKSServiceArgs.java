@@ -22,6 +22,10 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable Boolean expand;
 
+    /**
+     * @return Set to True to include Model details.
+     * 
+     */
     public Optional<Boolean> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -33,6 +37,10 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="serviceName", required=true)
     private String serviceName;
 
+    /**
+     * @return Name of the Azure Machine Learning service.
+     * 
+     */
     public String serviceName() {
         return this.serviceName;
     }
@@ -55,6 +67,10 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="workspaceName", required=true)
     private String workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public String workspaceName() {
         return this.workspaceName;
     }
@@ -86,21 +102,45 @@ public final class GetAKSServiceArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetAKSServiceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Set to True to include Model details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable Boolean expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param serviceName Name of the Azure Machine Learning service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             $.workspaceName = workspaceName;
             return this;

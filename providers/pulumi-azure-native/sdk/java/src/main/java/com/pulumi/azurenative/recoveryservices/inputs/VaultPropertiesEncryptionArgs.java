@@ -30,6 +30,10 @@ public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.Re
     @Import(name="infrastructureEncryption")
     private @Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption;
 
+    /**
+     * @return Enabling/Disabling the Double Encryption state
+     * 
+     */
     public Optional<Output<Either<String,InfrastructureEncryptionState>>> infrastructureEncryption() {
         return Optional.ofNullable(this.infrastructureEncryption);
     }
@@ -41,6 +45,10 @@ public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.Re
     @Import(name="kekIdentity")
     private @Nullable Output<CmkKekIdentityArgs> kekIdentity;
 
+    /**
+     * @return The details of the identity used for CMK
+     * 
+     */
     public Optional<Output<CmkKekIdentityArgs>> kekIdentity() {
         return Optional.ofNullable(this.kekIdentity);
     }
@@ -52,6 +60,10 @@ public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.Re
     @Import(name="keyVaultProperties")
     private @Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties;
 
+    /**
+     * @return The properties of the Key Vault which hosts CMK
+     * 
+     */
     public Optional<Output<CmkKeyVaultPropertiesArgs>> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
@@ -82,37 +94,85 @@ public final class VaultPropertiesEncryptionArgs extends com.pulumi.resources.Re
             $ = new VaultPropertiesEncryptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param infrastructureEncryption Enabling/Disabling the Double Encryption state
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureEncryption(@Nullable Output<Either<String,InfrastructureEncryptionState>> infrastructureEncryption) {
             $.infrastructureEncryption = infrastructureEncryption;
             return this;
         }
 
+        /**
+         * @param infrastructureEncryption Enabling/Disabling the Double Encryption state
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureEncryption(Either<String,InfrastructureEncryptionState> infrastructureEncryption) {
             return infrastructureEncryption(Output.of(infrastructureEncryption));
         }
 
+        /**
+         * @param infrastructureEncryption Enabling/Disabling the Double Encryption state
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureEncryption(String infrastructureEncryption) {
             return infrastructureEncryption(Either.ofLeft(infrastructureEncryption));
         }
 
+        /**
+         * @param infrastructureEncryption Enabling/Disabling the Double Encryption state
+         * 
+         * @return builder
+         * 
+         */
         public Builder infrastructureEncryption(InfrastructureEncryptionState infrastructureEncryption) {
             return infrastructureEncryption(Either.ofRight(infrastructureEncryption));
         }
 
+        /**
+         * @param kekIdentity The details of the identity used for CMK
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekIdentity(@Nullable Output<CmkKekIdentityArgs> kekIdentity) {
             $.kekIdentity = kekIdentity;
             return this;
         }
 
+        /**
+         * @param kekIdentity The details of the identity used for CMK
+         * 
+         * @return builder
+         * 
+         */
         public Builder kekIdentity(CmkKekIdentityArgs kekIdentity) {
             return kekIdentity(Output.of(kekIdentity));
         }
 
+        /**
+         * @param keyVaultProperties The properties of the Key Vault which hosts CMK
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(@Nullable Output<CmkKeyVaultPropertiesArgs> keyVaultProperties) {
             $.keyVaultProperties = keyVaultProperties;
             return this;
         }
 
+        /**
+         * @param keyVaultProperties The properties of the Key Vault which hosts CMK
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultProperties(CmkKeyVaultPropertiesArgs keyVaultProperties) {
             return keyVaultProperties(Output.of(keyVaultProperties));
         }

@@ -26,6 +26,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -37,6 +41,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Resource Id
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -48,6 +56,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +71,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="query")
     private @Nullable String query;
 
+    /**
+     * @return Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
+     * 
+     */
     public Optional<String> query() {
         return Optional.ofNullable(this.query);
     }
@@ -70,6 +86,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="streamingUnits")
     private @Nullable Integer streamingUnits;
 
+    /**
+     * @return Specifies the number of streaming units that the streaming job uses.
+     * 
+     */
     public Optional<Integer> streamingUnits() {
         return Optional.ofNullable(this.streamingUnits);
     }
@@ -81,6 +101,10 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Resource type
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -114,31 +138,67 @@ public final class TransformationResponse extends com.pulumi.resources.InvokeArg
             $ = new TransformationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag The current entity tag for the transformation. This is an opaque string. You can use it to detect whether the resource has changed between requests. You can also use it in the If-Match or If-None-Match headers for write operations for optimistic concurrency.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param query Specifies the query that will be run in the streaming job. You can learn more about the Stream Analytics Query Language (SAQL) here: https://msdn.microsoft.com/library/azure/dn834998 . Required on PUT (CreateOrReplace) requests.
+         * 
+         * @return builder
+         * 
+         */
         public Builder query(@Nullable String query) {
             $.query = query;
             return this;
         }
 
+        /**
+         * @param streamingUnits Specifies the number of streaming units that the streaming job uses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streamingUnits(@Nullable Integer streamingUnits) {
             $.streamingUnits = streamingUnits;
             return this;
         }
 
+        /**
+         * @param type Resource type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

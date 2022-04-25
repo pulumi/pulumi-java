@@ -25,6 +25,10 @@ public final class ReferenceDataSetKeyPropertyResponse extends com.pulumi.resour
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the key property.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -36,6 +40,10 @@ public final class ReferenceDataSetKeyPropertyResponse extends com.pulumi.resour
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the key property.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,11 +73,23 @@ public final class ReferenceDataSetKeyPropertyResponse extends com.pulumi.resour
             $ = new ReferenceDataSetKeyPropertyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the key property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param type The type of the key property.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

@@ -25,6 +25,10 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="cpu")
     private @Nullable Double cpu;
 
+    /**
+     * @return CPU limits in cores. At present, only full cores are supported.
+     * 
+     */
     public Optional<Double> cpu() {
         return Optional.ofNullable(this.cpu);
     }
@@ -36,6 +40,10 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
     @Import(name="memoryInGB")
     private @Nullable Double memoryInGB;
 
+    /**
+     * @return The memory limit in GB.
+     * 
+     */
     public Optional<Double> memoryInGB() {
         return Optional.ofNullable(this.memoryInGB);
     }
@@ -65,11 +73,23 @@ public final class ResourceLimitsResponse extends com.pulumi.resources.InvokeArg
             $ = new ResourceLimitsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cpu CPU limits in cores. At present, only full cores are supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cpu(@Nullable Double cpu) {
             $.cpu = cpu;
             return this;
         }
 
+        /**
+         * @param memoryInGB The memory limit in GB.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGB(@Nullable Double memoryInGB) {
             $.memoryInGB = memoryInGB;
             return this;

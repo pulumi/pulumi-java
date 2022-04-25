@@ -27,6 +27,10 @@ public final class EncryptionInTransitPropertiesArgs extends com.pulumi.resource
     @Import(name="isEncryptionInTransitEnabled")
     private @Nullable Output<Boolean> isEncryptionInTransitEnabled;
 
+    /**
+     * @return Indicates whether or not inter cluster node communication is encrypted in transit.
+     * 
+     */
     public Optional<Output<Boolean>> isEncryptionInTransitEnabled() {
         return Optional.ofNullable(this.isEncryptionInTransitEnabled);
     }
@@ -55,11 +59,23 @@ public final class EncryptionInTransitPropertiesArgs extends com.pulumi.resource
             $ = new EncryptionInTransitPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isEncryptionInTransitEnabled Indicates whether or not inter cluster node communication is encrypted in transit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEncryptionInTransitEnabled(@Nullable Output<Boolean> isEncryptionInTransitEnabled) {
             $.isEncryptionInTransitEnabled = isEncryptionInTransitEnabled;
             return this;
         }
 
+        /**
+         * @param isEncryptionInTransitEnabled Indicates whether or not inter cluster node communication is encrypted in transit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEncryptionInTransitEnabled(Boolean isEncryptionInTransitEnabled) {
             return isEncryptionInTransitEnabled(Output.of(isEncryptionInTransitEnabled));
         }

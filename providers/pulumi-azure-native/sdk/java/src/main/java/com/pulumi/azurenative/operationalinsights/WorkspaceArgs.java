@@ -31,6 +31,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="eTag")
     private @Nullable Output<String> eTag;
 
+    /**
+     * @return The ETag of the workspace.
+     * 
+     */
     public Optional<Output<String>> eTag() {
         return Optional.ofNullable(this.eTag);
     }
@@ -42,6 +46,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="features")
     private @Nullable Output<WorkspaceFeaturesArgs> features;
 
+    /**
+     * @return Workspace features.
+     * 
+     */
     public Optional<Output<WorkspaceFeaturesArgs>> features() {
         return Optional.ofNullable(this.features);
     }
@@ -53,6 +61,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceCmkForQuery")
     private @Nullable Output<Boolean> forceCmkForQuery;
 
+    /**
+     * @return Indicates whether customer managed storage is mandatory for query management.
+     * 
+     */
     public Optional<Output<Boolean>> forceCmkForQuery() {
         return Optional.ofNullable(this.forceCmkForQuery);
     }
@@ -64,6 +76,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -75,6 +91,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="provisioningState")
     private @Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState;
 
+    /**
+     * @return The provisioning state of the workspace.
+     * 
+     */
     public Optional<Output<Either<String,WorkspaceEntityStatus>>> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -86,6 +106,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccessForIngestion")
     private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion;
 
+    /**
+     * @return The network access type for accessing Log Analytics ingestion.
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccessType>>> publicNetworkAccessForIngestion() {
         return Optional.ofNullable(this.publicNetworkAccessForIngestion);
     }
@@ -97,6 +121,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicNetworkAccessForQuery")
     private @Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery;
 
+    /**
+     * @return The network access type for accessing Log Analytics query.
+     * 
+     */
     public Optional<Output<Either<String,PublicNetworkAccessType>>> publicNetworkAccessForQuery() {
         return Optional.ofNullable(this.publicNetworkAccessForQuery);
     }
@@ -108,6 +136,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -119,6 +151,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="retentionInDays")
     private @Nullable Output<Integer> retentionInDays;
 
+    /**
+     * @return The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+     * 
+     */
     public Optional<Output<Integer>> retentionInDays() {
         return Optional.ofNullable(this.retentionInDays);
     }
@@ -130,6 +166,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<WorkspaceSkuArgs> sku;
 
+    /**
+     * @return The SKU of the workspace.
+     * 
+     */
     public Optional<Output<WorkspaceSkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -141,6 +181,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -152,6 +196,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceCapping")
     private @Nullable Output<WorkspaceCappingArgs> workspaceCapping;
 
+    /**
+     * @return The daily volume cap for ingestion.
+     * 
+     */
     public Optional<Output<WorkspaceCappingArgs>> workspaceCapping() {
         return Optional.ofNullable(this.workspaceCapping);
     }
@@ -163,6 +211,10 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName")
     private @Nullable Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Optional<Output<String>> workspaceName() {
         return Optional.ofNullable(this.workspaceName);
     }
@@ -203,143 +255,335 @@ public final class WorkspaceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new WorkspaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param eTag The ETag of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(@Nullable Output<String> eTag) {
             $.eTag = eTag;
             return this;
         }
 
+        /**
+         * @param eTag The ETag of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder eTag(String eTag) {
             return eTag(Output.of(eTag));
         }
 
+        /**
+         * @param features Workspace features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(@Nullable Output<WorkspaceFeaturesArgs> features) {
             $.features = features;
             return this;
         }
 
+        /**
+         * @param features Workspace features.
+         * 
+         * @return builder
+         * 
+         */
         public Builder features(WorkspaceFeaturesArgs features) {
             return features(Output.of(features));
         }
 
+        /**
+         * @param forceCmkForQuery Indicates whether customer managed storage is mandatory for query management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceCmkForQuery(@Nullable Output<Boolean> forceCmkForQuery) {
             $.forceCmkForQuery = forceCmkForQuery;
             return this;
         }
 
+        /**
+         * @param forceCmkForQuery Indicates whether customer managed storage is mandatory for query management.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceCmkForQuery(Boolean forceCmkForQuery) {
             return forceCmkForQuery(Output.of(forceCmkForQuery));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable Output<Either<String,WorkspaceEntityStatus>> provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(Either<String,WorkspaceEntityStatus> provisioningState) {
             return provisioningState(Output.of(provisioningState));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             return provisioningState(Either.ofLeft(provisioningState));
         }
 
+        /**
+         * @param provisioningState The provisioning state of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(WorkspaceEntityStatus provisioningState) {
             return provisioningState(Either.ofRight(provisioningState));
         }
 
+        /**
+         * @param publicNetworkAccessForIngestion The network access type for accessing Log Analytics ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccessForIngestion(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForIngestion) {
             $.publicNetworkAccessForIngestion = publicNetworkAccessForIngestion;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccessForIngestion The network access type for accessing Log Analytics ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccessForIngestion(Either<String,PublicNetworkAccessType> publicNetworkAccessForIngestion) {
             return publicNetworkAccessForIngestion(Output.of(publicNetworkAccessForIngestion));
         }
 
+        /**
+         * @param publicNetworkAccessForIngestion The network access type for accessing Log Analytics ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccessForIngestion(String publicNetworkAccessForIngestion) {
             return publicNetworkAccessForIngestion(Either.ofLeft(publicNetworkAccessForIngestion));
         }
 
+        /**
+         * @param publicNetworkAccessForIngestion The network access type for accessing Log Analytics ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccessForIngestion(PublicNetworkAccessType publicNetworkAccessForIngestion) {
             return publicNetworkAccessForIngestion(Either.ofRight(publicNetworkAccessForIngestion));
         }
 
+        /**
+         * @param publicNetworkAccessForQuery The network access type for accessing Log Analytics query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccessForQuery(@Nullable Output<Either<String,PublicNetworkAccessType>> publicNetworkAccessForQuery) {
             $.publicNetworkAccessForQuery = publicNetworkAccessForQuery;
             return this;
         }
 
+        /**
+         * @param publicNetworkAccessForQuery The network access type for accessing Log Analytics query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccessForQuery(Either<String,PublicNetworkAccessType> publicNetworkAccessForQuery) {
             return publicNetworkAccessForQuery(Output.of(publicNetworkAccessForQuery));
         }
 
+        /**
+         * @param publicNetworkAccessForQuery The network access type for accessing Log Analytics query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccessForQuery(String publicNetworkAccessForQuery) {
             return publicNetworkAccessForQuery(Either.ofLeft(publicNetworkAccessForQuery));
         }
 
+        /**
+         * @param publicNetworkAccessForQuery The network access type for accessing Log Analytics query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicNetworkAccessForQuery(PublicNetworkAccessType publicNetworkAccessForQuery) {
             return publicNetworkAccessForQuery(Either.ofRight(publicNetworkAccessForQuery));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param retentionInDays The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(@Nullable Output<Integer> retentionInDays) {
             $.retentionInDays = retentionInDays;
             return this;
         }
 
+        /**
+         * @param retentionInDays The workspace data retention in days. Allowed values are per pricing plan. See pricing tiers documentation for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionInDays(Integer retentionInDays) {
             return retentionInDays(Output.of(retentionInDays));
         }
 
+        /**
+         * @param sku The SKU of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<WorkspaceSkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(WorkspaceSkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param workspaceCapping The daily volume cap for ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceCapping(@Nullable Output<WorkspaceCappingArgs> workspaceCapping) {
             $.workspaceCapping = workspaceCapping;
             return this;
         }
 
+        /**
+         * @param workspaceCapping The daily volume cap for ingestion.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceCapping(WorkspaceCappingArgs workspaceCapping) {
             return workspaceCapping(Output.of(workspaceCapping));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(@Nullable Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

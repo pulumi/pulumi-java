@@ -19,6 +19,10 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
     @Import(name="failoverGroupName", required=true)
     private String failoverGroupName;
 
+    /**
+     * @return The name of the failover group.
+     * 
+     */
     public String failoverGroupName() {
         return this.failoverGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
     @Import(name="locationName", required=true)
     private String locationName;
 
+    /**
+     * @return The name of the region where the resource is located.
+     * 
+     */
     public String locationName() {
         return this.locationName;
     }
@@ -41,6 +49,10 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetInstanceFailoverGroupArgs extends com.pulumi.resources.Inv
             $ = new GetInstanceFailoverGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param failoverGroupName The name of the failover group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverGroupName(String failoverGroupName) {
             $.failoverGroupName = failoverGroupName;
             return this;
         }
 
+        /**
+         * @param locationName The name of the region where the resource is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationName(String locationName) {
             $.locationName = locationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

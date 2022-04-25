@@ -27,6 +27,10 @@ public final class ComputeIsolationPropertiesResponse extends com.pulumi.resourc
     @Import(name="enableComputeIsolation")
     private @Nullable Boolean enableComputeIsolation;
 
+    /**
+     * @return The flag indicates whether enable compute isolation or not.
+     * 
+     */
     public Optional<Boolean> enableComputeIsolation() {
         return Optional.ofNullable(this.enableComputeIsolation);
     }
@@ -38,6 +42,10 @@ public final class ComputeIsolationPropertiesResponse extends com.pulumi.resourc
     @Import(name="hostSku")
     private @Nullable String hostSku;
 
+    /**
+     * @return The host sku.
+     * 
+     */
     public Optional<String> hostSku() {
         return Optional.ofNullable(this.hostSku);
     }
@@ -67,11 +75,23 @@ public final class ComputeIsolationPropertiesResponse extends com.pulumi.resourc
             $ = new ComputeIsolationPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableComputeIsolation The flag indicates whether enable compute isolation or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableComputeIsolation(@Nullable Boolean enableComputeIsolation) {
             $.enableComputeIsolation = enableComputeIsolation;
             return this;
         }
 
+        /**
+         * @param hostSku The host sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostSku(@Nullable String hostSku) {
             $.hostSku = hostSku;
             return this;

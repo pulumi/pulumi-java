@@ -12,27 +12,27 @@ import java.util.Objects;
 @CustomType
 public final class IncidentAdditionalDataResponse {
     /**
-     * List of product names of alerts in the incident
+     * @return List of product names of alerts in the incident
      * 
      */
     private final List<String> alertProductNames;
     /**
-     * The number of alerts in the incident
+     * @return The number of alerts in the incident
      * 
      */
     private final Integer alertsCount;
     /**
-     * The number of bookmarks in the incident
+     * @return The number of bookmarks in the incident
      * 
      */
     private final Integer bookmarksCount;
     /**
-     * The number of comments in the incident
+     * @return The number of comments in the incident
      * 
      */
     private final Integer commentsCount;
     /**
-     * The tactics associated with incident
+     * @return The tactics associated with incident
      * 
      */
     private final List<String> tactics;
@@ -52,37 +52,37 @@ public final class IncidentAdditionalDataResponse {
     }
 
     /**
-     * List of product names of alerts in the incident
+     * @return List of product names of alerts in the incident
      * 
-    */
+     */
     public List<String> alertProductNames() {
         return this.alertProductNames;
     }
     /**
-     * The number of alerts in the incident
+     * @return The number of alerts in the incident
      * 
-    */
+     */
     public Integer alertsCount() {
         return this.alertsCount;
     }
     /**
-     * The number of bookmarks in the incident
+     * @return The number of bookmarks in the incident
      * 
-    */
+     */
     public Integer bookmarksCount() {
         return this.bookmarksCount;
     }
     /**
-     * The number of comments in the incident
+     * @return The number of comments in the incident
      * 
-    */
+     */
     public Integer commentsCount() {
         return this.commentsCount;
     }
     /**
-     * The tactics associated with incident
+     * @return The tactics associated with incident
      * 
-    */
+     */
     public List<String> tactics() {
         return this.tactics;
     }

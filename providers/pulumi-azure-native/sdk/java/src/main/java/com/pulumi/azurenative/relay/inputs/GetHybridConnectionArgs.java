@@ -19,6 +19,10 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="hybridConnectionName", required=true)
     private String hybridConnectionName;
 
+    /**
+     * @return The hybrid connection name.
+     * 
+     */
     public String hybridConnectionName() {
         return this.hybridConnectionName;
     }
@@ -30,6 +34,10 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The namespace name
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -41,6 +49,10 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetHybridConnectionArgs extends com.pulumi.resources.InvokeAr
             $ = new GetHybridConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hybridConnectionName The hybrid connection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hybridConnectionName(String hybridConnectionName) {
             $.hybridConnectionName = hybridConnectionName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

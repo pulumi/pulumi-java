@@ -26,6 +26,10 @@ public final class EnterprisePolicyIdentityArgs extends com.pulumi.resources.Res
     @Import(name="type")
     private @Nullable Output<ResourceIdentityType> type;
 
+    /**
+     * @return The type of identity used for the EnterprisePolicy. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+     * 
+     */
     public Optional<Output<ResourceIdentityType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -54,11 +58,23 @@ public final class EnterprisePolicyIdentityArgs extends com.pulumi.resources.Res
             $ = new EnterprisePolicyIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type The type of identity used for the EnterprisePolicy. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<ResourceIdentityType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of identity used for the EnterprisePolicy. Currently, the only supported type is &#39;SystemAssigned&#39;, which implicitly creates an identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ResourceIdentityType type) {
             return type(Output.of(type));
         }

@@ -21,62 +21,62 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAutomationResult {
     /**
-     * A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
+     * @return A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
      * 
      */
     private final @Nullable List<Object> actions;
     /**
-     * The security automation description.
+     * @return The security automation description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Entity tag is used for comparing two or more entities from the same requested resource.
+     * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Indicates whether the security automation is enabled.
+     * @return Indicates whether the security automation is enabled.
      * 
      */
     private final @Nullable Boolean isEnabled;
     /**
-     * Kind of the resource
+     * @return Kind of the resource
      * 
      */
     private final @Nullable String kind;
     /**
-     * Location where the resource is stored
+     * @return Location where the resource is stored
      * 
      */
     private final @Nullable String location;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
+     * @return A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
      * 
      */
     private final @Nullable List<AutomationScopeResponse> scopes;
     /**
-     * A collection of the source event types which evaluate the security automation set of rules.
+     * @return A collection of the source event types which evaluate the security automation set of rules.
      * 
      */
     private final @Nullable List<AutomationSourceResponse> sources;
     /**
-     * A list of key value pairs that describe the resource.
+     * @return A list of key value pairs that describe the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -110,86 +110,86 @@ public final class GetAutomationResult {
     }
 
     /**
-     * A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
+     * @return A collection of the actions which are triggered if all the configured rules evaluations, within at least one rule set, are true.
      * 
-    */
+     */
     public List<Object> actions() {
         return this.actions == null ? List.of() : this.actions;
     }
     /**
-     * The security automation description.
+     * @return The security automation description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Entity tag is used for comparing two or more entities from the same requested resource.
+     * @return Entity tag is used for comparing two or more entities from the same requested resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Indicates whether the security automation is enabled.
+     * @return Indicates whether the security automation is enabled.
      * 
-    */
+     */
     public Optional<Boolean> isEnabled() {
         return Optional.ofNullable(this.isEnabled);
     }
     /**
-     * Kind of the resource
+     * @return Kind of the resource
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Location where the resource is stored
+     * @return Location where the resource is stored
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
+     * @return A collection of scopes on which the security automations logic is applied. Supported scopes are the subscription itself or a resource group under that subscription. The automation will only apply on defined scopes.
      * 
-    */
+     */
     public List<AutomationScopeResponse> scopes() {
         return this.scopes == null ? List.of() : this.scopes;
     }
     /**
-     * A collection of the source event types which evaluate the security automation set of rules.
+     * @return A collection of the source event types which evaluate the security automation set of rules.
      * 
-    */
+     */
     public List<AutomationSourceResponse> sources() {
         return this.sources == null ? List.of() : this.sources;
     }
     /**
-     * A list of key value pairs that describe the resource.
+     * @return A list of key value pairs that describe the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="accountKey")
     private @Nullable Output<AsymmetricEncryptedSecretArgs> accountKey;
 
+    /**
+     * @return Encrypted storage key.
+     * 
+     */
     public Optional<Output<AsymmetricEncryptedSecretArgs>> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
@@ -37,6 +41,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="accountType", required=true)
     private Output<Either<String,AccountType>> accountType;
 
+    /**
+     * @return Type of storage accessed on the storage account.
+     * 
+     */
     public Output<Either<String,AccountType>> accountType() {
         return this.accountType;
     }
@@ -48,6 +56,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="alias", required=true)
     private Output<String> alias;
 
+    /**
+     * @return Alias for the storage account.
+     * 
+     */
     public Output<String> alias() {
         return this.alias;
     }
@@ -59,6 +71,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="blobDomainName")
     private @Nullable Output<String> blobDomainName;
 
+    /**
+     * @return Blob end point for private clouds.
+     * 
+     */
     public Optional<Output<String>> blobDomainName() {
         return Optional.ofNullable(this.blobDomainName);
     }
@@ -70,6 +86,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="connectionString")
     private @Nullable Output<String> connectionString;
 
+    /**
+     * @return Connection string for the storage account. Use this string if username and account key are not specified.
+     * 
+     */
     public Optional<Output<String>> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
@@ -81,6 +101,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -92,6 +116,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The storage account credential name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -103,6 +131,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -114,6 +146,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="sslStatus", required=true)
     private Output<Either<String,SSLStatus>> sslStatus;
 
+    /**
+     * @return Signifies whether SSL needs to be enabled or not.
+     * 
+     */
     public Output<Either<String,SSLStatus>> sslStatus() {
         return this.sslStatus;
     }
@@ -125,6 +161,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="storageAccountId")
     private @Nullable Output<String> storageAccountId;
 
+    /**
+     * @return Id of the storage account.
+     * 
+     */
     public Optional<Output<String>> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
@@ -136,6 +176,10 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
     @Import(name="userName")
     private @Nullable Output<String> userName;
 
+    /**
+     * @return Username for the storage account.
+     * 
+     */
     public Optional<Output<String>> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -174,117 +218,273 @@ public final class StorageAccountCredentialArgs extends com.pulumi.resources.Res
             $ = new StorageAccountCredentialArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountKey Encrypted storage key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(@Nullable Output<AsymmetricEncryptedSecretArgs> accountKey) {
             $.accountKey = accountKey;
             return this;
         }
 
+        /**
+         * @param accountKey Encrypted storage key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountKey(AsymmetricEncryptedSecretArgs accountKey) {
             return accountKey(Output.of(accountKey));
         }
 
+        /**
+         * @param accountType Type of storage accessed on the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountType(Output<Either<String,AccountType>> accountType) {
             $.accountType = accountType;
             return this;
         }
 
+        /**
+         * @param accountType Type of storage accessed on the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountType(Either<String,AccountType> accountType) {
             return accountType(Output.of(accountType));
         }
 
+        /**
+         * @param accountType Type of storage accessed on the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountType(String accountType) {
             return accountType(Either.ofLeft(accountType));
         }
 
+        /**
+         * @param accountType Type of storage accessed on the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountType(AccountType accountType) {
             return accountType(Either.ofRight(accountType));
         }
 
+        /**
+         * @param alias Alias for the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(Output<String> alias) {
             $.alias = alias;
             return this;
         }
 
+        /**
+         * @param alias Alias for the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder alias(String alias) {
             return alias(Output.of(alias));
         }
 
+        /**
+         * @param blobDomainName Blob end point for private clouds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobDomainName(@Nullable Output<String> blobDomainName) {
             $.blobDomainName = blobDomainName;
             return this;
         }
 
+        /**
+         * @param blobDomainName Blob end point for private clouds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobDomainName(String blobDomainName) {
             return blobDomainName(Output.of(blobDomainName));
         }
 
+        /**
+         * @param connectionString Connection string for the storage account. Use this string if username and account key are not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(@Nullable Output<String> connectionString) {
             $.connectionString = connectionString;
             return this;
         }
 
+        /**
+         * @param connectionString Connection string for the storage account. Use this string if username and account key are not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionString(String connectionString) {
             return connectionString(Output.of(connectionString));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param name The storage account credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The storage account credential name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sslStatus Signifies whether SSL needs to be enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslStatus(Output<Either<String,SSLStatus>> sslStatus) {
             $.sslStatus = sslStatus;
             return this;
         }
 
+        /**
+         * @param sslStatus Signifies whether SSL needs to be enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslStatus(Either<String,SSLStatus> sslStatus) {
             return sslStatus(Output.of(sslStatus));
         }
 
+        /**
+         * @param sslStatus Signifies whether SSL needs to be enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslStatus(String sslStatus) {
             return sslStatus(Either.ofLeft(sslStatus));
         }
 
+        /**
+         * @param sslStatus Signifies whether SSL needs to be enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslStatus(SSLStatus sslStatus) {
             return sslStatus(Either.ofRight(sslStatus));
         }
 
+        /**
+         * @param storageAccountId Id of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountId Id of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             return storageAccountId(Output.of(storageAccountId));
         }
 
+        /**
+         * @param userName Username for the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Output<String> userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userName Username for the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             return userName(Output.of(userName));
         }

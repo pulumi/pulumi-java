@@ -12,42 +12,42 @@ import java.util.Objects;
 @CustomType
 public final class GetHybridUseBenefitResult {
     /**
-     * Created date
+     * @return Created date
      * 
      */
     private final String createdDate;
     /**
-     * Indicates the revision of the hybrid use benefit
+     * @return Indicates the revision of the hybrid use benefit
      * 
      */
     private final Integer etag;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * Last updated date
+     * @return Last updated date
      * 
      */
     private final String lastUpdatedDate;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * Provisioning state
+     * @return Provisioning state
      * 
      */
     private final String provisioningState;
     /**
-     * Hybrid use benefit SKU
+     * @return Hybrid use benefit SKU
      * 
      */
     private final SkuResponse sku;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -73,58 +73,58 @@ public final class GetHybridUseBenefitResult {
     }
 
     /**
-     * Created date
+     * @return Created date
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * Indicates the revision of the hybrid use benefit
+     * @return Indicates the revision of the hybrid use benefit
      * 
-    */
+     */
     public Integer etag() {
         return this.etag;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Last updated date
+     * @return Last updated date
      * 
-    */
+     */
     public String lastUpdatedDate() {
         return this.lastUpdatedDate;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Provisioning state
+     * @return Provisioning state
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Hybrid use benefit SKU
+     * @return Hybrid use benefit SKU
      * 
-    */
+     */
     public SkuResponse sku() {
         return this.sku;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

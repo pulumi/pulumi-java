@@ -23,6 +23,10 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="value", required=true)
     private String value;
 
+    /**
+     * @return An IPv4 address range in CIDR notation, such as &#39;124.56.78.91&#39; (simple IP address) or &#39;124.56.78.0/24&#39; (all addresses that start with 124.56.78).
+     * 
+     */
     public String value() {
         return this.value;
     }
@@ -51,6 +55,12 @@ public final class IPRuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IPRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value An IPv4 address range in CIDR notation, such as &#39;124.56.78.91&#39; (simple IP address) or &#39;124.56.78.0/24&#39; (all addresses that start with 124.56.78).
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             $.value = value;
             return this;

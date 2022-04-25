@@ -30,6 +30,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="autoUpdate", required=true)
     private String autoUpdate;
 
+    /**
+     * @return Whether Self-hosted integration runtime auto update has been turned on.
+     * 
+     */
     public String autoUpdate() {
         return this.autoUpdate;
     }
@@ -41,6 +45,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="autoUpdateETA", required=true)
     private String autoUpdateETA;
 
+    /**
+     * @return The estimated time when the self-hosted integration runtime will be updated.
+     * 
+     */
     public String autoUpdateETA() {
         return this.autoUpdateETA;
     }
@@ -52,6 +60,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="capabilities", required=true)
     private Map<String,String> capabilities;
 
+    /**
+     * @return Object with additional information about integration runtime capabilities.
+     * 
+     */
     public Map<String,String> capabilities() {
         return this.capabilities;
     }
@@ -63,6 +75,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="createTime", required=true)
     private String createTime;
 
+    /**
+     * @return The time at which the integration runtime was created, in ISO8601 format.
+     * 
+     */
     public String createTime() {
         return this.createTime;
     }
@@ -74,6 +90,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="dataFactoryName", required=true)
     private String dataFactoryName;
 
+    /**
+     * @return The data factory name which the integration runtime belong to.
+     * 
+     */
     public String dataFactoryName() {
         return this.dataFactoryName;
     }
@@ -85,6 +105,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="internalChannelEncryption", required=true)
     private String internalChannelEncryption;
 
+    /**
+     * @return It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
+     * 
+     */
     public String internalChannelEncryption() {
         return this.internalChannelEncryption;
     }
@@ -96,6 +120,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="latestVersion", required=true)
     private String latestVersion;
 
+    /**
+     * @return The latest version on download center.
+     * 
+     */
     public String latestVersion() {
         return this.latestVersion;
     }
@@ -107,6 +135,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="links")
     private @Nullable List<LinkedIntegrationRuntimeResponse> links;
 
+    /**
+     * @return The list of linked integration runtimes that are created to share with this integration runtime.
+     * 
+     */
     public Optional<List<LinkedIntegrationRuntimeResponse>> links() {
         return Optional.ofNullable(this.links);
     }
@@ -118,6 +150,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="localTimeZoneOffset", required=true)
     private String localTimeZoneOffset;
 
+    /**
+     * @return The local time zone offset in hours.
+     * 
+     */
     public String localTimeZoneOffset() {
         return this.localTimeZoneOffset;
     }
@@ -129,6 +165,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="nodes")
     private @Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes;
 
+    /**
+     * @return The list of nodes for this integration runtime.
+     * 
+     */
     public Optional<List<SelfHostedIntegrationRuntimeNodeResponse>> nodes() {
         return Optional.ofNullable(this.nodes);
     }
@@ -140,6 +180,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="pushedVersion", required=true)
     private String pushedVersion;
 
+    /**
+     * @return The version that the integration runtime is going to update to.
+     * 
+     */
     public String pushedVersion() {
         return this.pushedVersion;
     }
@@ -151,6 +195,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="scheduledUpdateDate", required=true)
     private String scheduledUpdateDate;
 
+    /**
+     * @return The date at which the integration runtime will be scheduled to update, in ISO8601 format.
+     * 
+     */
     public String scheduledUpdateDate() {
         return this.scheduledUpdateDate;
     }
@@ -162,6 +210,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="serviceUrls", required=true)
     private List<String> serviceUrls;
 
+    /**
+     * @return The URLs for the services used in integration runtime backend service.
+     * 
+     */
     public List<String> serviceUrls() {
         return this.serviceUrls;
     }
@@ -173,6 +225,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return The state of integration runtime.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -184,6 +240,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="taskQueueId", required=true)
     private String taskQueueId;
 
+    /**
+     * @return The task queue id of the integration runtime.
+     * 
+     */
     public String taskQueueId() {
         return this.taskQueueId;
     }
@@ -196,6 +256,11 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of integration runtime.
+     * Expected value is &#39;SelfHosted&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -207,6 +272,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="updateDelayOffset", required=true)
     private String updateDelayOffset;
 
+    /**
+     * @return The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
+     * 
+     */
     public String updateDelayOffset() {
         return this.updateDelayOffset;
     }
@@ -218,6 +287,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return Version of the integration runtime.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -229,6 +302,10 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
     @Import(name="versionStatus", required=true)
     private String versionStatus;
 
+    /**
+     * @return Status of the integration runtime version.
+     * 
+     */
     public String versionStatus() {
         return this.versionStatus;
     }
@@ -275,108 +352,241 @@ public final class SelfHostedIntegrationRuntimeStatusResponse extends com.pulumi
             $ = new SelfHostedIntegrationRuntimeStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autoUpdate Whether Self-hosted integration runtime auto update has been turned on.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpdate(String autoUpdate) {
             $.autoUpdate = autoUpdate;
             return this;
         }
 
+        /**
+         * @param autoUpdateETA The estimated time when the self-hosted integration runtime will be updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autoUpdateETA(String autoUpdateETA) {
             $.autoUpdateETA = autoUpdateETA;
             return this;
         }
 
+        /**
+         * @param capabilities Object with additional information about integration runtime capabilities.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(Map<String,String> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param createTime The time at which the integration runtime was created, in ISO8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createTime(String createTime) {
             $.createTime = createTime;
             return this;
         }
 
+        /**
+         * @param dataFactoryName The data factory name which the integration runtime belong to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFactoryName(String dataFactoryName) {
             $.dataFactoryName = dataFactoryName;
             return this;
         }
 
+        /**
+         * @param internalChannelEncryption It is used to set the encryption mode for node-node communication channel (when more than 2 self-hosted integration runtime nodes exist).
+         * 
+         * @return builder
+         * 
+         */
         public Builder internalChannelEncryption(String internalChannelEncryption) {
             $.internalChannelEncryption = internalChannelEncryption;
             return this;
         }
 
+        /**
+         * @param latestVersion The latest version on download center.
+         * 
+         * @return builder
+         * 
+         */
         public Builder latestVersion(String latestVersion) {
             $.latestVersion = latestVersion;
             return this;
         }
 
+        /**
+         * @param links The list of linked integration runtimes that are created to share with this integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(@Nullable List<LinkedIntegrationRuntimeResponse> links) {
             $.links = links;
             return this;
         }
 
+        /**
+         * @param links The list of linked integration runtimes that are created to share with this integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder links(LinkedIntegrationRuntimeResponse... links) {
             return links(List.of(links));
         }
 
+        /**
+         * @param localTimeZoneOffset The local time zone offset in hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localTimeZoneOffset(String localTimeZoneOffset) {
             $.localTimeZoneOffset = localTimeZoneOffset;
             return this;
         }
 
+        /**
+         * @param nodes The list of nodes for this integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(@Nullable List<SelfHostedIntegrationRuntimeNodeResponse> nodes) {
             $.nodes = nodes;
             return this;
         }
 
+        /**
+         * @param nodes The list of nodes for this integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nodes(SelfHostedIntegrationRuntimeNodeResponse... nodes) {
             return nodes(List.of(nodes));
         }
 
+        /**
+         * @param pushedVersion The version that the integration runtime is going to update to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pushedVersion(String pushedVersion) {
             $.pushedVersion = pushedVersion;
             return this;
         }
 
+        /**
+         * @param scheduledUpdateDate The date at which the integration runtime will be scheduled to update, in ISO8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduledUpdateDate(String scheduledUpdateDate) {
             $.scheduledUpdateDate = scheduledUpdateDate;
             return this;
         }
 
+        /**
+         * @param serviceUrls The URLs for the services used in integration runtime backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUrls(List<String> serviceUrls) {
             $.serviceUrls = serviceUrls;
             return this;
         }
 
+        /**
+         * @param serviceUrls The URLs for the services used in integration runtime backend service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUrls(String... serviceUrls) {
             return serviceUrls(List.of(serviceUrls));
         }
 
+        /**
+         * @param state The state of integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param taskQueueId The task queue id of the integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taskQueueId(String taskQueueId) {
             $.taskQueueId = taskQueueId;
             return this;
         }
 
+        /**
+         * @param type The type of integration runtime.
+         * Expected value is &#39;SelfHosted&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param updateDelayOffset The time in the date scheduled by service to update the integration runtime, e.g., PT03H is 3 hours
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateDelayOffset(String updateDelayOffset) {
             $.updateDelayOffset = updateDelayOffset;
             return this;
         }
 
+        /**
+         * @param version Version of the integration runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param versionStatus Status of the integration runtime version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder versionStatus(String versionStatus) {
             $.versionStatus = versionStatus;
             return this;

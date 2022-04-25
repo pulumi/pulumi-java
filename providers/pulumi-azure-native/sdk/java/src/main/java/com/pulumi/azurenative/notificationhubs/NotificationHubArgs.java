@@ -32,6 +32,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="admCredential")
     private @Nullable Output<AdmCredentialArgs> admCredential;
 
+    /**
+     * @return The AdmCredential of the created NotificationHub
+     * 
+     */
     public Optional<Output<AdmCredentialArgs>> admCredential() {
         return Optional.ofNullable(this.admCredential);
     }
@@ -43,6 +47,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="apnsCredential")
     private @Nullable Output<ApnsCredentialArgs> apnsCredential;
 
+    /**
+     * @return The ApnsCredential of the created NotificationHub
+     * 
+     */
     public Optional<Output<ApnsCredentialArgs>> apnsCredential() {
         return Optional.ofNullable(this.apnsCredential);
     }
@@ -54,6 +62,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="authorizationRules")
     private @Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules;
 
+    /**
+     * @return The AuthorizationRules of the created NotificationHub
+     * 
+     */
     public Optional<Output<List<SharedAccessAuthorizationRulePropertiesArgs>>> authorizationRules() {
         return Optional.ofNullable(this.authorizationRules);
     }
@@ -65,6 +77,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="baiduCredential")
     private @Nullable Output<BaiduCredentialArgs> baiduCredential;
 
+    /**
+     * @return The BaiduCredential of the created NotificationHub
+     * 
+     */
     public Optional<Output<BaiduCredentialArgs>> baiduCredential() {
         return Optional.ofNullable(this.baiduCredential);
     }
@@ -76,6 +92,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="gcmCredential")
     private @Nullable Output<GcmCredentialArgs> gcmCredential;
 
+    /**
+     * @return The GcmCredential of the created NotificationHub
+     * 
+     */
     public Optional<Output<GcmCredentialArgs>> gcmCredential() {
         return Optional.ofNullable(this.gcmCredential);
     }
@@ -87,6 +107,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -98,6 +122,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="mpnsCredential")
     private @Nullable Output<MpnsCredentialArgs> mpnsCredential;
 
+    /**
+     * @return The MpnsCredential of the created NotificationHub
+     * 
+     */
     public Optional<Output<MpnsCredentialArgs>> mpnsCredential() {
         return Optional.ofNullable(this.mpnsCredential);
     }
@@ -109,6 +137,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The NotificationHub name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -120,6 +152,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The namespace name.
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -131,6 +167,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="notificationHubName")
     private @Nullable Output<String> notificationHubName;
 
+    /**
+     * @return The notification hub name.
+     * 
+     */
     public Optional<Output<String>> notificationHubName() {
         return Optional.ofNullable(this.notificationHubName);
     }
@@ -142,6 +182,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="registrationTtl")
     private @Nullable Output<String> registrationTtl;
 
+    /**
+     * @return The RegistrationTtl of the created NotificationHub
+     * 
+     */
     public Optional<Output<String>> registrationTtl() {
         return Optional.ofNullable(this.registrationTtl);
     }
@@ -153,6 +197,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -164,6 +212,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The sku of the created namespace
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -175,6 +227,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -186,6 +242,10 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="wnsCredential")
     private @Nullable Output<WnsCredentialArgs> wnsCredential;
 
+    /**
+     * @return The WnsCredential of the created NotificationHub
+     * 
+     */
     public Optional<Output<WnsCredentialArgs>> wnsCredential() {
         return Optional.ofNullable(this.wnsCredential);
     }
@@ -228,141 +288,327 @@ public final class NotificationHubArgs extends com.pulumi.resources.ResourceArgs
             $ = new NotificationHubArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param admCredential The AdmCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder admCredential(@Nullable Output<AdmCredentialArgs> admCredential) {
             $.admCredential = admCredential;
             return this;
         }
 
+        /**
+         * @param admCredential The AdmCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder admCredential(AdmCredentialArgs admCredential) {
             return admCredential(Output.of(admCredential));
         }
 
+        /**
+         * @param apnsCredential The ApnsCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder apnsCredential(@Nullable Output<ApnsCredentialArgs> apnsCredential) {
             $.apnsCredential = apnsCredential;
             return this;
         }
 
+        /**
+         * @param apnsCredential The ApnsCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder apnsCredential(ApnsCredentialArgs apnsCredential) {
             return apnsCredential(Output.of(apnsCredential));
         }
 
+        /**
+         * @param authorizationRules The AuthorizationRules of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRules(@Nullable Output<List<SharedAccessAuthorizationRulePropertiesArgs>> authorizationRules) {
             $.authorizationRules = authorizationRules;
             return this;
         }
 
+        /**
+         * @param authorizationRules The AuthorizationRules of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRules(List<SharedAccessAuthorizationRulePropertiesArgs> authorizationRules) {
             return authorizationRules(Output.of(authorizationRules));
         }
 
+        /**
+         * @param authorizationRules The AuthorizationRules of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRules(SharedAccessAuthorizationRulePropertiesArgs... authorizationRules) {
             return authorizationRules(List.of(authorizationRules));
         }
 
+        /**
+         * @param baiduCredential The BaiduCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduCredential(@Nullable Output<BaiduCredentialArgs> baiduCredential) {
             $.baiduCredential = baiduCredential;
             return this;
         }
 
+        /**
+         * @param baiduCredential The BaiduCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder baiduCredential(BaiduCredentialArgs baiduCredential) {
             return baiduCredential(Output.of(baiduCredential));
         }
 
+        /**
+         * @param gcmCredential The GcmCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcmCredential(@Nullable Output<GcmCredentialArgs> gcmCredential) {
             $.gcmCredential = gcmCredential;
             return this;
         }
 
+        /**
+         * @param gcmCredential The GcmCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder gcmCredential(GcmCredentialArgs gcmCredential) {
             return gcmCredential(Output.of(gcmCredential));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param mpnsCredential The MpnsCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder mpnsCredential(@Nullable Output<MpnsCredentialArgs> mpnsCredential) {
             $.mpnsCredential = mpnsCredential;
             return this;
         }
 
+        /**
+         * @param mpnsCredential The MpnsCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder mpnsCredential(MpnsCredentialArgs mpnsCredential) {
             return mpnsCredential(Output.of(mpnsCredential));
         }
 
+        /**
+         * @param name The NotificationHub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The NotificationHub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param notificationHubName The notification hub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationHubName(@Nullable Output<String> notificationHubName) {
             $.notificationHubName = notificationHubName;
             return this;
         }
 
+        /**
+         * @param notificationHubName The notification hub name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationHubName(String notificationHubName) {
             return notificationHubName(Output.of(notificationHubName));
         }
 
+        /**
+         * @param registrationTtl The RegistrationTtl of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationTtl(@Nullable Output<String> registrationTtl) {
             $.registrationTtl = registrationTtl;
             return this;
         }
 
+        /**
+         * @param registrationTtl The RegistrationTtl of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationTtl(String registrationTtl) {
             return registrationTtl(Output.of(registrationTtl));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The sku of the created namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The sku of the created namespace
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param wnsCredential The WnsCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder wnsCredential(@Nullable Output<WnsCredentialArgs> wnsCredential) {
             $.wnsCredential = wnsCredential;
             return this;
         }
 
+        /**
+         * @param wnsCredential The WnsCredential of the created NotificationHub
+         * 
+         * @return builder
+         * 
+         */
         public Builder wnsCredential(WnsCredentialArgs wnsCredential) {
             return wnsCredential(Output.of(wnsCredential));
         }

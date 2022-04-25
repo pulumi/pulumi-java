@@ -27,6 +27,10 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="assetId")
     private @Nullable String assetId;
 
+    /**
+     * @return The id of the asset represented by this node.
+     * 
+     */
     public Optional<String> assetId() {
         return Optional.ofNullable(this.assetId);
     }
@@ -38,6 +42,10 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="inputId")
     private @Nullable String inputId;
 
+    /**
+     * @return The id of the input element represented by this node.
+     * 
+     */
     public Optional<String> inputId() {
         return Optional.ofNullable(this.inputId);
     }
@@ -49,6 +57,10 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="outputId")
     private @Nullable String outputId;
 
+    /**
+     * @return The id of the output element represented by this node.
+     * 
+     */
     public Optional<String> outputId() {
         return Optional.ofNullable(this.outputId);
     }
@@ -60,6 +72,10 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="parameters")
     private @Nullable Map<String,WebServiceParameterResponse> parameters;
 
+    /**
+     * @return If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
+     * 
+     */
     public Optional<Map<String,WebServiceParameterResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -91,21 +107,45 @@ public final class GraphNodeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new GraphNodeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetId The id of the asset represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetId(@Nullable String assetId) {
             $.assetId = assetId;
             return this;
         }
 
+        /**
+         * @param inputId The id of the input element represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputId(@Nullable String inputId) {
             $.inputId = inputId;
             return this;
         }
 
+        /**
+         * @param outputId The id of the output element represented by this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder outputId(@Nullable String outputId) {
             $.outputId = outputId;
             return this;
         }
 
+        /**
+         * @param parameters If applicable, parameters of the node. Global graph parameters map into these, with values set at runtime.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,WebServiceParameterResponse> parameters) {
             $.parameters = parameters;
             return this;

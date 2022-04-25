@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerNetworkInterfaceConfigurationResponse {
     /**
-     * A list of container network interfaces created from this container network interface configuration.
+     * @return A list of container network interfaces created from this container network interface configuration.
      * 
      */
     private final @Nullable List<SubResourceResponse> containerNetworkInterfaces;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * A list of ip configurations of the container network interface configuration.
+     * @return A list of ip configurations of the container network interface configuration.
      * 
      */
     private final @Nullable List<IPConfigurationProfileResponse> ipConfigurations;
     /**
-     * The name of the resource. This name can be used to access the resource.
+     * @return The name of the resource. This name can be used to access the resource.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the container network interface configuration resource.
+     * @return The provisioning state of the container network interface configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Sub Resource type.
+     * @return Sub Resource type.
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class ContainerNetworkInterfaceConfigurationResponse {
     }
 
     /**
-     * A list of container network interfaces created from this container network interface configuration.
+     * @return A list of container network interfaces created from this container network interface configuration.
      * 
-    */
+     */
     public List<SubResourceResponse> containerNetworkInterfaces() {
         return this.containerNetworkInterfaces == null ? List.of() : this.containerNetworkInterfaces;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * A list of ip configurations of the container network interface configuration.
+     * @return A list of ip configurations of the container network interface configuration.
      * 
-    */
+     */
     public List<IPConfigurationProfileResponse> ipConfigurations() {
         return this.ipConfigurations == null ? List.of() : this.ipConfigurations;
     }
     /**
-     * The name of the resource. This name can be used to access the resource.
+     * @return The name of the resource. This name can be used to access the resource.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the container network interface configuration resource.
+     * @return The provisioning state of the container network interface configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Sub Resource type.
+     * @return Sub Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

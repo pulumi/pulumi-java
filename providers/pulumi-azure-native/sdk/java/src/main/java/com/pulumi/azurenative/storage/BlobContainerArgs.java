@@ -25,6 +25,10 @@ public final class BlobContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -36,6 +40,10 @@ public final class BlobContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerName")
     private @Nullable Output<String> containerName;
 
+    /**
+     * @return The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+     * 
+     */
     public Optional<Output<String>> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -47,6 +55,10 @@ public final class BlobContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="defaultEncryptionScope")
     private @Nullable Output<String> defaultEncryptionScope;
 
+    /**
+     * @return Default the container to use specified encryption scope for all writes.
+     * 
+     */
     public Optional<Output<String>> defaultEncryptionScope() {
         return Optional.ofNullable(this.defaultEncryptionScope);
     }
@@ -58,6 +70,10 @@ public final class BlobContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="denyEncryptionScopeOverride")
     private @Nullable Output<Boolean> denyEncryptionScopeOverride;
 
+    /**
+     * @return Block override of encryption scope from the container default.
+     * 
+     */
     public Optional<Output<Boolean>> denyEncryptionScopeOverride() {
         return Optional.ofNullable(this.denyEncryptionScopeOverride);
     }
@@ -69,6 +85,10 @@ public final class BlobContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return A name-value pair to associate with the container as metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -80,6 +100,10 @@ public final class BlobContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="publicAccess")
     private @Nullable Output<PublicAccess> publicAccess;
 
+    /**
+     * @return Specifies whether data in the container may be accessed publicly and the level of access.
+     * 
+     */
     public Optional<Output<PublicAccess>> publicAccess() {
         return Optional.ofNullable(this.publicAccess);
     }
@@ -91,6 +115,10 @@ public final class BlobContainerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -125,65 +153,149 @@ public final class BlobContainerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BlobContainerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName The name of the storage account within the specified resource group. Storage account names must be between 3 and 24 characters in length and use numbers and lower-case letters only.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param containerName The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName The name of the blob container within the specified storage account. Blob container names must be between 3 and 63 characters in length and use numbers, lower-case letters and dash (-) only. Every dash (-) character must be immediately preceded and followed by a letter or number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param defaultEncryptionScope Default the container to use specified encryption scope for all writes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEncryptionScope(@Nullable Output<String> defaultEncryptionScope) {
             $.defaultEncryptionScope = defaultEncryptionScope;
             return this;
         }
 
+        /**
+         * @param defaultEncryptionScope Default the container to use specified encryption scope for all writes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultEncryptionScope(String defaultEncryptionScope) {
             return defaultEncryptionScope(Output.of(defaultEncryptionScope));
         }
 
+        /**
+         * @param denyEncryptionScopeOverride Block override of encryption scope from the container default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyEncryptionScopeOverride(@Nullable Output<Boolean> denyEncryptionScopeOverride) {
             $.denyEncryptionScopeOverride = denyEncryptionScopeOverride;
             return this;
         }
 
+        /**
+         * @param denyEncryptionScopeOverride Block override of encryption scope from the container default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder denyEncryptionScopeOverride(Boolean denyEncryptionScopeOverride) {
             return denyEncryptionScopeOverride(Output.of(denyEncryptionScopeOverride));
         }
 
+        /**
+         * @param metadata A name-value pair to associate with the container as metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata A name-value pair to associate with the container as metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param publicAccess Specifies whether data in the container may be accessed publicly and the level of access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccess(@Nullable Output<PublicAccess> publicAccess) {
             $.publicAccess = publicAccess;
             return this;
         }
 
+        /**
+         * @param publicAccess Specifies whether data in the container may be accessed publicly and the level of access.
+         * 
+         * @return builder
+         * 
+         */
         public Builder publicAccess(PublicAccess publicAccess) {
             return publicAccess(Output.of(publicAccess));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

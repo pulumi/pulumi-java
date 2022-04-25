@@ -14,27 +14,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class IpAddressResponse {
     /**
-     * The Dns name label for the IP.
+     * @return The Dns name label for the IP.
      * 
      */
     private final @Nullable String dnsNameLabel;
     /**
-     * The FQDN for the IP.
+     * @return The FQDN for the IP.
      * 
      */
     private final String fqdn;
     /**
-     * The IP exposed to the public internet.
+     * @return The IP exposed to the public internet.
      * 
      */
     private final @Nullable String ip;
     /**
-     * The list of ports exposed on the container group.
+     * @return The list of ports exposed on the container group.
      * 
      */
     private final List<PortResponse> ports;
     /**
-     * Specifies if the IP is exposed to the public internet or private VNET.
+     * @return Specifies if the IP is exposed to the public internet or private VNET.
      * 
      */
     private final String type;
@@ -54,37 +54,37 @@ public final class IpAddressResponse {
     }
 
     /**
-     * The Dns name label for the IP.
+     * @return The Dns name label for the IP.
      * 
-    */
+     */
     public Optional<String> dnsNameLabel() {
         return Optional.ofNullable(this.dnsNameLabel);
     }
     /**
-     * The FQDN for the IP.
+     * @return The FQDN for the IP.
      * 
-    */
+     */
     public String fqdn() {
         return this.fqdn;
     }
     /**
-     * The IP exposed to the public internet.
+     * @return The IP exposed to the public internet.
      * 
-    */
+     */
     public Optional<String> ip() {
         return Optional.ofNullable(this.ip);
     }
     /**
-     * The list of ports exposed on the container group.
+     * @return The list of ports exposed on the container group.
      * 
-    */
+     */
     public List<PortResponse> ports() {
         return this.ports;
     }
     /**
-     * Specifies if the IP is exposed to the public internet or private VNET.
+     * @return Specifies if the IP is exposed to the public internet or private VNET.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

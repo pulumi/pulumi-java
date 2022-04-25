@@ -26,6 +26,10 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
     @Import(name="subnetResourceId")
     private @Nullable Output<String> subnetResourceId;
 
+    /**
+     * @return The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+     * 
+     */
     public Optional<Output<String>> subnetResourceId() {
         return Optional.ofNullable(this.subnetResourceId);
     }
@@ -54,11 +58,23 @@ public final class VirtualNetworkConfigurationArgs extends com.pulumi.resources.
             $ = new VirtualNetworkConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param subnetResourceId The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetResourceId(@Nullable Output<String> subnetResourceId) {
             $.subnetResourceId = subnetResourceId;
             return this;
         }
 
+        /**
+         * @param subnetResourceId The full resource ID of a subnet in a virtual network to deploy the API Management service in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetResourceId(String subnetResourceId) {
             return subnetResourceId(Output.of(subnetResourceId));
         }

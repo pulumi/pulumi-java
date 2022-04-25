@@ -23,6 +23,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="isActiveCMK")
     private @Nullable Output<Boolean> isActiveCMK;
 
+    /**
+     * @return Used to activate the workspace after a customer managed key is provided.
+     * 
+     */
     public Optional<Output<Boolean>> isActiveCMK() {
         return Optional.ofNullable(this.isActiveCMK);
     }
@@ -34,6 +38,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyName")
     private @Nullable Output<String> keyName;
 
+    /**
+     * @return The name of the workspace key
+     * 
+     */
     public Optional<Output<String>> keyName() {
         return Optional.ofNullable(this.keyName);
     }
@@ -45,6 +53,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyVaultUrl")
     private @Nullable Output<String> keyVaultUrl;
 
+    /**
+     * @return The Key Vault Url of the workspace key.
+     * 
+     */
     public Optional<Output<String>> keyVaultUrl() {
         return Optional.ofNullable(this.keyVaultUrl);
     }
@@ -56,6 +68,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -99,47 +119,107 @@ public final class KeyArgs extends com.pulumi.resources.ResourceArgs {
             $ = new KeyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param isActiveCMK Used to activate the workspace after a customer managed key is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActiveCMK(@Nullable Output<Boolean> isActiveCMK) {
             $.isActiveCMK = isActiveCMK;
             return this;
         }
 
+        /**
+         * @param isActiveCMK Used to activate the workspace after a customer managed key is provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isActiveCMK(Boolean isActiveCMK) {
             return isActiveCMK(Output.of(isActiveCMK));
         }
 
+        /**
+         * @param keyName The name of the workspace key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(@Nullable Output<String> keyName) {
             $.keyName = keyName;
             return this;
         }
 
+        /**
+         * @param keyName The name of the workspace key
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyName(String keyName) {
             return keyName(Output.of(keyName));
         }
 
+        /**
+         * @param keyVaultUrl The Key Vault Url of the workspace key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUrl(@Nullable Output<String> keyVaultUrl) {
             $.keyVaultUrl = keyVaultUrl;
             return this;
         }
 
+        /**
+         * @param keyVaultUrl The Key Vault Url of the workspace key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyVaultUrl(String keyVaultUrl) {
             return keyVaultUrl(Output.of(keyVaultUrl));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

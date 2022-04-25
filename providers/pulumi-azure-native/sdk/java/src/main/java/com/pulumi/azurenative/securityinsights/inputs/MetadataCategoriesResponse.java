@@ -26,6 +26,10 @@ public final class MetadataCategoriesResponse extends com.pulumi.resources.Invok
     @Import(name="domains")
     private @Nullable List<String> domains;
 
+    /**
+     * @return domain for the solution content item
+     * 
+     */
     public Optional<List<String>> domains() {
         return Optional.ofNullable(this.domains);
     }
@@ -37,6 +41,10 @@ public final class MetadataCategoriesResponse extends com.pulumi.resources.Invok
     @Import(name="verticals")
     private @Nullable List<String> verticals;
 
+    /**
+     * @return Industry verticals for the solution content item
+     * 
+     */
     public Optional<List<String>> verticals() {
         return Optional.ofNullable(this.verticals);
     }
@@ -66,20 +74,44 @@ public final class MetadataCategoriesResponse extends com.pulumi.resources.Invok
             $ = new MetadataCategoriesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domains domain for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(@Nullable List<String> domains) {
             $.domains = domains;
             return this;
         }
 
+        /**
+         * @param domains domain for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder domains(String... domains) {
             return domains(List.of(domains));
         }
 
+        /**
+         * @param verticals Industry verticals for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticals(@Nullable List<String> verticals) {
             $.verticals = verticals;
             return this;
         }
 
+        /**
+         * @param verticals Industry verticals for the solution content item
+         * 
+         * @return builder
+         * 
+         */
         public Builder verticals(String... verticals) {
             return verticals(List.of(verticals));
         }

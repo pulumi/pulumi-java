@@ -19,6 +19,10 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
     @Import(name="expressRouteGatewayName", required=true)
     private String expressRouteGatewayName;
 
+    /**
+     * @return The name of the ExpressRoute gateway.
+     * 
+     */
     public String expressRouteGatewayName() {
         return this.expressRouteGatewayName;
     }
@@ -30,6 +34,10 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetExpressRouteGatewayArgs extends com.pulumi.resources.Invok
             $ = new GetExpressRouteGatewayArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expressRouteGatewayName The name of the ExpressRoute gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expressRouteGatewayName(String expressRouteGatewayName) {
             $.expressRouteGatewayName = expressRouteGatewayName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

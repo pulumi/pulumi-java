@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse {
     /**
-     * The non-repudiation is required or not.
+     * @return The non-repudiation is required or not.
      * 
      */
     private final Boolean isNonRepudiationRequired;
     /**
-     * The time to acknowledge in seconds.
+     * @return The time to acknowledge in seconds.
      * 
      */
     private final Integer timeToAcknowledgeInSeconds;
@@ -30,16 +30,16 @@ public final class RosettaNetPipAcknowledgmentOfReceiptSettingsResponse {
     }
 
     /**
-     * The non-repudiation is required or not.
+     * @return The non-repudiation is required or not.
      * 
-    */
+     */
     public Boolean isNonRepudiationRequired() {
         return this.isNonRepudiationRequired;
     }
     /**
-     * The time to acknowledge in seconds.
+     * @return The time to acknowledge in seconds.
      * 
-    */
+     */
     public Integer timeToAcknowledgeInSeconds() {
         return this.timeToAcknowledgeInSeconds;
     }

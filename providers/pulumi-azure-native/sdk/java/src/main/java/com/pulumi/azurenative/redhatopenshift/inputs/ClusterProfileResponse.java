@@ -25,6 +25,10 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="domain")
     private @Nullable String domain;
 
+    /**
+     * @return The domain for the cluster (immutable).
+     * 
+     */
     public Optional<String> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -36,6 +40,10 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="pullSecret")
     private @Nullable String pullSecret;
 
+    /**
+     * @return The pull secret for the cluster (immutable).
+     * 
+     */
     public Optional<String> pullSecret() {
         return Optional.ofNullable(this.pullSecret);
     }
@@ -47,6 +55,10 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupId")
     private @Nullable String resourceGroupId;
 
+    /**
+     * @return The ID of the cluster resource group (immutable).
+     * 
+     */
     public Optional<String> resourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }
@@ -58,6 +70,10 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version of the cluster (immutable).
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -89,21 +105,45 @@ public final class ClusterProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new ClusterProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain The domain for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable String domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param pullSecret The pull secret for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullSecret(@Nullable String pullSecret) {
             $.pullSecret = pullSecret;
             return this;
         }
 
+        /**
+         * @param resourceGroupId The ID of the cluster resource group (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(@Nullable String resourceGroupId) {
             $.resourceGroupId = resourceGroupId;
             return this;
         }
 
+        /**
+         * @param version The version of the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

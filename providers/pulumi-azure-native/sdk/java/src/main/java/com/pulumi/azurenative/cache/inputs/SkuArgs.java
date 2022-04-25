@@ -28,6 +28,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity", required=true)
     private Output<Integer> capacity;
 
+    /**
+     * @return The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+     * 
+     */
     public Output<Integer> capacity() {
         return this.capacity;
     }
@@ -39,6 +43,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="family", required=true)
     private Output<Either<String,SkuFamily>> family;
 
+    /**
+     * @return The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+     * 
+     */
     public Output<Either<String,SkuFamily>> family() {
         return this.family;
     }
@@ -50,6 +58,10 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,SkuName>> name;
 
+    /**
+     * @return The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+     * 
+     */
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
@@ -80,45 +92,105 @@ public final class SkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The size of the Redis cache to deploy. Valid values: for C (Basic/Standard) family (0, 1, 2, 3, 4, 5, 6), for P (Premium) family (1, 2, 3, 4).
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param family The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Output<Either<String,SkuFamily>> family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param family The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(Either<String,SkuFamily> family) {
             return family(Output.of(family));
         }
 
+        /**
+         * @param family The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(String family) {
             return family(Either.ofLeft(family));
         }
 
+        /**
+         * @param family The SKU family to use. Valid values: (C, P). (C = Basic/Standard, P = Premium).
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(SkuFamily family) {
             return family(Either.ofRight(family));
         }
 
+        /**
+         * @param name The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The type of Redis cache to deploy. Valid values: (Basic, Standard, Premium)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Either.ofRight(name));
         }

@@ -24,6 +24,10 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="deploymentTypes")
     private @Nullable List<Either<String,ConfigurationType>> deploymentTypes;
 
+    /**
+     * @return List of deployment types.
+     * 
+     */
     public Optional<List<Either<String,ConfigurationType>>> deploymentTypes() {
         return Optional.ofNullable(this.deploymentTypes);
     }
@@ -35,6 +39,10 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="networkManagerName", required=true)
     private String networkManagerName;
 
+    /**
+     * @return The name of the network manager.
+     * 
+     */
     public String networkManagerName() {
         return this.networkManagerName;
     }
@@ -46,6 +54,10 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="regions")
     private @Nullable List<String> regions;
 
+    /**
+     * @return List of locations.
+     * 
+     */
     public Optional<List<String>> regions() {
         return Optional.ofNullable(this.regions);
     }
@@ -57,6 +69,10 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
     @Import(name="skipToken")
     private @Nullable String skipToken;
 
+    /**
+     * @return Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
+     * 
+     */
     public Optional<String> skipToken() {
         return Optional.ofNullable(this.skipToken);
     }
@@ -100,34 +120,76 @@ public final class ListNetworkManagerDeploymentStatusArgs extends com.pulumi.res
             $ = new ListNetworkManagerDeploymentStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentTypes List of deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentTypes(@Nullable List<Either<String,ConfigurationType>> deploymentTypes) {
             $.deploymentTypes = deploymentTypes;
             return this;
         }
 
+        /**
+         * @param deploymentTypes List of deployment types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentTypes(Either<String,ConfigurationType>... deploymentTypes) {
             return deploymentTypes(List.of(deploymentTypes));
         }
 
+        /**
+         * @param networkManagerName The name of the network manager.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkManagerName(String networkManagerName) {
             $.networkManagerName = networkManagerName;
             return this;
         }
 
+        /**
+         * @param regions List of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(@Nullable List<String> regions) {
             $.regions = regions;
             return this;
         }
 
+        /**
+         * @param regions List of locations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regions(String... regions) {
             return regions(List.of(regions));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param skipToken Continuation token for pagination, capturing the next page size and offset, as well as the context of the query.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipToken(@Nullable String skipToken) {
             $.skipToken = skipToken;
             return this;

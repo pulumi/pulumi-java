@@ -26,6 +26,10 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="domain")
     private @Nullable Output<String> domain;
 
+    /**
+     * @return The domain for the cluster (immutable).
+     * 
+     */
     public Optional<Output<String>> domain() {
         return Optional.ofNullable(this.domain);
     }
@@ -37,6 +41,10 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="pullSecret")
     private @Nullable Output<String> pullSecret;
 
+    /**
+     * @return The pull secret for the cluster (immutable).
+     * 
+     */
     public Optional<Output<String>> pullSecret() {
         return Optional.ofNullable(this.pullSecret);
     }
@@ -48,6 +56,10 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupId")
     private @Nullable Output<String> resourceGroupId;
 
+    /**
+     * @return The ID of the cluster resource group (immutable).
+     * 
+     */
     public Optional<Output<String>> resourceGroupId() {
         return Optional.ofNullable(this.resourceGroupId);
     }
@@ -59,6 +71,10 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return The version of the cluster (immutable).
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -90,38 +106,86 @@ public final class ClusterProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ClusterProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param domain The domain for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(@Nullable Output<String> domain) {
             $.domain = domain;
             return this;
         }
 
+        /**
+         * @param domain The domain for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder domain(String domain) {
             return domain(Output.of(domain));
         }
 
+        /**
+         * @param pullSecret The pull secret for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullSecret(@Nullable Output<String> pullSecret) {
             $.pullSecret = pullSecret;
             return this;
         }
 
+        /**
+         * @param pullSecret The pull secret for the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder pullSecret(String pullSecret) {
             return pullSecret(Output.of(pullSecret));
         }
 
+        /**
+         * @param resourceGroupId The ID of the cluster resource group (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(@Nullable Output<String> resourceGroupId) {
             $.resourceGroupId = resourceGroupId;
             return this;
         }
 
+        /**
+         * @param resourceGroupId The ID of the cluster resource group (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupId(String resourceGroupId) {
             return resourceGroupId(Output.of(resourceGroupId));
         }
 
+        /**
+         * @param version The version of the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version The version of the cluster (immutable).
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

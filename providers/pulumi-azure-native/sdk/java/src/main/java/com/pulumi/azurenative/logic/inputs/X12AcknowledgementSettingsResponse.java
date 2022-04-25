@@ -27,6 +27,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="acknowledgementControlNumberLowerBound", required=true)
     private Integer acknowledgementControlNumberLowerBound;
 
+    /**
+     * @return The acknowledgement control number lower bound.
+     * 
+     */
     public Integer acknowledgementControlNumberLowerBound() {
         return this.acknowledgementControlNumberLowerBound;
     }
@@ -38,6 +42,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="acknowledgementControlNumberPrefix")
     private @Nullable String acknowledgementControlNumberPrefix;
 
+    /**
+     * @return The acknowledgement control number prefix.
+     * 
+     */
     public Optional<String> acknowledgementControlNumberPrefix() {
         return Optional.ofNullable(this.acknowledgementControlNumberPrefix);
     }
@@ -49,6 +57,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="acknowledgementControlNumberSuffix")
     private @Nullable String acknowledgementControlNumberSuffix;
 
+    /**
+     * @return The acknowledgement control number suffix.
+     * 
+     */
     public Optional<String> acknowledgementControlNumberSuffix() {
         return Optional.ofNullable(this.acknowledgementControlNumberSuffix);
     }
@@ -60,6 +72,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="acknowledgementControlNumberUpperBound", required=true)
     private Integer acknowledgementControlNumberUpperBound;
 
+    /**
+     * @return The acknowledgement control number upper bound.
+     * 
+     */
     public Integer acknowledgementControlNumberUpperBound() {
         return this.acknowledgementControlNumberUpperBound;
     }
@@ -71,6 +87,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="batchFunctionalAcknowledgements", required=true)
     private Boolean batchFunctionalAcknowledgements;
 
+    /**
+     * @return The value indicating whether to batch functional acknowledgements.
+     * 
+     */
     public Boolean batchFunctionalAcknowledgements() {
         return this.batchFunctionalAcknowledgements;
     }
@@ -82,6 +102,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="batchImplementationAcknowledgements", required=true)
     private Boolean batchImplementationAcknowledgements;
 
+    /**
+     * @return The value indicating whether to batch implementation acknowledgements.
+     * 
+     */
     public Boolean batchImplementationAcknowledgements() {
         return this.batchImplementationAcknowledgements;
     }
@@ -93,6 +117,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="batchTechnicalAcknowledgements", required=true)
     private Boolean batchTechnicalAcknowledgements;
 
+    /**
+     * @return The value indicating whether to batch the technical acknowledgements.
+     * 
+     */
     public Boolean batchTechnicalAcknowledgements() {
         return this.batchTechnicalAcknowledgements;
     }
@@ -104,6 +132,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="functionalAcknowledgementVersion")
     private @Nullable String functionalAcknowledgementVersion;
 
+    /**
+     * @return The functional acknowledgement version.
+     * 
+     */
     public Optional<String> functionalAcknowledgementVersion() {
         return Optional.ofNullable(this.functionalAcknowledgementVersion);
     }
@@ -115,6 +147,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="implementationAcknowledgementVersion")
     private @Nullable String implementationAcknowledgementVersion;
 
+    /**
+     * @return The implementation acknowledgement version.
+     * 
+     */
     public Optional<String> implementationAcknowledgementVersion() {
         return Optional.ofNullable(this.implementationAcknowledgementVersion);
     }
@@ -126,6 +162,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="needFunctionalAcknowledgement", required=true)
     private Boolean needFunctionalAcknowledgement;
 
+    /**
+     * @return The value indicating whether functional acknowledgement is needed.
+     * 
+     */
     public Boolean needFunctionalAcknowledgement() {
         return this.needFunctionalAcknowledgement;
     }
@@ -137,6 +177,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="needImplementationAcknowledgement", required=true)
     private Boolean needImplementationAcknowledgement;
 
+    /**
+     * @return The value indicating whether implementation acknowledgement is needed.
+     * 
+     */
     public Boolean needImplementationAcknowledgement() {
         return this.needImplementationAcknowledgement;
     }
@@ -148,6 +192,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="needLoopForValidMessages", required=true)
     private Boolean needLoopForValidMessages;
 
+    /**
+     * @return The value indicating whether a loop is needed for valid messages.
+     * 
+     */
     public Boolean needLoopForValidMessages() {
         return this.needLoopForValidMessages;
     }
@@ -159,6 +207,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="needTechnicalAcknowledgement", required=true)
     private Boolean needTechnicalAcknowledgement;
 
+    /**
+     * @return The value indicating whether technical acknowledgement is needed.
+     * 
+     */
     public Boolean needTechnicalAcknowledgement() {
         return this.needTechnicalAcknowledgement;
     }
@@ -170,6 +222,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="rolloverAcknowledgementControlNumber", required=true)
     private Boolean rolloverAcknowledgementControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover acknowledgement control number.
+     * 
+     */
     public Boolean rolloverAcknowledgementControlNumber() {
         return this.rolloverAcknowledgementControlNumber;
     }
@@ -181,6 +237,10 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
     @Import(name="sendSynchronousAcknowledgement", required=true)
     private Boolean sendSynchronousAcknowledgement;
 
+    /**
+     * @return The value indicating whether to send synchronous acknowledgement.
+     * 
+     */
     public Boolean sendSynchronousAcknowledgement() {
         return this.sendSynchronousAcknowledgement;
     }
@@ -223,76 +283,166 @@ public final class X12AcknowledgementSettingsResponse extends com.pulumi.resourc
             $ = new X12AcknowledgementSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acknowledgementControlNumberLowerBound The acknowledgement control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementControlNumberLowerBound(Integer acknowledgementControlNumberLowerBound) {
             $.acknowledgementControlNumberLowerBound = acknowledgementControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param acknowledgementControlNumberPrefix The acknowledgement control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementControlNumberPrefix(@Nullable String acknowledgementControlNumberPrefix) {
             $.acknowledgementControlNumberPrefix = acknowledgementControlNumberPrefix;
             return this;
         }
 
+        /**
+         * @param acknowledgementControlNumberSuffix The acknowledgement control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementControlNumberSuffix(@Nullable String acknowledgementControlNumberSuffix) {
             $.acknowledgementControlNumberSuffix = acknowledgementControlNumberSuffix;
             return this;
         }
 
+        /**
+         * @param acknowledgementControlNumberUpperBound The acknowledgement control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acknowledgementControlNumberUpperBound(Integer acknowledgementControlNumberUpperBound) {
             $.acknowledgementControlNumberUpperBound = acknowledgementControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param batchFunctionalAcknowledgements The value indicating whether to batch functional acknowledgements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchFunctionalAcknowledgements(Boolean batchFunctionalAcknowledgements) {
             $.batchFunctionalAcknowledgements = batchFunctionalAcknowledgements;
             return this;
         }
 
+        /**
+         * @param batchImplementationAcknowledgements The value indicating whether to batch implementation acknowledgements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchImplementationAcknowledgements(Boolean batchImplementationAcknowledgements) {
             $.batchImplementationAcknowledgements = batchImplementationAcknowledgements;
             return this;
         }
 
+        /**
+         * @param batchTechnicalAcknowledgements The value indicating whether to batch the technical acknowledgements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder batchTechnicalAcknowledgements(Boolean batchTechnicalAcknowledgements) {
             $.batchTechnicalAcknowledgements = batchTechnicalAcknowledgements;
             return this;
         }
 
+        /**
+         * @param functionalAcknowledgementVersion The functional acknowledgement version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalAcknowledgementVersion(@Nullable String functionalAcknowledgementVersion) {
             $.functionalAcknowledgementVersion = functionalAcknowledgementVersion;
             return this;
         }
 
+        /**
+         * @param implementationAcknowledgementVersion The implementation acknowledgement version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder implementationAcknowledgementVersion(@Nullable String implementationAcknowledgementVersion) {
             $.implementationAcknowledgementVersion = implementationAcknowledgementVersion;
             return this;
         }
 
+        /**
+         * @param needFunctionalAcknowledgement The value indicating whether functional acknowledgement is needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder needFunctionalAcknowledgement(Boolean needFunctionalAcknowledgement) {
             $.needFunctionalAcknowledgement = needFunctionalAcknowledgement;
             return this;
         }
 
+        /**
+         * @param needImplementationAcknowledgement The value indicating whether implementation acknowledgement is needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder needImplementationAcknowledgement(Boolean needImplementationAcknowledgement) {
             $.needImplementationAcknowledgement = needImplementationAcknowledgement;
             return this;
         }
 
+        /**
+         * @param needLoopForValidMessages The value indicating whether a loop is needed for valid messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder needLoopForValidMessages(Boolean needLoopForValidMessages) {
             $.needLoopForValidMessages = needLoopForValidMessages;
             return this;
         }
 
+        /**
+         * @param needTechnicalAcknowledgement The value indicating whether technical acknowledgement is needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder needTechnicalAcknowledgement(Boolean needTechnicalAcknowledgement) {
             $.needTechnicalAcknowledgement = needTechnicalAcknowledgement;
             return this;
         }
 
+        /**
+         * @param rolloverAcknowledgementControlNumber The value indicating whether to rollover acknowledgement control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverAcknowledgementControlNumber(Boolean rolloverAcknowledgementControlNumber) {
             $.rolloverAcknowledgementControlNumber = rolloverAcknowledgementControlNumber;
             return this;
         }
 
+        /**
+         * @param sendSynchronousAcknowledgement The value indicating whether to send synchronous acknowledgement.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sendSynchronousAcknowledgement(Boolean sendSynchronousAcknowledgement) {
             $.sendSynchronousAcknowledgement = sendSynchronousAcknowledgement;
             return this;

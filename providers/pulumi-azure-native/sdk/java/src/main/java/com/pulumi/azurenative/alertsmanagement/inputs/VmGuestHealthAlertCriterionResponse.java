@@ -28,6 +28,10 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
     @Import(name="healthStates", required=true)
     private List<HealthStateResponse> healthStates;
 
+    /**
+     * @return Health states to alert on
+     * 
+     */
     public List<HealthStateResponse> healthStates() {
         return this.healthStates;
     }
@@ -39,6 +43,10 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
     @Import(name="monitorNames")
     private @Nullable List<String> monitorNames;
 
+    /**
+     * @return Names of health monitor on which to define alert
+     * 
+     */
     public Optional<List<String>> monitorNames() {
         return Optional.ofNullable(this.monitorNames);
     }
@@ -50,6 +58,10 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
     @Import(name="monitorTypes")
     private @Nullable List<String> monitorTypes;
 
+    /**
+     * @return Names of health monitor type on which to define alert
+     * 
+     */
     public Optional<List<String>> monitorTypes() {
         return Optional.ofNullable(this.monitorTypes);
     }
@@ -62,6 +74,11 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
     @Import(name="namespace", required=true)
     private String namespace;
 
+    /**
+     * @return specifies the type of the alert criterion.
+     * Expected value is &#39;GuestVmHealth&#39;.
+     * 
+     */
     public String namespace() {
         return this.namespace;
     }
@@ -93,33 +110,76 @@ public final class VmGuestHealthAlertCriterionResponse extends com.pulumi.resour
             $ = new VmGuestHealthAlertCriterionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthStates Health states to alert on
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStates(List<HealthStateResponse> healthStates) {
             $.healthStates = healthStates;
             return this;
         }
 
+        /**
+         * @param healthStates Health states to alert on
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthStates(HealthStateResponse... healthStates) {
             return healthStates(List.of(healthStates));
         }
 
+        /**
+         * @param monitorNames Names of health monitor on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorNames(@Nullable List<String> monitorNames) {
             $.monitorNames = monitorNames;
             return this;
         }
 
+        /**
+         * @param monitorNames Names of health monitor on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorNames(String... monitorNames) {
             return monitorNames(List.of(monitorNames));
         }
 
+        /**
+         * @param monitorTypes Names of health monitor type on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorTypes(@Nullable List<String> monitorTypes) {
             $.monitorTypes = monitorTypes;
             return this;
         }
 
+        /**
+         * @param monitorTypes Names of health monitor type on which to define alert
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitorTypes(String... monitorTypes) {
             return monitorTypes(List.of(monitorTypes));
         }
 
+        /**
+         * @param namespace specifies the type of the alert criterion.
+         * Expected value is &#39;GuestVmHealth&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             $.namespace = namespace;
             return this;

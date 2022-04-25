@@ -19,6 +19,10 @@ public final class GetWorkspaceCollectionArgs extends com.pulumi.resources.Invok
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Azure resource group
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetWorkspaceCollectionArgs extends com.pulumi.resources.Invok
     @Import(name="workspaceCollectionName", required=true)
     private String workspaceCollectionName;
 
+    /**
+     * @return Power BI Embedded Workspace Collection name
+     * 
+     */
     public String workspaceCollectionName() {
         return this.workspaceCollectionName;
     }
@@ -59,11 +67,23 @@ public final class GetWorkspaceCollectionArgs extends com.pulumi.resources.Invok
             $ = new GetWorkspaceCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName Azure resource group
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param workspaceCollectionName Power BI Embedded Workspace Collection name
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceCollectionName(String workspaceCollectionName) {
             $.workspaceCollectionName = workspaceCollectionName;
             return this;

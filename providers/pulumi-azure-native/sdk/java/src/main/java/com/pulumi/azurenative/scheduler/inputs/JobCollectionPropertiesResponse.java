@@ -23,6 +23,10 @@ public final class JobCollectionPropertiesResponse extends com.pulumi.resources.
     @Import(name="quota")
     private @Nullable JobCollectionQuotaResponse quota;
 
+    /**
+     * @return Gets or sets the job collection quota.
+     * 
+     */
     public Optional<JobCollectionQuotaResponse> quota() {
         return Optional.ofNullable(this.quota);
     }
@@ -34,6 +38,10 @@ public final class JobCollectionPropertiesResponse extends com.pulumi.resources.
     @Import(name="sku")
     private @Nullable SkuResponse sku;
 
+    /**
+     * @return Gets or sets the SKU.
+     * 
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -45,6 +53,10 @@ public final class JobCollectionPropertiesResponse extends com.pulumi.resources.
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Gets or sets the state.
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -75,16 +87,34 @@ public final class JobCollectionPropertiesResponse extends com.pulumi.resources.
             $ = new JobCollectionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param quota Gets or sets the job collection quota.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quota(@Nullable JobCollectionQuotaResponse quota) {
             $.quota = quota;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable SkuResponse sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param state Gets or sets the state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;

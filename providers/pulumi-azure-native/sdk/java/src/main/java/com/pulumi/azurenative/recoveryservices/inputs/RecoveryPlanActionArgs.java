@@ -28,6 +28,10 @@ public final class RecoveryPlanActionArgs extends com.pulumi.resources.ResourceA
     @Import(name="actionName", required=true)
     private Output<String> actionName;
 
+    /**
+     * @return The action name.
+     * 
+     */
     public Output<String> actionName() {
         return this.actionName;
     }
@@ -39,6 +43,10 @@ public final class RecoveryPlanActionArgs extends com.pulumi.resources.ResourceA
     @Import(name="failoverDirections", required=true)
     private Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections;
 
+    /**
+     * @return The list of failover directions.
+     * 
+     */
     public Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections() {
         return this.failoverDirections;
     }
@@ -50,6 +58,10 @@ public final class RecoveryPlanActionArgs extends com.pulumi.resources.ResourceA
     @Import(name="failoverTypes", required=true)
     private Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes;
 
+    /**
+     * @return The list of failover types.
+     * 
+     */
     public Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes() {
         return this.failoverTypes;
     }
@@ -80,37 +92,85 @@ public final class RecoveryPlanActionArgs extends com.pulumi.resources.ResourceA
             $ = new RecoveryPlanActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionName The action name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionName(Output<String> actionName) {
             $.actionName = actionName;
             return this;
         }
 
+        /**
+         * @param actionName The action name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionName(String actionName) {
             return actionName(Output.of(actionName));
         }
 
+        /**
+         * @param failoverDirections The list of failover directions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverDirections(Output<List<Either<String,PossibleOperationsDirections>>> failoverDirections) {
             $.failoverDirections = failoverDirections;
             return this;
         }
 
+        /**
+         * @param failoverDirections The list of failover directions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverDirections(List<Either<String,PossibleOperationsDirections>> failoverDirections) {
             return failoverDirections(Output.of(failoverDirections));
         }
 
+        /**
+         * @param failoverDirections The list of failover directions.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverDirections(Either<String,PossibleOperationsDirections>... failoverDirections) {
             return failoverDirections(List.of(failoverDirections));
         }
 
+        /**
+         * @param failoverTypes The list of failover types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTypes(Output<List<Either<String,ReplicationProtectedItemOperation>>> failoverTypes) {
             $.failoverTypes = failoverTypes;
             return this;
         }
 
+        /**
+         * @param failoverTypes The list of failover types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTypes(List<Either<String,ReplicationProtectedItemOperation>> failoverTypes) {
             return failoverTypes(Output.of(failoverTypes));
         }
 
+        /**
+         * @param failoverTypes The list of failover types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder failoverTypes(Either<String,ReplicationProtectedItemOperation>... failoverTypes) {
             return failoverTypes(List.of(failoverTypes));
         }

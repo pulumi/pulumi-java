@@ -19,6 +19,10 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the Resource Group to which the vault belongs.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="secretName", required=true)
     private String secretName;
 
+    /**
+     * @return The name of the secret.
+     * 
+     */
     public String secretName() {
         return this.secretName;
     }
@@ -41,6 +49,10 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="vaultName", required=true)
     private String vaultName;
 
+    /**
+     * @return The name of the vault.
+     * 
+     */
     public String vaultName() {
         return this.vaultName;
     }
@@ -71,16 +83,34 @@ public final class GetSecretArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The name of the Resource Group to which the vault belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param secretName The name of the secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param vaultName The name of the vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vaultName(String vaultName) {
             $.vaultName = vaultName;
             return this;

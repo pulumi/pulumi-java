@@ -24,6 +24,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<Either<String,AlertRuleKind>> kind;
 
+    /**
+     * @return The alert rule kind
+     * 
+     */
     public Output<Either<String,AlertRuleKind>> kind() {
         return this.kind;
     }
@@ -35,6 +39,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -46,6 +54,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="ruleId")
     private @Nullable Output<String> ruleId;
 
+    /**
+     * @return Alert rule ID
+     * 
+     */
     public Optional<Output<String>> ruleId() {
         return Optional.ofNullable(this.ruleId);
     }
@@ -57,6 +69,10 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return The name of the workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -88,46 +104,106 @@ public final class AlertRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AlertRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kind The alert rule kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<Either<String,AlertRuleKind>> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The alert rule kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Either<String,AlertRuleKind> kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param kind The alert rule kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Either.ofLeft(kind));
         }
 
+        /**
+         * @param kind The alert rule kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(AlertRuleKind kind) {
             return kind(Either.ofRight(kind));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(@Nullable Output<String> ruleId) {
             $.ruleId = ruleId;
             return this;
         }
 
+        /**
+         * @param ruleId Alert rule ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleId(String ruleId) {
             return ruleId(Output.of(ruleId));
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName The name of the workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

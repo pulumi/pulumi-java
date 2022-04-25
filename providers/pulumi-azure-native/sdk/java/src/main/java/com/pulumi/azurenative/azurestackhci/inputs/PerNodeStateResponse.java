@@ -23,6 +23,10 @@ public final class PerNodeStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="arcInstance", required=true)
     private String arcInstance;
 
+    /**
+     * @return Fully qualified resource ID for the Arc agent of this node.
+     * 
+     */
     public String arcInstance() {
         return this.arcInstance;
     }
@@ -34,6 +38,10 @@ public final class PerNodeStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the Node in HCI Cluster
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -45,6 +53,10 @@ public final class PerNodeStateResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="state", required=true)
     private String state;
 
+    /**
+     * @return State of Arc agent in this node.
+     * 
+     */
     public String state() {
         return this.state;
     }
@@ -75,16 +87,34 @@ public final class PerNodeStateResponse extends com.pulumi.resources.InvokeArgs 
             $ = new PerNodeStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arcInstance Fully qualified resource ID for the Arc agent of this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arcInstance(String arcInstance) {
             $.arcInstance = arcInstance;
             return this;
         }
 
+        /**
+         * @param name Name of the Node in HCI Cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param state State of Arc agent in this node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(String state) {
             $.state = state;
             return this;

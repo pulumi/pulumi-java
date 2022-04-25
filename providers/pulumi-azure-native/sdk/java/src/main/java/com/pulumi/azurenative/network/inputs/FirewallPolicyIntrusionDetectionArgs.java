@@ -29,6 +29,10 @@ public final class FirewallPolicyIntrusionDetectionArgs extends com.pulumi.resou
     @Import(name="configuration")
     private @Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration;
 
+    /**
+     * @return Intrusion detection configuration properties.
+     * 
+     */
     public Optional<Output<FirewallPolicyIntrusionDetectionConfigurationArgs>> configuration() {
         return Optional.ofNullable(this.configuration);
     }
@@ -40,6 +44,10 @@ public final class FirewallPolicyIntrusionDetectionArgs extends com.pulumi.resou
     @Import(name="mode")
     private @Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode;
 
+    /**
+     * @return Intrusion detection general state.
+     * 
+     */
     public Optional<Output<Either<String,FirewallPolicyIntrusionDetectionStateType>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -69,28 +77,64 @@ public final class FirewallPolicyIntrusionDetectionArgs extends com.pulumi.resou
             $ = new FirewallPolicyIntrusionDetectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration Intrusion detection configuration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(@Nullable Output<FirewallPolicyIntrusionDetectionConfigurationArgs> configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param configuration Intrusion detection configuration properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(FirewallPolicyIntrusionDetectionConfigurationArgs configuration) {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param mode Intrusion detection general state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,FirewallPolicyIntrusionDetectionStateType>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Intrusion detection general state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,FirewallPolicyIntrusionDetectionStateType> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode Intrusion detection general state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode Intrusion detection general state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(FirewallPolicyIntrusionDetectionStateType mode) {
             return mode(Either.ofRight(mode));
         }

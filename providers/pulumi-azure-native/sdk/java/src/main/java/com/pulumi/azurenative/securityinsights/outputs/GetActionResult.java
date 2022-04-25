@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetActionResult {
     /**
-     * Etag of the action.
+     * @return Etag of the action.
      * 
      */
     private final @Nullable String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
+     * @return Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
      * 
      */
     private final String logicAppResourceId;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
     /**
-     * The name of the logic app&#39;s workflow.
+     * @return The name of the logic app&#39;s workflow.
      * 
      */
     private final @Nullable String workflowId;
@@ -59,44 +59,44 @@ public final class GetActionResult {
     }
 
     /**
-     * Etag of the action.
+     * @return Etag of the action.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
+     * @return Logic App Resource Id, /subscriptions/{my-subscription}/resourceGroups/{my-resource-group}/providers/Microsoft.Logic/workflows/{my-workflow-id}.
      * 
-    */
+     */
     public String logicAppResourceId() {
         return this.logicAppResourceId;
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The name of the logic app&#39;s workflow.
+     * @return The name of the logic app&#39;s workflow.
      * 
-    */
+     */
     public Optional<String> workflowId() {
         return Optional.ofNullable(this.workflowId);
     }

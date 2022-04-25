@@ -25,6 +25,10 @@ public final class LanguageExtensionResponse extends com.pulumi.resources.Invoke
     @Import(name="languageExtensionName")
     private @Nullable String languageExtensionName;
 
+    /**
+     * @return The language extension name.
+     * 
+     */
     public Optional<String> languageExtensionName() {
         return Optional.ofNullable(this.languageExtensionName);
     }
@@ -53,6 +57,12 @@ public final class LanguageExtensionResponse extends com.pulumi.resources.Invoke
             $ = new LanguageExtensionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param languageExtensionName The language extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder languageExtensionName(@Nullable String languageExtensionName) {
             $.languageExtensionName = languageExtensionName;
             return this;

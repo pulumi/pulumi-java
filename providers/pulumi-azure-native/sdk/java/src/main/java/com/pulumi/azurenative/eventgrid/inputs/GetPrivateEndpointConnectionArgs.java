@@ -19,6 +19,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="parentName", required=true)
     private String parentName;
 
+    /**
+     * @return The name of the parent resource (namely, either, the topic name or domain name).
+     * 
+     */
     public String parentName() {
         return this.parentName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="parentType", required=true)
     private String parentType;
 
+    /**
+     * @return The type of the parent resource. This can be either \&#39;topics\&#39; or \&#39;domains\&#39;.
+     * 
+     */
     public String parentType() {
         return this.parentType;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="privateEndpointConnectionName", required=true)
     private String privateEndpointConnectionName;
 
+    /**
+     * @return The name of the private endpoint connection connection.
+     * 
+     */
     public String privateEndpointConnectionName() {
         return this.privateEndpointConnectionName;
     }
@@ -52,6 +64,10 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetPrivateEndpointConnectionArgs extends com.pulumi.resources
             $ = new GetPrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param parentName The name of the parent resource (namely, either, the topic name or domain name).
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentName(String parentName) {
             $.parentName = parentName;
             return this;
         }
 
+        /**
+         * @param parentType The type of the parent resource. This can be either \&#39;topics\&#39; or \&#39;domains\&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentType(String parentType) {
             $.parentType = parentType;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

@@ -13,16 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MedianStoppingPolicyResponse {
     /**
-     * Number of intervals by which to delay the first evaluation.
+     * @return Number of intervals by which to delay the first evaluation.
      * 
      */
     private final @Nullable Integer delayEvaluation;
     /**
-     * Interval (number of runs) between policy evaluations.
+     * @return Interval (number of runs) between policy evaluations.
      * 
      */
     private final @Nullable Integer evaluationInterval;
     /**
+     * @return
      * Expected value is &#39;MedianStopping&#39;.
      * 
      */
@@ -39,23 +40,24 @@ public final class MedianStoppingPolicyResponse {
     }
 
     /**
-     * Number of intervals by which to delay the first evaluation.
+     * @return Number of intervals by which to delay the first evaluation.
      * 
-    */
+     */
     public Optional<Integer> delayEvaluation() {
         return Optional.ofNullable(this.delayEvaluation);
     }
     /**
-     * Interval (number of runs) between policy evaluations.
+     * @return Interval (number of runs) between policy evaluations.
      * 
-    */
+     */
     public Optional<Integer> evaluationInterval() {
         return Optional.ofNullable(this.evaluationInterval);
     }
     /**
+     * @return
      * Expected value is &#39;MedianStopping&#39;.
      * 
-    */
+     */
     public String policyType() {
         return this.policyType;
     }

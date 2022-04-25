@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
     /**
-     * List of management groups.
+     * @return List of management groups.
      * 
      */
     private final @Nullable List<String> managementGroups;
     /**
-     * List of subscriptions.
+     * @return List of subscriptions.
      * 
      */
     private final @Nullable List<String> subscriptions;
@@ -31,16 +31,16 @@ public final class NetworkManagerPropertiesResponseNetworkManagerScopes {
     }
 
     /**
-     * List of management groups.
+     * @return List of management groups.
      * 
-    */
+     */
     public List<String> managementGroups() {
         return this.managementGroups == null ? List.of() : this.managementGroups;
     }
     /**
-     * List of subscriptions.
+     * @return List of subscriptions.
      * 
-    */
+     */
     public List<String> subscriptions() {
         return this.subscriptions == null ? List.of() : this.subscriptions;
     }

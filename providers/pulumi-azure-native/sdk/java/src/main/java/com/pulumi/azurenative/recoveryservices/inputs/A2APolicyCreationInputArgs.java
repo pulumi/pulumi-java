@@ -30,6 +30,10 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="appConsistentFrequencyInMinutes")
     private @Nullable Output<Integer> appConsistentFrequencyInMinutes;
 
+    /**
+     * @return The app consistent snapshot frequency (in minutes).
+     * 
+     */
     public Optional<Output<Integer>> appConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.appConsistentFrequencyInMinutes);
     }
@@ -41,6 +45,10 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="crashConsistentFrequencyInMinutes")
     private @Nullable Output<Integer> crashConsistentFrequencyInMinutes;
 
+    /**
+     * @return The crash consistent snapshot frequency (in minutes).
+     * 
+     */
     public Optional<Output<Integer>> crashConsistentFrequencyInMinutes() {
         return Optional.ofNullable(this.crashConsistentFrequencyInMinutes);
     }
@@ -53,6 +61,11 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;A2A&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -64,6 +77,10 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="multiVmSyncStatus", required=true)
     private Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus;
 
+    /**
+     * @return A value indicating whether multi-VM sync has to be enabled. Value should be &#39;Enabled&#39; or &#39;Disabled&#39;.
+     * 
+     */
     public Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus() {
         return this.multiVmSyncStatus;
     }
@@ -75,6 +92,10 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
     @Import(name="recoveryPointHistory")
     private @Nullable Output<Integer> recoveryPointHistory;
 
+    /**
+     * @return The duration in minutes until which the recovery points need to be stored.
+     * 
+     */
     public Optional<Output<Integer>> recoveryPointHistory() {
         return Optional.ofNullable(this.recoveryPointHistory);
     }
@@ -107,55 +128,129 @@ public final class A2APolicyCreationInputArgs extends com.pulumi.resources.Resou
             $ = new A2APolicyCreationInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appConsistentFrequencyInMinutes The app consistent snapshot frequency (in minutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder appConsistentFrequencyInMinutes(@Nullable Output<Integer> appConsistentFrequencyInMinutes) {
             $.appConsistentFrequencyInMinutes = appConsistentFrequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param appConsistentFrequencyInMinutes The app consistent snapshot frequency (in minutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder appConsistentFrequencyInMinutes(Integer appConsistentFrequencyInMinutes) {
             return appConsistentFrequencyInMinutes(Output.of(appConsistentFrequencyInMinutes));
         }
 
+        /**
+         * @param crashConsistentFrequencyInMinutes The crash consistent snapshot frequency (in minutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder crashConsistentFrequencyInMinutes(@Nullable Output<Integer> crashConsistentFrequencyInMinutes) {
             $.crashConsistentFrequencyInMinutes = crashConsistentFrequencyInMinutes;
             return this;
         }
 
+        /**
+         * @param crashConsistentFrequencyInMinutes The crash consistent snapshot frequency (in minutes).
+         * 
+         * @return builder
+         * 
+         */
         public Builder crashConsistentFrequencyInMinutes(Integer crashConsistentFrequencyInMinutes) {
             return crashConsistentFrequencyInMinutes(Output.of(crashConsistentFrequencyInMinutes));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;A2A&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param multiVmSyncStatus A value indicating whether multi-VM sync has to be enabled. Value should be &#39;Enabled&#39; or &#39;Disabled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmSyncStatus(Output<Either<String,SetMultiVmSyncStatus>> multiVmSyncStatus) {
             $.multiVmSyncStatus = multiVmSyncStatus;
             return this;
         }
 
+        /**
+         * @param multiVmSyncStatus A value indicating whether multi-VM sync has to be enabled. Value should be &#39;Enabled&#39; or &#39;Disabled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmSyncStatus(Either<String,SetMultiVmSyncStatus> multiVmSyncStatus) {
             return multiVmSyncStatus(Output.of(multiVmSyncStatus));
         }
 
+        /**
+         * @param multiVmSyncStatus A value indicating whether multi-VM sync has to be enabled. Value should be &#39;Enabled&#39; or &#39;Disabled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmSyncStatus(String multiVmSyncStatus) {
             return multiVmSyncStatus(Either.ofLeft(multiVmSyncStatus));
         }
 
+        /**
+         * @param multiVmSyncStatus A value indicating whether multi-VM sync has to be enabled. Value should be &#39;Enabled&#39; or &#39;Disabled&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmSyncStatus(SetMultiVmSyncStatus multiVmSyncStatus) {
             return multiVmSyncStatus(Either.ofRight(multiVmSyncStatus));
         }
 
+        /**
+         * @param recoveryPointHistory The duration in minutes until which the recovery points need to be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointHistory(@Nullable Output<Integer> recoveryPointHistory) {
             $.recoveryPointHistory = recoveryPointHistory;
             return this;
         }
 
+        /**
+         * @param recoveryPointHistory The duration in minutes until which the recovery points need to be stored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointHistory(Integer recoveryPointHistory) {
             return recoveryPointHistory(Output.of(recoveryPointHistory));
         }

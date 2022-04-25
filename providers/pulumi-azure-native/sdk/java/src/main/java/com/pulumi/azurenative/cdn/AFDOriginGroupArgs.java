@@ -28,6 +28,10 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="healthProbeSettings")
     private @Nullable Output<HealthProbeParametersArgs> healthProbeSettings;
 
+    /**
+     * @return Health probe settings to the origin that is used to determine the health of the origin.
+     * 
+     */
     public Optional<Output<HealthProbeParametersArgs>> healthProbeSettings() {
         return Optional.ofNullable(this.healthProbeSettings);
     }
@@ -39,6 +43,10 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="loadBalancingSettings")
     private @Nullable Output<LoadBalancingSettingsParametersArgs> loadBalancingSettings;
 
+    /**
+     * @return Load balancing settings for a backend pool
+     * 
+     */
     public Optional<Output<LoadBalancingSettingsParametersArgs>> loadBalancingSettings() {
         return Optional.ofNullable(this.loadBalancingSettings);
     }
@@ -50,6 +58,10 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="originGroupName")
     private @Nullable Output<String> originGroupName;
 
+    /**
+     * @return Name of the origin group which is unique within the endpoint.
+     * 
+     */
     public Optional<Output<String>> originGroupName() {
         return Optional.ofNullable(this.originGroupName);
     }
@@ -61,6 +73,10 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="profileName", required=true)
     private Output<String> profileName;
 
+    /**
+     * @return Name of the CDN profile which is unique within the resource group.
+     * 
+     */
     public Output<String> profileName() {
         return this.profileName;
     }
@@ -72,6 +88,10 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the Resource group within the Azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,6 +103,10 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="responseBasedAfdOriginErrorDetectionSettings")
     private @Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings;
 
+    /**
+     * @return The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+     * 
+     */
     public Optional<Output<ResponseBasedOriginErrorDetectionParametersArgs>> responseBasedAfdOriginErrorDetectionSettings() {
         return Optional.ofNullable(this.responseBasedAfdOriginErrorDetectionSettings);
     }
@@ -94,6 +118,10 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sessionAffinityState")
     private @Nullable Output<Either<String,EnabledState>> sessionAffinityState;
 
+    /**
+     * @return Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+     * 
+     */
     public Optional<Output<Either<String,EnabledState>>> sessionAffinityState() {
         return Optional.ofNullable(this.sessionAffinityState);
     }
@@ -105,6 +133,10 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="trafficRestorationTimeToHealedOrNewEndpointsInMinutes")
     private @Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
 
+    /**
+     * @return Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+     * 
+     */
     public Optional<Output<Integer>> trafficRestorationTimeToHealedOrNewEndpointsInMinutes() {
         return Optional.ofNullable(this.trafficRestorationTimeToHealedOrNewEndpointsInMinutes);
     }
@@ -140,82 +172,190 @@ public final class AFDOriginGroupArgs extends com.pulumi.resources.ResourceArgs 
             $ = new AFDOriginGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param healthProbeSettings Health probe settings to the origin that is used to determine the health of the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(@Nullable Output<HealthProbeParametersArgs> healthProbeSettings) {
             $.healthProbeSettings = healthProbeSettings;
             return this;
         }
 
+        /**
+         * @param healthProbeSettings Health probe settings to the origin that is used to determine the health of the origin.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthProbeSettings(HealthProbeParametersArgs healthProbeSettings) {
             return healthProbeSettings(Output.of(healthProbeSettings));
         }
 
+        /**
+         * @param loadBalancingSettings Load balancing settings for a backend pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingSettings(@Nullable Output<LoadBalancingSettingsParametersArgs> loadBalancingSettings) {
             $.loadBalancingSettings = loadBalancingSettings;
             return this;
         }
 
+        /**
+         * @param loadBalancingSettings Load balancing settings for a backend pool
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancingSettings(LoadBalancingSettingsParametersArgs loadBalancingSettings) {
             return loadBalancingSettings(Output.of(loadBalancingSettings));
         }
 
+        /**
+         * @param originGroupName Name of the origin group which is unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroupName(@Nullable Output<String> originGroupName) {
             $.originGroupName = originGroupName;
             return this;
         }
 
+        /**
+         * @param originGroupName Name of the origin group which is unique within the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder originGroupName(String originGroupName) {
             return originGroupName(Output.of(originGroupName));
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(Output<String> profileName) {
             $.profileName = profileName;
             return this;
         }
 
+        /**
+         * @param profileName Name of the CDN profile which is unique within the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profileName(String profileName) {
             return profileName(Output.of(profileName));
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the Resource group within the Azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param responseBasedAfdOriginErrorDetectionSettings The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBasedAfdOriginErrorDetectionSettings(@Nullable Output<ResponseBasedOriginErrorDetectionParametersArgs> responseBasedAfdOriginErrorDetectionSettings) {
             $.responseBasedAfdOriginErrorDetectionSettings = responseBasedAfdOriginErrorDetectionSettings;
             return this;
         }
 
+        /**
+         * @param responseBasedAfdOriginErrorDetectionSettings The JSON object that contains the properties to determine origin health using real requests/responses. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responseBasedAfdOriginErrorDetectionSettings(ResponseBasedOriginErrorDetectionParametersArgs responseBasedAfdOriginErrorDetectionSettings) {
             return responseBasedAfdOriginErrorDetectionSettings(Output.of(responseBasedAfdOriginErrorDetectionSettings));
         }
 
+        /**
+         * @param sessionAffinityState Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityState(@Nullable Output<Either<String,EnabledState>> sessionAffinityState) {
             $.sessionAffinityState = sessionAffinityState;
             return this;
         }
 
+        /**
+         * @param sessionAffinityState Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityState(Either<String,EnabledState> sessionAffinityState) {
             return sessionAffinityState(Output.of(sessionAffinityState));
         }
 
+        /**
+         * @param sessionAffinityState Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityState(String sessionAffinityState) {
             return sessionAffinityState(Either.ofLeft(sessionAffinityState));
         }
 
+        /**
+         * @param sessionAffinityState Whether to allow session affinity on this host. Valid options are &#39;Enabled&#39; or &#39;Disabled&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder sessionAffinityState(EnabledState sessionAffinityState) {
             return sessionAffinityState(Either.ofRight(sessionAffinityState));
         }
 
+        /**
+         * @param trafficRestorationTimeToHealedOrNewEndpointsInMinutes Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(@Nullable Output<Integer> trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             $.trafficRestorationTimeToHealedOrNewEndpointsInMinutes = trafficRestorationTimeToHealedOrNewEndpointsInMinutes;
             return this;
         }
 
+        /**
+         * @param trafficRestorationTimeToHealedOrNewEndpointsInMinutes Time in minutes to shift the traffic to the endpoint gradually when an unhealthy endpoint comes healthy or a new endpoint is added. Default is 10 mins. This property is currently not supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trafficRestorationTimeToHealedOrNewEndpointsInMinutes(Integer trafficRestorationTimeToHealedOrNewEndpointsInMinutes) {
             return trafficRestorationTimeToHealedOrNewEndpointsInMinutes(Output.of(trafficRestorationTimeToHealedOrNewEndpointsInMinutes));
         }

@@ -25,6 +25,11 @@ public final class AbsoluteClipTimeResponse extends com.pulumi.resources.InvokeA
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.AbsoluteClipTime&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -36,6 +41,10 @@ public final class AbsoluteClipTimeResponse extends com.pulumi.resources.InvokeA
     @Import(name="time", required=true)
     private String time;
 
+    /**
+     * @return The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
+     * 
+     */
     public String time() {
         return this.time;
     }
@@ -65,11 +74,24 @@ public final class AbsoluteClipTimeResponse extends com.pulumi.resources.InvokeA
             $ = new AbsoluteClipTimeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AbsoluteClipTime&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param time The time position on the timeline of the input media. It is usually specified as an ISO8601 period. e.g PT30S for 30 seconds.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             $.time = time;
             return this;

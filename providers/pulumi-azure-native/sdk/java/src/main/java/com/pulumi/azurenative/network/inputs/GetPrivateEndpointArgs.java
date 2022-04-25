@@ -21,6 +21,10 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return Expands referenced resources.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
     @Import(name="privateEndpointName", required=true)
     private String privateEndpointName;
 
+    /**
+     * @return The name of the private endpoint.
+     * 
+     */
     public String privateEndpointName() {
         return this.privateEndpointName;
     }
@@ -43,6 +51,10 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetPrivateEndpointArgs extends com.pulumi.resources.InvokeArg
             $ = new GetPrivateEndpointArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand Expands referenced resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param privateEndpointName The name of the private endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointName(String privateEndpointName) {
             $.privateEndpointName = privateEndpointName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

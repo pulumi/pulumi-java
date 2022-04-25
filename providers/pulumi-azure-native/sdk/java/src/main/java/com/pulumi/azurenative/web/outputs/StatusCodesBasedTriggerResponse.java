@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StatusCodesBasedTriggerResponse {
     /**
-     * Request Count.
+     * @return Request Count.
      * 
      */
     private final @Nullable Integer count;
     /**
-     * Request Path
+     * @return Request Path
      * 
      */
     private final @Nullable String path;
     /**
-     * HTTP status code.
+     * @return HTTP status code.
      * 
      */
     private final @Nullable Integer status;
     /**
-     * Request Sub Status.
+     * @return Request Sub Status.
      * 
      */
     private final @Nullable Integer subStatus;
     /**
-     * Time interval.
+     * @return Time interval.
      * 
      */
     private final @Nullable String timeInterval;
     /**
-     * Win32 error code.
+     * @return Win32 error code.
      * 
      */
     private final @Nullable Integer win32Status;
@@ -60,44 +60,44 @@ public final class StatusCodesBasedTriggerResponse {
     }
 
     /**
-     * Request Count.
+     * @return Request Count.
      * 
-    */
+     */
     public Optional<Integer> count() {
         return Optional.ofNullable(this.count);
     }
     /**
-     * Request Path
+     * @return Request Path
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * HTTP status code.
+     * @return HTTP status code.
      * 
-    */
+     */
     public Optional<Integer> status() {
         return Optional.ofNullable(this.status);
     }
     /**
-     * Request Sub Status.
+     * @return Request Sub Status.
      * 
-    */
+     */
     public Optional<Integer> subStatus() {
         return Optional.ofNullable(this.subStatus);
     }
     /**
-     * Time interval.
+     * @return Time interval.
      * 
-    */
+     */
     public Optional<String> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
     /**
-     * Win32 error code.
+     * @return Win32 error code.
      * 
-    */
+     */
     public Optional<Integer> win32Status() {
         return Optional.ofNullable(this.win32Status);
     }

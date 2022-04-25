@@ -29,6 +29,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="customHeaders")
     private @Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders;
 
+    /**
+     * @return List of custom headers.
+     * 
+     */
     public Optional<List<EndpointPropertiesResponseCustomHeaders>> customHeaders() {
         return Optional.ofNullable(this.customHeaders);
     }
@@ -40,6 +44,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointLocation")
     private @Nullable String endpointLocation;
 
+    /**
+     * @return Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
+     * 
+     */
     public Optional<String> endpointLocation() {
         return Optional.ofNullable(this.endpointLocation);
     }
@@ -51,6 +59,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointMonitorStatus")
     private @Nullable String endpointMonitorStatus;
 
+    /**
+     * @return The monitoring status of the endpoint.
+     * 
+     */
     public Optional<String> endpointMonitorStatus() {
         return Optional.ofNullable(this.endpointMonitorStatus);
     }
@@ -62,6 +74,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="endpointStatus")
     private @Nullable String endpointStatus;
 
+    /**
+     * @return The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
+     * 
+     */
     public Optional<String> endpointStatus() {
         return Optional.ofNullable(this.endpointStatus);
     }
@@ -73,6 +89,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="geoMapping")
     private @Nullable List<String> geoMapping;
 
+    /**
+     * @return The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+     * 
+     */
     public Optional<List<String>> geoMapping() {
         return Optional.ofNullable(this.geoMapping);
     }
@@ -84,6 +104,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -95,6 +119,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minChildEndpoints")
     private @Nullable Double minChildEndpoints;
 
+    /**
+     * @return The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+     * 
+     */
     public Optional<Double> minChildEndpoints() {
         return Optional.ofNullable(this.minChildEndpoints);
     }
@@ -106,6 +134,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minChildEndpointsIPv4")
     private @Nullable Double minChildEndpointsIPv4;
 
+    /**
+     * @return The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+     * 
+     */
     public Optional<Double> minChildEndpointsIPv4() {
         return Optional.ofNullable(this.minChildEndpointsIPv4);
     }
@@ -117,6 +149,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="minChildEndpointsIPv6")
     private @Nullable Double minChildEndpointsIPv6;
 
+    /**
+     * @return The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+     * 
+     */
     public Optional<Double> minChildEndpointsIPv6() {
         return Optional.ofNullable(this.minChildEndpointsIPv6);
     }
@@ -128,6 +164,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -139,6 +179,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="priority")
     private @Nullable Double priority;
 
+    /**
+     * @return The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+     * 
+     */
     public Optional<Double> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -150,6 +194,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="subnets")
     private @Nullable List<EndpointPropertiesResponseSubnets> subnets;
 
+    /**
+     * @return The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
+     * 
+     */
     public Optional<List<EndpointPropertiesResponseSubnets>> subnets() {
         return Optional.ofNullable(this.subnets);
     }
@@ -161,6 +209,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -172,6 +224,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="targetResourceId")
     private @Nullable String targetResourceId;
 
+    /**
+     * @return The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
+     * 
+     */
     public Optional<String> targetResourceId() {
         return Optional.ofNullable(this.targetResourceId);
     }
@@ -183,6 +239,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -194,6 +254,10 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="weight")
     private @Nullable Double weight;
 
+    /**
+     * @return The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
+     * 
+     */
     public Optional<Double> weight() {
         return Optional.ofNullable(this.weight);
     }
@@ -237,93 +301,207 @@ public final class EndpointResponse extends com.pulumi.resources.InvokeArgs {
             $ = new EndpointResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customHeaders List of custom headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHeaders(@Nullable List<EndpointPropertiesResponseCustomHeaders> customHeaders) {
             $.customHeaders = customHeaders;
             return this;
         }
 
+        /**
+         * @param customHeaders List of custom headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customHeaders(EndpointPropertiesResponseCustomHeaders... customHeaders) {
             return customHeaders(List.of(customHeaders));
         }
 
+        /**
+         * @param endpointLocation Specifies the location of the external or nested endpoints when using the &#39;Performance&#39; traffic routing method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointLocation(@Nullable String endpointLocation) {
             $.endpointLocation = endpointLocation;
             return this;
         }
 
+        /**
+         * @param endpointMonitorStatus The monitoring status of the endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointMonitorStatus(@Nullable String endpointMonitorStatus) {
             $.endpointMonitorStatus = endpointMonitorStatus;
             return this;
         }
 
+        /**
+         * @param endpointStatus The status of the endpoint. If the endpoint is Enabled, it is probed for endpoint health and is included in the traffic routing method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endpointStatus(@Nullable String endpointStatus) {
             $.endpointStatus = endpointStatus;
             return this;
         }
 
+        /**
+         * @param geoMapping The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoMapping(@Nullable List<String> geoMapping) {
             $.geoMapping = geoMapping;
             return this;
         }
 
+        /**
+         * @param geoMapping The list of countries/regions mapped to this endpoint when using the &#39;Geographic&#39; traffic routing method. Please consult Traffic Manager Geographic documentation for a full list of accepted values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoMapping(String... geoMapping) {
             return geoMapping(List.of(geoMapping));
         }
 
+        /**
+         * @param id Fully qualified resource Id for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.Network/trafficManagerProfiles/{resourceName}
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param minChildEndpoints The minimum number of endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minChildEndpoints(@Nullable Double minChildEndpoints) {
             $.minChildEndpoints = minChildEndpoints;
             return this;
         }
 
+        /**
+         * @param minChildEndpointsIPv4 The minimum number of IPv4 (DNS record type A) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minChildEndpointsIPv4(@Nullable Double minChildEndpointsIPv4) {
             $.minChildEndpointsIPv4 = minChildEndpointsIPv4;
             return this;
         }
 
+        /**
+         * @param minChildEndpointsIPv6 The minimum number of IPv6 (DNS record type AAAA) endpoints that must be available in the child profile in order for the parent profile to be considered available. Only applicable to endpoint of type &#39;NestedEndpoints&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minChildEndpointsIPv6(@Nullable Double minChildEndpointsIPv6) {
             $.minChildEndpointsIPv6 = minChildEndpointsIPv6;
             return this;
         }
 
+        /**
+         * @param name The name of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param priority The priority of this endpoint when using the &#39;Priority&#39; traffic routing method. Possible values are from 1 to 1000, lower values represent higher priority. This is an optional parameter.  If specified, it must be specified on all endpoints, and no two endpoints can share the same priority value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Double priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param subnets The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(@Nullable List<EndpointPropertiesResponseSubnets> subnets) {
             $.subnets = subnets;
             return this;
         }
 
+        /**
+         * @param subnets The list of subnets, IP addresses, and/or address ranges mapped to this endpoint when using the &#39;Subnet&#39; traffic routing method. An empty list will match all ranges not covered by other endpoints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnets(EndpointPropertiesResponseSubnets... subnets) {
             return subnets(List.of(subnets));
         }
 
+        /**
+         * @param target The fully-qualified DNS name or IP address of the endpoint. Traffic Manager returns this value in DNS responses to direct traffic to this endpoint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param targetResourceId The Azure Resource URI of the of the endpoint. Not applicable to endpoints of type &#39;ExternalEndpoints&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetResourceId(@Nullable String targetResourceId) {
             $.targetResourceId = targetResourceId;
             return this;
         }
 
+        /**
+         * @param type The type of the resource. Ex- Microsoft.Network/trafficManagerProfiles.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param weight The weight of this endpoint when using the &#39;Weighted&#39; traffic routing method. Possible values are from 1 to 1000.
+         * 
+         * @return builder
+         * 
+         */
         public Builder weight(@Nullable Double weight) {
             $.weight = weight;
             return this;

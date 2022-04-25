@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PresentationTimeRangeResponse {
     /**
-     * The absolute end time boundary.
+     * @return The absolute end time boundary.
      * 
      */
     private final @Nullable Double endTimestamp;
     /**
-     * The indicator of forcing existing of end time stamp.
+     * @return The indicator of forcing existing of end time stamp.
      * 
      */
     private final @Nullable Boolean forceEndTimestamp;
     /**
-     * The relative to end right edge.
+     * @return The relative to end right edge.
      * 
      */
     private final @Nullable Double liveBackoffDuration;
     /**
-     * The relative to end sliding window.
+     * @return The relative to end sliding window.
      * 
      */
     private final @Nullable Double presentationWindowDuration;
     /**
-     * The absolute start time boundary.
+     * @return The absolute start time boundary.
      * 
      */
     private final @Nullable Double startTimestamp;
     /**
-     * The time scale of time stamps.
+     * @return The time scale of time stamps.
      * 
      */
     private final @Nullable Double timescale;
@@ -60,44 +60,44 @@ public final class PresentationTimeRangeResponse {
     }
 
     /**
-     * The absolute end time boundary.
+     * @return The absolute end time boundary.
      * 
-    */
+     */
     public Optional<Double> endTimestamp() {
         return Optional.ofNullable(this.endTimestamp);
     }
     /**
-     * The indicator of forcing existing of end time stamp.
+     * @return The indicator of forcing existing of end time stamp.
      * 
-    */
+     */
     public Optional<Boolean> forceEndTimestamp() {
         return Optional.ofNullable(this.forceEndTimestamp);
     }
     /**
-     * The relative to end right edge.
+     * @return The relative to end right edge.
      * 
-    */
+     */
     public Optional<Double> liveBackoffDuration() {
         return Optional.ofNullable(this.liveBackoffDuration);
     }
     /**
-     * The relative to end sliding window.
+     * @return The relative to end sliding window.
      * 
-    */
+     */
     public Optional<Double> presentationWindowDuration() {
         return Optional.ofNullable(this.presentationWindowDuration);
     }
     /**
-     * The absolute start time boundary.
+     * @return The absolute start time boundary.
      * 
-    */
+     */
     public Optional<Double> startTimestamp() {
         return Optional.ofNullable(this.startTimestamp);
     }
     /**
-     * The time scale of time stamps.
+     * @return The time scale of time stamps.
      * 
-    */
+     */
     public Optional<Double> timescale() {
         return Optional.ofNullable(this.timescale);
     }

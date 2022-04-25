@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetCustomEntityStoreAssignmentResult {
     /**
-     * The link to entity store database.
+     * @return The link to entity store database.
      * 
      */
     private final @Nullable String entityStoreDatabaseLink;
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
+     * @return The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
      * 
      */
     private final @Nullable String principal;
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -60,44 +60,44 @@ public final class GetCustomEntityStoreAssignmentResult {
     }
 
     /**
-     * The link to entity store database.
+     * @return The link to entity store database.
      * 
-    */
+     */
     public Optional<String> entityStoreDatabaseLink() {
         return Optional.ofNullable(this.entityStoreDatabaseLink);
     }
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
+     * @return The principal assigned with entity store. Format of principal is: [AAD type]=[PrincipalObjectId];[TenantId]
      * 
-    */
+     */
     public Optional<String> principal() {
         return Optional.ofNullable(this.principal);
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

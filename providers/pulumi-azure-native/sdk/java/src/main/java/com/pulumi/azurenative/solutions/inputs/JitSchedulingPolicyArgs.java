@@ -31,6 +31,10 @@ public final class JitSchedulingPolicyArgs extends com.pulumi.resources.Resource
     @Import(name="startTime", required=true)
     private Output<String> startTime;
 
+    /**
+     * @return The start time of the request.
+     * 
+     */
     public Output<String> startTime() {
         return this.startTime;
     }
@@ -69,11 +73,23 @@ public final class JitSchedulingPolicyArgs extends com.pulumi.resources.Resource
             return duration(Output.of(duration));
         }
 
+        /**
+         * @param startTime The start time of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(Output<String> startTime) {
             $.startTime = startTime;
             return this;
         }
 
+        /**
+         * @param startTime The start time of the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startTime(String startTime) {
             return startTime(Output.of(startTime));
         }

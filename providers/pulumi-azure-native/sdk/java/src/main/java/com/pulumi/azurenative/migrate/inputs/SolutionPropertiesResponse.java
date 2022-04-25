@@ -29,6 +29,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="cleanupState")
     private @Nullable String cleanupState;
 
+    /**
+     * @return Gets or sets the cleanup state of the solution.
+     * 
+     */
     public Optional<String> cleanupState() {
         return Optional.ofNullable(this.cleanupState);
     }
@@ -40,6 +44,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="details")
     private @Nullable SolutionDetailsResponse details;
 
+    /**
+     * @return Gets or sets the details of the solution.
+     * 
+     */
     public Optional<SolutionDetailsResponse> details() {
         return Optional.ofNullable(this.details);
     }
@@ -51,6 +59,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="goal")
     private @Nullable String goal;
 
+    /**
+     * @return Gets or sets the goal of the solution.
+     * 
+     */
     public Optional<String> goal() {
         return Optional.ofNullable(this.goal);
     }
@@ -62,6 +74,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="purpose")
     private @Nullable String purpose;
 
+    /**
+     * @return Gets or sets the purpose of the solution.
+     * 
+     */
     public Optional<String> purpose() {
         return Optional.ofNullable(this.purpose);
     }
@@ -73,6 +89,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Gets or sets the current status of the solution.
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -84,6 +104,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="summary")
     private @Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary;
 
+    /**
+     * @return Gets or sets the summary of the solution.
+     * 
+     */
     public Optional<Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse>> summary() {
         return Optional.ofNullable(this.summary);
     }
@@ -95,6 +119,10 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
     @Import(name="tool")
     private @Nullable String tool;
 
+    /**
+     * @return Gets or sets the tool being used in the solution.
+     * 
+     */
     public Optional<String> tool() {
         return Optional.ofNullable(this.tool);
     }
@@ -129,44 +157,98 @@ public final class SolutionPropertiesResponse extends com.pulumi.resources.Invok
             $ = new SolutionPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cleanupState Gets or sets the cleanup state of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanupState(@Nullable String cleanupState) {
             $.cleanupState = cleanupState;
             return this;
         }
 
+        /**
+         * @param details Gets or sets the details of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder details(@Nullable SolutionDetailsResponse details) {
             $.details = details;
             return this;
         }
 
+        /**
+         * @param goal Gets or sets the goal of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder goal(@Nullable String goal) {
             $.goal = goal;
             return this;
         }
 
+        /**
+         * @param purpose Gets or sets the purpose of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder purpose(@Nullable String purpose) {
             $.purpose = purpose;
             return this;
         }
 
+        /**
+         * @param status Gets or sets the current status of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param summary Gets or sets the summary of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(@Nullable Either<DatabasesSolutionSummaryResponse,ServersSolutionSummaryResponse> summary) {
             $.summary = summary;
             return this;
         }
 
+        /**
+         * @param summary Gets or sets the summary of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(DatabasesSolutionSummaryResponse summary) {
             return summary(Either.ofLeft(summary));
         }
 
+        /**
+         * @param summary Gets or sets the summary of the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder summary(ServersSolutionSummaryResponse summary) {
             return summary(Either.ofRight(summary));
         }
 
+        /**
+         * @param tool Gets or sets the tool being used in the solution.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tool(@Nullable String tool) {
             $.tool = tool;
             return this;

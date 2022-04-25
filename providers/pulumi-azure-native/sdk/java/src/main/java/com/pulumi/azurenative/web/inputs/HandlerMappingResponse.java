@@ -26,6 +26,10 @@ public final class HandlerMappingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="arguments")
     private @Nullable String arguments;
 
+    /**
+     * @return Command-line arguments to be passed to the script processor.
+     * 
+     */
     public Optional<String> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -37,6 +41,10 @@ public final class HandlerMappingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="extension")
     private @Nullable String extension;
 
+    /**
+     * @return Requests with this extension will be handled using the specified FastCGI application.
+     * 
+     */
     public Optional<String> extension() {
         return Optional.ofNullable(this.extension);
     }
@@ -48,6 +56,10 @@ public final class HandlerMappingResponse extends com.pulumi.resources.InvokeArg
     @Import(name="scriptProcessor")
     private @Nullable String scriptProcessor;
 
+    /**
+     * @return The absolute path to the FastCGI application.
+     * 
+     */
     public Optional<String> scriptProcessor() {
         return Optional.ofNullable(this.scriptProcessor);
     }
@@ -78,16 +90,34 @@ public final class HandlerMappingResponse extends com.pulumi.resources.InvokeArg
             $ = new HandlerMappingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments Command-line arguments to be passed to the script processor.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable String arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param extension Requests with this extension will be handled using the specified FastCGI application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extension(@Nullable String extension) {
             $.extension = extension;
             return this;
         }
 
+        /**
+         * @param scriptProcessor The absolute path to the FastCGI application.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scriptProcessor(@Nullable String scriptProcessor) {
             $.scriptProcessor = scriptProcessor;
             return this;

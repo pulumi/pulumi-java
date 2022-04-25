@@ -26,6 +26,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="additionalRecipients")
     private @Nullable List<String> additionalRecipients;
 
+    /**
+     * @return The list of additional recipients
+     * 
+     */
     public Optional<List<String>> additionalRecipients() {
         return Optional.ofNullable(this.additionalRecipients);
     }
@@ -37,6 +41,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="notifyDcAdmins")
     private @Nullable String notifyDcAdmins;
 
+    /**
+     * @return Should domain controller admins be notified
+     * 
+     */
     public Optional<String> notifyDcAdmins() {
         return Optional.ofNullable(this.notifyDcAdmins);
     }
@@ -48,6 +56,10 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
     @Import(name="notifyGlobalAdmins")
     private @Nullable String notifyGlobalAdmins;
 
+    /**
+     * @return Should global admins be notified
+     * 
+     */
     public Optional<String> notifyGlobalAdmins() {
         return Optional.ofNullable(this.notifyGlobalAdmins);
     }
@@ -78,20 +90,44 @@ public final class NotificationSettingsResponse extends com.pulumi.resources.Inv
             $ = new NotificationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalRecipients The list of additional recipients
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalRecipients(@Nullable List<String> additionalRecipients) {
             $.additionalRecipients = additionalRecipients;
             return this;
         }
 
+        /**
+         * @param additionalRecipients The list of additional recipients
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalRecipients(String... additionalRecipients) {
             return additionalRecipients(List.of(additionalRecipients));
         }
 
+        /**
+         * @param notifyDcAdmins Should domain controller admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyDcAdmins(@Nullable String notifyDcAdmins) {
             $.notifyDcAdmins = notifyDcAdmins;
             return this;
         }
 
+        /**
+         * @param notifyGlobalAdmins Should global admins be notified
+         * 
+         * @return builder
+         * 
+         */
         public Builder notifyGlobalAdmins(@Nullable String notifyGlobalAdmins) {
             $.notifyGlobalAdmins = notifyGlobalAdmins;
             return this;

@@ -23,6 +23,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -34,6 +38,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -45,6 +53,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
     @Import(name="networkInterfaceName", required=true)
     private Output<String> networkInterfaceName;
 
+    /**
+     * @return The name of the network interface.
+     * 
+     */
     public Output<String> networkInterfaceName() {
         return this.networkInterfaceName;
     }
@@ -56,6 +68,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
     @Import(name="tapConfigurationName")
     private @Nullable Output<String> tapConfigurationName;
 
+    /**
+     * @return The name of the tap configuration.
+     * 
+     */
     public Optional<Output<String>> tapConfigurationName() {
         return Optional.ofNullable(this.tapConfigurationName);
     }
@@ -78,6 +98,10 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
     @Import(name="virtualNetworkTap")
     private @Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap;
 
+    /**
+     * @return The reference to the Virtual Network Tap resource.
+     * 
+     */
     public Optional<Output<VirtualNetworkTapArgs>> virtualNetworkTap() {
         return Optional.ofNullable(this.virtualNetworkTap);
     }
@@ -111,56 +135,128 @@ public final class NetworkInterfaceTapConfigurationArgs extends com.pulumi.resou
             $ = new NetworkInterfaceTapConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(Output<String> networkInterfaceName) {
             $.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(String networkInterfaceName) {
             return networkInterfaceName(Output.of(networkInterfaceName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tapConfigurationName The name of the tap configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapConfigurationName(@Nullable Output<String> tapConfigurationName) {
             $.tapConfigurationName = tapConfigurationName;
             return this;
         }
 
+        /**
+         * @param tapConfigurationName The name of the tap configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tapConfigurationName(String tapConfigurationName) {
             return tapConfigurationName(Output.of(tapConfigurationName));
         }
 
+        /**
+         * @param virtualNetworkTap The reference to the Virtual Network Tap resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkTap(@Nullable Output<VirtualNetworkTapArgs> virtualNetworkTap) {
             $.virtualNetworkTap = virtualNetworkTap;
             return this;
         }
 
+        /**
+         * @param virtualNetworkTap The reference to the Virtual Network Tap resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkTap(VirtualNetworkTapArgs virtualNetworkTap) {
             return virtualNetworkTap(Output.of(virtualNetworkTap));
         }

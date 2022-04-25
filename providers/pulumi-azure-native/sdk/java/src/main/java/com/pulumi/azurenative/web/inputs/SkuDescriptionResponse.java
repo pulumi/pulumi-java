@@ -29,6 +29,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="capabilities")
     private @Nullable List<CapabilityResponse> capabilities;
 
+    /**
+     * @return Capabilities of the SKU, e.g., is traffic manager enabled?
+     * 
+     */
     public Optional<List<CapabilityResponse>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -40,6 +44,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="capacity")
     private @Nullable Integer capacity;
 
+    /**
+     * @return Current number of instances assigned to the resource.
+     * 
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -51,6 +59,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="family")
     private @Nullable String family;
 
+    /**
+     * @return Family code of the resource SKU.
+     * 
+     */
     public Optional<String> family() {
         return Optional.ofNullable(this.family);
     }
@@ -62,6 +74,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="locations")
     private @Nullable List<String> locations;
 
+    /**
+     * @return Locations of the SKU.
+     * 
+     */
     public Optional<List<String>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -73,6 +89,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the resource SKU.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +104,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="size")
     private @Nullable String size;
 
+    /**
+     * @return Size specifier of the resource SKU.
+     * 
+     */
     public Optional<String> size() {
         return Optional.ofNullable(this.size);
     }
@@ -95,6 +119,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="skuCapacity")
     private @Nullable SkuCapacityResponse skuCapacity;
 
+    /**
+     * @return Min, max, and default scale values of the SKU.
+     * 
+     */
     public Optional<SkuCapacityResponse> skuCapacity() {
         return Optional.ofNullable(this.skuCapacity);
     }
@@ -106,6 +134,10 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="tier")
     private @Nullable String tier;
 
+    /**
+     * @return Service tier of the resource SKU.
+     * 
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }
@@ -141,49 +173,109 @@ public final class SkuDescriptionResponse extends com.pulumi.resources.InvokeArg
             $ = new SkuDescriptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capabilities Capabilities of the SKU, e.g., is traffic manager enabled?
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable List<CapabilityResponse> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities Capabilities of the SKU, e.g., is traffic manager enabled?
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(CapabilityResponse... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param capacity Current number of instances assigned to the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Integer capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param family Family code of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder family(@Nullable String family) {
             $.family = family;
             return this;
         }
 
+        /**
+         * @param locations Locations of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable List<String> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations Locations of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param name Name of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param size Size specifier of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder size(@Nullable String size) {
             $.size = size;
             return this;
         }
 
+        /**
+         * @param skuCapacity Min, max, and default scale values of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skuCapacity(@Nullable SkuCapacityResponse skuCapacity) {
             $.skuCapacity = skuCapacity;
             return this;
         }
 
+        /**
+         * @param tier Service tier of the resource SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tier(@Nullable String tier) {
             $.tier = tier;
             return this;

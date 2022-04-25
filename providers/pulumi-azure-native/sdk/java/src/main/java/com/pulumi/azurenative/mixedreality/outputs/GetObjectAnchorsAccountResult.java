@@ -17,63 +17,63 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetObjectAnchorsAccountResult {
     /**
-     * Correspond domain name of certain Spatial Anchors Account
+     * @return Correspond domain name of certain Spatial Anchors Account
      * 
      */
     private final String accountDomain;
     /**
-     * unique id of certain account.
+     * @return unique id of certain account.
      * 
      */
     private final String accountId;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     private final @Nullable ObjectAnchorsAccountResponseIdentity identity;
     /**
-     * The kind of account, if supported
+     * @return The kind of account, if supported
      * 
      */
     private final @Nullable SkuResponse kind;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The plan associated with this account
+     * @return The plan associated with this account
      * 
      */
     private final @Nullable IdentityResponse plan;
     /**
-     * The sku associated with this account
+     * @return The sku associated with this account
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * The name of the storage account associated with this accountId
+     * @return The name of the storage account associated with this accountId
      * 
      */
     private final @Nullable String storageAccountName;
     /**
-     * The system metadata related to an object anchors account.
+     * @return The system metadata related to an object anchors account.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -109,23 +109,23 @@ public final class GetObjectAnchorsAccountResult {
     }
 
     /**
-     * Correspond domain name of certain Spatial Anchors Account
+     * @return Correspond domain name of certain Spatial Anchors Account
      * 
-    */
+     */
     public String accountDomain() {
         return this.accountDomain;
     }
     /**
-     * unique id of certain account.
+     * @return unique id of certain account.
      * 
-    */
+     */
     public String accountId() {
         return this.accountId;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
@@ -133,65 +133,65 @@ public final class GetObjectAnchorsAccountResult {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * The kind of account, if supported
+     * @return The kind of account, if supported
      * 
-    */
+     */
     public Optional<SkuResponse> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The plan associated with this account
+     * @return The plan associated with this account
      * 
-    */
+     */
     public Optional<IdentityResponse> plan() {
         return Optional.ofNullable(this.plan);
     }
     /**
-     * The sku associated with this account
+     * @return The sku associated with this account
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The name of the storage account associated with this accountId
+     * @return The name of the storage account associated with this accountId
      * 
-    */
+     */
     public Optional<String> storageAccountName() {
         return Optional.ofNullable(this.storageAccountName);
     }
     /**
-     * The system metadata related to an object anchors account.
+     * @return The system metadata related to an object anchors account.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

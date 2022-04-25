@@ -27,6 +27,10 @@ public final class ApplicationDeltaHealthPolicyResponse extends com.pulumi.resou
     @Import(name="defaultServiceTypeDeltaHealthPolicy")
     private @Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy;
 
+    /**
+     * @return The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
+     * 
+     */
     public Optional<ServiceTypeDeltaHealthPolicyResponse> defaultServiceTypeDeltaHealthPolicy() {
         return Optional.ofNullable(this.defaultServiceTypeDeltaHealthPolicy);
     }
@@ -38,6 +42,10 @@ public final class ApplicationDeltaHealthPolicyResponse extends com.pulumi.resou
     @Import(name="serviceTypeDeltaHealthPolicies")
     private @Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies;
 
+    /**
+     * @return The map with service type delta health policy per service type name. The map is empty by default.
+     * 
+     */
     public Optional<Map<String,ServiceTypeDeltaHealthPolicyResponse>> serviceTypeDeltaHealthPolicies() {
         return Optional.ofNullable(this.serviceTypeDeltaHealthPolicies);
     }
@@ -67,11 +75,23 @@ public final class ApplicationDeltaHealthPolicyResponse extends com.pulumi.resou
             $ = new ApplicationDeltaHealthPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultServiceTypeDeltaHealthPolicy The delta health policy used by default to evaluate the health of a service type when upgrading the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultServiceTypeDeltaHealthPolicy(@Nullable ServiceTypeDeltaHealthPolicyResponse defaultServiceTypeDeltaHealthPolicy) {
             $.defaultServiceTypeDeltaHealthPolicy = defaultServiceTypeDeltaHealthPolicy;
             return this;
         }
 
+        /**
+         * @param serviceTypeDeltaHealthPolicies The map with service type delta health policy per service type name. The map is empty by default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceTypeDeltaHealthPolicies(@Nullable Map<String,ServiceTypeDeltaHealthPolicyResponse> serviceTypeDeltaHealthPolicies) {
             $.serviceTypeDeltaHealthPolicies = serviceTypeDeltaHealthPolicies;
             return this;

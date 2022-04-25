@@ -28,6 +28,10 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends com.pulumi.r
     @Import(name="backendAddresses")
     private @Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses;
 
+    /**
+     * @return Backend addresses.
+     * 
+     */
     public Optional<Output<List<ApplicationGatewayBackendAddressArgs>>> backendAddresses() {
         return Optional.ofNullable(this.backendAddresses);
     }
@@ -39,6 +43,10 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends com.pulumi.r
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -50,6 +58,10 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends com.pulumi.r
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the backend address pool that is unique within an Application Gateway.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -80,33 +92,75 @@ public final class ApplicationGatewayBackendAddressPoolArgs extends com.pulumi.r
             $ = new ApplicationGatewayBackendAddressPoolArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backendAddresses Backend addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddresses(@Nullable Output<List<ApplicationGatewayBackendAddressArgs>> backendAddresses) {
             $.backendAddresses = backendAddresses;
             return this;
         }
 
+        /**
+         * @param backendAddresses Backend addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddresses(List<ApplicationGatewayBackendAddressArgs> backendAddresses) {
             return backendAddresses(Output.of(backendAddresses));
         }
 
+        /**
+         * @param backendAddresses Backend addresses.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendAddresses(ApplicationGatewayBackendAddressArgs... backendAddresses) {
             return backendAddresses(List.of(backendAddresses));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param name Name of the backend address pool that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the backend address pool that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

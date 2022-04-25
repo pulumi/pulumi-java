@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayFrontendIPConfigurationResponse {
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the frontend IP configuration that is unique within an Application Gateway.
+     * @return Name of the frontend IP configuration that is unique within an Application Gateway.
      * 
      */
     private final @Nullable String name;
     /**
-     * PrivateIPAddress of the network interface IP Configuration.
+     * @return PrivateIPAddress of the network interface IP Configuration.
      * 
      */
     private final @Nullable String privateIPAddress;
     /**
-     * The private IP address allocation method.
+     * @return The private IP address allocation method.
      * 
      */
     private final @Nullable String privateIPAllocationMethod;
     /**
-     * Reference to the application gateway private link configuration.
+     * @return Reference to the application gateway private link configuration.
      * 
      */
     private final @Nullable SubResourceResponse privateLinkConfiguration;
     /**
-     * The provisioning state of the frontend IP configuration resource.
+     * @return The provisioning state of the frontend IP configuration resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Reference to the PublicIP resource.
+     * @return Reference to the PublicIP resource.
      * 
      */
     private final @Nullable SubResourceResponse publicIPAddress;
     /**
-     * Reference to the subnet resource.
+     * @return Reference to the subnet resource.
      * 
      */
     private final @Nullable SubResourceResponse subnet;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -88,72 +88,72 @@ public final class ApplicationGatewayFrontendIPConfigurationResponse {
     }
 
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the frontend IP configuration that is unique within an Application Gateway.
+     * @return Name of the frontend IP configuration that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * PrivateIPAddress of the network interface IP Configuration.
+     * @return PrivateIPAddress of the network interface IP Configuration.
      * 
-    */
+     */
     public Optional<String> privateIPAddress() {
         return Optional.ofNullable(this.privateIPAddress);
     }
     /**
-     * The private IP address allocation method.
+     * @return The private IP address allocation method.
      * 
-    */
+     */
     public Optional<String> privateIPAllocationMethod() {
         return Optional.ofNullable(this.privateIPAllocationMethod);
     }
     /**
-     * Reference to the application gateway private link configuration.
+     * @return Reference to the application gateway private link configuration.
      * 
-    */
+     */
     public Optional<SubResourceResponse> privateLinkConfiguration() {
         return Optional.ofNullable(this.privateLinkConfiguration);
     }
     /**
-     * The provisioning state of the frontend IP configuration resource.
+     * @return The provisioning state of the frontend IP configuration resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Reference to the PublicIP resource.
+     * @return Reference to the PublicIP resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> publicIPAddress() {
         return Optional.ofNullable(this.publicIPAddress);
     }
     /**
-     * Reference to the subnet resource.
+     * @return Reference to the subnet resource.
      * 
-    */
+     */
     public Optional<SubResourceResponse> subnet() {
         return Optional.ofNullable(this.subnet);
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -25,6 +25,11 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="arguments")
     private @Nullable List<ArgumentResponse> arguments;
 
+    /**
+     * @return Gets or sets the collection of override arguments to be used when
+     * executing a build step.
+     * 
+     */
     public Optional<List<ArgumentResponse>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -36,6 +41,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="contextPath")
     private @Nullable String contextPath;
 
+    /**
+     * @return The source context against which run has to be queued.
+     * 
+     */
     public Optional<String> contextPath() {
         return Optional.ofNullable(this.contextPath);
     }
@@ -47,6 +56,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="file")
     private @Nullable String file;
 
+    /**
+     * @return The file against which run has to be queued.
+     * 
+     */
     public Optional<String> file() {
         return Optional.ofNullable(this.file);
     }
@@ -58,6 +71,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The name of the target build stage for the docker build.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -69,6 +86,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="updateTriggerToken")
     private @Nullable String updateTriggerToken;
 
+    /**
+     * @return Base64 encoded update trigger token that will be attached with the base image trigger webhook.
+     * 
+     */
     public Optional<String> updateTriggerToken() {
         return Optional.ofNullable(this.updateTriggerToken);
     }
@@ -80,6 +101,10 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
     @Import(name="values")
     private @Nullable List<SetValueResponse> values;
 
+    /**
+     * @return The collection of overridable values that can be passed when running a Task.
+     * 
+     */
     public Optional<List<SetValueResponse>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -113,40 +138,90 @@ public final class OverrideTaskStepPropertiesResponse extends com.pulumi.resourc
             $ = new OverrideTaskStepPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments Gets or sets the collection of override arguments to be used when
+         * executing a build step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments Gets or sets the collection of override arguments to be used when
+         * executing a build step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(ArgumentResponse... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param contextPath The source context against which run has to be queued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextPath(@Nullable String contextPath) {
             $.contextPath = contextPath;
             return this;
         }
 
+        /**
+         * @param file The file against which run has to be queued.
+         * 
+         * @return builder
+         * 
+         */
         public Builder file(@Nullable String file) {
             $.file = file;
             return this;
         }
 
+        /**
+         * @param target The name of the target build stage for the docker build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param updateTriggerToken Base64 encoded update trigger token that will be attached with the base image trigger webhook.
+         * 
+         * @return builder
+         * 
+         */
         public Builder updateTriggerToken(@Nullable String updateTriggerToken) {
             $.updateTriggerToken = updateTriggerToken;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<SetValueResponse> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a Task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
         }

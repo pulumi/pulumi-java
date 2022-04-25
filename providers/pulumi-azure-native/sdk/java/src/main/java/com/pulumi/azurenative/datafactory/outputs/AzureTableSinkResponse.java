@@ -13,58 +13,58 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureTableSinkResponse {
     /**
-     * Azure Table default partition key value. Type: string (or Expression with resultType string).
+     * @return Azure Table default partition key value. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object azureTableDefaultPartitionKeyValue;
     /**
-     * Azure Table insert type. Type: string (or Expression with resultType string).
+     * @return Azure Table insert type. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object azureTableInsertType;
     /**
-     * Azure Table partition key name. Type: string (or Expression with resultType string).
+     * @return Azure Table partition key name. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object azureTablePartitionKeyName;
     /**
-     * Azure Table row key name. Type: string (or Expression with resultType string).
+     * @return Azure Table row key name. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object azureTableRowKeyName;
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
      */
     private final @Nullable Object disableMetricsCollection;
     /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object maxConcurrentConnections;
     /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
      * 
      */
     private final @Nullable Object sinkRetryCount;
     /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object sinkRetryWait;
     /**
-     * Copy sink type.
+     * @return Copy sink type.
      * Expected value is &#39;AzureTableSink&#39;.
      * 
      */
     private final String type;
     /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
      */
     private final @Nullable Object writeBatchSize;
     /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
      */
     private final @Nullable Object writeBatchTimeout;
@@ -96,80 +96,80 @@ public final class AzureTableSinkResponse {
     }
 
     /**
-     * Azure Table default partition key value. Type: string (or Expression with resultType string).
+     * @return Azure Table default partition key value. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> azureTableDefaultPartitionKeyValue() {
         return Optional.ofNullable(this.azureTableDefaultPartitionKeyValue);
     }
     /**
-     * Azure Table insert type. Type: string (or Expression with resultType string).
+     * @return Azure Table insert type. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> azureTableInsertType() {
         return Optional.ofNullable(this.azureTableInsertType);
     }
     /**
-     * Azure Table partition key name. Type: string (or Expression with resultType string).
+     * @return Azure Table partition key name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> azureTablePartitionKeyName() {
         return Optional.ofNullable(this.azureTablePartitionKeyName);
     }
     /**
-     * Azure Table row key name. Type: string (or Expression with resultType string).
+     * @return Azure Table row key name. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> azureTableRowKeyName() {
         return Optional.ofNullable(this.azureTableRowKeyName);
     }
     /**
-     * If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
      * 
-    */
+     */
     public Optional<Object> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
     /**
-     * The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
+     * @return The maximum concurrent connection count for the sink data store. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
     /**
-     * Sink retry count. Type: integer (or Expression with resultType integer).
+     * @return Sink retry count. Type: integer (or Expression with resultType integer).
      * 
-    */
+     */
     public Optional<Object> sinkRetryCount() {
         return Optional.ofNullable(this.sinkRetryCount);
     }
     /**
-     * Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Sink retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> sinkRetryWait() {
         return Optional.ofNullable(this.sinkRetryWait);
     }
     /**
-     * Copy sink type.
+     * @return Copy sink type.
      * Expected value is &#39;AzureTableSink&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
+     * @return Write batch size. Type: integer (or Expression with resultType integer), minimum: 0.
      * 
-    */
+     */
     public Optional<Object> writeBatchSize() {
         return Optional.ofNullable(this.writeBatchSize);
     }
     /**
-     * Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * @return Write batch timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
      * 
-    */
+     */
     public Optional<Object> writeBatchTimeout() {
         return Optional.ofNullable(this.writeBatchTimeout);
     }

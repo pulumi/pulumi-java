@@ -22,6 +22,10 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
     @Import(name="namespaceName", required=true)
     private Output<String> namespaceName;
 
+    /**
+     * @return The Namespace name
+     * 
+     */
     public Output<String> namespaceName() {
         return this.namespaceName;
     }
@@ -33,6 +37,10 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group within the azure subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
     @Import(name="virtualNetworkRuleName")
     private @Nullable Output<String> virtualNetworkRuleName;
 
+    /**
+     * @return The Virtual Network Rule name.
+     * 
+     */
     public Optional<Output<String>> virtualNetworkRuleName() {
         return Optional.ofNullable(this.virtualNetworkRuleName);
     }
@@ -55,6 +67,10 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
     @Import(name="virtualNetworkSubnetId")
     private @Nullable Output<String> virtualNetworkSubnetId;
 
+    /**
+     * @return ARM ID of Virtual Network Subnet
+     * 
+     */
     public Optional<Output<String>> virtualNetworkSubnetId() {
         return Optional.ofNullable(this.virtualNetworkSubnetId);
     }
@@ -86,38 +102,86 @@ public final class NamespaceVirtualNetworkRuleArgs extends com.pulumi.resources.
             $ = new NamespaceVirtualNetworkRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(Output<String> namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param namespaceName The Namespace name
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             return namespaceName(Output.of(namespaceName));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group within the azure subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param virtualNetworkRuleName The Virtual Network Rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRuleName(@Nullable Output<String> virtualNetworkRuleName) {
             $.virtualNetworkRuleName = virtualNetworkRuleName;
             return this;
         }
 
+        /**
+         * @param virtualNetworkRuleName The Virtual Network Rule name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkRuleName(String virtualNetworkRuleName) {
             return virtualNetworkRuleName(Output.of(virtualNetworkRuleName));
         }
 
+        /**
+         * @param virtualNetworkSubnetId ARM ID of Virtual Network Subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkSubnetId(@Nullable Output<String> virtualNetworkSubnetId) {
             $.virtualNetworkSubnetId = virtualNetworkSubnetId;
             return this;
         }
 
+        /**
+         * @param virtualNetworkSubnetId ARM ID of Virtual Network Subnet
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkSubnetId(String virtualNetworkSubnetId) {
             return virtualNetworkSubnetId(Output.of(virtualNetworkSubnetId));
         }

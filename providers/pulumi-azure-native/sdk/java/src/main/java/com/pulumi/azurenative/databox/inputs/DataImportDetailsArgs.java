@@ -26,6 +26,10 @@ public final class DataImportDetailsArgs extends com.pulumi.resources.ResourceAr
     @Import(name="accountDetails", required=true)
     private Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails;
 
+    /**
+     * @return Account details of the data to be transferred
+     * 
+     */
     public Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails() {
         return this.accountDetails;
     }
@@ -54,19 +58,43 @@ public final class DataImportDetailsArgs extends com.pulumi.resources.ResourceAr
             $ = new DataImportDetailsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(Output<Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs>> accountDetails) {
             $.accountDetails = accountDetails;
             return this;
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(Either<ManagedDiskDetailsArgs,StorageAccountDetailsArgs> accountDetails) {
             return accountDetails(Output.of(accountDetails));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(ManagedDiskDetailsArgs accountDetails) {
             return accountDetails(Either.ofLeft(accountDetails));
         }
 
+        /**
+         * @param accountDetails Account details of the data to be transferred
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountDetails(StorageAccountDetailsArgs accountDetails) {
             return accountDetails(Either.ofRight(accountDetails));
         }

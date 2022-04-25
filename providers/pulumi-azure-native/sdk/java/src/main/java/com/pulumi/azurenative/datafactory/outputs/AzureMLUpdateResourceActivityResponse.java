@@ -18,53 +18,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AzureMLUpdateResourceActivityResponse {
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
      */
     private final @Nullable List<ActivityDependencyResponse> dependsOn;
     /**
-     * Activity description.
+     * @return Activity description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
      */
     private final @Nullable LinkedServiceReferenceResponse linkedServiceName;
     /**
-     * Activity name.
+     * @return Activity name.
      * 
      */
     private final String name;
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
      */
     private final @Nullable ActivityPolicyResponse policy;
     /**
-     * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
+     * @return The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
      * 
      */
     private final Object trainedModelFilePath;
     /**
-     * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
+     * @return Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
      * 
      */
     private final LinkedServiceReferenceResponse trainedModelLinkedServiceName;
     /**
-     * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
+     * @return Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
      * 
      */
     private final Object trainedModelName;
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;AzureMLUpdateResource&#39;.
      * 
      */
     private final String type;
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
      */
     private final @Nullable List<UserPropertyResponse> userProperties;
@@ -94,73 +94,73 @@ public final class AzureMLUpdateResourceActivityResponse {
     }
 
     /**
-     * Activity depends on condition.
+     * @return Activity depends on condition.
      * 
-    */
+     */
     public List<ActivityDependencyResponse> dependsOn() {
         return this.dependsOn == null ? List.of() : this.dependsOn;
     }
     /**
-     * Activity description.
+     * @return Activity description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Linked service reference.
+     * @return Linked service reference.
      * 
-    */
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
     /**
-     * Activity name.
+     * @return Activity name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Activity policy.
+     * @return Activity policy.
      * 
-    */
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
     /**
-     * The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
+     * @return The relative file path in trainedModelLinkedService to represent the .ilearner file that will be uploaded by the update operation.  Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object trainedModelFilePath() {
         return this.trainedModelFilePath;
     }
     /**
-     * Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
+     * @return Name of Azure Storage linked service holding the .ilearner file that will be uploaded by the update operation.
      * 
-    */
+     */
     public LinkedServiceReferenceResponse trainedModelLinkedServiceName() {
         return this.trainedModelLinkedServiceName;
     }
     /**
-     * Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
+     * @return Name of the Trained Model module in the Web Service experiment to be updated. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Object trainedModelName() {
         return this.trainedModelName;
     }
     /**
-     * Type of activity.
+     * @return Type of activity.
      * Expected value is &#39;AzureMLUpdateResource&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Activity user properties.
+     * @return Activity user properties.
      * 
-    */
+     */
     public List<UserPropertyResponse> userProperties() {
         return this.userProperties == null ? List.of() : this.userProperties;
     }

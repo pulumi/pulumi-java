@@ -27,6 +27,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="clientId")
     private @Nullable String clientId;
 
+    /**
+     * @return Client Id associated with the Connection Setting.
+     * 
+     */
     public Optional<String> clientId() {
         return Optional.ofNullable(this.clientId);
     }
@@ -38,6 +42,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="clientSecret")
     private @Nullable String clientSecret;
 
+    /**
+     * @return Client Secret associated with the Connection Setting
+     * 
+     */
     public Optional<String> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
@@ -49,6 +57,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Id associated with the Connection Setting.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -60,6 +72,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name associated with the Connection Setting.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -71,6 +87,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="parameters")
     private @Nullable List<ConnectionSettingParameterResponse> parameters;
 
+    /**
+     * @return Service Provider Parameters associated with the Connection Setting
+     * 
+     */
     public Optional<List<ConnectionSettingParameterResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -82,6 +102,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="provisioningState")
     private @Nullable String provisioningState;
 
+    /**
+     * @return Provisioning state of the resource
+     * 
+     */
     public Optional<String> provisioningState() {
         return Optional.ofNullable(this.provisioningState);
     }
@@ -93,6 +117,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="scopes")
     private @Nullable String scopes;
 
+    /**
+     * @return Scopes associated with the Connection Setting
+     * 
+     */
     public Optional<String> scopes() {
         return Optional.ofNullable(this.scopes);
     }
@@ -104,6 +132,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="serviceProviderDisplayName")
     private @Nullable String serviceProviderDisplayName;
 
+    /**
+     * @return Service Provider Display Name associated with the Connection Setting
+     * 
+     */
     public Optional<String> serviceProviderDisplayName() {
         return Optional.ofNullable(this.serviceProviderDisplayName);
     }
@@ -115,6 +147,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="serviceProviderId")
     private @Nullable String serviceProviderId;
 
+    /**
+     * @return Service Provider Id associated with the Connection Setting
+     * 
+     */
     public Optional<String> serviceProviderId() {
         return Optional.ofNullable(this.serviceProviderId);
     }
@@ -126,6 +162,10 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
     @Import(name="settingId", required=true)
     private String settingId;
 
+    /**
+     * @return Setting Id set by the service for the Connection Setting.
+     * 
+     */
     public String settingId() {
         return this.settingId;
     }
@@ -163,55 +203,121 @@ public final class ConnectionSettingPropertiesResponse extends com.pulumi.resour
             $ = new ConnectionSettingPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clientId Client Id associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientId(@Nullable String clientId) {
             $.clientId = clientId;
             return this;
         }
 
+        /**
+         * @param clientSecret Client Secret associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder clientSecret(@Nullable String clientSecret) {
             $.clientSecret = clientSecret;
             return this;
         }
 
+        /**
+         * @param id Id associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name associated with the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param parameters Service Provider Parameters associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable List<ConnectionSettingParameterResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Service Provider Parameters associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(ConnectionSettingParameterResponse... parameters) {
             return parameters(List.of(parameters));
         }
 
+        /**
+         * @param provisioningState Provisioning state of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(@Nullable String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param scopes Scopes associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder scopes(@Nullable String scopes) {
             $.scopes = scopes;
             return this;
         }
 
+        /**
+         * @param serviceProviderDisplayName Service Provider Display Name associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderDisplayName(@Nullable String serviceProviderDisplayName) {
             $.serviceProviderDisplayName = serviceProviderDisplayName;
             return this;
         }
 
+        /**
+         * @param serviceProviderId Service Provider Id associated with the Connection Setting
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceProviderId(@Nullable String serviceProviderId) {
             $.serviceProviderId = serviceProviderId;
             return this;
         }
 
+        /**
+         * @param settingId Setting Id set by the service for the Connection Setting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder settingId(String settingId) {
             $.settingId = settingId;
             return this;

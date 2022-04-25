@@ -25,6 +25,10 @@ public final class InitialReplicationDetailsResponse extends com.pulumi.resource
     @Import(name="initialReplicationProgressPercentage")
     private @Nullable String initialReplicationProgressPercentage;
 
+    /**
+     * @return The initial replication progress percentage.
+     * 
+     */
     public Optional<String> initialReplicationProgressPercentage() {
         return Optional.ofNullable(this.initialReplicationProgressPercentage);
     }
@@ -36,6 +40,10 @@ public final class InitialReplicationDetailsResponse extends com.pulumi.resource
     @Import(name="initialReplicationType")
     private @Nullable String initialReplicationType;
 
+    /**
+     * @return Initial replication type.
+     * 
+     */
     public Optional<String> initialReplicationType() {
         return Optional.ofNullable(this.initialReplicationType);
     }
@@ -65,11 +73,23 @@ public final class InitialReplicationDetailsResponse extends com.pulumi.resource
             $ = new InitialReplicationDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param initialReplicationProgressPercentage The initial replication progress percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationProgressPercentage(@Nullable String initialReplicationProgressPercentage) {
             $.initialReplicationProgressPercentage = initialReplicationProgressPercentage;
             return this;
         }
 
+        /**
+         * @param initialReplicationType Initial replication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder initialReplicationType(@Nullable String initialReplicationType) {
             $.initialReplicationType = initialReplicationType;
             return this;

@@ -24,6 +24,10 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="conditions", required=true)
     private List<DiagnosticConditionResponse> conditions;
 
+    /**
+     * @return A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
+     * 
+     */
     public List<DiagnosticConditionResponse> conditions() {
         return this.conditions;
     }
@@ -52,11 +56,23 @@ public final class DiagnosticsResponse extends com.pulumi.resources.InvokeArgs {
             $ = new DiagnosticsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conditions A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<DiagnosticConditionResponse> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions A collection of zero or more conditions applicable to the resource, or to the job overall, that warrant customer attention.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(DiagnosticConditionResponse... conditions) {
             return conditions(List.of(conditions));
         }

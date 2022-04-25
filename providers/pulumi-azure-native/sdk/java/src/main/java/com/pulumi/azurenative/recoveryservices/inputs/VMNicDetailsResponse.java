@@ -29,6 +29,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enableAcceleratedNetworkingOnRecovery")
     private @Nullable Boolean enableAcceleratedNetworkingOnRecovery;
 
+    /**
+     * @return A value indicating whether the NIC has accelerated networking enabled.
+     * 
+     */
     public Optional<Boolean> enableAcceleratedNetworkingOnRecovery() {
         return Optional.ofNullable(this.enableAcceleratedNetworkingOnRecovery);
     }
@@ -40,6 +44,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="enableAcceleratedNetworkingOnTfo")
     private @Nullable Boolean enableAcceleratedNetworkingOnTfo;
 
+    /**
+     * @return Whether the test failover NIC has accelerated networking enabled.
+     * 
+     */
     public Optional<Boolean> enableAcceleratedNetworkingOnTfo() {
         return Optional.ofNullable(this.enableAcceleratedNetworkingOnTfo);
     }
@@ -51,6 +59,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="ipAddressType")
     private @Nullable String ipAddressType;
 
+    /**
+     * @return Ip address type.
+     * 
+     */
     public Optional<String> ipAddressType() {
         return Optional.ofNullable(this.ipAddressType);
     }
@@ -62,6 +74,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="nicId")
     private @Nullable String nicId;
 
+    /**
+     * @return The nic Id.
+     * 
+     */
     public Optional<String> nicId() {
         return Optional.ofNullable(this.nicId);
     }
@@ -73,6 +89,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="primaryNicStaticIPAddress")
     private @Nullable String primaryNicStaticIPAddress;
 
+    /**
+     * @return Primary nic static IP address.
+     * 
+     */
     public Optional<String> primaryNicStaticIPAddress() {
         return Optional.ofNullable(this.primaryNicStaticIPAddress);
     }
@@ -84,6 +104,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryLBBackendAddressPoolIds")
     private @Nullable List<String> recoveryLBBackendAddressPoolIds;
 
+    /**
+     * @return The target backend address pools for the NIC.
+     * 
+     */
     public Optional<List<String>> recoveryLBBackendAddressPoolIds() {
         return Optional.ofNullable(this.recoveryLBBackendAddressPoolIds);
     }
@@ -95,6 +119,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryNetworkSecurityGroupId")
     private @Nullable String recoveryNetworkSecurityGroupId;
 
+    /**
+     * @return The id of the NSG associated with the NIC.
+     * 
+     */
     public Optional<String> recoveryNetworkSecurityGroupId() {
         return Optional.ofNullable(this.recoveryNetworkSecurityGroupId);
     }
@@ -106,6 +134,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryNicIpAddressType")
     private @Nullable String recoveryNicIpAddressType;
 
+    /**
+     * @return IP allocation type for recovery VM.
+     * 
+     */
     public Optional<String> recoveryNicIpAddressType() {
         return Optional.ofNullable(this.recoveryNicIpAddressType);
     }
@@ -117,6 +149,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryNicName")
     private @Nullable String recoveryNicName;
 
+    /**
+     * @return The name of the NIC to be used when creating target NICs.
+     * 
+     */
     public Optional<String> recoveryNicName() {
         return Optional.ofNullable(this.recoveryNicName);
     }
@@ -128,6 +164,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryNicResourceGroupName")
     private @Nullable String recoveryNicResourceGroupName;
 
+    /**
+     * @return The resource group of the NIC to be used when creating target NICs.
+     * 
+     */
     public Optional<String> recoveryNicResourceGroupName() {
         return Optional.ofNullable(this.recoveryNicResourceGroupName);
     }
@@ -139,6 +179,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryPublicIpAddressId")
     private @Nullable String recoveryPublicIpAddressId;
 
+    /**
+     * @return The id of the public IP address resource associated with the NIC.
+     * 
+     */
     public Optional<String> recoveryPublicIpAddressId() {
         return Optional.ofNullable(this.recoveryPublicIpAddressId);
     }
@@ -150,6 +194,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryVMNetworkId")
     private @Nullable String recoveryVMNetworkId;
 
+    /**
+     * @return Recovery VM network Id.
+     * 
+     */
     public Optional<String> recoveryVMNetworkId() {
         return Optional.ofNullable(this.recoveryVMNetworkId);
     }
@@ -161,6 +209,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="recoveryVMSubnetName")
     private @Nullable String recoveryVMSubnetName;
 
+    /**
+     * @return Recovery VM subnet name.
+     * 
+     */
     public Optional<String> recoveryVMSubnetName() {
         return Optional.ofNullable(this.recoveryVMSubnetName);
     }
@@ -172,6 +224,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="replicaNicId")
     private @Nullable String replicaNicId;
 
+    /**
+     * @return The replica nic Id.
+     * 
+     */
     public Optional<String> replicaNicId() {
         return Optional.ofNullable(this.replicaNicId);
     }
@@ -183,6 +239,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="replicaNicStaticIPAddress")
     private @Nullable String replicaNicStaticIPAddress;
 
+    /**
+     * @return Replica nic static IP address.
+     * 
+     */
     public Optional<String> replicaNicStaticIPAddress() {
         return Optional.ofNullable(this.replicaNicStaticIPAddress);
     }
@@ -194,6 +254,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="reuseExistingNic")
     private @Nullable Boolean reuseExistingNic;
 
+    /**
+     * @return A value indicating whether an existing NIC is allowed to be reused during failover subject to availability.
+     * 
+     */
     public Optional<Boolean> reuseExistingNic() {
         return Optional.ofNullable(this.reuseExistingNic);
     }
@@ -205,6 +269,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="selectionType")
     private @Nullable String selectionType;
 
+    /**
+     * @return Selection type for failover.
+     * 
+     */
     public Optional<String> selectionType() {
         return Optional.ofNullable(this.selectionType);
     }
@@ -216,6 +284,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceNicArmId")
     private @Nullable String sourceNicArmId;
 
+    /**
+     * @return The source nic ARM Id.
+     * 
+     */
     public Optional<String> sourceNicArmId() {
         return Optional.ofNullable(this.sourceNicArmId);
     }
@@ -227,6 +299,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tfoIPConfigs")
     private @Nullable List<IPConfigResponse> tfoIPConfigs;
 
+    /**
+     * @return The IP configurations to be used by NIC during test failover.
+     * 
+     */
     public Optional<List<IPConfigResponse>> tfoIPConfigs() {
         return Optional.ofNullable(this.tfoIPConfigs);
     }
@@ -238,6 +314,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tfoNetworkSecurityGroupId")
     private @Nullable String tfoNetworkSecurityGroupId;
 
+    /**
+     * @return The NSG to be used by NIC during test failover.
+     * 
+     */
     public Optional<String> tfoNetworkSecurityGroupId() {
         return Optional.ofNullable(this.tfoNetworkSecurityGroupId);
     }
@@ -249,6 +329,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tfoRecoveryNicName")
     private @Nullable String tfoRecoveryNicName;
 
+    /**
+     * @return The name of the NIC to be used when creating target NICs in TFO.
+     * 
+     */
     public Optional<String> tfoRecoveryNicName() {
         return Optional.ofNullable(this.tfoRecoveryNicName);
     }
@@ -260,6 +344,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tfoRecoveryNicResourceGroupName")
     private @Nullable String tfoRecoveryNicResourceGroupName;
 
+    /**
+     * @return The resource group of the NIC to be used when creating target NICs in TFO.
+     * 
+     */
     public Optional<String> tfoRecoveryNicResourceGroupName() {
         return Optional.ofNullable(this.tfoRecoveryNicResourceGroupName);
     }
@@ -271,6 +359,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tfoReuseExistingNic")
     private @Nullable Boolean tfoReuseExistingNic;
 
+    /**
+     * @return A value indicating whether an existing NIC is allowed to be reused during test failover subject to availability.
+     * 
+     */
     public Optional<Boolean> tfoReuseExistingNic() {
         return Optional.ofNullable(this.tfoReuseExistingNic);
     }
@@ -282,6 +374,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tfoVMNetworkId")
     private @Nullable String tfoVMNetworkId;
 
+    /**
+     * @return The network to be used by NIC during test failover.
+     * 
+     */
     public Optional<String> tfoVMNetworkId() {
         return Optional.ofNullable(this.tfoVMNetworkId);
     }
@@ -293,6 +389,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="tfoVMSubnetName")
     private @Nullable String tfoVMSubnetName;
 
+    /**
+     * @return The subnet to be used by NIC during test failover.
+     * 
+     */
     public Optional<String> tfoVMSubnetName() {
         return Optional.ofNullable(this.tfoVMSubnetName);
     }
@@ -304,6 +404,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vMNetworkName")
     private @Nullable String vMNetworkName;
 
+    /**
+     * @return VM network name.
+     * 
+     */
     public Optional<String> vMNetworkName() {
         return Optional.ofNullable(this.vMNetworkName);
     }
@@ -315,6 +419,10 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="vMSubnetName")
     private @Nullable String vMSubnetName;
 
+    /**
+     * @return VM subnet name.
+     * 
+     */
     public Optional<String> vMSubnetName() {
         return Optional.ofNullable(this.vMSubnetName);
     }
@@ -369,144 +477,318 @@ public final class VMNicDetailsResponse extends com.pulumi.resources.InvokeArgs 
             $ = new VMNicDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param enableAcceleratedNetworkingOnRecovery A value indicating whether the NIC has accelerated networking enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAcceleratedNetworkingOnRecovery(@Nullable Boolean enableAcceleratedNetworkingOnRecovery) {
             $.enableAcceleratedNetworkingOnRecovery = enableAcceleratedNetworkingOnRecovery;
             return this;
         }
 
+        /**
+         * @param enableAcceleratedNetworkingOnTfo Whether the test failover NIC has accelerated networking enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAcceleratedNetworkingOnTfo(@Nullable Boolean enableAcceleratedNetworkingOnTfo) {
             $.enableAcceleratedNetworkingOnTfo = enableAcceleratedNetworkingOnTfo;
             return this;
         }
 
+        /**
+         * @param ipAddressType Ip address type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressType(@Nullable String ipAddressType) {
             $.ipAddressType = ipAddressType;
             return this;
         }
 
+        /**
+         * @param nicId The nic Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicId(@Nullable String nicId) {
             $.nicId = nicId;
             return this;
         }
 
+        /**
+         * @param primaryNicStaticIPAddress Primary nic static IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryNicStaticIPAddress(@Nullable String primaryNicStaticIPAddress) {
             $.primaryNicStaticIPAddress = primaryNicStaticIPAddress;
             return this;
         }
 
+        /**
+         * @param recoveryLBBackendAddressPoolIds The target backend address pools for the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryLBBackendAddressPoolIds(@Nullable List<String> recoveryLBBackendAddressPoolIds) {
             $.recoveryLBBackendAddressPoolIds = recoveryLBBackendAddressPoolIds;
             return this;
         }
 
+        /**
+         * @param recoveryLBBackendAddressPoolIds The target backend address pools for the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryLBBackendAddressPoolIds(String... recoveryLBBackendAddressPoolIds) {
             return recoveryLBBackendAddressPoolIds(List.of(recoveryLBBackendAddressPoolIds));
         }
 
+        /**
+         * @param recoveryNetworkSecurityGroupId The id of the NSG associated with the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryNetworkSecurityGroupId(@Nullable String recoveryNetworkSecurityGroupId) {
             $.recoveryNetworkSecurityGroupId = recoveryNetworkSecurityGroupId;
             return this;
         }
 
+        /**
+         * @param recoveryNicIpAddressType IP allocation type for recovery VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryNicIpAddressType(@Nullable String recoveryNicIpAddressType) {
             $.recoveryNicIpAddressType = recoveryNicIpAddressType;
             return this;
         }
 
+        /**
+         * @param recoveryNicName The name of the NIC to be used when creating target NICs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryNicName(@Nullable String recoveryNicName) {
             $.recoveryNicName = recoveryNicName;
             return this;
         }
 
+        /**
+         * @param recoveryNicResourceGroupName The resource group of the NIC to be used when creating target NICs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryNicResourceGroupName(@Nullable String recoveryNicResourceGroupName) {
             $.recoveryNicResourceGroupName = recoveryNicResourceGroupName;
             return this;
         }
 
+        /**
+         * @param recoveryPublicIpAddressId The id of the public IP address resource associated with the NIC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPublicIpAddressId(@Nullable String recoveryPublicIpAddressId) {
             $.recoveryPublicIpAddressId = recoveryPublicIpAddressId;
             return this;
         }
 
+        /**
+         * @param recoveryVMNetworkId Recovery VM network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryVMNetworkId(@Nullable String recoveryVMNetworkId) {
             $.recoveryVMNetworkId = recoveryVMNetworkId;
             return this;
         }
 
+        /**
+         * @param recoveryVMSubnetName Recovery VM subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryVMSubnetName(@Nullable String recoveryVMSubnetName) {
             $.recoveryVMSubnetName = recoveryVMSubnetName;
             return this;
         }
 
+        /**
+         * @param replicaNicId The replica nic Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaNicId(@Nullable String replicaNicId) {
             $.replicaNicId = replicaNicId;
             return this;
         }
 
+        /**
+         * @param replicaNicStaticIPAddress Replica nic static IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaNicStaticIPAddress(@Nullable String replicaNicStaticIPAddress) {
             $.replicaNicStaticIPAddress = replicaNicStaticIPAddress;
             return this;
         }
 
+        /**
+         * @param reuseExistingNic A value indicating whether an existing NIC is allowed to be reused during failover subject to availability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reuseExistingNic(@Nullable Boolean reuseExistingNic) {
             $.reuseExistingNic = reuseExistingNic;
             return this;
         }
 
+        /**
+         * @param selectionType Selection type for failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectionType(@Nullable String selectionType) {
             $.selectionType = selectionType;
             return this;
         }
 
+        /**
+         * @param sourceNicArmId The source nic ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceNicArmId(@Nullable String sourceNicArmId) {
             $.sourceNicArmId = sourceNicArmId;
             return this;
         }
 
+        /**
+         * @param tfoIPConfigs The IP configurations to be used by NIC during test failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoIPConfigs(@Nullable List<IPConfigResponse> tfoIPConfigs) {
             $.tfoIPConfigs = tfoIPConfigs;
             return this;
         }
 
+        /**
+         * @param tfoIPConfigs The IP configurations to be used by NIC during test failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoIPConfigs(IPConfigResponse... tfoIPConfigs) {
             return tfoIPConfigs(List.of(tfoIPConfigs));
         }
 
+        /**
+         * @param tfoNetworkSecurityGroupId The NSG to be used by NIC during test failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoNetworkSecurityGroupId(@Nullable String tfoNetworkSecurityGroupId) {
             $.tfoNetworkSecurityGroupId = tfoNetworkSecurityGroupId;
             return this;
         }
 
+        /**
+         * @param tfoRecoveryNicName The name of the NIC to be used when creating target NICs in TFO.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoRecoveryNicName(@Nullable String tfoRecoveryNicName) {
             $.tfoRecoveryNicName = tfoRecoveryNicName;
             return this;
         }
 
+        /**
+         * @param tfoRecoveryNicResourceGroupName The resource group of the NIC to be used when creating target NICs in TFO.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoRecoveryNicResourceGroupName(@Nullable String tfoRecoveryNicResourceGroupName) {
             $.tfoRecoveryNicResourceGroupName = tfoRecoveryNicResourceGroupName;
             return this;
         }
 
+        /**
+         * @param tfoReuseExistingNic A value indicating whether an existing NIC is allowed to be reused during test failover subject to availability.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoReuseExistingNic(@Nullable Boolean tfoReuseExistingNic) {
             $.tfoReuseExistingNic = tfoReuseExistingNic;
             return this;
         }
 
+        /**
+         * @param tfoVMNetworkId The network to be used by NIC during test failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoVMNetworkId(@Nullable String tfoVMNetworkId) {
             $.tfoVMNetworkId = tfoVMNetworkId;
             return this;
         }
 
+        /**
+         * @param tfoVMSubnetName The subnet to be used by NIC during test failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tfoVMSubnetName(@Nullable String tfoVMSubnetName) {
             $.tfoVMSubnetName = tfoVMSubnetName;
             return this;
         }
 
+        /**
+         * @param vMNetworkName VM network name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vMNetworkName(@Nullable String vMNetworkName) {
             $.vMNetworkName = vMNetworkName;
             return this;
         }
 
+        /**
+         * @param vMSubnetName VM subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vMSubnetName(@Nullable String vMSubnetName) {
             $.vMSubnetName = vMSubnetName;
             return this;

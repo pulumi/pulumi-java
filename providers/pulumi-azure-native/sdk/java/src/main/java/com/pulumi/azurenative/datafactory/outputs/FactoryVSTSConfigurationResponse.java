@@ -12,42 +12,42 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FactoryVSTSConfigurationResponse {
     /**
-     * Account name.
+     * @return Account name.
      * 
      */
     private final String accountName;
     /**
-     * Collaboration branch.
+     * @return Collaboration branch.
      * 
      */
     private final String collaborationBranch;
     /**
-     * Last commit id.
+     * @return Last commit id.
      * 
      */
     private final @Nullable String lastCommitId;
     /**
-     * VSTS project name.
+     * @return VSTS project name.
      * 
      */
     private final String projectName;
     /**
-     * Repository name.
+     * @return Repository name.
      * 
      */
     private final String repositoryName;
     /**
-     * Root folder.
+     * @return Root folder.
      * 
      */
     private final String rootFolder;
     /**
-     * VSTS tenant id.
+     * @return VSTS tenant id.
      * 
      */
     private final @Nullable String tenantId;
     /**
-     * Type of repo configuration.
+     * @return Type of repo configuration.
      * Expected value is &#39;FactoryVSTSConfiguration&#39;.
      * 
      */
@@ -74,59 +74,59 @@ public final class FactoryVSTSConfigurationResponse {
     }
 
     /**
-     * Account name.
+     * @return Account name.
      * 
-    */
+     */
     public String accountName() {
         return this.accountName;
     }
     /**
-     * Collaboration branch.
+     * @return Collaboration branch.
      * 
-    */
+     */
     public String collaborationBranch() {
         return this.collaborationBranch;
     }
     /**
-     * Last commit id.
+     * @return Last commit id.
      * 
-    */
+     */
     public Optional<String> lastCommitId() {
         return Optional.ofNullable(this.lastCommitId);
     }
     /**
-     * VSTS project name.
+     * @return VSTS project name.
      * 
-    */
+     */
     public String projectName() {
         return this.projectName;
     }
     /**
-     * Repository name.
+     * @return Repository name.
      * 
-    */
+     */
     public String repositoryName() {
         return this.repositoryName;
     }
     /**
-     * Root folder.
+     * @return Root folder.
      * 
-    */
+     */
     public String rootFolder() {
         return this.rootFolder;
     }
     /**
-     * VSTS tenant id.
+     * @return VSTS tenant id.
      * 
-    */
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
     /**
-     * Type of repo configuration.
+     * @return Type of repo configuration.
      * Expected value is &#39;FactoryVSTSConfiguration&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

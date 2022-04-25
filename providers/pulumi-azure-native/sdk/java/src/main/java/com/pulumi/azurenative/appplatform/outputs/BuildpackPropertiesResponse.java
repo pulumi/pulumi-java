@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BuildpackPropertiesResponse {
     /**
-     * Id of the buildpack
+     * @return Id of the buildpack
      * 
      */
     private final @Nullable String id;
@@ -23,9 +23,9 @@ public final class BuildpackPropertiesResponse {
     }
 
     /**
-     * Id of the buildpack
+     * @return Id of the buildpack
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

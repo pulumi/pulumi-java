@@ -24,6 +24,10 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return Display name of the job stage.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -35,6 +39,10 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="jobStageDetails", required=true)
     private Object jobStageDetails;
 
+    /**
+     * @return Job Stage Details
+     * 
+     */
     public Object jobStageDetails() {
         return this.jobStageDetails;
     }
@@ -46,6 +54,10 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageName", required=true)
     private String stageName;
 
+    /**
+     * @return Name of the job stage.
+     * 
+     */
     public String stageName() {
         return this.stageName;
     }
@@ -57,6 +69,10 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageStatus", required=true)
     private String stageStatus;
 
+    /**
+     * @return Status of the job stage.
+     * 
+     */
     public String stageStatus() {
         return this.stageStatus;
     }
@@ -68,6 +84,10 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="stageTime", required=true)
     private String stageTime;
 
+    /**
+     * @return Time for the job stage in UTC ISO 8601 format.
+     * 
+     */
     public String stageTime() {
         return this.stageTime;
     }
@@ -100,26 +120,56 @@ public final class JobStagesResponse extends com.pulumi.resources.InvokeArgs {
             $ = new JobStagesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param displayName Display name of the job stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param jobStageDetails Job Stage Details
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobStageDetails(Object jobStageDetails) {
             $.jobStageDetails = jobStageDetails;
             return this;
         }
 
+        /**
+         * @param stageName Name of the job stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageName(String stageName) {
             $.stageName = stageName;
             return this;
         }
 
+        /**
+         * @param stageStatus Status of the job stage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageStatus(String stageStatus) {
             $.stageStatus = stageStatus;
             return this;
         }
 
+        /**
+         * @param stageTime Time for the job stage in UTC ISO 8601 format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stageTime(String stageTime) {
             $.stageTime = stageTime;
             return this;

@@ -28,6 +28,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="identifierUri")
     private @Nullable Output<String> identifierUri;
 
+    /**
+     * @return Indicates the identifier uri for aad auth.
+     * 
+     */
     public Optional<Output<String>> identifierUri() {
         return Optional.ofNullable(this.identifierUri);
     }
@@ -39,6 +43,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the webhook receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -50,6 +58,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="objectId")
     private @Nullable Output<String> objectId;
 
+    /**
+     * @return Indicates the webhook app object Id for aad auth.
+     * 
+     */
     public Optional<Output<String>> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -61,6 +73,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="serviceUri", required=true)
     private Output<String> serviceUri;
 
+    /**
+     * @return The URI where webhooks should be sent.
+     * 
+     */
     public Output<String> serviceUri() {
         return this.serviceUri;
     }
@@ -72,6 +88,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Indicates the tenant id for aad auth.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -83,6 +103,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="useAadAuth")
     private @Nullable Output<Boolean> useAadAuth;
 
+    /**
+     * @return Indicates whether or not use AAD authentication.
+     * 
+     */
     public Optional<Output<Boolean>> useAadAuth() {
         return Optional.ofNullable(this.useAadAuth);
     }
@@ -94,6 +118,10 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="useCommonAlertSchema")
     private @Nullable Output<Boolean> useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Output<Boolean>> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -128,65 +156,149 @@ public final class WebhookReceiverArgs extends com.pulumi.resources.ResourceArgs
             $ = new WebhookReceiverArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identifierUri Indicates the identifier uri for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifierUri(@Nullable Output<String> identifierUri) {
             $.identifierUri = identifierUri;
             return this;
         }
 
+        /**
+         * @param identifierUri Indicates the identifier uri for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifierUri(String identifierUri) {
             return identifierUri(Output.of(identifierUri));
         }
 
+        /**
+         * @param name The name of the webhook receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the webhook receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param objectId Indicates the webhook app object Id for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable Output<String> objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param objectId Indicates the webhook app object Id for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(String objectId) {
             return objectId(Output.of(objectId));
         }
 
+        /**
+         * @param serviceUri The URI where webhooks should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(Output<String> serviceUri) {
             $.serviceUri = serviceUri;
             return this;
         }
 
+        /**
+         * @param serviceUri The URI where webhooks should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(String serviceUri) {
             return serviceUri(Output.of(serviceUri));
         }
 
+        /**
+         * @param tenantId Indicates the tenant id for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Indicates the tenant id for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param useAadAuth Indicates whether or not use AAD authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useAadAuth(@Nullable Output<Boolean> useAadAuth) {
             $.useAadAuth = useAadAuth;
             return this;
         }
 
+        /**
+         * @param useAadAuth Indicates whether or not use AAD authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useAadAuth(Boolean useAadAuth) {
             return useAadAuth(Output.of(useAadAuth));
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Output<Boolean> useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(Boolean useCommonAlertSchema) {
             return useCommonAlertSchema(Output.of(useCommonAlertSchema));
         }

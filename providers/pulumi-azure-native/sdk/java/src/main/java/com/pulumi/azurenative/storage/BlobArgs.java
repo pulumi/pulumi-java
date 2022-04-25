@@ -27,6 +27,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accessTier")
     private @Nullable Output<BlobAccessTier> accessTier;
 
+    /**
+     * @return The access tier of the storage blob.
+     * 
+     */
     public Optional<Output<BlobAccessTier>> accessTier() {
         return Optional.ofNullable(this.accessTier);
     }
@@ -38,6 +42,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Specifies the storage account in which to create the storage container.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -49,6 +57,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="blobName")
     private @Nullable Output<String> blobName;
 
+    /**
+     * @return The name of the storage blob. Must be unique within the storage container the blob is located.
+     * 
+     */
     public Optional<Output<String>> blobName() {
         return Optional.ofNullable(this.blobName);
     }
@@ -60,6 +72,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="containerName", required=true)
     private Output<String> containerName;
 
+    /**
+     * @return The name of the storage container in which this blob should be created.
+     * 
+     */
     public Output<String> containerName() {
         return this.containerName;
     }
@@ -71,6 +87,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentMd5")
     private @Nullable Output<String> contentMd5;
 
+    /**
+     * @return The MD5 sum of the blob contents. Cannot be defined if blob type is Append.
+     * 
+     */
     public Optional<Output<String>> contentMd5() {
         return Optional.ofNullable(this.contentMd5);
     }
@@ -82,6 +102,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="contentType")
     private @Nullable Output<String> contentType;
 
+    /**
+     * @return The content type of the storage blob. Defaults to `application/octet-stream`.
+     * 
+     */
     public Optional<Output<String>> contentType() {
         return Optional.ofNullable(this.contentType);
     }
@@ -93,6 +117,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return A map of custom blob metadata.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -104,6 +132,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the user&#39;s subscription.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -115,6 +147,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="source")
     private @Nullable Output<AssetOrArchive> source;
 
+    /**
+     * @return An asset to copy to the blob contents. This field cannot be specified for Append blobs.
+     * 
+     */
     public Optional<Output<AssetOrArchive>> source() {
         return Optional.ofNullable(this.source);
     }
@@ -126,6 +162,10 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<BlobType> type;
 
+    /**
+     * @return The type of the storage blob to be created. Defaults to &#39;Block&#39;.
+     * 
+     */
     public Optional<Output<BlobType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -163,92 +203,212 @@ public final class BlobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BlobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTier The access tier of the storage blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(@Nullable Output<BlobAccessTier> accessTier) {
             $.accessTier = accessTier;
             return this;
         }
 
+        /**
+         * @param accessTier The access tier of the storage blob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTier(BlobAccessTier accessTier) {
             return accessTier(Output.of(accessTier));
         }
 
+        /**
+         * @param accountName Specifies the storage account in which to create the storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Specifies the storage account in which to create the storage container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param blobName The name of the storage blob. Must be unique within the storage container the blob is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobName(@Nullable Output<String> blobName) {
             $.blobName = blobName;
             return this;
         }
 
+        /**
+         * @param blobName The name of the storage blob. Must be unique within the storage container the blob is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blobName(String blobName) {
             return blobName(Output.of(blobName));
         }
 
+        /**
+         * @param containerName The name of the storage container in which this blob should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(Output<String> containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerName The name of the storage container in which this blob should be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(String containerName) {
             return containerName(Output.of(containerName));
         }
 
+        /**
+         * @param contentMd5 The MD5 sum of the blob contents. Cannot be defined if blob type is Append.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentMd5(@Nullable Output<String> contentMd5) {
             $.contentMd5 = contentMd5;
             return this;
         }
 
+        /**
+         * @param contentMd5 The MD5 sum of the blob contents. Cannot be defined if blob type is Append.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentMd5(String contentMd5) {
             return contentMd5(Output.of(contentMd5));
         }
 
+        /**
+         * @param contentType The content type of the storage blob. Defaults to `application/octet-stream`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(@Nullable Output<String> contentType) {
             $.contentType = contentType;
             return this;
         }
 
+        /**
+         * @param contentType The content type of the storage blob. Defaults to `application/octet-stream`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contentType(String contentType) {
             return contentType(Output.of(contentType));
         }
 
+        /**
+         * @param metadata A map of custom blob metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata A map of custom blob metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the user&#39;s subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param source An asset to copy to the blob contents. This field cannot be specified for Append blobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(@Nullable Output<AssetOrArchive> source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param source An asset to copy to the blob contents. This field cannot be specified for Append blobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(AssetOrArchive source) {
             return source(Output.of(source));
         }
 
+        /**
+         * @param type The type of the storage blob to be created. Defaults to &#39;Block&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<BlobType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of the storage blob to be created. Defaults to &#39;Block&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(BlobType type) {
             return type(Output.of(type));
         }

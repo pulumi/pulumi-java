@@ -29,6 +29,10 @@ public final class DataFlowSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="dataset")
     private @Nullable Output<DatasetReferenceArgs> dataset;
 
+    /**
+     * @return Dataset reference.
+     * 
+     */
     public Optional<Output<DatasetReferenceArgs>> dataset() {
         return Optional.ofNullable(this.dataset);
     }
@@ -40,6 +44,10 @@ public final class DataFlowSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Transformation description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class DataFlowSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="flowlet")
     private @Nullable Output<DataFlowReferenceArgs> flowlet;
 
+    /**
+     * @return Flowlet Reference
+     * 
+     */
     public Optional<Output<DataFlowReferenceArgs>> flowlet() {
         return Optional.ofNullable(this.flowlet);
     }
@@ -62,6 +74,10 @@ public final class DataFlowSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="linkedService")
     private @Nullable Output<LinkedServiceReferenceArgs> linkedService;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> linkedService() {
         return Optional.ofNullable(this.linkedService);
     }
@@ -73,6 +89,10 @@ public final class DataFlowSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Transformation name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -84,6 +104,10 @@ public final class DataFlowSourceArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="schemaLinkedService")
     private @Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService;
 
+    /**
+     * @return Schema linked service reference.
+     * 
+     */
     public Optional<Output<LinkedServiceReferenceArgs>> schemaLinkedService() {
         return Optional.ofNullable(this.schemaLinkedService);
     }
@@ -117,56 +141,128 @@ public final class DataFlowSourceArgs extends com.pulumi.resources.ResourceArgs 
             $ = new DataFlowSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(@Nullable Output<DatasetReferenceArgs> dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dataset Dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceArgs dataset) {
             return dataset(Output.of(dataset));
         }
 
+        /**
+         * @param description Transformation description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Transformation description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param flowlet Flowlet Reference
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowlet(@Nullable Output<DataFlowReferenceArgs> flowlet) {
             $.flowlet = flowlet;
             return this;
         }
 
+        /**
+         * @param flowlet Flowlet Reference
+         * 
+         * @return builder
+         * 
+         */
         public Builder flowlet(DataFlowReferenceArgs flowlet) {
             return flowlet(Output.of(flowlet));
         }
 
+        /**
+         * @param linkedService Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(@Nullable Output<LinkedServiceReferenceArgs> linkedService) {
             $.linkedService = linkedService;
             return this;
         }
 
+        /**
+         * @param linkedService Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedService(LinkedServiceReferenceArgs linkedService) {
             return linkedService(Output.of(linkedService));
         }
 
+        /**
+         * @param name Transformation name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Transformation name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param schemaLinkedService Schema linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaLinkedService(@Nullable Output<LinkedServiceReferenceArgs> schemaLinkedService) {
             $.schemaLinkedService = schemaLinkedService;
             return this;
         }
 
+        /**
+         * @param schemaLinkedService Schema linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaLinkedService(LinkedServiceReferenceArgs schemaLinkedService) {
             return schemaLinkedService(Output.of(schemaLinkedService));
         }

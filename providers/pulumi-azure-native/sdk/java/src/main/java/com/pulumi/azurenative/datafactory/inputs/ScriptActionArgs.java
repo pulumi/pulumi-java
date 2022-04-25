@@ -27,6 +27,10 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The user provided name of the script action.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parameters")
     private @Nullable Output<String> parameters;
 
+    /**
+     * @return The parameters for the script action.
+     * 
+     */
     public Optional<Output<String>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -49,6 +57,10 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="roles", required=true)
     private Output<Object> roles;
 
+    /**
+     * @return The node types on which the script action should be executed.
+     * 
+     */
     public Output<Object> roles() {
         return this.roles;
     }
@@ -60,6 +72,10 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="uri", required=true)
     private Output<String> uri;
 
+    /**
+     * @return The URI for the script action.
+     * 
+     */
     public Output<String> uri() {
         return this.uri;
     }
@@ -91,38 +107,86 @@ public final class ScriptActionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ScriptActionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The user provided name of the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The user provided name of the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param parameters The parameters for the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Output<String> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters The parameters for the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(String parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param roles The node types on which the script action should be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(Output<Object> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The node types on which the script action should be executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(Object roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param uri The URI for the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(Output<String> uri) {
             $.uri = uri;
             return this;
         }
 
+        /**
+         * @param uri The URI for the script action.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uri(String uri) {
             return uri(Output.of(uri));
         }

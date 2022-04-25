@@ -35,6 +35,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="caching")
     private @Nullable Output<CachingTypes> caching;
 
+    /**
+     * @return Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+     * 
+     */
     public Optional<Output<CachingTypes>> caching() {
         return Optional.ofNullable(this.caching);
     }
@@ -46,6 +50,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createOption", required=true)
     private Output<Either<String,DiskCreateOptionTypes>> createOption;
 
+    /**
+     * @return Specifies how the virtual machine should be created.&lt;br&gt;&lt;br&gt; Possible values are:&lt;br&gt;&lt;br&gt; **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.&lt;br&gt;&lt;br&gt; **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+     * 
+     */
     public Output<Either<String,DiskCreateOptionTypes>> createOption() {
         return this.createOption;
     }
@@ -57,6 +65,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deleteOption")
     private @Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption;
 
+    /**
+     * @return Specifies whether data disk should be deleted or detached upon VM deletion.&lt;br&gt;&lt;br&gt; Possible values: &lt;br&gt;&lt;br&gt; **Delete** If this value is used, the data disk is deleted when VM is deleted.&lt;br&gt;&lt;br&gt; **Detach** If this value is used, the data disk is retained after VM is deleted.&lt;br&gt;&lt;br&gt; The default value is set to **detach**
+     * 
+     */
     public Optional<Output<Either<String,DiskDeleteOptionTypes>>> deleteOption() {
         return Optional.ofNullable(this.deleteOption);
     }
@@ -68,6 +80,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="detachOption")
     private @Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption;
 
+    /**
+     * @return Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. &lt;br&gt;&lt;br&gt; detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. &lt;br&gt;&lt;br&gt; This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to &#39;true&#39; along with setting detachOption: &#39;ForceDetach&#39;.
+     * 
+     */
     public Optional<Output<Either<String,DiskDetachOptionTypes>>> detachOption() {
         return Optional.ofNullable(this.detachOption);
     }
@@ -79,6 +95,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="diskSizeGB")
     private @Nullable Output<Integer> diskSizeGB;
 
+    /**
+     * @return Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+     * 
+     */
     public Optional<Output<Integer>> diskSizeGB() {
         return Optional.ofNullable(this.diskSizeGB);
     }
@@ -90,6 +110,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="image")
     private @Nullable Output<VirtualHardDiskArgs> image;
 
+    /**
+     * @return The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+     * 
+     */
     public Optional<Output<VirtualHardDiskArgs>> image() {
         return Optional.ofNullable(this.image);
     }
@@ -101,6 +125,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lun", required=true)
     private Output<Integer> lun;
 
+    /**
+     * @return Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+     * 
+     */
     public Output<Integer> lun() {
         return this.lun;
     }
@@ -112,6 +140,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedDisk")
     private @Nullable Output<ManagedDiskParametersArgs> managedDisk;
 
+    /**
+     * @return The managed disk parameters.
+     * 
+     */
     public Optional<Output<ManagedDiskParametersArgs>> managedDisk() {
         return Optional.ofNullable(this.managedDisk);
     }
@@ -123,6 +155,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The disk name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -134,6 +170,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="toBeDetached")
     private @Nullable Output<Boolean> toBeDetached;
 
+    /**
+     * @return Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset
+     * 
+     */
     public Optional<Output<Boolean>> toBeDetached() {
         return Optional.ofNullable(this.toBeDetached);
     }
@@ -145,6 +185,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="vhd")
     private @Nullable Output<VirtualHardDiskArgs> vhd;
 
+    /**
+     * @return The virtual hard disk.
+     * 
+     */
     public Optional<Output<VirtualHardDiskArgs>> vhd() {
         return Optional.ofNullable(this.vhd);
     }
@@ -156,6 +200,10 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="writeAcceleratorEnabled")
     private @Nullable Output<Boolean> writeAcceleratorEnabled;
 
+    /**
+     * @return Specifies whether writeAccelerator should be enabled or disabled on the disk.
+     * 
+     */
     public Optional<Output<Boolean>> writeAcceleratorEnabled() {
         return Optional.ofNullable(this.writeAcceleratorEnabled);
     }
@@ -195,134 +243,314 @@ public final class DataDiskArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DataDiskArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param caching Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(@Nullable Output<CachingTypes> caching) {
             $.caching = caching;
             return this;
         }
 
+        /**
+         * @param caching Specifies the caching requirements. &lt;br&gt;&lt;br&gt; Possible values are: &lt;br&gt;&lt;br&gt; **None** &lt;br&gt;&lt;br&gt; **ReadOnly** &lt;br&gt;&lt;br&gt; **ReadWrite** &lt;br&gt;&lt;br&gt; Default: **None for Standard storage. ReadOnly for Premium storage**
+         * 
+         * @return builder
+         * 
+         */
         public Builder caching(CachingTypes caching) {
             return caching(Output.of(caching));
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.&lt;br&gt;&lt;br&gt; Possible values are:&lt;br&gt;&lt;br&gt; **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.&lt;br&gt;&lt;br&gt; **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(Output<Either<String,DiskCreateOptionTypes>> createOption) {
             $.createOption = createOption;
             return this;
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.&lt;br&gt;&lt;br&gt; Possible values are:&lt;br&gt;&lt;br&gt; **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.&lt;br&gt;&lt;br&gt; **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(Either<String,DiskCreateOptionTypes> createOption) {
             return createOption(Output.of(createOption));
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.&lt;br&gt;&lt;br&gt; Possible values are:&lt;br&gt;&lt;br&gt; **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.&lt;br&gt;&lt;br&gt; **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(String createOption) {
             return createOption(Either.ofLeft(createOption));
         }
 
+        /**
+         * @param createOption Specifies how the virtual machine should be created.&lt;br&gt;&lt;br&gt; Possible values are:&lt;br&gt;&lt;br&gt; **Attach** \u2013 This value is used when you are using a specialized disk to create the virtual machine.&lt;br&gt;&lt;br&gt; **FromImage** \u2013 This value is used when you are using an image to create the virtual machine. If you are using a platform image, you also use the imageReference element described above. If you are using a marketplace image, you  also use the plan element previously described.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(DiskCreateOptionTypes createOption) {
             return createOption(Either.ofRight(createOption));
         }
 
+        /**
+         * @param deleteOption Specifies whether data disk should be deleted or detached upon VM deletion.&lt;br&gt;&lt;br&gt; Possible values: &lt;br&gt;&lt;br&gt; **Delete** If this value is used, the data disk is deleted when VM is deleted.&lt;br&gt;&lt;br&gt; **Detach** If this value is used, the data disk is retained after VM is deleted.&lt;br&gt;&lt;br&gt; The default value is set to **detach**
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(@Nullable Output<Either<String,DiskDeleteOptionTypes>> deleteOption) {
             $.deleteOption = deleteOption;
             return this;
         }
 
+        /**
+         * @param deleteOption Specifies whether data disk should be deleted or detached upon VM deletion.&lt;br&gt;&lt;br&gt; Possible values: &lt;br&gt;&lt;br&gt; **Delete** If this value is used, the data disk is deleted when VM is deleted.&lt;br&gt;&lt;br&gt; **Detach** If this value is used, the data disk is retained after VM is deleted.&lt;br&gt;&lt;br&gt; The default value is set to **detach**
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(Either<String,DiskDeleteOptionTypes> deleteOption) {
             return deleteOption(Output.of(deleteOption));
         }
 
+        /**
+         * @param deleteOption Specifies whether data disk should be deleted or detached upon VM deletion.&lt;br&gt;&lt;br&gt; Possible values: &lt;br&gt;&lt;br&gt; **Delete** If this value is used, the data disk is deleted when VM is deleted.&lt;br&gt;&lt;br&gt; **Detach** If this value is used, the data disk is retained after VM is deleted.&lt;br&gt;&lt;br&gt; The default value is set to **detach**
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(String deleteOption) {
             return deleteOption(Either.ofLeft(deleteOption));
         }
 
+        /**
+         * @param deleteOption Specifies whether data disk should be deleted or detached upon VM deletion.&lt;br&gt;&lt;br&gt; Possible values: &lt;br&gt;&lt;br&gt; **Delete** If this value is used, the data disk is deleted when VM is deleted.&lt;br&gt;&lt;br&gt; **Detach** If this value is used, the data disk is retained after VM is deleted.&lt;br&gt;&lt;br&gt; The default value is set to **detach**
+         * 
+         * @return builder
+         * 
+         */
         public Builder deleteOption(DiskDeleteOptionTypes deleteOption) {
             return deleteOption(Either.ofRight(deleteOption));
         }
 
+        /**
+         * @param detachOption Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. &lt;br&gt;&lt;br&gt; detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. &lt;br&gt;&lt;br&gt; This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to &#39;true&#39; along with setting detachOption: &#39;ForceDetach&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detachOption(@Nullable Output<Either<String,DiskDetachOptionTypes>> detachOption) {
             $.detachOption = detachOption;
             return this;
         }
 
+        /**
+         * @param detachOption Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. &lt;br&gt;&lt;br&gt; detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. &lt;br&gt;&lt;br&gt; This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to &#39;true&#39; along with setting detachOption: &#39;ForceDetach&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detachOption(Either<String,DiskDetachOptionTypes> detachOption) {
             return detachOption(Output.of(detachOption));
         }
 
+        /**
+         * @param detachOption Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. &lt;br&gt;&lt;br&gt; detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. &lt;br&gt;&lt;br&gt; This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to &#39;true&#39; along with setting detachOption: &#39;ForceDetach&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detachOption(String detachOption) {
             return detachOption(Either.ofLeft(detachOption));
         }
 
+        /**
+         * @param detachOption Specifies the detach behavior to be used while detaching a disk or which is already in the process of detachment from the virtual machine. Supported values: **ForceDetach**. &lt;br&gt;&lt;br&gt; detachOption: **ForceDetach** is applicable only for managed data disks. If a previous detachment attempt of the data disk did not complete due to an unexpected failure from the virtual machine and the disk is still not released then use force-detach as a last resort option to detach the disk forcibly from the VM. All writes might not have been flushed when using this detach behavior. &lt;br&gt;&lt;br&gt; This feature is still in preview mode and is not supported for VirtualMachineScaleSet. To force-detach a data disk update toBeDetached to &#39;true&#39; along with setting detachOption: &#39;ForceDetach&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detachOption(DiskDetachOptionTypes detachOption) {
             return detachOption(Either.ofRight(detachOption));
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(@Nullable Output<Integer> diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param diskSizeGB Specifies the size of an empty data disk in gigabytes. This element can be used to overwrite the size of the disk in a virtual machine image. &lt;br&gt;&lt;br&gt; This value cannot be larger than 1023 GB
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(Integer diskSizeGB) {
             return diskSizeGB(Output.of(diskSizeGB));
         }
 
+        /**
+         * @param image The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(@Nullable Output<VirtualHardDiskArgs> image) {
             $.image = image;
             return this;
         }
 
+        /**
+         * @param image The source user image virtual hard disk. The virtual hard disk will be copied before being attached to the virtual machine. If SourceImage is provided, the destination virtual hard drive must not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder image(VirtualHardDiskArgs image) {
             return image(Output.of(image));
         }
 
+        /**
+         * @param lun Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Output<Integer> lun) {
             $.lun = lun;
             return this;
         }
 
+        /**
+         * @param lun Specifies the logical unit number of the data disk. This value is used to identify data disks within the VM and therefore must be unique for each data disk attached to a VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lun(Integer lun) {
             return lun(Output.of(lun));
         }
 
+        /**
+         * @param managedDisk The managed disk parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(@Nullable Output<ManagedDiskParametersArgs> managedDisk) {
             $.managedDisk = managedDisk;
             return this;
         }
 
+        /**
+         * @param managedDisk The managed disk parameters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedDisk(ManagedDiskParametersArgs managedDisk) {
             return managedDisk(Output.of(managedDisk));
         }
 
+        /**
+         * @param name The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The disk name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param toBeDetached Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder toBeDetached(@Nullable Output<Boolean> toBeDetached) {
             $.toBeDetached = toBeDetached;
             return this;
         }
 
+        /**
+         * @param toBeDetached Specifies whether the data disk is in process of detachment from the VirtualMachine/VirtualMachineScaleset
+         * 
+         * @return builder
+         * 
+         */
         public Builder toBeDetached(Boolean toBeDetached) {
             return toBeDetached(Output.of(toBeDetached));
         }
 
+        /**
+         * @param vhd The virtual hard disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhd(@Nullable Output<VirtualHardDiskArgs> vhd) {
             $.vhd = vhd;
             return this;
         }
 
+        /**
+         * @param vhd The virtual hard disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder vhd(VirtualHardDiskArgs vhd) {
             return vhd(Output.of(vhd));
         }
 
+        /**
+         * @param writeAcceleratorEnabled Specifies whether writeAccelerator should be enabled or disabled on the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeAcceleratorEnabled(@Nullable Output<Boolean> writeAcceleratorEnabled) {
             $.writeAcceleratorEnabled = writeAcceleratorEnabled;
             return this;
         }
 
+        /**
+         * @param writeAcceleratorEnabled Specifies whether writeAccelerator should be enabled or disabled on the disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder writeAcceleratorEnabled(Boolean writeAcceleratorEnabled) {
             return writeAcceleratorEnabled(Output.of(writeAcceleratorEnabled));
         }

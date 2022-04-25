@@ -24,6 +24,10 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="default")
     private @Nullable Output<String> default_;
 
+    /**
+     * @return Default string modeled as parameter for auto generation to work correctly.
+     * 
+     */
     public Optional<Output<String>> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -35,6 +39,10 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return The name of the Redis cache.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -46,6 +54,10 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -57,6 +69,10 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="scheduleEntries", required=true)
     private Output<List<ScheduleEntryArgs>> scheduleEntries;
 
+    /**
+     * @return List of patch schedules for a Redis cache.
+     * 
+     */
     public Output<List<ScheduleEntryArgs>> scheduleEntries() {
         return this.scheduleEntries;
     }
@@ -88,42 +104,96 @@ public final class PatchScheduleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PatchScheduleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param default_ Default string modeled as parameter for auto generation to work correctly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable Output<String> default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param default_ Default string modeled as parameter for auto generation to work correctly.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(String default_) {
             return default_(Output.of(default_));
         }
 
+        /**
+         * @param name The name of the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param scheduleEntries List of patch schedules for a Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleEntries(Output<List<ScheduleEntryArgs>> scheduleEntries) {
             $.scheduleEntries = scheduleEntries;
             return this;
         }
 
+        /**
+         * @param scheduleEntries List of patch schedules for a Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleEntries(List<ScheduleEntryArgs> scheduleEntries) {
             return scheduleEntries(Output.of(scheduleEntries));
         }
 
+        /**
+         * @param scheduleEntries List of patch schedules for a Redis cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scheduleEntries(ScheduleEntryArgs... scheduleEntries) {
             return scheduleEntries(List.of(scheduleEntries));
         }

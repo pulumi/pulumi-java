@@ -27,6 +27,10 @@ public final class FeedbackPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="lockDurationAsIso8601")
     private @Nullable Output<String> lockDurationAsIso8601;
 
+    /**
+     * @return The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     public Optional<Output<String>> lockDurationAsIso8601() {
         return Optional.ofNullable(this.lockDurationAsIso8601);
     }
@@ -38,6 +42,10 @@ public final class FeedbackPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="maxDeliveryCount")
     private @Nullable Output<Integer> maxDeliveryCount;
 
+    /**
+     * @return The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     public Optional<Output<Integer>> maxDeliveryCount() {
         return Optional.ofNullable(this.maxDeliveryCount);
     }
@@ -49,6 +57,10 @@ public final class FeedbackPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="ttlAsIso8601")
     private @Nullable Output<String> ttlAsIso8601;
 
+    /**
+     * @return The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+     * 
+     */
     public Optional<Output<String>> ttlAsIso8601() {
         return Optional.ofNullable(this.ttlAsIso8601);
     }
@@ -79,29 +91,65 @@ public final class FeedbackPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new FeedbackPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param lockDurationAsIso8601 The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockDurationAsIso8601(@Nullable Output<String> lockDurationAsIso8601) {
             $.lockDurationAsIso8601 = lockDurationAsIso8601;
             return this;
         }
 
+        /**
+         * @param lockDurationAsIso8601 The lock duration for the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lockDurationAsIso8601(String lockDurationAsIso8601) {
             return lockDurationAsIso8601(Output.of(lockDurationAsIso8601));
         }
 
+        /**
+         * @param maxDeliveryCount The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryCount(@Nullable Output<Integer> maxDeliveryCount) {
             $.maxDeliveryCount = maxDeliveryCount;
             return this;
         }
 
+        /**
+         * @param maxDeliveryCount The number of times the IoT hub attempts to deliver a message on the feedback queue. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxDeliveryCount(Integer maxDeliveryCount) {
             return maxDeliveryCount(Output.of(maxDeliveryCount));
         }
 
+        /**
+         * @param ttlAsIso8601 The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttlAsIso8601(@Nullable Output<String> ttlAsIso8601) {
             $.ttlAsIso8601 = ttlAsIso8601;
             return this;
         }
 
+        /**
+         * @param ttlAsIso8601 The period of time for which a message is available to consume before it is expired by the IoT hub. See: https://docs.microsoft.com/azure/iot-hub/iot-hub-devguide-messaging#cloud-to-device-messages.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ttlAsIso8601(String ttlAsIso8601) {
             return ttlAsIso8601(Output.of(ttlAsIso8601));
         }

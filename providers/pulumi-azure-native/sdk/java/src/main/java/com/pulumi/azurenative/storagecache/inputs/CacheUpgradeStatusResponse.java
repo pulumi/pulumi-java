@@ -23,6 +23,10 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="currentFirmwareVersion", required=true)
     private String currentFirmwareVersion;
 
+    /**
+     * @return Version string of the firmware currently installed on this Cache.
+     * 
+     */
     public String currentFirmwareVersion() {
         return this.currentFirmwareVersion;
     }
@@ -34,6 +38,10 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="firmwareUpdateDeadline", required=true)
     private String firmwareUpdateDeadline;
 
+    /**
+     * @return Time at which the pending firmware update will automatically be installed on the Cache.
+     * 
+     */
     public String firmwareUpdateDeadline() {
         return this.firmwareUpdateDeadline;
     }
@@ -45,6 +53,10 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="firmwareUpdateStatus", required=true)
     private String firmwareUpdateStatus;
 
+    /**
+     * @return True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
+     * 
+     */
     public String firmwareUpdateStatus() {
         return this.firmwareUpdateStatus;
     }
@@ -56,6 +68,10 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="lastFirmwareUpdate", required=true)
     private String lastFirmwareUpdate;
 
+    /**
+     * @return Time of the last successful firmware update.
+     * 
+     */
     public String lastFirmwareUpdate() {
         return this.lastFirmwareUpdate;
     }
@@ -67,6 +83,10 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
     @Import(name="pendingFirmwareVersion", required=true)
     private String pendingFirmwareVersion;
 
+    /**
+     * @return When firmwareUpdateAvailable is true, this field holds the version string for the update.
+     * 
+     */
     public String pendingFirmwareVersion() {
         return this.pendingFirmwareVersion;
     }
@@ -99,26 +119,56 @@ public final class CacheUpgradeStatusResponse extends com.pulumi.resources.Invok
             $ = new CacheUpgradeStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentFirmwareVersion Version string of the firmware currently installed on this Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentFirmwareVersion(String currentFirmwareVersion) {
             $.currentFirmwareVersion = currentFirmwareVersion;
             return this;
         }
 
+        /**
+         * @param firmwareUpdateDeadline Time at which the pending firmware update will automatically be installed on the Cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firmwareUpdateDeadline(String firmwareUpdateDeadline) {
             $.firmwareUpdateDeadline = firmwareUpdateDeadline;
             return this;
         }
 
+        /**
+         * @param firmwareUpdateStatus True if there is a firmware update ready to install on this Cache. The firmware will automatically be installed after firmwareUpdateDeadline if not triggered earlier via the upgrade operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firmwareUpdateStatus(String firmwareUpdateStatus) {
             $.firmwareUpdateStatus = firmwareUpdateStatus;
             return this;
         }
 
+        /**
+         * @param lastFirmwareUpdate Time of the last successful firmware update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastFirmwareUpdate(String lastFirmwareUpdate) {
             $.lastFirmwareUpdate = lastFirmwareUpdate;
             return this;
         }
 
+        /**
+         * @param pendingFirmwareVersion When firmwareUpdateAvailable is true, this field holds the version string for the update.
+         * 
+         * @return builder
+         * 
+         */
         public Builder pendingFirmwareVersion(String pendingFirmwareVersion) {
             $.pendingFirmwareVersion = pendingFirmwareVersion;
             return this;

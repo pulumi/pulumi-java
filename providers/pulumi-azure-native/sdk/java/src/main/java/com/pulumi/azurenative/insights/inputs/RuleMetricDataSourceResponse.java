@@ -26,6 +26,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="legacyResourceId")
     private @Nullable String legacyResourceId;
 
+    /**
+     * @return the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     public Optional<String> legacyResourceId() {
         return Optional.ofNullable(this.legacyResourceId);
     }
@@ -37,6 +41,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="metricName")
     private @Nullable String metricName;
 
+    /**
+     * @return the name of the metric that defines what the rule monitors.
+     * 
+     */
     public Optional<String> metricName() {
         return Optional.ofNullable(this.metricName);
     }
@@ -48,6 +56,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="metricNamespace")
     private @Nullable String metricNamespace;
 
+    /**
+     * @return the namespace of the metric.
+     * 
+     */
     public Optional<String> metricNamespace() {
         return Optional.ofNullable(this.metricNamespace);
     }
@@ -60,6 +72,11 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+     * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -71,6 +88,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="resourceLocation")
     private @Nullable String resourceLocation;
 
+    /**
+     * @return the location of the resource.
+     * 
+     */
     public Optional<String> resourceLocation() {
         return Optional.ofNullable(this.resourceLocation);
     }
@@ -82,6 +103,10 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
     @Import(name="resourceUri")
     private @Nullable String resourceUri;
 
+    /**
+     * @return the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+     * 
+     */
     public Optional<String> resourceUri() {
         return Optional.ofNullable(this.resourceUri);
     }
@@ -115,31 +140,68 @@ public final class RuleMetricDataSourceResponse extends com.pulumi.resources.Inv
             $ = new RuleMetricDataSourceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param legacyResourceId the legacy resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder legacyResourceId(@Nullable String legacyResourceId) {
             $.legacyResourceId = legacyResourceId;
             return this;
         }
 
+        /**
+         * @param metricName the name of the metric that defines what the rule monitors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricName(@Nullable String metricName) {
             $.metricName = metricName;
             return this;
         }
 
+        /**
+         * @param metricNamespace the namespace of the metric.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNamespace(@Nullable String metricNamespace) {
             $.metricNamespace = metricNamespace;
             return this;
         }
 
+        /**
+         * @param odataType specifies the type of data source. There are two types of rule data sources: RuleMetricDataSource and RuleManagementEventDataSource
+         * Expected value is &#39;Microsoft.Azure.Management.Insights.Models.RuleMetricDataSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param resourceLocation the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceLocation(@Nullable String resourceLocation) {
             $.resourceLocation = resourceLocation;
             return this;
         }
 
+        /**
+         * @param resourceUri the resource identifier of the resource the rule monitors. **NOTE**: this property cannot be updated for an existing rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUri(@Nullable String resourceUri) {
             $.resourceUri = resourceUri;
             return this;

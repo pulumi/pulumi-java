@@ -27,6 +27,10 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="identifierUri")
     private @Nullable String identifierUri;
 
+    /**
+     * @return Indicates the identifier uri for aad auth.
+     * 
+     */
     public Optional<String> identifierUri() {
         return Optional.ofNullable(this.identifierUri);
     }
@@ -38,6 +42,10 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the webhook receiver. Names must be unique across all receivers within an action group.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -49,6 +57,10 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="objectId")
     private @Nullable String objectId;
 
+    /**
+     * @return Indicates the webhook app object Id for aad auth.
+     * 
+     */
     public Optional<String> objectId() {
         return Optional.ofNullable(this.objectId);
     }
@@ -60,6 +72,10 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="serviceUri", required=true)
     private String serviceUri;
 
+    /**
+     * @return The URI where webhooks should be sent.
+     * 
+     */
     public String serviceUri() {
         return this.serviceUri;
     }
@@ -71,6 +87,10 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="tenantId")
     private @Nullable String tenantId;
 
+    /**
+     * @return Indicates the tenant id for aad auth.
+     * 
+     */
     public Optional<String> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -82,6 +102,10 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="useAadAuth")
     private @Nullable Boolean useAadAuth;
 
+    /**
+     * @return Indicates whether or not use AAD authentication.
+     * 
+     */
     public Optional<Boolean> useAadAuth() {
         return Optional.ofNullable(this.useAadAuth);
     }
@@ -93,6 +117,10 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
     @Import(name="useCommonAlertSchema")
     private @Nullable Boolean useCommonAlertSchema;
 
+    /**
+     * @return Indicates whether to use common alert schema.
+     * 
+     */
     public Optional<Boolean> useCommonAlertSchema() {
         return Optional.ofNullable(this.useCommonAlertSchema);
     }
@@ -127,36 +155,78 @@ public final class WebhookReceiverResponse extends com.pulumi.resources.InvokeAr
             $ = new WebhookReceiverResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identifierUri Indicates the identifier uri for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identifierUri(@Nullable String identifierUri) {
             $.identifierUri = identifierUri;
             return this;
         }
 
+        /**
+         * @param name The name of the webhook receiver. Names must be unique across all receivers within an action group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param objectId Indicates the webhook app object Id for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectId(@Nullable String objectId) {
             $.objectId = objectId;
             return this;
         }
 
+        /**
+         * @param serviceUri The URI where webhooks should be sent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceUri(String serviceUri) {
             $.serviceUri = serviceUri;
             return this;
         }
 
+        /**
+         * @param tenantId Indicates the tenant id for aad auth.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable String tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param useAadAuth Indicates whether or not use AAD authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useAadAuth(@Nullable Boolean useAadAuth) {
             $.useAadAuth = useAadAuth;
             return this;
         }
 
+        /**
+         * @param useCommonAlertSchema Indicates whether to use common alert schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useCommonAlertSchema(@Nullable Boolean useCommonAlertSchema) {
             $.useCommonAlertSchema = useCommonAlertSchema;
             return this;

@@ -27,6 +27,10 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="address")
     private @Nullable Output<String> address;
 
+    /**
+     * @return The IP address.
+     * 
+     */
     public Optional<Output<String>> address() {
         return Optional.ofNullable(this.address);
     }
@@ -38,6 +42,10 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The friendly name for the IP address range.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -49,6 +57,10 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="subnetPrefixLength")
     private @Nullable Output<Integer> subnetPrefixLength;
 
+    /**
+     * @return The subnet mask prefix length (see CIDR notation).
+     * 
+     */
     public Optional<Output<Integer>> subnetPrefixLength() {
         return Optional.ofNullable(this.subnetPrefixLength);
     }
@@ -79,29 +91,65 @@ public final class IPRangeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IPRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param address The IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(@Nullable Output<String> address) {
             $.address = address;
             return this;
         }
 
+        /**
+         * @param address The IP address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder address(String address) {
             return address(Output.of(address));
         }
 
+        /**
+         * @param name The friendly name for the IP address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The friendly name for the IP address range.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param subnetPrefixLength The subnet mask prefix length (see CIDR notation).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetPrefixLength(@Nullable Output<Integer> subnetPrefixLength) {
             $.subnetPrefixLength = subnetPrefixLength;
             return this;
         }
 
+        /**
+         * @param subnetPrefixLength The subnet mask prefix length (see CIDR notation).
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetPrefixLength(Integer subnetPrefixLength) {
             return subnetPrefixLength(Output.of(subnetPrefixLength));
         }

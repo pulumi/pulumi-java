@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetControllerDetailsResult {
     /**
-     * dnc application id should be used by customer to authenticate with dnc gateway.
+     * @return dnc application id should be used by customer to authenticate with dnc gateway.
      * 
      */
     private final String dncAppId;
     /**
-     * dnc endpoint url that customers can use to connect to
+     * @return dnc endpoint url that customers can use to connect to
      * 
      */
     private final String dncEndpoint;
     /**
-     * tenant id of dnc application id
+     * @return tenant id of dnc application id
      * 
      */
     private final String dncTenantId;
     /**
-     * An identifier that represents the resource.
+     * @return An identifier that represents the resource.
      * 
      */
     private final String id;
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
      */
     private final @Nullable String location;
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
      */
     private final String name;
     /**
-     * The current state of dnc controller resource.
+     * @return The current state of dnc controller resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Resource guid.
+     * @return Resource guid.
      * 
      */
     private final String resourceGuid;
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of resource.
+     * @return The type of resource.
      * 
      */
     private final String type;
@@ -88,72 +88,72 @@ public final class GetControllerDetailsResult {
     }
 
     /**
-     * dnc application id should be used by customer to authenticate with dnc gateway.
+     * @return dnc application id should be used by customer to authenticate with dnc gateway.
      * 
-    */
+     */
     public String dncAppId() {
         return this.dncAppId;
     }
     /**
-     * dnc endpoint url that customers can use to connect to
+     * @return dnc endpoint url that customers can use to connect to
      * 
-    */
+     */
     public String dncEndpoint() {
         return this.dncEndpoint;
     }
     /**
-     * tenant id of dnc application id
+     * @return tenant id of dnc application id
      * 
-    */
+     */
     public String dncTenantId() {
         return this.dncTenantId;
     }
     /**
-     * An identifier that represents the resource.
+     * @return An identifier that represents the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
-    */
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
     /**
-     * The name of the resource.
+     * @return The name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The current state of dnc controller resource.
+     * @return The current state of dnc controller resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Resource guid.
+     * @return Resource guid.
      * 
-    */
+     */
     public String resourceGuid() {
         return this.resourceGuid;
     }
     /**
-     * The resource tags.
+     * @return The resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of resource.
+     * @return The type of resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

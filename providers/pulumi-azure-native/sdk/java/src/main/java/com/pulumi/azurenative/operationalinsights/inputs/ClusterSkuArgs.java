@@ -29,6 +29,10 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Double> capacity;
 
+    /**
+     * @return The capacity value
+     * 
+     */
     public Optional<Output<Double>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<Either<String,ClusterSkuNameEnum>> name;
 
+    /**
+     * @return The name of the SKU.
+     * 
+     */
     public Optional<Output<Either<String,ClusterSkuNameEnum>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,28 +77,64 @@ public final class ClusterSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ClusterSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The capacity value
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Double> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The capacity value
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Double capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,ClusterSkuNameEnum>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,ClusterSkuNameEnum> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The name of the SKU.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(ClusterSkuNameEnum name) {
             return name(Either.ofRight(name));
         }

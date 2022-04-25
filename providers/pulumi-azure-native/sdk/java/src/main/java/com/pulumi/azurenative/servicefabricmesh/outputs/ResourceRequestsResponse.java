@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ResourceRequestsResponse {
     /**
-     * Requested number of CPU cores. At present, only full cores are supported.
+     * @return Requested number of CPU cores. At present, only full cores are supported.
      * 
      */
     private final Double cpu;
     /**
-     * The memory request in GB for this container.
+     * @return The memory request in GB for this container.
      * 
      */
     private final Double memoryInGB;
@@ -29,16 +29,16 @@ public final class ResourceRequestsResponse {
     }
 
     /**
-     * Requested number of CPU cores. At present, only full cores are supported.
+     * @return Requested number of CPU cores. At present, only full cores are supported.
      * 
-    */
+     */
     public Double cpu() {
         return this.cpu;
     }
     /**
-     * The memory request in GB for this container.
+     * @return The memory request in GB for this container.
      * 
-    */
+     */
     public Double memoryInGB() {
         return this.memoryInGB;
     }

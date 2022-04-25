@@ -28,6 +28,10 @@ public final class AADBasedSecurityPrincipalArgs extends com.pulumi.resources.Re
     @Import(name="ledgerRoleName")
     private @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
+    /**
+     * @return LedgerRole associated with the Security Principal of Ledger
+     * 
+     */
     public Optional<Output<Either<String,LedgerRoleName>>> ledgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
@@ -39,6 +43,10 @@ public final class AADBasedSecurityPrincipalArgs extends com.pulumi.resources.Re
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return UUID/GUID based Principal Id of the Security Principal
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -50,6 +58,10 @@ public final class AADBasedSecurityPrincipalArgs extends com.pulumi.resources.Re
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return UUID/GUID based Tenant Id of the Security Principal
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -80,37 +92,85 @@ public final class AADBasedSecurityPrincipalArgs extends com.pulumi.resources.Re
             $ = new AADBasedSecurityPrincipalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(@Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
             $.ledgerRoleName = ledgerRoleName;
             return this;
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(Either<String,LedgerRoleName> ledgerRoleName) {
             return ledgerRoleName(Output.of(ledgerRoleName));
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(String ledgerRoleName) {
             return ledgerRoleName(Either.ofLeft(ledgerRoleName));
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(LedgerRoleName ledgerRoleName) {
             return ledgerRoleName(Either.ofRight(ledgerRoleName));
         }
 
+        /**
+         * @param principalId UUID/GUID based Principal Id of the Security Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId UUID/GUID based Principal Id of the Security Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param tenantId UUID/GUID based Tenant Id of the Security Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId UUID/GUID based Tenant Id of the Security Principal
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

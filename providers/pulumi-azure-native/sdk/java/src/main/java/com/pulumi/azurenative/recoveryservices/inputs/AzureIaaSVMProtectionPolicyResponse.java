@@ -36,6 +36,11 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="backupManagementType", required=true)
     private String backupManagementType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;AzureIaasVM&#39;.
+     * 
+     */
     public String backupManagementType() {
         return this.backupManagementType;
     }
@@ -54,6 +59,10 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="instantRpRetentionRangeInDays")
     private @Nullable Integer instantRpRetentionRangeInDays;
 
+    /**
+     * @return Instant RP retention policy range in days
+     * 
+     */
     public Optional<Integer> instantRpRetentionRangeInDays() {
         return Optional.ofNullable(this.instantRpRetentionRangeInDays);
     }
@@ -65,6 +74,10 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="protectedItemsCount")
     private @Nullable Integer protectedItemsCount;
 
+    /**
+     * @return Number of items associated with this policy.
+     * 
+     */
     public Optional<Integer> protectedItemsCount() {
         return Optional.ofNullable(this.protectedItemsCount);
     }
@@ -76,6 +89,10 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="retentionPolicy")
     private @Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy;
 
+    /**
+     * @return Retention policy with the details on backup copy retention ranges.
+     * 
+     */
     public Optional<Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse>> retentionPolicy() {
         return Optional.ofNullable(this.retentionPolicy);
     }
@@ -87,6 +104,10 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="schedulePolicy")
     private @Nullable Object schedulePolicy;
 
+    /**
+     * @return Backup schedule specified as part of backup policy.
+     * 
+     */
     public Optional<Object> schedulePolicy() {
         return Optional.ofNullable(this.schedulePolicy);
     }
@@ -98,6 +119,10 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
     @Import(name="timeZone")
     private @Nullable String timeZone;
 
+    /**
+     * @return TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+     * 
+     */
     public Optional<String> timeZone() {
         return Optional.ofNullable(this.timeZone);
     }
@@ -132,6 +157,13 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
             $ = new AzureIaaSVMProtectionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupManagementType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;AzureIaasVM&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
@@ -142,34 +174,76 @@ public final class AzureIaaSVMProtectionPolicyResponse extends com.pulumi.resour
             return this;
         }
 
+        /**
+         * @param instantRpRetentionRangeInDays Instant RP retention policy range in days
+         * 
+         * @return builder
+         * 
+         */
         public Builder instantRpRetentionRangeInDays(@Nullable Integer instantRpRetentionRangeInDays) {
             $.instantRpRetentionRangeInDays = instantRpRetentionRangeInDays;
             return this;
         }
 
+        /**
+         * @param protectedItemsCount Number of items associated with this policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectedItemsCount(@Nullable Integer protectedItemsCount) {
             $.protectedItemsCount = protectedItemsCount;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(@Nullable Either<LongTermRetentionPolicyResponse,SimpleRetentionPolicyResponse> retentionPolicy) {
             $.retentionPolicy = retentionPolicy;
             return this;
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(LongTermRetentionPolicyResponse retentionPolicy) {
             return retentionPolicy(Either.ofLeft(retentionPolicy));
         }
 
+        /**
+         * @param retentionPolicy Retention policy with the details on backup copy retention ranges.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicy(SimpleRetentionPolicyResponse retentionPolicy) {
             return retentionPolicy(Either.ofRight(retentionPolicy));
         }
 
+        /**
+         * @param schedulePolicy Backup schedule specified as part of backup policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedulePolicy(@Nullable Object schedulePolicy) {
             $.schedulePolicy = schedulePolicy;
             return this;
         }
 
+        /**
+         * @param timeZone TimeZone optional input as string. For example: TimeZone = &#34;Pacific Standard Time&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeZone(@Nullable String timeZone) {
             $.timeZone = timeZone;
             return this;

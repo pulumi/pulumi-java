@@ -27,6 +27,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Resource name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -38,6 +42,10 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<ScalarFunctionPropertiesArgs> properties;
 
+    /**
+     * @return The properties that are associated with a function.
+     * 
+     */
     public Optional<Output<ScalarFunctionPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -67,20 +75,44 @@ public final class FunctionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new FunctionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Resource name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param properties The properties that are associated with a function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ScalarFunctionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties that are associated with a function.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ScalarFunctionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }

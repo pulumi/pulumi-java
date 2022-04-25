@@ -20,82 +20,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetClusterResult {
     /**
-     * The list of Log Analytics workspaces associated with the cluster
+     * @return The list of Log Analytics workspaces associated with the cluster
      * 
      */
     private final @Nullable List<AssociatedWorkspaceResponse> associatedWorkspaces;
     /**
-     * The cluster&#39;s billing type.
+     * @return The cluster&#39;s billing type.
      * 
      */
     private final @Nullable String billingType;
     /**
-     * Additional properties for capacity reservation
+     * @return Additional properties for capacity reservation
      * 
      */
     private final @Nullable CapacityReservationPropertiesResponse capacityReservationProperties;
     /**
-     * The ID associated with the cluster.
+     * @return The ID associated with the cluster.
      * 
      */
     private final String clusterId;
     /**
-     * The cluster creation time
+     * @return The cluster creation time
      * 
      */
     private final String createdDate;
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
      */
     private final String id;
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
      */
     private final @Nullable IdentityResponse identity;
     /**
-     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
+     * @return Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
      * 
      */
     private final @Nullable Boolean isAvailabilityZonesEnabled;
     /**
-     * The associated key properties.
+     * @return The associated key properties.
      * 
      */
     private final @Nullable KeyVaultPropertiesResponse keyVaultProperties;
     /**
-     * The last time the cluster was updated.
+     * @return The last time the cluster was updated.
      * 
      */
     private final String lastModifiedDate;
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
      */
     private final String location;
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
      */
     private final String name;
     /**
-     * The provisioning state of the cluster.
+     * @return The provisioning state of the cluster.
      * 
      */
     private final String provisioningState;
     /**
-     * The sku properties.
+     * @return The sku properties.
      * 
      */
     private final @Nullable ClusterSkuResponse sku;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
      */
     private final String type;
@@ -137,114 +137,114 @@ public final class GetClusterResult {
     }
 
     /**
-     * The list of Log Analytics workspaces associated with the cluster
+     * @return The list of Log Analytics workspaces associated with the cluster
      * 
-    */
+     */
     public List<AssociatedWorkspaceResponse> associatedWorkspaces() {
         return this.associatedWorkspaces == null ? List.of() : this.associatedWorkspaces;
     }
     /**
-     * The cluster&#39;s billing type.
+     * @return The cluster&#39;s billing type.
      * 
-    */
+     */
     public Optional<String> billingType() {
         return Optional.ofNullable(this.billingType);
     }
     /**
-     * Additional properties for capacity reservation
+     * @return Additional properties for capacity reservation
      * 
-    */
+     */
     public Optional<CapacityReservationPropertiesResponse> capacityReservationProperties() {
         return Optional.ofNullable(this.capacityReservationProperties);
     }
     /**
-     * The ID associated with the cluster.
+     * @return The ID associated with the cluster.
      * 
-    */
+     */
     public String clusterId() {
         return this.clusterId;
     }
     /**
-     * The cluster creation time
+     * @return The cluster creation time
      * 
-    */
+     */
     public String createdDate() {
         return this.createdDate;
     }
     /**
-     * Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
+     * @return Fully qualified resource ID for the resource. Ex - /subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/{resourceProviderNamespace}/{resourceType}/{resourceName}
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The identity of the resource.
+     * @return The identity of the resource.
      * 
-    */
+     */
     public Optional<IdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
     /**
-     * Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
+     * @return Sets whether the cluster will support availability zones. This can be set as true only in regions where Azure Data Explorer support Availability Zones. This Property can not be modified after cluster creation. Default value is &#39;true&#39; if region supports Availability Zones.
      * 
-    */
+     */
     public Optional<Boolean> isAvailabilityZonesEnabled() {
         return Optional.ofNullable(this.isAvailabilityZonesEnabled);
     }
     /**
-     * The associated key properties.
+     * @return The associated key properties.
      * 
-    */
+     */
     public Optional<KeyVaultPropertiesResponse> keyVaultProperties() {
         return Optional.ofNullable(this.keyVaultProperties);
     }
     /**
-     * The last time the cluster was updated.
+     * @return The last time the cluster was updated.
      * 
-    */
+     */
     public String lastModifiedDate() {
         return this.lastModifiedDate;
     }
     /**
-     * The geo-location where the resource lives
+     * @return The geo-location where the resource lives
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * The name of the resource
+     * @return The name of the resource
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The provisioning state of the cluster.
+     * @return The provisioning state of the cluster.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The sku properties.
+     * @return The sku properties.
      * 
-    */
+     */
     public Optional<ClusterSkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
+     * @return The type of the resource. E.g. &#34;Microsoft.Compute/virtualMachines&#34; or &#34;Microsoft.Storage/storageAccounts&#34;
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

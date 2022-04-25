@@ -13,7 +13,7 @@ import javax.annotation.Nullable;
 public final class ApplicationPackageReferenceResponse {
     private final String id;
     /**
-     * If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
+     * @return If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
      * 
      */
     private final @Nullable String version;
@@ -30,9 +30,9 @@ public final class ApplicationPackageReferenceResponse {
         return this.id;
     }
     /**
-     * If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
+     * @return If this is omitted, and no default version is specified for this application, the request fails with the error code InvalidApplicationPackageReferences. If you are calling the REST API directly, the HTTP status code is 409.
      * 
-    */
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }

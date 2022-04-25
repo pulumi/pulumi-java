@@ -26,6 +26,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="artifactName")
     private @Nullable Output<String> artifactName;
 
+    /**
+     * @return Name of the blueprint artifact.
+     * 
+     */
     public Optional<Output<String>> artifactName() {
         return Optional.ofNullable(this.artifactName);
     }
@@ -37,6 +41,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="blueprintName", required=true)
     private Output<String> blueprintName;
 
+    /**
+     * @return Name of the blueprint definition.
+     * 
+     */
     public Output<String> blueprintName() {
         return this.blueprintName;
     }
@@ -48,6 +56,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="dependsOn")
     private @Nullable Output<List<String>> dependsOn;
 
+    /**
+     * @return Artifacts which need to be deployed before the specified artifact.
+     * 
+     */
     public Optional<Output<List<String>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -59,6 +71,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Multi-line explain this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -70,6 +86,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return One-liner string explain this resource.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -82,6 +102,11 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Specifies the kind of blueprint artifact.
+     * Expected value is &#39;policyAssignment&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -93,6 +118,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="parameters", required=true)
     private Output<Map<String,ParameterValueArgs>> parameters;
 
+    /**
+     * @return Parameter values for the policy definition.
+     * 
+     */
     public Output<Map<String,ParameterValueArgs>> parameters() {
         return this.parameters;
     }
@@ -104,6 +133,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="policyDefinitionId", required=true)
     private Output<String> policyDefinitionId;
 
+    /**
+     * @return Azure resource ID of the policy definition.
+     * 
+     */
     public Output<String> policyDefinitionId() {
         return this.policyDefinitionId;
     }
@@ -115,6 +148,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="resourceGroup")
     private @Nullable Output<String> resourceGroup;
 
+    /**
+     * @return Name of the resource group placeholder to which the policy will be assigned.
+     * 
+     */
     public Optional<Output<String>> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -126,6 +163,10 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
     @Import(name="resourceScope", required=true)
     private Output<String> resourceScope;
 
+    /**
+     * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+     * 
+     */
     public Output<String> resourceScope() {
         return this.resourceScope;
     }
@@ -163,96 +204,224 @@ public final class PolicyAssignmentArtifactArgs extends com.pulumi.resources.Res
             $ = new PolicyAssignmentArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactName Name of the blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactName(@Nullable Output<String> artifactName) {
             $.artifactName = artifactName;
             return this;
         }
 
+        /**
+         * @param artifactName Name of the blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactName(String artifactName) {
             return artifactName(Output.of(artifactName));
         }
 
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintName(Output<String> blueprintName) {
             $.blueprintName = blueprintName;
             return this;
         }
 
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintName(String blueprintName) {
             return blueprintName(Output.of(blueprintName));
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before the specified artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<String>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before the specified artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<String> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before the specified artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(String... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Multi-line explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Multi-line explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName One-liner string explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName One-liner string explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param kind Specifies the kind of blueprint artifact.
+         * Expected value is &#39;policyAssignment&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Specifies the kind of blueprint artifact.
+         * Expected value is &#39;policyAssignment&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param parameters Parameter values for the policy definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Output<Map<String,ParameterValueArgs>> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param parameters Parameter values for the policy definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(Map<String,ParameterValueArgs> parameters) {
             return parameters(Output.of(parameters));
         }
 
+        /**
+         * @param policyDefinitionId Azure resource ID of the policy definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(Output<String> policyDefinitionId) {
             $.policyDefinitionId = policyDefinitionId;
             return this;
         }
 
+        /**
+         * @param policyDefinitionId Azure resource ID of the policy definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyDefinitionId(String policyDefinitionId) {
             return policyDefinitionId(Output.of(policyDefinitionId));
         }
 
+        /**
+         * @param resourceGroup Name of the resource group placeholder to which the policy will be assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup Name of the resource group placeholder to which the policy will be assigned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(Output<String> resourceScope) {
             $.resourceScope = resourceScope;
             return this;
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(String resourceScope) {
             return resourceScope(Output.of(resourceScope));
         }

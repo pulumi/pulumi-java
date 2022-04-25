@@ -26,6 +26,10 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="description", required=true)
     private String description;
 
+    /**
+     * @return The description of the custom alert.
+     * 
+     */
     public String description() {
         return this.description;
     }
@@ -37,6 +41,10 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="displayName", required=true)
     private String displayName;
 
+    /**
+     * @return The display name of the custom alert.
+     * 
+     */
     public String displayName() {
         return this.displayName;
     }
@@ -48,6 +56,10 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return Status of the custom alert.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -59,6 +71,10 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="maxThreshold", required=true)
     private Integer maxThreshold;
 
+    /**
+     * @return The maximum threshold.
+     * 
+     */
     public Integer maxThreshold() {
         return this.maxThreshold;
     }
@@ -70,6 +86,10 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="minThreshold", required=true)
     private Integer minThreshold;
 
+    /**
+     * @return The minimum threshold.
+     * 
+     */
     public Integer minThreshold() {
         return this.minThreshold;
     }
@@ -82,6 +102,11 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
     @Import(name="ruleType", required=true)
     private String ruleType;
 
+    /**
+     * @return The type of the custom alert rule.
+     * Expected value is &#39;ThresholdCustomAlertRule&#39;.
+     * 
+     */
     public String ruleType() {
         return this.ruleType;
     }
@@ -115,31 +140,68 @@ public final class ThresholdCustomAlertRuleResponse extends com.pulumi.resources
             $ = new ThresholdCustomAlertRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of the custom alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The display name of the custom alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param isEnabled Status of the custom alert.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param maxThreshold The maximum threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxThreshold(Integer maxThreshold) {
             $.maxThreshold = maxThreshold;
             return this;
         }
 
+        /**
+         * @param minThreshold The minimum threshold.
+         * 
+         * @return builder
+         * 
+         */
         public Builder minThreshold(Integer minThreshold) {
             $.minThreshold = minThreshold;
             return this;
         }
 
+        /**
+         * @param ruleType The type of the custom alert rule.
+         * Expected value is &#39;ThresholdCustomAlertRule&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleType(String ruleType) {
             $.ruleType = ruleType;
             return this;

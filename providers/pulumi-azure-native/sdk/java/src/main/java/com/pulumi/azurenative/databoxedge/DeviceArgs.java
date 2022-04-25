@@ -27,6 +27,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataBoxEdgeDeviceStatus")
     private @Nullable Output<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus;
 
+    /**
+     * @return The status of the Data Box Edge/Gateway device.
+     * 
+     */
     public Optional<Output<Either<String,DataBoxEdgeDeviceStatus>>> dataBoxEdgeDeviceStatus() {
         return Optional.ofNullable(this.dataBoxEdgeDeviceStatus);
     }
@@ -38,6 +42,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="deviceName")
     private @Nullable Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Optional<Output<String>> deviceName() {
         return Optional.ofNullable(this.deviceName);
     }
@@ -49,6 +57,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<ResourceIdentityArgs> identity;
 
+    /**
+     * @return Msi identity of the resource
+     * 
+     */
     public Optional<Output<ResourceIdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -60,6 +72,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -71,6 +87,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -82,6 +102,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The SKU type.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -93,6 +117,10 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -127,73 +155,169 @@ public final class DeviceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new DeviceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataBoxEdgeDeviceStatus The status of the Data Box Edge/Gateway device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataBoxEdgeDeviceStatus(@Nullable Output<Either<String,DataBoxEdgeDeviceStatus>> dataBoxEdgeDeviceStatus) {
             $.dataBoxEdgeDeviceStatus = dataBoxEdgeDeviceStatus;
             return this;
         }
 
+        /**
+         * @param dataBoxEdgeDeviceStatus The status of the Data Box Edge/Gateway device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataBoxEdgeDeviceStatus(Either<String,DataBoxEdgeDeviceStatus> dataBoxEdgeDeviceStatus) {
             return dataBoxEdgeDeviceStatus(Output.of(dataBoxEdgeDeviceStatus));
         }
 
+        /**
+         * @param dataBoxEdgeDeviceStatus The status of the Data Box Edge/Gateway device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataBoxEdgeDeviceStatus(String dataBoxEdgeDeviceStatus) {
             return dataBoxEdgeDeviceStatus(Either.ofLeft(dataBoxEdgeDeviceStatus));
         }
 
+        /**
+         * @param dataBoxEdgeDeviceStatus The status of the Data Box Edge/Gateway device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataBoxEdgeDeviceStatus(DataBoxEdgeDeviceStatus dataBoxEdgeDeviceStatus) {
             return dataBoxEdgeDeviceStatus(Either.ofRight(dataBoxEdgeDeviceStatus));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(@Nullable Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param identity Msi identity of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<ResourceIdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity Msi identity of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(ResourceIdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the device. This is a supported and registered Azure geographical region (for example, West US, East US, or Southeast Asia). The geographical region of a device cannot be changed once it is created, but if an identical geographical region is specified on update, the request will succeed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku The SKU type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags The list of tags that describe the device. These tags can be used to view and group this device (across resource groups).
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

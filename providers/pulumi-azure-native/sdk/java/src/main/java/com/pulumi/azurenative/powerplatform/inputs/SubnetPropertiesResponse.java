@@ -25,6 +25,10 @@ public final class SubnetPropertiesResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Subnet name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class SubnetPropertiesResponse extends com.pulumi.resources.InvokeA
             $ = new SubnetPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Subnet name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class ListStaticSiteUsersResult {
     /**
-     * Link to next page of resources.
+     * @return Link to next page of resources.
      * 
      */
     private final String nextLink;
     /**
-     * Collection of resources.
+     * @return Collection of resources.
      * 
      */
     private final List<StaticSiteUserARMResourceResponse> value;
@@ -31,16 +31,16 @@ public final class ListStaticSiteUsersResult {
     }
 
     /**
-     * Link to next page of resources.
+     * @return Link to next page of resources.
      * 
-    */
+     */
     public String nextLink() {
         return this.nextLink;
     }
     /**
-     * Collection of resources.
+     * @return Collection of resources.
      * 
-    */
+     */
     public List<StaticSiteUserARMResourceResponse> value() {
         return this.value;
     }

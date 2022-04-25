@@ -21,6 +21,10 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The properties to be expanded.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="peeringServiceName", required=true)
     private String peeringServiceName;
 
+    /**
+     * @return The name of the peering service.
+     * 
+     */
     public String peeringServiceName() {
         return this.peeringServiceName;
     }
@@ -43,6 +51,10 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="prefixName", required=true)
     private String prefixName;
 
+    /**
+     * @return The name of the prefix.
+     * 
+     */
     public String prefixName() {
         return this.prefixName;
     }
@@ -54,6 +66,10 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -85,21 +101,45 @@ public final class GetPrefixArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetPrefixArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The properties to be expanded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param peeringServiceName The name of the peering service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder peeringServiceName(String peeringServiceName) {
             $.peeringServiceName = peeringServiceName;
             return this;
         }
 
+        /**
+         * @param prefixName The name of the prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder prefixName(String prefixName) {
             $.prefixName = prefixName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

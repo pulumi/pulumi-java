@@ -15,38 +15,38 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RemotePrivateEndpointConnectionResponse {
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
      */
     private final String id;
     /**
-     * Private IPAddresses mapped to the remote private endpoint
+     * @return Private IPAddresses mapped to the remote private endpoint
      * 
      */
     private final @Nullable List<String> ipAddresses;
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
      */
     private final @Nullable String kind;
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
      */
     private final String name;
     /**
-     * PrivateEndpoint of a remote private endpoint connection
+     * @return PrivateEndpoint of a remote private endpoint connection
      * 
      */
     private final @Nullable ArmIdWrapperResponse privateEndpoint;
     /**
-     * The state of a private link connection
+     * @return The state of a private link connection
      * 
      */
     private final @Nullable PrivateLinkConnectionStateResponse privateLinkServiceConnectionState;
     private final String provisioningState;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -72,44 +72,44 @@ public final class RemotePrivateEndpointConnectionResponse {
     }
 
     /**
-     * Resource Id.
+     * @return Resource Id.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Private IPAddresses mapped to the remote private endpoint
+     * @return Private IPAddresses mapped to the remote private endpoint
      * 
-    */
+     */
     public List<String> ipAddresses() {
         return this.ipAddresses == null ? List.of() : this.ipAddresses;
     }
     /**
-     * Kind of resource.
+     * @return Kind of resource.
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * Resource Name.
+     * @return Resource Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * PrivateEndpoint of a remote private endpoint connection
+     * @return PrivateEndpoint of a remote private endpoint connection
      * 
-    */
+     */
     public Optional<ArmIdWrapperResponse> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
     /**
-     * The state of a private link connection
+     * @return The state of a private link connection
      * 
-    */
+     */
     public Optional<PrivateLinkConnectionStateResponse> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -117,9 +117,9 @@ public final class RemotePrivateEndpointConnectionResponse {
         return this.provisioningState;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

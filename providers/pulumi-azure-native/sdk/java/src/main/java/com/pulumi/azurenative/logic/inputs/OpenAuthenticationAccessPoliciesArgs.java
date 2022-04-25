@@ -28,6 +28,10 @@ public final class OpenAuthenticationAccessPoliciesArgs extends com.pulumi.resou
     @Import(name="policies")
     private @Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies;
 
+    /**
+     * @return Open authentication policies.
+     * 
+     */
     public Optional<Output<Map<String,OpenAuthenticationAccessPolicyArgs>>> policies() {
         return Optional.ofNullable(this.policies);
     }
@@ -56,11 +60,23 @@ public final class OpenAuthenticationAccessPoliciesArgs extends com.pulumi.resou
             $ = new OpenAuthenticationAccessPoliciesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policies Open authentication policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(@Nullable Output<Map<String,OpenAuthenticationAccessPolicyArgs>> policies) {
             $.policies = policies;
             return this;
         }
 
+        /**
+         * @param policies Open authentication policies.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policies(Map<String,OpenAuthenticationAccessPolicyArgs> policies) {
             return policies(Output.of(policies));
         }

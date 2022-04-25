@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnStringInfoResponse {
     /**
-     * Connection string value.
+     * @return Connection string value.
      * 
      */
     private final @Nullable String connectionString;
     /**
-     * Name of connection string.
+     * @return Name of connection string.
      * 
      */
     private final @Nullable String name;
     /**
-     * Type of database.
+     * @return Type of database.
      * 
      */
     private final @Nullable String type;
@@ -38,23 +38,23 @@ public final class ConnStringInfoResponse {
     }
 
     /**
-     * Connection string value.
+     * @return Connection string value.
      * 
-    */
+     */
     public Optional<String> connectionString() {
         return Optional.ofNullable(this.connectionString);
     }
     /**
-     * Name of connection string.
+     * @return Name of connection string.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * Type of database.
+     * @return Type of database.
      * 
-    */
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }

@@ -25,6 +25,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="accessTokenString")
     private @Nullable String accessTokenString;
 
+    /**
+     * @return Access token used for authentication
+     * 
+     */
     public Optional<String> accessTokenString() {
         return Optional.ofNullable(this.accessTokenString);
     }
@@ -36,6 +40,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="bMSActiveRegion")
     private @Nullable String bMSActiveRegion;
 
+    /**
+     * @return Active region name of BMS Stamp
+     * 
+     */
     public Optional<String> bMSActiveRegion() {
         return Optional.ofNullable(this.bMSActiveRegion);
     }
@@ -47,6 +55,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="backupManagementType")
     private @Nullable String backupManagementType;
 
+    /**
+     * @return Backup Management Type
+     * 
+     */
     public Optional<String> backupManagementType() {
         return Optional.ofNullable(this.backupManagementType);
     }
@@ -58,6 +70,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="containerId")
     private @Nullable String containerId;
 
+    /**
+     * @return Container Id
+     * 
+     */
     public Optional<String> containerId() {
         return Optional.ofNullable(this.containerId);
     }
@@ -69,6 +85,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="containerName")
     private @Nullable String containerName;
 
+    /**
+     * @return Container Unique name
+     * 
+     */
     public Optional<String> containerName() {
         return Optional.ofNullable(this.containerName);
     }
@@ -80,6 +100,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="containerType")
     private @Nullable String containerType;
 
+    /**
+     * @return Container Type
+     * 
+     */
     public Optional<String> containerType() {
         return Optional.ofNullable(this.containerType);
     }
@@ -91,6 +115,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="coordinatorServiceStampId")
     private @Nullable String coordinatorServiceStampId;
 
+    /**
+     * @return CoordinatorServiceStampId to be used by BCM in restore call
+     * 
+     */
     public Optional<String> coordinatorServiceStampId() {
         return Optional.ofNullable(this.coordinatorServiceStampId);
     }
@@ -102,6 +130,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="coordinatorServiceStampUri")
     private @Nullable String coordinatorServiceStampUri;
 
+    /**
+     * @return CoordinatorServiceStampUri to be used by BCM in restore call
+     * 
+     */
     public Optional<String> coordinatorServiceStampUri() {
         return Optional.ofNullable(this.coordinatorServiceStampUri);
     }
@@ -113,6 +145,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="datasourceContainerName")
     private @Nullable String datasourceContainerName;
 
+    /**
+     * @return Datasource Container Unique Name
+     * 
+     */
     public Optional<String> datasourceContainerName() {
         return Optional.ofNullable(this.datasourceContainerName);
     }
@@ -124,6 +160,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="datasourceId")
     private @Nullable String datasourceId;
 
+    /**
+     * @return Datasource Id
+     * 
+     */
     public Optional<String> datasourceId() {
         return Optional.ofNullable(this.datasourceId);
     }
@@ -135,6 +175,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="datasourceName")
     private @Nullable String datasourceName;
 
+    /**
+     * @return Datasource Friendly Name
+     * 
+     */
     public Optional<String> datasourceName() {
         return Optional.ofNullable(this.datasourceName);
     }
@@ -146,6 +190,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="datasourceType")
     private @Nullable String datasourceType;
 
+    /**
+     * @return Datasource Type
+     * 
+     */
     public Optional<String> datasourceType() {
         return Optional.ofNullable(this.datasourceType);
     }
@@ -158,6 +206,11 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="objectType", required=true)
     private String objectType;
 
+    /**
+     * @return Type of the specific object - used for deserializing
+     * Expected value is &#39;WorkloadCrrAccessToken&#39;.
+     * 
+     */
     public String objectType() {
         return this.objectType;
     }
@@ -169,6 +222,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="policyId")
     private @Nullable String policyId;
 
+    /**
+     * @return Policy Id
+     * 
+     */
     public Optional<String> policyId() {
         return Optional.ofNullable(this.policyId);
     }
@@ -180,6 +237,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="policyName")
     private @Nullable String policyName;
 
+    /**
+     * @return Policy Name
+     * 
+     */
     public Optional<String> policyName() {
         return Optional.ofNullable(this.policyName);
     }
@@ -233,6 +294,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="protectionContainerId")
     private @Nullable Double protectionContainerId;
 
+    /**
+     * @return Protected item container id
+     * 
+     */
     public Optional<Double> protectionContainerId() {
         return Optional.ofNullable(this.protectionContainerId);
     }
@@ -244,6 +309,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="protectionServiceStampId")
     private @Nullable String protectionServiceStampId;
 
+    /**
+     * @return ProtectionServiceStampId to be used by BCM in restore call
+     * 
+     */
     public Optional<String> protectionServiceStampId() {
         return Optional.ofNullable(this.protectionServiceStampId);
     }
@@ -255,6 +324,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="protectionServiceStampUri")
     private @Nullable String protectionServiceStampUri;
 
+    /**
+     * @return ProtectionServiceStampUri to be used by BCM in restore call
+     * 
+     */
     public Optional<String> protectionServiceStampUri() {
         return Optional.ofNullable(this.protectionServiceStampUri);
     }
@@ -266,6 +339,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="recoveryPointId")
     private @Nullable String recoveryPointId;
 
+    /**
+     * @return Recovery Point Id
+     * 
+     */
     public Optional<String> recoveryPointId() {
         return Optional.ofNullable(this.recoveryPointId);
     }
@@ -277,6 +354,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="recoveryPointTime")
     private @Nullable String recoveryPointTime;
 
+    /**
+     * @return Recovery Point Time
+     * 
+     */
     public Optional<String> recoveryPointTime() {
         return Optional.ofNullable(this.recoveryPointTime);
     }
@@ -288,6 +369,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="resourceGroupName")
     private @Nullable String resourceGroupName;
 
+    /**
+     * @return Resource Group name of the source vault
+     * 
+     */
     public Optional<String> resourceGroupName() {
         return Optional.ofNullable(this.resourceGroupName);
     }
@@ -299,6 +384,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="resourceId")
     private @Nullable String resourceId;
 
+    /**
+     * @return Resource Id of the source vault
+     * 
+     */
     public Optional<String> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -310,6 +399,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="resourceName")
     private @Nullable String resourceName;
 
+    /**
+     * @return Resource Name of the source vault
+     * 
+     */
     public Optional<String> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -321,6 +414,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="rpIsManagedVirtualMachine")
     private @Nullable Boolean rpIsManagedVirtualMachine;
 
+    /**
+     * @return Recovery point information: Managed virtual machine
+     * 
+     */
     public Optional<Boolean> rpIsManagedVirtualMachine() {
         return Optional.ofNullable(this.rpIsManagedVirtualMachine);
     }
@@ -332,6 +429,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="rpOriginalSAOption")
     private @Nullable Boolean rpOriginalSAOption;
 
+    /**
+     * @return Recovery point information: Original SA option
+     * 
+     */
     public Optional<Boolean> rpOriginalSAOption() {
         return Optional.ofNullable(this.rpOriginalSAOption);
     }
@@ -343,6 +444,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="rpTierInformation")
     private @Nullable Map<String,String> rpTierInformation;
 
+    /**
+     * @return Recovery point Tier Information
+     * 
+     */
     public Optional<Map<String,String>> rpTierInformation() {
         return Optional.ofNullable(this.rpTierInformation);
     }
@@ -354,6 +459,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="rpVMSizeDescription")
     private @Nullable String rpVMSizeDescription;
 
+    /**
+     * @return Recovery point information: VM size description
+     * 
+     */
     public Optional<String> rpVMSizeDescription() {
         return Optional.ofNullable(this.rpVMSizeDescription);
     }
@@ -365,6 +474,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="subscriptionId")
     private @Nullable String subscriptionId;
 
+    /**
+     * @return Subscription Id of the source vault
+     * 
+     */
     public Optional<String> subscriptionId() {
         return Optional.ofNullable(this.subscriptionId);
     }
@@ -376,6 +489,10 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
     @Import(name="tokenExtendedInformation")
     private @Nullable String tokenExtendedInformation;
 
+    /**
+     * @return Extended Information about the token like FileSpec etc.
+     * 
+     */
     public Optional<String> tokenExtendedInformation() {
         return Optional.ofNullable(this.tokenExtendedInformation);
     }
@@ -438,76 +555,167 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
             $ = new WorkloadCrrAccessTokenResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessTokenString Access token used for authentication
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessTokenString(@Nullable String accessTokenString) {
             $.accessTokenString = accessTokenString;
             return this;
         }
 
+        /**
+         * @param bMSActiveRegion Active region name of BMS Stamp
+         * 
+         * @return builder
+         * 
+         */
         public Builder bMSActiveRegion(@Nullable String bMSActiveRegion) {
             $.bMSActiveRegion = bMSActiveRegion;
             return this;
         }
 
+        /**
+         * @param backupManagementType Backup Management Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupManagementType(@Nullable String backupManagementType) {
             $.backupManagementType = backupManagementType;
             return this;
         }
 
+        /**
+         * @param containerId Container Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerId(@Nullable String containerId) {
             $.containerId = containerId;
             return this;
         }
 
+        /**
+         * @param containerName Container Unique name
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerName(@Nullable String containerName) {
             $.containerName = containerName;
             return this;
         }
 
+        /**
+         * @param containerType Container Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerType(@Nullable String containerType) {
             $.containerType = containerType;
             return this;
         }
 
+        /**
+         * @param coordinatorServiceStampId CoordinatorServiceStampId to be used by BCM in restore call
+         * 
+         * @return builder
+         * 
+         */
         public Builder coordinatorServiceStampId(@Nullable String coordinatorServiceStampId) {
             $.coordinatorServiceStampId = coordinatorServiceStampId;
             return this;
         }
 
+        /**
+         * @param coordinatorServiceStampUri CoordinatorServiceStampUri to be used by BCM in restore call
+         * 
+         * @return builder
+         * 
+         */
         public Builder coordinatorServiceStampUri(@Nullable String coordinatorServiceStampUri) {
             $.coordinatorServiceStampUri = coordinatorServiceStampUri;
             return this;
         }
 
+        /**
+         * @param datasourceContainerName Datasource Container Unique Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceContainerName(@Nullable String datasourceContainerName) {
             $.datasourceContainerName = datasourceContainerName;
             return this;
         }
 
+        /**
+         * @param datasourceId Datasource Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceId(@Nullable String datasourceId) {
             $.datasourceId = datasourceId;
             return this;
         }
 
+        /**
+         * @param datasourceName Datasource Friendly Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceName(@Nullable String datasourceName) {
             $.datasourceName = datasourceName;
             return this;
         }
 
+        /**
+         * @param datasourceType Datasource Type
+         * 
+         * @return builder
+         * 
+         */
         public Builder datasourceType(@Nullable String datasourceType) {
             $.datasourceType = datasourceType;
             return this;
         }
 
+        /**
+         * @param objectType Type of the specific object - used for deserializing
+         * Expected value is &#39;WorkloadCrrAccessToken&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder objectType(String objectType) {
             $.objectType = objectType;
             return this;
         }
 
+        /**
+         * @param policyId Policy Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyId(@Nullable String policyId) {
             $.policyId = policyId;
             return this;
         }
 
+        /**
+         * @param policyName Policy Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(@Nullable String policyName) {
             $.policyName = policyName;
             return this;
@@ -543,71 +751,155 @@ public final class WorkloadCrrAccessTokenResponse extends com.pulumi.resources.I
             return this;
         }
 
+        /**
+         * @param protectionContainerId Protected item container id
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionContainerId(@Nullable Double protectionContainerId) {
             $.protectionContainerId = protectionContainerId;
             return this;
         }
 
+        /**
+         * @param protectionServiceStampId ProtectionServiceStampId to be used by BCM in restore call
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionServiceStampId(@Nullable String protectionServiceStampId) {
             $.protectionServiceStampId = protectionServiceStampId;
             return this;
         }
 
+        /**
+         * @param protectionServiceStampUri ProtectionServiceStampUri to be used by BCM in restore call
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionServiceStampUri(@Nullable String protectionServiceStampUri) {
             $.protectionServiceStampUri = protectionServiceStampUri;
             return this;
         }
 
+        /**
+         * @param recoveryPointId Recovery Point Id
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointId(@Nullable String recoveryPointId) {
             $.recoveryPointId = recoveryPointId;
             return this;
         }
 
+        /**
+         * @param recoveryPointTime Recovery Point Time
+         * 
+         * @return builder
+         * 
+         */
         public Builder recoveryPointTime(@Nullable String recoveryPointTime) {
             $.recoveryPointTime = recoveryPointTime;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Resource Group name of the source vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(@Nullable String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceId Resource Id of the source vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceName Resource Name of the source vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable String resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param rpIsManagedVirtualMachine Recovery point information: Managed virtual machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpIsManagedVirtualMachine(@Nullable Boolean rpIsManagedVirtualMachine) {
             $.rpIsManagedVirtualMachine = rpIsManagedVirtualMachine;
             return this;
         }
 
+        /**
+         * @param rpOriginalSAOption Recovery point information: Original SA option
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpOriginalSAOption(@Nullable Boolean rpOriginalSAOption) {
             $.rpOriginalSAOption = rpOriginalSAOption;
             return this;
         }
 
+        /**
+         * @param rpTierInformation Recovery point Tier Information
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpTierInformation(@Nullable Map<String,String> rpTierInformation) {
             $.rpTierInformation = rpTierInformation;
             return this;
         }
 
+        /**
+         * @param rpVMSizeDescription Recovery point information: VM size description
+         * 
+         * @return builder
+         * 
+         */
         public Builder rpVMSizeDescription(@Nullable String rpVMSizeDescription) {
             $.rpVMSizeDescription = rpVMSizeDescription;
             return this;
         }
 
+        /**
+         * @param subscriptionId Subscription Id of the source vault
+         * 
+         * @return builder
+         * 
+         */
         public Builder subscriptionId(@Nullable String subscriptionId) {
             $.subscriptionId = subscriptionId;
             return this;
         }
 
+        /**
+         * @param tokenExtendedInformation Extended Information about the token like FileSpec etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tokenExtendedInformation(@Nullable String tokenExtendedInformation) {
             $.tokenExtendedInformation = tokenExtendedInformation;
             return this;

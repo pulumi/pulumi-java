@@ -19,6 +19,10 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
     @Import(name="planId", required=true)
     private String planId;
 
+    /**
+     * @return This is a unique identifier for a plan. Should be a guid.
+     * 
+     */
     public String planId() {
         return this.planId;
     }
@@ -30,6 +34,10 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -59,11 +67,23 @@ public final class GetHybridUseBenefitArgs extends com.pulumi.resources.InvokeAr
             $ = new GetHybridUseBenefitArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param planId This is a unique identifier for a plan. Should be a guid.
+         * 
+         * @return builder
+         * 
+         */
         public Builder planId(String planId) {
             $.planId = planId;
             return this;
         }
 
+        /**
+         * @param scope The scope at which the operation is performed. This is limited to Microsoft.Compute/virtualMachines and Microsoft.Compute/hostGroups/hosts for now
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;

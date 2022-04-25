@@ -28,6 +28,11 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The instance type.
+     * Expected value is &#39;AzureToAzure&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -39,6 +44,10 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
     @Import(name="primaryNetworkId")
     private @Nullable Output<String> primaryNetworkId;
 
+    /**
+     * @return The primary azure vnet Id.
+     * 
+     */
     public Optional<Output<String>> primaryNetworkId() {
         return Optional.ofNullable(this.primaryNetworkId);
     }
@@ -68,20 +77,46 @@ public final class AzureToAzureCreateNetworkMappingInputArgs extends com.pulumi.
             $ = new AzureToAzureCreateNetworkMappingInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType The instance type.
+         * Expected value is &#39;AzureToAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The instance type.
+         * Expected value is &#39;AzureToAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param primaryNetworkId The primary azure vnet Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryNetworkId(@Nullable Output<String> primaryNetworkId) {
             $.primaryNetworkId = primaryNetworkId;
             return this;
         }
 
+        /**
+         * @param primaryNetworkId The primary azure vnet Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryNetworkId(String primaryNetworkId) {
             return primaryNetworkId(Output.of(primaryNetworkId));
         }

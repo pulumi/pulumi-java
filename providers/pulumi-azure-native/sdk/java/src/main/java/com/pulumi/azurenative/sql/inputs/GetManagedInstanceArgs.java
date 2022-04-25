@@ -21,6 +21,10 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The child resources to include in the response.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
     @Import(name="managedInstanceName", required=true)
     private String managedInstanceName;
 
+    /**
+     * @return The name of the managed instance.
+     * 
+     */
     public String managedInstanceName() {
         return this.managedInstanceName;
     }
@@ -43,6 +51,10 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -73,16 +85,34 @@ public final class GetManagedInstanceArgs extends com.pulumi.resources.InvokeArg
             $ = new GetManagedInstanceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The child resources to include in the response.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param managedInstanceName The name of the managed instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceName(String managedInstanceName) {
             $.managedInstanceName = managedInstanceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

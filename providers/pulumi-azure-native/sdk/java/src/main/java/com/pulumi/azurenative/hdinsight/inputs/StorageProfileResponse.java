@@ -26,6 +26,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="storageaccounts")
     private @Nullable List<StorageAccountResponse> storageaccounts;
 
+    /**
+     * @return The list of storage accounts in the cluster.
+     * 
+     */
     public Optional<List<StorageAccountResponse>> storageaccounts() {
         return Optional.ofNullable(this.storageaccounts);
     }
@@ -54,11 +58,23 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param storageaccounts The list of storage accounts in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageaccounts(@Nullable List<StorageAccountResponse> storageaccounts) {
             $.storageaccounts = storageaccounts;
             return this;
         }
 
+        /**
+         * @param storageaccounts The list of storage accounts in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageaccounts(StorageAccountResponse... storageaccounts) {
             return storageaccounts(List.of(storageaccounts));
         }

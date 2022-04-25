@@ -27,6 +27,10 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="counterSets", required=true)
     private List<MetricCounterSetResponse> counterSets;
 
+    /**
+     * @return Host name for the IoT hub associated to the device.
+     * 
+     */
     public List<MetricCounterSetResponse> counterSets() {
         return this.counterSets;
     }
@@ -38,6 +42,10 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="mdmAccount")
     private @Nullable String mdmAccount;
 
+    /**
+     * @return The MDM account to which the counters should be pushed.
+     * 
+     */
     public Optional<String> mdmAccount() {
         return Optional.ofNullable(this.mdmAccount);
     }
@@ -49,6 +57,10 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="metricNameSpace")
     private @Nullable String metricNameSpace;
 
+    /**
+     * @return The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+     * 
+     */
     public Optional<String> metricNameSpace() {
         return Optional.ofNullable(this.metricNameSpace);
     }
@@ -60,6 +72,10 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The Resource ID on which the metrics should be pushed.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -91,25 +107,55 @@ public final class MetricConfigurationResponse extends com.pulumi.resources.Invo
             $ = new MetricConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param counterSets Host name for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counterSets(List<MetricCounterSetResponse> counterSets) {
             $.counterSets = counterSets;
             return this;
         }
 
+        /**
+         * @param counterSets Host name for the IoT hub associated to the device.
+         * 
+         * @return builder
+         * 
+         */
         public Builder counterSets(MetricCounterSetResponse... counterSets) {
             return counterSets(List.of(counterSets));
         }
 
+        /**
+         * @param mdmAccount The MDM account to which the counters should be pushed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mdmAccount(@Nullable String mdmAccount) {
             $.mdmAccount = mdmAccount;
             return this;
         }
 
+        /**
+         * @param metricNameSpace The MDM namespace to which the counters should be pushed. This is required if MDMAccount is specified
+         * 
+         * @return builder
+         * 
+         */
         public Builder metricNameSpace(@Nullable String metricNameSpace) {
             $.metricNameSpace = metricNameSpace;
             return this;
         }
 
+        /**
+         * @param resourceId The Resource ID on which the metrics should be pushed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;

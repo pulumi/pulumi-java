@@ -25,6 +25,10 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
     @Import(name="ref")
     private @Nullable String ref;
 
+    /**
+     * @return The reference name.
+     * 
+     */
     public Optional<String> ref() {
         return Optional.ofNullable(this.ref);
     }
@@ -53,6 +57,12 @@ public final class IntegrationAccountMapPropertiesResponseParametersSchema exten
             $ = new IntegrationAccountMapPropertiesResponseParametersSchema(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ref The reference name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ref(@Nullable String ref) {
             $.ref = ref;
             return this;

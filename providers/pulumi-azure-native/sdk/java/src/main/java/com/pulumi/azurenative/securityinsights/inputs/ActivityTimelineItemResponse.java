@@ -24,6 +24,10 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="bucketEndTimeUTC", required=true)
     private String bucketEndTimeUTC;
 
+    /**
+     * @return The grouping bucket end time.
+     * 
+     */
     public String bucketEndTimeUTC() {
         return this.bucketEndTimeUTC;
     }
@@ -35,6 +39,10 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="bucketStartTimeUTC", required=true)
     private String bucketStartTimeUTC;
 
+    /**
+     * @return The grouping bucket start time.
+     * 
+     */
     public String bucketStartTimeUTC() {
         return this.bucketStartTimeUTC;
     }
@@ -46,6 +54,10 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="content", required=true)
     private String content;
 
+    /**
+     * @return The activity timeline content.
+     * 
+     */
     public String content() {
         return this.content;
     }
@@ -57,6 +69,10 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="firstActivityTimeUTC", required=true)
     private String firstActivityTimeUTC;
 
+    /**
+     * @return The time of the first activity in the grouping bucket.
+     * 
+     */
     public String firstActivityTimeUTC() {
         return this.firstActivityTimeUTC;
     }
@@ -69,6 +85,11 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="kind", required=true)
     private String kind;
 
+    /**
+     * @return The entity query kind
+     * Expected value is &#39;Activity&#39;.
+     * 
+     */
     public String kind() {
         return this.kind;
     }
@@ -80,6 +101,10 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="lastActivityTimeUTC", required=true)
     private String lastActivityTimeUTC;
 
+    /**
+     * @return The time of the last activity in the grouping bucket.
+     * 
+     */
     public String lastActivityTimeUTC() {
         return this.lastActivityTimeUTC;
     }
@@ -91,6 +116,10 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="queryId", required=true)
     private String queryId;
 
+    /**
+     * @return The activity query id.
+     * 
+     */
     public String queryId() {
         return this.queryId;
     }
@@ -102,6 +131,10 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
     @Import(name="title", required=true)
     private String title;
 
+    /**
+     * @return The activity timeline title.
+     * 
+     */
     public String title() {
         return this.title;
     }
@@ -137,41 +170,90 @@ public final class ActivityTimelineItemResponse extends com.pulumi.resources.Inv
             $ = new ActivityTimelineItemResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bucketEndTimeUTC The grouping bucket end time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketEndTimeUTC(String bucketEndTimeUTC) {
             $.bucketEndTimeUTC = bucketEndTimeUTC;
             return this;
         }
 
+        /**
+         * @param bucketStartTimeUTC The grouping bucket start time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bucketStartTimeUTC(String bucketStartTimeUTC) {
             $.bucketStartTimeUTC = bucketStartTimeUTC;
             return this;
         }
 
+        /**
+         * @param content The activity timeline content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder content(String content) {
             $.content = content;
             return this;
         }
 
+        /**
+         * @param firstActivityTimeUTC The time of the first activity in the grouping bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstActivityTimeUTC(String firstActivityTimeUTC) {
             $.firstActivityTimeUTC = firstActivityTimeUTC;
             return this;
         }
 
+        /**
+         * @param kind The entity query kind
+         * Expected value is &#39;Activity&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param lastActivityTimeUTC The time of the last activity in the grouping bucket.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastActivityTimeUTC(String lastActivityTimeUTC) {
             $.lastActivityTimeUTC = lastActivityTimeUTC;
             return this;
         }
 
+        /**
+         * @param queryId The activity query id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryId(String queryId) {
             $.queryId = queryId;
             return this;
         }
 
+        /**
+         * @param title The activity timeline title.
+         * 
+         * @return builder
+         * 
+         */
         public Builder title(String title) {
             $.title = title;
             return this;

@@ -27,6 +27,10 @@ public final class ConnectionMonitorEndpointScopeArgs extends com.pulumi.resourc
     @Import(name="exclude")
     private @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude;
 
+    /**
+     * @return List of items which needs to be excluded from the endpoint scope.
+     * 
+     */
     public Optional<Output<List<ConnectionMonitorEndpointScopeItemArgs>>> exclude() {
         return Optional.ofNullable(this.exclude);
     }
@@ -38,6 +42,10 @@ public final class ConnectionMonitorEndpointScopeArgs extends com.pulumi.resourc
     @Import(name="include")
     private @Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include;
 
+    /**
+     * @return List of items which needs to be included to the endpoint scope.
+     * 
+     */
     public Optional<Output<List<ConnectionMonitorEndpointScopeItemArgs>>> include() {
         return Optional.ofNullable(this.include);
     }
@@ -67,28 +75,64 @@ public final class ConnectionMonitorEndpointScopeArgs extends com.pulumi.resourc
             $ = new ConnectionMonitorEndpointScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclude List of items which needs to be excluded from the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclude(@Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> exclude) {
             $.exclude = exclude;
             return this;
         }
 
+        /**
+         * @param exclude List of items which needs to be excluded from the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclude(List<ConnectionMonitorEndpointScopeItemArgs> exclude) {
             return exclude(Output.of(exclude));
         }
 
+        /**
+         * @param exclude List of items which needs to be excluded from the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclude(ConnectionMonitorEndpointScopeItemArgs... exclude) {
             return exclude(List.of(exclude));
         }
 
+        /**
+         * @param include List of items which needs to be included to the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(@Nullable Output<List<ConnectionMonitorEndpointScopeItemArgs>> include) {
             $.include = include;
             return this;
         }
 
+        /**
+         * @param include List of items which needs to be included to the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(List<ConnectionMonitorEndpointScopeItemArgs> include) {
             return include(Output.of(include));
         }
 
+        /**
+         * @param include List of items which needs to be included to the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(ConnectionMonitorEndpointScopeItemArgs... include) {
             return include(List.of(include));
         }

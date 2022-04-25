@@ -34,6 +34,10 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -45,6 +49,10 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -56,6 +64,10 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -67,6 +79,10 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="encryptedCredential")
     private @Nullable String encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<String> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -78,6 +94,10 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -89,6 +109,10 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return The password for Basic authentication.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -101,6 +125,11 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;SapEcc&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -112,6 +141,10 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="url", required=true)
     private String url;
 
+    /**
+     * @return The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
+     * 
+     */
     public String url() {
         return this.url;
     }
@@ -123,6 +156,10 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
     @Import(name="username")
     private @Nullable String username;
 
+    /**
+     * @return The username for Basic authentication. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }
@@ -159,58 +196,131 @@ public final class SapEccLinkedServiceResponse extends com.pulumi.resources.Invo
             $ = new SapEccLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Either encryptedCredential or username/password must be provided. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable String encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password The password for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password The password for Basic authentication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;SapEcc&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param url The URL of SAP ECC OData API. For example, &#39;[https://hostname:port/sap/opu/odata/sap/servicename/]&#39;. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param username The username for Basic authentication. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable String username) {
             $.username = username;
             return this;

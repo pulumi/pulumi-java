@@ -29,6 +29,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="baseImageDependencies", required=true)
     private List<BaseImageDependencyResponse> baseImageDependencies;
 
+    /**
+     * @return List of base image dependencies for a step.
+     * 
+     */
     public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
     }
@@ -40,6 +44,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="contextAccessToken")
     private @Nullable String contextAccessToken;
 
+    /**
+     * @return The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+     * 
+     */
     public Optional<String> contextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
@@ -51,6 +59,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="contextPath")
     private @Nullable String contextPath;
 
+    /**
+     * @return The URL(absolute or relative) of the source context for the task step.
+     * 
+     */
     public Optional<String> contextPath() {
         return Optional.ofNullable(this.contextPath);
     }
@@ -62,6 +74,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="encodedTaskContent", required=true)
     private String encodedTaskContent;
 
+    /**
+     * @return Base64 encoded value of the template/definition file content.
+     * 
+     */
     public String encodedTaskContent() {
         return this.encodedTaskContent;
     }
@@ -73,6 +89,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="encodedValuesContent")
     private @Nullable String encodedValuesContent;
 
+    /**
+     * @return Base64 encoded value of the parameters/values file content.
+     * 
+     */
     public Optional<String> encodedValuesContent() {
         return Optional.ofNullable(this.encodedValuesContent);
     }
@@ -85,6 +105,11 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the step.
+     * Expected value is &#39;EncodedTask&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -96,6 +121,10 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="values")
     private @Nullable List<SetValueResponse> values;
 
+    /**
+     * @return The collection of overridable values that can be passed when running a task.
+     * 
+     */
     public Optional<List<SetValueResponse>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -130,45 +159,100 @@ public final class EncodedTaskStepResponse extends com.pulumi.resources.InvokeAr
             $ = new EncodedTaskStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param baseImageDependencies List of base image dependencies for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
             $.baseImageDependencies = baseImageDependencies;
             return this;
         }
 
+        /**
+         * @param baseImageDependencies List of base image dependencies for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageDependencies(BaseImageDependencyResponse... baseImageDependencies) {
             return baseImageDependencies(List.of(baseImageDependencies));
         }
 
+        /**
+         * @param contextAccessToken The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
             $.contextAccessToken = contextAccessToken;
             return this;
         }
 
+        /**
+         * @param contextPath The URL(absolute or relative) of the source context for the task step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextPath(@Nullable String contextPath) {
             $.contextPath = contextPath;
             return this;
         }
 
+        /**
+         * @param encodedTaskContent Base64 encoded value of the template/definition file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedTaskContent(String encodedTaskContent) {
             $.encodedTaskContent = encodedTaskContent;
             return this;
         }
 
+        /**
+         * @param encodedValuesContent Base64 encoded value of the parameters/values file content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encodedValuesContent(@Nullable String encodedValuesContent) {
             $.encodedValuesContent = encodedValuesContent;
             return this;
         }
 
+        /**
+         * @param type The type of the step.
+         * Expected value is &#39;EncodedTask&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable List<SetValueResponse> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values The collection of overridable values that can be passed when running a task.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(SetValueResponse... values) {
             return values(List.of(values));
         }

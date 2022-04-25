@@ -128,6 +128,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataset", required=true)
     private DatasetReferenceResponse dataset;
 
+    /**
+     * @return Lookup activity dataset reference.
+     * 
+     */
     public DatasetReferenceResponse dataset() {
         return this.dataset;
     }
@@ -139,6 +143,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -150,6 +158,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -161,6 +173,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="firstRowOnly")
     private @Nullable Object firstRowOnly;
 
+    /**
+     * @return Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> firstRowOnly() {
         return Optional.ofNullable(this.firstRowOnly);
     }
@@ -172,6 +188,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -183,6 +203,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -194,6 +218,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -205,6 +233,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="source", required=true)
     private Object source;
 
+    /**
+     * @return Dataset-specific source properties, same as copy activity source.
+     * 
+     */
     public Object source() {
         return this.source;
     }
@@ -217,6 +249,11 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;Lookup&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -228,6 +265,10 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -265,60 +306,133 @@ public final class LookupActivityResponse extends com.pulumi.resources.InvokeArg
             $ = new LookupActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataset Lookup activity dataset reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataset(DatasetReferenceResponse dataset) {
             $.dataset = dataset;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param firstRowOnly Whether to return first row or all rows. Default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder firstRowOnly(@Nullable Object firstRowOnly) {
             $.firstRowOnly = firstRowOnly;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param source Dataset-specific source properties, same as copy activity source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(Object source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;Lookup&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

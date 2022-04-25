@@ -19,6 +19,10 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="recordType", required=true)
     private String recordType;
 
+    /**
+     * @return The type of DNS record in this record set.
+     * 
+     */
     public String recordType() {
         return this.recordType;
     }
@@ -30,6 +34,10 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="relativeRecordSetName", required=true)
     private String relativeRecordSetName;
 
+    /**
+     * @return The name of the record set, relative to the name of the zone.
+     * 
+     */
     public String relativeRecordSetName() {
         return this.relativeRecordSetName;
     }
@@ -41,6 +49,10 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -52,6 +64,10 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="zoneName", required=true)
     private String zoneName;
 
+    /**
+     * @return The name of the DNS zone (without a terminating dot).
+     * 
+     */
     public String zoneName() {
         return this.zoneName;
     }
@@ -83,21 +99,45 @@ public final class GetRecordSetArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetRecordSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param recordType The type of DNS record in this record set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordType(String recordType) {
             $.recordType = recordType;
             return this;
         }
 
+        /**
+         * @param relativeRecordSetName The name of the record set, relative to the name of the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeRecordSetName(String relativeRecordSetName) {
             $.relativeRecordSetName = relativeRecordSetName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param zoneName The name of the DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
         public Builder zoneName(String zoneName) {
             $.zoneName = zoneName;
             return this;

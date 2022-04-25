@@ -28,6 +28,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataDisks")
     private @Nullable List<DataDiskResponse> dataDisks;
 
+    /**
+     * @return Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * 
+     */
     public Optional<List<DataDiskResponse>> dataDisks() {
         return Optional.ofNullable(this.dataDisks);
     }
@@ -39,6 +43,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="imageReference")
     private @Nullable ImageReferenceResponse imageReference;
 
+    /**
+     * @return Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+     * 
+     */
     public Optional<ImageReferenceResponse> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
@@ -50,6 +58,10 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
     @Import(name="osDisk")
     private @Nullable OSDiskResponse osDisk;
 
+    /**
+     * @return Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+     * 
+     */
     public Optional<OSDiskResponse> osDisk() {
         return Optional.ofNullable(this.osDisk);
     }
@@ -80,20 +92,44 @@ public final class StorageProfileResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageProfileResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(@Nullable List<DataDiskResponse> dataDisks) {
             $.dataDisks = dataDisks;
             return this;
         }
 
+        /**
+         * @param dataDisks Specifies the parameters that are used to add a data disk to a virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataDisks(DataDiskResponse... dataDisks) {
             return dataDisks(List.of(dataDisks));
         }
 
+        /**
+         * @param imageReference Specifies information about the image to use. You can specify information about platform images, marketplace images, or virtual machine images. This element is required when you want to use a platform image, marketplace image, or virtual machine image, but is not used in other creation operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(@Nullable ImageReferenceResponse imageReference) {
             $.imageReference = imageReference;
             return this;
         }
 
+        /**
+         * @param osDisk Specifies information about the operating system disk used by the virtual machine. &lt;br&gt;&lt;br&gt; For more information about disks, see [About disks and VHDs for Azure virtual machines](https://docs.microsoft.com/azure/virtual-machines/managed-disks-overview).
+         * 
+         * @return builder
+         * 
+         */
         public Builder osDisk(@Nullable OSDiskResponse osDisk) {
             $.osDisk = osDisk;
             return this;

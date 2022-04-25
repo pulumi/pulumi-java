@@ -27,6 +27,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return External reference description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="externalId")
     private @Nullable Output<String> externalId;
 
+    /**
+     * @return External reference ID
+     * 
+     */
     public Optional<Output<String>> externalId() {
         return Optional.ofNullable(this.externalId);
     }
@@ -49,6 +57,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="hashes")
     private @Nullable Output<Map<String,String>> hashes;
 
+    /**
+     * @return External reference hashes
+     * 
+     */
     public Optional<Output<Map<String,String>>> hashes() {
         return Optional.ofNullable(this.hashes);
     }
@@ -60,6 +72,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="sourceName")
     private @Nullable Output<String> sourceName;
 
+    /**
+     * @return External reference source name
+     * 
+     */
     public Optional<Output<String>> sourceName() {
         return Optional.ofNullable(this.sourceName);
     }
@@ -71,6 +87,10 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
     @Import(name="url")
     private @Nullable Output<String> url;
 
+    /**
+     * @return External reference URL
+     * 
+     */
     public Optional<Output<String>> url() {
         return Optional.ofNullable(this.url);
     }
@@ -103,47 +123,107 @@ public final class ThreatIntelligenceExternalReferenceArgs extends com.pulumi.re
             $ = new ThreatIntelligenceExternalReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description External reference description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description External reference description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param externalId External reference ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(@Nullable Output<String> externalId) {
             $.externalId = externalId;
             return this;
         }
 
+        /**
+         * @param externalId External reference ID
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalId(String externalId) {
             return externalId(Output.of(externalId));
         }
 
+        /**
+         * @param hashes External reference hashes
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashes(@Nullable Output<Map<String,String>> hashes) {
             $.hashes = hashes;
             return this;
         }
 
+        /**
+         * @param hashes External reference hashes
+         * 
+         * @return builder
+         * 
+         */
         public Builder hashes(Map<String,String> hashes) {
             return hashes(Output.of(hashes));
         }
 
+        /**
+         * @param sourceName External reference source name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceName(@Nullable Output<String> sourceName) {
             $.sourceName = sourceName;
             return this;
         }
 
+        /**
+         * @param sourceName External reference source name
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceName(String sourceName) {
             return sourceName(Output.of(sourceName));
         }
 
+        /**
+         * @param url External reference URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(@Nullable Output<String> url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param url External reference URL
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(String url) {
             return url(Output.of(url));
         }

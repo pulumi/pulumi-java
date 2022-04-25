@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetAccessControlRecordResult {
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
      */
     private final String id;
     /**
-     * The iSCSI initiator name (IQN).
+     * @return The iSCSI initiator name (IQN).
      * 
      */
     private final String initiatorName;
     /**
-     * The Kind of the object. Currently only Series8000 is supported
+     * @return The Kind of the object. Currently only Series8000 is supported
      * 
      */
     private final @Nullable String kind;
     /**
-     * The name of the object.
+     * @return The name of the object.
      * 
      */
     private final String name;
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
      */
     private final String type;
     /**
-     * The number of volumes using the access control record.
+     * @return The number of volumes using the access control record.
      * 
      */
     private final Integer volumeCount;
@@ -60,44 +60,44 @@ public final class GetAccessControlRecordResult {
     }
 
     /**
-     * The path ID that uniquely identifies the object.
+     * @return The path ID that uniquely identifies the object.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The iSCSI initiator name (IQN).
+     * @return The iSCSI initiator name (IQN).
      * 
-    */
+     */
     public String initiatorName() {
         return this.initiatorName;
     }
     /**
-     * The Kind of the object. Currently only Series8000 is supported
+     * @return The Kind of the object. Currently only Series8000 is supported
      * 
-    */
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
     /**
-     * The name of the object.
+     * @return The name of the object.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The hierarchical type of the object.
+     * @return The hierarchical type of the object.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The number of volumes using the access control record.
+     * @return The number of volumes using the access control record.
      * 
-    */
+     */
     public Integer volumeCount() {
         return this.volumeCount;
     }

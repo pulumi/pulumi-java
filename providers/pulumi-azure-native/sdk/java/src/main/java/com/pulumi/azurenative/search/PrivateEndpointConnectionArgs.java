@@ -23,6 +23,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpointConnectionName")
     private @Nullable Output<String> privateEndpointConnectionName;
 
+    /**
+     * @return The name of the private endpoint connection to the Azure Cognitive Search service with the specified resource group.
+     * 
+     */
     public Optional<Output<String>> privateEndpointConnectionName() {
         return Optional.ofNullable(this.privateEndpointConnectionName);
     }
@@ -34,6 +38,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="properties")
     private @Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties;
 
+    /**
+     * @return Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
+     * 
+     */
     public Optional<Output<PrivateEndpointConnectionPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -45,6 +53,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -56,6 +68,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="searchServiceName", required=true)
     private Output<String> searchServiceName;
 
+    /**
+     * @return The name of the Azure Cognitive Search service associated with the specified resource group.
+     * 
+     */
     public Output<String> searchServiceName() {
         return this.searchServiceName;
     }
@@ -87,38 +103,86 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection to the Azure Cognitive Search service with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName The name of the private endpoint connection to the Azure Cognitive Search service with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param properties Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<PrivateEndpointConnectionPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Describes the properties of an existing Private Endpoint connection to the Azure Cognitive Search service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(PrivateEndpointConnectionPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group within the current subscription. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param searchServiceName The name of the Azure Cognitive Search service associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchServiceName(Output<String> searchServiceName) {
             $.searchServiceName = searchServiceName;
             return this;
         }
 
+        /**
+         * @param searchServiceName The name of the Azure Cognitive Search service associated with the specified resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchServiceName(String searchServiceName) {
             return searchServiceName(Output.of(searchServiceName));
         }

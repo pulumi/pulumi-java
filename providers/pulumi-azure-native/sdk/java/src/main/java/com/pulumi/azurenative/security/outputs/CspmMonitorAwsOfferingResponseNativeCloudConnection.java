@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CspmMonitorAwsOfferingResponseNativeCloudConnection {
     /**
-     * The cloud role ARN in AWS for this feature
+     * @return The cloud role ARN in AWS for this feature
      * 
      */
     private final @Nullable String cloudRoleArn;
@@ -23,9 +23,9 @@ public final class CspmMonitorAwsOfferingResponseNativeCloudConnection {
     }
 
     /**
-     * The cloud role ARN in AWS for this feature
+     * @return The cloud role ARN in AWS for this feature
      * 
-    */
+     */
     public Optional<String> cloudRoleArn() {
         return Optional.ofNullable(this.cloudRoleArn);
     }

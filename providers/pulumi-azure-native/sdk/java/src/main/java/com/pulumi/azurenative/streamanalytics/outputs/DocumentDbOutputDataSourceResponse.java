@@ -12,37 +12,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DocumentDbOutputDataSourceResponse {
     /**
-     * The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
+     * @return The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String accountId;
     /**
-     * The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
+     * @return The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String accountKey;
     /**
-     * The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
+     * @return The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String collectionNamePattern;
     /**
-     * The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
      * 
      */
     private final @Nullable String database;
     /**
-     * The name of the field in output events used to specify the primary key which insert or update operations are based on.
+     * @return The name of the field in output events used to specify the primary key which insert or update operations are based on.
      * 
      */
     private final @Nullable String documentId;
     /**
-     * The name of the field in output events used to specify the key for partitioning output across collections. If &#39;collectionNamePattern&#39; contains the {partition} token, this property is required to be specified.
+     * @return The name of the field in output events used to specify the key for partitioning output across collections. If &#39;collectionNamePattern&#39; contains the {partition} token, this property is required to be specified.
      * 
      */
     private final @Nullable String partitionKey;
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.Storage/DocumentDB&#39;.
      * 
      */
@@ -67,52 +67,52 @@ public final class DocumentDbOutputDataSourceResponse {
     }
 
     /**
-     * The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
+     * @return The DocumentDB account name or ID. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> accountId() {
         return Optional.ofNullable(this.accountId);
     }
     /**
-     * The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
+     * @return The account key for the DocumentDB account. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> accountKey() {
         return Optional.ofNullable(this.accountKey);
     }
     /**
-     * The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
+     * @return The collection name pattern for the collections to be used. The collection name format can be constructed using the optional {partition} token, where partitions start from 0. See the DocumentDB section of https://docs.microsoft.com/en-us/rest/api/streamanalytics/stream-analytics-output for more information. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> collectionNamePattern() {
         return Optional.ofNullable(this.collectionNamePattern);
     }
     /**
-     * The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
+     * @return The name of the DocumentDB database. Required on PUT (CreateOrReplace) requests.
      * 
-    */
+     */
     public Optional<String> database() {
         return Optional.ofNullable(this.database);
     }
     /**
-     * The name of the field in output events used to specify the primary key which insert or update operations are based on.
+     * @return The name of the field in output events used to specify the primary key which insert or update operations are based on.
      * 
-    */
+     */
     public Optional<String> documentId() {
         return Optional.ofNullable(this.documentId);
     }
     /**
-     * The name of the field in output events used to specify the key for partitioning output across collections. If &#39;collectionNamePattern&#39; contains the {partition} token, this property is required to be specified.
+     * @return The name of the field in output events used to specify the key for partitioning output across collections. If &#39;collectionNamePattern&#39; contains the {partition} token, this property is required to be specified.
      * 
-    */
+     */
     public Optional<String> partitionKey() {
         return Optional.ofNullable(this.partitionKey);
     }
     /**
-     * Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
+     * @return Indicates the type of data source output will be written to. Required on PUT (CreateOrReplace) requests.
      * Expected value is &#39;Microsoft.Storage/DocumentDB&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

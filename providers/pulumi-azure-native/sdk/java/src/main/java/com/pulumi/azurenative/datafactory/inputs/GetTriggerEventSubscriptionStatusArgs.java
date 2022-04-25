@@ -19,6 +19,10 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
     @Import(name="factoryName", required=true)
     private String factoryName;
 
+    /**
+     * @return The factory name.
+     * 
+     */
     public String factoryName() {
         return this.factoryName;
     }
@@ -30,6 +34,10 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
     @Import(name="triggerName", required=true)
     private String triggerName;
 
+    /**
+     * @return The trigger name.
+     * 
+     */
     public String triggerName() {
         return this.triggerName;
     }
@@ -71,16 +83,34 @@ public final class GetTriggerEventSubscriptionStatusArgs extends com.pulumi.reso
             $ = new GetTriggerEventSubscriptionStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param factoryName The factory name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder factoryName(String factoryName) {
             $.factoryName = factoryName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param triggerName The trigger name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder triggerName(String triggerName) {
             $.triggerName = triggerName;
             return this;

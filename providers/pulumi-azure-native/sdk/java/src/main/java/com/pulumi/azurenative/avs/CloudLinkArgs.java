@@ -22,6 +22,10 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cloudLinkName")
     private @Nullable Output<String> cloudLinkName;
 
+    /**
+     * @return Name of the cloud link resource
+     * 
+     */
     public Optional<Output<String>> cloudLinkName() {
         return Optional.ofNullable(this.cloudLinkName);
     }
@@ -33,6 +37,10 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="linkedCloud")
     private @Nullable Output<String> linkedCloud;
 
+    /**
+     * @return Identifier of the other private cloud participating in the link.
+     * 
+     */
     public Optional<Output<String>> linkedCloud() {
         return Optional.ofNullable(this.linkedCloud);
     }
@@ -44,6 +52,10 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="privateCloudName", required=true)
     private Output<String> privateCloudName;
 
+    /**
+     * @return The name of the private cloud.
+     * 
+     */
     public Output<String> privateCloudName() {
         return this.privateCloudName;
     }
@@ -55,6 +67,10 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -86,38 +102,86 @@ public final class CloudLinkArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CloudLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cloudLinkName Name of the cloud link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudLinkName(@Nullable Output<String> cloudLinkName) {
             $.cloudLinkName = cloudLinkName;
             return this;
         }
 
+        /**
+         * @param cloudLinkName Name of the cloud link resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder cloudLinkName(String cloudLinkName) {
             return cloudLinkName(Output.of(cloudLinkName));
         }
 
+        /**
+         * @param linkedCloud Identifier of the other private cloud participating in the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedCloud(@Nullable Output<String> linkedCloud) {
             $.linkedCloud = linkedCloud;
             return this;
         }
 
+        /**
+         * @param linkedCloud Identifier of the other private cloud participating in the link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedCloud(String linkedCloud) {
             return linkedCloud(Output.of(linkedCloud));
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(Output<String> privateCloudName) {
             $.privateCloudName = privateCloudName;
             return this;
         }
 
+        /**
+         * @param privateCloudName The name of the private cloud.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateCloudName(String privateCloudName) {
             return privateCloudName(Output.of(privateCloudName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

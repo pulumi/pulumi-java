@@ -27,6 +27,10 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
     @Import(name="limits")
     private @Nullable Output<ResourceLimitsArgs> limits;
 
+    /**
+     * @return The resource limits of this container instance.
+     * 
+     */
     public Optional<Output<ResourceLimitsArgs>> limits() {
         return Optional.ofNullable(this.limits);
     }
@@ -38,6 +42,10 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
     @Import(name="requests", required=true)
     private Output<ResourceRequestsArgs> requests;
 
+    /**
+     * @return The resource requests of this container instance.
+     * 
+     */
     public Output<ResourceRequestsArgs> requests() {
         return this.requests;
     }
@@ -67,20 +75,44 @@ public final class ResourceRequirementsArgs extends com.pulumi.resources.Resourc
             $ = new ResourceRequirementsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param limits The resource limits of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(@Nullable Output<ResourceLimitsArgs> limits) {
             $.limits = limits;
             return this;
         }
 
+        /**
+         * @param limits The resource limits of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder limits(ResourceLimitsArgs limits) {
             return limits(Output.of(limits));
         }
 
+        /**
+         * @param requests The resource requests of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(Output<ResourceRequestsArgs> requests) {
             $.requests = requests;
             return this;
         }
 
+        /**
+         * @param requests The resource requests of this container instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requests(ResourceRequestsArgs requests) {
             return requests(Output.of(requests));
         }

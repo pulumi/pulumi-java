@@ -25,6 +25,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="policyName", required=true)
     private Output<String> policyName;
 
+    /**
+     * @return The name of the private link policy in Azure AD.
+     * 
+     */
     public Output<String> policyName() {
         return this.policyName;
     }
@@ -36,6 +40,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpoint")
     private @Nullable Output<PrivateEndpointArgs> privateEndpoint;
 
+    /**
+     * @return Properties of the private endpoint object.
+     * 
+     */
     public Optional<Output<PrivateEndpointArgs>> privateEndpoint() {
         return Optional.ofNullable(this.privateEndpoint);
     }
@@ -47,6 +55,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateEndpointConnectionName")
     private @Nullable Output<String> privateEndpointConnectionName;
 
+    /**
+     * @return The PrivateEndpointConnection name.
+     * 
+     */
     public Optional<Output<String>> privateEndpointConnectionName() {
         return Optional.ofNullable(this.privateEndpointConnectionName);
     }
@@ -58,6 +70,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateLinkConnectionTags")
     private @Nullable Output<TagsResourceArgs> privateLinkConnectionTags;
 
+    /**
+     * @return Updated tag information to set into the PrivateLinkConnection instance.
+     * 
+     */
     public Optional<Output<TagsResourceArgs>> privateLinkConnectionTags() {
         return Optional.ofNullable(this.privateLinkConnectionTags);
     }
@@ -69,6 +85,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="privateLinkServiceConnectionState")
     private @Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState;
 
+    /**
+     * @return Approval state of the private link connection.
+     * 
+     */
     public Optional<Output<PrivateLinkServiceConnectionStateArgs>> privateLinkServiceConnectionState() {
         return Optional.ofNullable(this.privateLinkServiceConnectionState);
     }
@@ -80,6 +100,10 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of an Azure resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -113,56 +137,128 @@ public final class PrivateEndpointConnectionArgs extends com.pulumi.resources.Re
             $ = new PrivateEndpointConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param policyName The name of the private link policy in Azure AD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(Output<String> policyName) {
             $.policyName = policyName;
             return this;
         }
 
+        /**
+         * @param policyName The name of the private link policy in Azure AD.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyName(String policyName) {
             return policyName(Output.of(policyName));
         }
 
+        /**
+         * @param privateEndpoint Properties of the private endpoint object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(@Nullable Output<PrivateEndpointArgs> privateEndpoint) {
             $.privateEndpoint = privateEndpoint;
             return this;
         }
 
+        /**
+         * @param privateEndpoint Properties of the private endpoint object.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpoint(PrivateEndpointArgs privateEndpoint) {
             return privateEndpoint(Output.of(privateEndpoint));
         }
 
+        /**
+         * @param privateEndpointConnectionName The PrivateEndpointConnection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(@Nullable Output<String> privateEndpointConnectionName) {
             $.privateEndpointConnectionName = privateEndpointConnectionName;
             return this;
         }
 
+        /**
+         * @param privateEndpointConnectionName The PrivateEndpointConnection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateEndpointConnectionName(String privateEndpointConnectionName) {
             return privateEndpointConnectionName(Output.of(privateEndpointConnectionName));
         }
 
+        /**
+         * @param privateLinkConnectionTags Updated tag information to set into the PrivateLinkConnection instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkConnectionTags(@Nullable Output<TagsResourceArgs> privateLinkConnectionTags) {
             $.privateLinkConnectionTags = privateLinkConnectionTags;
             return this;
         }
 
+        /**
+         * @param privateLinkConnectionTags Updated tag information to set into the PrivateLinkConnection instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkConnectionTags(TagsResourceArgs privateLinkConnectionTags) {
             return privateLinkConnectionTags(Output.of(privateLinkConnectionTags));
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Approval state of the private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(@Nullable Output<PrivateLinkServiceConnectionStateArgs> privateLinkServiceConnectionState) {
             $.privateLinkServiceConnectionState = privateLinkServiceConnectionState;
             return this;
         }
 
+        /**
+         * @param privateLinkServiceConnectionState Approval state of the private link connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkServiceConnectionState(PrivateLinkServiceConnectionStateArgs privateLinkServiceConnectionState) {
             return privateLinkServiceConnectionState(Output.of(privateLinkServiceConnectionState));
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

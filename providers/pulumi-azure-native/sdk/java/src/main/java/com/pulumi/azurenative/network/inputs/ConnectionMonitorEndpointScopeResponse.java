@@ -26,6 +26,10 @@ public final class ConnectionMonitorEndpointScopeResponse extends com.pulumi.res
     @Import(name="exclude")
     private @Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude;
 
+    /**
+     * @return List of items which needs to be excluded from the endpoint scope.
+     * 
+     */
     public Optional<List<ConnectionMonitorEndpointScopeItemResponse>> exclude() {
         return Optional.ofNullable(this.exclude);
     }
@@ -37,6 +41,10 @@ public final class ConnectionMonitorEndpointScopeResponse extends com.pulumi.res
     @Import(name="include")
     private @Nullable List<ConnectionMonitorEndpointScopeItemResponse> include;
 
+    /**
+     * @return List of items which needs to be included to the endpoint scope.
+     * 
+     */
     public Optional<List<ConnectionMonitorEndpointScopeItemResponse>> include() {
         return Optional.ofNullable(this.include);
     }
@@ -66,20 +74,44 @@ public final class ConnectionMonitorEndpointScopeResponse extends com.pulumi.res
             $ = new ConnectionMonitorEndpointScopeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exclude List of items which needs to be excluded from the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclude(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> exclude) {
             $.exclude = exclude;
             return this;
         }
 
+        /**
+         * @param exclude List of items which needs to be excluded from the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exclude(ConnectionMonitorEndpointScopeItemResponse... exclude) {
             return exclude(List.of(exclude));
         }
 
+        /**
+         * @param include List of items which needs to be included to the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(@Nullable List<ConnectionMonitorEndpointScopeItemResponse> include) {
             $.include = include;
             return this;
         }
 
+        /**
+         * @param include List of items which needs to be included to the endpoint scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder include(ConnectionMonitorEndpointScopeItemResponse... include) {
             return include(List.of(include));
         }

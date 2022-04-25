@@ -24,6 +24,10 @@ public final class GalleryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The description of this Shared Image Gallery resource. This property is updatable.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class GalleryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="galleryName")
     private @Nullable Output<String> galleryName;
 
+    /**
+     * @return The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.
+     * 
+     */
     public Optional<Output<String>> galleryName() {
         return Optional.ofNullable(this.galleryName);
     }
@@ -46,6 +54,10 @@ public final class GalleryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -57,6 +69,10 @@ public final class GalleryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -68,6 +84,10 @@ public final class GalleryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sharingProfile")
     private @Nullable Output<SharingProfileArgs> sharingProfile;
 
+    /**
+     * @return Profile for gallery sharing to subscription or tenant
+     * 
+     */
     public Optional<Output<SharingProfileArgs>> sharingProfile() {
         return Optional.ofNullable(this.sharingProfile);
     }
@@ -79,6 +99,10 @@ public final class GalleryArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -112,56 +136,128 @@ public final class GalleryArgs extends com.pulumi.resources.ResourceArgs {
             $ = new GalleryArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description The description of this Shared Image Gallery resource. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The description of this Shared Image Gallery resource. This property is updatable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param galleryName The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(@Nullable Output<String> galleryName) {
             $.galleryName = galleryName;
             return this;
         }
 
+        /**
+         * @param galleryName The name of the Shared Image Gallery. The allowed characters are alphabets and numbers with dots and periods allowed in the middle. The maximum length is 80 characters.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryName(String galleryName) {
             return galleryName(Output.of(galleryName));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sharingProfile Profile for gallery sharing to subscription or tenant
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharingProfile(@Nullable Output<SharingProfileArgs> sharingProfile) {
             $.sharingProfile = sharingProfile;
             return this;
         }
 
+        /**
+         * @param sharingProfile Profile for gallery sharing to subscription or tenant
+         * 
+         * @return builder
+         * 
+         */
         public Builder sharingProfile(SharingProfileArgs sharingProfile) {
             return sharingProfile(Output.of(sharingProfile));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

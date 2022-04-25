@@ -26,6 +26,10 @@ public final class QosIpRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="endIP")
     private @Nullable Output<String> endIP;
 
+    /**
+     * @return End IP Address.
+     * 
+     */
     public Optional<Output<String>> endIP() {
         return Optional.ofNullable(this.endIP);
     }
@@ -37,6 +41,10 @@ public final class QosIpRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="startIP")
     private @Nullable Output<String> startIP;
 
+    /**
+     * @return Start IP Address.
+     * 
+     */
     public Optional<Output<String>> startIP() {
         return Optional.ofNullable(this.startIP);
     }
@@ -66,20 +74,44 @@ public final class QosIpRangeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new QosIpRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param endIP End IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIP(@Nullable Output<String> endIP) {
             $.endIP = endIP;
             return this;
         }
 
+        /**
+         * @param endIP End IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder endIP(String endIP) {
             return endIP(Output.of(endIP));
         }
 
+        /**
+         * @param startIP Start IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIP(@Nullable Output<String> startIP) {
             $.startIP = startIP;
             return this;
         }
 
+        /**
+         * @param startIP Start IP Address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder startIP(String startIP) {
             return startIP(Output.of(startIP));
         }

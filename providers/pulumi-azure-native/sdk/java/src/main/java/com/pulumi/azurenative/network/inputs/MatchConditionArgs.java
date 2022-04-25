@@ -32,6 +32,10 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="matchValues", required=true)
     private Output<List<String>> matchValues;
 
+    /**
+     * @return Match value.
+     * 
+     */
     public Output<List<String>> matchValues() {
         return this.matchValues;
     }
@@ -43,6 +47,10 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="matchVariables", required=true)
     private Output<List<MatchVariableArgs>> matchVariables;
 
+    /**
+     * @return List of match variables.
+     * 
+     */
     public Output<List<MatchVariableArgs>> matchVariables() {
         return this.matchVariables;
     }
@@ -54,6 +62,10 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="negationConditon")
     private @Nullable Output<Boolean> negationConditon;
 
+    /**
+     * @return Whether this is negate condition or not.
+     * 
+     */
     public Optional<Output<Boolean>> negationConditon() {
         return Optional.ofNullable(this.negationConditon);
     }
@@ -65,6 +77,10 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="operator", required=true)
     private Output<Either<String,WebApplicationFirewallOperator>> operator;
 
+    /**
+     * @return The operator to be matched.
+     * 
+     */
     public Output<Either<String,WebApplicationFirewallOperator>> operator() {
         return this.operator;
     }
@@ -76,6 +92,10 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="transforms")
     private @Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms;
 
+    /**
+     * @return List of transforms.
+     * 
+     */
     public Optional<Output<List<Either<String,WebApplicationFirewallTransform>>>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -108,67 +128,157 @@ public final class MatchConditionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new MatchConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValues Match value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(Output<List<String>> matchValues) {
             $.matchValues = matchValues;
             return this;
         }
 
+        /**
+         * @param matchValues Match value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(List<String> matchValues) {
             return matchValues(Output.of(matchValues));
         }
 
+        /**
+         * @param matchValues Match value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValues(String... matchValues) {
             return matchValues(List.of(matchValues));
         }
 
+        /**
+         * @param matchVariables List of match variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariables(Output<List<MatchVariableArgs>> matchVariables) {
             $.matchVariables = matchVariables;
             return this;
         }
 
+        /**
+         * @param matchVariables List of match variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariables(List<MatchVariableArgs> matchVariables) {
             return matchVariables(Output.of(matchVariables));
         }
 
+        /**
+         * @param matchVariables List of match variables.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariables(MatchVariableArgs... matchVariables) {
             return matchVariables(List.of(matchVariables));
         }
 
+        /**
+         * @param negationConditon Whether this is negate condition or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negationConditon(@Nullable Output<Boolean> negationConditon) {
             $.negationConditon = negationConditon;
             return this;
         }
 
+        /**
+         * @param negationConditon Whether this is negate condition or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negationConditon(Boolean negationConditon) {
             return negationConditon(Output.of(negationConditon));
         }
 
+        /**
+         * @param operator The operator to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Output<Either<String,WebApplicationFirewallOperator>> operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param operator The operator to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(Either<String,WebApplicationFirewallOperator> operator) {
             return operator(Output.of(operator));
         }
 
+        /**
+         * @param operator The operator to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             return operator(Either.ofLeft(operator));
         }
 
+        /**
+         * @param operator The operator to be matched.
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(WebApplicationFirewallOperator operator) {
             return operator(Either.ofRight(operator));
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable Output<List<Either<String,WebApplicationFirewallTransform>>> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(List<Either<String,WebApplicationFirewallTransform>> transforms) {
             return transforms(Output.of(transforms));
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(Either<String,WebApplicationFirewallTransform>... transforms) {
             return transforms(List.of(transforms));
         }

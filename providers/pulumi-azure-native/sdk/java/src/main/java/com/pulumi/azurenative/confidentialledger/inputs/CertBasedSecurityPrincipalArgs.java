@@ -28,6 +28,10 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
     @Import(name="cert")
     private @Nullable Output<String> cert;
 
+    /**
+     * @return Base64 encoded public key of the user cert (.pem or .cer)
+     * 
+     */
     public Optional<Output<String>> cert() {
         return Optional.ofNullable(this.cert);
     }
@@ -39,6 +43,10 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
     @Import(name="ledgerRoleName")
     private @Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName;
 
+    /**
+     * @return LedgerRole associated with the Security Principal of Ledger
+     * 
+     */
     public Optional<Output<Either<String,LedgerRoleName>>> ledgerRoleName() {
         return Optional.ofNullable(this.ledgerRoleName);
     }
@@ -68,28 +76,64 @@ public final class CertBasedSecurityPrincipalArgs extends com.pulumi.resources.R
             $ = new CertBasedSecurityPrincipalArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cert Base64 encoded public key of the user cert (.pem or .cer)
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(@Nullable Output<String> cert) {
             $.cert = cert;
             return this;
         }
 
+        /**
+         * @param cert Base64 encoded public key of the user cert (.pem or .cer)
+         * 
+         * @return builder
+         * 
+         */
         public Builder cert(String cert) {
             return cert(Output.of(cert));
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(@Nullable Output<Either<String,LedgerRoleName>> ledgerRoleName) {
             $.ledgerRoleName = ledgerRoleName;
             return this;
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(Either<String,LedgerRoleName> ledgerRoleName) {
             return ledgerRoleName(Output.of(ledgerRoleName));
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(String ledgerRoleName) {
             return ledgerRoleName(Either.ofLeft(ledgerRoleName));
         }
 
+        /**
+         * @param ledgerRoleName LedgerRole associated with the Security Principal of Ledger
+         * 
+         * @return builder
+         * 
+         */
         public Builder ledgerRoleName(LedgerRoleName ledgerRoleName) {
             return ledgerRoleName(Either.ofRight(ledgerRoleName));
         }

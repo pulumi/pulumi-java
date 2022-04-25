@@ -31,6 +31,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="diskEncryptionSetId")
     private @Nullable Output<String> diskEncryptionSetId;
 
+    /**
+     * @return The DiskEncryptionSet ARM ID.
+     * 
+     */
     public Optional<Output<String>> diskEncryptionSetId() {
         return Optional.ofNullable(this.diskEncryptionSetId);
     }
@@ -42,6 +46,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="diskType")
     private @Nullable Output<Either<String,DiskAccountType>> diskType;
 
+    /**
+     * @return The DiskType.
+     * 
+     */
     public Optional<Output<Either<String,DiskAccountType>>> diskType() {
         return Optional.ofNullable(this.diskType);
     }
@@ -53,6 +61,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="disksToInclude")
     private @Nullable Output<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude;
 
+    /**
+     * @return The disks to include list.
+     * 
+     */
     public Optional<Output<List<InMageAzureV2DiskInputDetailsArgs>>> disksToInclude() {
         return Optional.ofNullable(this.disksToInclude);
     }
@@ -64,6 +76,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="enableRdpOnTargetOption")
     private @Nullable Output<String> enableRdpOnTargetOption;
 
+    /**
+     * @return The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+     * 
+     */
     public Optional<Output<String>> enableRdpOnTargetOption() {
         return Optional.ofNullable(this.enableRdpOnTargetOption);
     }
@@ -76,6 +92,11 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The class type.
+     * Expected value is &#39;InMageAzureV2&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -87,6 +108,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="logStorageAccountId")
     private @Nullable Output<String> logStorageAccountId;
 
+    /**
+     * @return The storage account to be used for logging during replication.
+     * 
+     */
     public Optional<Output<String>> logStorageAccountId() {
         return Optional.ofNullable(this.logStorageAccountId);
     }
@@ -98,6 +123,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="masterTargetId")
     private @Nullable Output<String> masterTargetId;
 
+    /**
+     * @return The Master target Id.
+     * 
+     */
     public Optional<Output<String>> masterTargetId() {
         return Optional.ofNullable(this.masterTargetId);
     }
@@ -109,6 +138,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="multiVmGroupId")
     private @Nullable Output<String> multiVmGroupId;
 
+    /**
+     * @return The multi vm group Id.
+     * 
+     */
     public Optional<Output<String>> multiVmGroupId() {
         return Optional.ofNullable(this.multiVmGroupId);
     }
@@ -120,6 +153,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="multiVmGroupName")
     private @Nullable Output<String> multiVmGroupName;
 
+    /**
+     * @return The multi vm group name.
+     * 
+     */
     public Optional<Output<String>> multiVmGroupName() {
         return Optional.ofNullable(this.multiVmGroupName);
     }
@@ -131,6 +168,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="processServerId")
     private @Nullable Output<String> processServerId;
 
+    /**
+     * @return The Process Server Id.
+     * 
+     */
     public Optional<Output<String>> processServerId() {
         return Optional.ofNullable(this.processServerId);
     }
@@ -142,6 +183,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="runAsAccountId")
     private @Nullable Output<String> runAsAccountId;
 
+    /**
+     * @return The CS account Id.
+     * 
+     */
     public Optional<Output<String>> runAsAccountId() {
         return Optional.ofNullable(this.runAsAccountId);
     }
@@ -153,6 +198,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="storageAccountId")
     private @Nullable Output<String> storageAccountId;
 
+    /**
+     * @return The storage account name.
+     * 
+     */
     public Optional<Output<String>> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
@@ -164,6 +213,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAvailabilitySetId")
     private @Nullable Output<String> targetAvailabilitySetId;
 
+    /**
+     * @return The availability set ARM Id.
+     * 
+     */
     public Optional<Output<String>> targetAvailabilitySetId() {
         return Optional.ofNullable(this.targetAvailabilitySetId);
     }
@@ -175,6 +228,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAvailabilityZone")
     private @Nullable Output<String> targetAvailabilityZone;
 
+    /**
+     * @return The target availability zone.
+     * 
+     */
     public Optional<Output<String>> targetAvailabilityZone() {
         return Optional.ofNullable(this.targetAvailabilityZone);
     }
@@ -186,6 +243,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureNetworkId")
     private @Nullable Output<String> targetAzureNetworkId;
 
+    /**
+     * @return The selected target Azure network Id.
+     * 
+     */
     public Optional<Output<String>> targetAzureNetworkId() {
         return Optional.ofNullable(this.targetAzureNetworkId);
     }
@@ -197,6 +258,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureSubnetId")
     private @Nullable Output<String> targetAzureSubnetId;
 
+    /**
+     * @return The selected target Azure subnet Id.
+     * 
+     */
     public Optional<Output<String>> targetAzureSubnetId() {
         return Optional.ofNullable(this.targetAzureSubnetId);
     }
@@ -208,6 +273,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureV1ResourceGroupId")
     private @Nullable Output<String> targetAzureV1ResourceGroupId;
 
+    /**
+     * @return The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+     * 
+     */
     public Optional<Output<String>> targetAzureV1ResourceGroupId() {
         return Optional.ofNullable(this.targetAzureV1ResourceGroupId);
     }
@@ -219,6 +288,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureV2ResourceGroupId")
     private @Nullable Output<String> targetAzureV2ResourceGroupId;
 
+    /**
+     * @return The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+     * 
+     */
     public Optional<Output<String>> targetAzureV2ResourceGroupId() {
         return Optional.ofNullable(this.targetAzureV2ResourceGroupId);
     }
@@ -230,6 +303,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetAzureVmName")
     private @Nullable Output<String> targetAzureVmName;
 
+    /**
+     * @return The target azure Vm Name.
+     * 
+     */
     public Optional<Output<String>> targetAzureVmName() {
         return Optional.ofNullable(this.targetAzureVmName);
     }
@@ -241,6 +318,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetProximityPlacementGroupId")
     private @Nullable Output<String> targetProximityPlacementGroupId;
 
+    /**
+     * @return The proximity placement group ARM Id.
+     * 
+     */
     public Optional<Output<String>> targetProximityPlacementGroupId() {
         return Optional.ofNullable(this.targetProximityPlacementGroupId);
     }
@@ -252,6 +333,10 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
     @Import(name="targetVmSize")
     private @Nullable Output<String> targetVmSize;
 
+    /**
+     * @return The target VM size.
+     * 
+     */
     public Optional<Output<String>> targetVmSize() {
         return Optional.ofNullable(this.targetVmSize);
     }
@@ -300,203 +385,475 @@ public final class InMageAzureV2EnableProtectionInputArgs extends com.pulumi.res
             $ = new InMageAzureV2EnableProtectionInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskEncryptionSetId The DiskEncryptionSet ARM ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(@Nullable Output<String> diskEncryptionSetId) {
             $.diskEncryptionSetId = diskEncryptionSetId;
             return this;
         }
 
+        /**
+         * @param diskEncryptionSetId The DiskEncryptionSet ARM ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskEncryptionSetId(String diskEncryptionSetId) {
             return diskEncryptionSetId(Output.of(diskEncryptionSetId));
         }
 
+        /**
+         * @param diskType The DiskType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(@Nullable Output<Either<String,DiskAccountType>> diskType) {
             $.diskType = diskType;
             return this;
         }
 
+        /**
+         * @param diskType The DiskType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(Either<String,DiskAccountType> diskType) {
             return diskType(Output.of(diskType));
         }
 
+        /**
+         * @param diskType The DiskType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(String diskType) {
             return diskType(Either.ofLeft(diskType));
         }
 
+        /**
+         * @param diskType The DiskType.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskType(DiskAccountType diskType) {
             return diskType(Either.ofRight(diskType));
         }
 
+        /**
+         * @param disksToInclude The disks to include list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksToInclude(@Nullable Output<List<InMageAzureV2DiskInputDetailsArgs>> disksToInclude) {
             $.disksToInclude = disksToInclude;
             return this;
         }
 
+        /**
+         * @param disksToInclude The disks to include list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksToInclude(List<InMageAzureV2DiskInputDetailsArgs> disksToInclude) {
             return disksToInclude(Output.of(disksToInclude));
         }
 
+        /**
+         * @param disksToInclude The disks to include list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksToInclude(InMageAzureV2DiskInputDetailsArgs... disksToInclude) {
             return disksToInclude(List.of(disksToInclude));
         }
 
+        /**
+         * @param enableRdpOnTargetOption The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRdpOnTargetOption(@Nullable Output<String> enableRdpOnTargetOption) {
             $.enableRdpOnTargetOption = enableRdpOnTargetOption;
             return this;
         }
 
+        /**
+         * @param enableRdpOnTargetOption The selected option to enable RDP\SSH on target vm after failover. String value of {SrsDataContract.EnableRDPOnTargetOption} enum.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableRdpOnTargetOption(String enableRdpOnTargetOption) {
             return enableRdpOnTargetOption(Output.of(enableRdpOnTargetOption));
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;InMageAzureV2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The class type.
+         * Expected value is &#39;InMageAzureV2&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }
 
+        /**
+         * @param logStorageAccountId The storage account to be used for logging during replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountId(@Nullable Output<String> logStorageAccountId) {
             $.logStorageAccountId = logStorageAccountId;
             return this;
         }
 
+        /**
+         * @param logStorageAccountId The storage account to be used for logging during replication.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logStorageAccountId(String logStorageAccountId) {
             return logStorageAccountId(Output.of(logStorageAccountId));
         }
 
+        /**
+         * @param masterTargetId The Master target Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterTargetId(@Nullable Output<String> masterTargetId) {
             $.masterTargetId = masterTargetId;
             return this;
         }
 
+        /**
+         * @param masterTargetId The Master target Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder masterTargetId(String masterTargetId) {
             return masterTargetId(Output.of(masterTargetId));
         }
 
+        /**
+         * @param multiVmGroupId The multi vm group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupId(@Nullable Output<String> multiVmGroupId) {
             $.multiVmGroupId = multiVmGroupId;
             return this;
         }
 
+        /**
+         * @param multiVmGroupId The multi vm group Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupId(String multiVmGroupId) {
             return multiVmGroupId(Output.of(multiVmGroupId));
         }
 
+        /**
+         * @param multiVmGroupName The multi vm group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(@Nullable Output<String> multiVmGroupName) {
             $.multiVmGroupName = multiVmGroupName;
             return this;
         }
 
+        /**
+         * @param multiVmGroupName The multi vm group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder multiVmGroupName(String multiVmGroupName) {
             return multiVmGroupName(Output.of(multiVmGroupName));
         }
 
+        /**
+         * @param processServerId The Process Server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(@Nullable Output<String> processServerId) {
             $.processServerId = processServerId;
             return this;
         }
 
+        /**
+         * @param processServerId The Process Server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processServerId(String processServerId) {
             return processServerId(Output.of(processServerId));
         }
 
+        /**
+         * @param runAsAccountId The CS account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccountId(@Nullable Output<String> runAsAccountId) {
             $.runAsAccountId = runAsAccountId;
             return this;
         }
 
+        /**
+         * @param runAsAccountId The CS account Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runAsAccountId(String runAsAccountId) {
             return runAsAccountId(Output.of(runAsAccountId));
         }
 
+        /**
+         * @param storageAccountId The storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(@Nullable Output<String> storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param storageAccountId The storage account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(String storageAccountId) {
             return storageAccountId(Output.of(storageAccountId));
         }
 
+        /**
+         * @param targetAvailabilitySetId The availability set ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(@Nullable Output<String> targetAvailabilitySetId) {
             $.targetAvailabilitySetId = targetAvailabilitySetId;
             return this;
         }
 
+        /**
+         * @param targetAvailabilitySetId The availability set ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilitySetId(String targetAvailabilitySetId) {
             return targetAvailabilitySetId(Output.of(targetAvailabilitySetId));
         }
 
+        /**
+         * @param targetAvailabilityZone The target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(@Nullable Output<String> targetAvailabilityZone) {
             $.targetAvailabilityZone = targetAvailabilityZone;
             return this;
         }
 
+        /**
+         * @param targetAvailabilityZone The target availability zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAvailabilityZone(String targetAvailabilityZone) {
             return targetAvailabilityZone(Output.of(targetAvailabilityZone));
         }
 
+        /**
+         * @param targetAzureNetworkId The selected target Azure network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureNetworkId(@Nullable Output<String> targetAzureNetworkId) {
             $.targetAzureNetworkId = targetAzureNetworkId;
             return this;
         }
 
+        /**
+         * @param targetAzureNetworkId The selected target Azure network Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureNetworkId(String targetAzureNetworkId) {
             return targetAzureNetworkId(Output.of(targetAzureNetworkId));
         }
 
+        /**
+         * @param targetAzureSubnetId The selected target Azure subnet Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureSubnetId(@Nullable Output<String> targetAzureSubnetId) {
             $.targetAzureSubnetId = targetAzureSubnetId;
             return this;
         }
 
+        /**
+         * @param targetAzureSubnetId The selected target Azure subnet Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureSubnetId(String targetAzureSubnetId) {
             return targetAzureSubnetId(Output.of(targetAzureSubnetId));
         }
 
+        /**
+         * @param targetAzureV1ResourceGroupId The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureV1ResourceGroupId(@Nullable Output<String> targetAzureV1ResourceGroupId) {
             $.targetAzureV1ResourceGroupId = targetAzureV1ResourceGroupId;
             return this;
         }
 
+        /**
+         * @param targetAzureV1ResourceGroupId The Id of the target resource group (for classic deployment) in which the failover VM is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureV1ResourceGroupId(String targetAzureV1ResourceGroupId) {
             return targetAzureV1ResourceGroupId(Output.of(targetAzureV1ResourceGroupId));
         }
 
+        /**
+         * @param targetAzureV2ResourceGroupId The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureV2ResourceGroupId(@Nullable Output<String> targetAzureV2ResourceGroupId) {
             $.targetAzureV2ResourceGroupId = targetAzureV2ResourceGroupId;
             return this;
         }
 
+        /**
+         * @param targetAzureV2ResourceGroupId The Id of the target resource group (for resource manager deployment) in which the failover VM is to be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureV2ResourceGroupId(String targetAzureV2ResourceGroupId) {
             return targetAzureV2ResourceGroupId(Output.of(targetAzureV2ResourceGroupId));
         }
 
+        /**
+         * @param targetAzureVmName The target azure Vm Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureVmName(@Nullable Output<String> targetAzureVmName) {
             $.targetAzureVmName = targetAzureVmName;
             return this;
         }
 
+        /**
+         * @param targetAzureVmName The target azure Vm Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetAzureVmName(String targetAzureVmName) {
             return targetAzureVmName(Output.of(targetAzureVmName));
         }
 
+        /**
+         * @param targetProximityPlacementGroupId The proximity placement group ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProximityPlacementGroupId(@Nullable Output<String> targetProximityPlacementGroupId) {
             $.targetProximityPlacementGroupId = targetProximityPlacementGroupId;
             return this;
         }
 
+        /**
+         * @param targetProximityPlacementGroupId The proximity placement group ARM Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetProximityPlacementGroupId(String targetProximityPlacementGroupId) {
             return targetProximityPlacementGroupId(Output.of(targetProximityPlacementGroupId));
         }
 
+        /**
+         * @param targetVmSize The target VM size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(@Nullable Output<String> targetVmSize) {
             $.targetVmSize = targetVmSize;
             return this;
         }
 
+        /**
+         * @param targetVmSize The target VM size.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetVmSize(String targetVmSize) {
             return targetVmSize(Output.of(targetVmSize));
         }

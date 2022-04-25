@@ -27,6 +27,10 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return User-friendly description of the policy.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
     @Import(name="rules", required=true)
     private List<DeliveryRuleResponse> rules;
 
+    /**
+     * @return A list of the delivery rules.
+     * 
+     */
     public List<DeliveryRuleResponse> rules() {
         return this.rules;
     }
@@ -67,16 +75,34 @@ public final class EndpointPropertiesUpdateParametersResponseDeliveryPolicy exte
             $ = new EndpointPropertiesUpdateParametersResponseDeliveryPolicy(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description User-friendly description of the policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param rules A list of the delivery rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<DeliveryRuleResponse> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules A list of the delivery rules.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(DeliveryRuleResponse... rules) {
             return rules(List.of(rules));
         }

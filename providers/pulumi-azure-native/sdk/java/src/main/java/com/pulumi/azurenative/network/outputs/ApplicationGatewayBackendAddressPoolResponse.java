@@ -15,37 +15,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApplicationGatewayBackendAddressPoolResponse {
     /**
-     * Backend addresses.
+     * @return Backend addresses.
      * 
      */
     private final @Nullable List<ApplicationGatewayBackendAddressResponse> backendAddresses;
     /**
-     * Collection of references to IPs defined in network interfaces.
+     * @return Collection of references to IPs defined in network interfaces.
      * 
      */
     private final List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations;
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
      */
     private final String etag;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final @Nullable String id;
     /**
-     * Name of the backend address pool that is unique within an Application Gateway.
+     * @return Name of the backend address pool that is unique within an Application Gateway.
      * 
      */
     private final @Nullable String name;
     /**
-     * The provisioning state of the backend address pool resource.
+     * @return The provisioning state of the backend address pool resource.
      * 
      */
     private final String provisioningState;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -69,51 +69,51 @@ public final class ApplicationGatewayBackendAddressPoolResponse {
     }
 
     /**
-     * Backend addresses.
+     * @return Backend addresses.
      * 
-    */
+     */
     public List<ApplicationGatewayBackendAddressResponse> backendAddresses() {
         return this.backendAddresses == null ? List.of() : this.backendAddresses;
     }
     /**
-     * Collection of references to IPs defined in network interfaces.
+     * @return Collection of references to IPs defined in network interfaces.
      * 
-    */
+     */
     public List<NetworkInterfaceIPConfigurationResponse> backendIPConfigurations() {
         return this.backendIPConfigurations;
     }
     /**
-     * A unique read-only string that changes whenever the resource is updated.
+     * @return A unique read-only string that changes whenever the resource is updated.
      * 
-    */
+     */
     public String etag() {
         return this.etag;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
     /**
-     * Name of the backend address pool that is unique within an Application Gateway.
+     * @return Name of the backend address pool that is unique within an Application Gateway.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The provisioning state of the backend address pool resource.
+     * @return The provisioning state of the backend address pool resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

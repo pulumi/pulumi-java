@@ -19,6 +19,10 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="authorizationRuleName", required=true)
     private String authorizationRuleName;
 
+    /**
+     * @return The connection string of the namespace for the specified authorizationRule.
+     * 
+     */
     public String authorizationRuleName() {
         return this.authorizationRuleName;
     }
@@ -30,6 +34,10 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="namespaceName", required=true)
     private String namespaceName;
 
+    /**
+     * @return The namespace name.
+     * 
+     */
     public String namespaceName() {
         return this.namespaceName;
     }
@@ -41,6 +49,10 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class ListNamespaceKeysArgs extends com.pulumi.resources.InvokeArgs
             $ = new ListNamespaceKeysArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorizationRuleName The connection string of the namespace for the specified authorizationRule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorizationRuleName(String authorizationRuleName) {
             $.authorizationRuleName = authorizationRuleName;
             return this;
         }
 
+        /**
+         * @param namespaceName The namespace name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespaceName(String namespaceName) {
             $.namespaceName = namespaceName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

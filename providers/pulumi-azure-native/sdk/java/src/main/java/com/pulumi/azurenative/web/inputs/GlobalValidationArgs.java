@@ -29,6 +29,10 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="excludedPaths")
     private @Nullable Output<List<String>> excludedPaths;
 
+    /**
+     * @return The paths for which unauthenticated flow would not be redirected to the login page.
+     * 
+     */
     public Optional<Output<List<String>>> excludedPaths() {
         return Optional.ofNullable(this.excludedPaths);
     }
@@ -42,6 +46,12 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="redirectToProvider")
     private @Nullable Output<String> redirectToProvider;
 
+    /**
+     * @return The default authentication provider to use when multiple providers are configured.
+     * This setting is only needed if multiple providers are configured and the unauthenticated client
+     * action is set to &#34;RedirectToLoginPage&#34;.
+     * 
+     */
     public Optional<Output<String>> redirectToProvider() {
         return Optional.ofNullable(this.redirectToProvider);
     }
@@ -53,6 +63,10 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="requireAuthentication")
     private @Nullable Output<Boolean> requireAuthentication;
 
+    /**
+     * @return &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
+     * 
+     */
     public Optional<Output<Boolean>> requireAuthentication() {
         return Optional.ofNullable(this.requireAuthentication);
     }
@@ -64,6 +78,10 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="unauthenticatedClientAction")
     private @Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction;
 
+    /**
+     * @return The action to take when an unauthenticated client attempts to access the app.
+     * 
+     */
     public Optional<Output<UnauthenticatedClientActionV2>> unauthenticatedClientAction() {
         return Optional.ofNullable(this.unauthenticatedClientAction);
     }
@@ -95,42 +113,100 @@ public final class GlobalValidationArgs extends com.pulumi.resources.ResourceArg
             $ = new GlobalValidationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param excludedPaths The paths for which unauthenticated flow would not be redirected to the login page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPaths(@Nullable Output<List<String>> excludedPaths) {
             $.excludedPaths = excludedPaths;
             return this;
         }
 
+        /**
+         * @param excludedPaths The paths for which unauthenticated flow would not be redirected to the login page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPaths(List<String> excludedPaths) {
             return excludedPaths(Output.of(excludedPaths));
         }
 
+        /**
+         * @param excludedPaths The paths for which unauthenticated flow would not be redirected to the login page.
+         * 
+         * @return builder
+         * 
+         */
         public Builder excludedPaths(String... excludedPaths) {
             return excludedPaths(List.of(excludedPaths));
         }
 
+        /**
+         * @param redirectToProvider The default authentication provider to use when multiple providers are configured.
+         * This setting is only needed if multiple providers are configured and the unauthenticated client
+         * action is set to &#34;RedirectToLoginPage&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectToProvider(@Nullable Output<String> redirectToProvider) {
             $.redirectToProvider = redirectToProvider;
             return this;
         }
 
+        /**
+         * @param redirectToProvider The default authentication provider to use when multiple providers are configured.
+         * This setting is only needed if multiple providers are configured and the unauthenticated client
+         * action is set to &#34;RedirectToLoginPage&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectToProvider(String redirectToProvider) {
             return redirectToProvider(Output.of(redirectToProvider));
         }
 
+        /**
+         * @param requireAuthentication &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAuthentication(@Nullable Output<Boolean> requireAuthentication) {
             $.requireAuthentication = requireAuthentication;
             return this;
         }
 
+        /**
+         * @param requireAuthentication &lt;code&gt;true&lt;/code&gt; if the authentication flow is required any request is made; otherwise, &lt;code&gt;false&lt;/code&gt;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requireAuthentication(Boolean requireAuthentication) {
             return requireAuthentication(Output.of(requireAuthentication));
         }
 
+        /**
+         * @param unauthenticatedClientAction The action to take when an unauthenticated client attempts to access the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unauthenticatedClientAction(@Nullable Output<UnauthenticatedClientActionV2> unauthenticatedClientAction) {
             $.unauthenticatedClientAction = unauthenticatedClientAction;
             return this;
         }
 
+        /**
+         * @param unauthenticatedClientAction The action to take when an unauthenticated client attempts to access the app.
+         * 
+         * @return builder
+         * 
+         */
         public Builder unauthenticatedClientAction(UnauthenticatedClientActionV2 unauthenticatedClientAction) {
             return unauthenticatedClientAction(Output.of(unauthenticatedClientAction));
         }

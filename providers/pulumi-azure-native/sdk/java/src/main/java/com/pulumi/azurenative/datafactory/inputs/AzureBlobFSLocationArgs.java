@@ -28,6 +28,10 @@ public final class AzureBlobFSLocationArgs extends com.pulumi.resources.Resource
     @Import(name="fileName")
     private @Nullable Output<Object> fileName;
 
+    /**
+     * @return Specify the file name of dataset. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> fileName() {
         return Optional.ofNullable(this.fileName);
     }
@@ -39,6 +43,10 @@ public final class AzureBlobFSLocationArgs extends com.pulumi.resources.Resource
     @Import(name="fileSystem")
     private @Nullable Output<Object> fileSystem;
 
+    /**
+     * @return Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> fileSystem() {
         return Optional.ofNullable(this.fileSystem);
     }
@@ -50,6 +58,10 @@ public final class AzureBlobFSLocationArgs extends com.pulumi.resources.Resource
     @Import(name="folderPath")
     private @Nullable Output<Object> folderPath;
 
+    /**
+     * @return Specify the folder path of dataset. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Output<Object>> folderPath() {
         return Optional.ofNullable(this.folderPath);
     }
@@ -62,6 +74,11 @@ public final class AzureBlobFSLocationArgs extends com.pulumi.resources.Resource
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Type of dataset storage location.
+     * Expected value is &#39;AzureBlobFSLocation&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -93,38 +110,88 @@ public final class AzureBlobFSLocationArgs extends com.pulumi.resources.Resource
             $ = new AzureBlobFSLocationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(@Nullable Output<Object> fileName) {
             $.fileName = fileName;
             return this;
         }
 
+        /**
+         * @param fileName Specify the file name of dataset. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileName(Object fileName) {
             return fileName(Output.of(fileName));
         }
 
+        /**
+         * @param fileSystem Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(@Nullable Output<Object> fileSystem) {
             $.fileSystem = fileSystem;
             return this;
         }
 
+        /**
+         * @param fileSystem Specify the fileSystem of azure blobFS. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileSystem(Object fileSystem) {
             return fileSystem(Output.of(fileSystem));
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(@Nullable Output<Object> folderPath) {
             $.folderPath = folderPath;
             return this;
         }
 
+        /**
+         * @param folderPath Specify the folder path of dataset. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder folderPath(Object folderPath) {
             return folderPath(Output.of(folderPath));
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;AzureBlobFSLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Type of dataset storage location.
+         * Expected value is &#39;AzureBlobFSLocation&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

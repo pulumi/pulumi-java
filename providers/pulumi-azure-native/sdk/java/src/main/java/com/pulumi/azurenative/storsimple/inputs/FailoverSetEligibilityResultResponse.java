@@ -26,6 +26,10 @@ public final class FailoverSetEligibilityResultResponse extends com.pulumi.resou
     @Import(name="errorMessage")
     private @Nullable String errorMessage;
 
+    /**
+     * @return The error message, if the failover set is not eligible for failover.
+     * 
+     */
     public Optional<String> errorMessage() {
         return Optional.ofNullable(this.errorMessage);
     }
@@ -37,6 +41,10 @@ public final class FailoverSetEligibilityResultResponse extends com.pulumi.resou
     @Import(name="isEligibleForFailover")
     private @Nullable Boolean isEligibleForFailover;
 
+    /**
+     * @return Represents if this failover set is eligible for failover or not.
+     * 
+     */
     public Optional<Boolean> isEligibleForFailover() {
         return Optional.ofNullable(this.isEligibleForFailover);
     }
@@ -66,11 +74,23 @@ public final class FailoverSetEligibilityResultResponse extends com.pulumi.resou
             $ = new FailoverSetEligibilityResultResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param errorMessage The error message, if the failover set is not eligible for failover.
+         * 
+         * @return builder
+         * 
+         */
         public Builder errorMessage(@Nullable String errorMessage) {
             $.errorMessage = errorMessage;
             return this;
         }
 
+        /**
+         * @param isEligibleForFailover Represents if this failover set is eligible for failover or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEligibleForFailover(@Nullable Boolean isEligibleForFailover) {
             $.isEligibleForFailover = isEligibleForFailover;
             return this;

@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ConnectorMappingErrorManagementResponse {
     /**
-     * The error limit allowed while importing data.
+     * @return The error limit allowed while importing data.
      * 
      */
     private final @Nullable Integer errorLimit;
     /**
-     * The type of error management to use for the mapping.
+     * @return The type of error management to use for the mapping.
      * 
      */
     private final String errorManagementType;
@@ -32,16 +32,16 @@ public final class ConnectorMappingErrorManagementResponse {
     }
 
     /**
-     * The error limit allowed while importing data.
+     * @return The error limit allowed while importing data.
      * 
-    */
+     */
     public Optional<Integer> errorLimit() {
         return Optional.ofNullable(this.errorLimit);
     }
     /**
-     * The type of error management to use for the mapping.
+     * @return The type of error management to use for the mapping.
      * 
-    */
+     */
     public String errorManagementType() {
         return this.errorManagementType;
     }

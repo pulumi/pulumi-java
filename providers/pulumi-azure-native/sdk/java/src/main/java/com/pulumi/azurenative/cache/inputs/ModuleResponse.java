@@ -25,6 +25,10 @@ public final class ModuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="args")
     private @Nullable String args;
 
+    /**
+     * @return Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
+     * 
+     */
     public Optional<String> args() {
         return Optional.ofNullable(this.args);
     }
@@ -36,6 +40,10 @@ public final class ModuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -47,6 +55,10 @@ public final class ModuleResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The version of the module, e.g. &#39;1.0&#39;.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -77,16 +89,34 @@ public final class ModuleResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ModuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param args Configuration options for the module, e.g. &#39;ERROR_RATE 0.00 INITIAL_SIZE 400&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder args(@Nullable String args) {
             $.args = args;
             return this;
         }
 
+        /**
+         * @param name The name of the module, e.g. &#39;RedisBloom&#39;, &#39;RediSearch&#39;, &#39;RedisTimeSeries&#39;
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param version The version of the module, e.g. &#39;1.0&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

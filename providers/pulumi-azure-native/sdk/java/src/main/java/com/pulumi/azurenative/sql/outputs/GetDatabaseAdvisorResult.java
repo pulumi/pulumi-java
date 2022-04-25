@@ -12,57 +12,57 @@ import java.util.Objects;
 @CustomType
 public final class GetDatabaseAdvisorResult {
     /**
-     * Gets the status of availability of this advisor to customers. Possible values are &#39;GA&#39;, &#39;PublicPreview&#39;, &#39;LimitedPublicPreview&#39; and &#39;PrivatePreview&#39;.
+     * @return Gets the status of availability of this advisor to customers. Possible values are &#39;GA&#39;, &#39;PublicPreview&#39;, &#39;LimitedPublicPreview&#39; and &#39;PrivatePreview&#39;.
      * 
      */
     private final String advisorStatus;
     /**
-     * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
+     * @return Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
      * 
      */
     private final String autoExecuteStatus;
     /**
-     * Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are &#39;Subscription&#39;, &#39;Server&#39;, &#39;ElasticPool&#39;, &#39;Database&#39; and &#39;Default&#39; (when status is not explicitly set on any level).
+     * @return Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are &#39;Subscription&#39;, &#39;Server&#39;, &#39;ElasticPool&#39;, &#39;Database&#39; and &#39;Default&#39; (when status is not explicitly set on any level).
      * 
      */
     private final String autoExecuteStatusInheritedFrom;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource kind.
+     * @return Resource kind.
      * 
      */
     private final String kind;
     /**
-     * Gets the time when the current resource was analyzed for recommendations by this advisor.
+     * @return Gets the time when the current resource was analyzed for recommendations by this advisor.
      * 
      */
     private final String lastChecked;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, &#39;Ok&#39; (Recommendations available),LowActivity (not enough workload to analyze), &#39;DbSeemsTuned&#39; (Database is doing well), etc.
+     * @return Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, &#39;Ok&#39; (Recommendations available),LowActivity (not enough workload to analyze), &#39;DbSeemsTuned&#39; (Database is doing well), etc.
      * 
      */
     private final String recommendationsStatus;
     /**
-     * Gets the recommended actions for this advisor.
+     * @return Gets the recommended actions for this advisor.
      * 
      */
     private final List<RecommendedActionResponse> recommendedActions;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
@@ -94,79 +94,79 @@ public final class GetDatabaseAdvisorResult {
     }
 
     /**
-     * Gets the status of availability of this advisor to customers. Possible values are &#39;GA&#39;, &#39;PublicPreview&#39;, &#39;LimitedPublicPreview&#39; and &#39;PrivatePreview&#39;.
+     * @return Gets the status of availability of this advisor to customers. Possible values are &#39;GA&#39;, &#39;PublicPreview&#39;, &#39;LimitedPublicPreview&#39; and &#39;PrivatePreview&#39;.
      * 
-    */
+     */
     public String advisorStatus() {
         return this.advisorStatus;
     }
     /**
-     * Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
+     * @return Gets the auto-execute status (whether to let the system execute the recommendations) of this advisor. Possible values are &#39;Enabled&#39; and &#39;Disabled&#39;
      * 
-    */
+     */
     public String autoExecuteStatus() {
         return this.autoExecuteStatus;
     }
     /**
-     * Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are &#39;Subscription&#39;, &#39;Server&#39;, &#39;ElasticPool&#39;, &#39;Database&#39; and &#39;Default&#39; (when status is not explicitly set on any level).
+     * @return Gets the resource from which current value of auto-execute status is inherited. Auto-execute status can be set on (and inherited from) different levels in the resource hierarchy. Possible values are &#39;Subscription&#39;, &#39;Server&#39;, &#39;ElasticPool&#39;, &#39;Database&#39; and &#39;Default&#39; (when status is not explicitly set on any level).
      * 
-    */
+     */
     public String autoExecuteStatusInheritedFrom() {
         return this.autoExecuteStatusInheritedFrom;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource kind.
+     * @return Resource kind.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Gets the time when the current resource was analyzed for recommendations by this advisor.
+     * @return Gets the time when the current resource was analyzed for recommendations by this advisor.
      * 
-    */
+     */
     public String lastChecked() {
         return this.lastChecked;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, &#39;Ok&#39; (Recommendations available),LowActivity (not enough workload to analyze), &#39;DbSeemsTuned&#39; (Database is doing well), etc.
+     * @return Gets that status of recommendations for this advisor and reason for not having any recommendations. Possible values include, but are not limited to, &#39;Ok&#39; (Recommendations available),LowActivity (not enough workload to analyze), &#39;DbSeemsTuned&#39; (Database is doing well), etc.
      * 
-    */
+     */
     public String recommendationsStatus() {
         return this.recommendationsStatus;
     }
     /**
-     * Gets the recommended actions for this advisor.
+     * @return Gets the recommended actions for this advisor.
      * 
-    */
+     */
     public List<RecommendedActionResponse> recommendedActions() {
         return this.recommendedActions;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

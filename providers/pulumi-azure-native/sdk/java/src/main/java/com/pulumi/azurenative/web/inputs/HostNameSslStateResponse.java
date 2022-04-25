@@ -26,6 +26,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="hostType")
     private @Nullable String hostType;
 
+    /**
+     * @return Indicates whether the hostname is a standard or repository hostname.
+     * 
+     */
     public Optional<String> hostType() {
         return Optional.ofNullable(this.hostType);
     }
@@ -37,6 +41,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Hostname.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="sslState")
     private @Nullable String sslState;
 
+    /**
+     * @return SSL type.
+     * 
+     */
     public Optional<String> sslState() {
         return Optional.ofNullable(this.sslState);
     }
@@ -59,6 +71,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="thumbprint")
     private @Nullable String thumbprint;
 
+    /**
+     * @return SSL certificate thumbprint.
+     * 
+     */
     public Optional<String> thumbprint() {
         return Optional.ofNullable(this.thumbprint);
     }
@@ -70,6 +86,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="toUpdate")
     private @Nullable Boolean toUpdate;
 
+    /**
+     * @return Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
+     * 
+     */
     public Optional<Boolean> toUpdate() {
         return Optional.ofNullable(this.toUpdate);
     }
@@ -81,6 +101,10 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
     @Import(name="virtualIP")
     private @Nullable String virtualIP;
 
+    /**
+     * @return Virtual IP address assigned to the hostname if IP based SSL is enabled.
+     * 
+     */
     public Optional<String> virtualIP() {
         return Optional.ofNullable(this.virtualIP);
     }
@@ -114,31 +138,67 @@ public final class HostNameSslStateResponse extends com.pulumi.resources.InvokeA
             $ = new HostNameSslStateResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostType Indicates whether the hostname is a standard or repository hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostType(@Nullable String hostType) {
             $.hostType = hostType;
             return this;
         }
 
+        /**
+         * @param name Hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param sslState SSL type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslState(@Nullable String sslState) {
             $.sslState = sslState;
             return this;
         }
 
+        /**
+         * @param thumbprint SSL certificate thumbprint.
+         * 
+         * @return builder
+         * 
+         */
         public Builder thumbprint(@Nullable String thumbprint) {
             $.thumbprint = thumbprint;
             return this;
         }
 
+        /**
+         * @param toUpdate Set to &lt;code&gt;true&lt;/code&gt; to update existing hostname.
+         * 
+         * @return builder
+         * 
+         */
         public Builder toUpdate(@Nullable Boolean toUpdate) {
             $.toUpdate = toUpdate;
             return this;
         }
 
+        /**
+         * @param virtualIP Virtual IP address assigned to the hostname if IP based SSL is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualIP(@Nullable String virtualIP) {
             $.virtualIP = virtualIP;
             return this;

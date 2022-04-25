@@ -29,6 +29,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="dateFormat", required=true)
     private Output<Either<String,X12DateFormat>> dateFormat;
 
+    /**
+     * @return The date format.
+     * 
+     */
     public Output<Either<String,X12DateFormat>> dateFormat() {
         return this.dateFormat;
     }
@@ -40,6 +44,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="functionalIdentifierCode")
     private @Nullable Output<String> functionalIdentifierCode;
 
+    /**
+     * @return The functional identifier code.
+     * 
+     */
     public Optional<Output<String>> functionalIdentifierCode() {
         return Optional.ofNullable(this.functionalIdentifierCode);
     }
@@ -51,6 +59,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="headerVersion", required=true)
     private Output<String> headerVersion;
 
+    /**
+     * @return The header version.
+     * 
+     */
     public Output<String> headerVersion() {
         return this.headerVersion;
     }
@@ -62,6 +74,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="messageId", required=true)
     private Output<String> messageId;
 
+    /**
+     * @return The message id on which this envelope settings has to be applied.
+     * 
+     */
     public Output<String> messageId() {
         return this.messageId;
     }
@@ -73,6 +89,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="protocolVersion", required=true)
     private Output<String> protocolVersion;
 
+    /**
+     * @return The protocol version on which this envelope settings has to be applied.
+     * 
+     */
     public Output<String> protocolVersion() {
         return this.protocolVersion;
     }
@@ -84,6 +104,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="receiverApplicationId", required=true)
     private Output<String> receiverApplicationId;
 
+    /**
+     * @return The receiver application id.
+     * 
+     */
     public Output<String> receiverApplicationId() {
         return this.receiverApplicationId;
     }
@@ -95,6 +119,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="responsibleAgencyCode", required=true)
     private Output<String> responsibleAgencyCode;
 
+    /**
+     * @return The responsible agency code.
+     * 
+     */
     public Output<String> responsibleAgencyCode() {
         return this.responsibleAgencyCode;
     }
@@ -106,6 +134,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="senderApplicationId", required=true)
     private Output<String> senderApplicationId;
 
+    /**
+     * @return The sender application id.
+     * 
+     */
     public Output<String> senderApplicationId() {
         return this.senderApplicationId;
     }
@@ -117,6 +149,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="targetNamespace", required=true)
     private Output<String> targetNamespace;
 
+    /**
+     * @return The target namespace on which this envelope settings has to be applied.
+     * 
+     */
     public Output<String> targetNamespace() {
         return this.targetNamespace;
     }
@@ -128,6 +164,10 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
     @Import(name="timeFormat", required=true)
     private Output<Either<String,X12TimeFormat>> timeFormat;
 
+    /**
+     * @return The time format.
+     * 
+     */
     public Output<Either<String,X12TimeFormat>> timeFormat() {
         return this.timeFormat;
     }
@@ -165,108 +205,252 @@ public final class X12EnvelopeOverrideArgs extends com.pulumi.resources.Resource
             $ = new X12EnvelopeOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dateFormat The date format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(Output<Either<String,X12DateFormat>> dateFormat) {
             $.dateFormat = dateFormat;
             return this;
         }
 
+        /**
+         * @param dateFormat The date format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(Either<String,X12DateFormat> dateFormat) {
             return dateFormat(Output.of(dateFormat));
         }
 
+        /**
+         * @param dateFormat The date format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(String dateFormat) {
             return dateFormat(Either.ofLeft(dateFormat));
         }
 
+        /**
+         * @param dateFormat The date format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dateFormat(X12DateFormat dateFormat) {
             return dateFormat(Either.ofRight(dateFormat));
         }
 
+        /**
+         * @param functionalIdentifierCode The functional identifier code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalIdentifierCode(@Nullable Output<String> functionalIdentifierCode) {
             $.functionalIdentifierCode = functionalIdentifierCode;
             return this;
         }
 
+        /**
+         * @param functionalIdentifierCode The functional identifier code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalIdentifierCode(String functionalIdentifierCode) {
             return functionalIdentifierCode(Output.of(functionalIdentifierCode));
         }
 
+        /**
+         * @param headerVersion The header version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerVersion(Output<String> headerVersion) {
             $.headerVersion = headerVersion;
             return this;
         }
 
+        /**
+         * @param headerVersion The header version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headerVersion(String headerVersion) {
             return headerVersion(Output.of(headerVersion));
         }
 
+        /**
+         * @param messageId The message id on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(Output<String> messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageId The message id on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             return messageId(Output.of(messageId));
         }
 
+        /**
+         * @param protocolVersion The protocol version on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolVersion(Output<String> protocolVersion) {
             $.protocolVersion = protocolVersion;
             return this;
         }
 
+        /**
+         * @param protocolVersion The protocol version on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocolVersion(String protocolVersion) {
             return protocolVersion(Output.of(protocolVersion));
         }
 
+        /**
+         * @param receiverApplicationId The receiver application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverApplicationId(Output<String> receiverApplicationId) {
             $.receiverApplicationId = receiverApplicationId;
             return this;
         }
 
+        /**
+         * @param receiverApplicationId The receiver application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverApplicationId(String receiverApplicationId) {
             return receiverApplicationId(Output.of(receiverApplicationId));
         }
 
+        /**
+         * @param responsibleAgencyCode The responsible agency code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responsibleAgencyCode(Output<String> responsibleAgencyCode) {
             $.responsibleAgencyCode = responsibleAgencyCode;
             return this;
         }
 
+        /**
+         * @param responsibleAgencyCode The responsible agency code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder responsibleAgencyCode(String responsibleAgencyCode) {
             return responsibleAgencyCode(Output.of(responsibleAgencyCode));
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(Output<String> senderApplicationId) {
             $.senderApplicationId = senderApplicationId;
             return this;
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(String senderApplicationId) {
             return senderApplicationId(Output.of(senderApplicationId));
         }
 
+        /**
+         * @param targetNamespace The target namespace on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(Output<String> targetNamespace) {
             $.targetNamespace = targetNamespace;
             return this;
         }
 
+        /**
+         * @param targetNamespace The target namespace on which this envelope settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetNamespace(String targetNamespace) {
             return targetNamespace(Output.of(targetNamespace));
         }
 
+        /**
+         * @param timeFormat The time format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFormat(Output<Either<String,X12TimeFormat>> timeFormat) {
             $.timeFormat = timeFormat;
             return this;
         }
 
+        /**
+         * @param timeFormat The time format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFormat(Either<String,X12TimeFormat> timeFormat) {
             return timeFormat(Output.of(timeFormat));
         }
 
+        /**
+         * @param timeFormat The time format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFormat(String timeFormat) {
             return timeFormat(Either.ofLeft(timeFormat));
         }
 
+        /**
+         * @param timeFormat The time format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeFormat(X12TimeFormat timeFormat) {
             return timeFormat(Either.ofRight(timeFormat));
         }

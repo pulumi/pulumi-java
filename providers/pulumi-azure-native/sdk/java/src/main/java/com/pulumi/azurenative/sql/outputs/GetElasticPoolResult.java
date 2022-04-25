@@ -17,74 +17,74 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetElasticPoolResult {
     /**
-     * The creation date of the elastic pool (ISO8601 format).
+     * @return The creation date of the elastic pool (ISO8601 format).
      * 
      */
     private final String creationDate;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Kind of elastic pool. This is metadata used for the Azure portal experience.
+     * @return Kind of elastic pool. This is metadata used for the Azure portal experience.
      * 
      */
     private final String kind;
     /**
-     * The license type to apply for this elastic pool.
+     * @return The license type to apply for this elastic pool.
      * 
      */
     private final @Nullable String licenseType;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
+     * @return Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
      * 
      */
     private final @Nullable String maintenanceConfigurationId;
     /**
-     * The storage limit for the database elastic pool in bytes.
+     * @return The storage limit for the database elastic pool in bytes.
      * 
      */
     private final @Nullable Double maxSizeBytes;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     /**
-     * The per database settings for the elastic pool.
+     * @return The per database settings for the elastic pool.
      * 
      */
     private final @Nullable ElasticPoolPerDatabaseSettingsResponse perDatabaseSettings;
     /**
-     * The elastic pool SKU.
+     * @return The elastic pool SKU.
      * 
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command:
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * The state of the elastic pool.
+     * @return The state of the elastic pool.
      * 
      */
     private final String state;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
+     * @return Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
      * 
      */
     private final @Nullable Boolean zoneRedundant;
@@ -122,102 +122,102 @@ public final class GetElasticPoolResult {
     }
 
     /**
-     * The creation date of the elastic pool (ISO8601 format).
+     * @return The creation date of the elastic pool (ISO8601 format).
      * 
-    */
+     */
     public String creationDate() {
         return this.creationDate;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Kind of elastic pool. This is metadata used for the Azure portal experience.
+     * @return Kind of elastic pool. This is metadata used for the Azure portal experience.
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * The license type to apply for this elastic pool.
+     * @return The license type to apply for this elastic pool.
      * 
-    */
+     */
     public Optional<String> licenseType() {
         return Optional.ofNullable(this.licenseType);
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
+     * @return Maintenance configuration id assigned to the elastic pool. This configuration defines the period when the maintenance updates will will occur.
      * 
-    */
+     */
     public Optional<String> maintenanceConfigurationId() {
         return Optional.ofNullable(this.maintenanceConfigurationId);
     }
     /**
-     * The storage limit for the database elastic pool in bytes.
+     * @return The storage limit for the database elastic pool in bytes.
      * 
-    */
+     */
     public Optional<Double> maxSizeBytes() {
         return Optional.ofNullable(this.maxSizeBytes);
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The per database settings for the elastic pool.
+     * @return The per database settings for the elastic pool.
      * 
-    */
+     */
     public Optional<ElasticPoolPerDatabaseSettingsResponse> perDatabaseSettings() {
         return Optional.ofNullable(this.perDatabaseSettings);
     }
     /**
-     * The elastic pool SKU.
+     * @return The elastic pool SKU.
      * 
      * The list of SKUs may vary by region and support offer. To determine the SKUs (including the SKU name, tier/edition, family, and capacity) that are available to your subscription in an Azure region, use the `Capabilities_ListByLocation` REST API or the following command:
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * The state of the elastic pool.
+     * @return The state of the elastic pool.
      * 
-    */
+     */
     public String state() {
         return this.state;
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
+     * @return Whether or not this elastic pool is zone redundant, which means the replicas of this elastic pool will be spread across multiple availability zones.
      * 
-    */
+     */
     public Optional<Boolean> zoneRedundant() {
         return Optional.ofNullable(this.zoneRedundant);
     }

@@ -21,6 +21,10 @@ public final class PipelineSourceTriggerDescriptorResponse extends com.pulumi.re
     @Import(name="timestamp")
     private @Nullable String timestamp;
 
+    /**
+     * @return The timestamp when the source update happened.
+     * 
+     */
     public Optional<String> timestamp() {
         return Optional.ofNullable(this.timestamp);
     }
@@ -49,6 +53,12 @@ public final class PipelineSourceTriggerDescriptorResponse extends com.pulumi.re
             $ = new PipelineSourceTriggerDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param timestamp The timestamp when the source update happened.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timestamp(@Nullable String timestamp) {
             $.timestamp = timestamp;
             return this;

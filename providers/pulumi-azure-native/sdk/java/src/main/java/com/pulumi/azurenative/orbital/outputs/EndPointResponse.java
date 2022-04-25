@@ -10,22 +10,22 @@ import java.util.Objects;
 @CustomType
 public final class EndPointResponse {
     /**
-     * Name of an end point.
+     * @return Name of an end point.
      * 
      */
     private final String endPointName;
     /**
-     * IP Address.
+     * @return IP Address.
      * 
      */
     private final String ipAddress;
     /**
-     * TCP port to listen on to receive data.
+     * @return TCP port to listen on to receive data.
      * 
      */
     private final String port;
     /**
-     * Protocol either UDP or TCP.
+     * @return Protocol either UDP or TCP.
      * 
      */
     private final String protocol;
@@ -43,30 +43,30 @@ public final class EndPointResponse {
     }
 
     /**
-     * Name of an end point.
+     * @return Name of an end point.
      * 
-    */
+     */
     public String endPointName() {
         return this.endPointName;
     }
     /**
-     * IP Address.
+     * @return IP Address.
      * 
-    */
+     */
     public String ipAddress() {
         return this.ipAddress;
     }
     /**
-     * TCP port to listen on to receive data.
+     * @return TCP port to listen on to receive data.
      * 
-    */
+     */
     public String port() {
         return this.port;
     }
     /**
-     * Protocol either UDP or TCP.
+     * @return Protocol either UDP or TCP.
      * 
-    */
+     */
     public String protocol() {
         return this.protocol;
     }

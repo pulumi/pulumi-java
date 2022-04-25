@@ -23,6 +23,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobCollectionName", required=true)
     private Output<String> jobCollectionName;
 
+    /**
+     * @return The job collection name.
+     * 
+     */
     public Output<String> jobCollectionName() {
         return this.jobCollectionName;
     }
@@ -34,6 +38,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobName")
     private @Nullable Output<String> jobName;
 
+    /**
+     * @return The job name.
+     * 
+     */
     public Optional<Output<String>> jobName() {
         return Optional.ofNullable(this.jobName);
     }
@@ -45,6 +53,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<JobPropertiesArgs> properties;
 
+    /**
+     * @return Gets or sets the job properties.
+     * 
+     */
     public Optional<Output<JobPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class JobArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param jobCollectionName The job collection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobCollectionName(Output<String> jobCollectionName) {
             $.jobCollectionName = jobCollectionName;
             return this;
         }
 
+        /**
+         * @param jobCollectionName The job collection name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobCollectionName(String jobCollectionName) {
             return jobCollectionName(Output.of(jobCollectionName));
         }
 
+        /**
+         * @param jobName The job name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(@Nullable Output<String> jobName) {
             $.jobName = jobName;
             return this;
         }
 
+        /**
+         * @param jobName The job name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobName(String jobName) {
             return jobName(Output.of(jobName));
         }
 
+        /**
+         * @param properties Gets or sets the job properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<JobPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Gets or sets the job properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(JobPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

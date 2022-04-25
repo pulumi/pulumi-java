@@ -25,6 +25,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="hero")
     private @Nullable String hero;
 
+    /**
+     * @return URI to hero icon.
+     * 
+     */
     public Optional<String> hero() {
         return Optional.ofNullable(this.hero);
     }
@@ -36,6 +40,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="large")
     private @Nullable String large;
 
+    /**
+     * @return URI to large icon.
+     * 
+     */
     public Optional<String> large() {
         return Optional.ofNullable(this.large);
     }
@@ -47,6 +55,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="medium")
     private @Nullable String medium;
 
+    /**
+     * @return URI to medium icon.
+     * 
+     */
     public Optional<String> medium() {
         return Optional.ofNullable(this.medium);
     }
@@ -58,6 +70,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="small")
     private @Nullable String small;
 
+    /**
+     * @return URI to small icon.
+     * 
+     */
     public Optional<String> small() {
         return Optional.ofNullable(this.small);
     }
@@ -69,6 +85,10 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="wide")
     private @Nullable String wide;
 
+    /**
+     * @return URI to wide icon.
+     * 
+     */
     public Optional<String> wide() {
         return Optional.ofNullable(this.wide);
     }
@@ -101,26 +121,56 @@ public final class IconUrisResponse extends com.pulumi.resources.InvokeArgs {
             $ = new IconUrisResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hero URI to hero icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hero(@Nullable String hero) {
             $.hero = hero;
             return this;
         }
 
+        /**
+         * @param large URI to large icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder large(@Nullable String large) {
             $.large = large;
             return this;
         }
 
+        /**
+         * @param medium URI to medium icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder medium(@Nullable String medium) {
             $.medium = medium;
             return this;
         }
 
+        /**
+         * @param small URI to small icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder small(@Nullable String small) {
             $.small = small;
             return this;
         }
 
+        /**
+         * @param wide URI to wide icon.
+         * 
+         * @return builder
+         * 
+         */
         public Builder wide(@Nullable String wide) {
             $.wide = wide;
             return this;

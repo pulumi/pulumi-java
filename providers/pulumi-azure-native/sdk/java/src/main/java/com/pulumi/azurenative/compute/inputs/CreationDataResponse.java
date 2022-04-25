@@ -28,6 +28,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="createOption", required=true)
     private String createOption;
 
+    /**
+     * @return This enumerates the possible sources of a disk&#39;s creation.
+     * 
+     */
     public String createOption() {
         return this.createOption;
     }
@@ -39,6 +43,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="galleryImageReference")
     private @Nullable ImageDiskReferenceResponse galleryImageReference;
 
+    /**
+     * @return Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
+     * 
+     */
     public Optional<ImageDiskReferenceResponse> galleryImageReference() {
         return Optional.ofNullable(this.galleryImageReference);
     }
@@ -50,6 +58,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="imageReference")
     private @Nullable ImageDiskReferenceResponse imageReference;
 
+    /**
+     * @return Disk source information.
+     * 
+     */
     public Optional<ImageDiskReferenceResponse> imageReference() {
         return Optional.ofNullable(this.imageReference);
     }
@@ -61,6 +73,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="logicalSectorSize")
     private @Nullable Integer logicalSectorSize;
 
+    /**
+     * @return Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+     * 
+     */
     public Optional<Integer> logicalSectorSize() {
         return Optional.ofNullable(this.logicalSectorSize);
     }
@@ -72,6 +88,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceResourceId")
     private @Nullable String sourceResourceId;
 
+    /**
+     * @return If createOption is Copy, this is the ARM id of the source snapshot or disk.
+     * 
+     */
     public Optional<String> sourceResourceId() {
         return Optional.ofNullable(this.sourceResourceId);
     }
@@ -83,6 +103,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceUniqueId", required=true)
     private String sourceUniqueId;
 
+    /**
+     * @return If this field is set, this is the unique id identifying the source of this resource.
+     * 
+     */
     public String sourceUniqueId() {
         return this.sourceUniqueId;
     }
@@ -94,6 +118,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceUri")
     private @Nullable String sourceUri;
 
+    /**
+     * @return If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+     * 
+     */
     public Optional<String> sourceUri() {
         return Optional.ofNullable(this.sourceUri);
     }
@@ -105,6 +133,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="storageAccountId")
     private @Nullable String storageAccountId;
 
+    /**
+     * @return Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+     * 
+     */
     public Optional<String> storageAccountId() {
         return Optional.ofNullable(this.storageAccountId);
     }
@@ -116,6 +148,10 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="uploadSizeBytes")
     private @Nullable Double uploadSizeBytes;
 
+    /**
+     * @return If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+     * 
+     */
     public Optional<Double> uploadSizeBytes() {
         return Optional.ofNullable(this.uploadSizeBytes);
     }
@@ -152,46 +188,100 @@ public final class CreationDataResponse extends com.pulumi.resources.InvokeArgs 
             $ = new CreationDataResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param createOption This enumerates the possible sources of a disk&#39;s creation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createOption(String createOption) {
             $.createOption = createOption;
             return this;
         }
 
+        /**
+         * @param galleryImageReference Required if creating from a Gallery Image. The id of the ImageDiskReference will be the ARM id of the shared galley image version from which to create a disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder galleryImageReference(@Nullable ImageDiskReferenceResponse galleryImageReference) {
             $.galleryImageReference = galleryImageReference;
             return this;
         }
 
+        /**
+         * @param imageReference Disk source information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageReference(@Nullable ImageDiskReferenceResponse imageReference) {
             $.imageReference = imageReference;
             return this;
         }
 
+        /**
+         * @param logicalSectorSize Logical sector size in bytes for Ultra disks. Supported values are 512 ad 4096. 4096 is the default.
+         * 
+         * @return builder
+         * 
+         */
         public Builder logicalSectorSize(@Nullable Integer logicalSectorSize) {
             $.logicalSectorSize = logicalSectorSize;
             return this;
         }
 
+        /**
+         * @param sourceResourceId If createOption is Copy, this is the ARM id of the source snapshot or disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceResourceId(@Nullable String sourceResourceId) {
             $.sourceResourceId = sourceResourceId;
             return this;
         }
 
+        /**
+         * @param sourceUniqueId If this field is set, this is the unique id identifying the source of this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUniqueId(String sourceUniqueId) {
             $.sourceUniqueId = sourceUniqueId;
             return this;
         }
 
+        /**
+         * @param sourceUri If createOption is Import, this is the URI of a blob to be imported into a managed disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceUri(@Nullable String sourceUri) {
             $.sourceUri = sourceUri;
             return this;
         }
 
+        /**
+         * @param storageAccountId Required if createOption is Import. The Azure Resource Manager identifier of the storage account containing the blob to import as a disk.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountId(@Nullable String storageAccountId) {
             $.storageAccountId = storageAccountId;
             return this;
         }
 
+        /**
+         * @param uploadSizeBytes If createOption is Upload, this is the size of the contents of the upload including the VHD footer. This value should be between 20972032 (20 MiB + 512 bytes for the VHD footer) and 35183298347520 bytes (32 TiB + 512 bytes for the VHD footer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder uploadSizeBytes(@Nullable Double uploadSizeBytes) {
             $.uploadSizeBytes = uploadSizeBytes;
             return this;

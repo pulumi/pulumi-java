@@ -35,6 +35,10 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="assetName", required=true)
     private Output<String> assetName;
 
+    /**
+     * @return The name of the input Asset.
+     * 
+     */
     public Output<String> assetName() {
         return this.assetName;
     }
@@ -46,6 +50,10 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="end")
     private @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end;
 
+    /**
+     * @return Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+     * 
+     */
     public Optional<Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>>> end() {
         return Optional.ofNullable(this.end);
     }
@@ -57,6 +65,10 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="files")
     private @Nullable Output<List<String>> files;
 
+    /**
+     * @return List of files. Required for JobInputHttp. Maximum of 4000 characters each.
+     * 
+     */
     public Optional<Output<List<String>>> files() {
         return Optional.ofNullable(this.files);
     }
@@ -68,6 +80,10 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="inputDefinitions")
     private @Nullable Output<List<Object>> inputDefinitions;
 
+    /**
+     * @return Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+     * 
+     */
     public Optional<Output<List<Object>>> inputDefinitions() {
         return Optional.ofNullable(this.inputDefinitions);
     }
@@ -79,6 +95,10 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -91,6 +111,11 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.JobInputAsset&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -102,6 +127,10 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="start")
     private @Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start;
 
+    /**
+     * @return Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+     * 
+     */
     public Optional<Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>>> start() {
         return Optional.ofNullable(this.start);
     }
@@ -136,89 +165,211 @@ public final class JobInputAssetArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobInputAssetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assetName The name of the input Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(Output<String> assetName) {
             $.assetName = assetName;
             return this;
         }
 
+        /**
+         * @param assetName The name of the input Asset.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assetName(String assetName) {
             return assetName(Output.of(assetName));
         }
 
+        /**
+         * @param end Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> end) {
             $.end = end;
             return this;
         }
 
+        /**
+         * @param end Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> end) {
             return end(Output.of(end));
         }
 
+        /**
+         * @param end Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(AbsoluteClipTimeArgs end) {
             return end(Either.ofLeft(end));
         }
 
+        /**
+         * @param end Defines a point on the timeline of the input media at which processing will end. Defaults to the end of the input media.
+         * 
+         * @return builder
+         * 
+         */
         public Builder end(UtcClipTimeArgs end) {
             return end(Either.ofRight(end));
         }
 
+        /**
+         * @param files List of files. Required for JobInputHttp. Maximum of 4000 characters each.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(@Nullable Output<List<String>> files) {
             $.files = files;
             return this;
         }
 
+        /**
+         * @param files List of files. Required for JobInputHttp. Maximum of 4000 characters each.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(List<String> files) {
             return files(Output.of(files));
         }
 
+        /**
+         * @param files List of files. Required for JobInputHttp. Maximum of 4000 characters each.
+         * 
+         * @return builder
+         * 
+         */
         public Builder files(String... files) {
             return files(List.of(files));
         }
 
+        /**
+         * @param inputDefinitions Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDefinitions(@Nullable Output<List<Object>> inputDefinitions) {
             $.inputDefinitions = inputDefinitions;
             return this;
         }
 
+        /**
+         * @param inputDefinitions Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDefinitions(List<Object> inputDefinitions) {
             return inputDefinitions(Output.of(inputDefinitions));
         }
 
+        /**
+         * @param inputDefinitions Defines a list of InputDefinitions. For each InputDefinition, it defines a list of track selections and related metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inputDefinitions(Object... inputDefinitions) {
             return inputDefinitions(List.of(inputDefinitions));
         }
 
+        /**
+         * @param label A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label A label that is assigned to a JobInputClip, that is used to satisfy a reference used in the Transform. For example, a Transform can be authored so as to take an image file with the label &#39;xyz&#39; and apply it as an overlay onto the input video before it is encoded. When submitting a Job, exactly one of the JobInputs should be the image file, and it should have the label &#39;xyz&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JobInputAsset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.JobInputAsset&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param start Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(@Nullable Output<Either<AbsoluteClipTimeArgs,UtcClipTimeArgs>> start) {
             $.start = start;
             return this;
         }
 
+        /**
+         * @param start Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(Either<AbsoluteClipTimeArgs,UtcClipTimeArgs> start) {
             return start(Output.of(start));
         }
 
+        /**
+         * @param start Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(AbsoluteClipTimeArgs start) {
             return start(Either.ofLeft(start));
         }
 
+        /**
+         * @param start Defines a point on the timeline of the input media at which processing will start. Defaults to the beginning of the input media.
+         * 
+         * @return builder
+         * 
+         */
         public Builder start(UtcClipTimeArgs start) {
             return start(Either.ofRight(start));
         }

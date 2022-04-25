@@ -22,6 +22,10 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
     @Import(name="notificationName", required=true)
     private Output<String> notificationName;
 
+    /**
+     * @return Notification Name Identifier.
+     * 
+     */
     public Output<String> notificationName() {
         return this.notificationName;
     }
@@ -33,6 +37,10 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -55,6 +67,10 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
     @Import(name="userId")
     private @Nullable Output<String> userId;
 
+    /**
+     * @return User identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> userId() {
         return Optional.ofNullable(this.userId);
     }
@@ -86,38 +102,86 @@ public final class NotificationRecipientUserArgs extends com.pulumi.resources.Re
             $ = new NotificationRecipientUserArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param notificationName Notification Name Identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationName(Output<String> notificationName) {
             $.notificationName = notificationName;
             return this;
         }
 
+        /**
+         * @param notificationName Notification Name Identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder notificationName(String notificationName) {
             return notificationName(Output.of(notificationName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param userId User identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(@Nullable Output<String> userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userId User identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             return userId(Output.of(userId));
         }

@@ -23,6 +23,10 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
     @Import(name="fabricName", required=true)
     private Output<String> fabricName;
 
+    /**
+     * @return Fabric name.
+     * 
+     */
     public Output<String> fabricName() {
         return this.fabricName;
     }
@@ -34,6 +38,10 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
     @Import(name="properties", required=true)
     private Output<AddRecoveryServicesProviderInputPropertiesArgs> properties;
 
+    /**
+     * @return The properties of an add provider request.
+     * 
+     */
     public Output<AddRecoveryServicesProviderInputPropertiesArgs> properties() {
         return this.properties;
     }
@@ -45,6 +53,10 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
     @Import(name="providerName")
     private @Nullable Output<String> providerName;
 
+    /**
+     * @return Recovery services provider name.
+     * 
+     */
     public Optional<Output<String>> providerName() {
         return Optional.ofNullable(this.providerName);
     }
@@ -56,6 +68,10 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group where the recovery services vault is present.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
     @Import(name="resourceName", required=true)
     private Output<String> resourceName;
 
+    /**
+     * @return The name of the recovery services vault.
+     * 
+     */
     public Output<String> resourceName() {
         return this.resourceName;
     }
@@ -99,47 +119,107 @@ public final class ReplicationRecoveryServicesProviderArgs extends com.pulumi.re
             $ = new ReplicationRecoveryServicesProviderArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(Output<String> fabricName) {
             $.fabricName = fabricName;
             return this;
         }
 
+        /**
+         * @param fabricName Fabric name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fabricName(String fabricName) {
             return fabricName(Output.of(fabricName));
         }
 
+        /**
+         * @param properties The properties of an add provider request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<AddRecoveryServicesProviderInputPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties of an add provider request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(AddRecoveryServicesProviderInputPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param providerName Recovery services provider name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(@Nullable Output<String> providerName) {
             $.providerName = providerName;
             return this;
         }
 
+        /**
+         * @param providerName Recovery services provider name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerName(String providerName) {
             return providerName(Output.of(providerName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group where the recovery services vault is present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the recovery services vault.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }

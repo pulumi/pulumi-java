@@ -32,6 +32,10 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="negateCondition")
     private @Nullable Output<Boolean> negateCondition;
 
+    /**
+     * @return Describes if this is negate condition or not
+     * 
+     */
     public Optional<Output<Boolean>> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -43,6 +47,10 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="rulesEngineMatchValue", required=true)
     private Output<List<String>> rulesEngineMatchValue;
 
+    /**
+     * @return Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+     * 
+     */
     public Output<List<String>> rulesEngineMatchValue() {
         return this.rulesEngineMatchValue;
     }
@@ -54,6 +62,10 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="rulesEngineMatchVariable", required=true)
     private Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable;
 
+    /**
+     * @return Match Variable
+     * 
+     */
     public Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable() {
         return this.rulesEngineMatchVariable;
     }
@@ -65,6 +77,10 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="rulesEngineOperator", required=true)
     private Output<Either<String,RulesEngineOperator>> rulesEngineOperator;
 
+    /**
+     * @return Describes operator to apply to the match condition.
+     * 
+     */
     public Output<Either<String,RulesEngineOperator>> rulesEngineOperator() {
         return this.rulesEngineOperator;
     }
@@ -76,6 +92,10 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="selector")
     private @Nullable Output<String> selector;
 
+    /**
+     * @return Name of selector in RequestHeader or RequestBody to be matched
+     * 
+     */
     public Optional<Output<String>> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -87,6 +107,10 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
     @Import(name="transforms")
     private @Nullable Output<List<Either<String,Transform>>> transforms;
 
+    /**
+     * @return List of transforms
+     * 
+     */
     public Optional<Output<List<Either<String,Transform>>>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -120,80 +144,188 @@ public final class RulesEngineMatchConditionArgs extends com.pulumi.resources.Re
             $ = new RulesEngineMatchConditionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Output<Boolean> negateCondition) {
             $.negateCondition = negateCondition;
             return this;
         }
 
+        /**
+         * @param negateCondition Describes if this is negate condition or not
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(Boolean negateCondition) {
             return negateCondition(Output.of(negateCondition));
         }
 
+        /**
+         * @param rulesEngineMatchValue Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchValue(Output<List<String>> rulesEngineMatchValue) {
             $.rulesEngineMatchValue = rulesEngineMatchValue;
             return this;
         }
 
+        /**
+         * @param rulesEngineMatchValue Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchValue(List<String> rulesEngineMatchValue) {
             return rulesEngineMatchValue(Output.of(rulesEngineMatchValue));
         }
 
+        /**
+         * @param rulesEngineMatchValue Match values to match against. The operator will apply to each value in here with OR semantics. If any of them match the variable with the given operator this match condition is considered a match.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchValue(String... rulesEngineMatchValue) {
             return rulesEngineMatchValue(List.of(rulesEngineMatchValue));
         }
 
+        /**
+         * @param rulesEngineMatchVariable Match Variable
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchVariable(Output<Either<String,RulesEngineMatchVariable>> rulesEngineMatchVariable) {
             $.rulesEngineMatchVariable = rulesEngineMatchVariable;
             return this;
         }
 
+        /**
+         * @param rulesEngineMatchVariable Match Variable
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchVariable(Either<String,RulesEngineMatchVariable> rulesEngineMatchVariable) {
             return rulesEngineMatchVariable(Output.of(rulesEngineMatchVariable));
         }
 
+        /**
+         * @param rulesEngineMatchVariable Match Variable
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchVariable(String rulesEngineMatchVariable) {
             return rulesEngineMatchVariable(Either.ofLeft(rulesEngineMatchVariable));
         }
 
+        /**
+         * @param rulesEngineMatchVariable Match Variable
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineMatchVariable(RulesEngineMatchVariable rulesEngineMatchVariable) {
             return rulesEngineMatchVariable(Either.ofRight(rulesEngineMatchVariable));
         }
 
+        /**
+         * @param rulesEngineOperator Describes operator to apply to the match condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineOperator(Output<Either<String,RulesEngineOperator>> rulesEngineOperator) {
             $.rulesEngineOperator = rulesEngineOperator;
             return this;
         }
 
+        /**
+         * @param rulesEngineOperator Describes operator to apply to the match condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineOperator(Either<String,RulesEngineOperator> rulesEngineOperator) {
             return rulesEngineOperator(Output.of(rulesEngineOperator));
         }
 
+        /**
+         * @param rulesEngineOperator Describes operator to apply to the match condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineOperator(String rulesEngineOperator) {
             return rulesEngineOperator(Either.ofLeft(rulesEngineOperator));
         }
 
+        /**
+         * @param rulesEngineOperator Describes operator to apply to the match condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rulesEngineOperator(RulesEngineOperator rulesEngineOperator) {
             return rulesEngineOperator(Either.ofRight(rulesEngineOperator));
         }
 
+        /**
+         * @param selector Name of selector in RequestHeader or RequestBody to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable Output<String> selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param selector Name of selector in RequestHeader or RequestBody to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(String selector) {
             return selector(Output.of(selector));
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable Output<List<Either<String,Transform>>> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(List<Either<String,Transform>> transforms) {
             return transforms(Output.of(transforms));
         }
 
+        /**
+         * @param transforms List of transforms
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(Either<String,Transform>... transforms) {
             return transforms(List.of(transforms));
         }

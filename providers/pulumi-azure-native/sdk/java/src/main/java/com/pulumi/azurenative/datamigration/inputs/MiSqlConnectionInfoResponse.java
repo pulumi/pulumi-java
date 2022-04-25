@@ -26,6 +26,10 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
     @Import(name="managedInstanceResourceId", required=true)
     private String managedInstanceResourceId;
 
+    /**
+     * @return Resource id for Azure SQL database Managed instance
+     * 
+     */
     public String managedInstanceResourceId() {
         return this.managedInstanceResourceId;
     }
@@ -37,6 +41,10 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
     @Import(name="password")
     private @Nullable String password;
 
+    /**
+     * @return Password credential.
+     * 
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
@@ -49,6 +57,11 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of connection info
+     * Expected value is &#39;MiSqlConnectionInfo&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -60,6 +73,10 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
     @Import(name="userName")
     private @Nullable String userName;
 
+    /**
+     * @return User name
+     * 
+     */
     public Optional<String> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -91,21 +108,46 @@ public final class MiSqlConnectionInfoResponse extends com.pulumi.resources.Invo
             $ = new MiSqlConnectionInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managedInstanceResourceId Resource id for Azure SQL database Managed instance
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedInstanceResourceId(String managedInstanceResourceId) {
             $.managedInstanceResourceId = managedInstanceResourceId;
             return this;
         }
 
+        /**
+         * @param password Password credential.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable String password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param type Type of connection info
+         * Expected value is &#39;MiSqlConnectionInfo&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userName User name
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable String userName) {
             $.userName = userName;
             return this;

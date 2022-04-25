@@ -26,6 +26,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="access", required=true)
     private String access;
 
+    /**
+     * @return The access type of the rule.
+     * 
+     */
     public String access() {
         return this.access;
     }
@@ -37,6 +41,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="communities", required=true)
     private List<String> communities;
 
+    /**
+     * @return The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+     * 
+     */
     public List<String> communities() {
         return this.communities;
     }
@@ -48,6 +56,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -59,6 +71,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -70,6 +86,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -81,6 +101,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -92,6 +116,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the route filter rule resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -103,6 +131,10 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
     @Import(name="routeFilterRuleType", required=true)
     private String routeFilterRuleType;
 
+    /**
+     * @return The rule type of the rule.
+     * 
+     */
     public String routeFilterRuleType() {
         return this.routeFilterRuleType;
     }
@@ -138,45 +170,99 @@ public final class RouteFilterRuleResponse extends com.pulumi.resources.InvokeAr
             $ = new RouteFilterRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param access The access type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(String access) {
             $.access = access;
             return this;
         }
 
+        /**
+         * @param communities The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder communities(List<String> communities) {
             $.communities = communities;
             return this;
         }
 
+        /**
+         * @param communities The collection for bgp community values to filter on. e.g. [&#39;12076:5010&#39;,&#39;12076:5020&#39;].
+         * 
+         * @return builder
+         * 
+         */
         public Builder communities(String... communities) {
             return communities(List.of(communities));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the route filter rule resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param routeFilterRuleType The rule type of the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder routeFilterRuleType(String routeFilterRuleType) {
             $.routeFilterRuleType = routeFilterRuleType;
             return this;

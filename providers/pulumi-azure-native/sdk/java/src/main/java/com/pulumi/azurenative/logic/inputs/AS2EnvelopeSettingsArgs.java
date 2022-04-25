@@ -25,6 +25,10 @@ public final class AS2EnvelopeSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="autogenerateFileName", required=true)
     private Output<Boolean> autogenerateFileName;
 
+    /**
+     * @return The value indicating whether to auto generate file name.
+     * 
+     */
     public Output<Boolean> autogenerateFileName() {
         return this.autogenerateFileName;
     }
@@ -36,6 +40,10 @@ public final class AS2EnvelopeSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="fileNameTemplate", required=true)
     private Output<String> fileNameTemplate;
 
+    /**
+     * @return The template for file name.
+     * 
+     */
     public Output<String> fileNameTemplate() {
         return this.fileNameTemplate;
     }
@@ -47,6 +55,10 @@ public final class AS2EnvelopeSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="messageContentType", required=true)
     private Output<String> messageContentType;
 
+    /**
+     * @return The message content type.
+     * 
+     */
     public Output<String> messageContentType() {
         return this.messageContentType;
     }
@@ -58,6 +70,10 @@ public final class AS2EnvelopeSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="suspendMessageOnFileNameGenerationError", required=true)
     private Output<Boolean> suspendMessageOnFileNameGenerationError;
 
+    /**
+     * @return The value indicating whether to suspend message on file name generation error.
+     * 
+     */
     public Output<Boolean> suspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
     }
@@ -69,6 +85,10 @@ public final class AS2EnvelopeSettingsArgs extends com.pulumi.resources.Resource
     @Import(name="transmitFileNameInMimeHeader", required=true)
     private Output<Boolean> transmitFileNameInMimeHeader;
 
+    /**
+     * @return The value indicating whether to transmit file name in mime header.
+     * 
+     */
     public Output<Boolean> transmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;
     }
@@ -101,47 +121,107 @@ public final class AS2EnvelopeSettingsArgs extends com.pulumi.resources.Resource
             $ = new AS2EnvelopeSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autogenerateFileName The value indicating whether to auto generate file name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autogenerateFileName(Output<Boolean> autogenerateFileName) {
             $.autogenerateFileName = autogenerateFileName;
             return this;
         }
 
+        /**
+         * @param autogenerateFileName The value indicating whether to auto generate file name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autogenerateFileName(Boolean autogenerateFileName) {
             return autogenerateFileName(Output.of(autogenerateFileName));
         }
 
+        /**
+         * @param fileNameTemplate The template for file name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileNameTemplate(Output<String> fileNameTemplate) {
             $.fileNameTemplate = fileNameTemplate;
             return this;
         }
 
+        /**
+         * @param fileNameTemplate The template for file name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileNameTemplate(String fileNameTemplate) {
             return fileNameTemplate(Output.of(fileNameTemplate));
         }
 
+        /**
+         * @param messageContentType The message content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageContentType(Output<String> messageContentType) {
             $.messageContentType = messageContentType;
             return this;
         }
 
+        /**
+         * @param messageContentType The message content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageContentType(String messageContentType) {
             return messageContentType(Output.of(messageContentType));
         }
 
+        /**
+         * @param suspendMessageOnFileNameGenerationError The value indicating whether to suspend message on file name generation error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendMessageOnFileNameGenerationError(Output<Boolean> suspendMessageOnFileNameGenerationError) {
             $.suspendMessageOnFileNameGenerationError = suspendMessageOnFileNameGenerationError;
             return this;
         }
 
+        /**
+         * @param suspendMessageOnFileNameGenerationError The value indicating whether to suspend message on file name generation error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
             return suspendMessageOnFileNameGenerationError(Output.of(suspendMessageOnFileNameGenerationError));
         }
 
+        /**
+         * @param transmitFileNameInMimeHeader The value indicating whether to transmit file name in mime header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transmitFileNameInMimeHeader(Output<Boolean> transmitFileNameInMimeHeader) {
             $.transmitFileNameInMimeHeader = transmitFileNameInMimeHeader;
             return this;
         }
 
+        /**
+         * @param transmitFileNameInMimeHeader The value indicating whether to transmit file name in mime header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
             return transmitFileNameInMimeHeader(Output.of(transmitFileNameInMimeHeader));
         }

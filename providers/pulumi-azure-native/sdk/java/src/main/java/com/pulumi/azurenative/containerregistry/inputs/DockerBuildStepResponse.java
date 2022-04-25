@@ -30,6 +30,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="arguments")
     private @Nullable List<ArgumentResponse> arguments;
 
+    /**
+     * @return The collection of override arguments to be used when executing this build step.
+     * 
+     */
     public Optional<List<ArgumentResponse>> arguments() {
         return Optional.ofNullable(this.arguments);
     }
@@ -41,6 +45,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="baseImageDependencies", required=true)
     private List<BaseImageDependencyResponse> baseImageDependencies;
 
+    /**
+     * @return List of base image dependencies for a step.
+     * 
+     */
     public List<BaseImageDependencyResponse> baseImageDependencies() {
         return this.baseImageDependencies;
     }
@@ -52,6 +60,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="contextAccessToken")
     private @Nullable String contextAccessToken;
 
+    /**
+     * @return The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+     * 
+     */
     public Optional<String> contextAccessToken() {
         return Optional.ofNullable(this.contextAccessToken);
     }
@@ -63,6 +75,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="contextPath")
     private @Nullable String contextPath;
 
+    /**
+     * @return The URL(absolute or relative) of the source context for the task step.
+     * 
+     */
     public Optional<String> contextPath() {
         return Optional.ofNullable(this.contextPath);
     }
@@ -74,6 +90,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="dockerFilePath", required=true)
     private String dockerFilePath;
 
+    /**
+     * @return The Docker file path relative to the source context.
+     * 
+     */
     public String dockerFilePath() {
         return this.dockerFilePath;
     }
@@ -85,6 +105,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="imageNames")
     private @Nullable List<String> imageNames;
 
+    /**
+     * @return The fully qualified image names including the repository and tag.
+     * 
+     */
     public Optional<List<String>> imageNames() {
         return Optional.ofNullable(this.imageNames);
     }
@@ -96,6 +120,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="isPushEnabled")
     private @Nullable Boolean isPushEnabled;
 
+    /**
+     * @return The value of this property indicates whether the image built should be pushed to the registry or not.
+     * 
+     */
     public Optional<Boolean> isPushEnabled() {
         return Optional.ofNullable(this.isPushEnabled);
     }
@@ -107,6 +135,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="noCache")
     private @Nullable Boolean noCache;
 
+    /**
+     * @return The value of this property indicates whether the image cache is enabled or not.
+     * 
+     */
     public Optional<Boolean> noCache() {
         return Optional.ofNullable(this.noCache);
     }
@@ -118,6 +150,10 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="target")
     private @Nullable String target;
 
+    /**
+     * @return The name of the target build stage for the docker build.
+     * 
+     */
     public Optional<String> target() {
         return Optional.ofNullable(this.target);
     }
@@ -130,6 +166,11 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The type of the step.
+     * Expected value is &#39;Docker&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -167,63 +208,142 @@ public final class DockerBuildStepResponse extends com.pulumi.resources.InvokeAr
             $ = new DockerBuildStepResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param arguments The collection of override arguments to be used when executing this build step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(@Nullable List<ArgumentResponse> arguments) {
             $.arguments = arguments;
             return this;
         }
 
+        /**
+         * @param arguments The collection of override arguments to be used when executing this build step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arguments(ArgumentResponse... arguments) {
             return arguments(List.of(arguments));
         }
 
+        /**
+         * @param baseImageDependencies List of base image dependencies for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageDependencies(List<BaseImageDependencyResponse> baseImageDependencies) {
             $.baseImageDependencies = baseImageDependencies;
             return this;
         }
 
+        /**
+         * @param baseImageDependencies List of base image dependencies for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder baseImageDependencies(BaseImageDependencyResponse... baseImageDependencies) {
             return baseImageDependencies(List.of(baseImageDependencies));
         }
 
+        /**
+         * @param contextAccessToken The token (git PAT or SAS token of storage account blob) associated with the context for a step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextAccessToken(@Nullable String contextAccessToken) {
             $.contextAccessToken = contextAccessToken;
             return this;
         }
 
+        /**
+         * @param contextPath The URL(absolute or relative) of the source context for the task step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder contextPath(@Nullable String contextPath) {
             $.contextPath = contextPath;
             return this;
         }
 
+        /**
+         * @param dockerFilePath The Docker file path relative to the source context.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dockerFilePath(String dockerFilePath) {
             $.dockerFilePath = dockerFilePath;
             return this;
         }
 
+        /**
+         * @param imageNames The fully qualified image names including the repository and tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageNames(@Nullable List<String> imageNames) {
             $.imageNames = imageNames;
             return this;
         }
 
+        /**
+         * @param imageNames The fully qualified image names including the repository and tag.
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageNames(String... imageNames) {
             return imageNames(List.of(imageNames));
         }
 
+        /**
+         * @param isPushEnabled The value of this property indicates whether the image built should be pushed to the registry or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isPushEnabled(@Nullable Boolean isPushEnabled) {
             $.isPushEnabled = isPushEnabled;
             return this;
         }
 
+        /**
+         * @param noCache The value of this property indicates whether the image cache is enabled or not.
+         * 
+         * @return builder
+         * 
+         */
         public Builder noCache(@Nullable Boolean noCache) {
             $.noCache = noCache;
             return this;
         }
 
+        /**
+         * @param target The name of the target build stage for the docker build.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable String target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param type The type of the step.
+         * Expected value is &#39;Docker&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

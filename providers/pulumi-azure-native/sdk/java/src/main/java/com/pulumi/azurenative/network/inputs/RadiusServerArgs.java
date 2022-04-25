@@ -27,6 +27,10 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerAddress", required=true)
     private Output<String> radiusServerAddress;
 
+    /**
+     * @return The address of this radius server.
+     * 
+     */
     public Output<String> radiusServerAddress() {
         return this.radiusServerAddress;
     }
@@ -38,6 +42,10 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerScore")
     private @Nullable Output<Double> radiusServerScore;
 
+    /**
+     * @return The initial score assigned to this radius server.
+     * 
+     */
     public Optional<Output<Double>> radiusServerScore() {
         return Optional.ofNullable(this.radiusServerScore);
     }
@@ -49,6 +57,10 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="radiusServerSecret")
     private @Nullable Output<String> radiusServerSecret;
 
+    /**
+     * @return The secret used for this radius server.
+     * 
+     */
     public Optional<Output<String>> radiusServerSecret() {
         return Optional.ofNullable(this.radiusServerSecret);
     }
@@ -79,29 +91,65 @@ public final class RadiusServerArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RadiusServerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param radiusServerAddress The address of this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerAddress(Output<String> radiusServerAddress) {
             $.radiusServerAddress = radiusServerAddress;
             return this;
         }
 
+        /**
+         * @param radiusServerAddress The address of this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerAddress(String radiusServerAddress) {
             return radiusServerAddress(Output.of(radiusServerAddress));
         }
 
+        /**
+         * @param radiusServerScore The initial score assigned to this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerScore(@Nullable Output<Double> radiusServerScore) {
             $.radiusServerScore = radiusServerScore;
             return this;
         }
 
+        /**
+         * @param radiusServerScore The initial score assigned to this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerScore(Double radiusServerScore) {
             return radiusServerScore(Output.of(radiusServerScore));
         }
 
+        /**
+         * @param radiusServerSecret The secret used for this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerSecret(@Nullable Output<String> radiusServerSecret) {
             $.radiusServerSecret = radiusServerSecret;
             return this;
         }
 
+        /**
+         * @param radiusServerSecret The secret used for this radius server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder radiusServerSecret(String radiusServerSecret) {
             return radiusServerSecret(Output.of(radiusServerSecret));
         }

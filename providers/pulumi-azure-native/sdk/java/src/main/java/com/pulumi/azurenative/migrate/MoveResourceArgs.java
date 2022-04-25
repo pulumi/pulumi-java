@@ -23,6 +23,10 @@ public final class MoveResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="moveCollectionName", required=true)
     private Output<String> moveCollectionName;
 
+    /**
+     * @return The Move Collection Name.
+     * 
+     */
     public Output<String> moveCollectionName() {
         return this.moveCollectionName;
     }
@@ -34,6 +38,10 @@ public final class MoveResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="moveResourceName")
     private @Nullable Output<String> moveResourceName;
 
+    /**
+     * @return The Move Resource Name.
+     * 
+     */
     public Optional<Output<String>> moveResourceName() {
         return Optional.ofNullable(this.moveResourceName);
     }
@@ -45,6 +53,10 @@ public final class MoveResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<MoveResourcePropertiesArgs> properties;
 
+    /**
+     * @return Defines the move resource properties.
+     * 
+     */
     public Optional<Output<MoveResourcePropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -56,6 +68,10 @@ public final class MoveResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -87,38 +103,86 @@ public final class MoveResourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new MoveResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param moveCollectionName The Move Collection Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveCollectionName(Output<String> moveCollectionName) {
             $.moveCollectionName = moveCollectionName;
             return this;
         }
 
+        /**
+         * @param moveCollectionName The Move Collection Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveCollectionName(String moveCollectionName) {
             return moveCollectionName(Output.of(moveCollectionName));
         }
 
+        /**
+         * @param moveResourceName The Move Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveResourceName(@Nullable Output<String> moveResourceName) {
             $.moveResourceName = moveResourceName;
             return this;
         }
 
+        /**
+         * @param moveResourceName The Move Resource Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder moveResourceName(String moveResourceName) {
             return moveResourceName(Output.of(moveResourceName));
         }
 
+        /**
+         * @param properties Defines the move resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<MoveResourcePropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Defines the move resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(MoveResourcePropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

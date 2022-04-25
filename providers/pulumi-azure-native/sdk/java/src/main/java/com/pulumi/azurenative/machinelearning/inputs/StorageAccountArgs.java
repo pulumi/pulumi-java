@@ -26,6 +26,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="key")
     private @Nullable Output<String> key;
 
+    /**
+     * @return Specifies the key used to access the storage account.
+     * 
+     */
     public Optional<Output<String>> key() {
         return Optional.ofNullable(this.key);
     }
@@ -37,6 +41,10 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Specifies the name of the storage account.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -66,20 +74,44 @@ public final class StorageAccountArgs extends com.pulumi.resources.ResourceArgs 
             $ = new StorageAccountArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param key Specifies the key used to access the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(@Nullable Output<String> key) {
             $.key = key;
             return this;
         }
 
+        /**
+         * @param key Specifies the key used to access the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder key(String key) {
             return key(Output.of(key));
         }
 
+        /**
+         * @param name Specifies the name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Specifies the name of the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

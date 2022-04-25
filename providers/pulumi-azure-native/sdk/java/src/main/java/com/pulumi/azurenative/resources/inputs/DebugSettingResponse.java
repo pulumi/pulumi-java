@@ -25,6 +25,10 @@ public final class DebugSettingResponse extends com.pulumi.resources.InvokeArgs 
     @Import(name="detailLevel")
     private @Nullable String detailLevel;
 
+    /**
+     * @return Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+     * 
+     */
     public Optional<String> detailLevel() {
         return Optional.ofNullable(this.detailLevel);
     }
@@ -53,6 +57,12 @@ public final class DebugSettingResponse extends com.pulumi.resources.InvokeArgs 
             $ = new DebugSettingResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param detailLevel Specifies the type of information to log for debugging. The permitted values are none, requestContent, responseContent, or both requestContent and responseContent separated by a comma. The default is none. When setting this value, carefully consider the type of information you are passing in during deployment. By logging information about the request or response, you could potentially expose sensitive data that is retrieved through the deployment operations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder detailLevel(@Nullable String detailLevel) {
             $.detailLevel = detailLevel;
             return this;

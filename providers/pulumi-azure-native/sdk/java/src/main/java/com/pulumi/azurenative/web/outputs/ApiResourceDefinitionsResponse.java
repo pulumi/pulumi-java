@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ApiResourceDefinitionsResponse {
     /**
-     * The modified swagger URL
+     * @return The modified swagger URL
      * 
      */
     private final @Nullable String modifiedSwaggerUrl;
     /**
-     * The original swagger URL
+     * @return The original swagger URL
      * 
      */
     private final @Nullable String originalSwaggerUrl;
@@ -31,16 +31,16 @@ public final class ApiResourceDefinitionsResponse {
     }
 
     /**
-     * The modified swagger URL
+     * @return The modified swagger URL
      * 
-    */
+     */
     public Optional<String> modifiedSwaggerUrl() {
         return Optional.ofNullable(this.modifiedSwaggerUrl);
     }
     /**
-     * The original swagger URL
+     * @return The original swagger URL
      * 
-    */
+     */
     public Optional<String> originalSwaggerUrl() {
         return Optional.ofNullable(this.originalSwaggerUrl);
     }

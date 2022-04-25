@@ -25,6 +25,10 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends com.pulumi.re
     @Import(name="diskId")
     private @Nullable String diskId;
 
+    /**
+     * @return The disk id.
+     * 
+     */
     public Optional<String> diskId() {
         return Optional.ofNullable(this.diskId);
     }
@@ -36,6 +40,10 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends com.pulumi.re
     @Import(name="replicaDiskType")
     private @Nullable String replicaDiskType;
 
+    /**
+     * @return The replica disk type.
+     * 
+     */
     public Optional<String> replicaDiskType() {
         return Optional.ofNullable(this.replicaDiskType);
     }
@@ -47,6 +55,10 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends com.pulumi.re
     @Import(name="seedManagedDiskId")
     private @Nullable String seedManagedDiskId;
 
+    /**
+     * @return Seed managed disk Id.
+     * 
+     */
     public Optional<String> seedManagedDiskId() {
         return Optional.ofNullable(this.seedManagedDiskId);
     }
@@ -77,16 +89,34 @@ public final class InMageAzureV2ManagedDiskDetailsResponse extends com.pulumi.re
             $ = new InMageAzureV2ManagedDiskDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskId The disk id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskId(@Nullable String diskId) {
             $.diskId = diskId;
             return this;
         }
 
+        /**
+         * @param replicaDiskType The replica disk type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicaDiskType(@Nullable String replicaDiskType) {
             $.replicaDiskType = replicaDiskType;
             return this;
         }
 
+        /**
+         * @param seedManagedDiskId Seed managed disk Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder seedManagedDiskId(@Nullable String seedManagedDiskId) {
             $.seedManagedDiskId = seedManagedDiskId;
             return this;

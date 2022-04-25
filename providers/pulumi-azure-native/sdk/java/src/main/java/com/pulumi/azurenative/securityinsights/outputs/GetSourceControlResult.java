@@ -15,82 +15,82 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetSourceControlResult {
     /**
-     * Array of source control content types.
+     * @return Array of source control content types.
      * 
      */
     private final List<String> contentTypes;
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
      */
     private final @Nullable String createdAt;
     /**
-     * The identity that created the resource.
+     * @return The identity that created the resource.
      * 
      */
     private final @Nullable String createdBy;
     /**
-     * The type of identity that created the resource.
+     * @return The type of identity that created the resource.
      * 
      */
     private final @Nullable String createdByType;
     /**
-     * A description of the source control
+     * @return A description of the source control
      * 
      */
     private final @Nullable String description;
     /**
-     * The display name of the source control
+     * @return The display name of the source control
      * 
      */
     private final String displayName;
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
      */
     private final @Nullable String etag;
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
      */
     private final String id;
     /**
-     * The timestamp of resource last modification (UTC)
+     * @return The timestamp of resource last modification (UTC)
      * 
      */
     private final @Nullable String lastModifiedAt;
     /**
-     * The identity that last modified the resource.
+     * @return The identity that last modified the resource.
      * 
      */
     private final @Nullable String lastModifiedBy;
     /**
-     * The type of identity that last modified the resource.
+     * @return The type of identity that last modified the resource.
      * 
      */
     private final @Nullable String lastModifiedByType;
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
      */
     private final String name;
     /**
-     * The repository type of the source control
+     * @return The repository type of the source control
      * 
      */
     private final String repoType;
     /**
-     * Repository metadata.
+     * @return Repository metadata.
      * 
      */
     private final RepositoryResponse repository;
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
      */
     private final String type;
@@ -132,114 +132,114 @@ public final class GetSourceControlResult {
     }
 
     /**
-     * Array of source control content types.
+     * @return Array of source control content types.
      * 
-    */
+     */
     public List<String> contentTypes() {
         return this.contentTypes;
     }
     /**
-     * The timestamp of resource creation (UTC).
+     * @return The timestamp of resource creation (UTC).
      * 
-    */
+     */
     public Optional<String> createdAt() {
         return Optional.ofNullable(this.createdAt);
     }
     /**
-     * The identity that created the resource.
+     * @return The identity that created the resource.
      * 
-    */
+     */
     public Optional<String> createdBy() {
         return Optional.ofNullable(this.createdBy);
     }
     /**
-     * The type of identity that created the resource.
+     * @return The type of identity that created the resource.
      * 
-    */
+     */
     public Optional<String> createdByType() {
         return Optional.ofNullable(this.createdByType);
     }
     /**
-     * A description of the source control
+     * @return A description of the source control
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name of the source control
+     * @return The display name of the source control
      * 
-    */
+     */
     public String displayName() {
         return this.displayName;
     }
     /**
-     * Etag of the azure resource
+     * @return Etag of the azure resource
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * Azure resource Id
+     * @return Azure resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The timestamp of resource last modification (UTC)
+     * @return The timestamp of resource last modification (UTC)
      * 
-    */
+     */
     public Optional<String> lastModifiedAt() {
         return Optional.ofNullable(this.lastModifiedAt);
     }
     /**
-     * The identity that last modified the resource.
+     * @return The identity that last modified the resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedBy() {
         return Optional.ofNullable(this.lastModifiedBy);
     }
     /**
-     * The type of identity that last modified the resource.
+     * @return The type of identity that last modified the resource.
      * 
-    */
+     */
     public Optional<String> lastModifiedByType() {
         return Optional.ofNullable(this.lastModifiedByType);
     }
     /**
-     * Azure resource name
+     * @return Azure resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The repository type of the source control
+     * @return The repository type of the source control
      * 
-    */
+     */
     public String repoType() {
         return this.repoType;
     }
     /**
-     * Repository metadata.
+     * @return Repository metadata.
      * 
-    */
+     */
     public RepositoryResponse repository() {
         return this.repository;
     }
     /**
-     * Azure Resource Manager metadata containing createdBy and modifiedBy information.
+     * @return Azure Resource Manager metadata containing createdBy and modifiedBy information.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Azure resource type
+     * @return Azure resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

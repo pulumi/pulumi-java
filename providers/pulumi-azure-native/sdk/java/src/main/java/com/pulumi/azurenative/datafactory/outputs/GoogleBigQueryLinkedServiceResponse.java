@@ -20,88 +20,88 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GoogleBigQueryLinkedServiceResponse {
     /**
-     * A comma-separated list of public BigQuery projects to access.
+     * @return A comma-separated list of public BigQuery projects to access.
      * 
      */
     private final @Nullable Object additionalProjects;
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
      */
     private final @Nullable List<Object> annotations;
     /**
-     * The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+     * @return The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
      * 
      */
     private final String authenticationType;
     /**
-     * The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+     * @return The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object clientId;
     /**
-     * The client secret of the google application used to acquire the refresh token.
+     * @return The client secret of the google application used to acquire the refresh token.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> clientSecret;
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
      */
     private final @Nullable IntegrationRuntimeReferenceResponse connectVia;
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
      */
     private final @Nullable String description;
     /**
-     * The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+     * @return The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
      * 
      */
     private final @Nullable Object email;
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
      */
     private final @Nullable Object encryptedCredential;
     /**
-     * The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+     * @return The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
      * 
      */
     private final @Nullable Object keyFilePath;
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
      */
     private final @Nullable Map<String,ParameterSpecificationResponse> parameters;
     /**
-     * The default BigQuery project to query against.
+     * @return The default BigQuery project to query against.
      * 
      */
     private final Object project;
     /**
-     * The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
+     * @return The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
      * 
      */
     private final @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> refreshToken;
     /**
-     * Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
+     * @return Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
      * 
      */
     private final @Nullable Object requestGoogleDriveScope;
     /**
-     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
      */
     private final @Nullable Object trustedCertPath;
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;GoogleBigQuery&#39;.
      * 
      */
     private final String type;
     /**
-     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
      */
     private final @Nullable Object useSystemTrustStore;
@@ -145,122 +145,122 @@ public final class GoogleBigQueryLinkedServiceResponse {
     }
 
     /**
-     * A comma-separated list of public BigQuery projects to access.
+     * @return A comma-separated list of public BigQuery projects to access.
      * 
-    */
+     */
     public Optional<Object> additionalProjects() {
         return Optional.ofNullable(this.additionalProjects);
     }
     /**
-     * List of tags that can be used for describing the linked service.
+     * @return List of tags that can be used for describing the linked service.
      * 
-    */
+     */
     public List<Object> annotations() {
         return this.annotations == null ? List.of() : this.annotations;
     }
     /**
-     * The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
+     * @return The OAuth 2.0 authentication mechanism used for authentication. ServiceAuthentication can only be used on self-hosted IR.
      * 
-    */
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
     /**
-     * The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
+     * @return The client id of the google application used to acquire the refresh token. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> clientId() {
         return Optional.ofNullable(this.clientId);
     }
     /**
-     * The client secret of the google application used to acquire the refresh token.
+     * @return The client secret of the google application used to acquire the refresh token.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> clientSecret() {
         return Optional.ofNullable(this.clientSecret);
     }
     /**
-     * The integration runtime reference.
+     * @return The integration runtime reference.
      * 
-    */
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
     /**
-     * Linked service description.
+     * @return Linked service description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
+     * @return The service account email ID that is used for ServiceAuthentication and can only be used on self-hosted IR.
      * 
-    */
+     */
     public Optional<Object> email() {
         return Optional.ofNullable(this.email);
     }
     /**
-     * The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
      * 
-    */
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
     /**
-     * The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
+     * @return The full path to the .p12 key file that is used to authenticate the service account email address and can only be used on self-hosted IR.
      * 
-    */
+     */
     public Optional<Object> keyFilePath() {
         return Optional.ofNullable(this.keyFilePath);
     }
     /**
-     * Parameters for linked service.
+     * @return Parameters for linked service.
      * 
-    */
+     */
     public Map<String,ParameterSpecificationResponse> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * The default BigQuery project to query against.
+     * @return The default BigQuery project to query against.
      * 
-    */
+     */
     public Object project() {
         return this.project;
     }
     /**
-     * The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
+     * @return The refresh token obtained from Google for authorizing access to BigQuery for UserAuthentication.
      * 
-    */
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> refreshToken() {
         return Optional.ofNullable(this.refreshToken);
     }
     /**
-     * Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
+     * @return Whether to request access to Google Drive. Allowing Google Drive access enables support for federated tables that combine BigQuery data with data from Google Drive. The default value is false.
      * 
-    */
+     */
     public Optional<Object> requestGoogleDriveScope() {
         return Optional.ofNullable(this.requestGoogleDriveScope);
     }
     /**
-     * The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
+     * @return The full path of the .pem file containing trusted CA certificates for verifying the server when connecting over SSL. This property can only be set when using SSL on self-hosted IR. The default value is the cacerts.pem file installed with the IR.
      * 
-    */
+     */
     public Optional<Object> trustedCertPath() {
         return Optional.ofNullable(this.trustedCertPath);
     }
     /**
-     * Type of linked service.
+     * @return Type of linked service.
      * Expected value is &#39;GoogleBigQuery&#39;.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
+     * @return Specifies whether to use a CA certificate from the system trust store or from a specified PEM file. The default value is false.
      * 
-    */
+     */
     public Optional<Object> useSystemTrustStore() {
         return Optional.ofNullable(this.useSystemTrustStore);
     }

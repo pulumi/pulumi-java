@@ -26,6 +26,10 @@ public final class ConflictResolutionPolicyResponse extends com.pulumi.resources
     @Import(name="conflictResolutionPath")
     private @Nullable String conflictResolutionPath;
 
+    /**
+     * @return The conflict resolution path in the case of LastWriterWins mode.
+     * 
+     */
     public Optional<String> conflictResolutionPath() {
         return Optional.ofNullable(this.conflictResolutionPath);
     }
@@ -37,6 +41,10 @@ public final class ConflictResolutionPolicyResponse extends com.pulumi.resources
     @Import(name="conflictResolutionProcedure")
     private @Nullable String conflictResolutionProcedure;
 
+    /**
+     * @return The procedure to resolve conflicts in the case of custom mode.
+     * 
+     */
     public Optional<String> conflictResolutionProcedure() {
         return Optional.ofNullable(this.conflictResolutionProcedure);
     }
@@ -48,6 +56,10 @@ public final class ConflictResolutionPolicyResponse extends com.pulumi.resources
     @Import(name="mode")
     private @Nullable String mode;
 
+    /**
+     * @return Indicates the conflict resolution mode.
+     * 
+     */
     public Optional<String> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -78,16 +90,34 @@ public final class ConflictResolutionPolicyResponse extends com.pulumi.resources
             $ = new ConflictResolutionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param conflictResolutionPath The conflict resolution path in the case of LastWriterWins mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conflictResolutionPath(@Nullable String conflictResolutionPath) {
             $.conflictResolutionPath = conflictResolutionPath;
             return this;
         }
 
+        /**
+         * @param conflictResolutionProcedure The procedure to resolve conflicts in the case of custom mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder conflictResolutionProcedure(@Nullable String conflictResolutionProcedure) {
             $.conflictResolutionProcedure = conflictResolutionProcedure;
             return this;
         }
 
+        /**
+         * @param mode Indicates the conflict resolution mode.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable String mode) {
             $.mode = mode;
             return this;

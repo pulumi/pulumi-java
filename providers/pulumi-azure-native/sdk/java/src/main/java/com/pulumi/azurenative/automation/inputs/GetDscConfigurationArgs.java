@@ -19,6 +19,10 @@ public final class GetDscConfigurationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="automationAccountName", required=true)
     private String automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public String automationAccountName() {
         return this.automationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetDscConfigurationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="configurationName", required=true)
     private String configurationName;
 
+    /**
+     * @return The configuration name.
+     * 
+     */
     public String configurationName() {
         return this.configurationName;
     }
@@ -41,6 +49,10 @@ public final class GetDscConfigurationArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -71,16 +83,34 @@ public final class GetDscConfigurationArgs extends com.pulumi.resources.InvokeAr
             $ = new GetDscConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param configurationName The configuration name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationName(String configurationName) {
             $.configurationName = configurationName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

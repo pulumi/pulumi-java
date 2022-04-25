@@ -28,6 +28,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
     @Import(name="allowCredentials")
     private @Nullable Boolean allowCredentials;
 
+    /**
+     * @return If credentials are allowed via CORS.
+     * 
+     */
     public Optional<Boolean> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
@@ -39,6 +43,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
     @Import(name="headers")
     private @Nullable List<String> headers;
 
+    /**
+     * @return The headers to be allowed via CORS.
+     * 
+     */
     public Optional<List<String>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -50,6 +58,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
     @Import(name="maxAge")
     private @Nullable Integer maxAge;
 
+    /**
+     * @return The max age to be allowed via CORS.
+     * 
+     */
     public Optional<Integer> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
@@ -61,6 +73,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
     @Import(name="methods")
     private @Nullable List<String> methods;
 
+    /**
+     * @return The methods to be allowed via CORS.
+     * 
+     */
     public Optional<List<String>> methods() {
         return Optional.ofNullable(this.methods);
     }
@@ -72,6 +88,10 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
     @Import(name="origins")
     private @Nullable List<String> origins;
 
+    /**
+     * @return The origins to be allowed via CORS.
+     * 
+     */
     public Optional<List<String>> origins() {
         return Optional.ofNullable(this.origins);
     }
@@ -104,39 +124,87 @@ public final class FhirServiceCorsConfigurationResponse extends com.pulumi.resou
             $ = new FhirServiceCorsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCredentials If credentials are allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(@Nullable Boolean allowCredentials) {
             $.allowCredentials = allowCredentials;
             return this;
         }
 
+        /**
+         * @param headers The headers to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable List<String> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers The headers to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(String... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param maxAge The max age to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(@Nullable Integer maxAge) {
             $.maxAge = maxAge;
             return this;
         }
 
+        /**
+         * @param methods The methods to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(@Nullable List<String> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods The methods to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param origins The origins to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(@Nullable List<String> origins) {
             $.origins = origins;
             return this;
         }
 
+        /**
+         * @param origins The origins to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(String... origins) {
             return origins(List.of(origins));
         }

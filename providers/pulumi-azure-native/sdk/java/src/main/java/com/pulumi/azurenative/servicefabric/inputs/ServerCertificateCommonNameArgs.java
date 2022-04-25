@@ -24,6 +24,10 @@ public final class ServerCertificateCommonNameArgs extends com.pulumi.resources.
     @Import(name="certificateCommonName", required=true)
     private Output<String> certificateCommonName;
 
+    /**
+     * @return The common name of the server certificate.
+     * 
+     */
     public Output<String> certificateCommonName() {
         return this.certificateCommonName;
     }
@@ -35,6 +39,10 @@ public final class ServerCertificateCommonNameArgs extends com.pulumi.resources.
     @Import(name="certificateIssuerThumbprint", required=true)
     private Output<String> certificateIssuerThumbprint;
 
+    /**
+     * @return The issuer thumbprint of the server certificate.
+     * 
+     */
     public Output<String> certificateIssuerThumbprint() {
         return this.certificateIssuerThumbprint;
     }
@@ -64,20 +72,44 @@ public final class ServerCertificateCommonNameArgs extends com.pulumi.resources.
             $ = new ServerCertificateCommonNameArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param certificateCommonName The common name of the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateCommonName(Output<String> certificateCommonName) {
             $.certificateCommonName = certificateCommonName;
             return this;
         }
 
+        /**
+         * @param certificateCommonName The common name of the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateCommonName(String certificateCommonName) {
             return certificateCommonName(Output.of(certificateCommonName));
         }
 
+        /**
+         * @param certificateIssuerThumbprint The issuer thumbprint of the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIssuerThumbprint(Output<String> certificateIssuerThumbprint) {
             $.certificateIssuerThumbprint = certificateIssuerThumbprint;
             return this;
         }
 
+        /**
+         * @param certificateIssuerThumbprint The issuer thumbprint of the server certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder certificateIssuerThumbprint(String certificateIssuerThumbprint) {
             return certificateIssuerThumbprint(Output.of(certificateIssuerThumbprint));
         }

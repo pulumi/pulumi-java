@@ -25,6 +25,10 @@ public final class MigrateSyncCompleteCommandInputResponse extends com.pulumi.re
     @Import(name="commitTimeStamp")
     private @Nullable String commitTimeStamp;
 
+    /**
+     * @return Time stamp to complete
+     * 
+     */
     public Optional<String> commitTimeStamp() {
         return Optional.ofNullable(this.commitTimeStamp);
     }
@@ -36,6 +40,10 @@ public final class MigrateSyncCompleteCommandInputResponse extends com.pulumi.re
     @Import(name="databaseName", required=true)
     private String databaseName;
 
+    /**
+     * @return Name of database
+     * 
+     */
     public String databaseName() {
         return this.databaseName;
     }
@@ -65,11 +73,23 @@ public final class MigrateSyncCompleteCommandInputResponse extends com.pulumi.re
             $ = new MigrateSyncCompleteCommandInputResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param commitTimeStamp Time stamp to complete
+         * 
+         * @return builder
+         * 
+         */
         public Builder commitTimeStamp(@Nullable String commitTimeStamp) {
             $.commitTimeStamp = commitTimeStamp;
             return this;
         }
 
+        /**
+         * @param databaseName Name of database
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             $.databaseName = databaseName;
             return this;

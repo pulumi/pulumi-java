@@ -26,6 +26,10 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
     @Import(name="encryptionUserAssignedIdentity")
     private @Nullable Output<String> encryptionUserAssignedIdentity;
 
+    /**
+     * @return Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
+     * 
+     */
     public Optional<Output<String>> encryptionUserAssignedIdentity() {
         return Optional.ofNullable(this.encryptionUserAssignedIdentity);
     }
@@ -54,11 +58,23 @@ public final class EncryptionIdentityArgs extends com.pulumi.resources.ResourceA
             $ = new EncryptionIdentityArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param encryptionUserAssignedIdentity Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionUserAssignedIdentity(@Nullable Output<String> encryptionUserAssignedIdentity) {
             $.encryptionUserAssignedIdentity = encryptionUserAssignedIdentity;
             return this;
         }
 
+        /**
+         * @param encryptionUserAssignedIdentity Resource identifier of the UserAssigned identity to be associated with server-side encryption on the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptionUserAssignedIdentity(String encryptionUserAssignedIdentity) {
             return encryptionUserAssignedIdentity(Output.of(encryptionUserAssignedIdentity));
         }

@@ -27,6 +27,10 @@ public final class AzureQueryPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="locations")
     private @Nullable List<String> locations;
 
+    /**
+     * @return List of locations to scope the query to.
+     * 
+     */
     public Optional<List<String>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -38,6 +42,10 @@ public final class AzureQueryPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="scope")
     private @Nullable List<String> scope;
 
+    /**
+     * @return List of Subscription or Resource Group ARM Ids.
+     * 
+     */
     public Optional<List<String>> scope() {
         return Optional.ofNullable(this.scope);
     }
@@ -49,6 +57,10 @@ public final class AzureQueryPropertiesResponse extends com.pulumi.resources.Inv
     @Import(name="tagSettings")
     private @Nullable TagSettingsPropertiesResponse tagSettings;
 
+    /**
+     * @return Tag settings for the VM.
+     * 
+     */
     public Optional<TagSettingsPropertiesResponse> tagSettings() {
         return Optional.ofNullable(this.tagSettings);
     }
@@ -79,24 +91,54 @@ public final class AzureQueryPropertiesResponse extends com.pulumi.resources.Inv
             $ = new AzureQueryPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param locations List of locations to scope the query to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable List<String> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations List of locations to scope the query to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param scope List of Subscription or Resource Group ARM Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(@Nullable List<String> scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param scope List of Subscription or Resource Group ARM Ids.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String... scope) {
             return scope(List.of(scope));
         }
 
+        /**
+         * @param tagSettings Tag settings for the VM.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tagSettings(@Nullable TagSettingsPropertiesResponse tagSettings) {
             $.tagSettings = tagSettings;
             return this;

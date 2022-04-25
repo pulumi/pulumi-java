@@ -29,6 +29,10 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="connectivityType")
     private @Nullable Output<Either<String,ConnectivityType>> connectivityType;
 
+    /**
+     * @return SQL Server connectivity option.
+     * 
+     */
     public Optional<Output<Either<String,ConnectivityType>>> connectivityType() {
         return Optional.ofNullable(this.connectivityType);
     }
@@ -40,6 +44,10 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return SQL Server port.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -51,6 +59,10 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="sqlAuthUpdatePassword")
     private @Nullable Output<String> sqlAuthUpdatePassword;
 
+    /**
+     * @return SQL Server sysadmin login password.
+     * 
+     */
     public Optional<Output<String>> sqlAuthUpdatePassword() {
         return Optional.ofNullable(this.sqlAuthUpdatePassword);
     }
@@ -62,6 +74,10 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
     @Import(name="sqlAuthUpdateUserName")
     private @Nullable Output<String> sqlAuthUpdateUserName;
 
+    /**
+     * @return SQL Server sysadmin login to create.
+     * 
+     */
     public Optional<Output<String>> sqlAuthUpdateUserName() {
         return Optional.ofNullable(this.sqlAuthUpdateUserName);
     }
@@ -93,46 +109,106 @@ public final class SqlConnectivityUpdateSettingsArgs extends com.pulumi.resource
             $ = new SqlConnectivityUpdateSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param connectivityType SQL Server connectivity option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityType(@Nullable Output<Either<String,ConnectivityType>> connectivityType) {
             $.connectivityType = connectivityType;
             return this;
         }
 
+        /**
+         * @param connectivityType SQL Server connectivity option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityType(Either<String,ConnectivityType> connectivityType) {
             return connectivityType(Output.of(connectivityType));
         }
 
+        /**
+         * @param connectivityType SQL Server connectivity option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityType(String connectivityType) {
             return connectivityType(Either.ofLeft(connectivityType));
         }
 
+        /**
+         * @param connectivityType SQL Server connectivity option.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectivityType(ConnectivityType connectivityType) {
             return connectivityType(Either.ofRight(connectivityType));
         }
 
+        /**
+         * @param port SQL Server port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port SQL Server port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param sqlAuthUpdatePassword SQL Server sysadmin login password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlAuthUpdatePassword(@Nullable Output<String> sqlAuthUpdatePassword) {
             $.sqlAuthUpdatePassword = sqlAuthUpdatePassword;
             return this;
         }
 
+        /**
+         * @param sqlAuthUpdatePassword SQL Server sysadmin login password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlAuthUpdatePassword(String sqlAuthUpdatePassword) {
             return sqlAuthUpdatePassword(Output.of(sqlAuthUpdatePassword));
         }
 
+        /**
+         * @param sqlAuthUpdateUserName SQL Server sysadmin login to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlAuthUpdateUserName(@Nullable Output<String> sqlAuthUpdateUserName) {
             $.sqlAuthUpdateUserName = sqlAuthUpdateUserName;
             return this;
         }
 
+        /**
+         * @param sqlAuthUpdateUserName SQL Server sysadmin login to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlAuthUpdateUserName(String sqlAuthUpdateUserName) {
             return sqlAuthUpdateUserName(Output.of(sqlAuthUpdateUserName));
         }

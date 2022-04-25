@@ -19,6 +19,10 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name of the VirtualWan.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
     @Import(name="virtualWANName", required=true)
     private String virtualWANName;
 
+    /**
+     * @return The name of the VirtualWAN being retrieved.
+     * 
+     */
     public String virtualWANName() {
         return this.virtualWANName;
     }
@@ -59,11 +67,23 @@ public final class GetVirtualWanArgs extends com.pulumi.resources.InvokeArgs {
             $ = new GetVirtualWanArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceGroupName The resource group name of the VirtualWan.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param virtualWANName The name of the VirtualWAN being retrieved.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualWANName(String virtualWANName) {
             $.virtualWANName = virtualWANName;
             return this;

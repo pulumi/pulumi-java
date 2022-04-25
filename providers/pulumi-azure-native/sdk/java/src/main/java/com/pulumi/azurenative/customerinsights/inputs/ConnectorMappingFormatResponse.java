@@ -25,6 +25,10 @@ public final class ConnectorMappingFormatResponse extends com.pulumi.resources.I
     @Import(name="acceptLanguage")
     private @Nullable String acceptLanguage;
 
+    /**
+     * @return The oData language.
+     * 
+     */
     public Optional<String> acceptLanguage() {
         return Optional.ofNullable(this.acceptLanguage);
     }
@@ -36,6 +40,10 @@ public final class ConnectorMappingFormatResponse extends com.pulumi.resources.I
     @Import(name="arraySeparator")
     private @Nullable String arraySeparator;
 
+    /**
+     * @return Character separating array elements.
+     * 
+     */
     public Optional<String> arraySeparator() {
         return Optional.ofNullable(this.arraySeparator);
     }
@@ -47,6 +55,10 @@ public final class ConnectorMappingFormatResponse extends com.pulumi.resources.I
     @Import(name="columnDelimiter")
     private @Nullable String columnDelimiter;
 
+    /**
+     * @return The character that signifies a break between columns.
+     * 
+     */
     public Optional<String> columnDelimiter() {
         return Optional.ofNullable(this.columnDelimiter);
     }
@@ -58,6 +70,10 @@ public final class ConnectorMappingFormatResponse extends com.pulumi.resources.I
     @Import(name="formatType", required=true)
     private String formatType;
 
+    /**
+     * @return The type mapping format.
+     * 
+     */
     public String formatType() {
         return this.formatType;
     }
@@ -69,6 +85,10 @@ public final class ConnectorMappingFormatResponse extends com.pulumi.resources.I
     @Import(name="quoteCharacter")
     private @Nullable String quoteCharacter;
 
+    /**
+     * @return Quote character, used to indicate enquoted fields.
+     * 
+     */
     public Optional<String> quoteCharacter() {
         return Optional.ofNullable(this.quoteCharacter);
     }
@@ -80,6 +100,10 @@ public final class ConnectorMappingFormatResponse extends com.pulumi.resources.I
     @Import(name="quoteEscapeCharacter")
     private @Nullable String quoteEscapeCharacter;
 
+    /**
+     * @return Escape character for quotes, can be the same as the quoteCharacter.
+     * 
+     */
     public Optional<String> quoteEscapeCharacter() {
         return Optional.ofNullable(this.quoteEscapeCharacter);
     }
@@ -113,31 +137,67 @@ public final class ConnectorMappingFormatResponse extends com.pulumi.resources.I
             $ = new ConnectorMappingFormatResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptLanguage The oData language.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptLanguage(@Nullable String acceptLanguage) {
             $.acceptLanguage = acceptLanguage;
             return this;
         }
 
+        /**
+         * @param arraySeparator Character separating array elements.
+         * 
+         * @return builder
+         * 
+         */
         public Builder arraySeparator(@Nullable String arraySeparator) {
             $.arraySeparator = arraySeparator;
             return this;
         }
 
+        /**
+         * @param columnDelimiter The character that signifies a break between columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columnDelimiter(@Nullable String columnDelimiter) {
             $.columnDelimiter = columnDelimiter;
             return this;
         }
 
+        /**
+         * @param formatType The type mapping format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder formatType(String formatType) {
             $.formatType = formatType;
             return this;
         }
 
+        /**
+         * @param quoteCharacter Quote character, used to indicate enquoted fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteCharacter(@Nullable String quoteCharacter) {
             $.quoteCharacter = quoteCharacter;
             return this;
         }
 
+        /**
+         * @param quoteEscapeCharacter Escape character for quotes, can be the same as the quoteCharacter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quoteEscapeCharacter(@Nullable String quoteEscapeCharacter) {
             $.quoteEscapeCharacter = quoteEscapeCharacter;
             return this;

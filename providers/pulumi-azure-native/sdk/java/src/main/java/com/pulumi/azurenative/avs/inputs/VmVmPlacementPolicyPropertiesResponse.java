@@ -27,6 +27,10 @@ public final class VmVmPlacementPolicyPropertiesResponse extends com.pulumi.reso
     @Import(name="affinityType", required=true)
     private String affinityType;
 
+    /**
+     * @return placement policy affinity type
+     * 
+     */
     public String affinityType() {
         return this.affinityType;
     }
@@ -38,6 +42,10 @@ public final class VmVmPlacementPolicyPropertiesResponse extends com.pulumi.reso
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Display name of the placement policy
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -49,6 +57,10 @@ public final class VmVmPlacementPolicyPropertiesResponse extends com.pulumi.reso
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -60,6 +72,10 @@ public final class VmVmPlacementPolicyPropertiesResponse extends com.pulumi.reso
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return Whether the placement policy is enabled or disabled
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -72,6 +88,11 @@ public final class VmVmPlacementPolicyPropertiesResponse extends com.pulumi.reso
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return placement policy type
+     * Expected value is &#39;VmVm&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -83,6 +104,10 @@ public final class VmVmPlacementPolicyPropertiesResponse extends com.pulumi.reso
     @Import(name="vmMembers", required=true)
     private List<String> vmMembers;
 
+    /**
+     * @return Virtual machine members list
+     * 
+     */
     public List<String> vmMembers() {
         return this.vmMembers;
     }
@@ -116,36 +141,79 @@ public final class VmVmPlacementPolicyPropertiesResponse extends com.pulumi.reso
             $ = new VmVmPlacementPolicyPropertiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param affinityType placement policy affinity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder affinityType(String affinityType) {
             $.affinityType = affinityType;
             return this;
         }
 
+        /**
+         * @param displayName Display name of the placement policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param state Whether the placement policy is enabled or disabled
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param type placement policy type
+         * Expected value is &#39;VmVm&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param vmMembers Virtual machine members list
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmMembers(List<String> vmMembers) {
             $.vmMembers = vmMembers;
             return this;
         }
 
+        /**
+         * @param vmMembers Virtual machine members list
+         * 
+         * @return builder
+         * 
+         */
         public Builder vmMembers(String... vmMembers) {
             return vmMembers(List.of(vmMembers));
         }

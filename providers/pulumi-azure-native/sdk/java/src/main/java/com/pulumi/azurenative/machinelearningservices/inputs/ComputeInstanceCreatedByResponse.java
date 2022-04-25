@@ -23,6 +23,10 @@ public final class ComputeInstanceCreatedByResponse extends com.pulumi.resources
     @Import(name="userId", required=true)
     private String userId;
 
+    /**
+     * @return Uniquely identifies the user within his/her organization.
+     * 
+     */
     public String userId() {
         return this.userId;
     }
@@ -34,6 +38,10 @@ public final class ComputeInstanceCreatedByResponse extends com.pulumi.resources
     @Import(name="userName", required=true)
     private String userName;
 
+    /**
+     * @return Name of the user.
+     * 
+     */
     public String userName() {
         return this.userName;
     }
@@ -45,6 +53,10 @@ public final class ComputeInstanceCreatedByResponse extends com.pulumi.resources
     @Import(name="userOrgId", required=true)
     private String userOrgId;
 
+    /**
+     * @return Uniquely identifies user&#39; Azure Active Directory organization.
+     * 
+     */
     public String userOrgId() {
         return this.userOrgId;
     }
@@ -75,16 +87,34 @@ public final class ComputeInstanceCreatedByResponse extends com.pulumi.resources
             $ = new ComputeInstanceCreatedByResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param userId Uniquely identifies the user within his/her organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userId(String userId) {
             $.userId = userId;
             return this;
         }
 
+        /**
+         * @param userName Name of the user.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(String userName) {
             $.userName = userName;
             return this;
         }
 
+        /**
+         * @param userOrgId Uniquely identifies user&#39; Azure Active Directory organization.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userOrgId(String userOrgId) {
             $.userOrgId = userOrgId;
             return this;

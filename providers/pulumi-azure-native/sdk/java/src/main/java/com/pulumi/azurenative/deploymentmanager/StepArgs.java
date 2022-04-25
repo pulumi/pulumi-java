@@ -26,6 +26,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -37,6 +41,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties", required=true)
     private Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties;
 
+    /**
+     * @return The properties that define the step.
+     * 
+     */
     public Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties() {
         return this.properties;
     }
@@ -48,6 +56,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,6 +71,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="stepName")
     private @Nullable Output<String> stepName;
 
+    /**
+     * @return The name of the deployment step.
+     * 
+     */
     public Optional<Output<String>> stepName() {
         return Optional.ofNullable(this.stepName);
     }
@@ -70,6 +86,10 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -102,55 +122,127 @@ public final class StepArgs extends com.pulumi.resources.ResourceArgs {
             $ = new StepArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The properties that define the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs>> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The properties that define the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Either<HealthCheckStepPropertiesArgs,WaitStepPropertiesArgs> properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param properties The properties that define the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(HealthCheckStepPropertiesArgs properties) {
             return properties(Either.ofLeft(properties));
         }
 
+        /**
+         * @param properties The properties that define the step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(WaitStepPropertiesArgs properties) {
             return properties(Either.ofRight(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param stepName The name of the deployment step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepName(@Nullable Output<String> stepName) {
             $.stepName = stepName;
             return this;
         }
 
+        /**
+         * @param stepName The name of the deployment step.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stepName(String stepName) {
             return stepName(Output.of(stepName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

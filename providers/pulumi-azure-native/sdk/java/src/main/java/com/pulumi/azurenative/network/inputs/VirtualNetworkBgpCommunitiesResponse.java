@@ -23,6 +23,10 @@ public final class VirtualNetworkBgpCommunitiesResponse extends com.pulumi.resou
     @Import(name="regionalCommunity", required=true)
     private String regionalCommunity;
 
+    /**
+     * @return The BGP community associated with the region of the virtual network.
+     * 
+     */
     public String regionalCommunity() {
         return this.regionalCommunity;
     }
@@ -34,6 +38,10 @@ public final class VirtualNetworkBgpCommunitiesResponse extends com.pulumi.resou
     @Import(name="virtualNetworkCommunity", required=true)
     private String virtualNetworkCommunity;
 
+    /**
+     * @return The BGP community associated with the virtual network.
+     * 
+     */
     public String virtualNetworkCommunity() {
         return this.virtualNetworkCommunity;
     }
@@ -63,11 +71,23 @@ public final class VirtualNetworkBgpCommunitiesResponse extends com.pulumi.resou
             $ = new VirtualNetworkBgpCommunitiesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param regionalCommunity The BGP community associated with the region of the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder regionalCommunity(String regionalCommunity) {
             $.regionalCommunity = regionalCommunity;
             return this;
         }
 
+        /**
+         * @param virtualNetworkCommunity The BGP community associated with the virtual network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder virtualNetworkCommunity(String virtualNetworkCommunity) {
             $.virtualNetworkCommunity = virtualNetworkCommunity;
             return this;

@@ -30,6 +30,10 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
     @Import(name="analyticalStorageTtl")
     private @Nullable Output<Integer> analyticalStorageTtl;
 
+    /**
+     * @return Analytical TTL.
+     * 
+     */
     public Optional<Output<Integer>> analyticalStorageTtl() {
         return Optional.ofNullable(this.analyticalStorageTtl);
     }
@@ -41,6 +45,10 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
     @Import(name="id", required=true)
     private Output<String> id;
 
+    /**
+     * @return Name of the Cosmos DB MongoDB collection
+     * 
+     */
     public Output<String> id() {
         return this.id;
     }
@@ -52,6 +60,10 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
     @Import(name="indexes")
     private @Nullable Output<List<MongoIndexArgs>> indexes;
 
+    /**
+     * @return List of index keys
+     * 
+     */
     public Optional<Output<List<MongoIndexArgs>>> indexes() {
         return Optional.ofNullable(this.indexes);
     }
@@ -63,6 +75,10 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
     @Import(name="shardKey")
     private @Nullable Output<Map<String,String>> shardKey;
 
+    /**
+     * @return A key-value pair of shard keys to be applied for the request.
+     * 
+     */
     public Optional<Output<Map<String,String>>> shardKey() {
         return Optional.ofNullable(this.shardKey);
     }
@@ -94,42 +110,96 @@ public final class MongoDBCollectionResourceArgs extends com.pulumi.resources.Re
             $ = new MongoDBCollectionResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param analyticalStorageTtl Analytical TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyticalStorageTtl(@Nullable Output<Integer> analyticalStorageTtl) {
             $.analyticalStorageTtl = analyticalStorageTtl;
             return this;
         }
 
+        /**
+         * @param analyticalStorageTtl Analytical TTL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder analyticalStorageTtl(Integer analyticalStorageTtl) {
             return analyticalStorageTtl(Output.of(analyticalStorageTtl));
         }
 
+        /**
+         * @param id Name of the Cosmos DB MongoDB collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Name of the Cosmos DB MongoDB collection
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param indexes List of index keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(@Nullable Output<List<MongoIndexArgs>> indexes) {
             $.indexes = indexes;
             return this;
         }
 
+        /**
+         * @param indexes List of index keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(List<MongoIndexArgs> indexes) {
             return indexes(Output.of(indexes));
         }
 
+        /**
+         * @param indexes List of index keys
+         * 
+         * @return builder
+         * 
+         */
         public Builder indexes(MongoIndexArgs... indexes) {
             return indexes(List.of(indexes));
         }
 
+        /**
+         * @param shardKey A key-value pair of shard keys to be applied for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardKey(@Nullable Output<Map<String,String>> shardKey) {
             $.shardKey = shardKey;
             return this;
         }
 
+        /**
+         * @param shardKey A key-value pair of shard keys to be applied for the request.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shardKey(Map<String,String> shardKey) {
             return shardKey(Output.of(shardKey));
         }

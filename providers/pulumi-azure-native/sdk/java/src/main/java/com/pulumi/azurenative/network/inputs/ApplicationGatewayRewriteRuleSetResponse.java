@@ -27,6 +27,10 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -38,6 +42,10 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -49,6 +57,10 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the rewrite rule set that is unique within an Application Gateway.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -60,6 +72,10 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the rewrite rule set resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -71,6 +87,10 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
     @Import(name="rewriteRules")
     private @Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules;
 
+    /**
+     * @return Rewrite rules in the rewrite rule set.
+     * 
+     */
     public Optional<List<ApplicationGatewayRewriteRuleResponse>> rewriteRules() {
         return Optional.ofNullable(this.rewriteRules);
     }
@@ -103,31 +123,67 @@ public final class ApplicationGatewayRewriteRuleSetResponse extends com.pulumi.r
             $ = new ApplicationGatewayRewriteRuleSetResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name Name of the rewrite rule set that is unique within an Application Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the rewrite rule set resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param rewriteRules Rewrite rules in the rewrite rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRules(@Nullable List<ApplicationGatewayRewriteRuleResponse> rewriteRules) {
             $.rewriteRules = rewriteRules;
             return this;
         }
 
+        /**
+         * @param rewriteRules Rewrite rules in the rewrite rule set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rewriteRules(ApplicationGatewayRewriteRuleResponse... rewriteRules) {
             return rewriteRules(List.of(rewriteRules));
         }

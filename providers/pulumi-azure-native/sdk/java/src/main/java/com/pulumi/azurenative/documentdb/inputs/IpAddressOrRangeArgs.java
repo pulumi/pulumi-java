@@ -26,6 +26,10 @@ public final class IpAddressOrRangeArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipAddressOrRange")
     private @Nullable Output<String> ipAddressOrRange;
 
+    /**
+     * @return A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.
+     * 
+     */
     public Optional<Output<String>> ipAddressOrRange() {
         return Optional.ofNullable(this.ipAddressOrRange);
     }
@@ -54,11 +58,23 @@ public final class IpAddressOrRangeArgs extends com.pulumi.resources.ResourceArg
             $ = new IpAddressOrRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ipAddressOrRange A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressOrRange(@Nullable Output<String> ipAddressOrRange) {
             $.ipAddressOrRange = ipAddressOrRange;
             return this;
         }
 
+        /**
+         * @param ipAddressOrRange A single IPv4 address or a single IPv4 address range in CIDR format. Provided IPs must be well-formatted and cannot be contained in one of the following ranges: 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, since these are not enforceable by the IP address filter. Example of valid inputs: “23.40.210.245” or “23.40.210.0/8”.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressOrRange(String ipAddressOrRange) {
             return ipAddressOrRange(Output.of(ipAddressOrRange));
         }

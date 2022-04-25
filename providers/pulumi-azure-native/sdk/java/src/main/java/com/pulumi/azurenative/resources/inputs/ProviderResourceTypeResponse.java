@@ -31,6 +31,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="aliases")
     private @Nullable List<AliasResponse> aliases;
 
+    /**
+     * @return The aliases that are supported by this resource type.
+     * 
+     */
     public Optional<List<AliasResponse>> aliases() {
         return Optional.ofNullable(this.aliases);
     }
@@ -42,6 +46,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="apiProfiles", required=true)
     private List<ApiProfileResponse> apiProfiles;
 
+    /**
+     * @return The API profiles for the resource provider.
+     * 
+     */
     public List<ApiProfileResponse> apiProfiles() {
         return this.apiProfiles;
     }
@@ -53,6 +61,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="apiVersions")
     private @Nullable List<String> apiVersions;
 
+    /**
+     * @return The API version.
+     * 
+     */
     public Optional<List<String>> apiVersions() {
         return Optional.ofNullable(this.apiVersions);
     }
@@ -64,6 +76,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="capabilities")
     private @Nullable String capabilities;
 
+    /**
+     * @return The additional capabilities offered by this resource type.
+     * 
+     */
     public Optional<String> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -75,6 +91,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="defaultApiVersion", required=true)
     private String defaultApiVersion;
 
+    /**
+     * @return The default API version.
+     * 
+     */
     public String defaultApiVersion() {
         return this.defaultApiVersion;
     }
@@ -86,6 +106,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="locationMappings")
     private @Nullable List<ProviderExtendedLocationResponse> locationMappings;
 
+    /**
+     * @return The location mappings that are supported by this resource type.
+     * 
+     */
     public Optional<List<ProviderExtendedLocationResponse>> locationMappings() {
         return Optional.ofNullable(this.locationMappings);
     }
@@ -97,6 +121,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="locations")
     private @Nullable List<String> locations;
 
+    /**
+     * @return The collection of locations where this resource type can be created.
+     * 
+     */
     public Optional<List<String>> locations() {
         return Optional.ofNullable(this.locations);
     }
@@ -108,6 +136,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return The properties.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -119,6 +151,10 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
     @Import(name="resourceType")
     private @Nullable String resourceType;
 
+    /**
+     * @return The resource type.
+     * 
+     */
     public Optional<String> resourceType() {
         return Optional.ofNullable(this.resourceType);
     }
@@ -163,66 +199,150 @@ public final class ProviderResourceTypeResponse extends com.pulumi.resources.Inv
             $ = new ProviderResourceTypeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aliases The aliases that are supported by this resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(@Nullable List<AliasResponse> aliases) {
             $.aliases = aliases;
             return this;
         }
 
+        /**
+         * @param aliases The aliases that are supported by this resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aliases(AliasResponse... aliases) {
             return aliases(List.of(aliases));
         }
 
+        /**
+         * @param apiProfiles The API profiles for the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProfiles(List<ApiProfileResponse> apiProfiles) {
             $.apiProfiles = apiProfiles;
             return this;
         }
 
+        /**
+         * @param apiProfiles The API profiles for the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiProfiles(ApiProfileResponse... apiProfiles) {
             return apiProfiles(List.of(apiProfiles));
         }
 
+        /**
+         * @param apiVersions The API version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersions(@Nullable List<String> apiVersions) {
             $.apiVersions = apiVersions;
             return this;
         }
 
+        /**
+         * @param apiVersions The API version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersions(String... apiVersions) {
             return apiVersions(List.of(apiVersions));
         }
 
+        /**
+         * @param capabilities The additional capabilities offered by this resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable String capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param defaultApiVersion The default API version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultApiVersion(String defaultApiVersion) {
             $.defaultApiVersion = defaultApiVersion;
             return this;
         }
 
+        /**
+         * @param locationMappings The location mappings that are supported by this resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationMappings(@Nullable List<ProviderExtendedLocationResponse> locationMappings) {
             $.locationMappings = locationMappings;
             return this;
         }
 
+        /**
+         * @param locationMappings The location mappings that are supported by this resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locationMappings(ProviderExtendedLocationResponse... locationMappings) {
             return locationMappings(List.of(locationMappings));
         }
 
+        /**
+         * @param locations The collection of locations where this resource type can be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(@Nullable List<String> locations) {
             $.locations = locations;
             return this;
         }
 
+        /**
+         * @param locations The collection of locations where this resource type can be created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder locations(String... locations) {
             return locations(List.of(locations));
         }
 
+        /**
+         * @param properties The properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(@Nullable String resourceType) {
             $.resourceType = resourceType;
             return this;

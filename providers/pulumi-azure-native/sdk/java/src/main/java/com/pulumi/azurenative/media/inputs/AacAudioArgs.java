@@ -30,6 +30,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="bitrate")
     private @Nullable Output<Integer> bitrate;
 
+    /**
+     * @return The bitrate, in bits per second, of the output encoded audio.
+     * 
+     */
     public Optional<Output<Integer>> bitrate() {
         return Optional.ofNullable(this.bitrate);
     }
@@ -41,6 +45,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="channels")
     private @Nullable Output<Integer> channels;
 
+    /**
+     * @return The number of channels in the audio.
+     * 
+     */
     public Optional<Output<Integer>> channels() {
         return Optional.ofNullable(this.channels);
     }
@@ -52,6 +60,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="label")
     private @Nullable Output<String> label;
 
+    /**
+     * @return An optional label for the codec. The label can be used to control muxing behavior.
+     * 
+     */
     public Optional<Output<String>> label() {
         return Optional.ofNullable(this.label);
     }
@@ -64,6 +76,11 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.AacAudio&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -75,6 +92,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="profile")
     private @Nullable Output<Either<String,AacAudioProfile>> profile;
 
+    /**
+     * @return The encoding profile to be used when encoding audio with AAC.
+     * 
+     */
     public Optional<Output<Either<String,AacAudioProfile>>> profile() {
         return Optional.ofNullable(this.profile);
     }
@@ -86,6 +107,10 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="samplingRate")
     private @Nullable Output<Integer> samplingRate;
 
+    /**
+     * @return The sampling rate to use for encoding in hertz.
+     * 
+     */
     public Optional<Output<Integer>> samplingRate() {
         return Optional.ofNullable(this.samplingRate);
     }
@@ -119,64 +144,150 @@ public final class AacAudioArgs extends com.pulumi.resources.ResourceArgs {
             $ = new AacAudioArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bitrate The bitrate, in bits per second, of the output encoded audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrate(@Nullable Output<Integer> bitrate) {
             $.bitrate = bitrate;
             return this;
         }
 
+        /**
+         * @param bitrate The bitrate, in bits per second, of the output encoded audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bitrate(Integer bitrate) {
             return bitrate(Output.of(bitrate));
         }
 
+        /**
+         * @param channels The number of channels in the audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channels(@Nullable Output<Integer> channels) {
             $.channels = channels;
             return this;
         }
 
+        /**
+         * @param channels The number of channels in the audio.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channels(Integer channels) {
             return channels(Output.of(channels));
         }
 
+        /**
+         * @param label An optional label for the codec. The label can be used to control muxing behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(@Nullable Output<String> label) {
             $.label = label;
             return this;
         }
 
+        /**
+         * @param label An optional label for the codec. The label can be used to control muxing behavior.
+         * 
+         * @return builder
+         * 
+         */
         public Builder label(String label) {
             return label(Output.of(label));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AacAudio&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AacAudio&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param profile The encoding profile to be used when encoding audio with AAC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(@Nullable Output<Either<String,AacAudioProfile>> profile) {
             $.profile = profile;
             return this;
         }
 
+        /**
+         * @param profile The encoding profile to be used when encoding audio with AAC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(Either<String,AacAudioProfile> profile) {
             return profile(Output.of(profile));
         }
 
+        /**
+         * @param profile The encoding profile to be used when encoding audio with AAC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(String profile) {
             return profile(Either.ofLeft(profile));
         }
 
+        /**
+         * @param profile The encoding profile to be used when encoding audio with AAC.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profile(AacAudioProfile profile) {
             return profile(Either.ofRight(profile));
         }
 
+        /**
+         * @param samplingRate The sampling rate to use for encoding in hertz.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRate(@Nullable Output<Integer> samplingRate) {
             $.samplingRate = samplingRate;
             return this;
         }
 
+        /**
+         * @param samplingRate The sampling rate to use for encoding in hertz.
+         * 
+         * @return builder
+         * 
+         */
         public Builder samplingRate(Integer samplingRate) {
             return samplingRate(Output.of(samplingRate));
         }

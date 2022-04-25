@@ -27,6 +27,10 @@ public final class WorkloadInquiryDetailsResponse extends com.pulumi.resources.I
     @Import(name="inquiryValidation")
     private @Nullable InquiryValidationResponse inquiryValidation;
 
+    /**
+     * @return Inquiry validation such as permissions and other backup validations.
+     * 
+     */
     public Optional<InquiryValidationResponse> inquiryValidation() {
         return Optional.ofNullable(this.inquiryValidation);
     }
@@ -38,6 +42,10 @@ public final class WorkloadInquiryDetailsResponse extends com.pulumi.resources.I
     @Import(name="itemCount")
     private @Nullable Double itemCount;
 
+    /**
+     * @return Contains the protectable item Count inside this Container.
+     * 
+     */
     public Optional<Double> itemCount() {
         return Optional.ofNullable(this.itemCount);
     }
@@ -49,6 +57,10 @@ public final class WorkloadInquiryDetailsResponse extends com.pulumi.resources.I
     @Import(name="type")
     private @Nullable String type;
 
+    /**
+     * @return Type of the Workload such as SQL, Oracle etc.
+     * 
+     */
     public Optional<String> type() {
         return Optional.ofNullable(this.type);
     }
@@ -79,16 +91,34 @@ public final class WorkloadInquiryDetailsResponse extends com.pulumi.resources.I
             $ = new WorkloadInquiryDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param inquiryValidation Inquiry validation such as permissions and other backup validations.
+         * 
+         * @return builder
+         * 
+         */
         public Builder inquiryValidation(@Nullable InquiryValidationResponse inquiryValidation) {
             $.inquiryValidation = inquiryValidation;
             return this;
         }
 
+        /**
+         * @param itemCount Contains the protectable item Count inside this Container.
+         * 
+         * @return builder
+         * 
+         */
         public Builder itemCount(@Nullable Double itemCount) {
             $.itemCount = itemCount;
             return this;
         }
 
+        /**
+         * @param type Type of the Workload such as SQL, Oracle etc.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable String type) {
             $.type = type;
             return this;

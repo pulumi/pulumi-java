@@ -26,6 +26,10 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="familySequenceNumber")
     private @Nullable Integer familySequenceNumber;
 
+    /**
+     * @return Sequence number of the backup file in the backup set
+     * 
+     */
     public Optional<Integer> familySequenceNumber() {
         return Optional.ofNullable(this.familySequenceNumber);
     }
@@ -37,6 +41,10 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="fileLocation")
     private @Nullable String fileLocation;
 
+    /**
+     * @return Location of the backup file in shared folder
+     * 
+     */
     public Optional<String> fileLocation() {
         return Optional.ofNullable(this.fileLocation);
     }
@@ -48,6 +56,10 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status")
     private @Nullable String status;
 
+    /**
+     * @return Status of the backup file during migration
+     * 
+     */
     public Optional<String> status() {
         return Optional.ofNullable(this.status);
     }
@@ -78,16 +90,34 @@ public final class BackupFileInfoResponse extends com.pulumi.resources.InvokeArg
             $ = new BackupFileInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param familySequenceNumber Sequence number of the backup file in the backup set
+         * 
+         * @return builder
+         * 
+         */
         public Builder familySequenceNumber(@Nullable Integer familySequenceNumber) {
             $.familySequenceNumber = familySequenceNumber;
             return this;
         }
 
+        /**
+         * @param fileLocation Location of the backup file in shared folder
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileLocation(@Nullable String fileLocation) {
             $.fileLocation = fileLocation;
             return this;
         }
 
+        /**
+         * @param status Status of the backup file during migration
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable String status) {
             $.status = status;
             return this;

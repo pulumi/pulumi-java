@@ -25,6 +25,10 @@ public final class AadAuthenticationParametersResponse extends com.pulumi.resour
     @Import(name="aadAudience")
     private @Nullable String aadAudience;
 
+    /**
+     * @return AAD Vpn authentication parameter AAD audience.
+     * 
+     */
     public Optional<String> aadAudience() {
         return Optional.ofNullable(this.aadAudience);
     }
@@ -36,6 +40,10 @@ public final class AadAuthenticationParametersResponse extends com.pulumi.resour
     @Import(name="aadIssuer")
     private @Nullable String aadIssuer;
 
+    /**
+     * @return AAD Vpn authentication parameter AAD issuer.
+     * 
+     */
     public Optional<String> aadIssuer() {
         return Optional.ofNullable(this.aadIssuer);
     }
@@ -47,6 +55,10 @@ public final class AadAuthenticationParametersResponse extends com.pulumi.resour
     @Import(name="aadTenant")
     private @Nullable String aadTenant;
 
+    /**
+     * @return AAD Vpn authentication parameter AAD tenant.
+     * 
+     */
     public Optional<String> aadTenant() {
         return Optional.ofNullable(this.aadTenant);
     }
@@ -77,16 +89,34 @@ public final class AadAuthenticationParametersResponse extends com.pulumi.resour
             $ = new AadAuthenticationParametersResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadAudience AAD Vpn authentication parameter AAD audience.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadAudience(@Nullable String aadAudience) {
             $.aadAudience = aadAudience;
             return this;
         }
 
+        /**
+         * @param aadIssuer AAD Vpn authentication parameter AAD issuer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadIssuer(@Nullable String aadIssuer) {
             $.aadIssuer = aadIssuer;
             return this;
         }
 
+        /**
+         * @param aadTenant AAD Vpn authentication parameter AAD tenant.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadTenant(@Nullable String aadTenant) {
             $.aadTenant = aadTenant;
             return this;

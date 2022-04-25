@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class SshProfileResponse {
     /**
-     * The list of SSH public keys.
+     * @return The list of SSH public keys.
      * 
      */
     private final @Nullable List<SshPublicKeyResponse> publicKeys;
@@ -23,9 +23,9 @@ public final class SshProfileResponse {
     }
 
     /**
-     * The list of SSH public keys.
+     * @return The list of SSH public keys.
      * 
-    */
+     */
     public List<SshPublicKeyResponse> publicKeys() {
         return this.publicKeys == null ? List.of() : this.publicKeys;
     }

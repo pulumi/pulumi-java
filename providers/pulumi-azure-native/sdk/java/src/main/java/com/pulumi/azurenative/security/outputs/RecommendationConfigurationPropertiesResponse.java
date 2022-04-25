@@ -11,12 +11,12 @@ import java.util.Objects;
 public final class RecommendationConfigurationPropertiesResponse {
     private final String name;
     /**
-     * The type of IoT Security recommendation.
+     * @return The type of IoT Security recommendation.
      * 
      */
     private final String recommendationType;
     /**
-     * Recommendation status. When the recommendation status is disabled recommendations are not generated.
+     * @return Recommendation status. When the recommendation status is disabled recommendations are not generated.
      * 
      */
     private final String status;
@@ -35,16 +35,16 @@ public final class RecommendationConfigurationPropertiesResponse {
         return this.name;
     }
     /**
-     * The type of IoT Security recommendation.
+     * @return The type of IoT Security recommendation.
      * 
-    */
+     */
     public String recommendationType() {
         return this.recommendationType;
     }
     /**
-     * Recommendation status. When the recommendation status is disabled recommendations are not generated.
+     * @return Recommendation status. When the recommendation status is disabled recommendations are not generated.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

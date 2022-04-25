@@ -28,6 +28,10 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="and")
     private @Nullable Output<List<BudgetFilterPropertiesArgs>> and;
 
+    /**
+     * @return The logical &#34;AND&#34; expression. Must have at least 2 items.
+     * 
+     */
     public Optional<Output<List<BudgetFilterPropertiesArgs>>> and() {
         return Optional.ofNullable(this.and);
     }
@@ -39,6 +43,10 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dimensions")
     private @Nullable Output<BudgetComparisonExpressionArgs> dimensions;
 
+    /**
+     * @return Has comparison expression for a dimension
+     * 
+     */
     public Optional<Output<BudgetComparisonExpressionArgs>> dimensions() {
         return Optional.ofNullable(this.dimensions);
     }
@@ -50,6 +58,10 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="not")
     private @Nullable Output<BudgetFilterPropertiesArgs> not;
 
+    /**
+     * @return The logical &#34;NOT&#34; expression.
+     * 
+     */
     public Optional<Output<BudgetFilterPropertiesArgs>> not() {
         return Optional.ofNullable(this.not);
     }
@@ -61,6 +73,10 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<BudgetComparisonExpressionArgs> tags;
 
+    /**
+     * @return Has comparison expression for a tag
+     * 
+     */
     public Optional<Output<BudgetComparisonExpressionArgs>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -92,42 +108,96 @@ public final class BudgetFilterArgs extends com.pulumi.resources.ResourceArgs {
             $ = new BudgetFilterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(@Nullable Output<List<BudgetFilterPropertiesArgs>> and) {
             $.and = and;
             return this;
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(List<BudgetFilterPropertiesArgs> and) {
             return and(Output.of(and));
         }
 
+        /**
+         * @param and The logical &#34;AND&#34; expression. Must have at least 2 items.
+         * 
+         * @return builder
+         * 
+         */
         public Builder and(BudgetFilterPropertiesArgs... and) {
             return and(List.of(and));
         }
 
+        /**
+         * @param dimensions Has comparison expression for a dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(@Nullable Output<BudgetComparisonExpressionArgs> dimensions) {
             $.dimensions = dimensions;
             return this;
         }
 
+        /**
+         * @param dimensions Has comparison expression for a dimension
+         * 
+         * @return builder
+         * 
+         */
         public Builder dimensions(BudgetComparisonExpressionArgs dimensions) {
             return dimensions(Output.of(dimensions));
         }
 
+        /**
+         * @param not The logical &#34;NOT&#34; expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder not(@Nullable Output<BudgetFilterPropertiesArgs> not) {
             $.not = not;
             return this;
         }
 
+        /**
+         * @param not The logical &#34;NOT&#34; expression.
+         * 
+         * @return builder
+         * 
+         */
         public Builder not(BudgetFilterPropertiesArgs not) {
             return not(Output.of(not));
         }
 
+        /**
+         * @param tags Has comparison expression for a tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<BudgetComparisonExpressionArgs> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Has comparison expression for a tag
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(BudgetComparisonExpressionArgs tags) {
             return tags(Output.of(tags));
         }

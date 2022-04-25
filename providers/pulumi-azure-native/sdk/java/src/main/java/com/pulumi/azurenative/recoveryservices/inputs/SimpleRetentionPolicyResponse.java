@@ -27,6 +27,10 @@ public final class SimpleRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="retentionDuration")
     private @Nullable RetentionDurationResponse retentionDuration;
 
+    /**
+     * @return Retention duration of the protection policy.
+     * 
+     */
     public Optional<RetentionDurationResponse> retentionDuration() {
         return Optional.ofNullable(this.retentionDuration);
     }
@@ -39,6 +43,11 @@ public final class SimpleRetentionPolicyResponse extends com.pulumi.resources.In
     @Import(name="retentionPolicyType", required=true)
     private String retentionPolicyType;
 
+    /**
+     * @return This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+     * Expected value is &#39;SimpleRetentionPolicy&#39;.
+     * 
+     */
     public String retentionPolicyType() {
         return this.retentionPolicyType;
     }
@@ -68,11 +77,24 @@ public final class SimpleRetentionPolicyResponse extends com.pulumi.resources.In
             $ = new SimpleRetentionPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param retentionDuration Retention duration of the protection policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionDuration(@Nullable RetentionDurationResponse retentionDuration) {
             $.retentionDuration = retentionDuration;
             return this;
         }
 
+        /**
+         * @param retentionPolicyType This property will be used as the discriminator for deciding the specific types in the polymorphic chain of types.
+         * Expected value is &#39;SimpleRetentionPolicy&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder retentionPolicyType(String retentionPolicyType) {
             $.retentionPolicyType = retentionPolicyType;
             return this;

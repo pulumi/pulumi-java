@@ -17,27 +17,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProductDetailsResponse {
     /**
-     * Quantity of the product
+     * @return Quantity of the product
      * 
      */
     private final Integer count;
     /**
-     * list of device details
+     * @return list of device details
      * 
      */
     private final List<DeviceDetailsResponse> deviceDetails;
     /**
-     * Display details of the product
+     * @return Display details of the product
      * 
      */
     private final @Nullable DisplayInfoResponse displayInfo;
     /**
-     * Hierarchy of the product which uniquely identifies the product
+     * @return Hierarchy of the product which uniquely identifies the product
      * 
      */
     private final HierarchyInformationResponse hierarchyInformation;
     /**
-     * Double encryption status of the configuration. Read-only field.
+     * @return Double encryption status of the configuration. Read-only field.
      * 
      */
     private final String productDoubleEncryptionStatus;
@@ -57,37 +57,37 @@ public final class ProductDetailsResponse {
     }
 
     /**
-     * Quantity of the product
+     * @return Quantity of the product
      * 
-    */
+     */
     public Integer count() {
         return this.count;
     }
     /**
-     * list of device details
+     * @return list of device details
      * 
-    */
+     */
     public List<DeviceDetailsResponse> deviceDetails() {
         return this.deviceDetails;
     }
     /**
-     * Display details of the product
+     * @return Display details of the product
      * 
-    */
+     */
     public Optional<DisplayInfoResponse> displayInfo() {
         return Optional.ofNullable(this.displayInfo);
     }
     /**
-     * Hierarchy of the product which uniquely identifies the product
+     * @return Hierarchy of the product which uniquely identifies the product
      * 
-    */
+     */
     public HierarchyInformationResponse hierarchyInformation() {
         return this.hierarchyInformation;
     }
     /**
-     * Double encryption status of the configuration. Read-only field.
+     * @return Double encryption status of the configuration. Read-only field.
      * 
-    */
+     */
     public String productDoubleEncryptionStatus() {
         return this.productDoubleEncryptionStatus;
     }

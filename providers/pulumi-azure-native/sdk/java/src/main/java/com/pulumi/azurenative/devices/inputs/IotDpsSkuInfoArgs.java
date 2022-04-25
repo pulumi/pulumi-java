@@ -29,6 +29,10 @@ public final class IotDpsSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Double> capacity;
 
+    /**
+     * @return The number of units to provision
+     * 
+     */
     public Optional<Output<Double>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class IotDpsSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<Either<String,IotDpsSku>> name;
 
+    /**
+     * @return Sku name.
+     * 
+     */
     public Optional<Output<Either<String,IotDpsSku>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -69,28 +77,64 @@ public final class IotDpsSkuInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IotDpsSkuInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The number of units to provision
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Double> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The number of units to provision
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Double capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,IotDpsSku>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,IotDpsSku> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name Sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(IotDpsSku name) {
             return name(Either.ofRight(name));
         }

@@ -14,22 +14,22 @@ import java.util.Objects;
 @CustomType
 public final class DataBoxHeavyJobSecretsResponse {
     /**
-     * Contains the list of secret objects for a databox heavy job.
+     * @return Contains the list of secret objects for a databox heavy job.
      * 
      */
     private final List<DataBoxHeavySecretResponse> cabinetPodSecrets;
     /**
-     * Dc Access Security Code for Customer Managed Shipping
+     * @return Dc Access Security Code for Customer Managed Shipping
      * 
      */
     private final DcAccessSecurityCodeResponse dcAccessSecurityCode;
     /**
-     * Error while fetching the secrets.
+     * @return Error while fetching the secrets.
      * 
      */
     private final CloudErrorResponse error;
     /**
-     * Used to indicate what type of job secrets object.
+     * @return Used to indicate what type of job secrets object.
      * Expected value is &#39;DataBoxHeavy&#39;.
      * 
      */
@@ -48,31 +48,31 @@ public final class DataBoxHeavyJobSecretsResponse {
     }
 
     /**
-     * Contains the list of secret objects for a databox heavy job.
+     * @return Contains the list of secret objects for a databox heavy job.
      * 
-    */
+     */
     public List<DataBoxHeavySecretResponse> cabinetPodSecrets() {
         return this.cabinetPodSecrets;
     }
     /**
-     * Dc Access Security Code for Customer Managed Shipping
+     * @return Dc Access Security Code for Customer Managed Shipping
      * 
-    */
+     */
     public DcAccessSecurityCodeResponse dcAccessSecurityCode() {
         return this.dcAccessSecurityCode;
     }
     /**
-     * Error while fetching the secrets.
+     * @return Error while fetching the secrets.
      * 
-    */
+     */
     public CloudErrorResponse error() {
         return this.error;
     }
     /**
-     * Used to indicate what type of job secrets object.
+     * @return Used to indicate what type of job secrets object.
      * Expected value is &#39;DataBoxHeavy&#39;.
      * 
-    */
+     */
     public String jobSecretsType() {
         return this.jobSecretsType;
     }

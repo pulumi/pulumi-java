@@ -19,6 +19,10 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
     @Import(name="privateZoneName", required=true)
     private String privateZoneName;
 
+    /**
+     * @return The name of the Private DNS zone (without a terminating dot).
+     * 
+     */
     public String privateZoneName() {
         return this.privateZoneName;
     }
@@ -30,6 +34,10 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
     @Import(name="recordType", required=true)
     private String recordType;
 
+    /**
+     * @return The type of DNS record in this record set.
+     * 
+     */
     public String recordType() {
         return this.recordType;
     }
@@ -41,6 +49,10 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
     @Import(name="relativeRecordSetName", required=true)
     private String relativeRecordSetName;
 
+    /**
+     * @return The name of the record set, relative to the name of the zone.
+     * 
+     */
     public String relativeRecordSetName() {
         return this.relativeRecordSetName;
     }
@@ -52,6 +64,10 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -83,21 +99,45 @@ public final class GetPrivateRecordSetArgs extends com.pulumi.resources.InvokeAr
             $ = new GetPrivateRecordSetArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param privateZoneName The name of the Private DNS zone (without a terminating dot).
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateZoneName(String privateZoneName) {
             $.privateZoneName = privateZoneName;
             return this;
         }
 
+        /**
+         * @param recordType The type of DNS record in this record set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recordType(String recordType) {
             $.recordType = recordType;
             return this;
         }
 
+        /**
+         * @param relativeRecordSetName The name of the record set, relative to the name of the zone.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relativeRecordSetName(String relativeRecordSetName) {
             $.relativeRecordSetName = relativeRecordSetName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

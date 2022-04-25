@@ -27,6 +27,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="exportPipelineName")
     private @Nullable Output<String> exportPipelineName;
 
+    /**
+     * @return The name of the export pipeline.
+     * 
+     */
     public Optional<Output<String>> exportPipelineName() {
         return Optional.ofNullable(this.exportPipelineName);
     }
@@ -38,6 +42,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="identity")
     private @Nullable Output<IdentityPropertiesArgs> identity;
 
+    /**
+     * @return The identity of the export pipeline.
+     * 
+     */
     public Optional<Output<IdentityPropertiesArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -49,6 +57,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location of the export pipeline.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -60,6 +72,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="options")
     private @Nullable Output<List<Either<String,PipelineOptions>>> options;
 
+    /**
+     * @return The list of all options configured for the pipeline.
+     * 
+     */
     public Optional<Output<List<Either<String,PipelineOptions>>>> options() {
         return Optional.ofNullable(this.options);
     }
@@ -71,6 +87,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="registryName", required=true)
     private Output<String> registryName;
 
+    /**
+     * @return The name of the container registry.
+     * 
+     */
     public Output<String> registryName() {
         return this.registryName;
     }
@@ -82,6 +102,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group to which the container registry belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -93,6 +117,10 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="target", required=true)
     private Output<ExportPipelineTargetPropertiesArgs> target;
 
+    /**
+     * @return The target properties of the export pipeline.
+     * 
+     */
     public Output<ExportPipelineTargetPropertiesArgs> target() {
         return this.target;
     }
@@ -127,69 +155,159 @@ public final class ExportPipelineArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ExportPipelineArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param exportPipelineName The name of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportPipelineName(@Nullable Output<String> exportPipelineName) {
             $.exportPipelineName = exportPipelineName;
             return this;
         }
 
+        /**
+         * @param exportPipelineName The name of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder exportPipelineName(String exportPipelineName) {
             return exportPipelineName(Output.of(exportPipelineName));
         }
 
+        /**
+         * @param identity The identity of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityPropertiesArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityPropertiesArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param location The location of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param options The list of all options configured for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(@Nullable Output<List<Either<String,PipelineOptions>>> options) {
             $.options = options;
             return this;
         }
 
+        /**
+         * @param options The list of all options configured for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(List<Either<String,PipelineOptions>> options) {
             return options(Output.of(options));
         }
 
+        /**
+         * @param options The list of all options configured for the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder options(Either<String,PipelineOptions>... options) {
             return options(List.of(options));
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(Output<String> registryName) {
             $.registryName = registryName;
             return this;
         }
 
+        /**
+         * @param registryName The name of the container registry.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registryName(String registryName) {
             return registryName(Output.of(registryName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group to which the container registry belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param target The target properties of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(Output<ExportPipelineTargetPropertiesArgs> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target The target properties of the export pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(ExportPipelineTargetPropertiesArgs target) {
             return target(Output.of(target));
         }

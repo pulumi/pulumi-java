@@ -27,6 +27,10 @@ public final class TargetPortalGroupCreateArgs extends com.pulumi.resources.Reso
     @Import(name="acls", required=true)
     private Output<List<AclArgs>> acls;
 
+    /**
+     * @return Access Control List (ACL) for an iSCSI target portal group.
+     * 
+     */
     public Output<List<AclArgs>> acls() {
         return this.acls;
     }
@@ -38,6 +42,10 @@ public final class TargetPortalGroupCreateArgs extends com.pulumi.resources.Reso
     @Import(name="attributes", required=true)
     private Output<AttributesArgs> attributes;
 
+    /**
+     * @return Attributes of an iSCSI target portal group.
+     * 
+     */
     public Output<AttributesArgs> attributes() {
         return this.attributes;
     }
@@ -49,6 +57,10 @@ public final class TargetPortalGroupCreateArgs extends com.pulumi.resources.Reso
     @Import(name="luns", required=true)
     private Output<List<IscsiLunArgs>> luns;
 
+    /**
+     * @return List of LUNs to be exposed through the iSCSI target portal group.
+     * 
+     */
     public Output<List<IscsiLunArgs>> luns() {
         return this.luns;
     }
@@ -79,37 +91,85 @@ public final class TargetPortalGroupCreateArgs extends com.pulumi.resources.Reso
             $ = new TargetPortalGroupCreateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acls Access Control List (ACL) for an iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acls(Output<List<AclArgs>> acls) {
             $.acls = acls;
             return this;
         }
 
+        /**
+         * @param acls Access Control List (ACL) for an iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acls(List<AclArgs> acls) {
             return acls(Output.of(acls));
         }
 
+        /**
+         * @param acls Access Control List (ACL) for an iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acls(AclArgs... acls) {
             return acls(List.of(acls));
         }
 
+        /**
+         * @param attributes Attributes of an iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(Output<AttributesArgs> attributes) {
             $.attributes = attributes;
             return this;
         }
 
+        /**
+         * @param attributes Attributes of an iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder attributes(AttributesArgs attributes) {
             return attributes(Output.of(attributes));
         }
 
+        /**
+         * @param luns List of LUNs to be exposed through the iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(Output<List<IscsiLunArgs>> luns) {
             $.luns = luns;
             return this;
         }
 
+        /**
+         * @param luns List of LUNs to be exposed through the iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(List<IscsiLunArgs> luns) {
             return luns(Output.of(luns));
         }
 
+        /**
+         * @param luns List of LUNs to be exposed through the iSCSI target portal group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder luns(IscsiLunArgs... luns) {
             return luns(List.of(luns));
         }

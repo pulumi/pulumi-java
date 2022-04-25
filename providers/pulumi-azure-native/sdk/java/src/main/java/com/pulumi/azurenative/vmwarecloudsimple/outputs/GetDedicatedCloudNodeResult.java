@@ -15,97 +15,97 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDedicatedCloudNodeResult {
     /**
-     * Availability Zone id, e.g. &#34;az1&#34;
+     * @return Availability Zone id, e.g. &#34;az1&#34;
      * 
      */
     private final String availabilityZoneId;
     /**
-     * Availability Zone name, e.g. &#34;Availability Zone 1&#34;
+     * @return Availability Zone name, e.g. &#34;Availability Zone 1&#34;
      * 
      */
     private final String availabilityZoneName;
     /**
-     * VMWare Cloud Rack Name
+     * @return VMWare Cloud Rack Name
      * 
      */
     private final String cloudRackName;
     /**
-     * date time the resource was created
+     * @return date time the resource was created
      * 
      */
     private final String created;
     /**
-     * SKU&#39;s id
+     * @return SKU&#39;s id
      * 
      */
     private final String id;
     /**
-     * Azure region
+     * @return Azure region
      * 
      */
     private final String location;
     /**
-     * SKU&#39;s name
+     * @return SKU&#39;s name
      * 
      */
     private final String name;
     /**
-     * count of nodes to create
+     * @return count of nodes to create
      * 
      */
     private final Integer nodesCount;
     /**
-     * Placement Group id, e.g. &#34;n1&#34;
+     * @return Placement Group id, e.g. &#34;n1&#34;
      * 
      */
     private final String placementGroupId;
     /**
-     * Placement Name, e.g. &#34;Placement Group 1&#34;
+     * @return Placement Name, e.g. &#34;Placement Group 1&#34;
      * 
      */
     private final String placementGroupName;
     /**
-     * Private Cloud Id
+     * @return Private Cloud Id
      * 
      */
     private final String privateCloudId;
     /**
-     * Resource Pool Name
+     * @return Resource Pool Name
      * 
      */
     private final String privateCloudName;
     /**
-     * The provisioning status of the resource
+     * @return The provisioning status of the resource
      * 
      */
     private final String provisioningState;
     /**
-     * purchase id
+     * @return purchase id
      * 
      */
     private final String purchaseId;
     /**
-     * Dedicated Cloud Nodes SKU
+     * @return Dedicated Cloud Nodes SKU
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Node status, indicates is private cloud set up on this node or not
+     * @return Node status, indicates is private cloud set up on this node or not
      * 
      */
     private final String status;
     /**
-     * Dedicated Cloud Nodes tags
+     * @return Dedicated Cloud Nodes tags
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * {resourceProviderNamespace}/{resourceType}
+     * @return {resourceProviderNamespace}/{resourceType}
      * 
      */
     private final String type;
     /**
-     * VMWare Cluster Name
+     * @return VMWare Cluster Name
      * 
      */
     private final String vmwareClusterName;
@@ -153,135 +153,135 @@ public final class GetDedicatedCloudNodeResult {
     }
 
     /**
-     * Availability Zone id, e.g. &#34;az1&#34;
+     * @return Availability Zone id, e.g. &#34;az1&#34;
      * 
-    */
+     */
     public String availabilityZoneId() {
         return this.availabilityZoneId;
     }
     /**
-     * Availability Zone name, e.g. &#34;Availability Zone 1&#34;
+     * @return Availability Zone name, e.g. &#34;Availability Zone 1&#34;
      * 
-    */
+     */
     public String availabilityZoneName() {
         return this.availabilityZoneName;
     }
     /**
-     * VMWare Cloud Rack Name
+     * @return VMWare Cloud Rack Name
      * 
-    */
+     */
     public String cloudRackName() {
         return this.cloudRackName;
     }
     /**
-     * date time the resource was created
+     * @return date time the resource was created
      * 
-    */
+     */
     public String created() {
         return this.created;
     }
     /**
-     * SKU&#39;s id
+     * @return SKU&#39;s id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Azure region
+     * @return Azure region
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * SKU&#39;s name
+     * @return SKU&#39;s name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * count of nodes to create
+     * @return count of nodes to create
      * 
-    */
+     */
     public Integer nodesCount() {
         return this.nodesCount;
     }
     /**
-     * Placement Group id, e.g. &#34;n1&#34;
+     * @return Placement Group id, e.g. &#34;n1&#34;
      * 
-    */
+     */
     public String placementGroupId() {
         return this.placementGroupId;
     }
     /**
-     * Placement Name, e.g. &#34;Placement Group 1&#34;
+     * @return Placement Name, e.g. &#34;Placement Group 1&#34;
      * 
-    */
+     */
     public String placementGroupName() {
         return this.placementGroupName;
     }
     /**
-     * Private Cloud Id
+     * @return Private Cloud Id
      * 
-    */
+     */
     public String privateCloudId() {
         return this.privateCloudId;
     }
     /**
-     * Resource Pool Name
+     * @return Resource Pool Name
      * 
-    */
+     */
     public String privateCloudName() {
         return this.privateCloudName;
     }
     /**
-     * The provisioning status of the resource
+     * @return The provisioning status of the resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * purchase id
+     * @return purchase id
      * 
-    */
+     */
     public String purchaseId() {
         return this.purchaseId;
     }
     /**
-     * Dedicated Cloud Nodes SKU
+     * @return Dedicated Cloud Nodes SKU
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Node status, indicates is private cloud set up on this node or not
+     * @return Node status, indicates is private cloud set up on this node or not
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Dedicated Cloud Nodes tags
+     * @return Dedicated Cloud Nodes tags
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * {resourceProviderNamespace}/{resourceType}
+     * @return {resourceProviderNamespace}/{resourceType}
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * VMWare Cluster Name
+     * @return VMWare Cluster Name
      * 
-    */
+     */
     public String vmwareClusterName() {
         return this.vmwareClusterName;
     }

@@ -34,6 +34,10 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
     @Import(name="configuration", required=true)
     private Object configuration;
 
+    /**
+     * @return The key delivery configuration.
+     * 
+     */
     public Object configuration() {
         return this.configuration;
     }
@@ -45,6 +49,10 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The Policy Option description.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +64,10 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
     @Import(name="policyOptionId", required=true)
     private String policyOptionId;
 
+    /**
+     * @return The legacy Policy Option ID.
+     * 
+     */
     public String policyOptionId() {
         return this.policyOptionId;
     }
@@ -67,6 +79,10 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
     @Import(name="restriction", required=true)
     private Object restriction;
 
+    /**
+     * @return The requirements that must be met to deliver keys with this configuration
+     * 
+     */
     public Object restriction() {
         return this.restriction;
     }
@@ -98,21 +114,45 @@ public final class ContentKeyPolicyOptionResponse extends com.pulumi.resources.I
             $ = new ContentKeyPolicyOptionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configuration The key delivery configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder configuration(Object configuration) {
             $.configuration = configuration;
             return this;
         }
 
+        /**
+         * @param name The Policy Option description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policyOptionId The legacy Policy Option ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyOptionId(String policyOptionId) {
             $.policyOptionId = policyOptionId;
             return this;
         }
 
+        /**
+         * @param restriction The requirements that must be met to deliver keys with this configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder restriction(Object restriction) {
             $.restriction = restriction;
             return this;

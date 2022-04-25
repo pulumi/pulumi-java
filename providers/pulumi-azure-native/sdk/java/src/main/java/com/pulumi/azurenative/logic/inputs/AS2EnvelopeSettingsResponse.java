@@ -24,6 +24,10 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="autogenerateFileName", required=true)
     private Boolean autogenerateFileName;
 
+    /**
+     * @return The value indicating whether to auto generate file name.
+     * 
+     */
     public Boolean autogenerateFileName() {
         return this.autogenerateFileName;
     }
@@ -35,6 +39,10 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="fileNameTemplate", required=true)
     private String fileNameTemplate;
 
+    /**
+     * @return The template for file name.
+     * 
+     */
     public String fileNameTemplate() {
         return this.fileNameTemplate;
     }
@@ -46,6 +54,10 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="messageContentType", required=true)
     private String messageContentType;
 
+    /**
+     * @return The message content type.
+     * 
+     */
     public String messageContentType() {
         return this.messageContentType;
     }
@@ -57,6 +69,10 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="suspendMessageOnFileNameGenerationError", required=true)
     private Boolean suspendMessageOnFileNameGenerationError;
 
+    /**
+     * @return The value indicating whether to suspend message on file name generation error.
+     * 
+     */
     public Boolean suspendMessageOnFileNameGenerationError() {
         return this.suspendMessageOnFileNameGenerationError;
     }
@@ -68,6 +84,10 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transmitFileNameInMimeHeader", required=true)
     private Boolean transmitFileNameInMimeHeader;
 
+    /**
+     * @return The value indicating whether to transmit file name in mime header.
+     * 
+     */
     public Boolean transmitFileNameInMimeHeader() {
         return this.transmitFileNameInMimeHeader;
     }
@@ -100,26 +120,56 @@ public final class AS2EnvelopeSettingsResponse extends com.pulumi.resources.Invo
             $ = new AS2EnvelopeSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param autogenerateFileName The value indicating whether to auto generate file name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder autogenerateFileName(Boolean autogenerateFileName) {
             $.autogenerateFileName = autogenerateFileName;
             return this;
         }
 
+        /**
+         * @param fileNameTemplate The template for file name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fileNameTemplate(String fileNameTemplate) {
             $.fileNameTemplate = fileNameTemplate;
             return this;
         }
 
+        /**
+         * @param messageContentType The message content type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageContentType(String messageContentType) {
             $.messageContentType = messageContentType;
             return this;
         }
 
+        /**
+         * @param suspendMessageOnFileNameGenerationError The value indicating whether to suspend message on file name generation error.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suspendMessageOnFileNameGenerationError(Boolean suspendMessageOnFileNameGenerationError) {
             $.suspendMessageOnFileNameGenerationError = suspendMessageOnFileNameGenerationError;
             return this;
         }
 
+        /**
+         * @param transmitFileNameInMimeHeader The value indicating whether to transmit file name in mime header.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transmitFileNameInMimeHeader(Boolean transmitFileNameInMimeHeader) {
             $.transmitFileNameInMimeHeader = transmitFileNameInMimeHeader;
             return this;

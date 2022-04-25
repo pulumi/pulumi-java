@@ -19,6 +19,10 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="automationAccountName", required=true)
     private String automationAccountName;
 
+    /**
+     * @return The name of the automation account.
+     * 
+     */
     public String automationAccountName() {
         return this.automationAccountName;
     }
@@ -30,6 +34,10 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return Name of an Azure Resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
     @Import(name="sourceControlName", required=true)
     private String sourceControlName;
 
+    /**
+     * @return The name of source control.
+     * 
+     */
     public String sourceControlName() {
         return this.sourceControlName;
     }
@@ -71,16 +83,34 @@ public final class GetSourceControlArgs extends com.pulumi.resources.InvokeArgs 
             $ = new GetSourceControlArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param automationAccountName The name of the automation account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder automationAccountName(String automationAccountName) {
             $.automationAccountName = automationAccountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of an Azure Resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sourceControlName The name of source control.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlName(String sourceControlName) {
             $.sourceControlName = sourceControlName;
             return this;

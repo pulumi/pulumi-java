@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class ListStorageAccountSasTokensResult {
     /**
-     * The link (url) to the next page of results.
+     * @return The link (url) to the next page of results.
      * 
      */
     private final String nextLink;
     /**
-     * The results of the list operation.
+     * @return The results of the list operation.
      * 
      */
     private final List<SasTokenInformationResponse> value;
@@ -31,16 +31,16 @@ public final class ListStorageAccountSasTokensResult {
     }
 
     /**
-     * The link (url) to the next page of results.
+     * @return The link (url) to the next page of results.
      * 
-    */
+     */
     public String nextLink() {
         return this.nextLink;
     }
     /**
-     * The results of the list operation.
+     * @return The results of the list operation.
      * 
-    */
+     */
     public List<SasTokenInformationResponse> value() {
         return this.value;
     }

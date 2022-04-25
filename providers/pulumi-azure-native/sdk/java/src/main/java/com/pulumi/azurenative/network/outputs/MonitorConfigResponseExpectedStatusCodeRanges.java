@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class MonitorConfigResponseExpectedStatusCodeRanges {
     /**
-     * Max status code.
+     * @return Max status code.
      * 
      */
     private final @Nullable Integer max;
     /**
-     * Min status code.
+     * @return Min status code.
      * 
      */
     private final @Nullable Integer min;
@@ -31,16 +31,16 @@ public final class MonitorConfigResponseExpectedStatusCodeRanges {
     }
 
     /**
-     * Max status code.
+     * @return Max status code.
      * 
-    */
+     */
     public Optional<Integer> max() {
         return Optional.ofNullable(this.max);
     }
     /**
-     * Min status code.
+     * @return Min status code.
      * 
-    */
+     */
     public Optional<Integer> min() {
         return Optional.ofNullable(this.min);
     }

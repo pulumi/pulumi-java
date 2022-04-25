@@ -26,6 +26,10 @@ public final class IngressEnvironmentStatusResponse extends com.pulumi.resources
     @Import(name="state")
     private @Nullable String state;
 
+    /**
+     * @return This string represents the state of ingress operations on an environment. It can be &#34;Disabled&#34;, &#34;Ready&#34;, &#34;Running&#34;, &#34;Paused&#34; or &#34;Unknown&#34;
+     * 
+     */
     public Optional<String> state() {
         return Optional.ofNullable(this.state);
     }
@@ -37,6 +41,10 @@ public final class IngressEnvironmentStatusResponse extends com.pulumi.resources
     @Import(name="stateDetails", required=true)
     private EnvironmentStateDetailsResponse stateDetails;
 
+    /**
+     * @return An object that contains the details about an environment&#39;s state.
+     * 
+     */
     public EnvironmentStateDetailsResponse stateDetails() {
         return this.stateDetails;
     }
@@ -66,11 +74,23 @@ public final class IngressEnvironmentStatusResponse extends com.pulumi.resources
             $ = new IngressEnvironmentStatusResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param state This string represents the state of ingress operations on an environment. It can be &#34;Disabled&#34;, &#34;Ready&#34;, &#34;Running&#34;, &#34;Paused&#34; or &#34;Unknown&#34;
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(@Nullable String state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param stateDetails An object that contains the details about an environment&#39;s state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateDetails(EnvironmentStateDetailsResponse stateDetails) {
             $.stateDetails = stateDetails;
             return this;

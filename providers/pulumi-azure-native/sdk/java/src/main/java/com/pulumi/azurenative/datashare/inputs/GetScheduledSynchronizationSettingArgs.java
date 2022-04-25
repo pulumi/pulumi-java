@@ -19,6 +19,10 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
     @Import(name="accountName", required=true)
     private String accountName;
 
+    /**
+     * @return The name of the share account.
+     * 
+     */
     public String accountName() {
         return this.accountName;
     }
@@ -30,6 +34,10 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -41,6 +49,10 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
     @Import(name="shareName", required=true)
     private String shareName;
 
+    /**
+     * @return The name of the share.
+     * 
+     */
     public String shareName() {
         return this.shareName;
     }
@@ -52,6 +64,10 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
     @Import(name="synchronizationSettingName", required=true)
     private String synchronizationSettingName;
 
+    /**
+     * @return The name of the synchronizationSetting.
+     * 
+     */
     public String synchronizationSettingName() {
         return this.synchronizationSettingName;
     }
@@ -83,21 +99,45 @@ public final class GetScheduledSynchronizationSettingArgs extends com.pulumi.res
             $ = new GetScheduledSynchronizationSettingArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName The name of the share account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param shareName The name of the share.
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param synchronizationSettingName The name of the synchronizationSetting.
+         * 
+         * @return builder
+         * 
+         */
         public Builder synchronizationSettingName(String synchronizationSettingName) {
             $.synchronizationSettingName = synchronizationSettingName;
             return this;

@@ -19,6 +19,10 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends com.pulum
     @Import(name="managementGroupId", required=true)
     private String managementGroupId;
 
+    /**
+     * @return The ID of the management group.
+     * 
+     */
     public String managementGroupId() {
         return this.managementGroupId;
     }
@@ -30,6 +34,10 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends com.pulum
     @Import(name="policySetDefinitionName", required=true)
     private String policySetDefinitionName;
 
+    /**
+     * @return The name of the policy set definition to get.
+     * 
+     */
     public String policySetDefinitionName() {
         return this.policySetDefinitionName;
     }
@@ -59,11 +67,23 @@ public final class GetPolicySetDefinitionAtManagementGroupArgs extends com.pulum
             $ = new GetPolicySetDefinitionAtManagementGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param managementGroupId The ID of the management group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managementGroupId(String managementGroupId) {
             $.managementGroupId = managementGroupId;
             return this;
         }
 
+        /**
+         * @param policySetDefinitionName The name of the policy set definition to get.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policySetDefinitionName(String policySetDefinitionName) {
             $.policySetDefinitionName = policySetDefinitionName;
             return this;

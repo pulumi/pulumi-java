@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PrivateLinkServiceConnectionStateResponse {
     /**
-     * Whether there is further actions.
+     * @return Whether there is further actions.
      * 
      */
     private final @Nullable String actionsRequired;
     /**
-     * The optional description of the status.
+     * @return The optional description of the status.
      * 
      */
     private final @Nullable String description;
     /**
-     * The concrete private link service connection.
+     * @return The concrete private link service connection.
      * 
      */
     private final String status;
@@ -38,23 +38,23 @@ public final class PrivateLinkServiceConnectionStateResponse {
     }
 
     /**
-     * Whether there is further actions.
+     * @return Whether there is further actions.
      * 
-    */
+     */
     public Optional<String> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
     /**
-     * The optional description of the status.
+     * @return The optional description of the status.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The concrete private link service connection.
+     * @return The concrete private link service connection.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }

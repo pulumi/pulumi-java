@@ -26,6 +26,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="description")
     private @Nullable Output<Map<String,String>> description;
 
+    /**
+     * @return Localized descriptions for the Relationship Link.
+     * 
+     */
     public Optional<Output<Map<String,String>>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="displayName")
     private @Nullable Output<Map<String,String>> displayName;
 
+    /**
+     * @return Localized display name for the Relationship Link.
+     * 
+     */
     public Optional<Output<Map<String,String>>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -48,6 +56,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="hubName", required=true)
     private Output<String> hubName;
 
+    /**
+     * @return The name of the hub.
+     * 
+     */
     public Output<String> hubName() {
         return this.hubName;
     }
@@ -59,6 +71,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="interactionType", required=true)
     private Output<String> interactionType;
 
+    /**
+     * @return The InteractionType associated with the Relationship Link.
+     * 
+     */
     public Output<String> interactionType() {
         return this.interactionType;
     }
@@ -70,6 +86,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="mappings")
     private @Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings;
 
+    /**
+     * @return The mappings between Interaction and Relationship fields.
+     * 
+     */
     public Optional<Output<List<RelationshipLinkFieldMappingArgs>>> mappings() {
         return Optional.ofNullable(this.mappings);
     }
@@ -81,6 +101,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="profilePropertyReferences", required=true)
     private Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences;
 
+    /**
+     * @return The property references for the Profile of the Relationship.
+     * 
+     */
     public Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences() {
         return this.profilePropertyReferences;
     }
@@ -92,6 +116,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="relatedProfilePropertyReferences", required=true)
     private Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences;
 
+    /**
+     * @return The property references for the Related Profile of the Relationship.
+     * 
+     */
     public Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences() {
         return this.relatedProfilePropertyReferences;
     }
@@ -103,6 +131,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="relationshipLinkName")
     private @Nullable Output<String> relationshipLinkName;
 
+    /**
+     * @return The name of the relationship link.
+     * 
+     */
     public Optional<Output<String>> relationshipLinkName() {
         return Optional.ofNullable(this.relationshipLinkName);
     }
@@ -114,6 +146,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="relationshipName", required=true)
     private Output<String> relationshipName;
 
+    /**
+     * @return The Relationship associated with the Link.
+     * 
+     */
     public Output<String> relationshipName() {
         return this.relationshipName;
     }
@@ -125,6 +161,10 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -162,104 +202,242 @@ public final class RelationshipLinkArgs extends com.pulumi.resources.ResourceArg
             $ = new RelationshipLinkArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Localized descriptions for the Relationship Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<Map<String,String>> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Localized descriptions for the Relationship Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(Map<String,String> description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName Localized display name for the Relationship Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<Map<String,String>> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName Localized display name for the Relationship Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(Map<String,String> displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(Output<String> hubName) {
             $.hubName = hubName;
             return this;
         }
 
+        /**
+         * @param hubName The name of the hub.
+         * 
+         * @return builder
+         * 
+         */
         public Builder hubName(String hubName) {
             return hubName(Output.of(hubName));
         }
 
+        /**
+         * @param interactionType The InteractionType associated with the Relationship Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionType(Output<String> interactionType) {
             $.interactionType = interactionType;
             return this;
         }
 
+        /**
+         * @param interactionType The InteractionType associated with the Relationship Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interactionType(String interactionType) {
             return interactionType(Output.of(interactionType));
         }
 
+        /**
+         * @param mappings The mappings between Interaction and Relationship fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(@Nullable Output<List<RelationshipLinkFieldMappingArgs>> mappings) {
             $.mappings = mappings;
             return this;
         }
 
+        /**
+         * @param mappings The mappings between Interaction and Relationship fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(List<RelationshipLinkFieldMappingArgs> mappings) {
             return mappings(Output.of(mappings));
         }
 
+        /**
+         * @param mappings The mappings between Interaction and Relationship fields.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mappings(RelationshipLinkFieldMappingArgs... mappings) {
             return mappings(List.of(mappings));
         }
 
+        /**
+         * @param profilePropertyReferences The property references for the Profile of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilePropertyReferences(Output<List<ParticipantProfilePropertyReferenceArgs>> profilePropertyReferences) {
             $.profilePropertyReferences = profilePropertyReferences;
             return this;
         }
 
+        /**
+         * @param profilePropertyReferences The property references for the Profile of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilePropertyReferences(List<ParticipantProfilePropertyReferenceArgs> profilePropertyReferences) {
             return profilePropertyReferences(Output.of(profilePropertyReferences));
         }
 
+        /**
+         * @param profilePropertyReferences The property references for the Profile of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder profilePropertyReferences(ParticipantProfilePropertyReferenceArgs... profilePropertyReferences) {
             return profilePropertyReferences(List.of(profilePropertyReferences));
         }
 
+        /**
+         * @param relatedProfilePropertyReferences The property references for the Related Profile of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedProfilePropertyReferences(Output<List<ParticipantProfilePropertyReferenceArgs>> relatedProfilePropertyReferences) {
             $.relatedProfilePropertyReferences = relatedProfilePropertyReferences;
             return this;
         }
 
+        /**
+         * @param relatedProfilePropertyReferences The property references for the Related Profile of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedProfilePropertyReferences(List<ParticipantProfilePropertyReferenceArgs> relatedProfilePropertyReferences) {
             return relatedProfilePropertyReferences(Output.of(relatedProfilePropertyReferences));
         }
 
+        /**
+         * @param relatedProfilePropertyReferences The property references for the Related Profile of the Relationship.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relatedProfilePropertyReferences(ParticipantProfilePropertyReferenceArgs... relatedProfilePropertyReferences) {
             return relatedProfilePropertyReferences(List.of(relatedProfilePropertyReferences));
         }
 
+        /**
+         * @param relationshipLinkName The name of the relationship link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipLinkName(@Nullable Output<String> relationshipLinkName) {
             $.relationshipLinkName = relationshipLinkName;
             return this;
         }
 
+        /**
+         * @param relationshipLinkName The name of the relationship link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipLinkName(String relationshipLinkName) {
             return relationshipLinkName(Output.of(relationshipLinkName));
         }
 
+        /**
+         * @param relationshipName The Relationship associated with the Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipName(Output<String> relationshipName) {
             $.relationshipName = relationshipName;
             return this;
         }
 
+        /**
+         * @param relationshipName The Relationship associated with the Link.
+         * 
+         * @return builder
+         * 
+         */
         public Builder relationshipName(String relationshipName) {
             return relationshipName(Output.of(relationshipName));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

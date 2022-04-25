@@ -25,6 +25,10 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     @Import(name="expiryDate")
     private @Nullable String expiryDate;
 
+    /**
+     * @return expiration date of service principal secret
+     * 
+     */
     public Optional<String> expiryDate() {
         return Optional.ofNullable(this.expiryDate);
     }
@@ -36,6 +40,10 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     @Import(name="parameterNameInStore")
     private @Nullable String parameterNameInStore;
 
+    /**
+     * @return name of secret resource in parameter store
+     * 
+     */
     public Optional<String> parameterNameInStore() {
         return Optional.ofNullable(this.parameterNameInStore);
     }
@@ -47,6 +55,10 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
     @Import(name="parameterStoreRegion")
     private @Nullable String parameterStoreRegion;
 
+    /**
+     * @return region of parameter store where secret is kept
+     * 
+     */
     public Optional<String> parameterStoreRegion() {
         return Optional.ofNullable(this.parameterStoreRegion);
     }
@@ -77,16 +89,34 @@ public final class DefenderForServersAwsOfferingResponseServicePrincipalSecretMe
             $ = new DefenderForServersAwsOfferingResponseServicePrincipalSecretMetadata(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiryDate expiration date of service principal secret
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiryDate(@Nullable String expiryDate) {
             $.expiryDate = expiryDate;
             return this;
         }
 
+        /**
+         * @param parameterNameInStore name of secret resource in parameter store
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterNameInStore(@Nullable String parameterNameInStore) {
             $.parameterNameInStore = parameterNameInStore;
             return this;
         }
 
+        /**
+         * @param parameterStoreRegion region of parameter store where secret is kept
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameterStoreRegion(@Nullable String parameterStoreRegion) {
             $.parameterStoreRegion = parameterStoreRegion;
             return this;

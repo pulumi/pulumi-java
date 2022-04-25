@@ -27,6 +27,10 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
     @Import(name="allowLeadingAndTrailingSpacesAndZeroes", required=true)
     private Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes;
 
+    /**
+     * @return The value indicating whether to allow leading and trailing spaces and zeroes.
+     * 
+     */
     public Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes() {
         return this.allowLeadingAndTrailingSpacesAndZeroes;
     }
@@ -38,6 +42,10 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
     @Import(name="messageId", required=true)
     private Output<String> messageId;
 
+    /**
+     * @return The message id on which the validation settings has to be applied.
+     * 
+     */
     public Output<String> messageId() {
         return this.messageId;
     }
@@ -49,6 +57,10 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
     @Import(name="trailingSeparatorPolicy", required=true)
     private Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy;
 
+    /**
+     * @return The trailing separator policy.
+     * 
+     */
     public Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy() {
         return this.trailingSeparatorPolicy;
     }
@@ -60,6 +72,10 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
     @Import(name="trimLeadingAndTrailingSpacesAndZeroes", required=true)
     private Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes;
 
+    /**
+     * @return The value indicating whether to trim leading and trailing spaces and zeroes.
+     * 
+     */
     public Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes() {
         return this.trimLeadingAndTrailingSpacesAndZeroes;
     }
@@ -71,6 +87,10 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
     @Import(name="validateCharacterSet", required=true)
     private Output<Boolean> validateCharacterSet;
 
+    /**
+     * @return The value indicating whether to validate character Set.
+     * 
+     */
     public Output<Boolean> validateCharacterSet() {
         return this.validateCharacterSet;
     }
@@ -82,6 +102,10 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
     @Import(name="validateEDITypes", required=true)
     private Output<Boolean> validateEDITypes;
 
+    /**
+     * @return The value indicating whether to validate EDI types.
+     * 
+     */
     public Output<Boolean> validateEDITypes() {
         return this.validateEDITypes;
     }
@@ -93,6 +117,10 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
     @Import(name="validateXSDTypes", required=true)
     private Output<Boolean> validateXSDTypes;
 
+    /**
+     * @return The value indicating whether to validate XSD types.
+     * 
+     */
     public Output<Boolean> validateXSDTypes() {
         return this.validateXSDTypes;
     }
@@ -127,73 +155,169 @@ public final class X12ValidationOverrideArgs extends com.pulumi.resources.Resour
             $ = new X12ValidationOverrideArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowLeadingAndTrailingSpacesAndZeroes The value indicating whether to allow leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Output<Boolean> allowLeadingAndTrailingSpacesAndZeroes) {
             $.allowLeadingAndTrailingSpacesAndZeroes = allowLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
 
+        /**
+         * @param allowLeadingAndTrailingSpacesAndZeroes The value indicating whether to allow leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowLeadingAndTrailingSpacesAndZeroes(Boolean allowLeadingAndTrailingSpacesAndZeroes) {
             return allowLeadingAndTrailingSpacesAndZeroes(Output.of(allowLeadingAndTrailingSpacesAndZeroes));
         }
 
+        /**
+         * @param messageId The message id on which the validation settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(Output<String> messageId) {
             $.messageId = messageId;
             return this;
         }
 
+        /**
+         * @param messageId The message id on which the validation settings has to be applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder messageId(String messageId) {
             return messageId(Output.of(messageId));
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(Output<Either<String,TrailingSeparatorPolicy>> trailingSeparatorPolicy) {
             $.trailingSeparatorPolicy = trailingSeparatorPolicy;
             return this;
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(Either<String,TrailingSeparatorPolicy> trailingSeparatorPolicy) {
             return trailingSeparatorPolicy(Output.of(trailingSeparatorPolicy));
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(String trailingSeparatorPolicy) {
             return trailingSeparatorPolicy(Either.ofLeft(trailingSeparatorPolicy));
         }
 
+        /**
+         * @param trailingSeparatorPolicy The trailing separator policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trailingSeparatorPolicy(TrailingSeparatorPolicy trailingSeparatorPolicy) {
             return trailingSeparatorPolicy(Either.ofRight(trailingSeparatorPolicy));
         }
 
+        /**
+         * @param trimLeadingAndTrailingSpacesAndZeroes The value indicating whether to trim leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Output<Boolean> trimLeadingAndTrailingSpacesAndZeroes) {
             $.trimLeadingAndTrailingSpacesAndZeroes = trimLeadingAndTrailingSpacesAndZeroes;
             return this;
         }
 
+        /**
+         * @param trimLeadingAndTrailingSpacesAndZeroes The value indicating whether to trim leading and trailing spaces and zeroes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder trimLeadingAndTrailingSpacesAndZeroes(Boolean trimLeadingAndTrailingSpacesAndZeroes) {
             return trimLeadingAndTrailingSpacesAndZeroes(Output.of(trimLeadingAndTrailingSpacesAndZeroes));
         }
 
+        /**
+         * @param validateCharacterSet The value indicating whether to validate character Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCharacterSet(Output<Boolean> validateCharacterSet) {
             $.validateCharacterSet = validateCharacterSet;
             return this;
         }
 
+        /**
+         * @param validateCharacterSet The value indicating whether to validate character Set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateCharacterSet(Boolean validateCharacterSet) {
             return validateCharacterSet(Output.of(validateCharacterSet));
         }
 
+        /**
+         * @param validateEDITypes The value indicating whether to validate EDI types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateEDITypes(Output<Boolean> validateEDITypes) {
             $.validateEDITypes = validateEDITypes;
             return this;
         }
 
+        /**
+         * @param validateEDITypes The value indicating whether to validate EDI types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateEDITypes(Boolean validateEDITypes) {
             return validateEDITypes(Output.of(validateEDITypes));
         }
 
+        /**
+         * @param validateXSDTypes The value indicating whether to validate XSD types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateXSDTypes(Output<Boolean> validateXSDTypes) {
             $.validateXSDTypes = validateXSDTypes;
             return this;
         }
 
+        /**
+         * @param validateXSDTypes The value indicating whether to validate XSD types.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validateXSDTypes(Boolean validateXSDTypes) {
             return validateXSDTypes(Output.of(validateXSDTypes));
         }

@@ -29,6 +29,10 @@ public final class EnterpriseSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="capacity")
     private @Nullable Output<Integer> capacity;
 
+    /**
+     * @return The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
+     * 
+     */
     public Optional<Output<Integer>> capacity() {
         return Optional.ofNullable(this.capacity);
     }
@@ -40,6 +44,10 @@ public final class EnterpriseSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<Either<String,SkuName>> name;
 
+    /**
+     * @return The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
+     * 
+     */
     public Output<Either<String,SkuName>> name() {
         return this.name;
     }
@@ -69,28 +77,64 @@ public final class EnterpriseSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnterpriseSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param capacity The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(@Nullable Output<Integer> capacity) {
             $.capacity = capacity;
             return this;
         }
 
+        /**
+         * @param capacity The size of the RedisEnterprise cluster. Defaults to 2 or 3 depending on SKU. Valid values are (2, 4, 6, ...) for Enterprise SKUs and (3, 9, 15, ...) for Flash SKUs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder capacity(Integer capacity) {
             return capacity(Output.of(capacity));
         }
 
+        /**
+         * @param name The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<Either<String,SkuName>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SkuName> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The type of RedisEnterprise cluster to deploy. Possible values: (Enterprise_E10, EnterpriseFlash_F300 etc.)
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SkuName name) {
             return name(Either.ofRight(name));
         }

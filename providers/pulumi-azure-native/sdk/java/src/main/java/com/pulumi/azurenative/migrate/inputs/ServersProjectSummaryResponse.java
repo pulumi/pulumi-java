@@ -28,6 +28,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="assessedCount")
     private @Nullable Integer assessedCount;
 
+    /**
+     * @return Gets or sets the count of entities assessed.
+     * 
+     */
     public Optional<Integer> assessedCount() {
         return Optional.ofNullable(this.assessedCount);
     }
@@ -39,6 +43,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="discoveredCount")
     private @Nullable Integer discoveredCount;
 
+    /**
+     * @return Gets or sets the count of entities discovered.
+     * 
+     */
     public Optional<Integer> discoveredCount() {
         return Optional.ofNullable(this.discoveredCount);
     }
@@ -50,6 +58,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="extendedSummary")
     private @Nullable Map<String,String> extendedSummary;
 
+    /**
+     * @return Gets or sets the extended summary.
+     * 
+     */
     public Optional<Map<String,String>> extendedSummary() {
         return Optional.ofNullable(this.extendedSummary);
     }
@@ -62,6 +74,11 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="instanceType", required=true)
     private String instanceType;
 
+    /**
+     * @return Gets the Instance type.
+     * Expected value is &#39;Servers&#39;.
+     * 
+     */
     public String instanceType() {
         return this.instanceType;
     }
@@ -73,6 +90,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="lastSummaryRefreshedTime")
     private @Nullable String lastSummaryRefreshedTime;
 
+    /**
+     * @return Gets or sets the time when summary was last refreshed.
+     * 
+     */
     public Optional<String> lastSummaryRefreshedTime() {
         return Optional.ofNullable(this.lastSummaryRefreshedTime);
     }
@@ -84,6 +105,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="migratedCount")
     private @Nullable Integer migratedCount;
 
+    /**
+     * @return Gets or sets the count of entities migrated.
+     * 
+     */
     public Optional<Integer> migratedCount() {
         return Optional.ofNullable(this.migratedCount);
     }
@@ -95,6 +120,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="refreshSummaryState")
     private @Nullable String refreshSummaryState;
 
+    /**
+     * @return Gets or sets the state of refresh summary.
+     * 
+     */
     public Optional<String> refreshSummaryState() {
         return Optional.ofNullable(this.refreshSummaryState);
     }
@@ -106,6 +135,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="replicatingCount")
     private @Nullable Integer replicatingCount;
 
+    /**
+     * @return Gets or sets the count of entities being replicated.
+     * 
+     */
     public Optional<Integer> replicatingCount() {
         return Optional.ofNullable(this.replicatingCount);
     }
@@ -117,6 +150,10 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
     @Import(name="testMigratedCount")
     private @Nullable Integer testMigratedCount;
 
+    /**
+     * @return Gets or sets the count of entities test migrated.
+     * 
+     */
     public Optional<Integer> testMigratedCount() {
         return Optional.ofNullable(this.testMigratedCount);
     }
@@ -153,46 +190,101 @@ public final class ServersProjectSummaryResponse extends com.pulumi.resources.In
             $ = new ServersProjectSummaryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assessedCount Gets or sets the count of entities assessed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assessedCount(@Nullable Integer assessedCount) {
             $.assessedCount = assessedCount;
             return this;
         }
 
+        /**
+         * @param discoveredCount Gets or sets the count of entities discovered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder discoveredCount(@Nullable Integer discoveredCount) {
             $.discoveredCount = discoveredCount;
             return this;
         }
 
+        /**
+         * @param extendedSummary Gets or sets the extended summary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedSummary(@Nullable Map<String,String> extendedSummary) {
             $.extendedSummary = extendedSummary;
             return this;
         }
 
+        /**
+         * @param instanceType Gets the Instance type.
+         * Expected value is &#39;Servers&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param lastSummaryRefreshedTime Gets or sets the time when summary was last refreshed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSummaryRefreshedTime(@Nullable String lastSummaryRefreshedTime) {
             $.lastSummaryRefreshedTime = lastSummaryRefreshedTime;
             return this;
         }
 
+        /**
+         * @param migratedCount Gets or sets the count of entities migrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migratedCount(@Nullable Integer migratedCount) {
             $.migratedCount = migratedCount;
             return this;
         }
 
+        /**
+         * @param refreshSummaryState Gets or sets the state of refresh summary.
+         * 
+         * @return builder
+         * 
+         */
         public Builder refreshSummaryState(@Nullable String refreshSummaryState) {
             $.refreshSummaryState = refreshSummaryState;
             return this;
         }
 
+        /**
+         * @param replicatingCount Gets or sets the count of entities being replicated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder replicatingCount(@Nullable Integer replicatingCount) {
             $.replicatingCount = replicatingCount;
             return this;
         }
 
+        /**
+         * @param testMigratedCount Gets or sets the count of entities test migrated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testMigratedCount(@Nullable Integer testMigratedCount) {
             $.testMigratedCount = testMigratedCount;
             return this;

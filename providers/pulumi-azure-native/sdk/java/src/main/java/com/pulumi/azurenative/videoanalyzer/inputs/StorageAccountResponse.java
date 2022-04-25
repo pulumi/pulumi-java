@@ -26,6 +26,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -37,6 +41,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="identity")
     private @Nullable ResourceIdentityResponse identity;
 
+    /**
+     * @return A managed identity that Video Analyzer will use to access the storage account.
+     * 
+     */
     public Optional<ResourceIdentityResponse> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -48,6 +56,10 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
     @Import(name="status", required=true)
     private String status;
 
+    /**
+     * @return The current status of the storage account mapping.
+     * 
+     */
     public String status() {
         return this.status;
     }
@@ -78,16 +90,34 @@ public final class StorageAccountResponse extends com.pulumi.resources.InvokeArg
             $ = new StorageAccountResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id The ID of the storage account resource. Video Analyzer relies on tables, queues, and blobs. The primary storage account must be a Standard Storage account (either Microsoft.ClassicStorage or Microsoft.Storage).
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param identity A managed identity that Video Analyzer will use to access the storage account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable ResourceIdentityResponse identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param status The current status of the storage account mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             $.status = status;
             return this;

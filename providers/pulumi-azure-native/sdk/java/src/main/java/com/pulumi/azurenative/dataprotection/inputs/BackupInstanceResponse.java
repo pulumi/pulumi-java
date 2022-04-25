@@ -30,6 +30,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="currentProtectionState", required=true)
     private String currentProtectionState;
 
+    /**
+     * @return Specifies the current protection state of the resource
+     * 
+     */
     public String currentProtectionState() {
         return this.currentProtectionState;
     }
@@ -41,6 +45,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataSourceInfo", required=true)
     private DatasourceResponse dataSourceInfo;
 
+    /**
+     * @return Gets or sets the data source information.
+     * 
+     */
     public DatasourceResponse dataSourceInfo() {
         return this.dataSourceInfo;
     }
@@ -52,6 +60,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="dataSourceSetInfo")
     private @Nullable DatasourceSetResponse dataSourceSetInfo;
 
+    /**
+     * @return Gets or sets the data source set information.
+     * 
+     */
     public Optional<DatasourceSetResponse> dataSourceSetInfo() {
         return Optional.ofNullable(this.dataSourceSetInfo);
     }
@@ -63,6 +75,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="friendlyName")
     private @Nullable String friendlyName;
 
+    /**
+     * @return Gets or sets the Backup Instance friendly name.
+     * 
+     */
     public Optional<String> friendlyName() {
         return Optional.ofNullable(this.friendlyName);
     }
@@ -81,6 +97,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="policyInfo", required=true)
     private PolicyInfoResponse policyInfo;
 
+    /**
+     * @return Gets or sets the policy information.
+     * 
+     */
     public PolicyInfoResponse policyInfo() {
         return this.policyInfo;
     }
@@ -92,6 +112,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="protectionErrorDetails", required=true)
     private UserFacingErrorResponse protectionErrorDetails;
 
+    /**
+     * @return Specifies the protection error of the resource
+     * 
+     */
     public UserFacingErrorResponse protectionErrorDetails() {
         return this.protectionErrorDetails;
     }
@@ -103,6 +127,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="protectionStatus", required=true)
     private ProtectionStatusDetailsResponse protectionStatus;
 
+    /**
+     * @return Specifies the protection status of the resource
+     * 
+     */
     public ProtectionStatusDetailsResponse protectionStatus() {
         return this.protectionStatus;
     }
@@ -114,6 +142,10 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -150,21 +182,45 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
             $ = new BackupInstanceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param currentProtectionState Specifies the current protection state of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder currentProtectionState(String currentProtectionState) {
             $.currentProtectionState = currentProtectionState;
             return this;
         }
 
+        /**
+         * @param dataSourceInfo Gets or sets the data source information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceInfo(DatasourceResponse dataSourceInfo) {
             $.dataSourceInfo = dataSourceInfo;
             return this;
         }
 
+        /**
+         * @param dataSourceSetInfo Gets or sets the data source set information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceSetInfo(@Nullable DatasourceSetResponse dataSourceSetInfo) {
             $.dataSourceSetInfo = dataSourceSetInfo;
             return this;
         }
 
+        /**
+         * @param friendlyName Gets or sets the Backup Instance friendly name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder friendlyName(@Nullable String friendlyName) {
             $.friendlyName = friendlyName;
             return this;
@@ -175,21 +231,45 @@ public final class BackupInstanceResponse extends com.pulumi.resources.InvokeArg
             return this;
         }
 
+        /**
+         * @param policyInfo Gets or sets the policy information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policyInfo(PolicyInfoResponse policyInfo) {
             $.policyInfo = policyInfo;
             return this;
         }
 
+        /**
+         * @param protectionErrorDetails Specifies the protection error of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionErrorDetails(UserFacingErrorResponse protectionErrorDetails) {
             $.protectionErrorDetails = protectionErrorDetails;
             return this;
         }
 
+        /**
+         * @param protectionStatus Specifies the protection status of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionStatus(ProtectionStatusDetailsResponse protectionStatus) {
             $.protectionStatus = protectionStatus;
             return this;
         }
 
+        /**
+         * @param provisioningState Specifies the provisioning state of the resource i.e. provisioning/updating/Succeeded/Failed
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

@@ -24,6 +24,10 @@ public final class KubernetesRoleNetworkResponse extends com.pulumi.resources.In
     @Import(name="cniConfig", required=true)
     private CniConfigResponse cniConfig;
 
+    /**
+     * @return Cni configuration
+     * 
+     */
     public CniConfigResponse cniConfig() {
         return this.cniConfig;
     }
@@ -35,6 +39,10 @@ public final class KubernetesRoleNetworkResponse extends com.pulumi.resources.In
     @Import(name="loadBalancerConfig", required=true)
     private LoadBalancerConfigResponse loadBalancerConfig;
 
+    /**
+     * @return Load balancer configuration
+     * 
+     */
     public LoadBalancerConfigResponse loadBalancerConfig() {
         return this.loadBalancerConfig;
     }
@@ -64,11 +72,23 @@ public final class KubernetesRoleNetworkResponse extends com.pulumi.resources.In
             $ = new KubernetesRoleNetworkResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cniConfig Cni configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder cniConfig(CniConfigResponse cniConfig) {
             $.cniConfig = cniConfig;
             return this;
         }
 
+        /**
+         * @param loadBalancerConfig Load balancer configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfig(LoadBalancerConfigResponse loadBalancerConfig) {
             $.loadBalancerConfig = loadBalancerConfig;
             return this;

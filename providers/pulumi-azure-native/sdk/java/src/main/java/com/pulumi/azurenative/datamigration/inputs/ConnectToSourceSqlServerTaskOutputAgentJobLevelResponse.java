@@ -26,6 +26,10 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Result identifier
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -37,6 +41,10 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="isEnabled", required=true)
     private Boolean isEnabled;
 
+    /**
+     * @return The state of the original AgentJob.
+     * 
+     */
     public Boolean isEnabled() {
         return this.isEnabled;
     }
@@ -48,6 +56,10 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="jobCategory", required=true)
     private String jobCategory;
 
+    /**
+     * @return The type of AgentJob.
+     * 
+     */
     public String jobCategory() {
         return this.jobCategory;
     }
@@ -59,6 +71,10 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="jobOwner", required=true)
     private String jobOwner;
 
+    /**
+     * @return The owner of the AgentJob
+     * 
+     */
     public String jobOwner() {
         return this.jobOwner;
     }
@@ -70,6 +86,10 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="lastExecutedOn", required=true)
     private String lastExecutedOn;
 
+    /**
+     * @return UTC Date and time when the AgentJob was last executed.
+     * 
+     */
     public String lastExecutedOn() {
         return this.lastExecutedOn;
     }
@@ -81,6 +101,10 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="migrationEligibility", required=true)
     private MigrationEligibilityInfoResponse migrationEligibility;
 
+    /**
+     * @return Information about eligibility of agent job for migration.
+     * 
+     */
     public MigrationEligibilityInfoResponse migrationEligibility() {
         return this.migrationEligibility;
     }
@@ -92,6 +116,10 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return AgentJob name
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -104,6 +132,11 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
     @Import(name="resultType", required=true)
     private String resultType;
 
+    /**
+     * @return Type of result - database level or task level
+     * Expected value is &#39;AgentJobLevelOutput&#39;.
+     * 
+     */
     public String resultType() {
         return this.resultType;
     }
@@ -139,41 +172,90 @@ public final class ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse exten
             $ = new ConnectToSourceSqlServerTaskOutputAgentJobLevelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Result identifier
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param isEnabled The state of the original AgentJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isEnabled(Boolean isEnabled) {
             $.isEnabled = isEnabled;
             return this;
         }
 
+        /**
+         * @param jobCategory The type of AgentJob.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobCategory(String jobCategory) {
             $.jobCategory = jobCategory;
             return this;
         }
 
+        /**
+         * @param jobOwner The owner of the AgentJob
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobOwner(String jobOwner) {
             $.jobOwner = jobOwner;
             return this;
         }
 
+        /**
+         * @param lastExecutedOn UTC Date and time when the AgentJob was last executed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastExecutedOn(String lastExecutedOn) {
             $.lastExecutedOn = lastExecutedOn;
             return this;
         }
 
+        /**
+         * @param migrationEligibility Information about eligibility of agent job for migration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationEligibility(MigrationEligibilityInfoResponse migrationEligibility) {
             $.migrationEligibility = migrationEligibility;
             return this;
         }
 
+        /**
+         * @param name AgentJob name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param resultType Type of result - database level or task level
+         * Expected value is &#39;AgentJobLevelOutput&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resultType(String resultType) {
             $.resultType = resultType;
             return this;

@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class SkuResponse {
     /**
-     * Sku Name.
+     * @return Sku Name.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class SkuResponse {
     }
 
     /**
-     * Sku Name.
+     * @return Sku Name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

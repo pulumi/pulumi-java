@@ -26,6 +26,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
     @Import(name="assignPermissions")
     private @Nullable Boolean assignPermissions;
 
+    /**
+     * @return Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
+     * 
+     */
     public Optional<Boolean> assignPermissions() {
         return Optional.ofNullable(this.assignPermissions);
     }
@@ -37,6 +41,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return The description of the parameter.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -48,6 +56,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return The display name for the parameter.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -59,6 +71,10 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
     @Import(name="strongType")
     private @Nullable String strongType;
 
+    /**
+     * @return Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
+     * 
+     */
     public Optional<String> strongType() {
         return Optional.ofNullable(this.strongType);
     }
@@ -90,21 +106,45 @@ public final class ParameterDefinitionsValueResponseMetadata extends com.pulumi.
             $ = new ParameterDefinitionsValueResponseMetadata(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param assignPermissions Set to true to have Azure portal create role assignments on the resource ID or resource scope value of this parameter during policy assignment. This property is useful in case you wish to assign permissions outside the assignment scope.
+         * 
+         * @return builder
+         * 
+         */
         public Builder assignPermissions(@Nullable Boolean assignPermissions) {
             $.assignPermissions = assignPermissions;
             return this;
         }
 
+        /**
+         * @param description The description of the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName The display name for the parameter.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param strongType Used when assigning the policy definition through the portal. Provides a context aware list of values for the user to choose from.
+         * 
+         * @return builder
+         * 
+         */
         public Builder strongType(@Nullable String strongType) {
             $.strongType = strongType;
             return this;

@@ -31,6 +31,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
     @Import(name="customBlockResponseBody")
     private @Nullable Output<String> customBlockResponseBody;
 
+    /**
+     * @return If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+     * 
+     */
     public Optional<Output<String>> customBlockResponseBody() {
         return Optional.ofNullable(this.customBlockResponseBody);
     }
@@ -42,6 +46,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
     @Import(name="customBlockResponseStatusCode")
     private @Nullable Output<Integer> customBlockResponseStatusCode;
 
+    /**
+     * @return If the action type is block, customer can override the response status code.
+     * 
+     */
     public Optional<Output<Integer>> customBlockResponseStatusCode() {
         return Optional.ofNullable(this.customBlockResponseStatusCode);
     }
@@ -53,6 +61,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
     @Import(name="enabledState")
     private @Nullable Output<Either<String,PolicyEnabledState>> enabledState;
 
+    /**
+     * @return Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
+     * 
+     */
     public Optional<Output<Either<String,PolicyEnabledState>>> enabledState() {
         return Optional.ofNullable(this.enabledState);
     }
@@ -64,6 +76,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
     @Import(name="mode")
     private @Nullable Output<Either<String,PolicyMode>> mode;
 
+    /**
+     * @return Describes if it is in detection mode or prevention mode at policy level.
+     * 
+     */
     public Optional<Output<Either<String,PolicyMode>>> mode() {
         return Optional.ofNullable(this.mode);
     }
@@ -75,6 +91,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
     @Import(name="redirectUrl")
     private @Nullable Output<String> redirectUrl;
 
+    /**
+     * @return If action type is redirect, this field represents redirect URL for the client.
+     * 
+     */
     public Optional<Output<String>> redirectUrl() {
         return Optional.ofNullable(this.redirectUrl);
     }
@@ -86,6 +106,10 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
     @Import(name="requestBodyCheck")
     private @Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck;
 
+    /**
+     * @return Describes if policy managed rules will inspect the request body content.
+     * 
+     */
     public Optional<Output<Either<String,PolicyRequestBodyCheck>>> requestBodyCheck() {
         return Optional.ofNullable(this.requestBodyCheck);
     }
@@ -119,80 +143,188 @@ public final class FrontDoorPolicySettingsArgs extends com.pulumi.resources.Reso
             $ = new FrontDoorPolicySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customBlockResponseBody If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBlockResponseBody(@Nullable Output<String> customBlockResponseBody) {
             $.customBlockResponseBody = customBlockResponseBody;
             return this;
         }
 
+        /**
+         * @param customBlockResponseBody If the action type is block, customer can override the response body. The body must be specified in base64 encoding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBlockResponseBody(String customBlockResponseBody) {
             return customBlockResponseBody(Output.of(customBlockResponseBody));
         }
 
+        /**
+         * @param customBlockResponseStatusCode If the action type is block, customer can override the response status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBlockResponseStatusCode(@Nullable Output<Integer> customBlockResponseStatusCode) {
             $.customBlockResponseStatusCode = customBlockResponseStatusCode;
             return this;
         }
 
+        /**
+         * @param customBlockResponseStatusCode If the action type is block, customer can override the response status code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customBlockResponseStatusCode(Integer customBlockResponseStatusCode) {
             return customBlockResponseStatusCode(Output.of(customBlockResponseStatusCode));
         }
 
+        /**
+         * @param enabledState Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(@Nullable Output<Either<String,PolicyEnabledState>> enabledState) {
             $.enabledState = enabledState;
             return this;
         }
 
+        /**
+         * @param enabledState Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(Either<String,PolicyEnabledState> enabledState) {
             return enabledState(Output.of(enabledState));
         }
 
+        /**
+         * @param enabledState Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(String enabledState) {
             return enabledState(Either.ofLeft(enabledState));
         }
 
+        /**
+         * @param enabledState Describes if the policy is in enabled or disabled state. Defaults to Enabled if not specified.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enabledState(PolicyEnabledState enabledState) {
             return enabledState(Either.ofRight(enabledState));
         }
 
+        /**
+         * @param mode Describes if it is in detection mode or prevention mode at policy level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(@Nullable Output<Either<String,PolicyMode>> mode) {
             $.mode = mode;
             return this;
         }
 
+        /**
+         * @param mode Describes if it is in detection mode or prevention mode at policy level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(Either<String,PolicyMode> mode) {
             return mode(Output.of(mode));
         }
 
+        /**
+         * @param mode Describes if it is in detection mode or prevention mode at policy level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(String mode) {
             return mode(Either.ofLeft(mode));
         }
 
+        /**
+         * @param mode Describes if it is in detection mode or prevention mode at policy level.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mode(PolicyMode mode) {
             return mode(Either.ofRight(mode));
         }
 
+        /**
+         * @param redirectUrl If action type is redirect, this field represents redirect URL for the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUrl(@Nullable Output<String> redirectUrl) {
             $.redirectUrl = redirectUrl;
             return this;
         }
 
+        /**
+         * @param redirectUrl If action type is redirect, this field represents redirect URL for the client.
+         * 
+         * @return builder
+         * 
+         */
         public Builder redirectUrl(String redirectUrl) {
             return redirectUrl(Output.of(redirectUrl));
         }
 
+        /**
+         * @param requestBodyCheck Describes if policy managed rules will inspect the request body content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBodyCheck(@Nullable Output<Either<String,PolicyRequestBodyCheck>> requestBodyCheck) {
             $.requestBodyCheck = requestBodyCheck;
             return this;
         }
 
+        /**
+         * @param requestBodyCheck Describes if policy managed rules will inspect the request body content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBodyCheck(Either<String,PolicyRequestBodyCheck> requestBodyCheck) {
             return requestBodyCheck(Output.of(requestBodyCheck));
         }
 
+        /**
+         * @param requestBodyCheck Describes if policy managed rules will inspect the request body content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBodyCheck(String requestBodyCheck) {
             return requestBodyCheck(Either.ofLeft(requestBodyCheck));
         }
 
+        /**
+         * @param requestBodyCheck Describes if policy managed rules will inspect the request body content.
+         * 
+         * @return builder
+         * 
+         */
         public Builder requestBodyCheck(PolicyRequestBodyCheck requestBodyCheck) {
             return requestBodyCheck(Either.ofRight(requestBodyCheck));
         }

@@ -13,52 +13,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerServiceNetworkProfileResponse {
     /**
-     * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+     * @return An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
      * 
      */
     private final @Nullable String dnsServiceIP;
     /**
-     * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+     * @return A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
      * 
      */
     private final @Nullable String dockerBridgeCidr;
     /**
-     * Profile of the cluster load balancer.
+     * @return Profile of the cluster load balancer.
      * 
      */
     private final @Nullable ManagedClusterLoadBalancerProfileResponse loadBalancerProfile;
     /**
-     * The load balancer sku for the managed cluster.
+     * @return The load balancer sku for the managed cluster.
      * 
      */
     private final @Nullable String loadBalancerSku;
     /**
-     * Network mode used for building Kubernetes network.
+     * @return Network mode used for building Kubernetes network.
      * 
      */
     private final @Nullable String networkMode;
     /**
-     * Network plugin used for building Kubernetes network.
+     * @return Network plugin used for building Kubernetes network.
      * 
      */
     private final @Nullable String networkPlugin;
     /**
-     * Network policy used for building Kubernetes network.
+     * @return Network policy used for building Kubernetes network.
      * 
      */
     private final @Nullable String networkPolicy;
     /**
-     * The outbound (egress) routing method.
+     * @return The outbound (egress) routing method.
      * 
      */
     private final @Nullable String outboundType;
     /**
-     * A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+     * @return A CIDR notation IP range from which to assign pod IPs when kubenet is used.
      * 
      */
     private final @Nullable String podCidr;
     /**
-     * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+     * @return A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
      * 
      */
     private final @Nullable String serviceCidr;
@@ -88,72 +88,72 @@ public final class ContainerServiceNetworkProfileResponse {
     }
 
     /**
-     * An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
+     * @return An IP address assigned to the Kubernetes DNS service. It must be within the Kubernetes service address range specified in serviceCidr.
      * 
-    */
+     */
     public Optional<String> dnsServiceIP() {
         return Optional.ofNullable(this.dnsServiceIP);
     }
     /**
-     * A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
+     * @return A CIDR notation IP range assigned to the Docker bridge network. It must not overlap with any Subnet IP ranges or the Kubernetes service address range.
      * 
-    */
+     */
     public Optional<String> dockerBridgeCidr() {
         return Optional.ofNullable(this.dockerBridgeCidr);
     }
     /**
-     * Profile of the cluster load balancer.
+     * @return Profile of the cluster load balancer.
      * 
-    */
+     */
     public Optional<ManagedClusterLoadBalancerProfileResponse> loadBalancerProfile() {
         return Optional.ofNullable(this.loadBalancerProfile);
     }
     /**
-     * The load balancer sku for the managed cluster.
+     * @return The load balancer sku for the managed cluster.
      * 
-    */
+     */
     public Optional<String> loadBalancerSku() {
         return Optional.ofNullable(this.loadBalancerSku);
     }
     /**
-     * Network mode used for building Kubernetes network.
+     * @return Network mode used for building Kubernetes network.
      * 
-    */
+     */
     public Optional<String> networkMode() {
         return Optional.ofNullable(this.networkMode);
     }
     /**
-     * Network plugin used for building Kubernetes network.
+     * @return Network plugin used for building Kubernetes network.
      * 
-    */
+     */
     public Optional<String> networkPlugin() {
         return Optional.ofNullable(this.networkPlugin);
     }
     /**
-     * Network policy used for building Kubernetes network.
+     * @return Network policy used for building Kubernetes network.
      * 
-    */
+     */
     public Optional<String> networkPolicy() {
         return Optional.ofNullable(this.networkPolicy);
     }
     /**
-     * The outbound (egress) routing method.
+     * @return The outbound (egress) routing method.
      * 
-    */
+     */
     public Optional<String> outboundType() {
         return Optional.ofNullable(this.outboundType);
     }
     /**
-     * A CIDR notation IP range from which to assign pod IPs when kubenet is used.
+     * @return A CIDR notation IP range from which to assign pod IPs when kubenet is used.
      * 
-    */
+     */
     public Optional<String> podCidr() {
         return Optional.ofNullable(this.podCidr);
     }
     /**
-     * A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
+     * @return A CIDR notation IP range from which to assign service cluster IPs. It must not overlap with any Subnet IP ranges.
      * 
-    */
+     */
     public Optional<String> serviceCidr() {
         return Optional.ofNullable(this.serviceCidr);
     }

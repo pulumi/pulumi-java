@@ -22,6 +22,10 @@ public final class ServiceManagedResourcesSettingsArgs extends com.pulumi.resour
     @Import(name="cosmosDb")
     private @Nullable Output<CosmosDbSettingsArgs> cosmosDb;
 
+    /**
+     * @return The settings for the service managed cosmosdb account.
+     * 
+     */
     public Optional<Output<CosmosDbSettingsArgs>> cosmosDb() {
         return Optional.ofNullable(this.cosmosDb);
     }
@@ -50,11 +54,23 @@ public final class ServiceManagedResourcesSettingsArgs extends com.pulumi.resour
             $ = new ServiceManagedResourcesSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param cosmosDb The settings for the service managed cosmosdb account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cosmosDb(@Nullable Output<CosmosDbSettingsArgs> cosmosDb) {
             $.cosmosDb = cosmosDb;
             return this;
         }
 
+        /**
+         * @param cosmosDb The settings for the service managed cosmosdb account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cosmosDb(CosmosDbSettingsArgs cosmosDb) {
             return cosmosDb(Output.of(cosmosDb));
         }

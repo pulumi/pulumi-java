@@ -26,6 +26,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return A description for this rule. Restricted to 140 chars.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -37,6 +41,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
     @Import(name="etag", required=true)
     private String etag;
 
+    /**
+     * @return A unique read-only string that changes whenever the resource is updated.
+     * 
+     */
     public String etag() {
         return this.etag;
     }
@@ -48,6 +56,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
     @Import(name="id")
     private @Nullable String id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }
@@ -59,6 +71,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the resource that is unique within a resource group. This name can be used to access the resource.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -70,6 +86,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return The provisioning state of the service endpoint policy definition resource.
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -81,6 +101,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
     @Import(name="service")
     private @Nullable String service;
 
+    /**
+     * @return Service endpoint name.
+     * 
+     */
     public Optional<String> service() {
         return Optional.ofNullable(this.service);
     }
@@ -92,6 +116,10 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
     @Import(name="serviceResources")
     private @Nullable List<String> serviceResources;
 
+    /**
+     * @return A list of service resources.
+     * 
+     */
     public Optional<List<String>> serviceResources() {
         return Optional.ofNullable(this.serviceResources);
     }
@@ -126,41 +154,89 @@ public final class ServiceEndpointPolicyDefinitionResponse extends com.pulumi.re
             $ = new ServiceEndpointPolicyDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description A description for this rule. Restricted to 140 chars.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param etag A unique read-only string that changes whenever the resource is updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param name The name of the resource that is unique within a resource group. This name can be used to access the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provisioningState The provisioning state of the service endpoint policy definition resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;
         }
 
+        /**
+         * @param service Service endpoint name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder service(@Nullable String service) {
             $.service = service;
             return this;
         }
 
+        /**
+         * @param serviceResources A list of service resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResources(@Nullable List<String> serviceResources) {
             $.serviceResources = serviceResources;
             return this;
         }
 
+        /**
+         * @param serviceResources A list of service resources.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceResources(String... serviceResources) {
             return serviceResources(List.of(serviceResources));
         }

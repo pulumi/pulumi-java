@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class KeyVaultPropertiesResponse {
     /**
-     * The name of key used to encrypt data.
+     * @return The name of key used to encrypt data.
      * 
      */
     private final @Nullable String keyName;
     /**
-     * The key version of the key used to encrypt data.
+     * @return The key version of the key used to encrypt data.
      * 
      */
     private final @Nullable String keyVersion;
     /**
-     * The URI of the key vault key used to encrypt data.
+     * @return The URI of the key vault key used to encrypt data.
      * 
      */
     private final @Nullable String keyvaultUri;
@@ -38,23 +38,23 @@ public final class KeyVaultPropertiesResponse {
     }
 
     /**
-     * The name of key used to encrypt data.
+     * @return The name of key used to encrypt data.
      * 
-    */
+     */
     public Optional<String> keyName() {
         return Optional.ofNullable(this.keyName);
     }
     /**
-     * The key version of the key used to encrypt data.
+     * @return The key version of the key used to encrypt data.
      * 
-    */
+     */
     public Optional<String> keyVersion() {
         return Optional.ofNullable(this.keyVersion);
     }
     /**
-     * The URI of the key vault key used to encrypt data.
+     * @return The URI of the key vault key used to encrypt data.
      * 
-    */
+     */
     public Optional<String> keyvaultUri() {
         return Optional.ofNullable(this.keyvaultUri);
     }

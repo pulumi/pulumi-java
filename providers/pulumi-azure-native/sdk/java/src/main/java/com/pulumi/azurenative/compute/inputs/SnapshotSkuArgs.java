@@ -28,6 +28,10 @@ public final class SnapshotSkuArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<Either<String,SnapshotStorageAccountTypes>> name;
 
+    /**
+     * @return The sku name.
+     * 
+     */
     public Optional<Output<Either<String,SnapshotStorageAccountTypes>>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,19 +60,43 @@ public final class SnapshotSkuArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SnapshotSkuArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<Either<String,SnapshotStorageAccountTypes>> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Either<String,SnapshotStorageAccountTypes> name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Either.ofLeft(name));
         }
 
+        /**
+         * @param name The sku name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(SnapshotStorageAccountTypes name) {
             return name(Either.ofRight(name));
         }

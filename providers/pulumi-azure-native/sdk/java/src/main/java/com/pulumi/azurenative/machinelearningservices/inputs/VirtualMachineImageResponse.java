@@ -23,6 +23,10 @@ public final class VirtualMachineImageResponse extends com.pulumi.resources.Invo
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Virtual Machine image path
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -51,6 +55,12 @@ public final class VirtualMachineImageResponse extends com.pulumi.resources.Invo
             $ = new VirtualMachineImageResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param id Virtual Machine image path
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;

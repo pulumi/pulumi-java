@@ -27,6 +27,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="identity")
     private @Nullable Output<IdentityArgs> identity;
 
+    /**
+     * @return The identity of the resource.
+     * 
+     */
     public Optional<Output<IdentityArgs>> identity() {
         return Optional.ofNullable(this.identity);
     }
@@ -38,6 +42,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return The kind of the resource.
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -49,6 +57,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -60,6 +72,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="managedBy")
     private @Nullable Output<String> managedBy;
 
+    /**
+     * @return ID of the resource that manages this resource.
+     * 
+     */
     public Optional<Output<String>> managedBy() {
         return Optional.ofNullable(this.managedBy);
     }
@@ -71,6 +87,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="parentResourcePath", required=true)
     private Output<String> parentResourcePath;
 
+    /**
+     * @return The parent resource identity.
+     * 
+     */
     public Output<String> parentResourcePath() {
         return this.parentResourcePath;
     }
@@ -82,6 +102,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="plan")
     private @Nullable Output<PlanArgs> plan;
 
+    /**
+     * @return The plan of the resource.
+     * 
+     */
     public Optional<Output<PlanArgs>> plan() {
         return Optional.ofNullable(this.plan);
     }
@@ -93,6 +117,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="properties")
     private @Nullable Output<Object> properties;
 
+    /**
+     * @return The resource properties.
+     * 
+     */
     public Optional<Output<Object>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -104,6 +132,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group for the resource. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -115,6 +147,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceName")
     private @Nullable Output<String> resourceName;
 
+    /**
+     * @return The name of the resource to create.
+     * 
+     */
     public Optional<Output<String>> resourceName() {
         return Optional.ofNullable(this.resourceName);
     }
@@ -126,6 +162,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceProviderNamespace", required=true)
     private Output<String> resourceProviderNamespace;
 
+    /**
+     * @return The namespace of the resource provider.
+     * 
+     */
     public Output<String> resourceProviderNamespace() {
         return this.resourceProviderNamespace;
     }
@@ -137,6 +177,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceType", required=true)
     private Output<String> resourceType;
 
+    /**
+     * @return The resource type of the resource to create.
+     * 
+     */
     public Output<String> resourceType() {
         return this.resourceType;
     }
@@ -148,6 +192,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return The SKU of the resource.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -159,6 +207,10 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -199,119 +251,275 @@ public final class ResourceArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ResourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(@Nullable Output<IdentityArgs> identity) {
             $.identity = identity;
             return this;
         }
 
+        /**
+         * @param identity The identity of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder identity(IdentityArgs identity) {
             return identity(Output.of(identity));
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind The kind of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedBy ID of the resource that manages this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(@Nullable Output<String> managedBy) {
             $.managedBy = managedBy;
             return this;
         }
 
+        /**
+         * @param managedBy ID of the resource that manages this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedBy(String managedBy) {
             return managedBy(Output.of(managedBy));
         }
 
+        /**
+         * @param parentResourcePath The parent resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourcePath(Output<String> parentResourcePath) {
             $.parentResourcePath = parentResourcePath;
             return this;
         }
 
+        /**
+         * @param parentResourcePath The parent resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parentResourcePath(String parentResourcePath) {
             return parentResourcePath(Output.of(parentResourcePath));
         }
 
+        /**
+         * @param plan The plan of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(@Nullable Output<PlanArgs> plan) {
             $.plan = plan;
             return this;
         }
 
+        /**
+         * @param plan The plan of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder plan(PlanArgs plan) {
             return plan(Output.of(plan));
         }
 
+        /**
+         * @param properties The resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<Object> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The resource properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Object properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group for the resource. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group for the resource. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param resourceName The name of the resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(@Nullable Output<String> resourceName) {
             $.resourceName = resourceName;
             return this;
         }
 
+        /**
+         * @param resourceName The name of the resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceName(String resourceName) {
             return resourceName(Output.of(resourceName));
         }
 
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(Output<String> resourceProviderNamespace) {
             $.resourceProviderNamespace = resourceProviderNamespace;
             return this;
         }
 
+        /**
+         * @param resourceProviderNamespace The namespace of the resource provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceProviderNamespace(String resourceProviderNamespace) {
             return resourceProviderNamespace(Output.of(resourceProviderNamespace));
         }
 
+        /**
+         * @param resourceType The resource type of the resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(Output<String> resourceType) {
             $.resourceType = resourceType;
             return this;
         }
 
+        /**
+         * @param resourceType The resource type of the resource to create.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceType(String resourceType) {
             return resourceType(Output.of(resourceType));
         }
 
+        /**
+         * @param sku The SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku The SKU of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

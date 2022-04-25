@@ -30,6 +30,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="customerSecrets")
     private @Nullable Output<List<CustomerSecretArgs>> customerSecrets;
 
+    /**
+     * @return List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+     * 
+     */
     public Optional<Output<List<CustomerSecretArgs>>> customerSecrets() {
         return Optional.ofNullable(this.customerSecrets);
     }
@@ -41,6 +45,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataManagerName", required=true)
     private Output<String> dataManagerName;
 
+    /**
+     * @return The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+     * 
+     */
     public Output<String> dataManagerName() {
         return this.dataManagerName;
     }
@@ -52,6 +60,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataServiceInput")
     private @Nullable Output<Object> dataServiceInput;
 
+    /**
+     * @return A generic json used differently by each data service type.
+     * 
+     */
     public Optional<Output<Object>> dataServiceInput() {
         return Optional.ofNullable(this.dataServiceInput);
     }
@@ -63,6 +75,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataServiceName", required=true)
     private Output<String> dataServiceName;
 
+    /**
+     * @return The data service type of the job definition.
+     * 
+     */
     public Output<String> dataServiceName() {
         return this.dataServiceName;
     }
@@ -74,6 +90,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSinkId", required=true)
     private Output<String> dataSinkId;
 
+    /**
+     * @return Data Sink Id associated to the job definition.
+     * 
+     */
     public Output<String> dataSinkId() {
         return this.dataSinkId;
     }
@@ -85,6 +105,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dataSourceId", required=true)
     private Output<String> dataSourceId;
 
+    /**
+     * @return Data Source Id associated to the job definition.
+     * 
+     */
     public Output<String> dataSourceId() {
         return this.dataSourceId;
     }
@@ -96,6 +120,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="jobDefinitionName")
     private @Nullable Output<String> jobDefinitionName;
 
+    /**
+     * @return The job definition name to be created or updated.
+     * 
+     */
     public Optional<Output<String>> jobDefinitionName() {
         return Optional.ofNullable(this.jobDefinitionName);
     }
@@ -107,6 +135,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastModifiedTime")
     private @Nullable Output<String> lastModifiedTime;
 
+    /**
+     * @return Last modified time of the job definition.
+     * 
+     */
     public Optional<Output<String>> lastModifiedTime() {
         return Optional.ofNullable(this.lastModifiedTime);
     }
@@ -118,6 +150,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The Resource Group Name
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -129,6 +165,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="runLocation")
     private @Nullable Output<RunLocation> runLocation;
 
+    /**
+     * @return This is the preferred geo location for the job to run.
+     * 
+     */
     public Optional<Output<RunLocation>> runLocation() {
         return Optional.ofNullable(this.runLocation);
     }
@@ -140,6 +180,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schedules")
     private @Nullable Output<List<ScheduleArgs>> schedules;
 
+    /**
+     * @return Schedule for running the job definition
+     * 
+     */
     public Optional<Output<List<ScheduleArgs>>> schedules() {
         return Optional.ofNullable(this.schedules);
     }
@@ -151,6 +195,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="state", required=true)
     private Output<State> state;
 
+    /**
+     * @return State of the job definition.
+     * 
+     */
     public Output<State> state() {
         return this.state;
     }
@@ -162,6 +210,10 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userConfirmation")
     private @Nullable Output<UserConfirmation> userConfirmation;
 
+    /**
+     * @return Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+     * 
+     */
     public Optional<Output<UserConfirmation>> userConfirmation() {
         return Optional.ofNullable(this.userConfirmation);
     }
@@ -202,127 +254,295 @@ public final class JobDefinitionArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JobDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerSecrets List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSecrets(@Nullable Output<List<CustomerSecretArgs>> customerSecrets) {
             $.customerSecrets = customerSecrets;
             return this;
         }
 
+        /**
+         * @param customerSecrets List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSecrets(List<CustomerSecretArgs> customerSecrets) {
             return customerSecrets(Output.of(customerSecrets));
         }
 
+        /**
+         * @param customerSecrets List of customer secrets containing a key identifier and key value. The key identifier is a way for the specific data source to understand the key. Value contains customer secret encrypted by the encryptionKeys.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSecrets(CustomerSecretArgs... customerSecrets) {
             return customerSecrets(List.of(customerSecrets));
         }
 
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataManagerName(Output<String> dataManagerName) {
             $.dataManagerName = dataManagerName;
             return this;
         }
 
+        /**
+         * @param dataManagerName The name of the DataManager Resource within the specified resource group. DataManager names must be between 3 and 24 characters in length and use any alphanumeric and underscore only
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataManagerName(String dataManagerName) {
             return dataManagerName(Output.of(dataManagerName));
         }
 
+        /**
+         * @param dataServiceInput A generic json used differently by each data service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataServiceInput(@Nullable Output<Object> dataServiceInput) {
             $.dataServiceInput = dataServiceInput;
             return this;
         }
 
+        /**
+         * @param dataServiceInput A generic json used differently by each data service type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataServiceInput(Object dataServiceInput) {
             return dataServiceInput(Output.of(dataServiceInput));
         }
 
+        /**
+         * @param dataServiceName The data service type of the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataServiceName(Output<String> dataServiceName) {
             $.dataServiceName = dataServiceName;
             return this;
         }
 
+        /**
+         * @param dataServiceName The data service type of the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataServiceName(String dataServiceName) {
             return dataServiceName(Output.of(dataServiceName));
         }
 
+        /**
+         * @param dataSinkId Data Sink Id associated to the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSinkId(Output<String> dataSinkId) {
             $.dataSinkId = dataSinkId;
             return this;
         }
 
+        /**
+         * @param dataSinkId Data Sink Id associated to the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSinkId(String dataSinkId) {
             return dataSinkId(Output.of(dataSinkId));
         }
 
+        /**
+         * @param dataSourceId Data Source Id associated to the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(Output<String> dataSourceId) {
             $.dataSourceId = dataSourceId;
             return this;
         }
 
+        /**
+         * @param dataSourceId Data Source Id associated to the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSourceId(String dataSourceId) {
             return dataSourceId(Output.of(dataSourceId));
         }
 
+        /**
+         * @param jobDefinitionName The job definition name to be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobDefinitionName(@Nullable Output<String> jobDefinitionName) {
             $.jobDefinitionName = jobDefinitionName;
             return this;
         }
 
+        /**
+         * @param jobDefinitionName The job definition name to be created or updated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jobDefinitionName(String jobDefinitionName) {
             return jobDefinitionName(Output.of(jobDefinitionName));
         }
 
+        /**
+         * @param lastModifiedTime Last modified time of the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(@Nullable Output<String> lastModifiedTime) {
             $.lastModifiedTime = lastModifiedTime;
             return this;
         }
 
+        /**
+         * @param lastModifiedTime Last modified time of the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastModifiedTime(String lastModifiedTime) {
             return lastModifiedTime(Output.of(lastModifiedTime));
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The Resource Group Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param runLocation This is the preferred geo location for the job to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runLocation(@Nullable Output<RunLocation> runLocation) {
             $.runLocation = runLocation;
             return this;
         }
 
+        /**
+         * @param runLocation This is the preferred geo location for the job to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder runLocation(RunLocation runLocation) {
             return runLocation(Output.of(runLocation));
         }
 
+        /**
+         * @param schedules Schedule for running the job definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(@Nullable Output<List<ScheduleArgs>> schedules) {
             $.schedules = schedules;
             return this;
         }
 
+        /**
+         * @param schedules Schedule for running the job definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(List<ScheduleArgs> schedules) {
             return schedules(Output.of(schedules));
         }
 
+        /**
+         * @param schedules Schedule for running the job definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder schedules(ScheduleArgs... schedules) {
             return schedules(List.of(schedules));
         }
 
+        /**
+         * @param state State of the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(Output<State> state) {
             $.state = state;
             return this;
         }
 
+        /**
+         * @param state State of the job definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder state(State state) {
             return state(Output.of(state));
         }
 
+        /**
+         * @param userConfirmation Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConfirmation(@Nullable Output<UserConfirmation> userConfirmation) {
             $.userConfirmation = userConfirmation;
             return this;
         }
 
+        /**
+         * @param userConfirmation Enum to detect if user confirmation is required. If not passed will default to NotRequired.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userConfirmation(UserConfirmation userConfirmation) {
             return userConfirmation(Output.of(userConfirmation));
         }

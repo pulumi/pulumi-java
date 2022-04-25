@@ -18,73 +18,73 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetDomainResult {
     /**
-     * Endpoint for the domain.
+     * @return Endpoint for the domain.
      * 
      */
     private final String endpoint;
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
      */
     private final String id;
     /**
-     * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
      */
     private final @Nullable List<InboundIpRuleResponse> inboundIpRules;
     /**
-     * This determines the format that Event Grid should expect for incoming events published to the domain.
+     * @return This determines the format that Event Grid should expect for incoming events published to the domain.
      * 
      */
     private final @Nullable String inputSchema;
     /**
-     * Information about the InputSchemaMapping which specified the info about mapping event payload.
+     * @return Information about the InputSchemaMapping which specified the info about mapping event payload.
      * 
      */
     private final @Nullable JsonInputSchemaMappingResponse inputSchemaMapping;
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
      */
     private final String location;
     /**
-     * Metric resource id for the domain.
+     * @return Metric resource id for the domain.
      * 
      */
     private final String metricResourceId;
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
      */
     private final String name;
     /**
-     * List of private endpoint connections.
+     * @return List of private endpoint connections.
      * 
      */
     private final List<PrivateEndpointConnectionResponse> privateEndpointConnections;
     /**
-     * Provisioning state of the domain.
+     * @return Provisioning state of the domain.
      * 
      */
     private final String provisioningState;
     /**
-     * This determines if traffic is allowed over public network. By default it is enabled.
+     * @return This determines if traffic is allowed over public network. By default it is enabled.
      * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules&#34; /&gt;
      * 
      */
     private final @Nullable String publicNetworkAccess;
     /**
-     * The system metadata relating to Domain resource.
+     * @return The system metadata relating to Domain resource.
      * 
      */
     private final SystemDataResponse systemData;
     /**
-     * Tags of the resource.
+     * @return Tags of the resource.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
      */
     private final String type;
@@ -122,101 +122,101 @@ public final class GetDomainResult {
     }
 
     /**
-     * Endpoint for the domain.
+     * @return Endpoint for the domain.
      * 
-    */
+     */
     public String endpoint() {
         return this.endpoint;
     }
     /**
-     * Fully qualified identifier of the resource.
+     * @return Fully qualified identifier of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
+     * @return This can be used to restrict traffic from specific IPs instead of all IPs. Note: These are considered only if PublicNetworkAccess is enabled.
      * 
-    */
+     */
     public List<InboundIpRuleResponse> inboundIpRules() {
         return this.inboundIpRules == null ? List.of() : this.inboundIpRules;
     }
     /**
-     * This determines the format that Event Grid should expect for incoming events published to the domain.
+     * @return This determines the format that Event Grid should expect for incoming events published to the domain.
      * 
-    */
+     */
     public Optional<String> inputSchema() {
         return Optional.ofNullable(this.inputSchema);
     }
     /**
-     * Information about the InputSchemaMapping which specified the info about mapping event payload.
+     * @return Information about the InputSchemaMapping which specified the info about mapping event payload.
      * 
-    */
+     */
     public Optional<JsonInputSchemaMappingResponse> inputSchemaMapping() {
         return Optional.ofNullable(this.inputSchemaMapping);
     }
     /**
-     * Location of the resource.
+     * @return Location of the resource.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Metric resource id for the domain.
+     * @return Metric resource id for the domain.
      * 
-    */
+     */
     public String metricResourceId() {
         return this.metricResourceId;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * List of private endpoint connections.
+     * @return List of private endpoint connections.
      * 
-    */
+     */
     public List<PrivateEndpointConnectionResponse> privateEndpointConnections() {
         return this.privateEndpointConnections;
     }
     /**
-     * Provisioning state of the domain.
+     * @return Provisioning state of the domain.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * This determines if traffic is allowed over public network. By default it is enabled.
+     * @return This determines if traffic is allowed over public network. By default it is enabled.
      * You can further restrict to specific IPs by configuring &lt;seealso cref=&#34;P:Microsoft.Azure.Events.ResourceProvider.Common.Contracts.DomainProperties.InboundIpRules&#34; /&gt;
      * 
-    */
+     */
     public Optional<String> publicNetworkAccess() {
         return Optional.ofNullable(this.publicNetworkAccess);
     }
     /**
-     * The system metadata relating to Domain resource.
+     * @return The system metadata relating to Domain resource.
      * 
-    */
+     */
     public SystemDataResponse systemData() {
         return this.systemData;
     }
     /**
-     * Tags of the resource.
+     * @return Tags of the resource.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Type of the resource.
+     * @return Type of the resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

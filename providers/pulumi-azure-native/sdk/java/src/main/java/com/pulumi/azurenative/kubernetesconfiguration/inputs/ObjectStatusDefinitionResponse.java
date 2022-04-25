@@ -29,6 +29,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
     @Import(name="appliedBy")
     private @Nullable ObjectReferenceDefinitionResponse appliedBy;
 
+    /**
+     * @return Object reference to the Kustomization that applied this object
+     * 
+     */
     public Optional<ObjectReferenceDefinitionResponse> appliedBy() {
         return Optional.ofNullable(this.appliedBy);
     }
@@ -40,6 +44,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
     @Import(name="complianceState")
     private @Nullable String complianceState;
 
+    /**
+     * @return Compliance state of the applied object showing whether the applied object has come into a ready state on the cluster.
+     * 
+     */
     public Optional<String> complianceState() {
         return Optional.ofNullable(this.complianceState);
     }
@@ -51,6 +59,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
     @Import(name="helmReleaseProperties")
     private @Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties;
 
+    /**
+     * @return Additional properties that are provided from objects of the HelmRelease kind
+     * 
+     */
     public Optional<HelmReleasePropertiesDefinitionResponse> helmReleaseProperties() {
         return Optional.ofNullable(this.helmReleaseProperties);
     }
@@ -62,6 +74,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
     @Import(name="kind")
     private @Nullable String kind;
 
+    /**
+     * @return Kind of the applied object
+     * 
+     */
     public Optional<String> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -73,6 +89,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the applied object
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -84,6 +104,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
     @Import(name="namespace")
     private @Nullable String namespace;
 
+    /**
+     * @return Namespace of the applied object
+     * 
+     */
     public Optional<String> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -95,6 +119,10 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
     @Import(name="statusConditions")
     private @Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions;
 
+    /**
+     * @return List of Kubernetes object status conditions present on the cluster
+     * 
+     */
     public Optional<List<ObjectStatusConditionDefinitionResponse>> statusConditions() {
         return Optional.ofNullable(this.statusConditions);
     }
@@ -129,41 +157,89 @@ public final class ObjectStatusDefinitionResponse extends com.pulumi.resources.I
             $ = new ObjectStatusDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param appliedBy Object reference to the Kustomization that applied this object
+         * 
+         * @return builder
+         * 
+         */
         public Builder appliedBy(@Nullable ObjectReferenceDefinitionResponse appliedBy) {
             $.appliedBy = appliedBy;
             return this;
         }
 
+        /**
+         * @param complianceState Compliance state of the applied object showing whether the applied object has come into a ready state on the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder complianceState(@Nullable String complianceState) {
             $.complianceState = complianceState;
             return this;
         }
 
+        /**
+         * @param helmReleaseProperties Additional properties that are provided from objects of the HelmRelease kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder helmReleaseProperties(@Nullable HelmReleasePropertiesDefinitionResponse helmReleaseProperties) {
             $.helmReleaseProperties = helmReleaseProperties;
             return this;
         }
 
+        /**
+         * @param kind Kind of the applied object
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable String kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param name Name of the applied object
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param namespace Namespace of the applied object
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable String namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param statusConditions List of Kubernetes object status conditions present on the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusConditions(@Nullable List<ObjectStatusConditionDefinitionResponse> statusConditions) {
             $.statusConditions = statusConditions;
             return this;
         }
 
+        /**
+         * @param statusConditions List of Kubernetes object status conditions present on the cluster
+         * 
+         * @return builder
+         * 
+         */
         public Builder statusConditions(ObjectStatusConditionDefinitionResponse... statusConditions) {
             return statusConditions(List.of(statusConditions));
         }

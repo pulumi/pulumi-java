@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class StorageProfileResponse {
     /**
-     * The list of storage accounts in the cluster.
+     * @return The list of storage accounts in the cluster.
      * 
      */
     private final @Nullable List<StorageAccountResponse> storageaccounts;
@@ -23,9 +23,9 @@ public final class StorageProfileResponse {
     }
 
     /**
-     * The list of storage accounts in the cluster.
+     * @return The list of storage accounts in the cluster.
      * 
-    */
+     */
     public List<StorageAccountResponse> storageaccounts() {
         return this.storageaccounts == null ? List.of() : this.storageaccounts;
     }

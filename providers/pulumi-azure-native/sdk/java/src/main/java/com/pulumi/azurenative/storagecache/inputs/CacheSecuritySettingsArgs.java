@@ -27,6 +27,10 @@ public final class CacheSecuritySettingsArgs extends com.pulumi.resources.Resour
     @Import(name="accessPolicies")
     private @Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies;
 
+    /**
+     * @return NFS access policies defined for this cache.
+     * 
+     */
     public Optional<Output<List<NfsAccessPolicyArgs>>> accessPolicies() {
         return Optional.ofNullable(this.accessPolicies);
     }
@@ -55,15 +59,33 @@ public final class CacheSecuritySettingsArgs extends com.pulumi.resources.Resour
             $ = new CacheSecuritySettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accessPolicies NFS access policies defined for this cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(@Nullable Output<List<NfsAccessPolicyArgs>> accessPolicies) {
             $.accessPolicies = accessPolicies;
             return this;
         }
 
+        /**
+         * @param accessPolicies NFS access policies defined for this cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(List<NfsAccessPolicyArgs> accessPolicies) {
             return accessPolicies(Output.of(accessPolicies));
         }
 
+        /**
+         * @param accessPolicies NFS access policies defined for this cache.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accessPolicies(NfsAccessPolicyArgs... accessPolicies) {
             return accessPolicies(List.of(accessPolicies));
         }

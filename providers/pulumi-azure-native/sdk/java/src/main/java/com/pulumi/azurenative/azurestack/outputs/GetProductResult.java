@@ -18,112 +18,112 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetProductResult {
     /**
-     * The part number used for billing purposes.
+     * @return The part number used for billing purposes.
      * 
      */
     private final @Nullable String billingPartNumber;
     /**
-     * Product compatibility with current device.
+     * @return Product compatibility with current device.
      * 
      */
     private final @Nullable CompatibilityResponse compatibility;
     /**
-     * The description of the product.
+     * @return The description of the product.
      * 
      */
     private final @Nullable String description;
     /**
-     * The display name of the product.
+     * @return The display name of the product.
      * 
      */
     private final @Nullable String displayName;
     /**
-     * The entity tag used for optimistic concurrency when modifying the resource.
+     * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
      */
     private final @Nullable String etag;
     /**
-     * The identifier of the gallery item corresponding to the product.
+     * @return The identifier of the gallery item corresponding to the product.
      * 
      */
     private final @Nullable String galleryItemIdentity;
     /**
-     * Additional links available for this product.
+     * @return Additional links available for this product.
      * 
      */
     private final @Nullable IconUrisResponse iconUris;
     /**
-     * ID of the resource.
+     * @return ID of the resource.
      * 
      */
     private final String id;
     /**
-     * The legal terms.
+     * @return The legal terms.
      * 
      */
     private final @Nullable String legalTerms;
     /**
-     * Additional links available for this product.
+     * @return Additional links available for this product.
      * 
      */
     private final @Nullable List<ProductLinkResponse> links;
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
      */
     private final String name;
     /**
-     * The offer representing the product.
+     * @return The offer representing the product.
      * 
      */
     private final @Nullable String offer;
     /**
-     * The version of the product offer.
+     * @return The version of the product offer.
      * 
      */
     private final @Nullable String offerVersion;
     /**
-     * The length of product content.
+     * @return The length of product content.
      * 
      */
     private final @Nullable Double payloadLength;
     /**
-     * The privacy policy.
+     * @return The privacy policy.
      * 
      */
     private final @Nullable String privacyPolicy;
     /**
-     * The kind of the product (virtualMachine or virtualMachineExtension)
+     * @return The kind of the product (virtualMachine or virtualMachineExtension)
      * 
      */
     private final @Nullable String productKind;
     /**
-     * Additional properties for the product.
+     * @return Additional properties for the product.
      * 
      */
     private final @Nullable ProductPropertiesResponse productProperties;
     /**
-     * The user-friendly name of the product publisher.
+     * @return The user-friendly name of the product publisher.
      * 
      */
     private final @Nullable String publisherDisplayName;
     /**
-     * Publisher identifier.
+     * @return Publisher identifier.
      * 
      */
     private final @Nullable String publisherIdentifier;
     /**
-     * The product SKU.
+     * @return The product SKU.
      * 
      */
     private final @Nullable String sku;
     /**
-     * Type of Resource.
+     * @return Type of Resource.
      * 
      */
     private final String type;
     /**
-     * The type of the Virtual Machine Extension.
+     * @return The type of the Virtual Machine Extension.
      * 
      */
     private final @Nullable String vmExtensionType;
@@ -177,156 +177,156 @@ public final class GetProductResult {
     }
 
     /**
-     * The part number used for billing purposes.
+     * @return The part number used for billing purposes.
      * 
-    */
+     */
     public Optional<String> billingPartNumber() {
         return Optional.ofNullable(this.billingPartNumber);
     }
     /**
-     * Product compatibility with current device.
+     * @return Product compatibility with current device.
      * 
-    */
+     */
     public Optional<CompatibilityResponse> compatibility() {
         return Optional.ofNullable(this.compatibility);
     }
     /**
-     * The description of the product.
+     * @return The description of the product.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * The display name of the product.
+     * @return The display name of the product.
      * 
-    */
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
     /**
-     * The entity tag used for optimistic concurrency when modifying the resource.
+     * @return The entity tag used for optimistic concurrency when modifying the resource.
      * 
-    */
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
     /**
-     * The identifier of the gallery item corresponding to the product.
+     * @return The identifier of the gallery item corresponding to the product.
      * 
-    */
+     */
     public Optional<String> galleryItemIdentity() {
         return Optional.ofNullable(this.galleryItemIdentity);
     }
     /**
-     * Additional links available for this product.
+     * @return Additional links available for this product.
      * 
-    */
+     */
     public Optional<IconUrisResponse> iconUris() {
         return Optional.ofNullable(this.iconUris);
     }
     /**
-     * ID of the resource.
+     * @return ID of the resource.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The legal terms.
+     * @return The legal terms.
      * 
-    */
+     */
     public Optional<String> legalTerms() {
         return Optional.ofNullable(this.legalTerms);
     }
     /**
-     * Additional links available for this product.
+     * @return Additional links available for this product.
      * 
-    */
+     */
     public List<ProductLinkResponse> links() {
         return this.links == null ? List.of() : this.links;
     }
     /**
-     * Name of the resource.
+     * @return Name of the resource.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * The offer representing the product.
+     * @return The offer representing the product.
      * 
-    */
+     */
     public Optional<String> offer() {
         return Optional.ofNullable(this.offer);
     }
     /**
-     * The version of the product offer.
+     * @return The version of the product offer.
      * 
-    */
+     */
     public Optional<String> offerVersion() {
         return Optional.ofNullable(this.offerVersion);
     }
     /**
-     * The length of product content.
+     * @return The length of product content.
      * 
-    */
+     */
     public Optional<Double> payloadLength() {
         return Optional.ofNullable(this.payloadLength);
     }
     /**
-     * The privacy policy.
+     * @return The privacy policy.
      * 
-    */
+     */
     public Optional<String> privacyPolicy() {
         return Optional.ofNullable(this.privacyPolicy);
     }
     /**
-     * The kind of the product (virtualMachine or virtualMachineExtension)
+     * @return The kind of the product (virtualMachine or virtualMachineExtension)
      * 
-    */
+     */
     public Optional<String> productKind() {
         return Optional.ofNullable(this.productKind);
     }
     /**
-     * Additional properties for the product.
+     * @return Additional properties for the product.
      * 
-    */
+     */
     public Optional<ProductPropertiesResponse> productProperties() {
         return Optional.ofNullable(this.productProperties);
     }
     /**
-     * The user-friendly name of the product publisher.
+     * @return The user-friendly name of the product publisher.
      * 
-    */
+     */
     public Optional<String> publisherDisplayName() {
         return Optional.ofNullable(this.publisherDisplayName);
     }
     /**
-     * Publisher identifier.
+     * @return Publisher identifier.
      * 
-    */
+     */
     public Optional<String> publisherIdentifier() {
         return Optional.ofNullable(this.publisherIdentifier);
     }
     /**
-     * The product SKU.
+     * @return The product SKU.
      * 
-    */
+     */
     public Optional<String> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Type of Resource.
+     * @return Type of Resource.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The type of the Virtual Machine Extension.
+     * @return The type of the Virtual Machine Extension.
      * 
-    */
+     */
     public Optional<String> vmExtensionType() {
         return Optional.ofNullable(this.vmExtensionType);
     }

@@ -19,6 +19,10 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="containerGroupName", required=true)
     private String containerGroupName;
 
+    /**
+     * @return The name of the container group.
+     * 
+     */
     public String containerGroupName() {
         return this.containerGroupName;
     }
@@ -30,6 +34,10 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -59,11 +67,23 @@ public final class GetContainerGroupArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetContainerGroupArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param containerGroupName The name of the container group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder containerGroupName(String containerGroupName) {
             $.containerGroupName = containerGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;

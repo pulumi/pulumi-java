@@ -25,6 +25,10 @@ public final class ApplicationBillingDetailsDefinitionResponse extends com.pulum
     @Import(name="resourceUsageId")
     private @Nullable String resourceUsageId;
 
+    /**
+     * @return The managed application resource usage Id.
+     * 
+     */
     public Optional<String> resourceUsageId() {
         return Optional.ofNullable(this.resourceUsageId);
     }
@@ -53,6 +57,12 @@ public final class ApplicationBillingDetailsDefinitionResponse extends com.pulum
             $ = new ApplicationBillingDetailsDefinitionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param resourceUsageId The managed application resource usage Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceUsageId(@Nullable String resourceUsageId) {
             $.resourceUsageId = resourceUsageId;
             return this;

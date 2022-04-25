@@ -26,6 +26,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="access", required=true)
     private String access;
 
+    /**
+     * @return Access allowed by this rule.
+     * 
+     */
     public String access() {
         return this.access;
     }
@@ -37,6 +41,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="anonymousGID")
     private @Nullable String anonymousGID;
 
+    /**
+     * @return GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
+     * 
+     */
     public Optional<String> anonymousGID() {
         return Optional.ofNullable(this.anonymousGID);
     }
@@ -48,6 +56,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="anonymousUID")
     private @Nullable String anonymousUID;
 
+    /**
+     * @return UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
+     * 
+     */
     public Optional<String> anonymousUID() {
         return Optional.ofNullable(this.anonymousUID);
     }
@@ -59,6 +71,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="filter")
     private @Nullable String filter;
 
+    /**
+     * @return Filter applied to the scope for this rule. The filter&#39;s format depends on its scope. &#39;default&#39; scope matches all clients and has no filter value. &#39;network&#39; scope takes a filter in CIDR format (for example, 10.99.1.0/24). &#39;host&#39; takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
+     * 
+     */
     public Optional<String> filter() {
         return Optional.ofNullable(this.filter);
     }
@@ -70,6 +86,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="rootSquash")
     private @Nullable Boolean rootSquash;
 
+    /**
+     * @return Map root accesses to anonymousUID and anonymousGID.
+     * 
+     */
     public Optional<Boolean> rootSquash() {
         return Optional.ofNullable(this.rootSquash);
     }
@@ -81,6 +101,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="scope", required=true)
     private String scope;
 
+    /**
+     * @return Scope for this rule. The scope and filter determine which clients match the rule.
+     * 
+     */
     public String scope() {
         return this.scope;
     }
@@ -92,6 +116,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="submountAccess")
     private @Nullable Boolean submountAccess;
 
+    /**
+     * @return For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path &#39;/&#39;. If set to yes, clients can mount a deeper path, like &#39;/a/b&#39;.
+     * 
+     */
     public Optional<Boolean> submountAccess() {
         return Optional.ofNullable(this.submountAccess);
     }
@@ -103,6 +131,10 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="suid")
     private @Nullable Boolean suid;
 
+    /**
+     * @return Allow SUID semantics.
+     * 
+     */
     public Optional<Boolean> suid() {
         return Optional.ofNullable(this.suid);
     }
@@ -138,41 +170,89 @@ public final class NfsAccessRuleResponse extends com.pulumi.resources.InvokeArgs
             $ = new NfsAccessRuleResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param access Access allowed by this rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder access(String access) {
             $.access = access;
             return this;
         }
 
+        /**
+         * @param anonymousGID GID value that replaces 0 when rootSquash is true. This will use the value of anonymousUID if not provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonymousGID(@Nullable String anonymousGID) {
             $.anonymousGID = anonymousGID;
             return this;
         }
 
+        /**
+         * @param anonymousUID UID value that replaces 0 when rootSquash is true. 65534 will be used if not provided.
+         * 
+         * @return builder
+         * 
+         */
         public Builder anonymousUID(@Nullable String anonymousUID) {
             $.anonymousUID = anonymousUID;
             return this;
         }
 
+        /**
+         * @param filter Filter applied to the scope for this rule. The filter&#39;s format depends on its scope. &#39;default&#39; scope matches all clients and has no filter value. &#39;network&#39; scope takes a filter in CIDR format (for example, 10.99.1.0/24). &#39;host&#39; takes an IP address or fully qualified domain name as filter. If a client does not match any filter rule and there is no default rule, access is denied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder filter(@Nullable String filter) {
             $.filter = filter;
             return this;
         }
 
+        /**
+         * @param rootSquash Map root accesses to anonymousUID and anonymousGID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootSquash(@Nullable Boolean rootSquash) {
             $.rootSquash = rootSquash;
             return this;
         }
 
+        /**
+         * @param scope Scope for this rule. The scope and filter determine which clients match the rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder scope(String scope) {
             $.scope = scope;
             return this;
         }
 
+        /**
+         * @param submountAccess For the default policy, allow access to subdirectories under the root export. If this is set to no, clients can only mount the path &#39;/&#39;. If set to yes, clients can mount a deeper path, like &#39;/a/b&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder submountAccess(@Nullable Boolean submountAccess) {
             $.submountAccess = submountAccess;
             return this;
         }
 
+        /**
+         * @param suid Allow SUID semantics.
+         * 
+         * @return builder
+         * 
+         */
         public Builder suid(@Nullable Boolean suid) {
             $.suid = suid;
             return this;

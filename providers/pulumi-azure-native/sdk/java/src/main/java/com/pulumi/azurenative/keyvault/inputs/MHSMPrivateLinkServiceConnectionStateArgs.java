@@ -29,6 +29,10 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends com.pulumi.
     @Import(name="actionsRequired")
     private @Nullable Output<Either<String,ActionsRequired>> actionsRequired;
 
+    /**
+     * @return A message indicating if changes on the service provider require any updates on the consumer.
+     * 
+     */
     public Optional<Output<Either<String,ActionsRequired>>> actionsRequired() {
         return Optional.ofNullable(this.actionsRequired);
     }
@@ -40,6 +44,10 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends com.pulumi.
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The reason for approval or rejection.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -51,6 +59,10 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends com.pulumi.
     @Import(name="status")
     private @Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status;
 
+    /**
+     * @return Indicates whether the connection has been approved, rejected or removed by the key vault owner.
+     * 
+     */
     public Optional<Output<Either<String,PrivateEndpointServiceConnectionStatus>>> status() {
         return Optional.ofNullable(this.status);
     }
@@ -81,45 +93,105 @@ public final class MHSMPrivateLinkServiceConnectionStateArgs extends com.pulumi.
             $ = new MHSMPrivateLinkServiceConnectionStateArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionsRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(@Nullable Output<Either<String,ActionsRequired>> actionsRequired) {
             $.actionsRequired = actionsRequired;
             return this;
         }
 
+        /**
+         * @param actionsRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(Either<String,ActionsRequired> actionsRequired) {
             return actionsRequired(Output.of(actionsRequired));
         }
 
+        /**
+         * @param actionsRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(String actionsRequired) {
             return actionsRequired(Either.ofLeft(actionsRequired));
         }
 
+        /**
+         * @param actionsRequired A message indicating if changes on the service provider require any updates on the consumer.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionsRequired(ActionsRequired actionsRequired) {
             return actionsRequired(Either.ofRight(actionsRequired));
         }
 
+        /**
+         * @param description The reason for approval or rejection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The reason for approval or rejection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param status Indicates whether the connection has been approved, rejected or removed by the key vault owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(@Nullable Output<Either<String,PrivateEndpointServiceConnectionStatus>> status) {
             $.status = status;
             return this;
         }
 
+        /**
+         * @param status Indicates whether the connection has been approved, rejected or removed by the key vault owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(Either<String,PrivateEndpointServiceConnectionStatus> status) {
             return status(Output.of(status));
         }
 
+        /**
+         * @param status Indicates whether the connection has been approved, rejected or removed by the key vault owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(String status) {
             return status(Either.ofLeft(status));
         }
 
+        /**
+         * @param status Indicates whether the connection has been approved, rejected or removed by the key vault owner.
+         * 
+         * @return builder
+         * 
+         */
         public Builder status(PrivateEndpointServiceConnectionStatus status) {
             return status(Either.ofRight(status));
         }

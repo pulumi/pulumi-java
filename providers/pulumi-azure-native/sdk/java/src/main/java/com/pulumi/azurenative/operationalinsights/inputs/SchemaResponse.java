@@ -29,6 +29,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="categories", required=true)
     private List<String> categories;
 
+    /**
+     * @return Table category.
+     * 
+     */
     public List<String> categories() {
         return this.categories;
     }
@@ -40,6 +44,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="columns")
     private @Nullable List<ColumnResponse> columns;
 
+    /**
+     * @return A list of table custom columns.
+     * 
+     */
     public Optional<List<ColumnResponse>> columns() {
         return Optional.ofNullable(this.columns);
     }
@@ -51,6 +59,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Table description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -62,6 +74,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="displayName")
     private @Nullable String displayName;
 
+    /**
+     * @return Table display name.
+     * 
+     */
     public Optional<String> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -73,6 +89,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="labels", required=true)
     private List<String> labels;
 
+    /**
+     * @return Table labels.
+     * 
+     */
     public List<String> labels() {
         return this.labels;
     }
@@ -84,6 +104,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Table name.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -95,6 +119,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="restoredLogs", required=true)
     private RestoredLogsResponse restoredLogs;
 
+    /**
+     * @return Parameters of the restore operation that initiated this table.
+     * 
+     */
     public RestoredLogsResponse restoredLogs() {
         return this.restoredLogs;
     }
@@ -106,6 +134,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="searchResults", required=true)
     private SearchResultsResponse searchResults;
 
+    /**
+     * @return Parameters of the search job that initiated this table.
+     * 
+     */
     public SearchResultsResponse searchResults() {
         return this.searchResults;
     }
@@ -117,6 +149,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="solutions", required=true)
     private List<String> solutions;
 
+    /**
+     * @return List of solutions the table is affiliated with
+     * 
+     */
     public List<String> solutions() {
         return this.solutions;
     }
@@ -128,6 +164,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="source", required=true)
     private String source;
 
+    /**
+     * @return Table&#39;s creator.
+     * 
+     */
     public String source() {
         return this.source;
     }
@@ -139,6 +179,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="standardColumns", required=true)
     private List<ColumnResponse> standardColumns;
 
+    /**
+     * @return A list of table standard columns.
+     * 
+     */
     public List<ColumnResponse> standardColumns() {
         return this.standardColumns;
     }
@@ -150,6 +194,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tableSubType", required=true)
     private String tableSubType;
 
+    /**
+     * @return The subtype describes what APIs can be used to interact with the table, and what features are available against it.
+     * 
+     */
     public String tableSubType() {
         return this.tableSubType;
     }
@@ -161,6 +209,10 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="tableType", required=true)
     private String tableType;
 
+    /**
+     * @return Table&#39;s creator.
+     * 
+     */
     public String tableType() {
         return this.tableType;
     }
@@ -201,86 +253,194 @@ public final class SchemaResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SchemaResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param categories Table category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(List<String> categories) {
             $.categories = categories;
             return this;
         }
 
+        /**
+         * @param categories Table category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder categories(String... categories) {
             return categories(List.of(categories));
         }
 
+        /**
+         * @param columns A list of table custom columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(@Nullable List<ColumnResponse> columns) {
             $.columns = columns;
             return this;
         }
 
+        /**
+         * @param columns A list of table custom columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder columns(ColumnResponse... columns) {
             return columns(List.of(columns));
         }
 
+        /**
+         * @param description Table description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param displayName Table display name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable String displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param labels Table labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(List<String> labels) {
             $.labels = labels;
             return this;
         }
 
+        /**
+         * @param labels Table labels.
+         * 
+         * @return builder
+         * 
+         */
         public Builder labels(String... labels) {
             return labels(List.of(labels));
         }
 
+        /**
+         * @param name Table name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param restoredLogs Parameters of the restore operation that initiated this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restoredLogs(RestoredLogsResponse restoredLogs) {
             $.restoredLogs = restoredLogs;
             return this;
         }
 
+        /**
+         * @param searchResults Parameters of the search job that initiated this table.
+         * 
+         * @return builder
+         * 
+         */
         public Builder searchResults(SearchResultsResponse searchResults) {
             $.searchResults = searchResults;
             return this;
         }
 
+        /**
+         * @param solutions List of solutions the table is affiliated with
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutions(List<String> solutions) {
             $.solutions = solutions;
             return this;
         }
 
+        /**
+         * @param solutions List of solutions the table is affiliated with
+         * 
+         * @return builder
+         * 
+         */
         public Builder solutions(String... solutions) {
             return solutions(List.of(solutions));
         }
 
+        /**
+         * @param source Table&#39;s creator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder source(String source) {
             $.source = source;
             return this;
         }
 
+        /**
+         * @param standardColumns A list of table standard columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardColumns(List<ColumnResponse> standardColumns) {
             $.standardColumns = standardColumns;
             return this;
         }
 
+        /**
+         * @param standardColumns A list of table standard columns.
+         * 
+         * @return builder
+         * 
+         */
         public Builder standardColumns(ColumnResponse... standardColumns) {
             return standardColumns(List.of(standardColumns));
         }
 
+        /**
+         * @param tableSubType The subtype describes what APIs can be used to interact with the table, and what features are available against it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableSubType(String tableSubType) {
             $.tableSubType = tableSubType;
             return this;
         }
 
+        /**
+         * @param tableType Table&#39;s creator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tableType(String tableType) {
             $.tableType = tableType;
             return this;

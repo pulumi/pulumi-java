@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class FileSourceInfoResponse {
     /**
-     * File share ID.
+     * @return File share ID.
      * 
      */
     private final String shareId;
@@ -21,9 +21,9 @@ public final class FileSourceInfoResponse {
     }
 
     /**
-     * File share ID.
+     * @return File share ID.
      * 
-    */
+     */
     public String shareId() {
         return this.shareId;
     }

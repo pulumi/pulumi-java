@@ -26,6 +26,10 @@ public final class AudioTrackDescriptorResponse extends com.pulumi.resources.Inv
     @Import(name="channelMapping")
     private @Nullable String channelMapping;
 
+    /**
+     * @return Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+     * 
+     */
     public Optional<String> channelMapping() {
         return Optional.ofNullable(this.channelMapping);
     }
@@ -38,6 +42,11 @@ public final class AudioTrackDescriptorResponse extends com.pulumi.resources.Inv
     @Import(name="odataType", required=true)
     private String odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
+     * 
+     */
     public String odataType() {
         return this.odataType;
     }
@@ -67,11 +76,24 @@ public final class AudioTrackDescriptorResponse extends com.pulumi.resources.Inv
             $ = new AudioTrackDescriptorResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelMapping Optional designation for single channel audio tracks.  Can be used to combine the tracks into stereo or multi-channel audio tracks.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelMapping(@Nullable String channelMapping) {
             $.channelMapping = channelMapping;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.AudioTrackDescriptor&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             $.odataType = odataType;
             return this;

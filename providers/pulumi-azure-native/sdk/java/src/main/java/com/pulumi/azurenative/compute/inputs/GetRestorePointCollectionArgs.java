@@ -21,6 +21,10 @@ public final class GetRestorePointCollectionArgs extends com.pulumi.resources.In
     @Import(name="expand")
     private @Nullable String expand;
 
+    /**
+     * @return The expand expression to apply on the operation. If expand=restorePoints, server will return all contained restore points in the restorePointCollection.
+     * 
+     */
     public Optional<String> expand() {
         return Optional.ofNullable(this.expand);
     }
@@ -32,6 +36,10 @@ public final class GetRestorePointCollectionArgs extends com.pulumi.resources.In
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -43,6 +51,10 @@ public final class GetRestorePointCollectionArgs extends com.pulumi.resources.In
     @Import(name="restorePointCollectionName", required=true)
     private String restorePointCollectionName;
 
+    /**
+     * @return The name of the restore point collection.
+     * 
+     */
     public String restorePointCollectionName() {
         return this.restorePointCollectionName;
     }
@@ -73,16 +85,34 @@ public final class GetRestorePointCollectionArgs extends com.pulumi.resources.In
             $ = new GetRestorePointCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expand The expand expression to apply on the operation. If expand=restorePoints, server will return all contained restore points in the restorePointCollection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expand(@Nullable String expand) {
             $.expand = expand;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param restorePointCollectionName The name of the restore point collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder restorePointCollectionName(String restorePointCollectionName) {
             $.restorePointCollectionName = restorePointCollectionName;
             return this;

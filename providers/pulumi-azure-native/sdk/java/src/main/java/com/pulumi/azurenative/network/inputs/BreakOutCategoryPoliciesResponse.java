@@ -25,6 +25,10 @@ public final class BreakOutCategoryPoliciesResponse extends com.pulumi.resources
     @Import(name="allow")
     private @Nullable Boolean allow;
 
+    /**
+     * @return Flag to control breakout of o365 allow category.
+     * 
+     */
     public Optional<Boolean> allow() {
         return Optional.ofNullable(this.allow);
     }
@@ -36,6 +40,10 @@ public final class BreakOutCategoryPoliciesResponse extends com.pulumi.resources
     @Import(name="default")
     private @Nullable Boolean default_;
 
+    /**
+     * @return Flag to control breakout of o365 default category.
+     * 
+     */
     public Optional<Boolean> default_() {
         return Optional.ofNullable(this.default_);
     }
@@ -47,6 +55,10 @@ public final class BreakOutCategoryPoliciesResponse extends com.pulumi.resources
     @Import(name="optimize")
     private @Nullable Boolean optimize;
 
+    /**
+     * @return Flag to control breakout of o365 optimize category.
+     * 
+     */
     public Optional<Boolean> optimize() {
         return Optional.ofNullable(this.optimize);
     }
@@ -77,16 +89,34 @@ public final class BreakOutCategoryPoliciesResponse extends com.pulumi.resources
             $ = new BreakOutCategoryPoliciesResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allow Flag to control breakout of o365 allow category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allow(@Nullable Boolean allow) {
             $.allow = allow;
             return this;
         }
 
+        /**
+         * @param default_ Flag to control breakout of o365 default category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder default_(@Nullable Boolean default_) {
             $.default_ = default_;
             return this;
         }
 
+        /**
+         * @param optimize Flag to control breakout of o365 optimize category.
+         * 
+         * @return builder
+         * 
+         */
         public Builder optimize(@Nullable Boolean optimize) {
             $.optimize = optimize;
             return this;

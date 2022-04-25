@@ -24,6 +24,10 @@ public final class WorkspaceCustomBooleanParameterArgs extends com.pulumi.resour
     @Import(name="value", required=true)
     private Output<Boolean> value;
 
+    /**
+     * @return The value which should be used for this field.
+     * 
+     */
     public Output<Boolean> value() {
         return this.value;
     }
@@ -52,11 +56,23 @@ public final class WorkspaceCustomBooleanParameterArgs extends com.pulumi.resour
             $ = new WorkspaceCustomBooleanParameterArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Output<Boolean> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value The value which should be used for this field.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(Boolean value) {
             return value(Output.of(value));
         }

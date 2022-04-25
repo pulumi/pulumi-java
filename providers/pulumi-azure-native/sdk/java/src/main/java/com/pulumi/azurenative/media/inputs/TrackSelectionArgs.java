@@ -27,6 +27,10 @@ public final class TrackSelectionArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="trackSelections")
     private @Nullable Output<List<TrackPropertyConditionArgs>> trackSelections;
 
+    /**
+     * @return TrackSelections is a track property condition list which can specify track(s)
+     * 
+     */
     public Optional<Output<List<TrackPropertyConditionArgs>>> trackSelections() {
         return Optional.ofNullable(this.trackSelections);
     }
@@ -55,15 +59,33 @@ public final class TrackSelectionArgs extends com.pulumi.resources.ResourceArgs 
             $ = new TrackSelectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param trackSelections TrackSelections is a track property condition list which can specify track(s)
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackSelections(@Nullable Output<List<TrackPropertyConditionArgs>> trackSelections) {
             $.trackSelections = trackSelections;
             return this;
         }
 
+        /**
+         * @param trackSelections TrackSelections is a track property condition list which can specify track(s)
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackSelections(List<TrackPropertyConditionArgs> trackSelections) {
             return trackSelections(Output.of(trackSelections));
         }
 
+        /**
+         * @param trackSelections TrackSelections is a track property condition list which can specify track(s)
+         * 
+         * @return builder
+         * 
+         */
         public Builder trackSelections(TrackPropertyConditionArgs... trackSelections) {
             return trackSelections(List.of(trackSelections));
         }

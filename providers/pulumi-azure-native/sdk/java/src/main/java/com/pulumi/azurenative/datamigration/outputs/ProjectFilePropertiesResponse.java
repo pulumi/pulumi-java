@@ -13,27 +13,27 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ProjectFilePropertiesResponse {
     /**
-     * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
+     * @return Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
      * 
      */
     private final @Nullable String extension;
     /**
-     * Relative path of this file resource. This property can be set when creating or updating the file resource.
+     * @return Relative path of this file resource. This property can be set when creating or updating the file resource.
      * 
      */
     private final @Nullable String filePath;
     /**
-     * Modification DateTime.
+     * @return Modification DateTime.
      * 
      */
     private final String lastModified;
     /**
-     * File content type. This property can be modified to reflect the file content type.
+     * @return File content type. This property can be modified to reflect the file content type.
      * 
      */
     private final @Nullable String mediaType;
     /**
-     * File size.
+     * @return File size.
      * 
      */
     private final Double size;
@@ -53,37 +53,37 @@ public final class ProjectFilePropertiesResponse {
     }
 
     /**
-     * Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
+     * @return Optional File extension. If submitted it should not have a leading period and must match the extension from filePath.
      * 
-    */
+     */
     public Optional<String> extension() {
         return Optional.ofNullable(this.extension);
     }
     /**
-     * Relative path of this file resource. This property can be set when creating or updating the file resource.
+     * @return Relative path of this file resource. This property can be set when creating or updating the file resource.
      * 
-    */
+     */
     public Optional<String> filePath() {
         return Optional.ofNullable(this.filePath);
     }
     /**
-     * Modification DateTime.
+     * @return Modification DateTime.
      * 
-    */
+     */
     public String lastModified() {
         return this.lastModified;
     }
     /**
-     * File content type. This property can be modified to reflect the file content type.
+     * @return File content type. This property can be modified to reflect the file content type.
      * 
-    */
+     */
     public Optional<String> mediaType() {
         return Optional.ofNullable(this.mediaType);
     }
     /**
-     * File size.
+     * @return File size.
      * 
-    */
+     */
     public Double size() {
         return this.size;
     }

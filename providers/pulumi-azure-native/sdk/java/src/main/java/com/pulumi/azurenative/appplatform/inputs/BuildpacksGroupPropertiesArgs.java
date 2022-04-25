@@ -28,6 +28,10 @@ public final class BuildpacksGroupPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="buildpacks")
     private @Nullable Output<List<BuildpackPropertiesArgs>> buildpacks;
 
+    /**
+     * @return Buildpacks in the buildpack group
+     * 
+     */
     public Optional<Output<List<BuildpackPropertiesArgs>>> buildpacks() {
         return Optional.ofNullable(this.buildpacks);
     }
@@ -39,6 +43,10 @@ public final class BuildpacksGroupPropertiesArgs extends com.pulumi.resources.Re
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Buildpack group name
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,24 +76,54 @@ public final class BuildpacksGroupPropertiesArgs extends com.pulumi.resources.Re
             $ = new BuildpacksGroupPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param buildpacks Buildpacks in the buildpack group
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpacks(@Nullable Output<List<BuildpackPropertiesArgs>> buildpacks) {
             $.buildpacks = buildpacks;
             return this;
         }
 
+        /**
+         * @param buildpacks Buildpacks in the buildpack group
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpacks(List<BuildpackPropertiesArgs> buildpacks) {
             return buildpacks(Output.of(buildpacks));
         }
 
+        /**
+         * @param buildpacks Buildpacks in the buildpack group
+         * 
+         * @return builder
+         * 
+         */
         public Builder buildpacks(BuildpackPropertiesArgs... buildpacks) {
             return buildpacks(List.of(buildpacks));
         }
 
+        /**
+         * @param name Buildpack group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Buildpack group name
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

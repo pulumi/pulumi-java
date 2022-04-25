@@ -28,6 +28,10 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="copyBehavior")
     private @Nullable Output<Object> copyBehavior;
 
+    /**
+     * @return The type of copy behavior for copy sink.
+     * 
+     */
     public Optional<Output<Object>> copyBehavior() {
         return Optional.ofNullable(this.copyBehavior);
     }
@@ -39,6 +43,10 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -50,6 +58,10 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -62,6 +74,11 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return The write setting type.
+     * Expected value is &#39;FileServerWriteSettings&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -93,38 +110,88 @@ public final class FileServerWriteSettingsArgs extends com.pulumi.resources.Reso
             $ = new FileServerWriteSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param copyBehavior The type of copy behavior for copy sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyBehavior(@Nullable Output<Object> copyBehavior) {
             $.copyBehavior = copyBehavior;
             return this;
         }
 
+        /**
+         * @param copyBehavior The type of copy behavior for copy sink.
+         * 
+         * @return builder
+         * 
+         */
         public Builder copyBehavior(Object copyBehavior) {
             return copyBehavior(Output.of(copyBehavior));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;FileServerWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The write setting type.
+         * Expected value is &#39;FileServerWriteSettings&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

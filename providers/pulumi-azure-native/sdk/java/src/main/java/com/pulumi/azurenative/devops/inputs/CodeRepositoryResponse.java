@@ -27,6 +27,10 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="authorization")
     private @Nullable AuthorizationResponse authorization;
 
+    /**
+     * @return Authorization info to access the code repository.
+     * 
+     */
     public Optional<AuthorizationResponse> authorization() {
         return Optional.ofNullable(this.authorization);
     }
@@ -38,6 +42,10 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="defaultBranch", required=true)
     private String defaultBranch;
 
+    /**
+     * @return Default branch used to configure Continuous Integration (CI) in the pipeline.
+     * 
+     */
     public String defaultBranch() {
         return this.defaultBranch;
     }
@@ -49,6 +57,10 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return Unique immutable identifier of the code repository.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -60,6 +72,10 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="properties")
     private @Nullable Map<String,String> properties;
 
+    /**
+     * @return Repository-specific properties.
+     * 
+     */
     public Optional<Map<String,String>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -71,6 +87,10 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
     @Import(name="repositoryType", required=true)
     private String repositoryType;
 
+    /**
+     * @return Type of code repository.
+     * 
+     */
     public String repositoryType() {
         return this.repositoryType;
     }
@@ -103,26 +123,56 @@ public final class CodeRepositoryResponse extends com.pulumi.resources.InvokeArg
             $ = new CodeRepositoryResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authorization Authorization info to access the code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authorization(@Nullable AuthorizationResponse authorization) {
             $.authorization = authorization;
             return this;
         }
 
+        /**
+         * @param defaultBranch Default branch used to configure Continuous Integration (CI) in the pipeline.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultBranch(String defaultBranch) {
             $.defaultBranch = defaultBranch;
             return this;
         }
 
+        /**
+         * @param id Unique immutable identifier of the code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param properties Repository-specific properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Map<String,String> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param repositoryType Type of code repository.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryType(String repositoryType) {
             $.repositoryType = repositoryType;
             return this;

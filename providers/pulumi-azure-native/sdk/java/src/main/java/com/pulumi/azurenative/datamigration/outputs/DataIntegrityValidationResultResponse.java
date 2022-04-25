@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class DataIntegrityValidationResultResponse {
     /**
-     * List of failed table names of source and target pair
+     * @return List of failed table names of source and target pair
      * 
      */
     private final Map<String,String> failedObjects;
     /**
-     * List of errors that happened while performing data integrity validation
+     * @return List of errors that happened while performing data integrity validation
      * 
      */
     private final ValidationErrorResponse validationErrors;
@@ -31,16 +31,16 @@ public final class DataIntegrityValidationResultResponse {
     }
 
     /**
-     * List of failed table names of source and target pair
+     * @return List of failed table names of source and target pair
      * 
-    */
+     */
     public Map<String,String> failedObjects() {
         return this.failedObjects;
     }
     /**
-     * List of errors that happened while performing data integrity validation
+     * @return List of errors that happened while performing data integrity validation
      * 
-    */
+     */
     public ValidationErrorResponse validationErrors() {
         return this.validationErrors;
     }

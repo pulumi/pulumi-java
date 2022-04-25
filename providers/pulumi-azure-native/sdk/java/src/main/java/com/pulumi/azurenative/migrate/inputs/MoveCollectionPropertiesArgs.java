@@ -24,6 +24,10 @@ public final class MoveCollectionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="sourceRegion", required=true)
     private Output<String> sourceRegion;
 
+    /**
+     * @return Gets or sets the source region.
+     * 
+     */
     public Output<String> sourceRegion() {
         return this.sourceRegion;
     }
@@ -35,6 +39,10 @@ public final class MoveCollectionPropertiesArgs extends com.pulumi.resources.Res
     @Import(name="targetRegion", required=true)
     private Output<String> targetRegion;
 
+    /**
+     * @return Gets or sets the target region.
+     * 
+     */
     public Output<String> targetRegion() {
         return this.targetRegion;
     }
@@ -64,20 +72,44 @@ public final class MoveCollectionPropertiesArgs extends com.pulumi.resources.Res
             $ = new MoveCollectionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceRegion Gets or sets the source region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(Output<String> sourceRegion) {
             $.sourceRegion = sourceRegion;
             return this;
         }
 
+        /**
+         * @param sourceRegion Gets or sets the source region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRegion(String sourceRegion) {
             return sourceRegion(Output.of(sourceRegion));
         }
 
+        /**
+         * @param targetRegion Gets or sets the target region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRegion(Output<String> targetRegion) {
             $.targetRegion = targetRegion;
             return this;
         }
 
+        /**
+         * @param targetRegion Gets or sets the target region.
+         * 
+         * @return builder
+         * 
+         */
         public Builder targetRegion(String targetRegion) {
             return targetRegion(Output.of(targetRegion));
         }

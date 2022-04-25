@@ -11,17 +11,17 @@ import java.util.Objects;
 @CustomType
 public final class EnrichmentPropertiesResponse {
     /**
-     * The list of endpoints for which the enrichment is applied to the message.
+     * @return The list of endpoints for which the enrichment is applied to the message.
      * 
      */
     private final List<String> endpointNames;
     /**
-     * The key or name for the enrichment property.
+     * @return The key or name for the enrichment property.
      * 
      */
     private final String key;
     /**
-     * The value for the enrichment property.
+     * @return The value for the enrichment property.
      * 
      */
     private final String value;
@@ -37,23 +37,23 @@ public final class EnrichmentPropertiesResponse {
     }
 
     /**
-     * The list of endpoints for which the enrichment is applied to the message.
+     * @return The list of endpoints for which the enrichment is applied to the message.
      * 
-    */
+     */
     public List<String> endpointNames() {
         return this.endpointNames;
     }
     /**
-     * The key or name for the enrichment property.
+     * @return The key or name for the enrichment property.
      * 
-    */
+     */
     public String key() {
         return this.key;
     }
     /**
-     * The value for the enrichment property.
+     * @return The value for the enrichment property.
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

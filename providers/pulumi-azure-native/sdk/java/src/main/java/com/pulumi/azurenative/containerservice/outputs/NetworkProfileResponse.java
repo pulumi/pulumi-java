@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NetworkProfileResponse {
     /**
-     * CIDR of the Vnet to peer.
+     * @return CIDR of the Vnet to peer.
      * 
      */
     private final @Nullable String peerVnetId;
     /**
-     * CIDR for the OpenShift Vnet.
+     * @return CIDR for the OpenShift Vnet.
      * 
      */
     private final @Nullable String vnetCidr;
     /**
-     * ID of the Vnet created for OSA cluster.
+     * @return ID of the Vnet created for OSA cluster.
      * 
      */
     private final @Nullable String vnetId;
@@ -38,23 +38,23 @@ public final class NetworkProfileResponse {
     }
 
     /**
-     * CIDR of the Vnet to peer.
+     * @return CIDR of the Vnet to peer.
      * 
-    */
+     */
     public Optional<String> peerVnetId() {
         return Optional.ofNullable(this.peerVnetId);
     }
     /**
-     * CIDR for the OpenShift Vnet.
+     * @return CIDR for the OpenShift Vnet.
      * 
-    */
+     */
     public Optional<String> vnetCidr() {
         return Optional.ofNullable(this.vnetCidr);
     }
     /**
-     * ID of the Vnet created for OSA cluster.
+     * @return ID of the Vnet created for OSA cluster.
      * 
-    */
+     */
     public Optional<String> vnetId() {
         return Optional.ofNullable(this.vnetId);
     }

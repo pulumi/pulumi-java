@@ -26,6 +26,10 @@ public final class Ipv6CircuitConnectionConfigArgs extends com.pulumi.resources.
     @Import(name="addressPrefix")
     private @Nullable Output<String> addressPrefix;
 
+    /**
+     * @return /125 IP address space to carve out customer addresses for global reach.
+     * 
+     */
     public Optional<Output<String>> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -54,11 +58,23 @@ public final class Ipv6CircuitConnectionConfigArgs extends com.pulumi.resources.
             $ = new Ipv6CircuitConnectionConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix /125 IP address space to carve out customer addresses for global reach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable Output<String> addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param addressPrefix /125 IP address space to carve out customer addresses for global reach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(String addressPrefix) {
             return addressPrefix(Output.of(addressPrefix));
         }

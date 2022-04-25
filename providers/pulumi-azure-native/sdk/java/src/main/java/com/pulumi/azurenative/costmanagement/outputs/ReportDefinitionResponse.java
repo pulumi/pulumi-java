@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReportDefinitionResponse {
     /**
-     * Has definition for data in this report.
+     * @return Has definition for data in this report.
      * 
      */
     private final @Nullable ReportDatasetResponse dataset;
     /**
-     * Has time period for pulling data for the report.
+     * @return Has time period for pulling data for the report.
      * 
      */
     private final @Nullable ReportTimePeriodResponse timePeriod;
     /**
-     * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+     * @return The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
      */
     private final String timeframe;
     /**
-     * The type of the report.
+     * @return The type of the report.
      * 
      */
     private final String type;
@@ -47,30 +47,30 @@ public final class ReportDefinitionResponse {
     }
 
     /**
-     * Has definition for data in this report.
+     * @return Has definition for data in this report.
      * 
-    */
+     */
     public Optional<ReportDatasetResponse> dataset() {
         return Optional.ofNullable(this.dataset);
     }
     /**
-     * Has time period for pulling data for the report.
+     * @return Has time period for pulling data for the report.
      * 
-    */
+     */
     public Optional<ReportTimePeriodResponse> timePeriod() {
         return Optional.ofNullable(this.timePeriod);
     }
     /**
-     * The time frame for pulling data for the report. If custom, then a specific time period must be provided.
+     * @return The time frame for pulling data for the report. If custom, then a specific time period must be provided.
      * 
-    */
+     */
     public String timeframe() {
         return this.timeframe;
     }
     /**
-     * The type of the report.
+     * @return The type of the report.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

@@ -26,6 +26,10 @@ public final class OpenIdAuthenticationSettingsContractResponse extends com.pulu
     @Import(name="bearerTokenSendingMethods")
     private @Nullable List<String> bearerTokenSendingMethods;
 
+    /**
+     * @return How to send token to the server.
+     * 
+     */
     public Optional<List<String>> bearerTokenSendingMethods() {
         return Optional.ofNullable(this.bearerTokenSendingMethods);
     }
@@ -37,6 +41,10 @@ public final class OpenIdAuthenticationSettingsContractResponse extends com.pulu
     @Import(name="openidProviderId")
     private @Nullable String openidProviderId;
 
+    /**
+     * @return OAuth authorization server identifier.
+     * 
+     */
     public Optional<String> openidProviderId() {
         return Optional.ofNullable(this.openidProviderId);
     }
@@ -66,15 +74,33 @@ public final class OpenIdAuthenticationSettingsContractResponse extends com.pulu
             $ = new OpenIdAuthenticationSettingsContractResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param bearerTokenSendingMethods How to send token to the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bearerTokenSendingMethods(@Nullable List<String> bearerTokenSendingMethods) {
             $.bearerTokenSendingMethods = bearerTokenSendingMethods;
             return this;
         }
 
+        /**
+         * @param bearerTokenSendingMethods How to send token to the server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder bearerTokenSendingMethods(String... bearerTokenSendingMethods) {
             return bearerTokenSendingMethods(List.of(bearerTokenSendingMethods));
         }
 
+        /**
+         * @param openidProviderId OAuth authorization server identifier.
+         * 
+         * @return builder
+         * 
+         */
         public Builder openidProviderId(@Nullable String openidProviderId) {
             $.openidProviderId = openidProviderId;
             return this;

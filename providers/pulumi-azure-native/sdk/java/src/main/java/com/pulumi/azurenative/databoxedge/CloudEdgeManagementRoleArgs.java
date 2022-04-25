@@ -25,6 +25,10 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
     @Import(name="deviceName", required=true)
     private Output<String> deviceName;
 
+    /**
+     * @return The device name.
+     * 
+     */
     public Output<String> deviceName() {
         return this.deviceName;
     }
@@ -37,6 +41,11 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Role type.
+     * Expected value is &#39;CloudEdgeManagement&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -48,6 +57,10 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -59,6 +72,10 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The resource group name.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -70,6 +87,10 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
     @Import(name="roleStatus", required=true)
     private Output<Either<String,RoleStatus>> roleStatus;
 
+    /**
+     * @return Role status.
+     * 
+     */
     public Output<Either<String,RoleStatus>> roleStatus() {
         return this.roleStatus;
     }
@@ -102,55 +123,129 @@ public final class CloudEdgeManagementRoleArgs extends com.pulumi.resources.Reso
             $ = new CloudEdgeManagementRoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(Output<String> deviceName) {
             $.deviceName = deviceName;
             return this;
         }
 
+        /**
+         * @param deviceName The device name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deviceName(String deviceName) {
             return deviceName(Output.of(deviceName));
         }
 
+        /**
+         * @param kind Role type.
+         * Expected value is &#39;CloudEdgeManagement&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Role type.
+         * Expected value is &#39;CloudEdgeManagement&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The resource group name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(Output<Either<String,RoleStatus>> roleStatus) {
             $.roleStatus = roleStatus;
             return this;
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(Either<String,RoleStatus> roleStatus) {
             return roleStatus(Output.of(roleStatus));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(String roleStatus) {
             return roleStatus(Either.ofLeft(roleStatus));
         }
 
+        /**
+         * @param roleStatus Role status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleStatus(RoleStatus roleStatus) {
             return roleStatus(Either.ofRight(roleStatus));
         }

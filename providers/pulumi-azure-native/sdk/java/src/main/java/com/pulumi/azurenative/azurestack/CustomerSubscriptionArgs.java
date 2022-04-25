@@ -22,6 +22,10 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
     @Import(name="customerSubscriptionName")
     private @Nullable Output<String> customerSubscriptionName;
 
+    /**
+     * @return Name of the product.
+     * 
+     */
     public Optional<Output<String>> customerSubscriptionName() {
         return Optional.ofNullable(this.customerSubscriptionName);
     }
@@ -33,6 +37,10 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
     @Import(name="registrationName", required=true)
     private Output<String> registrationName;
 
+    /**
+     * @return Name of the Azure Stack registration.
+     * 
+     */
     public Output<String> registrationName() {
         return this.registrationName;
     }
@@ -44,6 +52,10 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
     @Import(name="resourceGroup", required=true)
     private Output<String> resourceGroup;
 
+    /**
+     * @return Name of the resource group.
+     * 
+     */
     public Output<String> resourceGroup() {
         return this.resourceGroup;
     }
@@ -55,6 +67,10 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return Tenant Id.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -86,38 +102,86 @@ public final class CustomerSubscriptionArgs extends com.pulumi.resources.Resourc
             $ = new CustomerSubscriptionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param customerSubscriptionName Name of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSubscriptionName(@Nullable Output<String> customerSubscriptionName) {
             $.customerSubscriptionName = customerSubscriptionName;
             return this;
         }
 
+        /**
+         * @param customerSubscriptionName Name of the product.
+         * 
+         * @return builder
+         * 
+         */
         public Builder customerSubscriptionName(String customerSubscriptionName) {
             return customerSubscriptionName(Output.of(customerSubscriptionName));
         }
 
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationName(Output<String> registrationName) {
             $.registrationName = registrationName;
             return this;
         }
 
+        /**
+         * @param registrationName Name of the Azure Stack registration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder registrationName(String registrationName) {
             return registrationName(Output.of(registrationName));
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup Name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param tenantId Tenant Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId Tenant Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }

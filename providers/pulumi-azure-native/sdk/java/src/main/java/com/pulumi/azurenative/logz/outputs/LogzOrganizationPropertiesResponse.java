@@ -12,22 +12,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LogzOrganizationPropertiesResponse {
     /**
-     * Name of the Logz organization.
+     * @return Name of the Logz organization.
      * 
      */
     private final @Nullable String companyName;
     /**
-     * The Id of the Enterprise App used for Single sign on.
+     * @return The Id of the Enterprise App used for Single sign on.
      * 
      */
     private final @Nullable String enterpriseAppId;
     /**
-     * Id of the Logz organization.
+     * @return Id of the Logz organization.
      * 
      */
     private final String id;
     /**
-     * The login URL specific to this Logz Organization.
+     * @return The login URL specific to this Logz Organization.
      * 
      */
     private final @Nullable String singleSignOnUrl;
@@ -45,30 +45,30 @@ public final class LogzOrganizationPropertiesResponse {
     }
 
     /**
-     * Name of the Logz organization.
+     * @return Name of the Logz organization.
      * 
-    */
+     */
     public Optional<String> companyName() {
         return Optional.ofNullable(this.companyName);
     }
     /**
-     * The Id of the Enterprise App used for Single sign on.
+     * @return The Id of the Enterprise App used for Single sign on.
      * 
-    */
+     */
     public Optional<String> enterpriseAppId() {
         return Optional.ofNullable(this.enterpriseAppId);
     }
     /**
-     * Id of the Logz organization.
+     * @return Id of the Logz organization.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * The login URL specific to this Logz Organization.
+     * @return The login URL specific to this Logz Organization.
      * 
-    */
+     */
     public Optional<String> singleSignOnUrl() {
         return Optional.ofNullable(this.singleSignOnUrl);
     }

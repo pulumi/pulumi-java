@@ -21,6 +21,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return A user defined name of the 3rd Party Artifact that is being procured.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -32,6 +36,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="product", required=true)
     private String product;
 
+    /**
+     * @return The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+     * 
+     */
     public String product() {
         return this.product;
     }
@@ -43,6 +51,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="promotionCode")
     private @Nullable String promotionCode;
 
+    /**
+     * @return A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+     * 
+     */
     public Optional<String> promotionCode() {
         return Optional.ofNullable(this.promotionCode);
     }
@@ -54,6 +66,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="publisher", required=true)
     private String publisher;
 
+    /**
+     * @return The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+     * 
+     */
     public String publisher() {
         return this.publisher;
     }
@@ -65,6 +81,10 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
     @Import(name="version")
     private @Nullable String version;
 
+    /**
+     * @return The version of the desired product/artifact.
+     * 
+     */
     public Optional<String> version() {
         return Optional.ofNullable(this.version);
     }
@@ -97,26 +117,56 @@ public final class ResourceModelWithAllowedPropertySetResponsePlan extends com.p
             $ = new ResourceModelWithAllowedPropertySetResponsePlan(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name A user defined name of the 3rd Party Artifact that is being procured.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param product The 3rd Party artifact that is being procured. E.g. NewRelic. Product maps to the OfferID specified for the artifact at the time of Data Market onboarding.
+         * 
+         * @return builder
+         * 
+         */
         public Builder product(String product) {
             $.product = product;
             return this;
         }
 
+        /**
+         * @param promotionCode A publisher provided promotion code as provisioned in Data Market for the said product/artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder promotionCode(@Nullable String promotionCode) {
             $.promotionCode = promotionCode;
             return this;
         }
 
+        /**
+         * @param publisher The publisher of the 3rd Party Artifact that is being bought. E.g. NewRelic
+         * 
+         * @return builder
+         * 
+         */
         public Builder publisher(String publisher) {
             $.publisher = publisher;
             return this;
         }
 
+        /**
+         * @param version The version of the desired product/artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable String version) {
             $.version = version;
             return this;

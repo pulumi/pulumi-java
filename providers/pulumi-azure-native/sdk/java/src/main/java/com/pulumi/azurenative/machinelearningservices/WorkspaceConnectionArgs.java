@@ -24,6 +24,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="authType")
     private @Nullable Output<String> authType;
 
+    /**
+     * @return Authorization type of the workspace connection.
+     * 
+     */
     public Optional<Output<String>> authType() {
         return Optional.ofNullable(this.authType);
     }
@@ -35,6 +39,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="category")
     private @Nullable Output<String> category;
 
+    /**
+     * @return Category of the workspace connection.
+     * 
+     */
     public Optional<Output<String>> category() {
         return Optional.ofNullable(this.category);
     }
@@ -46,6 +54,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="connectionName")
     private @Nullable Output<String> connectionName;
 
+    /**
+     * @return Friendly name of the workspace connection
+     * 
+     */
     public Optional<Output<String>> connectionName() {
         return Optional.ofNullable(this.connectionName);
     }
@@ -57,6 +69,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Friendly name of the workspace connection
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -68,6 +84,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group in which workspace is located.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -79,6 +99,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="target")
     private @Nullable Output<String> target;
 
+    /**
+     * @return Target of the workspace connection.
+     * 
+     */
     public Optional<Output<String>> target() {
         return Optional.ofNullable(this.target);
     }
@@ -90,6 +114,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Value details of the workspace connection.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -101,6 +129,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="valueFormat")
     private @Nullable Output<Either<String,ValueFormat>> valueFormat;
 
+    /**
+     * @return format for the workspace connection value
+     * 
+     */
     public Optional<Output<Either<String,ValueFormat>>> valueFormat() {
         return Optional.ofNullable(this.valueFormat);
     }
@@ -112,6 +144,10 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
     @Import(name="workspaceName", required=true)
     private Output<String> workspaceName;
 
+    /**
+     * @return Name of Azure Machine Learning workspace.
+     * 
+     */
     public Output<String> workspaceName() {
         return this.workspaceName;
     }
@@ -148,91 +184,211 @@ public final class WorkspaceConnectionArgs extends com.pulumi.resources.Resource
             $ = new WorkspaceConnectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param authType Authorization type of the workspace connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(@Nullable Output<String> authType) {
             $.authType = authType;
             return this;
         }
 
+        /**
+         * @param authType Authorization type of the workspace connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authType(String authType) {
             return authType(Output.of(authType));
         }
 
+        /**
+         * @param category Category of the workspace connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(@Nullable Output<String> category) {
             $.category = category;
             return this;
         }
 
+        /**
+         * @param category Category of the workspace connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder category(String category) {
             return category(Output.of(category));
         }
 
+        /**
+         * @param connectionName Friendly name of the workspace connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(@Nullable Output<String> connectionName) {
             $.connectionName = connectionName;
             return this;
         }
 
+        /**
+         * @param connectionName Friendly name of the workspace connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionName(String connectionName) {
             return connectionName(Output.of(connectionName));
         }
 
+        /**
+         * @param name Friendly name of the workspace connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Friendly name of the workspace connection
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group in which workspace is located.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param target Target of the workspace connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(@Nullable Output<String> target) {
             $.target = target;
             return this;
         }
 
+        /**
+         * @param target Target of the workspace connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder target(String target) {
             return target(Output.of(target));
         }
 
+        /**
+         * @param value Value details of the workspace connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Value details of the workspace connection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param valueFormat format for the workspace connection value
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFormat(@Nullable Output<Either<String,ValueFormat>> valueFormat) {
             $.valueFormat = valueFormat;
             return this;
         }
 
+        /**
+         * @param valueFormat format for the workspace connection value
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFormat(Either<String,ValueFormat> valueFormat) {
             return valueFormat(Output.of(valueFormat));
         }
 
+        /**
+         * @param valueFormat format for the workspace connection value
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFormat(String valueFormat) {
             return valueFormat(Either.ofLeft(valueFormat));
         }
 
+        /**
+         * @param valueFormat format for the workspace connection value
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFormat(ValueFormat valueFormat) {
             return valueFormat(Either.ofRight(valueFormat));
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(Output<String> workspaceName) {
             $.workspaceName = workspaceName;
             return this;
         }
 
+        /**
+         * @param workspaceName Name of Azure Machine Learning workspace.
+         * 
+         * @return builder
+         * 
+         */
         public Builder workspaceName(String workspaceName) {
             return workspaceName(Output.of(workspaceName));
         }

@@ -26,6 +26,11 @@ public final class UtcClipTimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="odataType", required=true)
     private Output<String> odataType;
 
+    /**
+     * @return The discriminator for derived types.
+     * Expected value is &#39;#Microsoft.Media.UtcClipTime&#39;.
+     * 
+     */
     public Output<String> odataType() {
         return this.odataType;
     }
@@ -37,6 +42,10 @@ public final class UtcClipTimeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="time", required=true)
     private Output<String> time;
 
+    /**
+     * @return The time position on the timeline of the input media based on Utc time.
+     * 
+     */
     public Output<String> time() {
         return this.time;
     }
@@ -66,20 +75,46 @@ public final class UtcClipTimeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new UtcClipTimeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.UtcClipTime&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(Output<String> odataType) {
             $.odataType = odataType;
             return this;
         }
 
+        /**
+         * @param odataType The discriminator for derived types.
+         * Expected value is &#39;#Microsoft.Media.UtcClipTime&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder odataType(String odataType) {
             return odataType(Output.of(odataType));
         }
 
+        /**
+         * @param time The time position on the timeline of the input media based on Utc time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(Output<String> time) {
             $.time = time;
             return this;
         }
 
+        /**
+         * @param time The time position on the timeline of the input media based on Utc time.
+         * 
+         * @return builder
+         * 
+         */
         public Builder time(String time) {
             return time(Output.of(time));
         }

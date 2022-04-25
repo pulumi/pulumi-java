@@ -28,6 +28,11 @@ public final class MsTeamsChannelResponse extends com.pulumi.resources.InvokeArg
     @Import(name="channelName", required=true)
     private String channelName;
 
+    /**
+     * @return The channel name
+     * Expected value is &#39;MsTeamsChannel&#39;.
+     * 
+     */
     public String channelName() {
         return this.channelName;
     }
@@ -39,6 +44,10 @@ public final class MsTeamsChannelResponse extends com.pulumi.resources.InvokeArg
     @Import(name="etag")
     private @Nullable String etag;
 
+    /**
+     * @return Entity Tag of the resource
+     * 
+     */
     public Optional<String> etag() {
         return Optional.ofNullable(this.etag);
     }
@@ -50,6 +59,10 @@ public final class MsTeamsChannelResponse extends com.pulumi.resources.InvokeArg
     @Import(name="location")
     private @Nullable String location;
 
+    /**
+     * @return Specifies the location of the resource.
+     * 
+     */
     public Optional<String> location() {
         return Optional.ofNullable(this.location);
     }
@@ -61,6 +74,10 @@ public final class MsTeamsChannelResponse extends com.pulumi.resources.InvokeArg
     @Import(name="properties")
     private @Nullable MsTeamsChannelPropertiesResponse properties;
 
+    /**
+     * @return The set of properties specific to Microsoft Teams channel resource
+     * 
+     */
     public Optional<MsTeamsChannelPropertiesResponse> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -72,6 +89,10 @@ public final class MsTeamsChannelResponse extends com.pulumi.resources.InvokeArg
     @Import(name="provisioningState", required=true)
     private String provisioningState;
 
+    /**
+     * @return Provisioning state of the resource
+     * 
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
@@ -104,26 +125,57 @@ public final class MsTeamsChannelResponse extends com.pulumi.resources.InvokeArg
             $ = new MsTeamsChannelResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param channelName The channel name
+         * Expected value is &#39;MsTeamsChannel&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder channelName(String channelName) {
             $.channelName = channelName;
             return this;
         }
 
+        /**
+         * @param etag Entity Tag of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder etag(@Nullable String etag) {
             $.etag = etag;
             return this;
         }
 
+        /**
+         * @param location Specifies the location of the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable String location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param properties The set of properties specific to Microsoft Teams channel resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable MsTeamsChannelPropertiesResponse properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param provisioningState Provisioning state of the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder provisioningState(String provisioningState) {
             $.provisioningState = provisioningState;
             return this;

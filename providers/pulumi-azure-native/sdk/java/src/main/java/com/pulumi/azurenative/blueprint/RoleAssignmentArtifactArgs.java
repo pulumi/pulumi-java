@@ -25,6 +25,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="artifactName")
     private @Nullable Output<String> artifactName;
 
+    /**
+     * @return Name of the blueprint artifact.
+     * 
+     */
     public Optional<Output<String>> artifactName() {
         return Optional.ofNullable(this.artifactName);
     }
@@ -36,6 +40,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="blueprintName", required=true)
     private Output<String> blueprintName;
 
+    /**
+     * @return Name of the blueprint definition.
+     * 
+     */
     public Output<String> blueprintName() {
         return this.blueprintName;
     }
@@ -47,6 +55,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="dependsOn")
     private @Nullable Output<List<String>> dependsOn;
 
+    /**
+     * @return Artifacts which need to be deployed before the specified artifact.
+     * 
+     */
     public Optional<Output<List<String>>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -58,6 +70,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Multi-line explain this resource.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -69,6 +85,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return One-liner string explain this resource.
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -81,6 +101,11 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Specifies the kind of blueprint artifact.
+     * Expected value is &#39;roleAssignment&#39;.
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -92,6 +117,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="principalIds", required=true)
     private Output<Object> principalIds;
 
+    /**
+     * @return Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
+     * 
+     */
     public Output<Object> principalIds() {
         return this.principalIds;
     }
@@ -103,6 +132,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="resourceGroup")
     private @Nullable Output<String> resourceGroup;
 
+    /**
+     * @return RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
+     * 
+     */
     public Optional<Output<String>> resourceGroup() {
         return Optional.ofNullable(this.resourceGroup);
     }
@@ -114,6 +147,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="resourceScope", required=true)
     private Output<String> resourceScope;
 
+    /**
+     * @return The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+     * 
+     */
     public Output<String> resourceScope() {
         return this.resourceScope;
     }
@@ -125,6 +162,10 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
     @Import(name="roleDefinitionId", required=true)
     private Output<String> roleDefinitionId;
 
+    /**
+     * @return Azure resource ID of the RoleDefinition.
+     * 
+     */
     public Output<String> roleDefinitionId() {
         return this.roleDefinitionId;
     }
@@ -162,96 +203,224 @@ public final class RoleAssignmentArtifactArgs extends com.pulumi.resources.Resou
             $ = new RoleAssignmentArtifactArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param artifactName Name of the blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactName(@Nullable Output<String> artifactName) {
             $.artifactName = artifactName;
             return this;
         }
 
+        /**
+         * @param artifactName Name of the blueprint artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder artifactName(String artifactName) {
             return artifactName(Output.of(artifactName));
         }
 
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintName(Output<String> blueprintName) {
             $.blueprintName = blueprintName;
             return this;
         }
 
+        /**
+         * @param blueprintName Name of the blueprint definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blueprintName(String blueprintName) {
             return blueprintName(Output.of(blueprintName));
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before the specified artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable Output<List<String>> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before the specified artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(List<String> dependsOn) {
             return dependsOn(Output.of(dependsOn));
         }
 
+        /**
+         * @param dependsOn Artifacts which need to be deployed before the specified artifact.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(String... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Multi-line explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Multi-line explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName One-liner string explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName One-liner string explain this resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param kind Specifies the kind of blueprint artifact.
+         * Expected value is &#39;roleAssignment&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Specifies the kind of blueprint artifact.
+         * Expected value is &#39;roleAssignment&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param principalIds Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalIds(Output<Object> principalIds) {
             $.principalIds = principalIds;
             return this;
         }
 
+        /**
+         * @param principalIds Array of user or group identities in Azure Active Directory. The roleDefinition will apply to each identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalIds(Object principalIds) {
             return principalIds(Output.of(principalIds));
         }
 
+        /**
+         * @param resourceGroup RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(@Nullable Output<String> resourceGroup) {
             $.resourceGroup = resourceGroup;
             return this;
         }
 
+        /**
+         * @param resourceGroup RoleAssignment will be scope to this resourceGroup. If empty, it scopes to the subscription.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroup(String resourceGroup) {
             return resourceGroup(Output.of(resourceGroup));
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(Output<String> resourceScope) {
             $.resourceScope = resourceScope;
             return this;
         }
 
+        /**
+         * @param resourceScope The scope of the resource. Valid scopes are: management group (format: &#39;/providers/Microsoft.Management/managementGroups/{managementGroup}&#39;), subscription (format: &#39;/subscriptions/{subscriptionId}&#39;).
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceScope(String resourceScope) {
             return resourceScope(Output.of(resourceScope));
         }
 
+        /**
+         * @param roleDefinitionId Azure resource ID of the RoleDefinition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(Output<String> roleDefinitionId) {
             $.roleDefinitionId = roleDefinitionId;
             return this;
         }
 
+        /**
+         * @param roleDefinitionId Azure resource ID of the RoleDefinition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleDefinitionId(String roleDefinitionId) {
             return roleDefinitionId(Output.of(roleDefinitionId));
         }

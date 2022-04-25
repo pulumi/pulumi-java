@@ -25,6 +25,10 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="decryption")
     private @Nullable String decryption;
 
+    /**
+     * @return Algorithm used for decryption.
+     * 
+     */
     public Optional<String> decryption() {
         return Optional.ofNullable(this.decryption);
     }
@@ -36,6 +40,10 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="decryptionKey")
     private @Nullable String decryptionKey;
 
+    /**
+     * @return Decryption key.
+     * 
+     */
     public Optional<String> decryptionKey() {
         return Optional.ofNullable(this.decryptionKey);
     }
@@ -47,6 +55,10 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="validation")
     private @Nullable String validation;
 
+    /**
+     * @return MachineKey validation.
+     * 
+     */
     public Optional<String> validation() {
         return Optional.ofNullable(this.validation);
     }
@@ -58,6 +70,10 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
     @Import(name="validationKey")
     private @Nullable String validationKey;
 
+    /**
+     * @return Validation key.
+     * 
+     */
     public Optional<String> validationKey() {
         return Optional.ofNullable(this.validationKey);
     }
@@ -89,21 +105,45 @@ public final class SiteMachineKeyResponse extends com.pulumi.resources.InvokeArg
             $ = new SiteMachineKeyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param decryption Algorithm used for decryption.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decryption(@Nullable String decryption) {
             $.decryption = decryption;
             return this;
         }
 
+        /**
+         * @param decryptionKey Decryption key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder decryptionKey(@Nullable String decryptionKey) {
             $.decryptionKey = decryptionKey;
             return this;
         }
 
+        /**
+         * @param validation MachineKey validation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validation(@Nullable String validation) {
             $.validation = validation;
             return this;
         }
 
+        /**
+         * @param validationKey Validation key.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validationKey(@Nullable String validationKey) {
             $.validationKey = validationKey;
             return this;

@@ -23,6 +23,10 @@ public final class ReportAggregationResponse extends com.pulumi.resources.Invoke
     @Import(name="function", required=true)
     private String function;
 
+    /**
+     * @return The name of the aggregation function to use.
+     * 
+     */
     public String function() {
         return this.function;
     }
@@ -34,6 +38,10 @@ public final class ReportAggregationResponse extends com.pulumi.resources.Invoke
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The name of the column to aggregate.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -63,11 +71,23 @@ public final class ReportAggregationResponse extends com.pulumi.resources.Invoke
             $ = new ReportAggregationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param function The name of the aggregation function to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder function(String function) {
             $.function = function;
             return this;
         }
 
+        /**
+         * @param name The name of the column to aggregate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;

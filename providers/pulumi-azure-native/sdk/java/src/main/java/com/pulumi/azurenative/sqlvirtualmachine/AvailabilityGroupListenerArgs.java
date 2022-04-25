@@ -26,6 +26,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
     @Import(name="availabilityGroupListenerName")
     private @Nullable Output<String> availabilityGroupListenerName;
 
+    /**
+     * @return Name of the availability group listener.
+     * 
+     */
     public Optional<Output<String>> availabilityGroupListenerName() {
         return Optional.ofNullable(this.availabilityGroupListenerName);
     }
@@ -37,6 +41,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
     @Import(name="availabilityGroupName")
     private @Nullable Output<String> availabilityGroupName;
 
+    /**
+     * @return Name of the availability group.
+     * 
+     */
     public Optional<Output<String>> availabilityGroupName() {
         return Optional.ofNullable(this.availabilityGroupName);
     }
@@ -48,6 +56,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
     @Import(name="createDefaultAvailabilityGroupIfNotExist")
     private @Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist;
 
+    /**
+     * @return Create a default availability group if it does not exist.
+     * 
+     */
     public Optional<Output<Boolean>> createDefaultAvailabilityGroupIfNotExist() {
         return Optional.ofNullable(this.createDefaultAvailabilityGroupIfNotExist);
     }
@@ -59,6 +71,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
     @Import(name="loadBalancerConfigurations")
     private @Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations;
 
+    /**
+     * @return List of load balancer configurations for an availability group listener.
+     * 
+     */
     public Optional<Output<List<LoadBalancerConfigurationArgs>>> loadBalancerConfigurations() {
         return Optional.ofNullable(this.loadBalancerConfigurations);
     }
@@ -70,6 +86,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
     @Import(name="port")
     private @Nullable Output<Integer> port;
 
+    /**
+     * @return Listener port.
+     * 
+     */
     public Optional<Output<Integer>> port() {
         return Optional.ofNullable(this.port);
     }
@@ -81,6 +101,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -92,6 +116,10 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
     @Import(name="sqlVirtualMachineGroupName", required=true)
     private Output<String> sqlVirtualMachineGroupName;
 
+    /**
+     * @return Name of the SQL virtual machine group.
+     * 
+     */
     public Output<String> sqlVirtualMachineGroupName() {
         return this.sqlVirtualMachineGroupName;
     }
@@ -126,69 +154,159 @@ public final class AvailabilityGroupListenerArgs extends com.pulumi.resources.Re
             $ = new AvailabilityGroupListenerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availabilityGroupListenerName Name of the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityGroupListenerName(@Nullable Output<String> availabilityGroupListenerName) {
             $.availabilityGroupListenerName = availabilityGroupListenerName;
             return this;
         }
 
+        /**
+         * @param availabilityGroupListenerName Name of the availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityGroupListenerName(String availabilityGroupListenerName) {
             return availabilityGroupListenerName(Output.of(availabilityGroupListenerName));
         }
 
+        /**
+         * @param availabilityGroupName Name of the availability group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityGroupName(@Nullable Output<String> availabilityGroupName) {
             $.availabilityGroupName = availabilityGroupName;
             return this;
         }
 
+        /**
+         * @param availabilityGroupName Name of the availability group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availabilityGroupName(String availabilityGroupName) {
             return availabilityGroupName(Output.of(availabilityGroupName));
         }
 
+        /**
+         * @param createDefaultAvailabilityGroupIfNotExist Create a default availability group if it does not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDefaultAvailabilityGroupIfNotExist(@Nullable Output<Boolean> createDefaultAvailabilityGroupIfNotExist) {
             $.createDefaultAvailabilityGroupIfNotExist = createDefaultAvailabilityGroupIfNotExist;
             return this;
         }
 
+        /**
+         * @param createDefaultAvailabilityGroupIfNotExist Create a default availability group if it does not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createDefaultAvailabilityGroupIfNotExist(Boolean createDefaultAvailabilityGroupIfNotExist) {
             return createDefaultAvailabilityGroupIfNotExist(Output.of(createDefaultAvailabilityGroupIfNotExist));
         }
 
+        /**
+         * @param loadBalancerConfigurations List of load balancer configurations for an availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfigurations(@Nullable Output<List<LoadBalancerConfigurationArgs>> loadBalancerConfigurations) {
             $.loadBalancerConfigurations = loadBalancerConfigurations;
             return this;
         }
 
+        /**
+         * @param loadBalancerConfigurations List of load balancer configurations for an availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfigurations(List<LoadBalancerConfigurationArgs> loadBalancerConfigurations) {
             return loadBalancerConfigurations(Output.of(loadBalancerConfigurations));
         }
 
+        /**
+         * @param loadBalancerConfigurations List of load balancer configurations for an availability group listener.
+         * 
+         * @return builder
+         * 
+         */
         public Builder loadBalancerConfigurations(LoadBalancerConfigurationArgs... loadBalancerConfigurations) {
             return loadBalancerConfigurations(List.of(loadBalancerConfigurations));
         }
 
+        /**
+         * @param port Listener port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(@Nullable Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Listener port.
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sqlVirtualMachineGroupName Name of the SQL virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineGroupName(Output<String> sqlVirtualMachineGroupName) {
             $.sqlVirtualMachineGroupName = sqlVirtualMachineGroupName;
             return this;
         }
 
+        /**
+         * @param sqlVirtualMachineGroupName Name of the SQL virtual machine group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlVirtualMachineGroupName(String sqlVirtualMachineGroupName) {
             return sqlVirtualMachineGroupName(Output.of(sqlVirtualMachineGroupName));
         }

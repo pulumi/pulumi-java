@@ -27,6 +27,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="allocationMethod")
     private @Nullable String allocationMethod;
 
+    /**
+     * @return Gets or sets the nic allocation method.
+     * 
+     */
     public Optional<String> allocationMethod() {
         return Optional.ofNullable(this.allocationMethod);
     }
@@ -38,6 +42,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="dnsServers")
     private @Nullable List<String> dnsServers;
 
+    /**
+     * @return Gets or sets the dns servers.
+     * 
+     */
     public Optional<List<String>> dnsServers() {
         return Optional.ofNullable(this.dnsServers);
     }
@@ -49,6 +57,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="gateway")
     private @Nullable List<String> gateway;
 
+    /**
+     * @return Gets or sets the gateway.
+     * 
+     */
     public Optional<List<String>> gateway() {
         return Optional.ofNullable(this.gateway);
     }
@@ -60,6 +72,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipAddress")
     private @Nullable String ipAddress;
 
+    /**
+     * @return Gets or sets the ip address for the nic.
+     * 
+     */
     public Optional<String> ipAddress() {
         return Optional.ofNullable(this.ipAddress);
     }
@@ -71,6 +87,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="ipAddressInfo", required=true)
     private List<NicIPAddressSettingsResponse> ipAddressInfo;
 
+    /**
+     * @return Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
+     * 
+     */
     public List<NicIPAddressSettingsResponse> ipAddressInfo() {
         return this.ipAddressInfo;
     }
@@ -82,6 +102,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="primaryWinsServer", required=true)
     private String primaryWinsServer;
 
+    /**
+     * @return Gets or sets the primary server.
+     * 
+     */
     public String primaryWinsServer() {
         return this.primaryWinsServer;
     }
@@ -93,6 +117,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="secondaryWinsServer", required=true)
     private String secondaryWinsServer;
 
+    /**
+     * @return Gets or sets the secondary server.
+     * 
+     */
     public String secondaryWinsServer() {
         return this.secondaryWinsServer;
     }
@@ -104,6 +132,10 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
     @Import(name="subnetMask")
     private @Nullable String subnetMask;
 
+    /**
+     * @return Gets or sets the mask.
+     * 
+     */
     public Optional<String> subnetMask() {
         return Optional.ofNullable(this.subnetMask);
     }
@@ -139,53 +171,119 @@ public final class NicIPSettingsResponse extends com.pulumi.resources.InvokeArgs
             $ = new NicIPSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allocationMethod Gets or sets the nic allocation method.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allocationMethod(@Nullable String allocationMethod) {
             $.allocationMethod = allocationMethod;
             return this;
         }
 
+        /**
+         * @param dnsServers Gets or sets the dns servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(@Nullable List<String> dnsServers) {
             $.dnsServers = dnsServers;
             return this;
         }
 
+        /**
+         * @param dnsServers Gets or sets the dns servers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsServers(String... dnsServers) {
             return dnsServers(List.of(dnsServers));
         }
 
+        /**
+         * @param gateway Gets or sets the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(@Nullable List<String> gateway) {
             $.gateway = gateway;
             return this;
         }
 
+        /**
+         * @param gateway Gets or sets the gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(String... gateway) {
             return gateway(List.of(gateway));
         }
 
+        /**
+         * @param ipAddress Gets or sets the ip address for the nic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddress(@Nullable String ipAddress) {
             $.ipAddress = ipAddress;
             return this;
         }
 
+        /**
+         * @param ipAddressInfo Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressInfo(List<NicIPAddressSettingsResponse> ipAddressInfo) {
             $.ipAddressInfo = ipAddressInfo;
             return this;
         }
 
+        /**
+         * @param ipAddressInfo Gets or sets the IP address information being reported for this NIC. This contains the same IPv4 information above plus IPV6 information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipAddressInfo(NicIPAddressSettingsResponse... ipAddressInfo) {
             return ipAddressInfo(List.of(ipAddressInfo));
         }
 
+        /**
+         * @param primaryWinsServer Gets or sets the primary server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryWinsServer(String primaryWinsServer) {
             $.primaryWinsServer = primaryWinsServer;
             return this;
         }
 
+        /**
+         * @param secondaryWinsServer Gets or sets the secondary server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryWinsServer(String secondaryWinsServer) {
             $.secondaryWinsServer = secondaryWinsServer;
             return this;
         }
 
+        /**
+         * @param subnetMask Gets or sets the mask.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subnetMask(@Nullable String subnetMask) {
             $.subnetMask = subnetMask;
             return this;

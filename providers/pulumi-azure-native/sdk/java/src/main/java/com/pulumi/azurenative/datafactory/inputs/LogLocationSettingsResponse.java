@@ -26,6 +26,10 @@ public final class LogLocationSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="linkedServiceName", required=true)
     private LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Log storage linked service reference.
+     * 
+     */
     public LinkedServiceReferenceResponse linkedServiceName() {
         return this.linkedServiceName;
     }
@@ -37,6 +41,10 @@ public final class LogLocationSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="path")
     private @Nullable Object path;
 
+    /**
+     * @return The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> path() {
         return Optional.ofNullable(this.path);
     }
@@ -66,11 +74,23 @@ public final class LogLocationSettingsResponse extends com.pulumi.resources.Invo
             $ = new LogLocationSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param linkedServiceName Log storage linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param path The path to storage for storing detailed logs of activity execution. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Object path) {
             $.path = path;
             return this;

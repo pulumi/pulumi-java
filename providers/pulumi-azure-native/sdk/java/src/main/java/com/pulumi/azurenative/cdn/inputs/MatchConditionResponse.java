@@ -27,6 +27,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="matchValue", required=true)
     private List<String> matchValue;
 
+    /**
+     * @return List of possible match values.
+     * 
+     */
     public List<String> matchValue() {
         return this.matchValue;
     }
@@ -38,6 +42,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="matchVariable", required=true)
     private String matchVariable;
 
+    /**
+     * @return Match variable to compare against.
+     * 
+     */
     public String matchVariable() {
         return this.matchVariable;
     }
@@ -49,6 +57,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="negateCondition")
     private @Nullable Boolean negateCondition;
 
+    /**
+     * @return Describes if the result of this condition should be negated.
+     * 
+     */
     public Optional<Boolean> negateCondition() {
         return Optional.ofNullable(this.negateCondition);
     }
@@ -60,6 +72,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="operator", required=true)
     private String operator;
 
+    /**
+     * @return Describes operator to be matched
+     * 
+     */
     public String operator() {
         return this.operator;
     }
@@ -71,6 +87,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="selector")
     private @Nullable String selector;
 
+    /**
+     * @return Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
+     * 
+     */
     public Optional<String> selector() {
         return Optional.ofNullable(this.selector);
     }
@@ -82,6 +102,10 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
     @Import(name="transforms")
     private @Nullable List<String> transforms;
 
+    /**
+     * @return List of transforms.
+     * 
+     */
     public Optional<List<String>> transforms() {
         return Optional.ofNullable(this.transforms);
     }
@@ -115,40 +139,88 @@ public final class MatchConditionResponse extends com.pulumi.resources.InvokeArg
             $ = new MatchConditionResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param matchValue List of possible match values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValue(List<String> matchValue) {
             $.matchValue = matchValue;
             return this;
         }
 
+        /**
+         * @param matchValue List of possible match values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchValue(String... matchValue) {
             return matchValue(List.of(matchValue));
         }
 
+        /**
+         * @param matchVariable Match variable to compare against.
+         * 
+         * @return builder
+         * 
+         */
         public Builder matchVariable(String matchVariable) {
             $.matchVariable = matchVariable;
             return this;
         }
 
+        /**
+         * @param negateCondition Describes if the result of this condition should be negated.
+         * 
+         * @return builder
+         * 
+         */
         public Builder negateCondition(@Nullable Boolean negateCondition) {
             $.negateCondition = negateCondition;
             return this;
         }
 
+        /**
+         * @param operator Describes operator to be matched
+         * 
+         * @return builder
+         * 
+         */
         public Builder operator(String operator) {
             $.operator = operator;
             return this;
         }
 
+        /**
+         * @param selector Selector can used to match a specific key for QueryString, Cookies, RequestHeader or PostArgs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selector(@Nullable String selector) {
             $.selector = selector;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(@Nullable List<String> transforms) {
             $.transforms = transforms;
             return this;
         }
 
+        /**
+         * @param transforms List of transforms.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transforms(String... transforms) {
             return transforms(List.of(transforms));
         }

@@ -26,6 +26,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="availableMemoryInBytes", required=true)
     private Double availableMemoryInBytes;
 
+    /**
+     * @return The available memory.
+     * 
+     */
     public Double availableMemoryInBytes() {
         return this.availableMemoryInBytes;
     }
@@ -37,6 +41,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="availableSpaceInBytes", required=true)
     private Double availableSpaceInBytes;
 
+    /**
+     * @return The available disk space.
+     * 
+     */
     public Double availableSpaceInBytes() {
         return this.availableSpaceInBytes;
     }
@@ -48,6 +56,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="freeSpacePercentage", required=true)
     private Double freeSpacePercentage;
 
+    /**
+     * @return The free disk space percentage.
+     * 
+     */
     public Double freeSpacePercentage() {
         return this.freeSpacePercentage;
     }
@@ -59,6 +71,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="health", required=true)
     private String health;
 
+    /**
+     * @return The health of the process server.
+     * 
+     */
     public String health() {
         return this.health;
     }
@@ -70,6 +86,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="healthErrors", required=true)
     private List<HealthErrorResponse> healthErrors;
 
+    /**
+     * @return The health errors.
+     * 
+     */
     public List<HealthErrorResponse> healthErrors() {
         return this.healthErrors;
     }
@@ -81,6 +101,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="historicHealth", required=true)
     private String historicHealth;
 
+    /**
+     * @return The historic health of the process server based on the health in last 24 hours.
+     * 
+     */
     public String historicHealth() {
         return this.historicHealth;
     }
@@ -92,6 +116,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="id", required=true)
     private String id;
 
+    /**
+     * @return The process server Id.
+     * 
+     */
     public String id() {
         return this.id;
     }
@@ -103,6 +131,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="lastHeartbeatUtc", required=true)
     private String lastHeartbeatUtc;
 
+    /**
+     * @return The last heartbeat received from the process server.
+     * 
+     */
     public String lastHeartbeatUtc() {
         return this.lastHeartbeatUtc;
     }
@@ -114,6 +146,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="memoryUsagePercentage", required=true)
     private Double memoryUsagePercentage;
 
+    /**
+     * @return The memory usage percentage.
+     * 
+     */
     public Double memoryUsagePercentage() {
         return this.memoryUsagePercentage;
     }
@@ -125,6 +161,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return The process server name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -136,6 +176,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="processorUsagePercentage", required=true)
     private Double processorUsagePercentage;
 
+    /**
+     * @return The processor usage percentage.
+     * 
+     */
     public Double processorUsagePercentage() {
         return this.processorUsagePercentage;
     }
@@ -147,6 +191,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="throughputInBytes", required=true)
     private Double throughputInBytes;
 
+    /**
+     * @return The throughput in bytes.
+     * 
+     */
     public Double throughputInBytes() {
         return this.throughputInBytes;
     }
@@ -158,6 +206,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="throughputUploadPendingDataInBytes", required=true)
     private Double throughputUploadPendingDataInBytes;
 
+    /**
+     * @return The uploading pending data in bytes.
+     * 
+     */
     public Double throughputUploadPendingDataInBytes() {
         return this.throughputUploadPendingDataInBytes;
     }
@@ -169,6 +221,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="totalMemoryInBytes", required=true)
     private Double totalMemoryInBytes;
 
+    /**
+     * @return The total memory.
+     * 
+     */
     public Double totalMemoryInBytes() {
         return this.totalMemoryInBytes;
     }
@@ -180,6 +236,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="totalSpaceInBytes", required=true)
     private Double totalSpaceInBytes;
 
+    /**
+     * @return The total disk space.
+     * 
+     */
     public Double totalSpaceInBytes() {
         return this.totalSpaceInBytes;
     }
@@ -191,6 +251,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="usedMemoryInBytes", required=true)
     private Double usedMemoryInBytes;
 
+    /**
+     * @return The used memory.
+     * 
+     */
     public Double usedMemoryInBytes() {
         return this.usedMemoryInBytes;
     }
@@ -202,6 +266,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="usedSpaceInBytes", required=true)
     private Double usedSpaceInBytes;
 
+    /**
+     * @return The used disk space.
+     * 
+     */
     public Double usedSpaceInBytes() {
         return this.usedSpaceInBytes;
     }
@@ -213,6 +281,10 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
     @Import(name="version", required=true)
     private String version;
 
+    /**
+     * @return The process server version.
+     * 
+     */
     public String version() {
         return this.version;
     }
@@ -258,95 +330,209 @@ public final class ProcessServerDetailsResponse extends com.pulumi.resources.Inv
             $ = new ProcessServerDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param availableMemoryInBytes The available memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableMemoryInBytes(Double availableMemoryInBytes) {
             $.availableMemoryInBytes = availableMemoryInBytes;
             return this;
         }
 
+        /**
+         * @param availableSpaceInBytes The available disk space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder availableSpaceInBytes(Double availableSpaceInBytes) {
             $.availableSpaceInBytes = availableSpaceInBytes;
             return this;
         }
 
+        /**
+         * @param freeSpacePercentage The free disk space percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder freeSpacePercentage(Double freeSpacePercentage) {
             $.freeSpacePercentage = freeSpacePercentage;
             return this;
         }
 
+        /**
+         * @param health The health of the process server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder health(String health) {
             $.health = health;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(List<HealthErrorResponse> healthErrors) {
             $.healthErrors = healthErrors;
             return this;
         }
 
+        /**
+         * @param healthErrors The health errors.
+         * 
+         * @return builder
+         * 
+         */
         public Builder healthErrors(HealthErrorResponse... healthErrors) {
             return healthErrors(List.of(healthErrors));
         }
 
+        /**
+         * @param historicHealth The historic health of the process server based on the health in last 24 hours.
+         * 
+         * @return builder
+         * 
+         */
         public Builder historicHealth(String historicHealth) {
             $.historicHealth = historicHealth;
             return this;
         }
 
+        /**
+         * @param id The process server Id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param lastHeartbeatUtc The last heartbeat received from the process server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastHeartbeatUtc(String lastHeartbeatUtc) {
             $.lastHeartbeatUtc = lastHeartbeatUtc;
             return this;
         }
 
+        /**
+         * @param memoryUsagePercentage The memory usage percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryUsagePercentage(Double memoryUsagePercentage) {
             $.memoryUsagePercentage = memoryUsagePercentage;
             return this;
         }
 
+        /**
+         * @param name The process server name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param processorUsagePercentage The processor usage percentage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder processorUsagePercentage(Double processorUsagePercentage) {
             $.processorUsagePercentage = processorUsagePercentage;
             return this;
         }
 
+        /**
+         * @param throughputInBytes The throughput in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputInBytes(Double throughputInBytes) {
             $.throughputInBytes = throughputInBytes;
             return this;
         }
 
+        /**
+         * @param throughputUploadPendingDataInBytes The uploading pending data in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder throughputUploadPendingDataInBytes(Double throughputUploadPendingDataInBytes) {
             $.throughputUploadPendingDataInBytes = throughputUploadPendingDataInBytes;
             return this;
         }
 
+        /**
+         * @param totalMemoryInBytes The total memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalMemoryInBytes(Double totalMemoryInBytes) {
             $.totalMemoryInBytes = totalMemoryInBytes;
             return this;
         }
 
+        /**
+         * @param totalSpaceInBytes The total disk space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder totalSpaceInBytes(Double totalSpaceInBytes) {
             $.totalSpaceInBytes = totalSpaceInBytes;
             return this;
         }
 
+        /**
+         * @param usedMemoryInBytes The used memory.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedMemoryInBytes(Double usedMemoryInBytes) {
             $.usedMemoryInBytes = usedMemoryInBytes;
             return this;
         }
 
+        /**
+         * @param usedSpaceInBytes The used disk space.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usedSpaceInBytes(Double usedSpaceInBytes) {
             $.usedSpaceInBytes = usedSpaceInBytes;
             return this;
         }
 
+        /**
+         * @param version The process server version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             $.version = version;
             return this;

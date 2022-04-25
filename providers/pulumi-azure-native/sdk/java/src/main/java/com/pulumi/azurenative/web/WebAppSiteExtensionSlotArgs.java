@@ -22,6 +22,10 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Site name.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -33,6 +37,10 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return Name of the resource group to which the resource belongs.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -44,6 +52,10 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
     @Import(name="siteExtensionId")
     private @Nullable Output<String> siteExtensionId;
 
+    /**
+     * @return Site extension name.
+     * 
+     */
     public Optional<Output<String>> siteExtensionId() {
         return Optional.ofNullable(this.siteExtensionId);
     }
@@ -55,6 +67,10 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
     @Import(name="slot", required=true)
     private Output<String> slot;
 
+    /**
+     * @return Name of the deployment slot. If a slot is not specified, the API uses the production slot.
+     * 
+     */
     public Output<String> slot() {
         return this.slot;
     }
@@ -86,38 +102,86 @@ public final class WebAppSiteExtensionSlotArgs extends com.pulumi.resources.Reso
             $ = new WebAppSiteExtensionSlotArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Site name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName Name of the resource group to which the resource belongs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param siteExtensionId Site extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteExtensionId(@Nullable Output<String> siteExtensionId) {
             $.siteExtensionId = siteExtensionId;
             return this;
         }
 
+        /**
+         * @param siteExtensionId Site extension name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder siteExtensionId(String siteExtensionId) {
             return siteExtensionId(Output.of(siteExtensionId));
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API uses the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(Output<String> slot) {
             $.slot = slot;
             return this;
         }
 
+        /**
+         * @param slot Name of the deployment slot. If a slot is not specified, the API uses the production slot.
+         * 
+         * @return builder
+         * 
+         */
         public Builder slot(String slot) {
             return slot(Output.of(slot));
         }

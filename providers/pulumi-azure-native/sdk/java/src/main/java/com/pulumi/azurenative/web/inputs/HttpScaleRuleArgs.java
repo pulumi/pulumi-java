@@ -29,6 +29,10 @@ public final class HttpScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="auth")
     private @Nullable Output<List<ScaleRuleAuthArgs>> auth;
 
+    /**
+     * @return Authentication secrets for the custom scale rule.
+     * 
+     */
     public Optional<Output<List<ScaleRuleAuthArgs>>> auth() {
         return Optional.ofNullable(this.auth);
     }
@@ -40,6 +44,10 @@ public final class HttpScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="metadata")
     private @Nullable Output<Map<String,String>> metadata;
 
+    /**
+     * @return Metadata properties to describe http scale rule.
+     * 
+     */
     public Optional<Output<Map<String,String>>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -69,24 +77,54 @@ public final class HttpScaleRuleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new HttpScaleRuleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param auth Authentication secrets for the custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(@Nullable Output<List<ScaleRuleAuthArgs>> auth) {
             $.auth = auth;
             return this;
         }
 
+        /**
+         * @param auth Authentication secrets for the custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(List<ScaleRuleAuthArgs> auth) {
             return auth(Output.of(auth));
         }
 
+        /**
+         * @param auth Authentication secrets for the custom scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder auth(ScaleRuleAuthArgs... auth) {
             return auth(List.of(auth));
         }
 
+        /**
+         * @param metadata Metadata properties to describe http scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<Map<String,String>> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Metadata properties to describe http scale rule.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(Map<String,String> metadata) {
             return metadata(Output.of(metadata));
         }

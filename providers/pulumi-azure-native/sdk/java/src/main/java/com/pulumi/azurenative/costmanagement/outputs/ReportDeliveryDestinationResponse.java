@@ -12,17 +12,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ReportDeliveryDestinationResponse {
     /**
-     * The name of the container where reports will be uploaded.
+     * @return The name of the container where reports will be uploaded.
      * 
      */
     private final String container;
     /**
-     * The resource id of the storage account where reports will be delivered.
+     * @return The resource id of the storage account where reports will be delivered.
      * 
      */
     private final String resourceId;
     /**
-     * The name of the directory where reports will be uploaded.
+     * @return The name of the directory where reports will be uploaded.
      * 
      */
     private final @Nullable String rootFolderPath;
@@ -38,23 +38,23 @@ public final class ReportDeliveryDestinationResponse {
     }
 
     /**
-     * The name of the container where reports will be uploaded.
+     * @return The name of the container where reports will be uploaded.
      * 
-    */
+     */
     public String container() {
         return this.container;
     }
     /**
-     * The resource id of the storage account where reports will be delivered.
+     * @return The resource id of the storage account where reports will be delivered.
      * 
-    */
+     */
     public String resourceId() {
         return this.resourceId;
     }
     /**
-     * The name of the directory where reports will be uploaded.
+     * @return The name of the directory where reports will be uploaded.
      * 
-    */
+     */
     public Optional<String> rootFolderPath() {
         return Optional.ofNullable(this.rootFolderPath);
     }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DiskEncryptionSetParametersResponse {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final @Nullable String id;
@@ -23,9 +23,9 @@ public final class DiskEncryptionSetParametersResponse {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public Optional<String> id() {
         return Optional.ofNullable(this.id);
     }

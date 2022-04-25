@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DatasetReferenceResponse {
     /**
-     * Arguments for dataset.
+     * @return Arguments for dataset.
      * 
      */
     private final @Nullable Map<String,Object> parameters;
     /**
-     * Reference dataset name.
+     * @return Reference dataset name.
      * 
      */
     private final String referenceName;
     /**
-     * Dataset reference type.
+     * @return Dataset reference type.
      * 
      */
     private final String type;
@@ -39,23 +39,23 @@ public final class DatasetReferenceResponse {
     }
 
     /**
-     * Arguments for dataset.
+     * @return Arguments for dataset.
      * 
-    */
+     */
     public Map<String,Object> parameters() {
         return this.parameters == null ? Map.of() : this.parameters;
     }
     /**
-     * Reference dataset name.
+     * @return Reference dataset name.
      * 
-    */
+     */
     public String referenceName() {
         return this.referenceName;
     }
     /**
-     * Dataset reference type.
+     * @return Dataset reference type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

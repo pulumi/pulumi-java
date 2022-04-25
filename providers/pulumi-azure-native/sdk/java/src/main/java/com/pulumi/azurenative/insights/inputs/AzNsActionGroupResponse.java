@@ -26,6 +26,10 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
     @Import(name="actionGroup")
     private @Nullable List<String> actionGroup;
 
+    /**
+     * @return Azure Action Group reference.
+     * 
+     */
     public Optional<List<String>> actionGroup() {
         return Optional.ofNullable(this.actionGroup);
     }
@@ -37,6 +41,10 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
     @Import(name="customWebhookPayload")
     private @Nullable String customWebhookPayload;
 
+    /**
+     * @return Custom payload to be sent for all webhook URI in Azure action group
+     * 
+     */
     public Optional<String> customWebhookPayload() {
         return Optional.ofNullable(this.customWebhookPayload);
     }
@@ -48,6 +56,10 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
     @Import(name="emailSubject")
     private @Nullable String emailSubject;
 
+    /**
+     * @return Custom subject override for all email ids in Azure action group
+     * 
+     */
     public Optional<String> emailSubject() {
         return Optional.ofNullable(this.emailSubject);
     }
@@ -78,20 +90,44 @@ public final class AzNsActionGroupResponse extends com.pulumi.resources.InvokeAr
             $ = new AzNsActionGroupResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param actionGroup Azure Action Group reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroup(@Nullable List<String> actionGroup) {
             $.actionGroup = actionGroup;
             return this;
         }
 
+        /**
+         * @param actionGroup Azure Action Group reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder actionGroup(String... actionGroup) {
             return actionGroup(List.of(actionGroup));
         }
 
+        /**
+         * @param customWebhookPayload Custom payload to be sent for all webhook URI in Azure action group
+         * 
+         * @return builder
+         * 
+         */
         public Builder customWebhookPayload(@Nullable String customWebhookPayload) {
             $.customWebhookPayload = customWebhookPayload;
             return this;
         }
 
+        /**
+         * @param emailSubject Custom subject override for all email ids in Azure action group
+         * 
+         * @return builder
+         * 
+         */
         public Builder emailSubject(@Nullable String emailSubject) {
             $.emailSubject = emailSubject;
             return this;

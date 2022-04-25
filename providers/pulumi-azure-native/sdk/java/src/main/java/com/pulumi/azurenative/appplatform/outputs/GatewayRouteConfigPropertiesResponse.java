@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GatewayRouteConfigPropertiesResponse {
     /**
-     * The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
+     * @return The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
      * 
      */
     private final @Nullable String appResourceId;
     /**
-     * State of the Spring Cloud Gateway route config.
+     * @return State of the Spring Cloud Gateway route config.
      * 
      */
     private final String provisioningState;
     /**
-     * Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+     * @return Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
      * 
      */
     private final @Nullable List<GatewayApiRouteResponse> routes;
@@ -40,23 +40,23 @@ public final class GatewayRouteConfigPropertiesResponse {
     }
 
     /**
-     * The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
+     * @return The resource Id of the Azure Spring Cloud app, required unless route defines `uri`.
      * 
-    */
+     */
     public Optional<String> appResourceId() {
         return Optional.ofNullable(this.appResourceId);
     }
     /**
-     * State of the Spring Cloud Gateway route config.
+     * @return State of the Spring Cloud Gateway route config.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
+     * @return Array of API routes, each route contains properties such as `title`, `uri`, `ssoEnabled`, `predicates`, `filters`.
      * 
-    */
+     */
     public List<GatewayApiRouteResponse> routes() {
         return this.routes == null ? List.of() : this.routes;
     }

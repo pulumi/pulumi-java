@@ -26,6 +26,10 @@ public final class VmRecommendationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="configurationStatus")
     private @Nullable Output<String> configurationStatus;
 
+    /**
+     * @return The configuration status of the machines group or machine or rule
+     * 
+     */
     public Optional<Output<String>> configurationStatus() {
         return Optional.ofNullable(this.configurationStatus);
     }
@@ -37,6 +41,10 @@ public final class VmRecommendationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enforcementSupport")
     private @Nullable Output<String> enforcementSupport;
 
+    /**
+     * @return The machine supportability of Enforce feature
+     * 
+     */
     public Optional<Output<String>> enforcementSupport() {
         return Optional.ofNullable(this.enforcementSupport);
     }
@@ -48,6 +56,10 @@ public final class VmRecommendationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="recommendationAction")
     private @Nullable Output<String> recommendationAction;
 
+    /**
+     * @return The recommendation action of the machine or rule
+     * 
+     */
     public Optional<Output<String>> recommendationAction() {
         return Optional.ofNullable(this.recommendationAction);
     }
@@ -59,6 +71,10 @@ public final class VmRecommendationArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceId")
     private @Nullable Output<String> resourceId;
 
+    /**
+     * @return The full resource id of the machine
+     * 
+     */
     public Optional<Output<String>> resourceId() {
         return Optional.ofNullable(this.resourceId);
     }
@@ -90,38 +106,86 @@ public final class VmRecommendationArgs extends com.pulumi.resources.ResourceArg
             $ = new VmRecommendationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configurationStatus The configuration status of the machines group or machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationStatus(@Nullable Output<String> configurationStatus) {
             $.configurationStatus = configurationStatus;
             return this;
         }
 
+        /**
+         * @param configurationStatus The configuration status of the machines group or machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder configurationStatus(String configurationStatus) {
             return configurationStatus(Output.of(configurationStatus));
         }
 
+        /**
+         * @param enforcementSupport The machine supportability of Enforce feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcementSupport(@Nullable Output<String> enforcementSupport) {
             $.enforcementSupport = enforcementSupport;
             return this;
         }
 
+        /**
+         * @param enforcementSupport The machine supportability of Enforce feature
+         * 
+         * @return builder
+         * 
+         */
         public Builder enforcementSupport(String enforcementSupport) {
             return enforcementSupport(Output.of(enforcementSupport));
         }
 
+        /**
+         * @param recommendationAction The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationAction(@Nullable Output<String> recommendationAction) {
             $.recommendationAction = recommendationAction;
             return this;
         }
 
+        /**
+         * @param recommendationAction The recommendation action of the machine or rule
+         * 
+         * @return builder
+         * 
+         */
         public Builder recommendationAction(String recommendationAction) {
             return recommendationAction(Output.of(recommendationAction));
         }
 
+        /**
+         * @param resourceId The full resource id of the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(@Nullable Output<String> resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param resourceId The full resource id of the machine
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             return resourceId(Output.of(resourceId));
         }

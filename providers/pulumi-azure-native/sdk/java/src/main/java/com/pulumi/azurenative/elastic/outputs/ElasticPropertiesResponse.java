@@ -13,12 +13,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ElasticPropertiesResponse {
     /**
-     * Details of the elastic cloud deployment.
+     * @return Details of the elastic cloud deployment.
      * 
      */
     private final @Nullable ElasticCloudDeploymentResponse elasticCloudDeployment;
     /**
-     * Details of the user&#39;s elastic account.
+     * @return Details of the user&#39;s elastic account.
      * 
      */
     private final @Nullable ElasticCloudUserResponse elasticCloudUser;
@@ -32,16 +32,16 @@ public final class ElasticPropertiesResponse {
     }
 
     /**
-     * Details of the elastic cloud deployment.
+     * @return Details of the elastic cloud deployment.
      * 
-    */
+     */
     public Optional<ElasticCloudDeploymentResponse> elasticCloudDeployment() {
         return Optional.ofNullable(this.elasticCloudDeployment);
     }
     /**
-     * Details of the user&#39;s elastic account.
+     * @return Details of the user&#39;s elastic account.
      * 
-    */
+     */
     public Optional<ElasticCloudUserResponse> elasticCloudUser() {
         return Optional.ofNullable(this.elasticCloudUser);
     }

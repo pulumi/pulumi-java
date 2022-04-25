@@ -25,6 +25,10 @@ public final class DataFlowResponseFolder extends com.pulumi.resources.InvokeArg
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return The name of the folder that this data flow is in.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +57,12 @@ public final class DataFlowResponseFolder extends com.pulumi.resources.InvokeArg
             $ = new DataFlowResponseFolder(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name The name of the folder that this data flow is in.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;

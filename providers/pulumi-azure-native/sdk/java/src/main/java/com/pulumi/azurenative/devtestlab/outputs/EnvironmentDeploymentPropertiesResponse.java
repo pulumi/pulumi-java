@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class EnvironmentDeploymentPropertiesResponse {
     /**
-     * The Azure Resource Manager template&#39;s identifier.
+     * @return The Azure Resource Manager template&#39;s identifier.
      * 
      */
     private final @Nullable String armTemplateId;
     /**
-     * The parameters of the Azure Resource Manager template.
+     * @return The parameters of the Azure Resource Manager template.
      * 
      */
     private final @Nullable List<ArmTemplateParameterPropertiesResponse> parameters;
@@ -33,16 +33,16 @@ public final class EnvironmentDeploymentPropertiesResponse {
     }
 
     /**
-     * The Azure Resource Manager template&#39;s identifier.
+     * @return The Azure Resource Manager template&#39;s identifier.
      * 
-    */
+     */
     public Optional<String> armTemplateId() {
         return Optional.ofNullable(this.armTemplateId);
     }
     /**
-     * The parameters of the Azure Resource Manager template.
+     * @return The parameters of the Azure Resource Manager template.
      * 
-    */
+     */
     public List<ArmTemplateParameterPropertiesResponse> parameters() {
         return this.parameters == null ? List.of() : this.parameters;
     }

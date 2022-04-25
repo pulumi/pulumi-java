@@ -10,17 +10,17 @@ import java.util.Objects;
 @CustomType
 public final class GetIngestionSettingResult {
     /**
-     * Resource Id
+     * @return Resource Id
      * 
      */
     private final String id;
     /**
-     * Resource name
+     * @return Resource name
      * 
      */
     private final String name;
     /**
-     * Resource type
+     * @return Resource type
      * 
      */
     private final String type;
@@ -36,23 +36,23 @@ public final class GetIngestionSettingResult {
     }
 
     /**
-     * Resource Id
+     * @return Resource Id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource name
+     * @return Resource name
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Resource type
+     * @return Resource type
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

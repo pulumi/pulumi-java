@@ -28,6 +28,10 @@ public final class EntityReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="referenceName")
     private @Nullable Output<String> referenceName;
 
+    /**
+     * @return The name of this referenced entity.
+     * 
+     */
     public Optional<Output<String>> referenceName() {
         return Optional.ofNullable(this.referenceName);
     }
@@ -39,6 +43,10 @@ public final class EntityReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="type")
     private @Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type;
 
+    /**
+     * @return The type of this referenced entity.
+     * 
+     */
     public Optional<Output<Either<String,IntegrationRuntimeEntityReferenceType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -68,28 +76,64 @@ public final class EntityReferenceArgs extends com.pulumi.resources.ResourceArgs
             $ = new EntityReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param referenceName The name of this referenced entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(@Nullable Output<String> referenceName) {
             $.referenceName = referenceName;
             return this;
         }
 
+        /**
+         * @param referenceName The name of this referenced entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder referenceName(String referenceName) {
             return referenceName(Output.of(referenceName));
         }
 
+        /**
+         * @param type The type of this referenced entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,IntegrationRuntimeEntityReferenceType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of this referenced entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,IntegrationRuntimeEntityReferenceType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of this referenced entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of this referenced entity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(IntegrationRuntimeEntityReferenceType type) {
             return type(Either.ofRight(type));
         }

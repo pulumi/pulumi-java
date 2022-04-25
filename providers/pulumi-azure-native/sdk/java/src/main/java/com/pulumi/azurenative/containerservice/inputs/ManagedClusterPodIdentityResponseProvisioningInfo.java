@@ -21,6 +21,10 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends com
     @Import(name="error")
     private @Nullable CloudErrorResponse error;
 
+    /**
+     * @return Pod identity assignment error (if any).
+     * 
+     */
     public Optional<CloudErrorResponse> error() {
         return Optional.ofNullable(this.error);
     }
@@ -49,6 +53,12 @@ public final class ManagedClusterPodIdentityResponseProvisioningInfo extends com
             $ = new ManagedClusterPodIdentityResponseProvisioningInfo(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error Pod identity assignment error (if any).
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable CloudErrorResponse error) {
             $.error = error;
             return this;

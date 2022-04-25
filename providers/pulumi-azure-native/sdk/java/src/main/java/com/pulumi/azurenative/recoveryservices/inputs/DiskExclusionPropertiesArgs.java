@@ -24,6 +24,10 @@ public final class DiskExclusionPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="diskLunList")
     private @Nullable Output<List<Integer>> diskLunList;
 
+    /**
+     * @return List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
+     * 
+     */
     public Optional<Output<List<Integer>>> diskLunList() {
         return Optional.ofNullable(this.diskLunList);
     }
@@ -35,6 +39,10 @@ public final class DiskExclusionPropertiesArgs extends com.pulumi.resources.Reso
     @Import(name="isInclusionList")
     private @Nullable Output<Boolean> isInclusionList;
 
+    /**
+     * @return Flag to indicate whether DiskLunList is to be included/ excluded from backup.
+     * 
+     */
     public Optional<Output<Boolean>> isInclusionList() {
         return Optional.ofNullable(this.isInclusionList);
     }
@@ -64,24 +72,54 @@ public final class DiskExclusionPropertiesArgs extends com.pulumi.resources.Reso
             $ = new DiskExclusionPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskLunList List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskLunList(@Nullable Output<List<Integer>> diskLunList) {
             $.diskLunList = diskLunList;
             return this;
         }
 
+        /**
+         * @param diskLunList List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskLunList(List<Integer> diskLunList) {
             return diskLunList(Output.of(diskLunList));
         }
 
+        /**
+         * @param diskLunList List of Disks&#39; Logical Unit Numbers (LUN) to be used for VM Protection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskLunList(Integer... diskLunList) {
             return diskLunList(List.of(diskLunList));
         }
 
+        /**
+         * @param isInclusionList Flag to indicate whether DiskLunList is to be included/ excluded from backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isInclusionList(@Nullable Output<Boolean> isInclusionList) {
             $.isInclusionList = isInclusionList;
             return this;
         }
 
+        /**
+         * @param isInclusionList Flag to indicate whether DiskLunList is to be included/ excluded from backup.
+         * 
+         * @return builder
+         * 
+         */
         public Builder isInclusionList(Boolean isInclusionList) {
             return isInclusionList(Output.of(isInclusionList));
         }

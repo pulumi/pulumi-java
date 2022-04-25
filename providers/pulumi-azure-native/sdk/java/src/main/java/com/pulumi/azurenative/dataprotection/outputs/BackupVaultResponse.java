@@ -12,12 +12,12 @@ import java.util.Objects;
 @CustomType
 public final class BackupVaultResponse {
     /**
-     * Provisioning state of the BackupVault resource
+     * @return Provisioning state of the BackupVault resource
      * 
      */
     private final String provisioningState;
     /**
-     * Storage Settings
+     * @return Storage Settings
      * 
      */
     private final List<StorageSettingResponse> storageSettings;
@@ -31,16 +31,16 @@ public final class BackupVaultResponse {
     }
 
     /**
-     * Provisioning state of the BackupVault resource
+     * @return Provisioning state of the BackupVault resource
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * Storage Settings
+     * @return Storage Settings
      * 
-    */
+     */
     public List<StorageSettingResponse> storageSettings() {
         return this.storageSettings;
     }

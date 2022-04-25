@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionResponse {
     /**
-     * Indicates whether this restriction is enforced on a Best Effort basis.
+     * @return Indicates whether this restriction is enforced on a Best Effort basis.
      * 
      */
     private final Boolean bestEffort;
     /**
-     * Configures the restriction control bits. Must be between 0 and 3 inclusive.
+     * @return Configures the restriction control bits. Must be between 0 and 3 inclusive.
      * 
      */
     private final Integer configurationData;
@@ -30,16 +30,16 @@ public final class ContentKeyPolicyPlayReadyExplicitAnalogTelevisionRestrictionR
     }
 
     /**
-     * Indicates whether this restriction is enforced on a Best Effort basis.
+     * @return Indicates whether this restriction is enforced on a Best Effort basis.
      * 
-    */
+     */
     public Boolean bestEffort() {
         return this.bestEffort;
     }
     /**
-     * Configures the restriction control bits. Must be between 0 and 3 inclusive.
+     * @return Configures the restriction control bits. Must be between 0 and 3 inclusive.
      * 
-    */
+     */
     public Integer configurationData() {
         return this.configurationData;
     }

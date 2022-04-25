@@ -23,6 +23,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="continuationToken")
     private @Nullable String continuationToken;
 
+    /**
+     * @return The continuation token.
+     * 
+     */
     public Optional<String> continuationToken() {
         return Optional.ofNullable(this.continuationToken);
     }
@@ -34,6 +38,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="downloadAs", required=true)
     private String downloadAs;
 
+    /**
+     * @return The format to use when returning the webtest result.
+     * 
+     */
     public String downloadAs() {
         return this.downloadAs;
     }
@@ -45,6 +53,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="geoLocationId", required=true)
     private String geoLocationId;
 
+    /**
+     * @return The location ID where the webtest was physically run.
+     * 
+     */
     public String geoLocationId() {
         return this.geoLocationId;
     }
@@ -56,6 +68,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -67,6 +83,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="testSuccessfulCriteria")
     private @Nullable Boolean testSuccessfulCriteria;
 
+    /**
+     * @return The success state criteria for the webtest result.
+     * 
+     */
     public Optional<Boolean> testSuccessfulCriteria() {
         return Optional.ofNullable(this.testSuccessfulCriteria);
     }
@@ -78,6 +98,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="timeStamp", required=true)
     private Integer timeStamp;
 
+    /**
+     * @return The posix (epoch) time stamp for the webtest result.
+     * 
+     */
     public Integer timeStamp() {
         return this.timeStamp;
     }
@@ -89,6 +113,10 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
     @Import(name="webTestName", required=true)
     private String webTestName;
 
+    /**
+     * @return The name of the Application Insights webtest resource.
+     * 
+     */
     public String webTestName() {
         return this.webTestName;
     }
@@ -123,36 +151,78 @@ public final class GetTestResultFileArgs extends com.pulumi.resources.InvokeArgs
             $ = new GetTestResultFileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param continuationToken The continuation token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder continuationToken(@Nullable String continuationToken) {
             $.continuationToken = continuationToken;
             return this;
         }
 
+        /**
+         * @param downloadAs The format to use when returning the webtest result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder downloadAs(String downloadAs) {
             $.downloadAs = downloadAs;
             return this;
         }
 
+        /**
+         * @param geoLocationId The location ID where the webtest was physically run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder geoLocationId(String geoLocationId) {
             $.geoLocationId = geoLocationId;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param testSuccessfulCriteria The success state criteria for the webtest result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder testSuccessfulCriteria(@Nullable Boolean testSuccessfulCriteria) {
             $.testSuccessfulCriteria = testSuccessfulCriteria;
             return this;
         }
 
+        /**
+         * @param timeStamp The posix (epoch) time stamp for the webtest result.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeStamp(Integer timeStamp) {
             $.timeStamp = timeStamp;
             return this;
         }
 
+        /**
+         * @param webTestName The name of the Application Insights webtest resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder webTestName(String webTestName) {
             $.webTestName = webTestName;
             return this;

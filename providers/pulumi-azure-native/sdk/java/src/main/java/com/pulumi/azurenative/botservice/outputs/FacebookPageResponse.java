@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class FacebookPageResponse {
     /**
-     * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
      */
     private final @Nullable String accessToken;
     /**
-     * Page id
+     * @return Page id
      * 
      */
     private final String id;
@@ -31,16 +31,16 @@ public final class FacebookPageResponse {
     }
 
     /**
-     * Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
+     * @return Facebook application access token. Value only returned through POST to the action Channel List API, otherwise empty.
      * 
-    */
+     */
     public Optional<String> accessToken() {
         return Optional.ofNullable(this.accessToken);
     }
     /**
-     * Page id
+     * @return Page id
      * 
-    */
+     */
     public String id() {
         return this.id;
     }

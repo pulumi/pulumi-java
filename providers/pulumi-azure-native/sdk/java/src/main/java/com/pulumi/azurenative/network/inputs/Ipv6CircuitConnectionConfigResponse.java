@@ -25,6 +25,10 @@ public final class Ipv6CircuitConnectionConfigResponse extends com.pulumi.resour
     @Import(name="addressPrefix")
     private @Nullable String addressPrefix;
 
+    /**
+     * @return /125 IP address space to carve out customer addresses for global reach.
+     * 
+     */
     public Optional<String> addressPrefix() {
         return Optional.ofNullable(this.addressPrefix);
     }
@@ -36,6 +40,10 @@ public final class Ipv6CircuitConnectionConfigResponse extends com.pulumi.resour
     @Import(name="circuitConnectionStatus", required=true)
     private String circuitConnectionStatus;
 
+    /**
+     * @return Express Route Circuit connection state.
+     * 
+     */
     public String circuitConnectionStatus() {
         return this.circuitConnectionStatus;
     }
@@ -65,11 +73,23 @@ public final class Ipv6CircuitConnectionConfigResponse extends com.pulumi.resour
             $ = new Ipv6CircuitConnectionConfigResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressPrefix /125 IP address space to carve out customer addresses for global reach.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressPrefix(@Nullable String addressPrefix) {
             $.addressPrefix = addressPrefix;
             return this;
         }
 
+        /**
+         * @param circuitConnectionStatus Express Route Circuit connection state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder circuitConnectionStatus(String circuitConnectionStatus) {
             $.circuitConnectionStatus = circuitConnectionStatus;
             return this;

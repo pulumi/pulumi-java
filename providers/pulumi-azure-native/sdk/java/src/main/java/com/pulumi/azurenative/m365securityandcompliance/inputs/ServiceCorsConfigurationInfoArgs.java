@@ -29,6 +29,10 @@ public final class ServiceCorsConfigurationInfoArgs extends com.pulumi.resources
     @Import(name="allowCredentials")
     private @Nullable Output<Boolean> allowCredentials;
 
+    /**
+     * @return If credentials are allowed via CORS.
+     * 
+     */
     public Optional<Output<Boolean>> allowCredentials() {
         return Optional.ofNullable(this.allowCredentials);
     }
@@ -40,6 +44,10 @@ public final class ServiceCorsConfigurationInfoArgs extends com.pulumi.resources
     @Import(name="headers")
     private @Nullable Output<List<String>> headers;
 
+    /**
+     * @return The headers to be allowed via CORS.
+     * 
+     */
     public Optional<Output<List<String>>> headers() {
         return Optional.ofNullable(this.headers);
     }
@@ -51,6 +59,10 @@ public final class ServiceCorsConfigurationInfoArgs extends com.pulumi.resources
     @Import(name="maxAge")
     private @Nullable Output<Double> maxAge;
 
+    /**
+     * @return The max age to be allowed via CORS.
+     * 
+     */
     public Optional<Output<Double>> maxAge() {
         return Optional.ofNullable(this.maxAge);
     }
@@ -62,6 +74,10 @@ public final class ServiceCorsConfigurationInfoArgs extends com.pulumi.resources
     @Import(name="methods")
     private @Nullable Output<List<String>> methods;
 
+    /**
+     * @return The methods to be allowed via CORS.
+     * 
+     */
     public Optional<Output<List<String>>> methods() {
         return Optional.ofNullable(this.methods);
     }
@@ -73,6 +89,10 @@ public final class ServiceCorsConfigurationInfoArgs extends com.pulumi.resources
     @Import(name="origins")
     private @Nullable Output<List<String>> origins;
 
+    /**
+     * @return The origins to be allowed via CORS.
+     * 
+     */
     public Optional<Output<List<String>>> origins() {
         return Optional.ofNullable(this.origins);
     }
@@ -105,59 +125,137 @@ public final class ServiceCorsConfigurationInfoArgs extends com.pulumi.resources
             $ = new ServiceCorsConfigurationInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param allowCredentials If credentials are allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(@Nullable Output<Boolean> allowCredentials) {
             $.allowCredentials = allowCredentials;
             return this;
         }
 
+        /**
+         * @param allowCredentials If credentials are allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder allowCredentials(Boolean allowCredentials) {
             return allowCredentials(Output.of(allowCredentials));
         }
 
+        /**
+         * @param headers The headers to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(@Nullable Output<List<String>> headers) {
             $.headers = headers;
             return this;
         }
 
+        /**
+         * @param headers The headers to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(List<String> headers) {
             return headers(Output.of(headers));
         }
 
+        /**
+         * @param headers The headers to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder headers(String... headers) {
             return headers(List.of(headers));
         }
 
+        /**
+         * @param maxAge The max age to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(@Nullable Output<Double> maxAge) {
             $.maxAge = maxAge;
             return this;
         }
 
+        /**
+         * @param maxAge The max age to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxAge(Double maxAge) {
             return maxAge(Output.of(maxAge));
         }
 
+        /**
+         * @param methods The methods to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(@Nullable Output<List<String>> methods) {
             $.methods = methods;
             return this;
         }
 
+        /**
+         * @param methods The methods to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(List<String> methods) {
             return methods(Output.of(methods));
         }
 
+        /**
+         * @param methods The methods to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder methods(String... methods) {
             return methods(List.of(methods));
         }
 
+        /**
+         * @param origins The origins to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(@Nullable Output<List<String>> origins) {
             $.origins = origins;
             return this;
         }
 
+        /**
+         * @param origins The origins to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(List<String> origins) {
             return origins(Output.of(origins));
         }
 
+        /**
+         * @param origins The origins to be allowed via CORS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder origins(String... origins) {
             return origins(List.of(origins));
         }

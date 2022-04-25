@@ -25,6 +25,10 @@ public final class ReportDeliveryDestinationResponse extends com.pulumi.resource
     @Import(name="container", required=true)
     private String container;
 
+    /**
+     * @return The name of the container where reports will be uploaded.
+     * 
+     */
     public String container() {
         return this.container;
     }
@@ -36,6 +40,10 @@ public final class ReportDeliveryDestinationResponse extends com.pulumi.resource
     @Import(name="resourceId", required=true)
     private String resourceId;
 
+    /**
+     * @return The resource id of the storage account where reports will be delivered.
+     * 
+     */
     public String resourceId() {
         return this.resourceId;
     }
@@ -47,6 +55,10 @@ public final class ReportDeliveryDestinationResponse extends com.pulumi.resource
     @Import(name="rootFolderPath")
     private @Nullable String rootFolderPath;
 
+    /**
+     * @return The name of the directory where reports will be uploaded.
+     * 
+     */
     public Optional<String> rootFolderPath() {
         return Optional.ofNullable(this.rootFolderPath);
     }
@@ -77,16 +89,34 @@ public final class ReportDeliveryDestinationResponse extends com.pulumi.resource
             $ = new ReportDeliveryDestinationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param container The name of the container where reports will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder container(String container) {
             $.container = container;
             return this;
         }
 
+        /**
+         * @param resourceId The resource id of the storage account where reports will be delivered.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceId(String resourceId) {
             $.resourceId = resourceId;
             return this;
         }
 
+        /**
+         * @param rootFolderPath The name of the directory where reports will be uploaded.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rootFolderPath(@Nullable String rootFolderPath) {
             $.rootFolderPath = rootFolderPath;
             return this;

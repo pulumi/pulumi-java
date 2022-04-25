@@ -26,6 +26,10 @@ public final class DataDisksGroupsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="diskSizeGB", required=true)
     private Integer diskSizeGB;
 
+    /**
+     * @return ReadOnly. The DiskSize in GB. Do not set this value.
+     * 
+     */
     public Integer diskSizeGB() {
         return this.diskSizeGB;
     }
@@ -37,6 +41,10 @@ public final class DataDisksGroupsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="disksPerNode")
     private @Nullable Integer disksPerNode;
 
+    /**
+     * @return The number of disks per node.
+     * 
+     */
     public Optional<Integer> disksPerNode() {
         return Optional.ofNullable(this.disksPerNode);
     }
@@ -48,6 +56,10 @@ public final class DataDisksGroupsResponse extends com.pulumi.resources.InvokeAr
     @Import(name="storageAccountType", required=true)
     private String storageAccountType;
 
+    /**
+     * @return ReadOnly. The storage account type. Do not set this value.
+     * 
+     */
     public String storageAccountType() {
         return this.storageAccountType;
     }
@@ -78,16 +90,34 @@ public final class DataDisksGroupsResponse extends com.pulumi.resources.InvokeAr
             $ = new DataDisksGroupsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskSizeGB ReadOnly. The DiskSize in GB. Do not set this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskSizeGB(Integer diskSizeGB) {
             $.diskSizeGB = diskSizeGB;
             return this;
         }
 
+        /**
+         * @param disksPerNode The number of disks per node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disksPerNode(@Nullable Integer disksPerNode) {
             $.disksPerNode = disksPerNode;
             return this;
         }
 
+        /**
+         * @param storageAccountType ReadOnly. The storage account type. Do not set this value.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageAccountType(String storageAccountType) {
             $.storageAccountType = storageAccountType;
             return this;

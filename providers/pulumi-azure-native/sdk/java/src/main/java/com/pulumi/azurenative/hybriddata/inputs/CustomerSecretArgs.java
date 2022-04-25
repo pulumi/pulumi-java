@@ -25,6 +25,10 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="algorithm", required=true)
     private Output<SupportedAlgorithm> algorithm;
 
+    /**
+     * @return The encryption algorithm used to encrypt data.
+     * 
+     */
     public Output<SupportedAlgorithm> algorithm() {
         return this.algorithm;
     }
@@ -36,6 +40,10 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyIdentifier", required=true)
     private Output<String> keyIdentifier;
 
+    /**
+     * @return The identifier to the data service input object which this secret corresponds to.
+     * 
+     */
     public Output<String> keyIdentifier() {
         return this.keyIdentifier;
     }
@@ -47,6 +55,10 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="keyValue", required=true)
     private Output<String> keyValue;
 
+    /**
+     * @return It contains the encrypted customer secret.
+     * 
+     */
     public Output<String> keyValue() {
         return this.keyValue;
     }
@@ -77,29 +89,65 @@ public final class CustomerSecretArgs extends com.pulumi.resources.ResourceArgs 
             $ = new CustomerSecretArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param algorithm The encryption algorithm used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(Output<SupportedAlgorithm> algorithm) {
             $.algorithm = algorithm;
             return this;
         }
 
+        /**
+         * @param algorithm The encryption algorithm used to encrypt data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder algorithm(SupportedAlgorithm algorithm) {
             return algorithm(Output.of(algorithm));
         }
 
+        /**
+         * @param keyIdentifier The identifier to the data service input object which this secret corresponds to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(Output<String> keyIdentifier) {
             $.keyIdentifier = keyIdentifier;
             return this;
         }
 
+        /**
+         * @param keyIdentifier The identifier to the data service input object which this secret corresponds to.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyIdentifier(String keyIdentifier) {
             return keyIdentifier(Output.of(keyIdentifier));
         }
 
+        /**
+         * @param keyValue It contains the encrypted customer secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValue(Output<String> keyValue) {
             $.keyValue = keyValue;
             return this;
         }
 
+        /**
+         * @param keyValue It contains the encrypted customer secret.
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyValue(String keyValue) {
             return keyValue(Output.of(keyValue));
         }

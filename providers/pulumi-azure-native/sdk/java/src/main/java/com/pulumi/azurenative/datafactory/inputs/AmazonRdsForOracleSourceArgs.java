@@ -29,6 +29,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="additionalColumns")
     private @Nullable Output<Object> additionalColumns;
 
+    /**
+     * @return Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+     * 
+     */
     public Optional<Output<Object>> additionalColumns() {
         return Optional.ofNullable(this.additionalColumns);
     }
@@ -40,6 +44,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="disableMetricsCollection")
     private @Nullable Output<Object> disableMetricsCollection;
 
+    /**
+     * @return If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Output<Object>> disableMetricsCollection() {
         return Optional.ofNullable(this.disableMetricsCollection);
     }
@@ -51,6 +59,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="maxConcurrentConnections")
     private @Nullable Output<Object> maxConcurrentConnections;
 
+    /**
+     * @return The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> maxConcurrentConnections() {
         return Optional.ofNullable(this.maxConcurrentConnections);
     }
@@ -62,6 +74,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="oracleReaderQuery")
     private @Nullable Output<Object> oracleReaderQuery;
 
+    /**
+     * @return AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> oracleReaderQuery() {
         return Optional.ofNullable(this.oracleReaderQuery);
     }
@@ -73,6 +89,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="partitionOption")
     private @Nullable Output<Object> partitionOption;
 
+    /**
+     * @return The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Output<Object>> partitionOption() {
         return Optional.ofNullable(this.partitionOption);
     }
@@ -84,6 +104,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="partitionSettings")
     private @Nullable Output<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings;
 
+    /**
+     * @return The settings that will be leveraged for AmazonRdsForOracle source partitioning.
+     * 
+     */
     public Optional<Output<AmazonRdsForOraclePartitionSettingsArgs>> partitionSettings() {
         return Optional.ofNullable(this.partitionSettings);
     }
@@ -95,6 +119,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="queryTimeout")
     private @Nullable Output<Object> queryTimeout;
 
+    /**
+     * @return Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> queryTimeout() {
         return Optional.ofNullable(this.queryTimeout);
     }
@@ -106,6 +134,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="sourceRetryCount")
     private @Nullable Output<Object> sourceRetryCount;
 
+    /**
+     * @return Source retry count. Type: integer (or Expression with resultType integer).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryCount() {
         return Optional.ofNullable(this.sourceRetryCount);
     }
@@ -117,6 +149,10 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="sourceRetryWait")
     private @Nullable Output<Object> sourceRetryWait;
 
+    /**
+     * @return Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+     * 
+     */
     public Optional<Output<Object>> sourceRetryWait() {
         return Optional.ofNullable(this.sourceRetryWait);
     }
@@ -129,6 +165,11 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Copy source type.
+     * Expected value is &#39;AmazonRdsForOracleSource&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -166,92 +207,214 @@ public final class AmazonRdsForOracleSourceArgs extends com.pulumi.resources.Res
             $ = new AmazonRdsForOracleSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param additionalColumns Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalColumns(@Nullable Output<Object> additionalColumns) {
             $.additionalColumns = additionalColumns;
             return this;
         }
 
+        /**
+         * @param additionalColumns Specifies the additional columns to be added to source data. Type: array of objects(AdditionalColumns) (or Expression with resultType array of objects).
+         * 
+         * @return builder
+         * 
+         */
         public Builder additionalColumns(Object additionalColumns) {
             return additionalColumns(Output.of(additionalColumns));
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(@Nullable Output<Object> disableMetricsCollection) {
             $.disableMetricsCollection = disableMetricsCollection;
             return this;
         }
 
+        /**
+         * @param disableMetricsCollection If true, disable data store metrics collection. Default is false. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableMetricsCollection(Object disableMetricsCollection) {
             return disableMetricsCollection(Output.of(disableMetricsCollection));
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(@Nullable Output<Object> maxConcurrentConnections) {
             $.maxConcurrentConnections = maxConcurrentConnections;
             return this;
         }
 
+        /**
+         * @param maxConcurrentConnections The maximum concurrent connection count for the source data store. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxConcurrentConnections(Object maxConcurrentConnections) {
             return maxConcurrentConnections(Output.of(maxConcurrentConnections));
         }
 
+        /**
+         * @param oracleReaderQuery AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleReaderQuery(@Nullable Output<Object> oracleReaderQuery) {
             $.oracleReaderQuery = oracleReaderQuery;
             return this;
         }
 
+        /**
+         * @param oracleReaderQuery AmazonRdsForOracle reader query. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder oracleReaderQuery(Object oracleReaderQuery) {
             return oracleReaderQuery(Output.of(oracleReaderQuery));
         }
 
+        /**
+         * @param partitionOption The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionOption(@Nullable Output<Object> partitionOption) {
             $.partitionOption = partitionOption;
             return this;
         }
 
+        /**
+         * @param partitionOption The partition mechanism that will be used for AmazonRdsForOracle read in parallel. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionOption(Object partitionOption) {
             return partitionOption(Output.of(partitionOption));
         }
 
+        /**
+         * @param partitionSettings The settings that will be leveraged for AmazonRdsForOracle source partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionSettings(@Nullable Output<AmazonRdsForOraclePartitionSettingsArgs> partitionSettings) {
             $.partitionSettings = partitionSettings;
             return this;
         }
 
+        /**
+         * @param partitionSettings The settings that will be leveraged for AmazonRdsForOracle source partitioning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partitionSettings(AmazonRdsForOraclePartitionSettingsArgs partitionSettings) {
             return partitionSettings(Output.of(partitionSettings));
         }
 
+        /**
+         * @param queryTimeout Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(@Nullable Output<Object> queryTimeout) {
             $.queryTimeout = queryTimeout;
             return this;
         }
 
+        /**
+         * @param queryTimeout Query timeout. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder queryTimeout(Object queryTimeout) {
             return queryTimeout(Output.of(queryTimeout));
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(@Nullable Output<Object> sourceRetryCount) {
             $.sourceRetryCount = sourceRetryCount;
             return this;
         }
 
+        /**
+         * @param sourceRetryCount Source retry count. Type: integer (or Expression with resultType integer).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryCount(Object sourceRetryCount) {
             return sourceRetryCount(Output.of(sourceRetryCount));
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(@Nullable Output<Object> sourceRetryWait) {
             $.sourceRetryWait = sourceRetryWait;
             return this;
         }
 
+        /**
+         * @param sourceRetryWait Source retry wait. Type: string (or Expression with resultType string), pattern: ((\d+)\.)?(\d\d):(60|([0-5][0-9])):(60|([0-5][0-9])).
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceRetryWait(Object sourceRetryWait) {
             return sourceRetryWait(Output.of(sourceRetryWait));
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;AmazonRdsForOracleSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Copy source type.
+         * Expected value is &#39;AmazonRdsForOracleSource&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

@@ -10,18 +10,18 @@ import java.util.Objects;
 @CustomType
 public final class MediaGraphUsernamePasswordCredentialsResponse {
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#39;.
      * 
      */
     private final String odataType;
     /**
-     * Password for a username/password pair.
+     * @return Password for a username/password pair.
      * 
      */
     private final String password;
     /**
-     * Username for a username/password pair.
+     * @return Username for a username/password pair.
      * 
      */
     private final String username;
@@ -37,24 +37,24 @@ public final class MediaGraphUsernamePasswordCredentialsResponse {
     }
 
     /**
-     * The discriminator for derived types.
+     * @return The discriminator for derived types.
      * Expected value is &#39;#Microsoft.Media.MediaGraphUsernamePasswordCredentials&#39;.
      * 
-    */
+     */
     public String odataType() {
         return this.odataType;
     }
     /**
-     * Password for a username/password pair.
+     * @return Password for a username/password pair.
      * 
-    */
+     */
     public String password() {
         return this.password;
     }
     /**
-     * Username for a username/password pair.
+     * @return Username for a username/password pair.
      * 
-    */
+     */
     public String username() {
         return this.username;
     }

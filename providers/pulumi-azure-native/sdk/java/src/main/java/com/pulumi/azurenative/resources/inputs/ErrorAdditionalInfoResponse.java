@@ -24,6 +24,10 @@ public final class ErrorAdditionalInfoResponse extends com.pulumi.resources.Invo
     @Import(name="info", required=true)
     private Object info;
 
+    /**
+     * @return The additional info.
+     * 
+     */
     public Object info() {
         return this.info;
     }
@@ -35,6 +39,10 @@ public final class ErrorAdditionalInfoResponse extends com.pulumi.resources.Invo
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return The additional info type.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -64,11 +72,23 @@ public final class ErrorAdditionalInfoResponse extends com.pulumi.resources.Invo
             $ = new ErrorAdditionalInfoResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param info The additional info.
+         * 
+         * @return builder
+         * 
+         */
         public Builder info(Object info) {
             $.info = info;
             return this;
         }
 
+        /**
+         * @param type The additional info type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;

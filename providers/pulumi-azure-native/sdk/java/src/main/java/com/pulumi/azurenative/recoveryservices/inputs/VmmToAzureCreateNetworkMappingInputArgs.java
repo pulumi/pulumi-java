@@ -28,6 +28,11 @@ public final class VmmToAzureCreateNetworkMappingInputArgs extends com.pulumi.re
     @Import(name="instanceType")
     private @Nullable Output<String> instanceType;
 
+    /**
+     * @return The instance type.
+     * Expected value is &#39;VmmToAzure&#39;.
+     * 
+     */
     public Optional<Output<String>> instanceType() {
         return Optional.ofNullable(this.instanceType);
     }
@@ -56,11 +61,25 @@ public final class VmmToAzureCreateNetworkMappingInputArgs extends com.pulumi.re
             $ = new VmmToAzureCreateNetworkMappingInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param instanceType The instance type.
+         * Expected value is &#39;VmmToAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(@Nullable Output<String> instanceType) {
             $.instanceType = instanceType;
             return this;
         }
 
+        /**
+         * @param instanceType The instance type.
+         * Expected value is &#39;VmmToAzure&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder instanceType(String instanceType) {
             return instanceType(Output.of(instanceType));
         }

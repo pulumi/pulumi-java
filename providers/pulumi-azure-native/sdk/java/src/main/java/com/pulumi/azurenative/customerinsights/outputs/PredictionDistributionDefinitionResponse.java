@@ -14,17 +14,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class PredictionDistributionDefinitionResponse {
     /**
-     * Distributions of the prediction.
+     * @return Distributions of the prediction.
      * 
      */
     private final @Nullable List<PredictionDistributionDefinitionResponseDistributions> distributions;
     /**
-     * Total negatives in the distribution.
+     * @return Total negatives in the distribution.
      * 
      */
     private final @Nullable Double totalNegatives;
     /**
-     * Total positive in the distribution.
+     * @return Total positive in the distribution.
      * 
      */
     private final @Nullable Double totalPositives;
@@ -40,23 +40,23 @@ public final class PredictionDistributionDefinitionResponse {
     }
 
     /**
-     * Distributions of the prediction.
+     * @return Distributions of the prediction.
      * 
-    */
+     */
     public List<PredictionDistributionDefinitionResponseDistributions> distributions() {
         return this.distributions == null ? List.of() : this.distributions;
     }
     /**
-     * Total negatives in the distribution.
+     * @return Total negatives in the distribution.
      * 
-    */
+     */
     public Optional<Double> totalNegatives() {
         return Optional.ofNullable(this.totalNegatives);
     }
     /**
-     * Total positive in the distribution.
+     * @return Total positive in the distribution.
      * 
-    */
+     */
     public Optional<Double> totalPositives() {
         return Optional.ofNullable(this.totalPositives);
     }

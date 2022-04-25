@@ -26,6 +26,10 @@ public final class RecurrenceScheduleOccurrenceResponse extends com.pulumi.resou
     @Import(name="day")
     private @Nullable String day;
 
+    /**
+     * @return The day of the week.
+     * 
+     */
     public Optional<String> day() {
         return Optional.ofNullable(this.day);
     }
@@ -37,6 +41,10 @@ public final class RecurrenceScheduleOccurrenceResponse extends com.pulumi.resou
     @Import(name="occurrence")
     private @Nullable Integer occurrence;
 
+    /**
+     * @return The occurrence.
+     * 
+     */
     public Optional<Integer> occurrence() {
         return Optional.ofNullable(this.occurrence);
     }
@@ -66,11 +74,23 @@ public final class RecurrenceScheduleOccurrenceResponse extends com.pulumi.resou
             $ = new RecurrenceScheduleOccurrenceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param day The day of the week.
+         * 
+         * @return builder
+         * 
+         */
         public Builder day(@Nullable String day) {
             $.day = day;
             return this;
         }
 
+        /**
+         * @param occurrence The occurrence.
+         * 
+         * @return builder
+         * 
+         */
         public Builder occurrence(@Nullable Integer occurrence) {
             $.occurrence = occurrence;
             return this;

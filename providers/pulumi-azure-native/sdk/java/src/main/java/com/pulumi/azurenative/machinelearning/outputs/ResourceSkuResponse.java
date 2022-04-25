@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceSkuResponse {
     /**
-     * The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.
+     * @return The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.
      * 
      */
     private final @Nullable Integer capacity;
     /**
-     * The SKU name. Along with tier, uniquely identifies the SKU.
+     * @return The SKU name. Along with tier, uniquely identifies the SKU.
      * 
      */
     private final @Nullable String name;
     /**
-     * The SKU tier. Along with name, uniquely identifies the SKU.
+     * @return The SKU tier. Along with name, uniquely identifies the SKU.
      * 
      */
     private final @Nullable String tier;
@@ -39,23 +39,23 @@ public final class ResourceSkuResponse {
     }
 
     /**
-     * The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.
+     * @return The scale-out capacity of the resource. 1 is 1x, 2 is 2x, etc. This impacts the quantities and cost of any commitment plan resource.
      * 
-    */
+     */
     public Optional<Integer> capacity() {
         return Optional.ofNullable(this.capacity);
     }
     /**
-     * The SKU name. Along with tier, uniquely identifies the SKU.
+     * @return The SKU name. Along with tier, uniquely identifies the SKU.
      * 
-    */
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
     /**
-     * The SKU tier. Along with name, uniquely identifies the SKU.
+     * @return The SKU tier. Along with name, uniquely identifies the SKU.
      * 
-    */
+     */
     public Optional<String> tier() {
         return Optional.ofNullable(this.tier);
     }

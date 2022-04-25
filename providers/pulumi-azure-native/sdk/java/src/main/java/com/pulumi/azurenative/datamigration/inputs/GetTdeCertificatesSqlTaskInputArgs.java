@@ -27,6 +27,10 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
     @Import(name="backupFileShare", required=true)
     private Output<FileShareArgs> backupFileShare;
 
+    /**
+     * @return Backup file share information for file share to be used for temporarily storing files.
+     * 
+     */
     public Output<FileShareArgs> backupFileShare() {
         return this.backupFileShare;
     }
@@ -38,6 +42,10 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
     @Import(name="connectionInfo", required=true)
     private Output<SqlConnectionInfoArgs> connectionInfo;
 
+    /**
+     * @return Connection information for SQL Server
+     * 
+     */
     public Output<SqlConnectionInfoArgs> connectionInfo() {
         return this.connectionInfo;
     }
@@ -49,6 +57,10 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
     @Import(name="selectedCertificates", required=true)
     private Output<List<SelectedCertificateInputArgs>> selectedCertificates;
 
+    /**
+     * @return List containing certificate names and corresponding password to use for encrypting the exported certificate.
+     * 
+     */
     public Output<List<SelectedCertificateInputArgs>> selectedCertificates() {
         return this.selectedCertificates;
     }
@@ -79,33 +91,75 @@ public final class GetTdeCertificatesSqlTaskInputArgs extends com.pulumi.resourc
             $ = new GetTdeCertificatesSqlTaskInputArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param backupFileShare Backup file share information for file share to be used for temporarily storing files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(Output<FileShareArgs> backupFileShare) {
             $.backupFileShare = backupFileShare;
             return this;
         }
 
+        /**
+         * @param backupFileShare Backup file share information for file share to be used for temporarily storing files.
+         * 
+         * @return builder
+         * 
+         */
         public Builder backupFileShare(FileShareArgs backupFileShare) {
             return backupFileShare(Output.of(backupFileShare));
         }
 
+        /**
+         * @param connectionInfo Connection information for SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(Output<SqlConnectionInfoArgs> connectionInfo) {
             $.connectionInfo = connectionInfo;
             return this;
         }
 
+        /**
+         * @param connectionInfo Connection information for SQL Server
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionInfo(SqlConnectionInfoArgs connectionInfo) {
             return connectionInfo(Output.of(connectionInfo));
         }
 
+        /**
+         * @param selectedCertificates List containing certificate names and corresponding password to use for encrypting the exported certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedCertificates(Output<List<SelectedCertificateInputArgs>> selectedCertificates) {
             $.selectedCertificates = selectedCertificates;
             return this;
         }
 
+        /**
+         * @param selectedCertificates List containing certificate names and corresponding password to use for encrypting the exported certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedCertificates(List<SelectedCertificateInputArgs> selectedCertificates) {
             return selectedCertificates(Output.of(selectedCertificates));
         }
 
+        /**
+         * @param selectedCertificates List containing certificate names and corresponding password to use for encrypting the exported certificate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder selectedCertificates(SelectedCertificateInputArgs... selectedCertificates) {
             return selectedCertificates(List.of(selectedCertificates));
         }

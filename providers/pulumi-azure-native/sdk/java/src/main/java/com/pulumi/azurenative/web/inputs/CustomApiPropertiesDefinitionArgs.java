@@ -35,6 +35,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="apiDefinitions")
     private @Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions;
 
+    /**
+     * @return API Definitions
+     * 
+     */
     public Optional<Output<ApiResourceDefinitionsArgs>> apiDefinitions() {
         return Optional.ofNullable(this.apiDefinitions);
     }
@@ -46,6 +50,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="apiType")
     private @Nullable Output<Either<String,ApiType>> apiType;
 
+    /**
+     * @return The API type
+     * 
+     */
     public Optional<Output<Either<String,ApiType>>> apiType() {
         return Optional.ofNullable(this.apiType);
     }
@@ -57,6 +65,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="backendService")
     private @Nullable Output<ApiResourceBackendServiceArgs> backendService;
 
+    /**
+     * @return The API backend service
+     * 
+     */
     public Optional<Output<ApiResourceBackendServiceArgs>> backendService() {
         return Optional.ofNullable(this.backendService);
     }
@@ -68,6 +80,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="brandColor")
     private @Nullable Output<String> brandColor;
 
+    /**
+     * @return Brand color
+     * 
+     */
     public Optional<Output<String>> brandColor() {
         return Optional.ofNullable(this.brandColor);
     }
@@ -79,6 +95,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="capabilities")
     private @Nullable Output<List<String>> capabilities;
 
+    /**
+     * @return The custom API capabilities
+     * 
+     */
     public Optional<Output<List<String>>> capabilities() {
         return Optional.ofNullable(this.capabilities);
     }
@@ -90,6 +110,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="connectionParameters")
     private @Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters;
 
+    /**
+     * @return Connection parameters
+     * 
+     */
     public Optional<Output<Map<String,ConnectionParameterArgs>>> connectionParameters() {
         return Optional.ofNullable(this.connectionParameters);
     }
@@ -101,6 +125,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return The custom API description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -112,6 +140,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="displayName")
     private @Nullable Output<String> displayName;
 
+    /**
+     * @return The display name
+     * 
+     */
     public Optional<Output<String>> displayName() {
         return Optional.ofNullable(this.displayName);
     }
@@ -123,6 +155,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="iconUri")
     private @Nullable Output<String> iconUri;
 
+    /**
+     * @return The icon URI
+     * 
+     */
     public Optional<Output<String>> iconUri() {
         return Optional.ofNullable(this.iconUri);
     }
@@ -134,6 +170,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="runtimeUrls")
     private @Nullable Output<List<String>> runtimeUrls;
 
+    /**
+     * @return Runtime URLs
+     * 
+     */
     public Optional<Output<List<String>>> runtimeUrls() {
         return Optional.ofNullable(this.runtimeUrls);
     }
@@ -145,6 +185,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="swagger")
     private @Nullable Output<Object> swagger;
 
+    /**
+     * @return The JSON representation of the swagger
+     * 
+     */
     public Optional<Output<Object>> swagger() {
         return Optional.ofNullable(this.swagger);
     }
@@ -156,6 +200,10 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
     @Import(name="wsdlDefinition")
     private @Nullable Output<WsdlDefinitionArgs> wsdlDefinition;
 
+    /**
+     * @return The WSDL definition
+     * 
+     */
     public Optional<Output<WsdlDefinitionArgs>> wsdlDefinition() {
         return Optional.ofNullable(this.wsdlDefinition);
     }
@@ -195,126 +243,294 @@ public final class CustomApiPropertiesDefinitionArgs extends com.pulumi.resource
             $ = new CustomApiPropertiesDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiDefinitions API Definitions
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiDefinitions(@Nullable Output<ApiResourceDefinitionsArgs> apiDefinitions) {
             $.apiDefinitions = apiDefinitions;
             return this;
         }
 
+        /**
+         * @param apiDefinitions API Definitions
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiDefinitions(ApiResourceDefinitionsArgs apiDefinitions) {
             return apiDefinitions(Output.of(apiDefinitions));
         }
 
+        /**
+         * @param apiType The API type
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiType(@Nullable Output<Either<String,ApiType>> apiType) {
             $.apiType = apiType;
             return this;
         }
 
+        /**
+         * @param apiType The API type
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiType(Either<String,ApiType> apiType) {
             return apiType(Output.of(apiType));
         }
 
+        /**
+         * @param apiType The API type
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiType(String apiType) {
             return apiType(Either.ofLeft(apiType));
         }
 
+        /**
+         * @param apiType The API type
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiType(ApiType apiType) {
             return apiType(Either.ofRight(apiType));
         }
 
+        /**
+         * @param backendService The API backend service
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(@Nullable Output<ApiResourceBackendServiceArgs> backendService) {
             $.backendService = backendService;
             return this;
         }
 
+        /**
+         * @param backendService The API backend service
+         * 
+         * @return builder
+         * 
+         */
         public Builder backendService(ApiResourceBackendServiceArgs backendService) {
             return backendService(Output.of(backendService));
         }
 
+        /**
+         * @param brandColor Brand color
+         * 
+         * @return builder
+         * 
+         */
         public Builder brandColor(@Nullable Output<String> brandColor) {
             $.brandColor = brandColor;
             return this;
         }
 
+        /**
+         * @param brandColor Brand color
+         * 
+         * @return builder
+         * 
+         */
         public Builder brandColor(String brandColor) {
             return brandColor(Output.of(brandColor));
         }
 
+        /**
+         * @param capabilities The custom API capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(@Nullable Output<List<String>> capabilities) {
             $.capabilities = capabilities;
             return this;
         }
 
+        /**
+         * @param capabilities The custom API capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(List<String> capabilities) {
             return capabilities(Output.of(capabilities));
         }
 
+        /**
+         * @param capabilities The custom API capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder capabilities(String... capabilities) {
             return capabilities(List.of(capabilities));
         }
 
+        /**
+         * @param connectionParameters Connection parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionParameters(@Nullable Output<Map<String,ConnectionParameterArgs>> connectionParameters) {
             $.connectionParameters = connectionParameters;
             return this;
         }
 
+        /**
+         * @param connectionParameters Connection parameters
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectionParameters(Map<String,ConnectionParameterArgs> connectionParameters) {
             return connectionParameters(Output.of(connectionParameters));
         }
 
+        /**
+         * @param description The custom API description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description The custom API description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param displayName The display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(@Nullable Output<String> displayName) {
             $.displayName = displayName;
             return this;
         }
 
+        /**
+         * @param displayName The display name
+         * 
+         * @return builder
+         * 
+         */
         public Builder displayName(String displayName) {
             return displayName(Output.of(displayName));
         }
 
+        /**
+         * @param iconUri The icon URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconUri(@Nullable Output<String> iconUri) {
             $.iconUri = iconUri;
             return this;
         }
 
+        /**
+         * @param iconUri The icon URI
+         * 
+         * @return builder
+         * 
+         */
         public Builder iconUri(String iconUri) {
             return iconUri(Output.of(iconUri));
         }
 
+        /**
+         * @param runtimeUrls Runtime URLs
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeUrls(@Nullable Output<List<String>> runtimeUrls) {
             $.runtimeUrls = runtimeUrls;
             return this;
         }
 
+        /**
+         * @param runtimeUrls Runtime URLs
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeUrls(List<String> runtimeUrls) {
             return runtimeUrls(Output.of(runtimeUrls));
         }
 
+        /**
+         * @param runtimeUrls Runtime URLs
+         * 
+         * @return builder
+         * 
+         */
         public Builder runtimeUrls(String... runtimeUrls) {
             return runtimeUrls(List.of(runtimeUrls));
         }
 
+        /**
+         * @param swagger The JSON representation of the swagger
+         * 
+         * @return builder
+         * 
+         */
         public Builder swagger(@Nullable Output<Object> swagger) {
             $.swagger = swagger;
             return this;
         }
 
+        /**
+         * @param swagger The JSON representation of the swagger
+         * 
+         * @return builder
+         * 
+         */
         public Builder swagger(Object swagger) {
             return swagger(Output.of(swagger));
         }
 
+        /**
+         * @param wsdlDefinition The WSDL definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsdlDefinition(@Nullable Output<WsdlDefinitionArgs> wsdlDefinition) {
             $.wsdlDefinition = wsdlDefinition;
             return this;
         }
 
+        /**
+         * @param wsdlDefinition The WSDL definition
+         * 
+         * @return builder
+         * 
+         */
         public Builder wsdlDefinition(WsdlDefinitionArgs wsdlDefinition) {
             return wsdlDefinition(Output.of(wsdlDefinition));
         }

@@ -12,7 +12,7 @@ import javax.annotation.Nullable;
 @CustomType
 public final class BulkCreationParametersResponse {
     /**
-     * The number of virtual machine instances to create.
+     * @return The number of virtual machine instances to create.
      * 
      */
     private final @Nullable Integer instanceCount;
@@ -23,9 +23,9 @@ public final class BulkCreationParametersResponse {
     }
 
     /**
-     * The number of virtual machine instances to create.
+     * @return The number of virtual machine instances to create.
      * 
-    */
+     */
     public Optional<Integer> instanceCount() {
         return Optional.ofNullable(this.instanceCount);
     }

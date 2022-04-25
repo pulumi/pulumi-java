@@ -35,6 +35,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="aadResourceId")
     private @Nullable Object aadResourceId;
 
+    /**
+     * @return The resource you are requesting authorization to use.
+     * 
+     */
     public Optional<Object> aadResourceId() {
         return Optional.ofNullable(this.aadResourceId);
     }
@@ -46,6 +50,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="annotations")
     private @Nullable List<Object> annotations;
 
+    /**
+     * @return List of tags that can be used for describing the linked service.
+     * 
+     */
     public Optional<List<Object>> annotations() {
         return Optional.ofNullable(this.annotations);
     }
@@ -57,6 +65,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="authHeaders")
     private @Nullable Object authHeaders;
 
+    /**
+     * @return The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+     * 
+     */
     public Optional<Object> authHeaders() {
         return Optional.ofNullable(this.authHeaders);
     }
@@ -68,6 +80,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="authenticationType", required=true)
     private String authenticationType;
 
+    /**
+     * @return Type of authentication used to connect to the REST service.
+     * 
+     */
     public String authenticationType() {
         return this.authenticationType;
     }
@@ -79,6 +95,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="azureCloudType")
     private @Nullable Object azureCloudType;
 
+    /**
+     * @return Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> azureCloudType() {
         return Optional.ofNullable(this.azureCloudType);
     }
@@ -90,6 +110,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="connectVia")
     private @Nullable IntegrationRuntimeReferenceResponse connectVia;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> connectVia() {
         return Optional.ofNullable(this.connectVia);
     }
@@ -101,6 +125,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="credential")
     private @Nullable CredentialReferenceResponse credential;
 
+    /**
+     * @return The credential reference containing authentication information.
+     * 
+     */
     public Optional<CredentialReferenceResponse> credential() {
         return Optional.ofNullable(this.credential);
     }
@@ -112,6 +140,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Linked service description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -123,6 +155,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="enableServerCertificateValidation")
     private @Nullable Object enableServerCertificateValidation;
 
+    /**
+     * @return Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
+     * 
+     */
     public Optional<Object> enableServerCertificateValidation() {
         return Optional.ofNullable(this.enableServerCertificateValidation);
     }
@@ -134,6 +170,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="encryptedCredential")
     private @Nullable Object encryptedCredential;
 
+    /**
+     * @return The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+     * 
+     */
     public Optional<Object> encryptedCredential() {
         return Optional.ofNullable(this.encryptedCredential);
     }
@@ -145,6 +185,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="parameters")
     private @Nullable Map<String,ParameterSpecificationResponse> parameters;
 
+    /**
+     * @return Parameters for linked service.
+     * 
+     */
     public Optional<Map<String,ParameterSpecificationResponse>> parameters() {
         return Optional.ofNullable(this.parameters);
     }
@@ -156,6 +200,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="password")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password;
 
+    /**
+     * @return The password used in Basic authentication type.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -167,6 +215,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="servicePrincipalId")
     private @Nullable Object servicePrincipalId;
 
+    /**
+     * @return The application&#39;s client ID used in AadServicePrincipal authentication type.
+     * 
+     */
     public Optional<Object> servicePrincipalId() {
         return Optional.ofNullable(this.servicePrincipalId);
     }
@@ -178,6 +230,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="servicePrincipalKey")
     private @Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey;
 
+    /**
+     * @return The application&#39;s key used in AadServicePrincipal authentication type.
+     * 
+     */
     public Optional<Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse>> servicePrincipalKey() {
         return Optional.ofNullable(this.servicePrincipalKey);
     }
@@ -189,6 +245,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="tenant")
     private @Nullable Object tenant;
 
+    /**
+     * @return The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
+     * 
+     */
     public Optional<Object> tenant() {
         return Optional.ofNullable(this.tenant);
     }
@@ -201,6 +261,11 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of linked service.
+     * Expected value is &#39;RestService&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -212,6 +277,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="url", required=true)
     private Object url;
 
+    /**
+     * @return The base URL of the REST service.
+     * 
+     */
     public Object url() {
         return this.url;
     }
@@ -223,6 +292,10 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
     @Import(name="userName")
     private @Nullable Object userName;
 
+    /**
+     * @return The user name used in Basic authentication type.
+     * 
+     */
     public Optional<Object> userName() {
         return Optional.ofNullable(this.userName);
     }
@@ -268,111 +341,250 @@ public final class RestServiceLinkedServiceResponse extends com.pulumi.resources
             $ = new RestServiceLinkedServiceResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param aadResourceId The resource you are requesting authorization to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder aadResourceId(@Nullable Object aadResourceId) {
             $.aadResourceId = aadResourceId;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(@Nullable List<Object> annotations) {
             $.annotations = annotations;
             return this;
         }
 
+        /**
+         * @param annotations List of tags that can be used for describing the linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder annotations(Object... annotations) {
             return annotations(List.of(annotations));
         }
 
+        /**
+         * @param authHeaders The additional HTTP headers in the request to RESTful API used for authorization. Type: object (or Expression with resultType object).
+         * 
+         * @return builder
+         * 
+         */
         public Builder authHeaders(@Nullable Object authHeaders) {
             $.authHeaders = authHeaders;
             return this;
         }
 
+        /**
+         * @param authenticationType Type of authentication used to connect to the REST service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder authenticationType(String authenticationType) {
             $.authenticationType = authenticationType;
             return this;
         }
 
+        /**
+         * @param azureCloudType Indicates the azure cloud type of the service principle auth. Allowed values are AzurePublic, AzureChina, AzureUsGovernment, AzureGermany. Default value is the data factory regions’ cloud type. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder azureCloudType(@Nullable Object azureCloudType) {
             $.azureCloudType = azureCloudType;
             return this;
         }
 
+        /**
+         * @param connectVia The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder connectVia(@Nullable IntegrationRuntimeReferenceResponse connectVia) {
             $.connectVia = connectVia;
             return this;
         }
 
+        /**
+         * @param credential The credential reference containing authentication information.
+         * 
+         * @return builder
+         * 
+         */
         public Builder credential(@Nullable CredentialReferenceResponse credential) {
             $.credential = credential;
             return this;
         }
 
+        /**
+         * @param description Linked service description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param enableServerCertificateValidation Whether to validate server side SSL certificate when connecting to the endpoint.The default value is true. Type: boolean (or Expression with resultType boolean).
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableServerCertificateValidation(@Nullable Object enableServerCertificateValidation) {
             $.enableServerCertificateValidation = enableServerCertificateValidation;
             return this;
         }
 
+        /**
+         * @param encryptedCredential The encrypted credential used for authentication. Credentials are encrypted using the integration runtime credential manager. Type: string (or Expression with resultType string).
+         * 
+         * @return builder
+         * 
+         */
         public Builder encryptedCredential(@Nullable Object encryptedCredential) {
             $.encryptedCredential = encryptedCredential;
             return this;
         }
 
+        /**
+         * @param parameters Parameters for linked service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder parameters(@Nullable Map<String,ParameterSpecificationResponse> parameters) {
             $.parameters = parameters;
             return this;
         }
 
+        /**
+         * @param password The password used in Basic authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password The password used in Basic authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(AzureKeyVaultSecretReferenceResponse password) {
             return password(Either.ofLeft(password));
         }
 
+        /**
+         * @param password The password used in Basic authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(SecureStringResponse password) {
             return password(Either.ofRight(password));
         }
 
+        /**
+         * @param servicePrincipalId The application&#39;s client ID used in AadServicePrincipal authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalId(@Nullable Object servicePrincipalId) {
             $.servicePrincipalId = servicePrincipalId;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The application&#39;s key used in AadServicePrincipal authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(@Nullable Either<AzureKeyVaultSecretReferenceResponse,SecureStringResponse> servicePrincipalKey) {
             $.servicePrincipalKey = servicePrincipalKey;
             return this;
         }
 
+        /**
+         * @param servicePrincipalKey The application&#39;s key used in AadServicePrincipal authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(AzureKeyVaultSecretReferenceResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofLeft(servicePrincipalKey));
         }
 
+        /**
+         * @param servicePrincipalKey The application&#39;s key used in AadServicePrincipal authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder servicePrincipalKey(SecureStringResponse servicePrincipalKey) {
             return servicePrincipalKey(Either.ofRight(servicePrincipalKey));
         }
 
+        /**
+         * @param tenant The tenant information (domain name or tenant ID) used in AadServicePrincipal authentication type under which your application resides.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenant(@Nullable Object tenant) {
             $.tenant = tenant;
             return this;
         }
 
+        /**
+         * @param type Type of linked service.
+         * Expected value is &#39;RestService&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param url The base URL of the REST service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder url(Object url) {
             $.url = url;
             return this;
         }
 
+        /**
+         * @param userName The user name used in Basic authentication type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userName(@Nullable Object userName) {
             $.userName = userName;
             return this;

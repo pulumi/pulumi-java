@@ -25,6 +25,10 @@ public final class SyncGroupSchemaTableColumnResponse extends com.pulumi.resourc
     @Import(name="dataSize")
     private @Nullable String dataSize;
 
+    /**
+     * @return Data size of the column.
+     * 
+     */
     public Optional<String> dataSize() {
         return Optional.ofNullable(this.dataSize);
     }
@@ -36,6 +40,10 @@ public final class SyncGroupSchemaTableColumnResponse extends com.pulumi.resourc
     @Import(name="dataType")
     private @Nullable String dataType;
 
+    /**
+     * @return Data type of the column.
+     * 
+     */
     public Optional<String> dataType() {
         return Optional.ofNullable(this.dataType);
     }
@@ -47,6 +55,10 @@ public final class SyncGroupSchemaTableColumnResponse extends com.pulumi.resourc
     @Import(name="quotedName")
     private @Nullable String quotedName;
 
+    /**
+     * @return Quoted name of sync group table column.
+     * 
+     */
     public Optional<String> quotedName() {
         return Optional.ofNullable(this.quotedName);
     }
@@ -77,16 +89,34 @@ public final class SyncGroupSchemaTableColumnResponse extends com.pulumi.resourc
             $ = new SyncGroupSchemaTableColumnResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dataSize Data size of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataSize(@Nullable String dataSize) {
             $.dataSize = dataSize;
             return this;
         }
 
+        /**
+         * @param dataType Data type of the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataType(@Nullable String dataType) {
             $.dataType = dataType;
             return this;
         }
 
+        /**
+         * @param quotedName Quoted name of sync group table column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder quotedName(@Nullable String quotedName) {
             $.quotedName = quotedName;
             return this;

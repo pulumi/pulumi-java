@@ -24,6 +24,10 @@ public final class DeploymentAtSubscriptionScopeArgs extends com.pulumi.resource
     @Import(name="deploymentName")
     private @Nullable Output<String> deploymentName;
 
+    /**
+     * @return The name of the deployment.
+     * 
+     */
     public Optional<Output<String>> deploymentName() {
         return Optional.ofNullable(this.deploymentName);
     }
@@ -35,6 +39,10 @@ public final class DeploymentAtSubscriptionScopeArgs extends com.pulumi.resource
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The location to store the deployment data.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -46,6 +54,10 @@ public final class DeploymentAtSubscriptionScopeArgs extends com.pulumi.resource
     @Import(name="properties", required=true)
     private Output<DeploymentPropertiesArgs> properties;
 
+    /**
+     * @return The deployment properties.
+     * 
+     */
     public Output<DeploymentPropertiesArgs> properties() {
         return this.properties;
     }
@@ -57,6 +69,10 @@ public final class DeploymentAtSubscriptionScopeArgs extends com.pulumi.resource
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Deployment tags
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -88,38 +104,86 @@ public final class DeploymentAtSubscriptionScopeArgs extends com.pulumi.resource
             $ = new DeploymentAtSubscriptionScopeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param deploymentName The name of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(@Nullable Output<String> deploymentName) {
             $.deploymentName = deploymentName;
             return this;
         }
 
+        /**
+         * @param deploymentName The name of the deployment.
+         * 
+         * @return builder
+         * 
+         */
         public Builder deploymentName(String deploymentName) {
             return deploymentName(Output.of(deploymentName));
         }
 
+        /**
+         * @param location The location to store the deployment data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The location to store the deployment data.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param properties The deployment properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(Output<DeploymentPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties The deployment properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(DeploymentPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param tags Deployment tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Deployment tags
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

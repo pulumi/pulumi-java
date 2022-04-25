@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class AutoHealActionsResponse {
     /**
-     * Predefined action to be taken.
+     * @return Predefined action to be taken.
      * 
      */
     private final @Nullable String actionType;
     /**
-     * Custom action to be taken.
+     * @return Custom action to be taken.
      * 
      */
     private final @Nullable AutoHealCustomActionResponse customAction;
     /**
-     * Minimum time the process must execute
+     * @return Minimum time the process must execute
      * before taking the action
      * 
      */
@@ -40,24 +40,24 @@ public final class AutoHealActionsResponse {
     }
 
     /**
-     * Predefined action to be taken.
+     * @return Predefined action to be taken.
      * 
-    */
+     */
     public Optional<String> actionType() {
         return Optional.ofNullable(this.actionType);
     }
     /**
-     * Custom action to be taken.
+     * @return Custom action to be taken.
      * 
-    */
+     */
     public Optional<AutoHealCustomActionResponse> customAction() {
         return Optional.ofNullable(this.customAction);
     }
     /**
-     * Minimum time the process must execute
+     * @return Minimum time the process must execute
      * before taking the action
      * 
-    */
+     */
     public Optional<String> minProcessExecutionTime() {
         return Optional.ofNullable(this.minProcessExecutionTime);
     }

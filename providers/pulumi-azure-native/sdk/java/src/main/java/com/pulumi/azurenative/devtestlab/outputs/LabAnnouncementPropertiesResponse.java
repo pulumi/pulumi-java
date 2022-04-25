@@ -13,37 +13,37 @@ import javax.annotation.Nullable;
 @CustomType
 public final class LabAnnouncementPropertiesResponse {
     /**
-     * Is the lab announcement active/enabled at this time?
+     * @return Is the lab announcement active/enabled at this time?
      * 
      */
     private final @Nullable String enabled;
     /**
-     * The time at which the announcement expires (null for never)
+     * @return The time at which the announcement expires (null for never)
      * 
      */
     private final @Nullable String expirationDate;
     /**
-     * Has this announcement expired?
+     * @return Has this announcement expired?
      * 
      */
     private final @Nullable Boolean expired;
     /**
-     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * @return The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
      */
     private final @Nullable String markdown;
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
      */
     private final String provisioningState;
     /**
-     * The plain text title for the lab announcement
+     * @return The plain text title for the lab announcement
      * 
      */
     private final @Nullable String title;
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
      */
     private final String uniqueIdentifier;
@@ -67,51 +67,51 @@ public final class LabAnnouncementPropertiesResponse {
     }
 
     /**
-     * Is the lab announcement active/enabled at this time?
+     * @return Is the lab announcement active/enabled at this time?
      * 
-    */
+     */
     public Optional<String> enabled() {
         return Optional.ofNullable(this.enabled);
     }
     /**
-     * The time at which the announcement expires (null for never)
+     * @return The time at which the announcement expires (null for never)
      * 
-    */
+     */
     public Optional<String> expirationDate() {
         return Optional.ofNullable(this.expirationDate);
     }
     /**
-     * Has this announcement expired?
+     * @return Has this announcement expired?
      * 
-    */
+     */
     public Optional<Boolean> expired() {
         return Optional.ofNullable(this.expired);
     }
     /**
-     * The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
+     * @return The markdown text (if any) that this lab displays in the UI. If left empty/null, nothing will be shown.
      * 
-    */
+     */
     public Optional<String> markdown() {
         return Optional.ofNullable(this.markdown);
     }
     /**
-     * The provisioning status of the resource.
+     * @return The provisioning status of the resource.
      * 
-    */
+     */
     public String provisioningState() {
         return this.provisioningState;
     }
     /**
-     * The plain text title for the lab announcement
+     * @return The plain text title for the lab announcement
      * 
-    */
+     */
     public Optional<String> title() {
         return Optional.ofNullable(this.title);
     }
     /**
-     * The unique immutable identifier of a resource (Guid).
+     * @return The unique immutable identifier of a resource (Guid).
      * 
-    */
+     */
     public String uniqueIdentifier() {
         return this.uniqueIdentifier;
     }

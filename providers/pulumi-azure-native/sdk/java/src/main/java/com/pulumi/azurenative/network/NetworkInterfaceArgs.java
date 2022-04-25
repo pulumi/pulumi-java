@@ -33,6 +33,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="dnsSettings")
     private @Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings;
 
+    /**
+     * @return The DNS settings in network interface.
+     * 
+     */
     public Optional<Output<NetworkInterfaceDnsSettingsArgs>> dnsSettings() {
         return Optional.ofNullable(this.dnsSettings);
     }
@@ -44,6 +48,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enableAcceleratedNetworking")
     private @Nullable Output<Boolean> enableAcceleratedNetworking;
 
+    /**
+     * @return If the network interface is accelerated networking enabled.
+     * 
+     */
     public Optional<Output<Boolean>> enableAcceleratedNetworking() {
         return Optional.ofNullable(this.enableAcceleratedNetworking);
     }
@@ -55,6 +63,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="enableIPForwarding")
     private @Nullable Output<Boolean> enableIPForwarding;
 
+    /**
+     * @return Indicates whether IP forwarding is enabled on this network interface.
+     * 
+     */
     public Optional<Output<Boolean>> enableIPForwarding() {
         return Optional.ofNullable(this.enableIPForwarding);
     }
@@ -66,6 +78,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="extendedLocation")
     private @Nullable Output<ExtendedLocationArgs> extendedLocation;
 
+    /**
+     * @return The extended location of the network interface.
+     * 
+     */
     public Optional<Output<ExtendedLocationArgs>> extendedLocation() {
         return Optional.ofNullable(this.extendedLocation);
     }
@@ -77,6 +93,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="id")
     private @Nullable Output<String> id;
 
+    /**
+     * @return Resource ID.
+     * 
+     */
     public Optional<Output<String>> id() {
         return Optional.ofNullable(this.id);
     }
@@ -88,6 +108,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="ipConfigurations")
     private @Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations;
 
+    /**
+     * @return A list of IPConfigurations of the network interface.
+     * 
+     */
     public Optional<Output<List<NetworkInterfaceIPConfigurationArgs>>> ipConfigurations() {
         return Optional.ofNullable(this.ipConfigurations);
     }
@@ -99,6 +123,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return Resource location.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -110,6 +138,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="migrationPhase")
     private @Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase;
 
+    /**
+     * @return Migration phase of Network Interface resource.
+     * 
+     */
     public Optional<Output<Either<String,NetworkInterfaceMigrationPhase>>> migrationPhase() {
         return Optional.ofNullable(this.migrationPhase);
     }
@@ -121,6 +153,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkInterfaceName")
     private @Nullable Output<String> networkInterfaceName;
 
+    /**
+     * @return The name of the network interface.
+     * 
+     */
     public Optional<Output<String>> networkInterfaceName() {
         return Optional.ofNullable(this.networkInterfaceName);
     }
@@ -132,6 +168,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="networkSecurityGroup")
     private @Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup;
 
+    /**
+     * @return The reference to the NetworkSecurityGroup resource.
+     * 
+     */
     public Optional<Output<NetworkSecurityGroupArgs>> networkSecurityGroup() {
         return Optional.ofNullable(this.networkSecurityGroup);
     }
@@ -143,6 +183,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="nicType")
     private @Nullable Output<Either<String,NetworkInterfaceNicType>> nicType;
 
+    /**
+     * @return Type of Network Interface resource.
+     * 
+     */
     public Optional<Output<Either<String,NetworkInterfaceNicType>>> nicType() {
         return Optional.ofNullable(this.nicType);
     }
@@ -154,6 +198,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="privateLinkService")
     private @Nullable Output<PrivateLinkServiceArgs> privateLinkService;
 
+    /**
+     * @return Privatelinkservice of the network interface resource.
+     * 
+     */
     public Optional<Output<PrivateLinkServiceArgs>> privateLinkService() {
         return Optional.ofNullable(this.privateLinkService);
     }
@@ -165,6 +213,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -176,6 +228,10 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Resource tags.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -217,148 +273,346 @@ public final class NetworkInterfaceArgs extends com.pulumi.resources.ResourceArg
             $ = new NetworkInterfaceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param dnsSettings The DNS settings in network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(@Nullable Output<NetworkInterfaceDnsSettingsArgs> dnsSettings) {
             $.dnsSettings = dnsSettings;
             return this;
         }
 
+        /**
+         * @param dnsSettings The DNS settings in network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dnsSettings(NetworkInterfaceDnsSettingsArgs dnsSettings) {
             return dnsSettings(Output.of(dnsSettings));
         }
 
+        /**
+         * @param enableAcceleratedNetworking If the network interface is accelerated networking enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAcceleratedNetworking(@Nullable Output<Boolean> enableAcceleratedNetworking) {
             $.enableAcceleratedNetworking = enableAcceleratedNetworking;
             return this;
         }
 
+        /**
+         * @param enableAcceleratedNetworking If the network interface is accelerated networking enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableAcceleratedNetworking(Boolean enableAcceleratedNetworking) {
             return enableAcceleratedNetworking(Output.of(enableAcceleratedNetworking));
         }
 
+        /**
+         * @param enableIPForwarding Indicates whether IP forwarding is enabled on this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIPForwarding(@Nullable Output<Boolean> enableIPForwarding) {
             $.enableIPForwarding = enableIPForwarding;
             return this;
         }
 
+        /**
+         * @param enableIPForwarding Indicates whether IP forwarding is enabled on this network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableIPForwarding(Boolean enableIPForwarding) {
             return enableIPForwarding(Output.of(enableIPForwarding));
         }
 
+        /**
+         * @param extendedLocation The extended location of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(@Nullable Output<ExtendedLocationArgs> extendedLocation) {
             $.extendedLocation = extendedLocation;
             return this;
         }
 
+        /**
+         * @param extendedLocation The extended location of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extendedLocation(ExtendedLocationArgs extendedLocation) {
             return extendedLocation(Output.of(extendedLocation));
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(@Nullable Output<String> id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param id Resource ID.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(String id) {
             return id(Output.of(id));
         }
 
+        /**
+         * @param ipConfigurations A list of IPConfigurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(@Nullable Output<List<NetworkInterfaceIPConfigurationArgs>> ipConfigurations) {
             $.ipConfigurations = ipConfigurations;
             return this;
         }
 
+        /**
+         * @param ipConfigurations A list of IPConfigurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(List<NetworkInterfaceIPConfigurationArgs> ipConfigurations) {
             return ipConfigurations(Output.of(ipConfigurations));
         }
 
+        /**
+         * @param ipConfigurations A list of IPConfigurations of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ipConfigurations(NetworkInterfaceIPConfigurationArgs... ipConfigurations) {
             return ipConfigurations(List.of(ipConfigurations));
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location Resource location.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param migrationPhase Migration phase of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(@Nullable Output<Either<String,NetworkInterfaceMigrationPhase>> migrationPhase) {
             $.migrationPhase = migrationPhase;
             return this;
         }
 
+        /**
+         * @param migrationPhase Migration phase of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(Either<String,NetworkInterfaceMigrationPhase> migrationPhase) {
             return migrationPhase(Output.of(migrationPhase));
         }
 
+        /**
+         * @param migrationPhase Migration phase of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(String migrationPhase) {
             return migrationPhase(Either.ofLeft(migrationPhase));
         }
 
+        /**
+         * @param migrationPhase Migration phase of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder migrationPhase(NetworkInterfaceMigrationPhase migrationPhase) {
             return migrationPhase(Either.ofRight(migrationPhase));
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(@Nullable Output<String> networkInterfaceName) {
             $.networkInterfaceName = networkInterfaceName;
             return this;
         }
 
+        /**
+         * @param networkInterfaceName The name of the network interface.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkInterfaceName(String networkInterfaceName) {
             return networkInterfaceName(Output.of(networkInterfaceName));
         }
 
+        /**
+         * @param networkSecurityGroup The reference to the NetworkSecurityGroup resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroup(@Nullable Output<NetworkSecurityGroupArgs> networkSecurityGroup) {
             $.networkSecurityGroup = networkSecurityGroup;
             return this;
         }
 
+        /**
+         * @param networkSecurityGroup The reference to the NetworkSecurityGroup resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder networkSecurityGroup(NetworkSecurityGroupArgs networkSecurityGroup) {
             return networkSecurityGroup(Output.of(networkSecurityGroup));
         }
 
+        /**
+         * @param nicType Type of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(@Nullable Output<Either<String,NetworkInterfaceNicType>> nicType) {
             $.nicType = nicType;
             return this;
         }
 
+        /**
+         * @param nicType Type of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(Either<String,NetworkInterfaceNicType> nicType) {
             return nicType(Output.of(nicType));
         }
 
+        /**
+         * @param nicType Type of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(String nicType) {
             return nicType(Either.ofLeft(nicType));
         }
 
+        /**
+         * @param nicType Type of Network Interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nicType(NetworkInterfaceNicType nicType) {
             return nicType(Either.ofRight(nicType));
         }
 
+        /**
+         * @param privateLinkService Privatelinkservice of the network interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkService(@Nullable Output<PrivateLinkServiceArgs> privateLinkService) {
             $.privateLinkService = privateLinkService;
             return this;
         }
 
+        /**
+         * @param privateLinkService Privatelinkservice of the network interface resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privateLinkService(PrivateLinkServiceArgs privateLinkService) {
             return privateLinkService(Output.of(privateLinkService));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Resource tags.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }

@@ -27,6 +27,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="controlStandardsId", required=true)
     private Integer controlStandardsId;
 
+    /**
+     * @return The controls standards id.
+     * 
+     */
     public Integer controlStandardsId() {
         return this.controlStandardsId;
     }
@@ -38,6 +42,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="controlVersionNumber", required=true)
     private String controlVersionNumber;
 
+    /**
+     * @return The control version number.
+     * 
+     */
     public String controlVersionNumber() {
         return this.controlVersionNumber;
     }
@@ -49,6 +57,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="enableDefaultGroupHeaders", required=true)
     private Boolean enableDefaultGroupHeaders;
 
+    /**
+     * @return The value indicating whether to enable default group headers.
+     * 
+     */
     public Boolean enableDefaultGroupHeaders() {
         return this.enableDefaultGroupHeaders;
     }
@@ -60,6 +72,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="functionalGroupId")
     private @Nullable String functionalGroupId;
 
+    /**
+     * @return The functional group id.
+     * 
+     */
     public Optional<String> functionalGroupId() {
         return Optional.ofNullable(this.functionalGroupId);
     }
@@ -71,6 +87,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupControlNumberLowerBound", required=true)
     private Integer groupControlNumberLowerBound;
 
+    /**
+     * @return The group control number lower bound.
+     * 
+     */
     public Integer groupControlNumberLowerBound() {
         return this.groupControlNumberLowerBound;
     }
@@ -82,6 +102,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupControlNumberUpperBound", required=true)
     private Integer groupControlNumberUpperBound;
 
+    /**
+     * @return The group control number upper bound.
+     * 
+     */
     public Integer groupControlNumberUpperBound() {
         return this.groupControlNumberUpperBound;
     }
@@ -93,6 +117,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupHeaderAgencyCode", required=true)
     private String groupHeaderAgencyCode;
 
+    /**
+     * @return The group header agency code.
+     * 
+     */
     public String groupHeaderAgencyCode() {
         return this.groupHeaderAgencyCode;
     }
@@ -104,6 +132,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupHeaderDateFormat", required=true)
     private String groupHeaderDateFormat;
 
+    /**
+     * @return The group header date format.
+     * 
+     */
     public String groupHeaderDateFormat() {
         return this.groupHeaderDateFormat;
     }
@@ -115,6 +147,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupHeaderTimeFormat", required=true)
     private String groupHeaderTimeFormat;
 
+    /**
+     * @return The group header time format.
+     * 
+     */
     public String groupHeaderTimeFormat() {
         return this.groupHeaderTimeFormat;
     }
@@ -126,6 +162,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="groupHeaderVersion", required=true)
     private String groupHeaderVersion;
 
+    /**
+     * @return The group header version.
+     * 
+     */
     public String groupHeaderVersion() {
         return this.groupHeaderVersion;
     }
@@ -137,6 +177,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="interchangeControlNumberLowerBound", required=true)
     private Integer interchangeControlNumberLowerBound;
 
+    /**
+     * @return The interchange  control number lower bound.
+     * 
+     */
     public Integer interchangeControlNumberLowerBound() {
         return this.interchangeControlNumberLowerBound;
     }
@@ -148,6 +192,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="interchangeControlNumberUpperBound", required=true)
     private Integer interchangeControlNumberUpperBound;
 
+    /**
+     * @return The interchange  control number upper bound.
+     * 
+     */
     public Integer interchangeControlNumberUpperBound() {
         return this.interchangeControlNumberUpperBound;
     }
@@ -159,6 +207,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="overwriteExistingTransactionSetControlNumber", required=true)
     private Boolean overwriteExistingTransactionSetControlNumber;
 
+    /**
+     * @return The value indicating whether to overwrite existing transaction set control number.
+     * 
+     */
     public Boolean overwriteExistingTransactionSetControlNumber() {
         return this.overwriteExistingTransactionSetControlNumber;
     }
@@ -170,6 +222,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="receiverApplicationId", required=true)
     private String receiverApplicationId;
 
+    /**
+     * @return The receiver application id.
+     * 
+     */
     public String receiverApplicationId() {
         return this.receiverApplicationId;
     }
@@ -181,6 +237,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="rolloverGroupControlNumber", required=true)
     private Boolean rolloverGroupControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover group control number.
+     * 
+     */
     public Boolean rolloverGroupControlNumber() {
         return this.rolloverGroupControlNumber;
     }
@@ -192,6 +252,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="rolloverInterchangeControlNumber", required=true)
     private Boolean rolloverInterchangeControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover interchange control number.
+     * 
+     */
     public Boolean rolloverInterchangeControlNumber() {
         return this.rolloverInterchangeControlNumber;
     }
@@ -203,6 +267,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="rolloverTransactionSetControlNumber", required=true)
     private Boolean rolloverTransactionSetControlNumber;
 
+    /**
+     * @return The value indicating whether to rollover transaction set control number.
+     * 
+     */
     public Boolean rolloverTransactionSetControlNumber() {
         return this.rolloverTransactionSetControlNumber;
     }
@@ -214,6 +282,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="senderApplicationId", required=true)
     private String senderApplicationId;
 
+    /**
+     * @return The sender application id.
+     * 
+     */
     public String senderApplicationId() {
         return this.senderApplicationId;
     }
@@ -225,6 +297,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transactionSetControlNumberLowerBound", required=true)
     private Integer transactionSetControlNumberLowerBound;
 
+    /**
+     * @return The transaction set control number lower bound.
+     * 
+     */
     public Integer transactionSetControlNumberLowerBound() {
         return this.transactionSetControlNumberLowerBound;
     }
@@ -236,6 +312,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transactionSetControlNumberPrefix")
     private @Nullable String transactionSetControlNumberPrefix;
 
+    /**
+     * @return The transaction set control number prefix.
+     * 
+     */
     public Optional<String> transactionSetControlNumberPrefix() {
         return Optional.ofNullable(this.transactionSetControlNumberPrefix);
     }
@@ -247,6 +327,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transactionSetControlNumberSuffix")
     private @Nullable String transactionSetControlNumberSuffix;
 
+    /**
+     * @return The transaction set control number suffix.
+     * 
+     */
     public Optional<String> transactionSetControlNumberSuffix() {
         return Optional.ofNullable(this.transactionSetControlNumberSuffix);
     }
@@ -258,6 +342,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="transactionSetControlNumberUpperBound", required=true)
     private Integer transactionSetControlNumberUpperBound;
 
+    /**
+     * @return The transaction set control number upper bound.
+     * 
+     */
     public Integer transactionSetControlNumberUpperBound() {
         return this.transactionSetControlNumberUpperBound;
     }
@@ -269,6 +357,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="usageIndicator", required=true)
     private String usageIndicator;
 
+    /**
+     * @return The usage indicator.
+     * 
+     */
     public String usageIndicator() {
         return this.usageIndicator;
     }
@@ -280,6 +372,10 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
     @Import(name="useControlStandardsIdAsRepetitionCharacter", required=true)
     private Boolean useControlStandardsIdAsRepetitionCharacter;
 
+    /**
+     * @return The value indicating whether to use control standards id as repetition character.
+     * 
+     */
     public Boolean useControlStandardsIdAsRepetitionCharacter() {
         return this.useControlStandardsIdAsRepetitionCharacter;
     }
@@ -331,121 +427,265 @@ public final class X12EnvelopeSettingsResponse extends com.pulumi.resources.Invo
             $ = new X12EnvelopeSettingsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param controlStandardsId The controls standards id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlStandardsId(Integer controlStandardsId) {
             $.controlStandardsId = controlStandardsId;
             return this;
         }
 
+        /**
+         * @param controlVersionNumber The control version number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder controlVersionNumber(String controlVersionNumber) {
             $.controlVersionNumber = controlVersionNumber;
             return this;
         }
 
+        /**
+         * @param enableDefaultGroupHeaders The value indicating whether to enable default group headers.
+         * 
+         * @return builder
+         * 
+         */
         public Builder enableDefaultGroupHeaders(Boolean enableDefaultGroupHeaders) {
             $.enableDefaultGroupHeaders = enableDefaultGroupHeaders;
             return this;
         }
 
+        /**
+         * @param functionalGroupId The functional group id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder functionalGroupId(@Nullable String functionalGroupId) {
             $.functionalGroupId = functionalGroupId;
             return this;
         }
 
+        /**
+         * @param groupControlNumberLowerBound The group control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberLowerBound(Integer groupControlNumberLowerBound) {
             $.groupControlNumberLowerBound = groupControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param groupControlNumberUpperBound The group control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupControlNumberUpperBound(Integer groupControlNumberUpperBound) {
             $.groupControlNumberUpperBound = groupControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param groupHeaderAgencyCode The group header agency code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupHeaderAgencyCode(String groupHeaderAgencyCode) {
             $.groupHeaderAgencyCode = groupHeaderAgencyCode;
             return this;
         }
 
+        /**
+         * @param groupHeaderDateFormat The group header date format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupHeaderDateFormat(String groupHeaderDateFormat) {
             $.groupHeaderDateFormat = groupHeaderDateFormat;
             return this;
         }
 
+        /**
+         * @param groupHeaderTimeFormat The group header time format.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupHeaderTimeFormat(String groupHeaderTimeFormat) {
             $.groupHeaderTimeFormat = groupHeaderTimeFormat;
             return this;
         }
 
+        /**
+         * @param groupHeaderVersion The group header version.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groupHeaderVersion(String groupHeaderVersion) {
             $.groupHeaderVersion = groupHeaderVersion;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberLowerBound The interchange  control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberLowerBound(Integer interchangeControlNumberLowerBound) {
             $.interchangeControlNumberLowerBound = interchangeControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param interchangeControlNumberUpperBound The interchange  control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder interchangeControlNumberUpperBound(Integer interchangeControlNumberUpperBound) {
             $.interchangeControlNumberUpperBound = interchangeControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param overwriteExistingTransactionSetControlNumber The value indicating whether to overwrite existing transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder overwriteExistingTransactionSetControlNumber(Boolean overwriteExistingTransactionSetControlNumber) {
             $.overwriteExistingTransactionSetControlNumber = overwriteExistingTransactionSetControlNumber;
             return this;
         }
 
+        /**
+         * @param receiverApplicationId The receiver application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder receiverApplicationId(String receiverApplicationId) {
             $.receiverApplicationId = receiverApplicationId;
             return this;
         }
 
+        /**
+         * @param rolloverGroupControlNumber The value indicating whether to rollover group control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverGroupControlNumber(Boolean rolloverGroupControlNumber) {
             $.rolloverGroupControlNumber = rolloverGroupControlNumber;
             return this;
         }
 
+        /**
+         * @param rolloverInterchangeControlNumber The value indicating whether to rollover interchange control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverInterchangeControlNumber(Boolean rolloverInterchangeControlNumber) {
             $.rolloverInterchangeControlNumber = rolloverInterchangeControlNumber;
             return this;
         }
 
+        /**
+         * @param rolloverTransactionSetControlNumber The value indicating whether to rollover transaction set control number.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rolloverTransactionSetControlNumber(Boolean rolloverTransactionSetControlNumber) {
             $.rolloverTransactionSetControlNumber = rolloverTransactionSetControlNumber;
             return this;
         }
 
+        /**
+         * @param senderApplicationId The sender application id.
+         * 
+         * @return builder
+         * 
+         */
         public Builder senderApplicationId(String senderApplicationId) {
             $.senderApplicationId = senderApplicationId;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberLowerBound The transaction set control number lower bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberLowerBound(Integer transactionSetControlNumberLowerBound) {
             $.transactionSetControlNumberLowerBound = transactionSetControlNumberLowerBound;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberPrefix The transaction set control number prefix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberPrefix(@Nullable String transactionSetControlNumberPrefix) {
             $.transactionSetControlNumberPrefix = transactionSetControlNumberPrefix;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberSuffix The transaction set control number suffix.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberSuffix(@Nullable String transactionSetControlNumberSuffix) {
             $.transactionSetControlNumberSuffix = transactionSetControlNumberSuffix;
             return this;
         }
 
+        /**
+         * @param transactionSetControlNumberUpperBound The transaction set control number upper bound.
+         * 
+         * @return builder
+         * 
+         */
         public Builder transactionSetControlNumberUpperBound(Integer transactionSetControlNumberUpperBound) {
             $.transactionSetControlNumberUpperBound = transactionSetControlNumberUpperBound;
             return this;
         }
 
+        /**
+         * @param usageIndicator The usage indicator.
+         * 
+         * @return builder
+         * 
+         */
         public Builder usageIndicator(String usageIndicator) {
             $.usageIndicator = usageIndicator;
             return this;
         }
 
+        /**
+         * @param useControlStandardsIdAsRepetitionCharacter The value indicating whether to use control standards id as repetition character.
+         * 
+         * @return builder
+         * 
+         */
         public Builder useControlStandardsIdAsRepetitionCharacter(Boolean useControlStandardsIdAsRepetitionCharacter) {
             $.useControlStandardsIdAsRepetitionCharacter = useControlStandardsIdAsRepetitionCharacter;
             return this;

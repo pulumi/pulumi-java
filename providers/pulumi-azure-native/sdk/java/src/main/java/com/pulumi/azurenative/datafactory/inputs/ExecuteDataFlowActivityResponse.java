@@ -36,6 +36,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="compute")
     private @Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute;
 
+    /**
+     * @return Compute properties for data flow activity.
+     * 
+     */
     public Optional<ExecuteDataFlowActivityTypePropertiesResponseCompute> compute() {
         return Optional.ofNullable(this.compute);
     }
@@ -47,6 +51,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="continueOnError")
     private @Nullable Object continueOnError;
 
+    /**
+     * @return Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+     * 
+     */
     public Optional<Object> continueOnError() {
         return Optional.ofNullable(this.continueOnError);
     }
@@ -58,6 +66,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="dataFlow", required=true)
     private DataFlowReferenceResponse dataFlow;
 
+    /**
+     * @return Data flow reference.
+     * 
+     */
     public DataFlowReferenceResponse dataFlow() {
         return this.dataFlow;
     }
@@ -69,6 +81,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="dependsOn")
     private @Nullable List<ActivityDependencyResponse> dependsOn;
 
+    /**
+     * @return Activity depends on condition.
+     * 
+     */
     public Optional<List<ActivityDependencyResponse>> dependsOn() {
         return Optional.ofNullable(this.dependsOn);
     }
@@ -80,6 +96,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="description")
     private @Nullable String description;
 
+    /**
+     * @return Activity description.
+     * 
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
@@ -91,6 +111,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="integrationRuntime")
     private @Nullable IntegrationRuntimeReferenceResponse integrationRuntime;
 
+    /**
+     * @return The integration runtime reference.
+     * 
+     */
     public Optional<IntegrationRuntimeReferenceResponse> integrationRuntime() {
         return Optional.ofNullable(this.integrationRuntime);
     }
@@ -102,6 +126,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="linkedServiceName")
     private @Nullable LinkedServiceReferenceResponse linkedServiceName;
 
+    /**
+     * @return Linked service reference.
+     * 
+     */
     public Optional<LinkedServiceReferenceResponse> linkedServiceName() {
         return Optional.ofNullable(this.linkedServiceName);
     }
@@ -113,6 +141,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Activity name.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -124,6 +156,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="policy")
     private @Nullable ActivityPolicyResponse policy;
 
+    /**
+     * @return Activity policy.
+     * 
+     */
     public Optional<ActivityPolicyResponse> policy() {
         return Optional.ofNullable(this.policy);
     }
@@ -135,6 +171,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="runConcurrently")
     private @Nullable Object runConcurrently;
 
+    /**
+     * @return Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+     * 
+     */
     public Optional<Object> runConcurrently() {
         return Optional.ofNullable(this.runConcurrently);
     }
@@ -146,6 +186,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="staging")
     private @Nullable DataFlowStagingInfoResponse staging;
 
+    /**
+     * @return Staging info for execute data flow activity.
+     * 
+     */
     public Optional<DataFlowStagingInfoResponse> staging() {
         return Optional.ofNullable(this.staging);
     }
@@ -157,6 +201,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="traceLevel")
     private @Nullable Object traceLevel;
 
+    /**
+     * @return Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
+     * 
+     */
     public Optional<Object> traceLevel() {
         return Optional.ofNullable(this.traceLevel);
     }
@@ -169,6 +217,11 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="type", required=true)
     private String type;
 
+    /**
+     * @return Type of activity.
+     * Expected value is &#39;ExecuteDataFlow&#39;.
+     * 
+     */
     public String type() {
         return this.type;
     }
@@ -180,6 +233,10 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
     @Import(name="userProperties")
     private @Nullable List<UserPropertyResponse> userProperties;
 
+    /**
+     * @return Activity user properties.
+     * 
+     */
     public Optional<List<UserPropertyResponse>> userProperties() {
         return Optional.ofNullable(this.userProperties);
     }
@@ -221,80 +278,177 @@ public final class ExecuteDataFlowActivityResponse extends com.pulumi.resources.
             $ = new ExecuteDataFlowActivityResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param compute Compute properties for data flow activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder compute(@Nullable ExecuteDataFlowActivityTypePropertiesResponseCompute compute) {
             $.compute = compute;
             return this;
         }
 
+        /**
+         * @param continueOnError Continue on error setting used for data flow execution. Enables processing to continue if a sink fails. Type: boolean (or Expression with resultType boolean)
+         * 
+         * @return builder
+         * 
+         */
         public Builder continueOnError(@Nullable Object continueOnError) {
             $.continueOnError = continueOnError;
             return this;
         }
 
+        /**
+         * @param dataFlow Data flow reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dataFlow(DataFlowReferenceResponse dataFlow) {
             $.dataFlow = dataFlow;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(@Nullable List<ActivityDependencyResponse> dependsOn) {
             $.dependsOn = dependsOn;
             return this;
         }
 
+        /**
+         * @param dependsOn Activity depends on condition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependsOn(ActivityDependencyResponse... dependsOn) {
             return dependsOn(List.of(dependsOn));
         }
 
+        /**
+         * @param description Activity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable String description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param integrationRuntime The integration runtime reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder integrationRuntime(@Nullable IntegrationRuntimeReferenceResponse integrationRuntime) {
             $.integrationRuntime = integrationRuntime;
             return this;
         }
 
+        /**
+         * @param linkedServiceName Linked service reference.
+         * 
+         * @return builder
+         * 
+         */
         public Builder linkedServiceName(@Nullable LinkedServiceReferenceResponse linkedServiceName) {
             $.linkedServiceName = linkedServiceName;
             return this;
         }
 
+        /**
+         * @param name Activity name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param policy Activity policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder policy(@Nullable ActivityPolicyResponse policy) {
             $.policy = policy;
             return this;
         }
 
+        /**
+         * @param runConcurrently Concurrent run setting used for data flow execution. Allows sinks with the same save order to be processed concurrently. Type: boolean (or Expression with resultType boolean)
+         * 
+         * @return builder
+         * 
+         */
         public Builder runConcurrently(@Nullable Object runConcurrently) {
             $.runConcurrently = runConcurrently;
             return this;
         }
 
+        /**
+         * @param staging Staging info for execute data flow activity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder staging(@Nullable DataFlowStagingInfoResponse staging) {
             $.staging = staging;
             return this;
         }
 
+        /**
+         * @param traceLevel Trace level setting used for data flow monitoring output. Supported values are: &#39;coarse&#39;, &#39;fine&#39;, and &#39;none&#39;. Type: string (or Expression with resultType string)
+         * 
+         * @return builder
+         * 
+         */
         public Builder traceLevel(@Nullable Object traceLevel) {
             $.traceLevel = traceLevel;
             return this;
         }
 
+        /**
+         * @param type Type of activity.
+         * Expected value is &#39;ExecuteDataFlow&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(@Nullable List<UserPropertyResponse> userProperties) {
             $.userProperties = userProperties;
             return this;
         }
 
+        /**
+         * @param userProperties Activity user properties.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userProperties(UserPropertyResponse... userProperties) {
             return userProperties(List.of(userProperties));
         }

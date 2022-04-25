@@ -27,6 +27,10 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
     @Import(name="count")
     private @Nullable Output<Integer> count;
 
+    /**
+     * @return Request Count.
+     * 
+     */
     public Optional<Output<Integer>> count() {
         return Optional.ofNullable(this.count);
     }
@@ -38,6 +42,10 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Request Path.
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -49,6 +57,10 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
     @Import(name="timeInterval")
     private @Nullable Output<String> timeInterval;
 
+    /**
+     * @return Time interval.
+     * 
+     */
     public Optional<Output<String>> timeInterval() {
         return Optional.ofNullable(this.timeInterval);
     }
@@ -60,6 +72,10 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
     @Import(name="timeTaken")
     private @Nullable Output<String> timeTaken;
 
+    /**
+     * @return Time taken.
+     * 
+     */
     public Optional<Output<String>> timeTaken() {
         return Optional.ofNullable(this.timeTaken);
     }
@@ -91,38 +107,86 @@ public final class SlowRequestsBasedTriggerArgs extends com.pulumi.resources.Res
             $ = new SlowRequestsBasedTriggerArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(@Nullable Output<Integer> count) {
             $.count = count;
             return this;
         }
 
+        /**
+         * @param count Request Count.
+         * 
+         * @return builder
+         * 
+         */
         public Builder count(Integer count) {
             return count(Output.of(count));
         }
 
+        /**
+         * @param path Request Path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Request Path.
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(@Nullable Output<String> timeInterval) {
             $.timeInterval = timeInterval;
             return this;
         }
 
+        /**
+         * @param timeInterval Time interval.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeInterval(String timeInterval) {
             return timeInterval(Output.of(timeInterval));
         }
 
+        /**
+         * @param timeTaken Time taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeTaken(@Nullable Output<String> timeTaken) {
             $.timeTaken = timeTaken;
             return this;
         }
 
+        /**
+         * @param timeTaken Time taken.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeTaken(String timeTaken) {
             return timeTaken(Output.of(timeTaken));
         }

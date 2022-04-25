@@ -23,6 +23,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The geo-location where the resource lives
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -34,6 +38,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
     @Import(name="managedNetworkName", required=true)
     private Output<String> managedNetworkName;
 
+    /**
+     * @return The name of the Managed Network.
+     * 
+     */
     public Output<String> managedNetworkName() {
         return this.managedNetworkName;
     }
@@ -45,6 +53,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
     @Import(name="managedNetworkPeeringPolicyName")
     private @Nullable Output<String> managedNetworkPeeringPolicyName;
 
+    /**
+     * @return The name of the Managed Network Peering Policy.
+     * 
+     */
     public Optional<Output<String>> managedNetworkPeeringPolicyName() {
         return Optional.ofNullable(this.managedNetworkPeeringPolicyName);
     }
@@ -56,6 +68,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
     @Import(name="properties")
     private @Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties;
 
+    /**
+     * @return Gets or sets the properties of a Managed Network Policy
+     * 
+     */
     public Optional<Output<ManagedNetworkPeeringPolicyPropertiesArgs>> properties() {
         return Optional.ofNullable(this.properties);
     }
@@ -67,6 +83,10 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -99,47 +119,107 @@ public final class ManagedNetworkPeeringPolicyArgs extends com.pulumi.resources.
             $ = new ManagedNetworkPeeringPolicyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The geo-location where the resource lives
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param managedNetworkName The name of the Managed Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkName(Output<String> managedNetworkName) {
             $.managedNetworkName = managedNetworkName;
             return this;
         }
 
+        /**
+         * @param managedNetworkName The name of the Managed Network.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkName(String managedNetworkName) {
             return managedNetworkName(Output.of(managedNetworkName));
         }
 
+        /**
+         * @param managedNetworkPeeringPolicyName The name of the Managed Network Peering Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkPeeringPolicyName(@Nullable Output<String> managedNetworkPeeringPolicyName) {
             $.managedNetworkPeeringPolicyName = managedNetworkPeeringPolicyName;
             return this;
         }
 
+        /**
+         * @param managedNetworkPeeringPolicyName The name of the Managed Network Peering Policy.
+         * 
+         * @return builder
+         * 
+         */
         public Builder managedNetworkPeeringPolicyName(String managedNetworkPeeringPolicyName) {
             return managedNetworkPeeringPolicyName(Output.of(managedNetworkPeeringPolicyName));
         }
 
+        /**
+         * @param properties Gets or sets the properties of a Managed Network Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(@Nullable Output<ManagedNetworkPeeringPolicyPropertiesArgs> properties) {
             $.properties = properties;
             return this;
         }
 
+        /**
+         * @param properties Gets or sets the properties of a Managed Network Policy
+         * 
+         * @return builder
+         * 
+         */
         public Builder properties(ManagedNetworkPeeringPolicyPropertiesArgs properties) {
             return properties(Output.of(properties));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }

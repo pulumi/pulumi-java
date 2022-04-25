@@ -29,6 +29,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="blockchainMemberName")
     private @Nullable Output<String> blockchainMemberName;
 
+    /**
+     * @return Blockchain member name.
+     * 
+     */
     public Optional<Output<String>> blockchainMemberName() {
         return Optional.ofNullable(this.blockchainMemberName);
     }
@@ -40,6 +44,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="consortium")
     private @Nullable Output<String> consortium;
 
+    /**
+     * @return Gets or sets the consortium for the blockchain member.
+     * 
+     */
     public Optional<Output<String>> consortium() {
         return Optional.ofNullable(this.consortium);
     }
@@ -51,6 +59,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="consortiumManagementAccountPassword")
     private @Nullable Output<String> consortiumManagementAccountPassword;
 
+    /**
+     * @return Sets the managed consortium management account password.
+     * 
+     */
     public Optional<Output<String>> consortiumManagementAccountPassword() {
         return Optional.ofNullable(this.consortiumManagementAccountPassword);
     }
@@ -62,6 +74,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="consortiumMemberDisplayName")
     private @Nullable Output<String> consortiumMemberDisplayName;
 
+    /**
+     * @return Gets the display name of the member in the consortium.
+     * 
+     */
     public Optional<Output<String>> consortiumMemberDisplayName() {
         return Optional.ofNullable(this.consortiumMemberDisplayName);
     }
@@ -73,6 +89,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="consortiumRole")
     private @Nullable Output<String> consortiumRole;
 
+    /**
+     * @return Gets the role of the member in the consortium.
+     * 
+     */
     public Optional<Output<String>> consortiumRole() {
         return Optional.ofNullable(this.consortiumRole);
     }
@@ -84,6 +104,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="firewallRules")
     private @Nullable Output<List<FirewallRuleArgs>> firewallRules;
 
+    /**
+     * @return Gets or sets firewall rules
+     * 
+     */
     public Optional<Output<List<FirewallRuleArgs>>> firewallRules() {
         return Optional.ofNullable(this.firewallRules);
     }
@@ -95,6 +119,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="location")
     private @Nullable Output<String> location;
 
+    /**
+     * @return The GEO location of the blockchain service.
+     * 
+     */
     public Optional<Output<String>> location() {
         return Optional.ofNullable(this.location);
     }
@@ -106,6 +134,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="password")
     private @Nullable Output<String> password;
 
+    /**
+     * @return Sets the basic auth password of the blockchain member.
+     * 
+     */
     public Optional<Output<String>> password() {
         return Optional.ofNullable(this.password);
     }
@@ -117,6 +149,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="protocol")
     private @Nullable Output<Either<String,BlockchainProtocol>> protocol;
 
+    /**
+     * @return Gets or sets the blockchain protocol.
+     * 
+     */
     public Optional<Output<Either<String,BlockchainProtocol>>> protocol() {
         return Optional.ofNullable(this.protocol);
     }
@@ -128,6 +164,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -139,6 +179,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="sku")
     private @Nullable Output<SkuArgs> sku;
 
+    /**
+     * @return Gets or sets the blockchain member Sku.
+     * 
+     */
     public Optional<Output<SkuArgs>> sku() {
         return Optional.ofNullable(this.sku);
     }
@@ -150,6 +194,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="tags")
     private @Nullable Output<Map<String,String>> tags;
 
+    /**
+     * @return Tags of the service which is a list of key value pairs that describes the resource.
+     * 
+     */
     public Optional<Output<Map<String,String>>> tags() {
         return Optional.ofNullable(this.tags);
     }
@@ -161,6 +209,10 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
     @Import(name="validatorNodesSku")
     private @Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku;
 
+    /**
+     * @return Gets or sets the blockchain validator nodes Sku.
+     * 
+     */
     public Optional<Output<BlockchainMemberNodesSkuArgs>> validatorNodesSku() {
         return Optional.ofNullable(this.validatorNodesSku);
     }
@@ -201,131 +253,305 @@ public final class BlockchainMemberArgs extends com.pulumi.resources.ResourceArg
             $ = new BlockchainMemberArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param blockchainMemberName Blockchain member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockchainMemberName(@Nullable Output<String> blockchainMemberName) {
             $.blockchainMemberName = blockchainMemberName;
             return this;
         }
 
+        /**
+         * @param blockchainMemberName Blockchain member name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder blockchainMemberName(String blockchainMemberName) {
             return blockchainMemberName(Output.of(blockchainMemberName));
         }
 
+        /**
+         * @param consortium Gets or sets the consortium for the blockchain member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consortium(@Nullable Output<String> consortium) {
             $.consortium = consortium;
             return this;
         }
 
+        /**
+         * @param consortium Gets or sets the consortium for the blockchain member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consortium(String consortium) {
             return consortium(Output.of(consortium));
         }
 
+        /**
+         * @param consortiumManagementAccountPassword Sets the managed consortium management account password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consortiumManagementAccountPassword(@Nullable Output<String> consortiumManagementAccountPassword) {
             $.consortiumManagementAccountPassword = consortiumManagementAccountPassword;
             return this;
         }
 
+        /**
+         * @param consortiumManagementAccountPassword Sets the managed consortium management account password.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consortiumManagementAccountPassword(String consortiumManagementAccountPassword) {
             return consortiumManagementAccountPassword(Output.of(consortiumManagementAccountPassword));
         }
 
+        /**
+         * @param consortiumMemberDisplayName Gets the display name of the member in the consortium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consortiumMemberDisplayName(@Nullable Output<String> consortiumMemberDisplayName) {
             $.consortiumMemberDisplayName = consortiumMemberDisplayName;
             return this;
         }
 
+        /**
+         * @param consortiumMemberDisplayName Gets the display name of the member in the consortium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consortiumMemberDisplayName(String consortiumMemberDisplayName) {
             return consortiumMemberDisplayName(Output.of(consortiumMemberDisplayName));
         }
 
+        /**
+         * @param consortiumRole Gets the role of the member in the consortium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consortiumRole(@Nullable Output<String> consortiumRole) {
             $.consortiumRole = consortiumRole;
             return this;
         }
 
+        /**
+         * @param consortiumRole Gets the role of the member in the consortium.
+         * 
+         * @return builder
+         * 
+         */
         public Builder consortiumRole(String consortiumRole) {
             return consortiumRole(Output.of(consortiumRole));
         }
 
+        /**
+         * @param firewallRules Gets or sets firewall rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(@Nullable Output<List<FirewallRuleArgs>> firewallRules) {
             $.firewallRules = firewallRules;
             return this;
         }
 
+        /**
+         * @param firewallRules Gets or sets firewall rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(List<FirewallRuleArgs> firewallRules) {
             return firewallRules(Output.of(firewallRules));
         }
 
+        /**
+         * @param firewallRules Gets or sets firewall rules
+         * 
+         * @return builder
+         * 
+         */
         public Builder firewallRules(FirewallRuleArgs... firewallRules) {
             return firewallRules(List.of(firewallRules));
         }
 
+        /**
+         * @param location The GEO location of the blockchain service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(@Nullable Output<String> location) {
             $.location = location;
             return this;
         }
 
+        /**
+         * @param location The GEO location of the blockchain service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder location(String location) {
             return location(Output.of(location));
         }
 
+        /**
+         * @param password Sets the basic auth password of the blockchain member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(@Nullable Output<String> password) {
             $.password = password;
             return this;
         }
 
+        /**
+         * @param password Sets the basic auth password of the blockchain member.
+         * 
+         * @return builder
+         * 
+         */
         public Builder password(String password) {
             return password(Output.of(password));
         }
 
+        /**
+         * @param protocol Gets or sets the blockchain protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(@Nullable Output<Either<String,BlockchainProtocol>> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Gets or sets the blockchain protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Either<String,BlockchainProtocol> protocol) {
             return protocol(Output.of(protocol));
         }
 
+        /**
+         * @param protocol Gets or sets the blockchain protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Either.ofLeft(protocol));
         }
 
+        /**
+         * @param protocol Gets or sets the blockchain protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(BlockchainProtocol protocol) {
             return protocol(Either.ofRight(protocol));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group that contains the resource. You can obtain this value from the Azure Resource Manager API or the portal.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param sku Gets or sets the blockchain member Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(@Nullable Output<SkuArgs> sku) {
             $.sku = sku;
             return this;
         }
 
+        /**
+         * @param sku Gets or sets the blockchain member Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sku(SkuArgs sku) {
             return sku(Output.of(sku));
         }
 
+        /**
+         * @param tags Tags of the service which is a list of key value pairs that describes the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(@Nullable Output<Map<String,String>> tags) {
             $.tags = tags;
             return this;
         }
 
+        /**
+         * @param tags Tags of the service which is a list of key value pairs that describes the resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tags(Map<String,String> tags) {
             return tags(Output.of(tags));
         }
 
+        /**
+         * @param validatorNodesSku Gets or sets the blockchain validator nodes Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validatorNodesSku(@Nullable Output<BlockchainMemberNodesSkuArgs> validatorNodesSku) {
             $.validatorNodesSku = validatorNodesSku;
             return this;
         }
 
+        /**
+         * @param validatorNodesSku Gets or sets the blockchain validator nodes Sku.
+         * 
+         * @return builder
+         * 
+         */
         public Builder validatorNodesSku(BlockchainMemberNodesSkuArgs validatorNodesSku) {
             return validatorNodesSku(Output.of(validatorNodesSku));
         }

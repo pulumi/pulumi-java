@@ -26,6 +26,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="db")
     private @Nullable Output<String> db;
 
+    /**
+     * @return The database name the role is applied.
+     * 
+     */
     public Optional<Output<String>> db() {
         return Optional.ofNullable(this.db);
     }
@@ -37,6 +41,10 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="role")
     private @Nullable Output<String> role;
 
+    /**
+     * @return The role name.
+     * 
+     */
     public Optional<Output<String>> role() {
         return Optional.ofNullable(this.role);
     }
@@ -66,20 +74,44 @@ public final class RoleArgs extends com.pulumi.resources.ResourceArgs {
             $ = new RoleArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param db The database name the role is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder db(@Nullable Output<String> db) {
             $.db = db;
             return this;
         }
 
+        /**
+         * @param db The database name the role is applied.
+         * 
+         * @return builder
+         * 
+         */
         public Builder db(String db) {
             return db(Output.of(db));
         }
 
+        /**
+         * @param role The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(@Nullable Output<String> role) {
             $.role = role;
             return this;
         }
 
+        /**
+         * @param role The role name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder role(String role) {
             return role(Output.of(role));
         }

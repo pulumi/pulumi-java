@@ -26,6 +26,10 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends com.p
     @Import(name="name")
     private @Nullable String name;
 
+    /**
+     * @return Name of the provider.
+     * 
+     */
     public Optional<String> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends com.p
     @Import(name="provider")
     private @Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider;
 
+    /**
+     * @return Configuration of the provider.
+     * 
+     */
     public Optional<OpenShiftManagedClusterAADIdentityProviderResponse> provider() {
         return Optional.ofNullable(this.provider);
     }
@@ -66,11 +74,23 @@ public final class OpenShiftManagedClusterIdentityProviderResponse extends com.p
             $ = new OpenShiftManagedClusterIdentityProviderResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param provider Configuration of the provider.
+         * 
+         * @return builder
+         * 
+         */
         public Builder provider(@Nullable OpenShiftManagedClusterAADIdentityProviderResponse provider) {
             $.provider = provider;
             return this;

@@ -25,6 +25,10 @@ public final class DiagnosticsConfigurationResponse extends com.pulumi.resources
     @Import(name="expiry")
     private @Nullable String expiry;
 
+    /**
+     * @return Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
+     * 
+     */
     public Optional<String> expiry() {
         return Optional.ofNullable(this.expiry);
     }
@@ -36,6 +40,10 @@ public final class DiagnosticsConfigurationResponse extends com.pulumi.resources
     @Import(name="level", required=true)
     private String level;
 
+    /**
+     * @return Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
+     * 
+     */
     public String level() {
         return this.level;
     }
@@ -65,11 +73,23 @@ public final class DiagnosticsConfigurationResponse extends com.pulumi.resources
             $ = new DiagnosticsConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expiry Specifies the date and time when the logging will cease. If null, diagnostic collection is not time limited.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expiry(@Nullable String expiry) {
             $.expiry = expiry;
             return this;
         }
 
+        /**
+         * @param level Specifies the verbosity of the diagnostic output. Valid values are: None - disables tracing; Error - collects only error (stderr) traces; All - collects all traces (stdout and stderr).
+         * 
+         * @return builder
+         * 
+         */
         public Builder level(String level) {
             $.level = level;
             return this;

@@ -14,53 +14,53 @@ import javax.annotation.Nullable;
 @CustomType
 public final class GetNamespaceResult {
     /**
-     * The time the namespace was created.
+     * @return The time the namespace was created.
      * 
      */
     private final String createdAt;
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
      */
     private final String id;
     /**
-     * Resource location.
+     * @return Resource location.
      * 
      */
     private final String location;
     /**
-     * Identifier for Azure Insights metrics.
+     * @return Identifier for Azure Insights metrics.
      * 
      */
     private final String metricId;
     /**
-     * Resource name.
+     * @return Resource name.
      * 
      */
     private final String name;
     private final String provisioningState;
     /**
-     * Endpoint you can use to perform Service Bus operations.
+     * @return Endpoint you can use to perform Service Bus operations.
      * 
      */
     private final String serviceBusEndpoint;
     /**
-     * SKU of the namespace.
+     * @return SKU of the namespace.
      * 
      */
     private final @Nullable SkuResponse sku;
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
      */
     private final @Nullable Map<String,String> tags;
     /**
-     * Resource type.
+     * @return Resource type.
      * 
      */
     private final String type;
     /**
-     * The time the namespace was updated.
+     * @return The time the namespace was updated.
      * 
      */
     private final String updatedAt;
@@ -92,37 +92,37 @@ public final class GetNamespaceResult {
     }
 
     /**
-     * The time the namespace was created.
+     * @return The time the namespace was created.
      * 
-    */
+     */
     public String createdAt() {
         return this.createdAt;
     }
     /**
-     * Resource ID.
+     * @return Resource ID.
      * 
-    */
+     */
     public String id() {
         return this.id;
     }
     /**
-     * Resource location.
+     * @return Resource location.
      * 
-    */
+     */
     public String location() {
         return this.location;
     }
     /**
-     * Identifier for Azure Insights metrics.
+     * @return Identifier for Azure Insights metrics.
      * 
-    */
+     */
     public String metricId() {
         return this.metricId;
     }
     /**
-     * Resource name.
+     * @return Resource name.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
@@ -130,37 +130,37 @@ public final class GetNamespaceResult {
         return this.provisioningState;
     }
     /**
-     * Endpoint you can use to perform Service Bus operations.
+     * @return Endpoint you can use to perform Service Bus operations.
      * 
-    */
+     */
     public String serviceBusEndpoint() {
         return this.serviceBusEndpoint;
     }
     /**
-     * SKU of the namespace.
+     * @return SKU of the namespace.
      * 
-    */
+     */
     public Optional<SkuResponse> sku() {
         return Optional.ofNullable(this.sku);
     }
     /**
-     * Resource tags.
+     * @return Resource tags.
      * 
-    */
+     */
     public Map<String,String> tags() {
         return this.tags == null ? Map.of() : this.tags;
     }
     /**
-     * Resource type.
+     * @return Resource type.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }
     /**
-     * The time the namespace was updated.
+     * @return The time the namespace was updated.
      * 
-    */
+     */
     public String updatedAt() {
         return this.updatedAt;
     }

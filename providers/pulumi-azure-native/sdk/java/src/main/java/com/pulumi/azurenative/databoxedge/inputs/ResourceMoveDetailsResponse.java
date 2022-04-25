@@ -25,6 +25,10 @@ public final class ResourceMoveDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="operationInProgress")
     private @Nullable String operationInProgress;
 
+    /**
+     * @return Denotes whether move operation is in progress
+     * 
+     */
     public Optional<String> operationInProgress() {
         return Optional.ofNullable(this.operationInProgress);
     }
@@ -36,6 +40,10 @@ public final class ResourceMoveDetailsResponse extends com.pulumi.resources.Invo
     @Import(name="operationInProgressLockTimeoutInUTC")
     private @Nullable String operationInProgressLockTimeoutInUTC;
 
+    /**
+     * @return Denotes the timeout of the operation to finish
+     * 
+     */
     public Optional<String> operationInProgressLockTimeoutInUTC() {
         return Optional.ofNullable(this.operationInProgressLockTimeoutInUTC);
     }
@@ -65,11 +73,23 @@ public final class ResourceMoveDetailsResponse extends com.pulumi.resources.Invo
             $ = new ResourceMoveDetailsResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param operationInProgress Denotes whether move operation is in progress
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationInProgress(@Nullable String operationInProgress) {
             $.operationInProgress = operationInProgress;
             return this;
         }
 
+        /**
+         * @param operationInProgressLockTimeoutInUTC Denotes the timeout of the operation to finish
+         * 
+         * @return builder
+         * 
+         */
         public Builder operationInProgressLockTimeoutInUTC(@Nullable String operationInProgressLockTimeoutInUTC) {
             $.operationInProgressLockTimeoutInUTC = operationInProgressLockTimeoutInUTC;
             return this;

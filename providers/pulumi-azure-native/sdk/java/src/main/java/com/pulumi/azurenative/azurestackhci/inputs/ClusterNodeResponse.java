@@ -24,6 +24,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="coreCount", required=true)
     private Double coreCount;
 
+    /**
+     * @return Number of physical cores on the cluster node.
+     * 
+     */
     public Double coreCount() {
         return this.coreCount;
     }
@@ -35,6 +39,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="id", required=true)
     private Double id;
 
+    /**
+     * @return Id of the node in the cluster.
+     * 
+     */
     public Double id() {
         return this.id;
     }
@@ -46,6 +54,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="manufacturer", required=true)
     private String manufacturer;
 
+    /**
+     * @return Manufacturer of the cluster node hardware.
+     * 
+     */
     public String manufacturer() {
         return this.manufacturer;
     }
@@ -57,6 +69,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="memoryInGiB", required=true)
     private Double memoryInGiB;
 
+    /**
+     * @return Total available memory on the cluster node (in GiB).
+     * 
+     */
     public Double memoryInGiB() {
         return this.memoryInGiB;
     }
@@ -68,6 +84,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="model", required=true)
     private String model;
 
+    /**
+     * @return Model name of the cluster node hardware.
+     * 
+     */
     public String model() {
         return this.model;
     }
@@ -79,6 +99,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="name", required=true)
     private String name;
 
+    /**
+     * @return Name of the cluster node.
+     * 
+     */
     public String name() {
         return this.name;
     }
@@ -90,6 +114,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osName", required=true)
     private String osName;
 
+    /**
+     * @return Operating system running on the cluster node.
+     * 
+     */
     public String osName() {
         return this.osName;
     }
@@ -101,6 +129,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="osVersion", required=true)
     private String osVersion;
 
+    /**
+     * @return Version of the operating system running on the cluster node.
+     * 
+     */
     public String osVersion() {
         return this.osVersion;
     }
@@ -112,6 +144,10 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="serialNumber", required=true)
     private String serialNumber;
 
+    /**
+     * @return Immutable id of the cluster node.
+     * 
+     */
     public String serialNumber() {
         return this.serialNumber;
     }
@@ -148,46 +184,100 @@ public final class ClusterNodeResponse extends com.pulumi.resources.InvokeArgs {
             $ = new ClusterNodeResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param coreCount Number of physical cores on the cluster node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder coreCount(Double coreCount) {
             $.coreCount = coreCount;
             return this;
         }
 
+        /**
+         * @param id Id of the node in the cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder id(Double id) {
             $.id = id;
             return this;
         }
 
+        /**
+         * @param manufacturer Manufacturer of the cluster node hardware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manufacturer(String manufacturer) {
             $.manufacturer = manufacturer;
             return this;
         }
 
+        /**
+         * @param memoryInGiB Total available memory on the cluster node (in GiB).
+         * 
+         * @return builder
+         * 
+         */
         public Builder memoryInGiB(Double memoryInGiB) {
             $.memoryInGiB = memoryInGiB;
             return this;
         }
 
+        /**
+         * @param model Model name of the cluster node hardware.
+         * 
+         * @return builder
+         * 
+         */
         public Builder model(String model) {
             $.model = model;
             return this;
         }
 
+        /**
+         * @param name Name of the cluster node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param osName Operating system running on the cluster node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osName(String osName) {
             $.osName = osName;
             return this;
         }
 
+        /**
+         * @param osVersion Version of the operating system running on the cluster node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder osVersion(String osVersion) {
             $.osVersion = osVersion;
             return this;
         }
 
+        /**
+         * @param serialNumber Immutable id of the cluster node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serialNumber(String serialNumber) {
             $.serialNumber = serialNumber;
             return this;

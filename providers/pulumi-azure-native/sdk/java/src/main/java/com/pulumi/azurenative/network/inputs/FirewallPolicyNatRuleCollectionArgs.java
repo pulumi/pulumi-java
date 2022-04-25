@@ -34,6 +34,10 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="action")
     private @Nullable Output<FirewallPolicyNatRuleCollectionActionArgs> action;
 
+    /**
+     * @return The action type of a Nat rule collection.
+     * 
+     */
     public Optional<Output<FirewallPolicyNatRuleCollectionActionArgs>> action() {
         return Optional.ofNullable(this.action);
     }
@@ -45,6 +49,10 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return The name of the rule collection.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -56,6 +64,10 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return Priority of the Firewall Policy Rule Collection resource.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -68,6 +80,11 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="ruleCollectionType", required=true)
     private Output<String> ruleCollectionType;
 
+    /**
+     * @return The type of the rule collection.
+     * Expected value is &#39;FirewallPolicyNatRuleCollection&#39;.
+     * 
+     */
     public Output<String> ruleCollectionType() {
         return this.ruleCollectionType;
     }
@@ -79,6 +96,10 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
     @Import(name="rules")
     private @Nullable Output<List<Object>> rules;
 
+    /**
+     * @return List of rules included in a rule collection.
+     * 
+     */
     public Optional<Output<List<Object>>> rules() {
         return Optional.ofNullable(this.rules);
     }
@@ -111,51 +132,119 @@ public final class FirewallPolicyNatRuleCollectionArgs extends com.pulumi.resour
             $ = new FirewallPolicyNatRuleCollectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param action The action type of a Nat rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(@Nullable Output<FirewallPolicyNatRuleCollectionActionArgs> action) {
             $.action = action;
             return this;
         }
 
+        /**
+         * @param action The action type of a Nat rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder action(FirewallPolicyNatRuleCollectionActionArgs action) {
             return action(Output.of(action));
         }
 
+        /**
+         * @param name The name of the rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name The name of the rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority Priority of the Firewall Policy Rule Collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority Priority of the Firewall Policy Rule Collection resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param ruleCollectionType The type of the rule collection.
+         * Expected value is &#39;FirewallPolicyNatRuleCollection&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionType(Output<String> ruleCollectionType) {
             $.ruleCollectionType = ruleCollectionType;
             return this;
         }
 
+        /**
+         * @param ruleCollectionType The type of the rule collection.
+         * Expected value is &#39;FirewallPolicyNatRuleCollection&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ruleCollectionType(String ruleCollectionType) {
             return ruleCollectionType(Output.of(ruleCollectionType));
         }
 
+        /**
+         * @param rules List of rules included in a rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(@Nullable Output<List<Object>> rules) {
             $.rules = rules;
             return this;
         }
 
+        /**
+         * @param rules List of rules included in a rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(List<Object> rules) {
             return rules(Output.of(rules));
         }
 
+        /**
+         * @param rules List of rules included in a rule collection.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rules(Object... rules) {
             return rules(List.of(rules));
         }

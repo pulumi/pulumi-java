@@ -15,22 +15,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RequestContractResponse {
     /**
-     * Operation request description.
+     * @return Operation request description.
      * 
      */
     private final @Nullable String description;
     /**
-     * Collection of operation request headers.
+     * @return Collection of operation request headers.
      * 
      */
     private final @Nullable List<ParameterContractResponse> headers;
     /**
-     * Collection of operation request query parameters.
+     * @return Collection of operation request query parameters.
      * 
      */
     private final @Nullable List<ParameterContractResponse> queryParameters;
     /**
-     * Collection of operation request representations.
+     * @return Collection of operation request representations.
      * 
      */
     private final @Nullable List<RepresentationContractResponse> representations;
@@ -48,30 +48,30 @@ public final class RequestContractResponse {
     }
 
     /**
-     * Operation request description.
+     * @return Operation request description.
      * 
-    */
+     */
     public Optional<String> description() {
         return Optional.ofNullable(this.description);
     }
     /**
-     * Collection of operation request headers.
+     * @return Collection of operation request headers.
      * 
-    */
+     */
     public List<ParameterContractResponse> headers() {
         return this.headers == null ? List.of() : this.headers;
     }
     /**
-     * Collection of operation request query parameters.
+     * @return Collection of operation request query parameters.
      * 
-    */
+     */
     public List<ParameterContractResponse> queryParameters() {
         return this.queryParameters == null ? List.of() : this.queryParameters;
     }
     /**
-     * Collection of operation request representations.
+     * @return Collection of operation request representations.
      * 
-    */
+     */
     public List<RepresentationContractResponse> representations() {
         return this.representations == null ? List.of() : this.representations;
     }

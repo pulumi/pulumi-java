@@ -34,6 +34,10 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="kind", required=true)
     private Output<String> kind;
 
+    /**
+     * @return Datasource kind
+     * 
+     */
     public Output<String> kind() {
         return this.kind;
     }
@@ -80,11 +84,23 @@ public final class DataSourceArgs extends com.pulumi.resources.ResourceArgs {
             return configuration(Output.of(configuration));
         }
 
+        /**
+         * @param kind Datasource kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Datasource kind
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }

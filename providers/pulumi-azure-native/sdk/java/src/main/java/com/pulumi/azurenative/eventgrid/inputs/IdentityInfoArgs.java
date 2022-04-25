@@ -30,6 +30,10 @@ public final class IdentityInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="principalId")
     private @Nullable Output<String> principalId;
 
+    /**
+     * @return The principal ID of resource identity.
+     * 
+     */
     public Optional<Output<String>> principalId() {
         return Optional.ofNullable(this.principalId);
     }
@@ -41,6 +45,10 @@ public final class IdentityInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="tenantId")
     private @Nullable Output<String> tenantId;
 
+    /**
+     * @return The tenant ID of resource.
+     * 
+     */
     public Optional<Output<String>> tenantId() {
         return Optional.ofNullable(this.tenantId);
     }
@@ -52,6 +60,10 @@ public final class IdentityInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="type")
     private @Nullable Output<Either<String,IdentityType>> type;
 
+    /**
+     * @return The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+     * 
+     */
     public Optional<Output<Either<String,IdentityType>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -65,6 +77,12 @@ public final class IdentityInfoArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="userAssignedIdentities")
     private @Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities;
 
+    /**
+     * @return The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+     * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+     * This property is currently not used and reserved for future usage.
+     * 
+     */
     public Optional<Output<Map<String,UserIdentityPropertiesArgs>>> userAssignedIdentities() {
         return Optional.ofNullable(this.userAssignedIdentities);
     }
@@ -96,46 +114,110 @@ public final class IdentityInfoArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IdentityInfoArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param principalId The principal ID of resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(@Nullable Output<String> principalId) {
             $.principalId = principalId;
             return this;
         }
 
+        /**
+         * @param principalId The principal ID of resource identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder principalId(String principalId) {
             return principalId(Output.of(principalId));
         }
 
+        /**
+         * @param tenantId The tenant ID of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(@Nullable Output<String> tenantId) {
             $.tenantId = tenantId;
             return this;
         }
 
+        /**
+         * @param tenantId The tenant ID of resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder tenantId(String tenantId) {
             return tenantId(Output.of(tenantId));
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,IdentityType>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,IdentityType> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type The type of managed identity used. The type &#39;SystemAssigned, UserAssigned&#39; includes both an implicitly created identity and a set of user-assigned identities. The type &#39;None&#39; will remove any identity.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(IdentityType type) {
             return type(Either.ofRight(type));
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * This property is currently not used and reserved for future usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(@Nullable Output<Map<String,UserIdentityPropertiesArgs>> userAssignedIdentities) {
             $.userAssignedIdentities = userAssignedIdentities;
             return this;
         }
 
+        /**
+         * @param userAssignedIdentities The list of user identities associated with the resource. The user identity dictionary key references will be ARM resource ids in the form:
+         * &#39;/subscriptions/{subscriptionId}/resourceGroups/{resourceGroupName}/providers/Microsoft.ManagedIdentity/userAssignedIdentities/{identityName}&#39;.
+         * This property is currently not used and reserved for future usage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder userAssignedIdentities(Map<String,UserIdentityPropertiesArgs> userAssignedIdentities) {
             return userAssignedIdentities(Output.of(userAssignedIdentities));
         }

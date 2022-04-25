@@ -26,6 +26,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="accountName", required=true)
     private Output<String> accountName;
 
+    /**
+     * @return Cosmos DB database account name.
+     * 
+     */
     public Output<String> accountName() {
         return this.accountName;
     }
@@ -37,6 +41,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="databaseName")
     private @Nullable Output<String> databaseName;
 
+    /**
+     * @return The database name for which access is being granted for this Role Definition.
+     * 
+     */
     public Optional<Output<String>> databaseName() {
         return Optional.ofNullable(this.databaseName);
     }
@@ -48,6 +56,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="mongoRoleDefinitionId")
     private @Nullable Output<String> mongoRoleDefinitionId;
 
+    /**
+     * @return The ID for the Role Definition {dbName.roleName}.
+     * 
+     */
     public Optional<Output<String>> mongoRoleDefinitionId() {
         return Optional.ofNullable(this.mongoRoleDefinitionId);
     }
@@ -59,6 +71,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="privileges")
     private @Nullable Output<List<PrivilegeArgs>> privileges;
 
+    /**
+     * @return A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
+     * 
+     */
     public Optional<Output<List<PrivilegeArgs>>> privileges() {
         return Optional.ofNullable(this.privileges);
     }
@@ -70,6 +86,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group. The name is case insensitive.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -81,6 +101,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="roleName")
     private @Nullable Output<String> roleName;
 
+    /**
+     * @return A user-friendly name for the Role Definition. Must be unique for the database account.
+     * 
+     */
     public Optional<Output<String>> roleName() {
         return Optional.ofNullable(this.roleName);
     }
@@ -92,6 +116,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="roles")
     private @Nullable Output<List<RoleArgs>> roles;
 
+    /**
+     * @return The set of roles inherited by this Role Definition.
+     * 
+     */
     public Optional<Output<List<RoleArgs>>> roles() {
         return Optional.ofNullable(this.roles);
     }
@@ -103,6 +131,10 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
     @Import(name="type")
     private @Nullable Output<MongoRoleDefinitionType> type;
 
+    /**
+     * @return Indicates whether the Role Definition was built-in or user created.
+     * 
+     */
     public Optional<Output<MongoRoleDefinitionType>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -138,82 +170,190 @@ public final class MongoDBResourceMongoRoleDefinitionArgs extends com.pulumi.res
             $ = new MongoDBResourceMongoRoleDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(Output<String> accountName) {
             $.accountName = accountName;
             return this;
         }
 
+        /**
+         * @param accountName Cosmos DB database account name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder accountName(String accountName) {
             return accountName(Output.of(accountName));
         }
 
+        /**
+         * @param databaseName The database name for which access is being granted for this Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(@Nullable Output<String> databaseName) {
             $.databaseName = databaseName;
             return this;
         }
 
+        /**
+         * @param databaseName The database name for which access is being granted for this Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder databaseName(String databaseName) {
             return databaseName(Output.of(databaseName));
         }
 
+        /**
+         * @param mongoRoleDefinitionId The ID for the Role Definition {dbName.roleName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongoRoleDefinitionId(@Nullable Output<String> mongoRoleDefinitionId) {
             $.mongoRoleDefinitionId = mongoRoleDefinitionId;
             return this;
         }
 
+        /**
+         * @param mongoRoleDefinitionId The ID for the Role Definition {dbName.roleName}.
+         * 
+         * @return builder
+         * 
+         */
         public Builder mongoRoleDefinitionId(String mongoRoleDefinitionId) {
             return mongoRoleDefinitionId(Output.of(mongoRoleDefinitionId));
         }
 
+        /**
+         * @param privileges A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privileges(@Nullable Output<List<PrivilegeArgs>> privileges) {
             $.privileges = privileges;
             return this;
         }
 
+        /**
+         * @param privileges A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privileges(List<PrivilegeArgs> privileges) {
             return privileges(Output.of(privileges));
         }
 
+        /**
+         * @param privileges A set of privileges contained by the Role Definition. This will allow application of this Role Definition on the entire database account or any underlying Database / Collection. Scopes higher than Database are not enforceable as privilege.
+         * 
+         * @return builder
+         * 
+         */
         public Builder privileges(PrivilegeArgs... privileges) {
             return privileges(List.of(privileges));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group. The name is case insensitive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param roleName A user-friendly name for the Role Definition. Must be unique for the database account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(@Nullable Output<String> roleName) {
             $.roleName = roleName;
             return this;
         }
 
+        /**
+         * @param roleName A user-friendly name for the Role Definition. Must be unique for the database account.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roleName(String roleName) {
             return roleName(Output.of(roleName));
         }
 
+        /**
+         * @param roles The set of roles inherited by this Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(@Nullable Output<List<RoleArgs>> roles) {
             $.roles = roles;
             return this;
         }
 
+        /**
+         * @param roles The set of roles inherited by this Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(List<RoleArgs> roles) {
             return roles(Output.of(roles));
         }
 
+        /**
+         * @param roles The set of roles inherited by this Role Definition.
+         * 
+         * @return builder
+         * 
+         */
         public Builder roles(RoleArgs... roles) {
             return roles(List.of(roles));
         }
 
+        /**
+         * @param type Indicates whether the Role Definition was built-in or user created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<MongoRoleDefinitionType> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Indicates whether the Role Definition was built-in or user created.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(MongoRoleDefinitionType type) {
             return type(Output.of(type));
         }

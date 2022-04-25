@@ -19,6 +19,10 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse extends com.pulu
     @Import(name="maxUnusedVersionsToKeep", required=true)
     private Double maxUnusedVersionsToKeep;
 
+    /**
+     * @return Number of unused versions per application type to keep.
+     * 
+     */
     public Double maxUnusedVersionsToKeep() {
         return this.maxUnusedVersionsToKeep;
     }
@@ -47,6 +51,12 @@ public final class ApplicationTypeVersionsCleanupPolicyResponse extends com.pulu
             $ = new ApplicationTypeVersionsCleanupPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param maxUnusedVersionsToKeep Number of unused versions per application type to keep.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxUnusedVersionsToKeep(Double maxUnusedVersionsToKeep) {
             $.maxUnusedVersionsToKeep = maxUnusedVersionsToKeep;
             return this;

@@ -30,6 +30,10 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="diskConfigurationType")
     private @Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType;
 
+    /**
+     * @return Disk configuration to apply to SQL Server.
+     * 
+     */
     public Optional<Output<Either<String,DiskConfigurationType>>> diskConfigurationType() {
         return Optional.ofNullable(this.diskConfigurationType);
     }
@@ -41,6 +45,10 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="sqlDataSettings")
     private @Nullable Output<SQLStorageSettingsArgs> sqlDataSettings;
 
+    /**
+     * @return SQL Server Data Storage Settings.
+     * 
+     */
     public Optional<Output<SQLStorageSettingsArgs>> sqlDataSettings() {
         return Optional.ofNullable(this.sqlDataSettings);
     }
@@ -52,6 +60,10 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="sqlLogSettings")
     private @Nullable Output<SQLStorageSettingsArgs> sqlLogSettings;
 
+    /**
+     * @return SQL Server Log Storage Settings.
+     * 
+     */
     public Optional<Output<SQLStorageSettingsArgs>> sqlLogSettings() {
         return Optional.ofNullable(this.sqlLogSettings);
     }
@@ -63,6 +75,10 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="sqlTempDbSettings")
     private @Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings;
 
+    /**
+     * @return SQL Server TempDb Storage Settings.
+     * 
+     */
     public Optional<Output<SQLStorageSettingsArgs>> sqlTempDbSettings() {
         return Optional.ofNullable(this.sqlTempDbSettings);
     }
@@ -74,6 +90,10 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
     @Import(name="storageWorkloadType")
     private @Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType;
 
+    /**
+     * @return Storage workload type.
+     * 
+     */
     public Optional<Output<Either<String,StorageWorkloadType>>> storageWorkloadType() {
         return Optional.ofNullable(this.storageWorkloadType);
     }
@@ -106,63 +126,147 @@ public final class StorageConfigurationSettingsArgs extends com.pulumi.resources
             $ = new StorageConfigurationSettingsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(@Nullable Output<Either<String,DiskConfigurationType>> diskConfigurationType) {
             $.diskConfigurationType = diskConfigurationType;
             return this;
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(Either<String,DiskConfigurationType> diskConfigurationType) {
             return diskConfigurationType(Output.of(diskConfigurationType));
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(String diskConfigurationType) {
             return diskConfigurationType(Either.ofLeft(diskConfigurationType));
         }
 
+        /**
+         * @param diskConfigurationType Disk configuration to apply to SQL Server.
+         * 
+         * @return builder
+         * 
+         */
         public Builder diskConfigurationType(DiskConfigurationType diskConfigurationType) {
             return diskConfigurationType(Either.ofRight(diskConfigurationType));
         }
 
+        /**
+         * @param sqlDataSettings SQL Server Data Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlDataSettings(@Nullable Output<SQLStorageSettingsArgs> sqlDataSettings) {
             $.sqlDataSettings = sqlDataSettings;
             return this;
         }
 
+        /**
+         * @param sqlDataSettings SQL Server Data Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlDataSettings(SQLStorageSettingsArgs sqlDataSettings) {
             return sqlDataSettings(Output.of(sqlDataSettings));
         }
 
+        /**
+         * @param sqlLogSettings SQL Server Log Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlLogSettings(@Nullable Output<SQLStorageSettingsArgs> sqlLogSettings) {
             $.sqlLogSettings = sqlLogSettings;
             return this;
         }
 
+        /**
+         * @param sqlLogSettings SQL Server Log Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlLogSettings(SQLStorageSettingsArgs sqlLogSettings) {
             return sqlLogSettings(Output.of(sqlLogSettings));
         }
 
+        /**
+         * @param sqlTempDbSettings SQL Server TempDb Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlTempDbSettings(@Nullable Output<SQLStorageSettingsArgs> sqlTempDbSettings) {
             $.sqlTempDbSettings = sqlTempDbSettings;
             return this;
         }
 
+        /**
+         * @param sqlTempDbSettings SQL Server TempDb Storage Settings.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sqlTempDbSettings(SQLStorageSettingsArgs sqlTempDbSettings) {
             return sqlTempDbSettings(Output.of(sqlTempDbSettings));
         }
 
+        /**
+         * @param storageWorkloadType Storage workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageWorkloadType(@Nullable Output<Either<String,StorageWorkloadType>> storageWorkloadType) {
             $.storageWorkloadType = storageWorkloadType;
             return this;
         }
 
+        /**
+         * @param storageWorkloadType Storage workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageWorkloadType(Either<String,StorageWorkloadType> storageWorkloadType) {
             return storageWorkloadType(Output.of(storageWorkloadType));
         }
 
+        /**
+         * @param storageWorkloadType Storage workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageWorkloadType(String storageWorkloadType) {
             return storageWorkloadType(Either.ofLeft(storageWorkloadType));
         }
 
+        /**
+         * @param storageWorkloadType Storage workload type.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageWorkloadType(StorageWorkloadType storageWorkloadType) {
             return storageWorkloadType(Either.ofRight(storageWorkloadType));
         }

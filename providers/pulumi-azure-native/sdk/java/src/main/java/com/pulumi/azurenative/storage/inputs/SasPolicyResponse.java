@@ -24,6 +24,10 @@ public final class SasPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="expirationAction", required=true)
     private String expirationAction;
 
+    /**
+     * @return The SAS expiration action. Can only be Log.
+     * 
+     */
     public String expirationAction() {
         return this.expirationAction;
     }
@@ -35,6 +39,10 @@ public final class SasPolicyResponse extends com.pulumi.resources.InvokeArgs {
     @Import(name="sasExpirationPeriod", required=true)
     private String sasExpirationPeriod;
 
+    /**
+     * @return The SAS expiration period, DD.HH:MM:SS.
+     * 
+     */
     public String sasExpirationPeriod() {
         return this.sasExpirationPeriod;
     }
@@ -64,11 +72,23 @@ public final class SasPolicyResponse extends com.pulumi.resources.InvokeArgs {
             $ = new SasPolicyResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param expirationAction The SAS expiration action. Can only be Log.
+         * 
+         * @return builder
+         * 
+         */
         public Builder expirationAction(String expirationAction) {
             $.expirationAction = expirationAction;
             return this;
         }
 
+        /**
+         * @param sasExpirationPeriod The SAS expiration period, DD.HH:MM:SS.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sasExpirationPeriod(String sasExpirationPeriod) {
             $.sasExpirationPeriod = sasExpirationPeriod;
             return this;

@@ -28,6 +28,10 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
     @Import(name="colSpan", required=true)
     private Integer colSpan;
 
+    /**
+     * @return The dashboard&#39;s part column span.
+     * 
+     */
     public Integer colSpan() {
         return this.colSpan;
     }
@@ -39,6 +43,10 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
     @Import(name="metadata")
     private @Nullable Map<String,Object> metadata;
 
+    /**
+     * @return The dashboard part&#39;s metadata.
+     * 
+     */
     public Optional<Map<String,Object>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -50,6 +58,10 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
     @Import(name="rowSpan", required=true)
     private Integer rowSpan;
 
+    /**
+     * @return The dashboard&#39;s part row span.
+     * 
+     */
     public Integer rowSpan() {
         return this.rowSpan;
     }
@@ -61,6 +73,10 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
     @Import(name="x", required=true)
     private Integer x;
 
+    /**
+     * @return The dashboard&#39;s part x coordinate.
+     * 
+     */
     public Integer x() {
         return this.x;
     }
@@ -72,6 +88,10 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
     @Import(name="y", required=true)
     private Integer y;
 
+    /**
+     * @return The dashboard&#39;s part y coordinate.
+     * 
+     */
     public Integer y() {
         return this.y;
     }
@@ -104,26 +124,56 @@ public final class DashboardPartsResponsePosition extends com.pulumi.resources.I
             $ = new DashboardPartsResponsePosition(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param colSpan The dashboard&#39;s part column span.
+         * 
+         * @return builder
+         * 
+         */
         public Builder colSpan(Integer colSpan) {
             $.colSpan = colSpan;
             return this;
         }
 
+        /**
+         * @param metadata The dashboard part&#39;s metadata.
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Map<String,Object> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param rowSpan The dashboard&#39;s part row span.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rowSpan(Integer rowSpan) {
             $.rowSpan = rowSpan;
             return this;
         }
 
+        /**
+         * @param x The dashboard&#39;s part x coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder x(Integer x) {
             $.x = x;
             return this;
         }
 
+        /**
+         * @param y The dashboard&#39;s part y coordinate.
+         * 
+         * @return builder
+         * 
+         */
         public Builder y(Integer y) {
             $.y = y;
             return this;

@@ -29,6 +29,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="addressType")
     private @Nullable Output<Either<String,AddressType>> addressType;
 
+    /**
+     * @return Type of address.
+     * 
+     */
     public Optional<Output<Either<String,AddressType>>> addressType() {
         return Optional.ofNullable(this.addressType);
     }
@@ -40,6 +44,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="city")
     private @Nullable Output<String> city;
 
+    /**
+     * @return Name of the City.
+     * 
+     */
     public Optional<Output<String>> city() {
         return Optional.ofNullable(this.city);
     }
@@ -51,6 +59,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="companyName")
     private @Nullable Output<String> companyName;
 
+    /**
+     * @return Name of the company.
+     * 
+     */
     public Optional<Output<String>> companyName() {
         return Optional.ofNullable(this.companyName);
     }
@@ -62,6 +74,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="country", required=true)
     private Output<String> country;
 
+    /**
+     * @return Name of the Country.
+     * 
+     */
     public Output<String> country() {
         return this.country;
     }
@@ -73,6 +89,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="postalCode")
     private @Nullable Output<String> postalCode;
 
+    /**
+     * @return Postal code.
+     * 
+     */
     public Optional<Output<String>> postalCode() {
         return Optional.ofNullable(this.postalCode);
     }
@@ -84,6 +104,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="stateOrProvince")
     private @Nullable Output<String> stateOrProvince;
 
+    /**
+     * @return Name of the State or Province.
+     * 
+     */
     public Optional<Output<String>> stateOrProvince() {
         return Optional.ofNullable(this.stateOrProvince);
     }
@@ -95,6 +119,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="streetAddress1", required=true)
     private Output<String> streetAddress1;
 
+    /**
+     * @return Street Address line 1.
+     * 
+     */
     public Output<String> streetAddress1() {
         return this.streetAddress1;
     }
@@ -106,6 +134,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="streetAddress2")
     private @Nullable Output<String> streetAddress2;
 
+    /**
+     * @return Street Address line 2.
+     * 
+     */
     public Optional<Output<String>> streetAddress2() {
         return Optional.ofNullable(this.streetAddress2);
     }
@@ -117,6 +149,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="streetAddress3")
     private @Nullable Output<String> streetAddress3;
 
+    /**
+     * @return Street Address line 3.
+     * 
+     */
     public Optional<Output<String>> streetAddress3() {
         return Optional.ofNullable(this.streetAddress3);
     }
@@ -128,6 +164,10 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="zipExtendedCode")
     private @Nullable Output<String> zipExtendedCode;
 
+    /**
+     * @return Extended Zip Code.
+     * 
+     */
     public Optional<Output<String>> zipExtendedCode() {
         return Optional.ofNullable(this.zipExtendedCode);
     }
@@ -165,100 +205,232 @@ public final class ShippingAddressArgs extends com.pulumi.resources.ResourceArgs
             $ = new ShippingAddressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param addressType Type of address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressType(@Nullable Output<Either<String,AddressType>> addressType) {
             $.addressType = addressType;
             return this;
         }
 
+        /**
+         * @param addressType Type of address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressType(Either<String,AddressType> addressType) {
             return addressType(Output.of(addressType));
         }
 
+        /**
+         * @param addressType Type of address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressType(String addressType) {
             return addressType(Either.ofLeft(addressType));
         }
 
+        /**
+         * @param addressType Type of address.
+         * 
+         * @return builder
+         * 
+         */
         public Builder addressType(AddressType addressType) {
             return addressType(Either.ofRight(addressType));
         }
 
+        /**
+         * @param city Name of the City.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(@Nullable Output<String> city) {
             $.city = city;
             return this;
         }
 
+        /**
+         * @param city Name of the City.
+         * 
+         * @return builder
+         * 
+         */
         public Builder city(String city) {
             return city(Output.of(city));
         }
 
+        /**
+         * @param companyName Name of the company.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(@Nullable Output<String> companyName) {
             $.companyName = companyName;
             return this;
         }
 
+        /**
+         * @param companyName Name of the company.
+         * 
+         * @return builder
+         * 
+         */
         public Builder companyName(String companyName) {
             return companyName(Output.of(companyName));
         }
 
+        /**
+         * @param country Name of the Country.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(Output<String> country) {
             $.country = country;
             return this;
         }
 
+        /**
+         * @param country Name of the Country.
+         * 
+         * @return builder
+         * 
+         */
         public Builder country(String country) {
             return country(Output.of(country));
         }
 
+        /**
+         * @param postalCode Postal code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(@Nullable Output<String> postalCode) {
             $.postalCode = postalCode;
             return this;
         }
 
+        /**
+         * @param postalCode Postal code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postalCode(String postalCode) {
             return postalCode(Output.of(postalCode));
         }
 
+        /**
+         * @param stateOrProvince Name of the State or Province.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateOrProvince(@Nullable Output<String> stateOrProvince) {
             $.stateOrProvince = stateOrProvince;
             return this;
         }
 
+        /**
+         * @param stateOrProvince Name of the State or Province.
+         * 
+         * @return builder
+         * 
+         */
         public Builder stateOrProvince(String stateOrProvince) {
             return stateOrProvince(Output.of(stateOrProvince));
         }
 
+        /**
+         * @param streetAddress1 Street Address line 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress1(Output<String> streetAddress1) {
             $.streetAddress1 = streetAddress1;
             return this;
         }
 
+        /**
+         * @param streetAddress1 Street Address line 1.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress1(String streetAddress1) {
             return streetAddress1(Output.of(streetAddress1));
         }
 
+        /**
+         * @param streetAddress2 Street Address line 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress2(@Nullable Output<String> streetAddress2) {
             $.streetAddress2 = streetAddress2;
             return this;
         }
 
+        /**
+         * @param streetAddress2 Street Address line 2.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress2(String streetAddress2) {
             return streetAddress2(Output.of(streetAddress2));
         }
 
+        /**
+         * @param streetAddress3 Street Address line 3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress3(@Nullable Output<String> streetAddress3) {
             $.streetAddress3 = streetAddress3;
             return this;
         }
 
+        /**
+         * @param streetAddress3 Street Address line 3.
+         * 
+         * @return builder
+         * 
+         */
         public Builder streetAddress3(String streetAddress3) {
             return streetAddress3(Output.of(streetAddress3));
         }
 
+        /**
+         * @param zipExtendedCode Extended Zip Code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zipExtendedCode(@Nullable Output<String> zipExtendedCode) {
             $.zipExtendedCode = zipExtendedCode;
             return this;
         }
 
+        /**
+         * @param zipExtendedCode Extended Zip Code.
+         * 
+         * @return builder
+         * 
+         */
         public Builder zipExtendedCode(String zipExtendedCode) {
             return zipExtendedCode(Output.of(zipExtendedCode));
         }

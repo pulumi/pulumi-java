@@ -24,6 +24,10 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
     @Import(name="type")
     private @Nullable Output<Either<String,ManagedIdentityTypes>> type;
 
+    /**
+     * @return Identity type
+     * 
+     */
     public Optional<Output<Either<String,ManagedIdentityTypes>>> type() {
         return Optional.ofNullable(this.type);
     }
@@ -52,19 +56,43 @@ public final class IdentityPropertiesArgs extends com.pulumi.resources.ResourceA
             $ = new IdentityPropertiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param type Identity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(@Nullable Output<Either<String,ManagedIdentityTypes>> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Identity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Either<String,ManagedIdentityTypes> type) {
             return type(Output.of(type));
         }
 
+        /**
+         * @param type Identity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Either.ofLeft(type));
         }
 
+        /**
+         * @param type Identity type
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(ManagedIdentityTypes type) {
             return type(Either.ofRight(type));
         }

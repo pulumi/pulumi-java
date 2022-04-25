@@ -24,6 +24,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Free-form schema entity description.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -35,6 +39,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceGroupName", required=true)
     private Output<String> resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public Output<String> resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -46,6 +54,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaId")
     private @Nullable Output<String> schemaId;
 
+    /**
+     * @return Schema id identifier. Must be unique in the current API Management service instance.
+     * 
+     */
     public Optional<Output<String>> schemaId() {
         return Optional.ofNullable(this.schemaId);
     }
@@ -57,6 +69,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="schemaType", required=true)
     private Output<Either<String,SchemaType>> schemaType;
 
+    /**
+     * @return Schema Type. Immutable.
+     * 
+     */
     public Output<Either<String,SchemaType>> schemaType() {
         return this.schemaType;
     }
@@ -68,6 +84,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="serviceName", required=true)
     private Output<String> serviceName;
 
+    /**
+     * @return The name of the API Management service.
+     * 
+     */
     public Output<String> serviceName() {
         return this.serviceName;
     }
@@ -79,6 +99,10 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Json-encoded string for non json-based schema.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -112,64 +136,148 @@ public final class SchemaArgs extends com.pulumi.resources.ResourceArgs {
             $ = new SchemaArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description Free-form schema entity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Free-form schema entity description.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(Output<String> resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             return resourceGroupName(Output.of(resourceGroupName));
         }
 
+        /**
+         * @param schemaId Schema id identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaId(@Nullable Output<String> schemaId) {
             $.schemaId = schemaId;
             return this;
         }
 
+        /**
+         * @param schemaId Schema id identifier. Must be unique in the current API Management service instance.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaId(String schemaId) {
             return schemaId(Output.of(schemaId));
         }
 
+        /**
+         * @param schemaType Schema Type. Immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(Output<Either<String,SchemaType>> schemaType) {
             $.schemaType = schemaType;
             return this;
         }
 
+        /**
+         * @param schemaType Schema Type. Immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(Either<String,SchemaType> schemaType) {
             return schemaType(Output.of(schemaType));
         }
 
+        /**
+         * @param schemaType Schema Type. Immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(String schemaType) {
             return schemaType(Either.ofLeft(schemaType));
         }
 
+        /**
+         * @param schemaType Schema Type. Immutable.
+         * 
+         * @return builder
+         * 
+         */
         public Builder schemaType(SchemaType schemaType) {
             return schemaType(Either.ofRight(schemaType));
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(Output<String> serviceName) {
             $.serviceName = serviceName;
             return this;
         }
 
+        /**
+         * @param serviceName The name of the API Management service.
+         * 
+         * @return builder
+         * 
+         */
         public Builder serviceName(String serviceName) {
             return serviceName(Output.of(serviceName));
         }
 
+        /**
+         * @param value Json-encoded string for non json-based schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Json-encoded string for non json-based schema.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }

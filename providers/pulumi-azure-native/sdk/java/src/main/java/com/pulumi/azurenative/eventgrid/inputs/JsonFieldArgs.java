@@ -26,6 +26,10 @@ public final class JsonFieldArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="sourceField")
     private @Nullable Output<String> sourceField;
 
+    /**
+     * @return Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+     * 
+     */
     public Optional<Output<String>> sourceField() {
         return Optional.ofNullable(this.sourceField);
     }
@@ -54,11 +58,23 @@ public final class JsonFieldArgs extends com.pulumi.resources.ResourceArgs {
             $ = new JsonFieldArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param sourceField Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceField(@Nullable Output<String> sourceField) {
             $.sourceField = sourceField;
             return this;
         }
 
+        /**
+         * @param sourceField Name of a field in the input event schema that&#39;s to be used as the source of a mapping.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceField(String sourceField) {
             return sourceField(Output.of(sourceField));
         }

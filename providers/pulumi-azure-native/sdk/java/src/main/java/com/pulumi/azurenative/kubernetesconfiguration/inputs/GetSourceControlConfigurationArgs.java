@@ -19,6 +19,10 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
     @Import(name="clusterName", required=true)
     private String clusterName;
 
+    /**
+     * @return The name of the kubernetes cluster.
+     * 
+     */
     public String clusterName() {
         return this.clusterName;
     }
@@ -30,6 +34,10 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
     @Import(name="clusterResourceName", required=true)
     private String clusterResourceName;
 
+    /**
+     * @return The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+     * 
+     */
     public String clusterResourceName() {
         return this.clusterResourceName;
     }
@@ -41,6 +49,10 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
     @Import(name="clusterRp", required=true)
     private String clusterRp;
 
+    /**
+     * @return The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+     * 
+     */
     public String clusterRp() {
         return this.clusterRp;
     }
@@ -52,6 +64,10 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
     @Import(name="resourceGroupName", required=true)
     private String resourceGroupName;
 
+    /**
+     * @return The name of the resource group.
+     * 
+     */
     public String resourceGroupName() {
         return this.resourceGroupName;
     }
@@ -63,6 +79,10 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
     @Import(name="sourceControlConfigurationName", required=true)
     private String sourceControlConfigurationName;
 
+    /**
+     * @return Name of the Source Control Configuration.
+     * 
+     */
     public String sourceControlConfigurationName() {
         return this.sourceControlConfigurationName;
     }
@@ -95,26 +115,56 @@ public final class GetSourceControlConfigurationArgs extends com.pulumi.resource
             $ = new GetSourceControlConfigurationArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param clusterName The name of the kubernetes cluster.
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterName(String clusterName) {
             $.clusterName = clusterName;
             return this;
         }
 
+        /**
+         * @param clusterResourceName The Kubernetes cluster resource name - either managedClusters (for AKS clusters) or connectedClusters (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterResourceName(String clusterResourceName) {
             $.clusterResourceName = clusterResourceName;
             return this;
         }
 
+        /**
+         * @param clusterRp The Kubernetes cluster RP - either Microsoft.ContainerService (for AKS clusters) or Microsoft.Kubernetes (for OnPrem K8S clusters).
+         * 
+         * @return builder
+         * 
+         */
         public Builder clusterRp(String clusterRp) {
             $.clusterRp = clusterRp;
             return this;
         }
 
+        /**
+         * @param resourceGroupName The name of the resource group.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceGroupName(String resourceGroupName) {
             $.resourceGroupName = resourceGroupName;
             return this;
         }
 
+        /**
+         * @param sourceControlConfigurationName Name of the Source Control Configuration.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sourceControlConfigurationName(String sourceControlConfigurationName) {
             $.sourceControlConfigurationName = sourceControlConfigurationName;
             return this;

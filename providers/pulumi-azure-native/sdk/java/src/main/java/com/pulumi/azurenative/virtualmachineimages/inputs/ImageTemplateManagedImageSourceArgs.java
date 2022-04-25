@@ -25,6 +25,10 @@ public final class ImageTemplateManagedImageSourceArgs extends com.pulumi.resour
     @Import(name="imageId", required=true)
     private Output<String> imageId;
 
+    /**
+     * @return ARM resource id of the managed image in customer subscription
+     * 
+     */
     public Output<String> imageId() {
         return this.imageId;
     }
@@ -37,6 +41,11 @@ public final class ImageTemplateManagedImageSourceArgs extends com.pulumi.resour
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return Specifies the type of source image you want to start with.
+     * Expected value is &#39;ManagedImage&#39;.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -66,20 +75,46 @@ public final class ImageTemplateManagedImageSourceArgs extends com.pulumi.resour
             $ = new ImageTemplateManagedImageSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param imageId ARM resource id of the managed image in customer subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(Output<String> imageId) {
             $.imageId = imageId;
             return this;
         }
 
+        /**
+         * @param imageId ARM resource id of the managed image in customer subscription
+         * 
+         * @return builder
+         * 
+         */
         public Builder imageId(String imageId) {
             return imageId(Output.of(imageId));
         }
 
+        /**
+         * @param type Specifies the type of source image you want to start with.
+         * Expected value is &#39;ManagedImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type Specifies the type of source image you want to start with.
+         * Expected value is &#39;ManagedImage&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

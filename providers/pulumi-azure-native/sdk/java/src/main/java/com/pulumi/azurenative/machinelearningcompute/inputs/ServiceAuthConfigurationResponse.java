@@ -23,6 +23,10 @@ public final class ServiceAuthConfigurationResponse extends com.pulumi.resources
     @Import(name="primaryAuthKeyHash", required=true)
     private String primaryAuthKeyHash;
 
+    /**
+     * @return The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+     * 
+     */
     public String primaryAuthKeyHash() {
         return this.primaryAuthKeyHash;
     }
@@ -34,6 +38,10 @@ public final class ServiceAuthConfigurationResponse extends com.pulumi.resources
     @Import(name="secondaryAuthKeyHash", required=true)
     private String secondaryAuthKeyHash;
 
+    /**
+     * @return The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+     * 
+     */
     public String secondaryAuthKeyHash() {
         return this.secondaryAuthKeyHash;
     }
@@ -63,11 +71,23 @@ public final class ServiceAuthConfigurationResponse extends com.pulumi.resources
             $ = new ServiceAuthConfigurationResponse(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param primaryAuthKeyHash The primary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder primaryAuthKeyHash(String primaryAuthKeyHash) {
             $.primaryAuthKeyHash = primaryAuthKeyHash;
             return this;
         }
 
+        /**
+         * @param secondaryAuthKeyHash The secondary auth key hash. This is not returned in response of GET/PUT on the resource.. To see this please call listKeys API.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secondaryAuthKeyHash(String secondaryAuthKeyHash) {
             $.secondaryAuthKeyHash = secondaryAuthKeyHash;
             return this;

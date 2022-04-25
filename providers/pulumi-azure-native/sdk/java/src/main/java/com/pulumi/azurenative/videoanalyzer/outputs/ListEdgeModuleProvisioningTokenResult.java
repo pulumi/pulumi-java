@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class ListEdgeModuleProvisioningTokenResult {
     /**
-     * The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+     * @return The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
      * 
      */
     private final String expirationDate;
     /**
-     * The token blob to be provided to the Azure Video Analyzer IoT edge module through the Azure IoT Edge module twin properties.
+     * @return The token blob to be provided to the Azure Video Analyzer IoT edge module through the Azure IoT Edge module twin properties.
      * 
      */
     private final String token;
@@ -29,16 +29,16 @@ public final class ListEdgeModuleProvisioningTokenResult {
     }
 
     /**
-     * The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
+     * @return The expiration date of the registration token. The Azure Video Analyzer IoT edge module must be initialized and connected to the Internet prior to the token expiration date.
      * 
-    */
+     */
     public String expirationDate() {
         return this.expirationDate;
     }
     /**
-     * The token blob to be provided to the Azure Video Analyzer IoT edge module through the Azure IoT Edge module twin properties.
+     * @return The token blob to be provided to the Azure Video Analyzer IoT edge module through the Azure IoT Edge module twin properties.
      * 
-    */
+     */
     public String token() {
         return this.token;
     }
