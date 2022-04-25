@@ -28,6 +28,10 @@ public final class CronJobStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="active")
     private @Nullable Output<List<ObjectReferenceArgs>> active;
 
+    /**
+     * @return A list of pointers to currently running jobs.
+     * 
+     */
     public Optional<Output<List<ObjectReferenceArgs>>> active() {
         return Optional.ofNullable(this.active);
     }
@@ -39,6 +43,10 @@ public final class CronJobStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastScheduleTime")
     private @Nullable Output<String> lastScheduleTime;
 
+    /**
+     * @return Information when was the last time the job was successfully scheduled.
+     * 
+     */
     public Optional<Output<String>> lastScheduleTime() {
         return Optional.ofNullable(this.lastScheduleTime);
     }
@@ -50,6 +58,10 @@ public final class CronJobStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lastSuccessfulTime")
     private @Nullable Output<String> lastSuccessfulTime;
 
+    /**
+     * @return Information when was the last time the job successfully completed.
+     * 
+     */
     public Optional<Output<String>> lastSuccessfulTime() {
         return Optional.ofNullable(this.lastSuccessfulTime);
     }
@@ -80,33 +92,75 @@ public final class CronJobStatusArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CronJobStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param active A list of pointers to currently running jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(@Nullable Output<List<ObjectReferenceArgs>> active) {
             $.active = active;
             return this;
         }
 
+        /**
+         * @param active A list of pointers to currently running jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(List<ObjectReferenceArgs> active) {
             return active(Output.of(active));
         }
 
+        /**
+         * @param active A list of pointers to currently running jobs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder active(ObjectReferenceArgs... active) {
             return active(List.of(active));
         }
 
+        /**
+         * @param lastScheduleTime Information when was the last time the job was successfully scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastScheduleTime(@Nullable Output<String> lastScheduleTime) {
             $.lastScheduleTime = lastScheduleTime;
             return this;
         }
 
+        /**
+         * @param lastScheduleTime Information when was the last time the job was successfully scheduled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastScheduleTime(String lastScheduleTime) {
             return lastScheduleTime(Output.of(lastScheduleTime));
         }
 
+        /**
+         * @param lastSuccessfulTime Information when was the last time the job successfully completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSuccessfulTime(@Nullable Output<String> lastSuccessfulTime) {
             $.lastSuccessfulTime = lastSuccessfulTime;
             return this;
         }
 
+        /**
+         * @param lastSuccessfulTime Information when was the last time the job successfully completed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lastSuccessfulTime(String lastSuccessfulTime) {
             return lastSuccessfulTime(Output.of(lastSuccessfulTime));
         }

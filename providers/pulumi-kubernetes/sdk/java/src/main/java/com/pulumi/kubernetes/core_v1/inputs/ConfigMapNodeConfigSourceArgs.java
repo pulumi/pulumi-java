@@ -26,6 +26,10 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
     @Import(name="kubeletConfigKey", required=true)
     private Output<String> kubeletConfigKey;
 
+    /**
+     * @return KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
+     * 
+     */
     public Output<String> kubeletConfigKey() {
         return this.kubeletConfigKey;
     }
@@ -37,6 +41,10 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -48,6 +56,10 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
     @Import(name="namespace", required=true)
     private Output<String> namespace;
 
+    /**
+     * @return Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
+     * 
+     */
     public Output<String> namespace() {
         return this.namespace;
     }
@@ -59,6 +71,10 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
     @Import(name="resourceVersion")
     private @Nullable Output<String> resourceVersion;
 
+    /**
+     * @return ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+     * 
+     */
     public Optional<Output<String>> resourceVersion() {
         return Optional.ofNullable(this.resourceVersion);
     }
@@ -70,6 +86,10 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -102,47 +122,107 @@ public final class ConfigMapNodeConfigSourceArgs extends com.pulumi.resources.Re
             $ = new ConfigMapNodeConfigSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param kubeletConfigKey KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletConfigKey(Output<String> kubeletConfigKey) {
             $.kubeletConfigKey = kubeletConfigKey;
             return this;
         }
 
+        /**
+         * @param kubeletConfigKey KubeletConfigKey declares which key of the referenced ConfigMap corresponds to the KubeletConfiguration structure This field is required in all cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder kubeletConfigKey(String kubeletConfigKey) {
             return kubeletConfigKey(Output.of(kubeletConfigKey));
         }
 
+        /**
+         * @param name Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name is the metadata.name of the referenced ConfigMap. This field is required in all cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace is the metadata.namespace of the referenced ConfigMap. This field is required in all cases.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param resourceVersion ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceVersion(@Nullable Output<String> resourceVersion) {
             $.resourceVersion = resourceVersion;
             return this;
         }
 
+        /**
+         * @param resourceVersion ResourceVersion is the metadata.ResourceVersion of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceVersion(String resourceVersion) {
             return resourceVersion(Output.of(resourceVersion));
         }
 
+        /**
+         * @param uid UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid UID is the metadata.UID of the referenced ConfigMap. This field is forbidden in Node.Spec, and required in Node.Status.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }

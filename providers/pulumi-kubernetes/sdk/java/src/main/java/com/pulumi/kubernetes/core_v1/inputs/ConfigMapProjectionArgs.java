@@ -31,6 +31,10 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
     @Import(name="items")
     private @Nullable Output<List<KeyToPathArgs>> items;
 
+    /**
+     * @return If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+     * 
+     */
     public Optional<Output<List<KeyToPathArgs>>> items() {
         return Optional.ofNullable(this.items);
     }
@@ -42,6 +46,10 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -53,6 +61,10 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
     @Import(name="optional")
     private @Nullable Output<Boolean> optional;
 
+    /**
+     * @return Specify whether the ConfigMap or its keys must be defined
+     * 
+     */
     public Optional<Output<Boolean>> optional() {
         return Optional.ofNullable(this.optional);
     }
@@ -83,33 +95,75 @@ public final class ConfigMapProjectionArgs extends com.pulumi.resources.Resource
             $ = new ConfigMapProjectionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(@Nullable Output<List<KeyToPathArgs>> items) {
             $.items = items;
             return this;
         }
 
+        /**
+         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(List<KeyToPathArgs> items) {
             return items(Output.of(items));
         }
 
+        /**
+         * @param items If unspecified, each key-value pair in the Data field of the referenced ConfigMap will be projected into the volume as a file whose name is the key and content is the value. If specified, the listed keys will be projected into the specified paths, and unlisted keys will not be present. If a key is specified which is not present in the ConfigMap, the volume setup will error unless it is marked optional. Paths must be relative and may not contain the &#39;..&#39; path or start with &#39;..&#39;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder items(KeyToPathArgs... items) {
             return items(List.of(items));
         }
 
+        /**
+         * @param name Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param optional Specify whether the ConfigMap or its keys must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(@Nullable Output<Boolean> optional) {
             $.optional = optional;
             return this;
         }
 
+        /**
+         * @param optional Specify whether the ConfigMap or its keys must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(Boolean optional) {
             return optional(Output.of(optional));
         }

@@ -28,6 +28,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     @Import(name="extra")
     private @Nullable Output<Map<String,List<String>>> extra;
 
+    /**
+     * @return Extra information about the requesting user. See user.Info interface for details.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> extra() {
         return Optional.ofNullable(this.extra);
     }
@@ -39,6 +43,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     @Import(name="groups")
     private @Nullable Output<List<String>> groups;
 
+    /**
+     * @return Group information about the requesting user. See user.Info interface for details.
+     * 
+     */
     public Optional<Output<List<String>>> groups() {
         return Optional.ofNullable(this.groups);
     }
@@ -50,6 +58,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     @Import(name="request", required=true)
     private Output<String> request;
 
+    /**
+     * @return Base64-encoded PKCS#10 CSR data
+     * 
+     */
     public Output<String> request() {
         return this.request;
     }
@@ -67,6 +79,16 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     @Import(name="signerName")
     private @Nullable Output<String> signerName;
 
+    /**
+     * @return Requested signer for the request. It is a qualified name in the form: `scope-hostname.io/name`. If empty, it will be defaulted:
+     *  1. If it&#39;s a kubelet client certificate, it is assigned
+     *     &#34;kubernetes.io/kube-apiserver-client-kubelet&#34;.
+     *  2. If it&#39;s a kubelet serving certificate, it is assigned
+     *     &#34;kubernetes.io/kubelet-serving&#34;.
+     *  3. Otherwise, it is assigned &#34;kubernetes.io/legacy-unknown&#34;.
+     *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
+     * 
+     */
     public Optional<Output<String>> signerName() {
         return Optional.ofNullable(this.signerName);
     }
@@ -78,6 +100,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     @Import(name="uid")
     private @Nullable Output<String> uid;
 
+    /**
+     * @return UID information about the requesting user. See user.Info interface for details.
+     * 
+     */
     public Optional<Output<String>> uid() {
         return Optional.ofNullable(this.uid);
     }
@@ -90,6 +116,11 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     @Import(name="usages")
     private @Nullable Output<List<String>> usages;
 
+    /**
+     * @return allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
+     *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
+     * 
+     */
     public Optional<Output<List<String>>> usages() {
         return Optional.ofNullable(this.usages);
     }
@@ -101,6 +132,10 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
     @Import(name="username")
     private @Nullable Output<String> username;
 
+    /**
+     * @return Information about the requesting user. See user.Info interface for details.
+     * 
+     */
     public Optional<Output<String>> username() {
         return Optional.ofNullable(this.username);
     }
@@ -135,73 +170,184 @@ public final class CertificateSigningRequestSpecArgs extends com.pulumi.resource
             $ = new CertificateSigningRequestSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param extra Extra information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extra(@Nullable Output<Map<String,List<String>>> extra) {
             $.extra = extra;
             return this;
         }
 
+        /**
+         * @param extra Extra information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder extra(Map<String,List<String>> extra) {
             return extra(Output.of(extra));
         }
 
+        /**
+         * @param groups Group information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(@Nullable Output<List<String>> groups) {
             $.groups = groups;
             return this;
         }
 
+        /**
+         * @param groups Group information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(List<String> groups) {
             return groups(Output.of(groups));
         }
 
+        /**
+         * @param groups Group information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder groups(String... groups) {
             return groups(List.of(groups));
         }
 
+        /**
+         * @param request Base64-encoded PKCS#10 CSR data
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(Output<String> request) {
             $.request = request;
             return this;
         }
 
+        /**
+         * @param request Base64-encoded PKCS#10 CSR data
+         * 
+         * @return builder
+         * 
+         */
         public Builder request(String request) {
             return request(Output.of(request));
         }
 
+        /**
+         * @param signerName Requested signer for the request. It is a qualified name in the form: `scope-hostname.io/name`. If empty, it will be defaulted:
+         *  1. If it&#39;s a kubelet client certificate, it is assigned
+         *     &#34;kubernetes.io/kube-apiserver-client-kubelet&#34;.
+         *  2. If it&#39;s a kubelet serving certificate, it is assigned
+         *     &#34;kubernetes.io/kubelet-serving&#34;.
+         *  3. Otherwise, it is assigned &#34;kubernetes.io/legacy-unknown&#34;.
+         *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signerName(@Nullable Output<String> signerName) {
             $.signerName = signerName;
             return this;
         }
 
+        /**
+         * @param signerName Requested signer for the request. It is a qualified name in the form: `scope-hostname.io/name`. If empty, it will be defaulted:
+         *  1. If it&#39;s a kubelet client certificate, it is assigned
+         *     &#34;kubernetes.io/kube-apiserver-client-kubelet&#34;.
+         *  2. If it&#39;s a kubelet serving certificate, it is assigned
+         *     &#34;kubernetes.io/kubelet-serving&#34;.
+         *  3. Otherwise, it is assigned &#34;kubernetes.io/legacy-unknown&#34;.
+         *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
+         * 
+         * @return builder
+         * 
+         */
         public Builder signerName(String signerName) {
             return signerName(Output.of(signerName));
         }
 
+        /**
+         * @param uid UID information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(@Nullable Output<String> uid) {
             $.uid = uid;
             return this;
         }
 
+        /**
+         * @param uid UID information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder uid(String uid) {
             return uid(Output.of(uid));
         }
 
+        /**
+         * @param usages allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
+         *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(@Nullable Output<List<String>> usages) {
             $.usages = usages;
             return this;
         }
 
+        /**
+         * @param usages allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
+         *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(List<String> usages) {
             return usages(Output.of(usages));
         }
 
+        /**
+         * @param usages allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
+         *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
+         * 
+         * @return builder
+         * 
+         */
         public Builder usages(String... usages) {
             return usages(List.of(usages));
         }
 
+        /**
+         * @param username Information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(@Nullable Output<String> username) {
             $.username = username;
             return this;
         }
 
+        /**
+         * @param username Information about the requesting user. See user.Info interface for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder username(String username) {
             return username(Output.of(username));
         }

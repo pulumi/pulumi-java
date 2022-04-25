@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class HTTPIngressPath {
     /**
-     * Backend defines the referenced service endpoint to which the traffic will be forwarded to.
+     * @return Backend defines the referenced service endpoint to which the traffic will be forwarded to.
      * 
      */
     private final IngressBackend backend;
     /**
-     * Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional &#34;path&#34; part of a URL as defined by RFC 3986. Paths must begin with a &#39;/&#39;. If unspecified, the path defaults to a catch all sending traffic to the backend.
+     * @return Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional &#34;path&#34; part of a URL as defined by RFC 3986. Paths must begin with a &#39;/&#39;. If unspecified, the path defaults to a catch all sending traffic to the backend.
      * 
      */
     private final @Nullable String path;
     /**
-     * PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by &#39;/&#39;. Matching is
+     * @return PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by &#39;/&#39;. Matching is
      *   done on a path element by element basis. A path element refers is the
      *   list of labels in the path split by the &#39;/&#39; separator. A request is a
      *   match for path p if every p is an element-wise prefix of p of the
@@ -49,21 +49,21 @@ public final class HTTPIngressPath {
     }
 
     /**
-     * Backend defines the referenced service endpoint to which the traffic will be forwarded to.
+     * @return Backend defines the referenced service endpoint to which the traffic will be forwarded to.
      * 
-    */
+     */
     public IngressBackend backend() {
         return this.backend;
     }
     /**
-     * Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional &#34;path&#34; part of a URL as defined by RFC 3986. Paths must begin with a &#39;/&#39;. If unspecified, the path defaults to a catch all sending traffic to the backend.
+     * @return Path is an extended POSIX regex as defined by IEEE Std 1003.1, (i.e this follows the egrep/unix syntax, not the perl syntax) matched against the path of an incoming request. Currently it can contain characters disallowed from the conventional &#34;path&#34; part of a URL as defined by RFC 3986. Paths must begin with a &#39;/&#39;. If unspecified, the path defaults to a catch all sending traffic to the backend.
      * 
-    */
+     */
     public Optional<String> path() {
         return Optional.ofNullable(this.path);
     }
     /**
-     * PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by &#39;/&#39;. Matching is
+     * @return PathType determines the interpretation of the Path matching. PathType can be one of the following values: * Exact: Matches the URL path exactly. * Prefix: Matches based on a URL path prefix split by &#39;/&#39;. Matching is
      *   done on a path element by element basis. A path element refers is the
      *   list of labels in the path split by the &#39;/&#39; separator. A request is a
      *   match for path p if every p is an element-wise prefix of p of the
@@ -75,7 +75,7 @@ public final class HTTPIngressPath {
      *   or treat it identically to Prefix or Exact path types.
      *   Implementations are required to support all path types. Defaults to ImplementationSpecific.
      * 
-    */
+     */
     public Optional<String> pathType() {
         return Optional.ofNullable(this.pathType);
     }

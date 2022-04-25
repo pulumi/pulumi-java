@@ -26,6 +26,10 @@ public final class RollingUpdateStatefulSetStrategyArgs extends com.pulumi.resou
     @Import(name="partition")
     private @Nullable Output<Integer> partition;
 
+    /**
+     * @return Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
+     * 
+     */
     public Optional<Output<Integer>> partition() {
         return Optional.ofNullable(this.partition);
     }
@@ -54,11 +58,23 @@ public final class RollingUpdateStatefulSetStrategyArgs extends com.pulumi.resou
             $ = new RollingUpdateStatefulSetStrategyArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param partition Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partition(@Nullable Output<Integer> partition) {
             $.partition = partition;
             return this;
         }
 
+        /**
+         * @param partition Partition indicates the ordinal at which the StatefulSet should be partitioned. Default value is 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder partition(Integer partition) {
             return partition(Output.of(partition));
         }

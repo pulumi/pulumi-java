@@ -27,6 +27,10 @@ public final class EndpointHintsArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forZones")
     private @Nullable Output<List<ForZoneArgs>> forZones;
 
+    /**
+     * @return forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
+     * 
+     */
     public Optional<Output<List<ForZoneArgs>>> forZones() {
         return Optional.ofNullable(this.forZones);
     }
@@ -55,15 +59,33 @@ public final class EndpointHintsArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EndpointHintsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param forZones forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forZones(@Nullable Output<List<ForZoneArgs>> forZones) {
             $.forZones = forZones;
             return this;
         }
 
+        /**
+         * @param forZones forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forZones(List<ForZoneArgs> forZones) {
             return forZones(Output.of(forZones));
         }
 
+        /**
+         * @param forZones forZones indicates the zone(s) this endpoint should be consumed by to enable topology aware routing. May contain a maximum of 8 entries.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forZones(ForZoneArgs... forZones) {
             return forZones(List.of(forZones));
         }

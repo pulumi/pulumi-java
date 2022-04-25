@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ContainerStateWaiting {
     /**
-     * Message regarding why the container is not yet running.
+     * @return Message regarding why the container is not yet running.
      * 
      */
     private final @Nullable String message;
     /**
-     * (brief) reason the container is not yet running.
+     * @return (brief) reason the container is not yet running.
      * 
      */
     private final @Nullable String reason;
@@ -31,16 +31,16 @@ public final class ContainerStateWaiting {
     }
 
     /**
-     * Message regarding why the container is not yet running.
+     * @return Message regarding why the container is not yet running.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * (brief) reason the container is not yet running.
+     * @return (brief) reason the container is not yet running.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }

@@ -12,12 +12,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class Policy {
     /**
-     * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
+     * @return The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
      * 
      */
     private final String level;
     /**
-     * Stages is a list of stages for which events are created.
+     * @return Stages is a list of stages for which events are created.
      * 
      */
     private final @Nullable List<String> stages;
@@ -31,16 +31,16 @@ public final class Policy {
     }
 
     /**
-     * The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
+     * @return The Level that all requests are recorded at. available options: None, Metadata, Request, RequestResponse required
      * 
-    */
+     */
     public String level() {
         return this.level;
     }
     /**
-     * Stages is a list of stages for which events are created.
+     * @return Stages is a list of stages for which events are created.
      * 
-    */
+     */
     public List<String> stages() {
         return this.stages == null ? List.of() : this.stages;
     }

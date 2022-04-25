@@ -27,6 +27,10 @@ public final class TokenReviewSpecArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="audiences")
     private @Nullable Output<List<String>> audiences;
 
+    /**
+     * @return Audiences is a list of the identifiers that the resource server presented with the token identifies as. Audience-aware token authenticators will verify that the token was intended for at least one of the audiences in this list. If no audiences are provided, the audience will default to the audience of the Kubernetes apiserver.
+     * 
+     */
     public Optional<Output<List<String>>> audiences() {
         return Optional.ofNullable(this.audiences);
     }
@@ -38,6 +42,10 @@ public final class TokenReviewSpecArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="token")
     private @Nullable Output<String> token;
 
+    /**
+     * @return Token is the opaque bearer token.
+     * 
+     */
     public Optional<Output<String>> token() {
         return Optional.ofNullable(this.token);
     }
@@ -67,24 +75,54 @@ public final class TokenReviewSpecArgs extends com.pulumi.resources.ResourceArgs
             $ = new TokenReviewSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param audiences Audiences is a list of the identifiers that the resource server presented with the token identifies as. Audience-aware token authenticators will verify that the token was intended for at least one of the audiences in this list. If no audiences are provided, the audience will default to the audience of the Kubernetes apiserver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(@Nullable Output<List<String>> audiences) {
             $.audiences = audiences;
             return this;
         }
 
+        /**
+         * @param audiences Audiences is a list of the identifiers that the resource server presented with the token identifies as. Audience-aware token authenticators will verify that the token was intended for at least one of the audiences in this list. If no audiences are provided, the audience will default to the audience of the Kubernetes apiserver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(List<String> audiences) {
             return audiences(Output.of(audiences));
         }
 
+        /**
+         * @param audiences Audiences is a list of the identifiers that the resource server presented with the token identifies as. Audience-aware token authenticators will verify that the token was intended for at least one of the audiences in this list. If no audiences are provided, the audience will default to the audience of the Kubernetes apiserver.
+         * 
+         * @return builder
+         * 
+         */
         public Builder audiences(String... audiences) {
             return audiences(List.of(audiences));
         }
 
+        /**
+         * @param token Token is the opaque bearer token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(@Nullable Output<String> token) {
             $.token = token;
             return this;
         }
 
+        /**
+         * @param token Token is the opaque bearer token.
+         * 
+         * @return builder
+         * 
+         */
         public Builder token(String token) {
             return token(Output.of(token));
         }

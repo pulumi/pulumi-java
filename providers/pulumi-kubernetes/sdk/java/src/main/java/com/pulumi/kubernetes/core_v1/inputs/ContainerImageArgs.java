@@ -28,6 +28,10 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="names", required=true)
     private Output<List<String>> names;
 
+    /**
+     * @return Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
+     * 
+     */
     public Output<List<String>> names() {
         return this.names;
     }
@@ -39,6 +43,10 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="sizeBytes")
     private @Nullable Output<Integer> sizeBytes;
 
+    /**
+     * @return The size of the image in bytes.
+     * 
+     */
     public Optional<Output<Integer>> sizeBytes() {
         return Optional.ofNullable(this.sizeBytes);
     }
@@ -68,24 +76,54 @@ public final class ContainerImageArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ContainerImageArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param names Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(Output<List<String>> names) {
             $.names = names;
             return this;
         }
 
+        /**
+         * @param names Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(List<String> names) {
             return names(Output.of(names));
         }
 
+        /**
+         * @param names Names by which this image is known. e.g. [&#34;k8s.gcr.io/hyperkube:v1.0.7&#34;, &#34;dockerhub.io/google_containers/hyperkube:v1.0.7&#34;]
+         * 
+         * @return builder
+         * 
+         */
         public Builder names(String... names) {
             return names(List.of(names));
         }
 
+        /**
+         * @param sizeBytes The size of the image in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeBytes(@Nullable Output<Integer> sizeBytes) {
             $.sizeBytes = sizeBytes;
             return this;
         }
 
+        /**
+         * @param sizeBytes The size of the image in bytes.
+         * 
+         * @return builder
+         * 
+         */
         public Builder sizeBytes(Integer sizeBytes) {
             return sizeBytes(Output.of(sizeBytes));
         }

@@ -14,22 +14,22 @@ import javax.annotation.Nullable;
 @CustomType
 public final class CertificateSigningRequestSpec {
     /**
-     * Extra information about the requesting user. See user.Info interface for details.
+     * @return Extra information about the requesting user. See user.Info interface for details.
      * 
      */
     private final @Nullable Map<String,List<String>> extra;
     /**
-     * Group information about the requesting user. See user.Info interface for details.
+     * @return Group information about the requesting user. See user.Info interface for details.
      * 
      */
     private final @Nullable List<String> groups;
     /**
-     * Base64-encoded PKCS#10 CSR data
+     * @return Base64-encoded PKCS#10 CSR data
      * 
      */
     private final String request;
     /**
-     * Requested signer for the request. It is a qualified name in the form: `scope-hostname.io/name`. If empty, it will be defaulted:
+     * @return Requested signer for the request. It is a qualified name in the form: `scope-hostname.io/name`. If empty, it will be defaulted:
      *  1. If it&#39;s a kubelet client certificate, it is assigned
      *     &#34;kubernetes.io/kube-apiserver-client-kubelet&#34;.
      *  2. If it&#39;s a kubelet serving certificate, it is assigned
@@ -40,18 +40,18 @@ public final class CertificateSigningRequestSpec {
      */
     private final @Nullable String signerName;
     /**
-     * UID information about the requesting user. See user.Info interface for details.
+     * @return UID information about the requesting user. See user.Info interface for details.
      * 
      */
     private final @Nullable String uid;
     /**
-     * allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
+     * @return allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
      *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
      * 
      */
     private final @Nullable List<String> usages;
     /**
-     * Information about the requesting user. See user.Info interface for details.
+     * @return Information about the requesting user. See user.Info interface for details.
      * 
      */
     private final @Nullable String username;
@@ -75,28 +75,28 @@ public final class CertificateSigningRequestSpec {
     }
 
     /**
-     * Extra information about the requesting user. See user.Info interface for details.
+     * @return Extra information about the requesting user. See user.Info interface for details.
      * 
-    */
+     */
     public Map<String,List<String>> extra() {
         return this.extra == null ? Map.of() : this.extra;
     }
     /**
-     * Group information about the requesting user. See user.Info interface for details.
+     * @return Group information about the requesting user. See user.Info interface for details.
      * 
-    */
+     */
     public List<String> groups() {
         return this.groups == null ? List.of() : this.groups;
     }
     /**
-     * Base64-encoded PKCS#10 CSR data
+     * @return Base64-encoded PKCS#10 CSR data
      * 
-    */
+     */
     public String request() {
         return this.request;
     }
     /**
-     * Requested signer for the request. It is a qualified name in the form: `scope-hostname.io/name`. If empty, it will be defaulted:
+     * @return Requested signer for the request. It is a qualified name in the form: `scope-hostname.io/name`. If empty, it will be defaulted:
      *  1. If it&#39;s a kubelet client certificate, it is assigned
      *     &#34;kubernetes.io/kube-apiserver-client-kubelet&#34;.
      *  2. If it&#39;s a kubelet serving certificate, it is assigned
@@ -104,29 +104,29 @@ public final class CertificateSigningRequestSpec {
      *  3. Otherwise, it is assigned &#34;kubernetes.io/legacy-unknown&#34;.
      *     Distribution of trust for signers happens out of band. You can select on this field using `spec.signerName`.
      * 
-    */
+     */
     public Optional<String> signerName() {
         return Optional.ofNullable(this.signerName);
     }
     /**
-     * UID information about the requesting user. See user.Info interface for details.
+     * @return UID information about the requesting user. See user.Info interface for details.
      * 
-    */
+     */
     public Optional<String> uid() {
         return Optional.ofNullable(this.uid);
     }
     /**
-     * allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
+     * @return allowedUsages specifies a set of usage contexts the key will be valid for. See: https://tools.ietf.org/html/rfc5280#section-4.2.1.3
      *      https://tools.ietf.org/html/rfc5280#section-4.2.1.12
      * 
-    */
+     */
     public List<String> usages() {
         return this.usages == null ? List.of() : this.usages;
     }
     /**
-     * Information about the requesting user. See user.Info interface for details.
+     * @return Information about the requesting user. See user.Info interface for details.
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

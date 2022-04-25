@@ -26,6 +26,13 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="error")
     private @Nullable Output<String> error;
 
+    /**
+     * @return Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+     *   CamelCase names
+     * - cloud provider specific error values must have names that comply with the
+     *   format foo.example.com/CamelCase.
+     * 
+     */
     public Optional<Output<String>> error() {
         return Optional.ofNullable(this.error);
     }
@@ -37,6 +44,10 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="port", required=true)
     private Output<Integer> port;
 
+    /**
+     * @return Port is the port number of the service port of which status is recorded here
+     * 
+     */
     public Output<Integer> port() {
         return this.port;
     }
@@ -53,6 +64,15 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="protocol", required=true)
     private Output<String> protocol;
 
+    /**
+     * @return Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
+     * 
+     * Possible enum values:
+     *  - `&#34;SCTP&#34;` is the SCTP protocol.
+     *  - `&#34;TCP&#34;` is the TCP protocol.
+     *  - `&#34;UDP&#34;` is the UDP protocol.
+     * 
+     */
     public Output<String> protocol() {
         return this.protocol;
     }
@@ -83,29 +103,81 @@ public final class PortStatusArgs extends com.pulumi.resources.ResourceArgs {
             $ = new PortStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param error Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+         *   CamelCase names
+         * - cloud provider specific error values must have names that comply with the
+         *   format foo.example.com/CamelCase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(@Nullable Output<String> error) {
             $.error = error;
             return this;
         }
 
+        /**
+         * @param error Error is to record the problem with the service port The format of the error shall comply with the following rules: - built-in error values shall be specified in this file and those shall use
+         *   CamelCase names
+         * - cloud provider specific error values must have names that comply with the
+         *   format foo.example.com/CamelCase.
+         * 
+         * @return builder
+         * 
+         */
         public Builder error(String error) {
             return error(Output.of(error));
         }
 
+        /**
+         * @param port Port is the port number of the service port of which status is recorded here
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Output<Integer> port) {
             $.port = port;
             return this;
         }
 
+        /**
+         * @param port Port is the port number of the service port of which status is recorded here
+         * 
+         * @return builder
+         * 
+         */
         public Builder port(Integer port) {
             return port(Output.of(port));
         }
 
+        /**
+         * @param protocol Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
+         * 
+         * Possible enum values:
+         *  - `&#34;SCTP&#34;` is the SCTP protocol.
+         *  - `&#34;TCP&#34;` is the TCP protocol.
+         *  - `&#34;UDP&#34;` is the UDP protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(Output<String> protocol) {
             $.protocol = protocol;
             return this;
         }
 
+        /**
+         * @param protocol Protocol is the protocol of the service port of which status is recorded here The supported values are: &#34;TCP&#34;, &#34;UDP&#34;, &#34;SCTP&#34;
+         * 
+         * Possible enum values:
+         *  - `&#34;SCTP&#34;` is the SCTP protocol.
+         *  - `&#34;TCP&#34;` is the TCP protocol.
+         *  - `&#34;UDP&#34;` is the UDP protocol.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protocol(String protocol) {
             return protocol(Output.of(protocol));
         }

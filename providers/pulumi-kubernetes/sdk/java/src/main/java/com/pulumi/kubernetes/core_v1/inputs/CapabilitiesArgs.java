@@ -27,6 +27,10 @@ public final class CapabilitiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="add")
     private @Nullable Output<List<String>> add;
 
+    /**
+     * @return Added capabilities
+     * 
+     */
     public Optional<Output<List<String>>> add() {
         return Optional.ofNullable(this.add);
     }
@@ -38,6 +42,10 @@ public final class CapabilitiesArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="drop")
     private @Nullable Output<List<String>> drop;
 
+    /**
+     * @return Removed capabilities
+     * 
+     */
     public Optional<Output<List<String>>> drop() {
         return Optional.ofNullable(this.drop);
     }
@@ -67,28 +75,64 @@ public final class CapabilitiesArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CapabilitiesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param add Added capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder add(@Nullable Output<List<String>> add) {
             $.add = add;
             return this;
         }
 
+        /**
+         * @param add Added capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder add(List<String> add) {
             return add(Output.of(add));
         }
 
+        /**
+         * @param add Added capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder add(String... add) {
             return add(List.of(add));
         }
 
+        /**
+         * @param drop Removed capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder drop(@Nullable Output<List<String>> drop) {
             $.drop = drop;
             return this;
         }
 
+        /**
+         * @param drop Removed capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder drop(List<String> drop) {
             return drop(Output.of(drop));
         }
 
+        /**
+         * @param drop Removed capabilities
+         * 
+         * @return builder
+         * 
+         */
         public Builder drop(String... drop) {
             return drop(List.of(drop));
         }

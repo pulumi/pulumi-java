@@ -27,6 +27,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return description is a human readable description of this column.
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -38,6 +42,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
     @Import(name="format")
     private @Nullable Output<String> format;
 
+    /**
+     * @return format is an optional OpenAPI type definition for this column. The &#39;name&#39; format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
+     * 
+     */
     public Optional<Output<String>> format() {
         return Optional.ofNullable(this.format);
     }
@@ -49,6 +57,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
     @Import(name="jsonPath", required=true)
     private Output<String> jsonPath;
 
+    /**
+     * @return jsonPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.
+     * 
+     */
     public Output<String> jsonPath() {
         return this.jsonPath;
     }
@@ -60,6 +72,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return name is a human readable name for the column.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -71,6 +87,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
     @Import(name="priority")
     private @Nullable Output<Integer> priority;
 
+    /**
+     * @return priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0.
+     * 
+     */
     public Optional<Output<Integer>> priority() {
         return Optional.ofNullable(this.priority);
     }
@@ -82,6 +102,10 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -115,56 +139,128 @@ public final class CustomResourceColumnDefinitionArgs extends com.pulumi.resourc
             $ = new CustomResourceColumnDefinitionArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param description description is a human readable description of this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description description is a human readable description of this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param format format is an optional OpenAPI type definition for this column. The &#39;name&#39; format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(@Nullable Output<String> format) {
             $.format = format;
             return this;
         }
 
+        /**
+         * @param format format is an optional OpenAPI type definition for this column. The &#39;name&#39; format is applied to the primary identifier column to assist in clients identifying column is the resource name. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder format(String format) {
             return format(Output.of(format));
         }
 
+        /**
+         * @param jsonPath jsonPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonPath(Output<String> jsonPath) {
             $.jsonPath = jsonPath;
             return this;
         }
 
+        /**
+         * @param jsonPath jsonPath is a simple JSON path (i.e. with array notation) which is evaluated against each custom resource to produce the value for this column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder jsonPath(String jsonPath) {
             return jsonPath(Output.of(jsonPath));
         }
 
+        /**
+         * @param name name is a human readable name for the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name name is a human readable name for the column.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param priority priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(@Nullable Output<Integer> priority) {
             $.priority = priority;
             return this;
         }
 
+        /**
+         * @param priority priority is an integer defining the relative importance of this column compared to others. Lower numbers are considered higher priority. Columns that may be omitted in limited space scenarios should be given a priority greater than 0.
+         * 
+         * @return builder
+         * 
+         */
         public Builder priority(Integer priority) {
             return priority(Output.of(priority));
         }
 
+        /**
+         * @param type type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type type is an OpenAPI type definition for this column. See https://github.com/OAI/OpenAPI-Specification/blob/master/versions/2.0.md#data-types for details.
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

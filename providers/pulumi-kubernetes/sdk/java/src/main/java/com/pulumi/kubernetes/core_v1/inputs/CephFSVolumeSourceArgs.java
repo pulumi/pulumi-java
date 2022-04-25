@@ -29,6 +29,10 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="monitors", required=true)
     private Output<List<String>> monitors;
 
+    /**
+     * @return Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     public Output<List<String>> monitors() {
         return this.monitors;
     }
@@ -40,6 +44,10 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="path")
     private @Nullable Output<String> path;
 
+    /**
+     * @return Optional: Used as the mounted root, rather than the full Ceph tree, default is /
+     * 
+     */
     public Optional<Output<String>> path() {
         return Optional.ofNullable(this.path);
     }
@@ -51,6 +59,10 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -62,6 +74,10 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="secretFile")
     private @Nullable Output<String> secretFile;
 
+    /**
+     * @return Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     public Optional<Output<String>> secretFile() {
         return Optional.ofNullable(this.secretFile);
     }
@@ -73,6 +89,10 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="secretRef")
     private @Nullable Output<LocalObjectReferenceArgs> secretRef;
 
+    /**
+     * @return Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     public Optional<Output<LocalObjectReferenceArgs>> secretRef() {
         return Optional.ofNullable(this.secretRef);
     }
@@ -84,6 +104,10 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="user")
     private @Nullable Output<String> user;
 
+    /**
+     * @return Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+     * 
+     */
     public Optional<Output<String>> user() {
         return Optional.ofNullable(this.user);
     }
@@ -117,60 +141,138 @@ public final class CephFSVolumeSourceArgs extends com.pulumi.resources.ResourceA
             $ = new CephFSVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param monitors Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(Output<List<String>> monitors) {
             $.monitors = monitors;
             return this;
         }
 
+        /**
+         * @param monitors Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(List<String> monitors) {
             return monitors(Output.of(monitors));
         }
 
+        /**
+         * @param monitors Required: Monitors is a collection of Ceph monitors More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder monitors(String... monitors) {
             return monitors(List.of(monitors));
         }
 
+        /**
+         * @param path Optional: Used as the mounted root, rather than the full Ceph tree, default is /
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(@Nullable Output<String> path) {
             $.path = path;
             return this;
         }
 
+        /**
+         * @param path Optional: Used as the mounted root, rather than the full Ceph tree, default is /
+         * 
+         * @return builder
+         * 
+         */
         public Builder path(String path) {
             return path(Output.of(path));
         }
 
+        /**
+         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Optional: Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param secretFile Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretFile(@Nullable Output<String> secretFile) {
             $.secretFile = secretFile;
             return this;
         }
 
+        /**
+         * @param secretFile Optional: SecretFile is the path to key ring for User, default is /etc/ceph/user.secret More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretFile(String secretFile) {
             return secretFile(Output.of(secretFile));
         }
 
+        /**
+         * @param secretRef Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(@Nullable Output<LocalObjectReferenceArgs> secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param secretRef Optional: SecretRef is reference to the authentication secret for User, default is empty. More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(LocalObjectReferenceArgs secretRef) {
             return secretRef(Output.of(secretRef));
         }
 
+        /**
+         * @param user Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(@Nullable Output<String> user) {
             $.user = user;
             return this;
         }
 
+        /**
+         * @param user Optional: User is the rados user name, default is admin More info: https://examples.k8s.io/volumes/cephfs/README.md#how-to-use-it
+         * 
+         * @return builder
+         * 
+         */
         public Builder user(String user) {
             return user(Output.of(user));
         }

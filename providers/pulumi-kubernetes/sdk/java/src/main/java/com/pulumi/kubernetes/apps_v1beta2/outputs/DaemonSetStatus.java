@@ -14,52 +14,52 @@ import javax.annotation.Nullable;
 @CustomType
 public final class DaemonSetStatus {
     /**
-     * Count of hash collisions for the DaemonSet. The DaemonSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
+     * @return Count of hash collisions for the DaemonSet. The DaemonSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
      * 
      */
     private final @Nullable Integer collisionCount;
     /**
-     * Represents the latest available observations of a DaemonSet&#39;s current state.
+     * @return Represents the latest available observations of a DaemonSet&#39;s current state.
      * 
      */
     private final @Nullable List<DaemonSetCondition> conditions;
     /**
-     * The number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+     * @return The number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
      * 
      */
     private final Integer currentNumberScheduled;
     /**
-     * The total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+     * @return The total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
      * 
      */
     private final Integer desiredNumberScheduled;
     /**
-     * The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and available (ready for at least spec.minReadySeconds)
+     * @return The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and available (ready for at least spec.minReadySeconds)
      * 
      */
     private final @Nullable Integer numberAvailable;
     /**
-     * The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+     * @return The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
      * 
      */
     private final Integer numberMisscheduled;
     /**
-     * The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready.
+     * @return The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready.
      * 
      */
     private final Integer numberReady;
     /**
-     * The number of nodes that should be running the daemon pod and have none of the daemon pod running and available (ready for at least spec.minReadySeconds)
+     * @return The number of nodes that should be running the daemon pod and have none of the daemon pod running and available (ready for at least spec.minReadySeconds)
      * 
      */
     private final @Nullable Integer numberUnavailable;
     /**
-     * The most recent generation observed by the daemon set controller.
+     * @return The most recent generation observed by the daemon set controller.
      * 
      */
     private final @Nullable Integer observedGeneration;
     /**
-     * The total number of nodes that are running updated daemon pod
+     * @return The total number of nodes that are running updated daemon pod
      * 
      */
     private final @Nullable Integer updatedNumberScheduled;
@@ -89,72 +89,72 @@ public final class DaemonSetStatus {
     }
 
     /**
-     * Count of hash collisions for the DaemonSet. The DaemonSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
+     * @return Count of hash collisions for the DaemonSet. The DaemonSet controller uses this field as a collision avoidance mechanism when it needs to create the name for the newest ControllerRevision.
      * 
-    */
+     */
     public Optional<Integer> collisionCount() {
         return Optional.ofNullable(this.collisionCount);
     }
     /**
-     * Represents the latest available observations of a DaemonSet&#39;s current state.
+     * @return Represents the latest available observations of a DaemonSet&#39;s current state.
      * 
-    */
+     */
     public List<DaemonSetCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
-     * The number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+     * @return The number of nodes that are running at least 1 daemon pod and are supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
      * 
-    */
+     */
     public Integer currentNumberScheduled() {
         return this.currentNumberScheduled;
     }
     /**
-     * The total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+     * @return The total number of nodes that should be running the daemon pod (including nodes correctly running the daemon pod). More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
      * 
-    */
+     */
     public Integer desiredNumberScheduled() {
         return this.desiredNumberScheduled;
     }
     /**
-     * The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and available (ready for at least spec.minReadySeconds)
+     * @return The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and available (ready for at least spec.minReadySeconds)
      * 
-    */
+     */
     public Optional<Integer> numberAvailable() {
         return Optional.ofNullable(this.numberAvailable);
     }
     /**
-     * The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
+     * @return The number of nodes that are running the daemon pod, but are not supposed to run the daemon pod. More info: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
      * 
-    */
+     */
     public Integer numberMisscheduled() {
         return this.numberMisscheduled;
     }
     /**
-     * The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready.
+     * @return The number of nodes that should be running the daemon pod and have one or more of the daemon pod running and ready.
      * 
-    */
+     */
     public Integer numberReady() {
         return this.numberReady;
     }
     /**
-     * The number of nodes that should be running the daemon pod and have none of the daemon pod running and available (ready for at least spec.minReadySeconds)
+     * @return The number of nodes that should be running the daemon pod and have none of the daemon pod running and available (ready for at least spec.minReadySeconds)
      * 
-    */
+     */
     public Optional<Integer> numberUnavailable() {
         return Optional.ofNullable(this.numberUnavailable);
     }
     /**
-     * The most recent generation observed by the daemon set controller.
+     * @return The most recent generation observed by the daemon set controller.
      * 
-    */
+     */
     public Optional<Integer> observedGeneration() {
         return Optional.ofNullable(this.observedGeneration);
     }
     /**
-     * The total number of nodes that are running updated daemon pod
+     * @return The total number of nodes that are running updated daemon pod
      * 
-    */
+     */
     public Optional<Integer> updatedNumberScheduled() {
         return Optional.ofNullable(this.updatedNumberScheduled);
     }

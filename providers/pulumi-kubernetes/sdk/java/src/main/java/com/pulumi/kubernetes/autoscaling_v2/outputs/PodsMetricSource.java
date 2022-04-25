@@ -11,12 +11,12 @@ import java.util.Objects;
 @CustomType
 public final class PodsMetricSource {
     /**
-     * metric identifies the target metric by name and selector
+     * @return metric identifies the target metric by name and selector
      * 
      */
     private final MetricIdentifier metric;
     /**
-     * target specifies the target value for the given metric
+     * @return target specifies the target value for the given metric
      * 
      */
     private final MetricTarget target;
@@ -30,16 +30,16 @@ public final class PodsMetricSource {
     }
 
     /**
-     * metric identifies the target metric by name and selector
+     * @return metric identifies the target metric by name and selector
      * 
-    */
+     */
     public MetricIdentifier metric() {
         return this.metric;
     }
     /**
-     * target specifies the target value for the given metric
+     * @return target specifies the target value for the given metric
      * 
-    */
+     */
     public MetricTarget target() {
         return this.target;
     }

@@ -29,6 +29,10 @@ public final class ConfigMapEnvSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -40,6 +44,10 @@ public final class ConfigMapEnvSourceArgs extends com.pulumi.resources.ResourceA
     @Import(name="optional")
     private @Nullable Output<Boolean> optional;
 
+    /**
+     * @return Specify whether the ConfigMap must be defined
+     * 
+     */
     public Optional<Output<Boolean>> optional() {
         return Optional.ofNullable(this.optional);
     }
@@ -69,20 +77,44 @@ public final class ConfigMapEnvSourceArgs extends com.pulumi.resources.ResourceA
             $ = new ConfigMapEnvSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the referent. More info: https://kubernetes.io/docs/concepts/overview/working-with-objects/names/#names
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param optional Specify whether the ConfigMap must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(@Nullable Output<Boolean> optional) {
             $.optional = optional;
             return this;
         }
 
+        /**
+         * @param optional Specify whether the ConfigMap must be defined
+         * 
+         * @return builder
+         * 
+         */
         public Builder optional(Boolean optional) {
             return optional(Output.of(optional));
         }

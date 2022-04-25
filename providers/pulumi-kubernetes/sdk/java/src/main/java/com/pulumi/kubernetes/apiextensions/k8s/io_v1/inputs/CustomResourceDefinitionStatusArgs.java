@@ -29,6 +29,10 @@ public final class CustomResourceDefinitionStatusArgs extends com.pulumi.resourc
     @Import(name="acceptedNames", required=true)
     private Output<CustomResourceDefinitionNamesArgs> acceptedNames;
 
+    /**
+     * @return acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
+     * 
+     */
     public Output<CustomResourceDefinitionNamesArgs> acceptedNames() {
         return this.acceptedNames;
     }
@@ -40,6 +44,10 @@ public final class CustomResourceDefinitionStatusArgs extends com.pulumi.resourc
     @Import(name="conditions")
     private @Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions;
 
+    /**
+     * @return conditions indicate state for particular aspects of a CustomResourceDefinition
+     * 
+     */
     public Optional<Output<List<CustomResourceDefinitionConditionArgs>>> conditions() {
         return Optional.ofNullable(this.conditions);
     }
@@ -51,6 +59,10 @@ public final class CustomResourceDefinitionStatusArgs extends com.pulumi.resourc
     @Import(name="storedVersions", required=true)
     private Output<List<String>> storedVersions;
 
+    /**
+     * @return storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
+     * 
+     */
     public Output<List<String>> storedVersions() {
         return this.storedVersions;
     }
@@ -81,37 +93,85 @@ public final class CustomResourceDefinitionStatusArgs extends com.pulumi.resourc
             $ = new CustomResourceDefinitionStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param acceptedNames acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptedNames(Output<CustomResourceDefinitionNamesArgs> acceptedNames) {
             $.acceptedNames = acceptedNames;
             return this;
         }
 
+        /**
+         * @param acceptedNames acceptedNames are the names that are actually being used to serve discovery. They may be different than the names in spec.
+         * 
+         * @return builder
+         * 
+         */
         public Builder acceptedNames(CustomResourceDefinitionNamesArgs acceptedNames) {
             return acceptedNames(Output.of(acceptedNames));
         }
 
+        /**
+         * @param conditions conditions indicate state for particular aspects of a CustomResourceDefinition
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(@Nullable Output<List<CustomResourceDefinitionConditionArgs>> conditions) {
             $.conditions = conditions;
             return this;
         }
 
+        /**
+         * @param conditions conditions indicate state for particular aspects of a CustomResourceDefinition
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(List<CustomResourceDefinitionConditionArgs> conditions) {
             return conditions(Output.of(conditions));
         }
 
+        /**
+         * @param conditions conditions indicate state for particular aspects of a CustomResourceDefinition
+         * 
+         * @return builder
+         * 
+         */
         public Builder conditions(CustomResourceDefinitionConditionArgs... conditions) {
             return conditions(List.of(conditions));
         }
 
+        /**
+         * @param storedVersions storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedVersions(Output<List<String>> storedVersions) {
             $.storedVersions = storedVersions;
             return this;
         }
 
+        /**
+         * @param storedVersions storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedVersions(List<String> storedVersions) {
             return storedVersions(Output.of(storedVersions));
         }
 
+        /**
+         * @param storedVersions storedVersions lists all versions of CustomResources that were ever persisted. Tracking these versions allows a migration path for stored versions in etcd. The field is mutable so a migration controller can finish a migration to another version (ensuring no old objects are left in storage), and then remove the rest of the versions from this list. Versions may not be removed from `spec.versions` while they exist in this list.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storedVersions(String... storedVersions) {
             return storedVersions(List.of(storedVersions));
         }

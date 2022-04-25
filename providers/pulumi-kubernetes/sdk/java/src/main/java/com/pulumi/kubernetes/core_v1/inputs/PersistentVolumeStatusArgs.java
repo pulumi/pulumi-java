@@ -26,6 +26,10 @@ public final class PersistentVolumeStatusArgs extends com.pulumi.resources.Resou
     @Import(name="message")
     private @Nullable Output<String> message;
 
+    /**
+     * @return A human-readable message indicating details about why the volume is in this state.
+     * 
+     */
     public Optional<Output<String>> message() {
         return Optional.ofNullable(this.message);
     }
@@ -44,6 +48,17 @@ public final class PersistentVolumeStatusArgs extends com.pulumi.resources.Resou
     @Import(name="phase")
     private @Nullable Output<String> phase;
 
+    /**
+     * @return Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
+     * 
+     * Possible enum values:
+     *  - `&#34;Available&#34;` used for PersistentVolumes that are not yet bound Available volumes are held by the binder and matched to PersistentVolumeClaims
+     *  - `&#34;Bound&#34;` used for PersistentVolumes that are bound
+     *  - `&#34;Failed&#34;` used for PersistentVolumes that failed to be correctly recycled or deleted after being released from a claim
+     *  - `&#34;Pending&#34;` used for PersistentVolumes that are not available
+     *  - `&#34;Released&#34;` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
+     * 
+     */
     public Optional<Output<String>> phase() {
         return Optional.ofNullable(this.phase);
     }
@@ -55,6 +70,10 @@ public final class PersistentVolumeStatusArgs extends com.pulumi.resources.Resou
     @Import(name="reason")
     private @Nullable Output<String> reason;
 
+    /**
+     * @return Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
+     * 
+     */
     public Optional<Output<String>> reason() {
         return Optional.ofNullable(this.reason);
     }
@@ -85,29 +104,79 @@ public final class PersistentVolumeStatusArgs extends com.pulumi.resources.Resou
             $ = new PersistentVolumeStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param message A human-readable message indicating details about why the volume is in this state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(@Nullable Output<String> message) {
             $.message = message;
             return this;
         }
 
+        /**
+         * @param message A human-readable message indicating details about why the volume is in this state.
+         * 
+         * @return builder
+         * 
+         */
         public Builder message(String message) {
             return message(Output.of(message));
         }
 
+        /**
+         * @param phase Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
+         * 
+         * Possible enum values:
+         *  - `&#34;Available&#34;` used for PersistentVolumes that are not yet bound Available volumes are held by the binder and matched to PersistentVolumeClaims
+         *  - `&#34;Bound&#34;` used for PersistentVolumes that are bound
+         *  - `&#34;Failed&#34;` used for PersistentVolumes that failed to be correctly recycled or deleted after being released from a claim
+         *  - `&#34;Pending&#34;` used for PersistentVolumes that are not available
+         *  - `&#34;Released&#34;` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder phase(@Nullable Output<String> phase) {
             $.phase = phase;
             return this;
         }
 
+        /**
+         * @param phase Phase indicates if a volume is available, bound to a claim, or released by a claim. More info: https://kubernetes.io/docs/concepts/storage/persistent-volumes#phase
+         * 
+         * Possible enum values:
+         *  - `&#34;Available&#34;` used for PersistentVolumes that are not yet bound Available volumes are held by the binder and matched to PersistentVolumeClaims
+         *  - `&#34;Bound&#34;` used for PersistentVolumes that are bound
+         *  - `&#34;Failed&#34;` used for PersistentVolumes that failed to be correctly recycled or deleted after being released from a claim
+         *  - `&#34;Pending&#34;` used for PersistentVolumes that are not available
+         *  - `&#34;Released&#34;` used for PersistentVolumes where the bound PersistentVolumeClaim was deleted released volumes must be recycled before becoming available again this phase is used by the persistent volume claim binder to signal to another process to reclaim the resource
+         * 
+         * @return builder
+         * 
+         */
         public Builder phase(String phase) {
             return phase(Output.of(phase));
         }
 
+        /**
+         * @param reason Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(@Nullable Output<String> reason) {
             $.reason = reason;
             return this;
         }
 
+        /**
+         * @param reason Reason is a brief CamelCase string that describes any failure and is meant for machine parsing and tidy display in the CLI.
+         * 
+         * @return builder
+         * 
+         */
         public Builder reason(String reason) {
             return reason(Output.of(reason));
         }

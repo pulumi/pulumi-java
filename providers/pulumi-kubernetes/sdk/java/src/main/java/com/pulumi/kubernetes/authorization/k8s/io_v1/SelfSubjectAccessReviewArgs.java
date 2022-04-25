@@ -25,6 +25,10 @@ public final class SelfSubjectAccessReviewArgs extends com.pulumi.resources.Reso
     @Import(name="apiVersion")
     private @Nullable Output<String> apiVersion;
 
+    /**
+     * @return APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+     * 
+     */
     public Optional<Output<String>> apiVersion() {
         return Optional.ofNullable(this.apiVersion);
     }
@@ -36,6 +40,10 @@ public final class SelfSubjectAccessReviewArgs extends com.pulumi.resources.Reso
     @Import(name="kind")
     private @Nullable Output<String> kind;
 
+    /**
+     * @return Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * 
+     */
     public Optional<Output<String>> kind() {
         return Optional.ofNullable(this.kind);
     }
@@ -47,6 +55,10 @@ public final class SelfSubjectAccessReviewArgs extends com.pulumi.resources.Reso
     @Import(name="metadata")
     private @Nullable Output<ObjectMetaArgs> metadata;
 
+    /**
+     * @return Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+     * 
+     */
     public Optional<Output<ObjectMetaArgs>> metadata() {
         return Optional.ofNullable(this.metadata);
     }
@@ -58,6 +70,10 @@ public final class SelfSubjectAccessReviewArgs extends com.pulumi.resources.Reso
     @Import(name="spec", required=true)
     private Output<SelfSubjectAccessReviewSpecArgs> spec;
 
+    /**
+     * @return Spec holds information about the request being evaluated.  user and groups must be empty
+     * 
+     */
     public Output<SelfSubjectAccessReviewSpecArgs> spec() {
         return this.spec;
     }
@@ -89,38 +105,86 @@ public final class SelfSubjectAccessReviewArgs extends com.pulumi.resources.Reso
             $ = new SelfSubjectAccessReviewArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(@Nullable Output<String> apiVersion) {
             $.apiVersion = apiVersion;
             return this;
         }
 
+        /**
+         * @param apiVersion APIVersion defines the versioned schema of this representation of an object. Servers should convert recognized schemas to the latest internal value, and may reject unrecognized values. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#resources
+         * 
+         * @return builder
+         * 
+         */
         public Builder apiVersion(String apiVersion) {
             return apiVersion(Output.of(apiVersion));
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(@Nullable Output<String> kind) {
             $.kind = kind;
             return this;
         }
 
+        /**
+         * @param kind Kind is a string value representing the REST resource this object represents. Servers may infer this from the endpoint the client submits requests to. Cannot be updated. In CamelCase. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+         * 
+         * @return builder
+         * 
+         */
         public Builder kind(String kind) {
             return kind(Output.of(kind));
         }
 
+        /**
+         * @param metadata Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(@Nullable Output<ObjectMetaArgs> metadata) {
             $.metadata = metadata;
             return this;
         }
 
+        /**
+         * @param metadata Standard list metadata. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#metadata
+         * 
+         * @return builder
+         * 
+         */
         public Builder metadata(ObjectMetaArgs metadata) {
             return metadata(Output.of(metadata));
         }
 
+        /**
+         * @param spec Spec holds information about the request being evaluated.  user and groups must be empty
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(Output<SelfSubjectAccessReviewSpecArgs> spec) {
             $.spec = spec;
             return this;
         }
 
+        /**
+         * @param spec Spec holds information about the request being evaluated.  user and groups must be empty
+         * 
+         * @return builder
+         * 
+         */
         public Builder spec(SelfSubjectAccessReviewSpecArgs spec) {
             return spec(Output.of(spec));
         }

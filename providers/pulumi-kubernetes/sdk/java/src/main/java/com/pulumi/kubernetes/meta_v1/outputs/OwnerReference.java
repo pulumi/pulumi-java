@@ -13,32 +13,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class OwnerReference {
     /**
-     * API version of the referent.
+     * @return API version of the referent.
      * 
      */
     private final String apiVersion;
     /**
-     * If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
+     * @return If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
      * 
      */
     private final @Nullable Boolean blockOwnerDeletion;
     /**
-     * If true, this reference points to the managing controller.
+     * @return If true, this reference points to the managing controller.
      * 
      */
     private final @Nullable Boolean controller;
     /**
-     * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * @return Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
      */
     private final String kind;
     /**
-     * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * @return Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
      * 
      */
     private final String name;
     /**
-     * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * @return UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
      */
     private final String uid;
@@ -60,44 +60,44 @@ public final class OwnerReference {
     }
 
     /**
-     * API version of the referent.
+     * @return API version of the referent.
      * 
-    */
+     */
     public String apiVersion() {
         return this.apiVersion;
     }
     /**
-     * If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
+     * @return If true, AND if the owner has the &#34;foregroundDeletion&#34; finalizer, then the owner cannot be deleted from the key-value store until this reference is removed. Defaults to false. To set this field, a user needs &#34;delete&#34; permission of the owner, otherwise 422 (Unprocessable Entity) will be returned.
      * 
-    */
+     */
     public Optional<Boolean> blockOwnerDeletion() {
         return Optional.ofNullable(this.blockOwnerDeletion);
     }
     /**
-     * If true, this reference points to the managing controller.
+     * @return If true, this reference points to the managing controller.
      * 
-    */
+     */
     public Optional<Boolean> controller() {
         return Optional.ofNullable(this.controller);
     }
     /**
-     * Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
+     * @return Kind of the referent. More info: https://git.k8s.io/community/contributors/devel/sig-architecture/api-conventions.md#types-kinds
      * 
-    */
+     */
     public String kind() {
         return this.kind;
     }
     /**
-     * Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
+     * @return Name of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#names
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
+     * @return UID of the referent. More info: http://kubernetes.io/docs/user-guide/identifiers#uids
      * 
-    */
+     */
     public String uid() {
         return this.uid;
     }

@@ -10,12 +10,12 @@ import java.util.Objects;
 @CustomType
 public final class Sysctl {
     /**
-     * Name of a property to set
+     * @return Name of a property to set
      * 
      */
     private final String name;
     /**
-     * Value of a property to set
+     * @return Value of a property to set
      * 
      */
     private final String value;
@@ -29,16 +29,16 @@ public final class Sysctl {
     }
 
     /**
-     * Name of a property to set
+     * @return Name of a property to set
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * Value of a property to set
+     * @return Value of a property to set
      * 
-    */
+     */
     public String value() {
         return this.value;
     }

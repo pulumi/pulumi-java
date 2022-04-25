@@ -26,6 +26,10 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name is unique within a namespace to reference a secret resource.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -37,6 +41,10 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Namespace defines the space within which the secret name must be unique.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -66,20 +74,44 @@ public final class SecretReferenceArgs extends com.pulumi.resources.ResourceArgs
             $ = new SecretReferenceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name is unique within a namespace to reference a secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name is unique within a namespace to reference a secret resource.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace Namespace defines the space within which the secret name must be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace defines the space within which the secret name must be unique.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }

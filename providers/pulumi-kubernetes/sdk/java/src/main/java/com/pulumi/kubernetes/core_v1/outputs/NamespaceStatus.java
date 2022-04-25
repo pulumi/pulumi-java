@@ -14,12 +14,12 @@ import javax.annotation.Nullable;
 @CustomType
 public final class NamespaceStatus {
     /**
-     * Represents the latest available observations of a namespace&#39;s current state.
+     * @return Represents the latest available observations of a namespace&#39;s current state.
      * 
      */
     private final @Nullable List<NamespaceCondition> conditions;
     /**
-     * Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+     * @return Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      * 
      * Possible enum values:
      *  - `&#34;Active&#34;` means the namespace is available for use in the system
@@ -37,20 +37,20 @@ public final class NamespaceStatus {
     }
 
     /**
-     * Represents the latest available observations of a namespace&#39;s current state.
+     * @return Represents the latest available observations of a namespace&#39;s current state.
      * 
-    */
+     */
     public List<NamespaceCondition> conditions() {
         return this.conditions == null ? List.of() : this.conditions;
     }
     /**
-     * Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
+     * @return Phase is the current lifecycle phase of the namespace. More info: https://kubernetes.io/docs/tasks/administer-cluster/namespaces/
      * 
      * Possible enum values:
      *  - `&#34;Active&#34;` means the namespace is available for use in the system
      *  - `&#34;Terminating&#34;` means the namespace is undergoing graceful termination
      * 
-    */
+     */
     public Optional<String> phase() {
         return Optional.ofNullable(this.phase);
     }

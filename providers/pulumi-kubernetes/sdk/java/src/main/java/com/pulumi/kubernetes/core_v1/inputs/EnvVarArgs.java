@@ -27,6 +27,10 @@ public final class EnvVarArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name of the environment variable. Must be a C_IDENTIFIER.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -38,6 +42,10 @@ public final class EnvVarArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="value")
     private @Nullable Output<String> value;
 
+    /**
+     * @return Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
+     * 
+     */
     public Optional<Output<String>> value() {
         return Optional.ofNullable(this.value);
     }
@@ -49,6 +57,10 @@ public final class EnvVarArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="valueFrom")
     private @Nullable Output<EnvVarSourceArgs> valueFrom;
 
+    /**
+     * @return Source for the environment variable&#39;s value. Cannot be used if value is not empty.
+     * 
+     */
     public Optional<Output<EnvVarSourceArgs>> valueFrom() {
         return Optional.ofNullable(this.valueFrom);
     }
@@ -79,29 +91,65 @@ public final class EnvVarArgs extends com.pulumi.resources.ResourceArgs {
             $ = new EnvVarArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param name Name of the environment variable. Must be a C_IDENTIFIER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name of the environment variable. Must be a C_IDENTIFIER.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param value Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(@Nullable Output<String> value) {
             $.value = value;
             return this;
         }
 
+        /**
+         * @param value Variable references $(VAR_NAME) are expanded using the previously defined environment variables in the container and any service environment variables. If a variable cannot be resolved, the reference in the input string will be unchanged. Double $$ are reduced to a single $, which allows for escaping the $(VAR_NAME) syntax: i.e. &#34;$$(VAR_NAME)&#34; will produce the string literal &#34;$(VAR_NAME)&#34;. Escaped references will never be expanded, regardless of whether the variable exists or not. Defaults to &#34;&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder value(String value) {
             return value(Output.of(value));
         }
 
+        /**
+         * @param valueFrom Source for the environment variable&#39;s value. Cannot be used if value is not empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFrom(@Nullable Output<EnvVarSourceArgs> valueFrom) {
             $.valueFrom = valueFrom;
             return this;
         }
 
+        /**
+         * @param valueFrom Source for the environment variable&#39;s value. Cannot be used if value is not empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueFrom(EnvVarSourceArgs valueFrom) {
             return valueFrom(Output.of(valueFrom));
         }

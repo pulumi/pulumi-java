@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class JobCondition {
     /**
-     * Last time the condition was checked.
+     * @return Last time the condition was checked.
      * 
      */
     private final @Nullable String lastProbeTime;
     /**
-     * Last time the condition transit from one status to another.
+     * @return Last time the condition transit from one status to another.
      * 
      */
     private final @Nullable String lastTransitionTime;
     /**
-     * Human readable message indicating details about last transition.
+     * @return Human readable message indicating details about last transition.
      * 
      */
     private final @Nullable String message;
     /**
-     * (brief) reason for the condition&#39;s last transition.
+     * @return (brief) reason for the condition&#39;s last transition.
      * 
      */
     private final @Nullable String reason;
     /**
-     * Status of the condition, one of True, False, Unknown.
+     * @return Status of the condition, one of True, False, Unknown.
      * 
      */
     private final String status;
     /**
-     * Type of job condition, Complete or Failed.
+     * @return Type of job condition, Complete or Failed.
      * 
      * Possible enum values:
      *  - `&#34;Complete&#34;` means the job has completed its execution.
@@ -64,49 +64,49 @@ public final class JobCondition {
     }
 
     /**
-     * Last time the condition was checked.
+     * @return Last time the condition was checked.
      * 
-    */
+     */
     public Optional<String> lastProbeTime() {
         return Optional.ofNullable(this.lastProbeTime);
     }
     /**
-     * Last time the condition transit from one status to another.
+     * @return Last time the condition transit from one status to another.
      * 
-    */
+     */
     public Optional<String> lastTransitionTime() {
         return Optional.ofNullable(this.lastTransitionTime);
     }
     /**
-     * Human readable message indicating details about last transition.
+     * @return Human readable message indicating details about last transition.
      * 
-    */
+     */
     public Optional<String> message() {
         return Optional.ofNullable(this.message);
     }
     /**
-     * (brief) reason for the condition&#39;s last transition.
+     * @return (brief) reason for the condition&#39;s last transition.
      * 
-    */
+     */
     public Optional<String> reason() {
         return Optional.ofNullable(this.reason);
     }
     /**
-     * Status of the condition, one of True, False, Unknown.
+     * @return Status of the condition, one of True, False, Unknown.
      * 
-    */
+     */
     public String status() {
         return this.status;
     }
     /**
-     * Type of job condition, Complete or Failed.
+     * @return Type of job condition, Complete or Failed.
      * 
      * Possible enum values:
      *  - `&#34;Complete&#34;` means the job has completed its execution.
      *  - `&#34;Failed&#34;` means the job has failed its execution.
      *  - `&#34;Suspended&#34;` means the job has been suspended.
      * 
-    */
+     */
     public String type() {
         return this.type;
     }

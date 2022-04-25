@@ -26,6 +26,10 @@ public final class ClientIPConfigArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="timeoutSeconds")
     private @Nullable Output<Integer> timeoutSeconds;
 
+    /**
+     * @return timeoutSeconds specifies the seconds of ClientIP type session sticky time. The value must be &gt;0 &amp;&amp; &lt;=86400(for 1 day) if ServiceAffinity == &#34;ClientIP&#34;. Default value is 10800(for 3 hours).
+     * 
+     */
     public Optional<Output<Integer>> timeoutSeconds() {
         return Optional.ofNullable(this.timeoutSeconds);
     }
@@ -54,11 +58,23 @@ public final class ClientIPConfigArgs extends com.pulumi.resources.ResourceArgs 
             $ = new ClientIPConfigArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param timeoutSeconds timeoutSeconds specifies the seconds of ClientIP type session sticky time. The value must be &gt;0 &amp;&amp; &lt;=86400(for 1 day) if ServiceAffinity == &#34;ClientIP&#34;. Default value is 10800(for 3 hours).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(@Nullable Output<Integer> timeoutSeconds) {
             $.timeoutSeconds = timeoutSeconds;
             return this;
         }
 
+        /**
+         * @param timeoutSeconds timeoutSeconds specifies the seconds of ClientIP type session sticky time. The value must be &gt;0 &amp;&amp; &lt;=86400(for 1 day) if ServiceAffinity == &#34;ClientIP&#34;. Default value is 10800(for 3 hours).
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeoutSeconds(Integer timeoutSeconds) {
             return timeoutSeconds(Output.of(timeoutSeconds));
         }

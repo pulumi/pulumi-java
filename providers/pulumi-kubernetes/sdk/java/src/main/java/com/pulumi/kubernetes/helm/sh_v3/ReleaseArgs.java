@@ -30,6 +30,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="atomic")
     private @Nullable Output<Boolean> atomic;
 
+    /**
+     * @return If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
+     * 
+     */
     public Optional<Output<Boolean>> atomic() {
         return Optional.ofNullable(this.atomic);
     }
@@ -41,6 +45,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="chart", required=true)
     private Output<String> chart;
 
+    /**
+     * @return Chart name to be installed. A path may be used.
+     * 
+     */
     public Output<String> chart() {
         return this.chart;
     }
@@ -52,6 +60,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="cleanupOnFail")
     private @Nullable Output<Boolean> cleanupOnFail;
 
+    /**
+     * @return Allow deletion of new resources created in this upgrade when upgrade fails.
+     * 
+     */
     public Optional<Output<Boolean>> cleanupOnFail() {
         return Optional.ofNullable(this.cleanupOnFail);
     }
@@ -70,6 +82,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="createNamespace")
     private @Nullable Output<Boolean> createNamespace;
 
+    /**
+     * @return Create the namespace if it does not exist.
+     * 
+     */
     public Optional<Output<Boolean>> createNamespace() {
         return Optional.ofNullable(this.createNamespace);
     }
@@ -81,6 +97,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="dependencyUpdate")
     private @Nullable Output<Boolean> dependencyUpdate;
 
+    /**
+     * @return Run helm dependency update before installing the chart.
+     * 
+     */
     public Optional<Output<Boolean>> dependencyUpdate() {
         return Optional.ofNullable(this.dependencyUpdate);
     }
@@ -92,6 +112,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="description")
     private @Nullable Output<String> description;
 
+    /**
+     * @return Add a custom description
+     * 
+     */
     public Optional<Output<String>> description() {
         return Optional.ofNullable(this.description);
     }
@@ -103,6 +127,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="devel")
     private @Nullable Output<Boolean> devel;
 
+    /**
+     * @return Use chart development versions, too. Equivalent to version &#39;&gt;0.0.0-0&#39;. If `version` is set, this is ignored.
+     * 
+     */
     public Optional<Output<Boolean>> devel() {
         return Optional.ofNullable(this.devel);
     }
@@ -114,6 +142,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableCRDHooks")
     private @Nullable Output<Boolean> disableCRDHooks;
 
+    /**
+     * @return Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+     * 
+     */
     public Optional<Output<Boolean>> disableCRDHooks() {
         return Optional.ofNullable(this.disableCRDHooks);
     }
@@ -125,6 +157,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableOpenapiValidation")
     private @Nullable Output<Boolean> disableOpenapiValidation;
 
+    /**
+     * @return If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
+     * 
+     */
     public Optional<Output<Boolean>> disableOpenapiValidation() {
         return Optional.ofNullable(this.disableOpenapiValidation);
     }
@@ -136,6 +172,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="disableWebhooks")
     private @Nullable Output<Boolean> disableWebhooks;
 
+    /**
+     * @return Prevent hooks from running.
+     * 
+     */
     public Optional<Output<Boolean>> disableWebhooks() {
         return Optional.ofNullable(this.disableWebhooks);
     }
@@ -147,6 +187,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="forceUpdate")
     private @Nullable Output<Boolean> forceUpdate;
 
+    /**
+     * @return Force resource update through delete/recreate if needed.
+     * 
+     */
     public Optional<Output<Boolean>> forceUpdate() {
         return Optional.ofNullable(this.forceUpdate);
     }
@@ -158,6 +202,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="keyring")
     private @Nullable Output<String> keyring;
 
+    /**
+     * @return Location of public keys used for verification. Used only if `verify` is true
+     * 
+     */
     public Optional<Output<String>> keyring() {
         return Optional.ofNullable(this.keyring);
     }
@@ -169,6 +217,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="lint")
     private @Nullable Output<Boolean> lint;
 
+    /**
+     * @return Run helm lint when planning.
+     * 
+     */
     public Optional<Output<Boolean>> lint() {
         return Optional.ofNullable(this.lint);
     }
@@ -180,6 +232,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="manifest")
     private @Nullable Output<Map<String,Object>> manifest;
 
+    /**
+     * @return The rendered manifests as JSON. Not yet supported.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> manifest() {
         return Optional.ofNullable(this.manifest);
     }
@@ -191,6 +247,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="maxHistory")
     private @Nullable Output<Integer> maxHistory;
 
+    /**
+     * @return Limit the maximum number of revisions saved per release. Use 0 for no limit.
+     * 
+     */
     public Optional<Output<Integer>> maxHistory() {
         return Optional.ofNullable(this.maxHistory);
     }
@@ -202,6 +262,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Release name.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -213,6 +277,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Namespace to install the release into.
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -224,6 +292,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="postrender")
     private @Nullable Output<String> postrender;
 
+    /**
+     * @return Postrender command to run.
+     * 
+     */
     public Optional<Output<String>> postrender() {
         return Optional.ofNullable(this.postrender);
     }
@@ -235,6 +307,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="recreatePods")
     private @Nullable Output<Boolean> recreatePods;
 
+    /**
+     * @return Perform pods restart during upgrade/rollback.
+     * 
+     */
     public Optional<Output<Boolean>> recreatePods() {
         return Optional.ofNullable(this.recreatePods);
     }
@@ -246,6 +322,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="renderSubchartNotes")
     private @Nullable Output<Boolean> renderSubchartNotes;
 
+    /**
+     * @return If set, render subchart notes along with the parent.
+     * 
+     */
     public Optional<Output<Boolean>> renderSubchartNotes() {
         return Optional.ofNullable(this.renderSubchartNotes);
     }
@@ -257,6 +337,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="replace")
     private @Nullable Output<Boolean> replace;
 
+    /**
+     * @return Re-use the given name, even if that name is already used. This is unsafe in production
+     * 
+     */
     public Optional<Output<Boolean>> replace() {
         return Optional.ofNullable(this.replace);
     }
@@ -268,6 +352,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="repositoryOpts")
     private @Nullable Output<RepositoryOptsArgs> repositoryOpts;
 
+    /**
+     * @return Specification defining the Helm chart repository to use.
+     * 
+     */
     public Optional<Output<RepositoryOptsArgs>> repositoryOpts() {
         return Optional.ofNullable(this.repositoryOpts);
     }
@@ -279,6 +367,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resetValues")
     private @Nullable Output<Boolean> resetValues;
 
+    /**
+     * @return When upgrading, reset the values to the ones built into the chart.
+     * 
+     */
     public Optional<Output<Boolean>> resetValues() {
         return Optional.ofNullable(this.resetValues);
     }
@@ -290,6 +382,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="resourceNames")
     private @Nullable Output<Map<String,List<String>>> resourceNames;
 
+    /**
+     * @return Names of resources created by the release grouped by &#34;kind/version&#34;.
+     * 
+     */
     public Optional<Output<Map<String,List<String>>>> resourceNames() {
         return Optional.ofNullable(this.resourceNames);
     }
@@ -301,6 +397,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="reuseValues")
     private @Nullable Output<Boolean> reuseValues;
 
+    /**
+     * @return When upgrading, reuse the last release&#39;s values and merge in any overrides. If &#39;resetValues&#39; is specified, this is ignored
+     * 
+     */
     public Optional<Output<Boolean>> reuseValues() {
         return Optional.ofNullable(this.reuseValues);
     }
@@ -312,6 +412,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipAwait")
     private @Nullable Output<Boolean> skipAwait;
 
+    /**
+     * @return By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
+     * 
+     */
     public Optional<Output<Boolean>> skipAwait() {
         return Optional.ofNullable(this.skipAwait);
     }
@@ -323,6 +427,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="skipCrds")
     private @Nullable Output<Boolean> skipCrds;
 
+    /**
+     * @return If set, no CRDs will be installed. By default, CRDs are installed if not already present.
+     * 
+     */
     public Optional<Output<Boolean>> skipCrds() {
         return Optional.ofNullable(this.skipCrds);
     }
@@ -334,6 +442,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="timeout")
     private @Nullable Output<Integer> timeout;
 
+    /**
+     * @return Time in seconds to wait for any individual kubernetes operation.
+     * 
+     */
     public Optional<Output<Integer>> timeout() {
         return Optional.ofNullable(this.timeout);
     }
@@ -345,6 +457,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="valueYamlFiles")
     private @Nullable Output<List<AssetOrArchive>> valueYamlFiles;
 
+    /**
+     * @return List of assets (raw yaml files). Content is read and merged with values.
+     * 
+     */
     public Optional<Output<List<AssetOrArchive>>> valueYamlFiles() {
         return Optional.ofNullable(this.valueYamlFiles);
     }
@@ -356,6 +472,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="values")
     private @Nullable Output<Map<String,Object>> values;
 
+    /**
+     * @return Custom values set for the release.
+     * 
+     */
     public Optional<Output<Map<String,Object>>> values() {
         return Optional.ofNullable(this.values);
     }
@@ -367,6 +487,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="verify")
     private @Nullable Output<Boolean> verify;
 
+    /**
+     * @return Verify the package before installing it.
+     * 
+     */
     public Optional<Output<Boolean>> verify() {
         return Optional.ofNullable(this.verify);
     }
@@ -378,6 +502,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Specify the exact chart version to install. If this is not specified, the latest version is installed.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -389,6 +517,10 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="waitForJobs")
     private @Nullable Output<Boolean> waitForJobs;
 
+    /**
+     * @return Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
+     * 
+     */
     public Optional<Output<Boolean>> waitForJobs() {
         return Optional.ofNullable(this.waitForJobs);
     }
@@ -450,29 +582,65 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             $ = new ReleaseArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param atomic If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atomic(@Nullable Output<Boolean> atomic) {
             $.atomic = atomic;
             return this;
         }
 
+        /**
+         * @param atomic If set, installation process purges chart on fail. `skipAwait` will be disabled automatically if atomic is used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder atomic(Boolean atomic) {
             return atomic(Output.of(atomic));
         }
 
+        /**
+         * @param chart Chart name to be installed. A path may be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chart(Output<String> chart) {
             $.chart = chart;
             return this;
         }
 
+        /**
+         * @param chart Chart name to be installed. A path may be used.
+         * 
+         * @return builder
+         * 
+         */
         public Builder chart(String chart) {
             return chart(Output.of(chart));
         }
 
+        /**
+         * @param cleanupOnFail Allow deletion of new resources created in this upgrade when upgrade fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanupOnFail(@Nullable Output<Boolean> cleanupOnFail) {
             $.cleanupOnFail = cleanupOnFail;
             return this;
         }
 
+        /**
+         * @param cleanupOnFail Allow deletion of new resources created in this upgrade when upgrade fails.
+         * 
+         * @return builder
+         * 
+         */
         public Builder cleanupOnFail(Boolean cleanupOnFail) {
             return cleanupOnFail(Output.of(cleanupOnFail));
         }
@@ -486,276 +654,642 @@ public final class ReleaseArgs extends com.pulumi.resources.ResourceArgs {
             return compat(Output.of(compat));
         }
 
+        /**
+         * @param createNamespace Create the namespace if it does not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createNamespace(@Nullable Output<Boolean> createNamespace) {
             $.createNamespace = createNamespace;
             return this;
         }
 
+        /**
+         * @param createNamespace Create the namespace if it does not exist.
+         * 
+         * @return builder
+         * 
+         */
         public Builder createNamespace(Boolean createNamespace) {
             return createNamespace(Output.of(createNamespace));
         }
 
+        /**
+         * @param dependencyUpdate Run helm dependency update before installing the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyUpdate(@Nullable Output<Boolean> dependencyUpdate) {
             $.dependencyUpdate = dependencyUpdate;
             return this;
         }
 
+        /**
+         * @param dependencyUpdate Run helm dependency update before installing the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder dependencyUpdate(Boolean dependencyUpdate) {
             return dependencyUpdate(Output.of(dependencyUpdate));
         }
 
+        /**
+         * @param description Add a custom description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(@Nullable Output<String> description) {
             $.description = description;
             return this;
         }
 
+        /**
+         * @param description Add a custom description
+         * 
+         * @return builder
+         * 
+         */
         public Builder description(String description) {
             return description(Output.of(description));
         }
 
+        /**
+         * @param devel Use chart development versions, too. Equivalent to version &#39;&gt;0.0.0-0&#39;. If `version` is set, this is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devel(@Nullable Output<Boolean> devel) {
             $.devel = devel;
             return this;
         }
 
+        /**
+         * @param devel Use chart development versions, too. Equivalent to version &#39;&gt;0.0.0-0&#39;. If `version` is set, this is ignored.
+         * 
+         * @return builder
+         * 
+         */
         public Builder devel(Boolean devel) {
             return devel(Output.of(devel));
         }
 
+        /**
+         * @param disableCRDHooks Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableCRDHooks(@Nullable Output<Boolean> disableCRDHooks) {
             $.disableCRDHooks = disableCRDHooks;
             return this;
         }
 
+        /**
+         * @param disableCRDHooks Prevent CRD hooks from, running, but run other hooks.  See helm install --no-crd-hook
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableCRDHooks(Boolean disableCRDHooks) {
             return disableCRDHooks(Output.of(disableCRDHooks));
         }
 
+        /**
+         * @param disableOpenapiValidation If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableOpenapiValidation(@Nullable Output<Boolean> disableOpenapiValidation) {
             $.disableOpenapiValidation = disableOpenapiValidation;
             return this;
         }
 
+        /**
+         * @param disableOpenapiValidation If set, the installation process will not validate rendered templates against the Kubernetes OpenAPI Schema
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableOpenapiValidation(Boolean disableOpenapiValidation) {
             return disableOpenapiValidation(Output.of(disableOpenapiValidation));
         }
 
+        /**
+         * @param disableWebhooks Prevent hooks from running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableWebhooks(@Nullable Output<Boolean> disableWebhooks) {
             $.disableWebhooks = disableWebhooks;
             return this;
         }
 
+        /**
+         * @param disableWebhooks Prevent hooks from running.
+         * 
+         * @return builder
+         * 
+         */
         public Builder disableWebhooks(Boolean disableWebhooks) {
             return disableWebhooks(Output.of(disableWebhooks));
         }
 
+        /**
+         * @param forceUpdate Force resource update through delete/recreate if needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdate(@Nullable Output<Boolean> forceUpdate) {
             $.forceUpdate = forceUpdate;
             return this;
         }
 
+        /**
+         * @param forceUpdate Force resource update through delete/recreate if needed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder forceUpdate(Boolean forceUpdate) {
             return forceUpdate(Output.of(forceUpdate));
         }
 
+        /**
+         * @param keyring Location of public keys used for verification. Used only if `verify` is true
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyring(@Nullable Output<String> keyring) {
             $.keyring = keyring;
             return this;
         }
 
+        /**
+         * @param keyring Location of public keys used for verification. Used only if `verify` is true
+         * 
+         * @return builder
+         * 
+         */
         public Builder keyring(String keyring) {
             return keyring(Output.of(keyring));
         }
 
+        /**
+         * @param lint Run helm lint when planning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lint(@Nullable Output<Boolean> lint) {
             $.lint = lint;
             return this;
         }
 
+        /**
+         * @param lint Run helm lint when planning.
+         * 
+         * @return builder
+         * 
+         */
         public Builder lint(Boolean lint) {
             return lint(Output.of(lint));
         }
 
+        /**
+         * @param manifest The rendered manifests as JSON. Not yet supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifest(@Nullable Output<Map<String,Object>> manifest) {
             $.manifest = manifest;
             return this;
         }
 
+        /**
+         * @param manifest The rendered manifests as JSON. Not yet supported.
+         * 
+         * @return builder
+         * 
+         */
         public Builder manifest(Map<String,Object> manifest) {
             return manifest(Output.of(manifest));
         }
 
+        /**
+         * @param maxHistory Limit the maximum number of revisions saved per release. Use 0 for no limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxHistory(@Nullable Output<Integer> maxHistory) {
             $.maxHistory = maxHistory;
             return this;
         }
 
+        /**
+         * @param maxHistory Limit the maximum number of revisions saved per release. Use 0 for no limit.
+         * 
+         * @return builder
+         * 
+         */
         public Builder maxHistory(Integer maxHistory) {
             return maxHistory(Output.of(maxHistory));
         }
 
+        /**
+         * @param name Release name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Release name.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace Namespace to install the release into.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace to install the release into.
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param postrender Postrender command to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postrender(@Nullable Output<String> postrender) {
             $.postrender = postrender;
             return this;
         }
 
+        /**
+         * @param postrender Postrender command to run.
+         * 
+         * @return builder
+         * 
+         */
         public Builder postrender(String postrender) {
             return postrender(Output.of(postrender));
         }
 
+        /**
+         * @param recreatePods Perform pods restart during upgrade/rollback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recreatePods(@Nullable Output<Boolean> recreatePods) {
             $.recreatePods = recreatePods;
             return this;
         }
 
+        /**
+         * @param recreatePods Perform pods restart during upgrade/rollback.
+         * 
+         * @return builder
+         * 
+         */
         public Builder recreatePods(Boolean recreatePods) {
             return recreatePods(Output.of(recreatePods));
         }
 
+        /**
+         * @param renderSubchartNotes If set, render subchart notes along with the parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renderSubchartNotes(@Nullable Output<Boolean> renderSubchartNotes) {
             $.renderSubchartNotes = renderSubchartNotes;
             return this;
         }
 
+        /**
+         * @param renderSubchartNotes If set, render subchart notes along with the parent.
+         * 
+         * @return builder
+         * 
+         */
         public Builder renderSubchartNotes(Boolean renderSubchartNotes) {
             return renderSubchartNotes(Output.of(renderSubchartNotes));
         }
 
+        /**
+         * @param replace Re-use the given name, even if that name is already used. This is unsafe in production
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(@Nullable Output<Boolean> replace) {
             $.replace = replace;
             return this;
         }
 
+        /**
+         * @param replace Re-use the given name, even if that name is already used. This is unsafe in production
+         * 
+         * @return builder
+         * 
+         */
         public Builder replace(Boolean replace) {
             return replace(Output.of(replace));
         }
 
+        /**
+         * @param repositoryOpts Specification defining the Helm chart repository to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryOpts(@Nullable Output<RepositoryOptsArgs> repositoryOpts) {
             $.repositoryOpts = repositoryOpts;
             return this;
         }
 
+        /**
+         * @param repositoryOpts Specification defining the Helm chart repository to use.
+         * 
+         * @return builder
+         * 
+         */
         public Builder repositoryOpts(RepositoryOptsArgs repositoryOpts) {
             return repositoryOpts(Output.of(repositoryOpts));
         }
 
+        /**
+         * @param resetValues When upgrading, reset the values to the ones built into the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resetValues(@Nullable Output<Boolean> resetValues) {
             $.resetValues = resetValues;
             return this;
         }
 
+        /**
+         * @param resetValues When upgrading, reset the values to the ones built into the chart.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resetValues(Boolean resetValues) {
             return resetValues(Output.of(resetValues));
         }
 
+        /**
+         * @param resourceNames Names of resources created by the release grouped by &#34;kind/version&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNames(@Nullable Output<Map<String,List<String>>> resourceNames) {
             $.resourceNames = resourceNames;
             return this;
         }
 
+        /**
+         * @param resourceNames Names of resources created by the release grouped by &#34;kind/version&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceNames(Map<String,List<String>> resourceNames) {
             return resourceNames(Output.of(resourceNames));
         }
 
+        /**
+         * @param reuseValues When upgrading, reuse the last release&#39;s values and merge in any overrides. If &#39;resetValues&#39; is specified, this is ignored
+         * 
+         * @return builder
+         * 
+         */
         public Builder reuseValues(@Nullable Output<Boolean> reuseValues) {
             $.reuseValues = reuseValues;
             return this;
         }
 
+        /**
+         * @param reuseValues When upgrading, reuse the last release&#39;s values and merge in any overrides. If &#39;resetValues&#39; is specified, this is ignored
+         * 
+         * @return builder
+         * 
+         */
         public Builder reuseValues(Boolean reuseValues) {
             return reuseValues(Output.of(reuseValues));
         }
 
+        /**
+         * @param skipAwait By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipAwait(@Nullable Output<Boolean> skipAwait) {
             $.skipAwait = skipAwait;
             return this;
         }
 
+        /**
+         * @param skipAwait By default, the provider waits until all resources are in a ready state before marking the release as successful. Setting this to true will skip such await logic.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipAwait(Boolean skipAwait) {
             return skipAwait(Output.of(skipAwait));
         }
 
+        /**
+         * @param skipCrds If set, no CRDs will be installed. By default, CRDs are installed if not already present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipCrds(@Nullable Output<Boolean> skipCrds) {
             $.skipCrds = skipCrds;
             return this;
         }
 
+        /**
+         * @param skipCrds If set, no CRDs will be installed. By default, CRDs are installed if not already present.
+         * 
+         * @return builder
+         * 
+         */
         public Builder skipCrds(Boolean skipCrds) {
             return skipCrds(Output.of(skipCrds));
         }
 
+        /**
+         * @param timeout Time in seconds to wait for any individual kubernetes operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(@Nullable Output<Integer> timeout) {
             $.timeout = timeout;
             return this;
         }
 
+        /**
+         * @param timeout Time in seconds to wait for any individual kubernetes operation.
+         * 
+         * @return builder
+         * 
+         */
         public Builder timeout(Integer timeout) {
             return timeout(Output.of(timeout));
         }
 
+        /**
+         * @param valueYamlFiles List of assets (raw yaml files). Content is read and merged with values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueYamlFiles(@Nullable Output<List<AssetOrArchive>> valueYamlFiles) {
             $.valueYamlFiles = valueYamlFiles;
             return this;
         }
 
+        /**
+         * @param valueYamlFiles List of assets (raw yaml files). Content is read and merged with values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueYamlFiles(List<AssetOrArchive> valueYamlFiles) {
             return valueYamlFiles(Output.of(valueYamlFiles));
         }
 
+        /**
+         * @param valueYamlFiles List of assets (raw yaml files). Content is read and merged with values.
+         * 
+         * @return builder
+         * 
+         */
         public Builder valueYamlFiles(AssetOrArchive... valueYamlFiles) {
             return valueYamlFiles(List.of(valueYamlFiles));
         }
 
+        /**
+         * @param values Custom values set for the release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(@Nullable Output<Map<String,Object>> values) {
             $.values = values;
             return this;
         }
 
+        /**
+         * @param values Custom values set for the release.
+         * 
+         * @return builder
+         * 
+         */
         public Builder values(Map<String,Object> values) {
             return values(Output.of(values));
         }
 
+        /**
+         * @param verify Verify the package before installing it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verify(@Nullable Output<Boolean> verify) {
             $.verify = verify;
             return this;
         }
 
+        /**
+         * @param verify Verify the package before installing it.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verify(Boolean verify) {
             return verify(Output.of(verify));
         }
 
+        /**
+         * @param version Specify the exact chart version to install. If this is not specified, the latest version is installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Specify the exact chart version to install. If this is not specified, the latest version is installed.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }
 
+        /**
+         * @param waitForJobs Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForJobs(@Nullable Output<Boolean> waitForJobs) {
             $.waitForJobs = waitForJobs;
             return this;
         }
 
+        /**
+         * @param waitForJobs Will wait until all Jobs have been completed before marking the release as successful. This is ignored if `skipAwait` is enabled.
+         * 
+         * @return builder
+         * 
+         */
         public Builder waitForJobs(Boolean waitForJobs) {
             return waitForJobs(Output.of(waitForJobs));
         }

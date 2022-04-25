@@ -28,6 +28,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="fsType")
     private @Nullable Output<String> fsType;
 
+    /**
+     * @return Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;.
+     * 
+     */
     public Optional<Output<String>> fsType() {
         return Optional.ofNullable(this.fsType);
     }
@@ -39,6 +43,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="gateway", required=true)
     private Output<String> gateway;
 
+    /**
+     * @return The host address of the ScaleIO API Gateway.
+     * 
+     */
     public Output<String> gateway() {
         return this.gateway;
     }
@@ -50,6 +58,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="protectionDomain")
     private @Nullable Output<String> protectionDomain;
 
+    /**
+     * @return The name of the ScaleIO Protection Domain for the configured storage.
+     * 
+     */
     public Optional<Output<String>> protectionDomain() {
         return Optional.ofNullable(this.protectionDomain);
     }
@@ -61,6 +73,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -72,6 +88,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="secretRef", required=true)
     private Output<LocalObjectReferenceArgs> secretRef;
 
+    /**
+     * @return SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+     * 
+     */
     public Output<LocalObjectReferenceArgs> secretRef() {
         return this.secretRef;
     }
@@ -83,6 +103,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="sslEnabled")
     private @Nullable Output<Boolean> sslEnabled;
 
+    /**
+     * @return Flag to enable/disable SSL communication with Gateway, default false
+     * 
+     */
     public Optional<Output<Boolean>> sslEnabled() {
         return Optional.ofNullable(this.sslEnabled);
     }
@@ -94,6 +118,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="storageMode")
     private @Nullable Output<String> storageMode;
 
+    /**
+     * @return Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+     * 
+     */
     public Optional<Output<String>> storageMode() {
         return Optional.ofNullable(this.storageMode);
     }
@@ -105,6 +133,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="storagePool")
     private @Nullable Output<String> storagePool;
 
+    /**
+     * @return The ScaleIO Storage Pool associated with the protection domain.
+     * 
+     */
     public Optional<Output<String>> storagePool() {
         return Optional.ofNullable(this.storagePool);
     }
@@ -116,6 +148,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="system", required=true)
     private Output<String> system;
 
+    /**
+     * @return The name of the storage system as configured in ScaleIO.
+     * 
+     */
     public Output<String> system() {
         return this.system;
     }
@@ -127,6 +163,10 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
     @Import(name="volumeName")
     private @Nullable Output<String> volumeName;
 
+    /**
+     * @return The name of a volume already created in the ScaleIO system that is associated with this volume source.
+     * 
+     */
     public Optional<Output<String>> volumeName() {
         return Optional.ofNullable(this.volumeName);
     }
@@ -164,92 +204,212 @@ public final class ScaleIOVolumeSourceArgs extends com.pulumi.resources.Resource
             $ = new ScaleIOVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(@Nullable Output<String> fsType) {
             $.fsType = fsType;
             return this;
         }
 
+        /**
+         * @param fsType Filesystem type to mount. Must be a filesystem type supported by the host operating system. Ex. &#34;ext4&#34;, &#34;xfs&#34;, &#34;ntfs&#34;. Default is &#34;xfs&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder fsType(String fsType) {
             return fsType(Output.of(fsType));
         }
 
+        /**
+         * @param gateway The host address of the ScaleIO API Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(Output<String> gateway) {
             $.gateway = gateway;
             return this;
         }
 
+        /**
+         * @param gateway The host address of the ScaleIO API Gateway.
+         * 
+         * @return builder
+         * 
+         */
         public Builder gateway(String gateway) {
             return gateway(Output.of(gateway));
         }
 
+        /**
+         * @param protectionDomain The name of the ScaleIO Protection Domain for the configured storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionDomain(@Nullable Output<String> protectionDomain) {
             $.protectionDomain = protectionDomain;
             return this;
         }
 
+        /**
+         * @param protectionDomain The name of the ScaleIO Protection Domain for the configured storage.
+         * 
+         * @return builder
+         * 
+         */
         public Builder protectionDomain(String protectionDomain) {
             return protectionDomain(Output.of(protectionDomain));
         }
 
+        /**
+         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param secretRef SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(Output<LocalObjectReferenceArgs> secretRef) {
             $.secretRef = secretRef;
             return this;
         }
 
+        /**
+         * @param secretRef SecretRef references to the secret for ScaleIO user and other sensitive information. If this is not provided, Login operation will fail.
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretRef(LocalObjectReferenceArgs secretRef) {
             return secretRef(Output.of(secretRef));
         }
 
+        /**
+         * @param sslEnabled Flag to enable/disable SSL communication with Gateway, default false
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslEnabled(@Nullable Output<Boolean> sslEnabled) {
             $.sslEnabled = sslEnabled;
             return this;
         }
 
+        /**
+         * @param sslEnabled Flag to enable/disable SSL communication with Gateway, default false
+         * 
+         * @return builder
+         * 
+         */
         public Builder sslEnabled(Boolean sslEnabled) {
             return sslEnabled(Output.of(sslEnabled));
         }
 
+        /**
+         * @param storageMode Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageMode(@Nullable Output<String> storageMode) {
             $.storageMode = storageMode;
             return this;
         }
 
+        /**
+         * @param storageMode Indicates whether the storage for a volume should be ThickProvisioned or ThinProvisioned. Default is ThinProvisioned.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storageMode(String storageMode) {
             return storageMode(Output.of(storageMode));
         }
 
+        /**
+         * @param storagePool The ScaleIO Storage Pool associated with the protection domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storagePool(@Nullable Output<String> storagePool) {
             $.storagePool = storagePool;
             return this;
         }
 
+        /**
+         * @param storagePool The ScaleIO Storage Pool associated with the protection domain.
+         * 
+         * @return builder
+         * 
+         */
         public Builder storagePool(String storagePool) {
             return storagePool(Output.of(storagePool));
         }
 
+        /**
+         * @param system The name of the storage system as configured in ScaleIO.
+         * 
+         * @return builder
+         * 
+         */
         public Builder system(Output<String> system) {
             $.system = system;
             return this;
         }
 
+        /**
+         * @param system The name of the storage system as configured in ScaleIO.
+         * 
+         * @return builder
+         * 
+         */
         public Builder system(String system) {
             return system(Output.of(system));
         }
 
+        /**
+         * @param volumeName The name of a volume already created in the ScaleIO system that is associated with this volume source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(@Nullable Output<String> volumeName) {
             $.volumeName = volumeName;
             return this;
         }
 
+        /**
+         * @param volumeName The name of a volume already created in the ScaleIO system that is associated with this volume source.
+         * 
+         * @return builder
+         * 
+         */
         public Builder volumeName(String volumeName) {
             return volumeName(Output.of(volumeName));
         }

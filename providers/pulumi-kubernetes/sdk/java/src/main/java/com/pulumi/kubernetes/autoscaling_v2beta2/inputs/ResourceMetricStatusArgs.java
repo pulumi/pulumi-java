@@ -25,6 +25,10 @@ public final class ResourceMetricStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="current", required=true)
     private Output<MetricValueStatusArgs> current;
 
+    /**
+     * @return current contains the current value for the given metric
+     * 
+     */
     public Output<MetricValueStatusArgs> current() {
         return this.current;
     }
@@ -36,6 +40,10 @@ public final class ResourceMetricStatusArgs extends com.pulumi.resources.Resourc
     @Import(name="name", required=true)
     private Output<String> name;
 
+    /**
+     * @return Name is the name of the resource in question.
+     * 
+     */
     public Output<String> name() {
         return this.name;
     }
@@ -65,20 +73,44 @@ public final class ResourceMetricStatusArgs extends com.pulumi.resources.Resourc
             $ = new ResourceMetricStatusArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param current current contains the current value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(Output<MetricValueStatusArgs> current) {
             $.current = current;
             return this;
         }
 
+        /**
+         * @param current current contains the current value for the given metric
+         * 
+         * @return builder
+         * 
+         */
         public Builder current(MetricValueStatusArgs current) {
             return current(Output.of(current));
         }
 
+        /**
+         * @param name Name is the name of the resource in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name is the name of the resource in question.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }

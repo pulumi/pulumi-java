@@ -28,6 +28,10 @@ public final class RunAsUserStrategyOptionsArgs extends com.pulumi.resources.Res
     @Import(name="ranges")
     private @Nullable Output<List<IDRangeArgs>> ranges;
 
+    /**
+     * @return ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
+     * 
+     */
     public Optional<Output<List<IDRangeArgs>>> ranges() {
         return Optional.ofNullable(this.ranges);
     }
@@ -39,6 +43,10 @@ public final class RunAsUserStrategyOptionsArgs extends com.pulumi.resources.Res
     @Import(name="rule", required=true)
     private Output<String> rule;
 
+    /**
+     * @return rule is the strategy that will dictate the allowable RunAsUser values that may be set.
+     * 
+     */
     public Output<String> rule() {
         return this.rule;
     }
@@ -68,24 +76,54 @@ public final class RunAsUserStrategyOptionsArgs extends com.pulumi.resources.Res
             $ = new RunAsUserStrategyOptionsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param ranges ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ranges(@Nullable Output<List<IDRangeArgs>> ranges) {
             $.ranges = ranges;
             return this;
         }
 
+        /**
+         * @param ranges ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ranges(List<IDRangeArgs> ranges) {
             return ranges(Output.of(ranges));
         }
 
+        /**
+         * @param ranges ranges are the allowed ranges of uids that may be used. If you would like to force a single uid then supply a single range with the same start and end. Required for MustRunAs.
+         * 
+         * @return builder
+         * 
+         */
         public Builder ranges(IDRangeArgs... ranges) {
             return ranges(List.of(ranges));
         }
 
+        /**
+         * @param rule rule is the strategy that will dictate the allowable RunAsUser values that may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(Output<String> rule) {
             $.rule = rule;
             return this;
         }
 
+        /**
+         * @param rule rule is the strategy that will dictate the allowable RunAsUser values that may be set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder rule(String rule) {
             return rule(Output.of(rule));
         }

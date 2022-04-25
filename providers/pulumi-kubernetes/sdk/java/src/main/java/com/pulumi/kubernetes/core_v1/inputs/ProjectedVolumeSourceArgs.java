@@ -28,6 +28,10 @@ public final class ProjectedVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="defaultMode")
     private @Nullable Output<Integer> defaultMode;
 
+    /**
+     * @return Mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+     * 
+     */
     public Optional<Output<Integer>> defaultMode() {
         return Optional.ofNullable(this.defaultMode);
     }
@@ -39,6 +43,10 @@ public final class ProjectedVolumeSourceArgs extends com.pulumi.resources.Resour
     @Import(name="sources", required=true)
     private Output<List<VolumeProjectionArgs>> sources;
 
+    /**
+     * @return list of volume projections
+     * 
+     */
     public Output<List<VolumeProjectionArgs>> sources() {
         return this.sources;
     }
@@ -68,24 +76,54 @@ public final class ProjectedVolumeSourceArgs extends com.pulumi.resources.Resour
             $ = new ProjectedVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param defaultMode Mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMode(@Nullable Output<Integer> defaultMode) {
             $.defaultMode = defaultMode;
             return this;
         }
 
+        /**
+         * @param defaultMode Mode bits used to set permissions on created files by default. Must be an octal value between 0000 and 0777 or a decimal value between 0 and 511. YAML accepts both octal and decimal values, JSON requires decimal values for mode bits. Directories within the path are not affected by this setting. This might be in conflict with other options that affect the file mode, like fsGroup, and the result can be other mode bits set.
+         * 
+         * @return builder
+         * 
+         */
         public Builder defaultMode(Integer defaultMode) {
             return defaultMode(Output.of(defaultMode));
         }
 
+        /**
+         * @param sources list of volume projections
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(Output<List<VolumeProjectionArgs>> sources) {
             $.sources = sources;
             return this;
         }
 
+        /**
+         * @param sources list of volume projections
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(List<VolumeProjectionArgs> sources) {
             return sources(Output.of(sources));
         }
 
+        /**
+         * @param sources list of volume projections
+         * 
+         * @return builder
+         * 
+         */
         public Builder sources(VolumeProjectionArgs... sources) {
             return sources(List.of(sources));
         }

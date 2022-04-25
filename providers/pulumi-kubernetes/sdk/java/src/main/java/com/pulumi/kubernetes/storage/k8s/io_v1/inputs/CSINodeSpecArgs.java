@@ -25,6 +25,10 @@ public final class CSINodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="drivers", required=true)
     private Output<List<CSINodeDriverArgs>> drivers;
 
+    /**
+     * @return drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
+     * 
+     */
     public Output<List<CSINodeDriverArgs>> drivers() {
         return this.drivers;
     }
@@ -53,15 +57,33 @@ public final class CSINodeSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new CSINodeSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param drivers drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drivers(Output<List<CSINodeDriverArgs>> drivers) {
             $.drivers = drivers;
             return this;
         }
 
+        /**
+         * @param drivers drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drivers(List<CSINodeDriverArgs> drivers) {
             return drivers(Output.of(drivers));
         }
 
+        /**
+         * @param drivers drivers is a list of information of all CSI Drivers existing on a node. If all drivers in the list are uninstalled, this can become empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder drivers(CSINodeDriverArgs... drivers) {
             return drivers(List.of(drivers));
         }

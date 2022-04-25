@@ -30,6 +30,10 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="configSource")
     private @Nullable Output<NodeConfigSourceArgs> configSource;
 
+    /**
+     * @return Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+     * 
+     */
     public Optional<Output<NodeConfigSourceArgs>> configSource() {
         return Optional.ofNullable(this.configSource);
     }
@@ -41,6 +45,10 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="externalID")
     private @Nullable Output<String> externalID;
 
+    /**
+     * @return Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.k8s.io/61966
+     * 
+     */
     public Optional<Output<String>> externalID() {
         return Optional.ofNullable(this.externalID);
     }
@@ -52,6 +60,10 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="podCIDR")
     private @Nullable Output<String> podCIDR;
 
+    /**
+     * @return PodCIDR represents the pod IP range assigned to the node.
+     * 
+     */
     public Optional<Output<String>> podCIDR() {
         return Optional.ofNullable(this.podCIDR);
     }
@@ -63,6 +75,10 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="podCIDRs")
     private @Nullable Output<List<String>> podCIDRs;
 
+    /**
+     * @return podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.
+     * 
+     */
     public Optional<Output<List<String>>> podCIDRs() {
         return Optional.ofNullable(this.podCIDRs);
     }
@@ -74,6 +90,10 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="providerID")
     private @Nullable Output<String> providerID;
 
+    /**
+     * @return ID of the node assigned by the cloud provider in the format: &lt;ProviderName&gt;://&lt;ProviderSpecificNodeID&gt;
+     * 
+     */
     public Optional<Output<String>> providerID() {
         return Optional.ofNullable(this.providerID);
     }
@@ -85,6 +105,10 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="taints")
     private @Nullable Output<List<TaintArgs>> taints;
 
+    /**
+     * @return If specified, the node&#39;s taints.
+     * 
+     */
     public Optional<Output<List<TaintArgs>>> taints() {
         return Optional.ofNullable(this.taints);
     }
@@ -96,6 +120,10 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="unschedulable")
     private @Nullable Output<Boolean> unschedulable;
 
+    /**
+     * @return Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration
+     * 
+     */
     public Optional<Output<Boolean>> unschedulable() {
         return Optional.ofNullable(this.unschedulable);
     }
@@ -130,73 +158,169 @@ public final class NodeSpecArgs extends com.pulumi.resources.ResourceArgs {
             $ = new NodeSpecArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param configSource Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder configSource(@Nullable Output<NodeConfigSourceArgs> configSource) {
             $.configSource = configSource;
             return this;
         }
 
+        /**
+         * @param configSource Deprecated. If specified, the source of the node&#39;s configuration. The DynamicKubeletConfig feature gate must be enabled for the Kubelet to use this field. This field is deprecated as of 1.22: https://git.k8s.io/enhancements/keps/sig-node/281-dynamic-kubelet-configuration
+         * 
+         * @return builder
+         * 
+         */
         public Builder configSource(NodeConfigSourceArgs configSource) {
             return configSource(Output.of(configSource));
         }
 
+        /**
+         * @param externalID Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.k8s.io/61966
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalID(@Nullable Output<String> externalID) {
             $.externalID = externalID;
             return this;
         }
 
+        /**
+         * @param externalID Deprecated. Not all kubelets will set this field. Remove field after 1.13. see: https://issues.k8s.io/61966
+         * 
+         * @return builder
+         * 
+         */
         public Builder externalID(String externalID) {
             return externalID(Output.of(externalID));
         }
 
+        /**
+         * @param podCIDR PodCIDR represents the pod IP range assigned to the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCIDR(@Nullable Output<String> podCIDR) {
             $.podCIDR = podCIDR;
             return this;
         }
 
+        /**
+         * @param podCIDR PodCIDR represents the pod IP range assigned to the node.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCIDR(String podCIDR) {
             return podCIDR(Output.of(podCIDR));
         }
 
+        /**
+         * @param podCIDRs podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCIDRs(@Nullable Output<List<String>> podCIDRs) {
             $.podCIDRs = podCIDRs;
             return this;
         }
 
+        /**
+         * @param podCIDRs podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCIDRs(List<String> podCIDRs) {
             return podCIDRs(Output.of(podCIDRs));
         }
 
+        /**
+         * @param podCIDRs podCIDRs represents the IP ranges assigned to the node for usage by Pods on that node. If this field is specified, the 0th entry must match the podCIDR field. It may contain at most 1 value for each of IPv4 and IPv6.
+         * 
+         * @return builder
+         * 
+         */
         public Builder podCIDRs(String... podCIDRs) {
             return podCIDRs(List.of(podCIDRs));
         }
 
+        /**
+         * @param providerID ID of the node assigned by the cloud provider in the format: &lt;ProviderName&gt;://&lt;ProviderSpecificNodeID&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerID(@Nullable Output<String> providerID) {
             $.providerID = providerID;
             return this;
         }
 
+        /**
+         * @param providerID ID of the node assigned by the cloud provider in the format: &lt;ProviderName&gt;://&lt;ProviderSpecificNodeID&gt;
+         * 
+         * @return builder
+         * 
+         */
         public Builder providerID(String providerID) {
             return providerID(Output.of(providerID));
         }
 
+        /**
+         * @param taints If specified, the node&#39;s taints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taints(@Nullable Output<List<TaintArgs>> taints) {
             $.taints = taints;
             return this;
         }
 
+        /**
+         * @param taints If specified, the node&#39;s taints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taints(List<TaintArgs> taints) {
             return taints(Output.of(taints));
         }
 
+        /**
+         * @param taints If specified, the node&#39;s taints.
+         * 
+         * @return builder
+         * 
+         */
         public Builder taints(TaintArgs... taints) {
             return taints(List.of(taints));
         }
 
+        /**
+         * @param unschedulable Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration
+         * 
+         * @return builder
+         * 
+         */
         public Builder unschedulable(@Nullable Output<Boolean> unschedulable) {
             $.unschedulable = unschedulable;
             return this;
         }
 
+        /**
+         * @param unschedulable Unschedulable controls node schedulability of new pods. By default, node is schedulable. More info: https://kubernetes.io/docs/concepts/nodes/node/#manual-node-administration
+         * 
+         * @return builder
+         * 
+         */
         public Builder unschedulable(Boolean unschedulable) {
             return unschedulable(Output.of(unschedulable));
         }

@@ -26,6 +26,10 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     @Import(name="group")
     private @Nullable Output<String> group;
 
+    /**
+     * @return Group is the API Group of the Resource.  &#34;*&#34; means all.
+     * 
+     */
     public Optional<Output<String>> group() {
         return Optional.ofNullable(this.group);
     }
@@ -37,6 +41,10 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     @Import(name="name")
     private @Nullable Output<String> name;
 
+    /**
+     * @return Name is the name of the resource being requested for a &#34;get&#34; or deleted for a &#34;delete&#34;. &#34;&#34; (empty) means all.
+     * 
+     */
     public Optional<Output<String>> name() {
         return Optional.ofNullable(this.name);
     }
@@ -48,6 +56,10 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     @Import(name="namespace")
     private @Nullable Output<String> namespace;
 
+    /**
+     * @return Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces &#34;&#34; (empty) is defaulted for LocalSubjectAccessReviews &#34;&#34; (empty) is empty for cluster-scoped resources &#34;&#34; (empty) means &#34;all&#34; for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
+     * 
+     */
     public Optional<Output<String>> namespace() {
         return Optional.ofNullable(this.namespace);
     }
@@ -59,6 +71,10 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     @Import(name="resource")
     private @Nullable Output<String> resource;
 
+    /**
+     * @return Resource is one of the existing resource types.  &#34;*&#34; means all.
+     * 
+     */
     public Optional<Output<String>> resource() {
         return Optional.ofNullable(this.resource);
     }
@@ -70,6 +86,10 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     @Import(name="subresource")
     private @Nullable Output<String> subresource;
 
+    /**
+     * @return Subresource is one of the existing resource types.  &#34;&#34; means none.
+     * 
+     */
     public Optional<Output<String>> subresource() {
         return Optional.ofNullable(this.subresource);
     }
@@ -81,6 +101,10 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     @Import(name="verb")
     private @Nullable Output<String> verb;
 
+    /**
+     * @return Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  &#34;*&#34; means all.
+     * 
+     */
     public Optional<Output<String>> verb() {
         return Optional.ofNullable(this.verb);
     }
@@ -92,6 +116,10 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
     @Import(name="version")
     private @Nullable Output<String> version;
 
+    /**
+     * @return Version is the API Version of the Resource.  &#34;*&#34; means all.
+     * 
+     */
     public Optional<Output<String>> version() {
         return Optional.ofNullable(this.version);
     }
@@ -126,65 +154,149 @@ public final class ResourceAttributesArgs extends com.pulumi.resources.ResourceA
             $ = new ResourceAttributesArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param group Group is the API Group of the Resource.  &#34;*&#34; means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(@Nullable Output<String> group) {
             $.group = group;
             return this;
         }
 
+        /**
+         * @param group Group is the API Group of the Resource.  &#34;*&#34; means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder group(String group) {
             return group(Output.of(group));
         }
 
+        /**
+         * @param name Name is the name of the resource being requested for a &#34;get&#34; or deleted for a &#34;delete&#34;. &#34;&#34; (empty) means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(@Nullable Output<String> name) {
             $.name = name;
             return this;
         }
 
+        /**
+         * @param name Name is the name of the resource being requested for a &#34;get&#34; or deleted for a &#34;delete&#34;. &#34;&#34; (empty) means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder name(String name) {
             return name(Output.of(name));
         }
 
+        /**
+         * @param namespace Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces &#34;&#34; (empty) is defaulted for LocalSubjectAccessReviews &#34;&#34; (empty) is empty for cluster-scoped resources &#34;&#34; (empty) means &#34;all&#34; for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(@Nullable Output<String> namespace) {
             $.namespace = namespace;
             return this;
         }
 
+        /**
+         * @param namespace Namespace is the namespace of the action being requested.  Currently, there is no distinction between no namespace and all namespaces &#34;&#34; (empty) is defaulted for LocalSubjectAccessReviews &#34;&#34; (empty) is empty for cluster-scoped resources &#34;&#34; (empty) means &#34;all&#34; for namespace scoped resources from a SubjectAccessReview or SelfSubjectAccessReview
+         * 
+         * @return builder
+         * 
+         */
         public Builder namespace(String namespace) {
             return namespace(Output.of(namespace));
         }
 
+        /**
+         * @param resource Resource is one of the existing resource types.  &#34;*&#34; means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(@Nullable Output<String> resource) {
             $.resource = resource;
             return this;
         }
 
+        /**
+         * @param resource Resource is one of the existing resource types.  &#34;*&#34; means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resource(String resource) {
             return resource(Output.of(resource));
         }
 
+        /**
+         * @param subresource Subresource is one of the existing resource types.  &#34;&#34; means none.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subresource(@Nullable Output<String> subresource) {
             $.subresource = subresource;
             return this;
         }
 
+        /**
+         * @param subresource Subresource is one of the existing resource types.  &#34;&#34; means none.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subresource(String subresource) {
             return subresource(Output.of(subresource));
         }
 
+        /**
+         * @param verb Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  &#34;*&#34; means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verb(@Nullable Output<String> verb) {
             $.verb = verb;
             return this;
         }
 
+        /**
+         * @param verb Verb is a kubernetes resource API verb, like: get, list, watch, create, update, delete, proxy.  &#34;*&#34; means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder verb(String verb) {
             return verb(Output.of(verb));
         }
 
+        /**
+         * @param version Version is the API Version of the Resource.  &#34;*&#34; means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(@Nullable Output<String> version) {
             $.version = version;
             return this;
         }
 
+        /**
+         * @param version Version is the API Version of the Resource.  &#34;*&#34; means all.
+         * 
+         * @return builder
+         * 
+         */
         public Builder version(String version) {
             return version(Output.of(version));
         }

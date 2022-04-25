@@ -10,7 +10,7 @@ import java.util.Objects;
 @CustomType
 public final class ForZone {
     /**
-     * name represents the name of the zone.
+     * @return name represents the name of the zone.
      * 
      */
     private final String name;
@@ -21,9 +21,9 @@ public final class ForZone {
     }
 
     /**
-     * name represents the name of the zone.
+     * @return name represents the name of the zone.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }

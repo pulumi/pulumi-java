@@ -12,32 +12,32 @@ import javax.annotation.Nullable;
 @CustomType
 public final class RepositoryOpts {
     /**
-     * The Repository&#39;s CA File
+     * @return The Repository&#39;s CA File
      * 
      */
     private final @Nullable String caFile;
     /**
-     * The repository&#39;s cert file
+     * @return The repository&#39;s cert file
      * 
      */
     private final @Nullable String certFile;
     /**
-     * The repository&#39;s cert key file
+     * @return The repository&#39;s cert key file
      * 
      */
     private final @Nullable String keyFile;
     /**
-     * Password for HTTP basic authentication
+     * @return Password for HTTP basic authentication
      * 
      */
     private final @Nullable String password;
     /**
-     * Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
+     * @return Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
      * 
      */
     private final @Nullable String repo;
     /**
-     * Username for HTTP basic authentication
+     * @return Username for HTTP basic authentication
      * 
      */
     private final @Nullable String username;
@@ -59,44 +59,44 @@ public final class RepositoryOpts {
     }
 
     /**
-     * The Repository&#39;s CA File
+     * @return The Repository&#39;s CA File
      * 
-    */
+     */
     public Optional<String> caFile() {
         return Optional.ofNullable(this.caFile);
     }
     /**
-     * The repository&#39;s cert file
+     * @return The repository&#39;s cert file
      * 
-    */
+     */
     public Optional<String> certFile() {
         return Optional.ofNullable(this.certFile);
     }
     /**
-     * The repository&#39;s cert key file
+     * @return The repository&#39;s cert key file
      * 
-    */
+     */
     public Optional<String> keyFile() {
         return Optional.ofNullable(this.keyFile);
     }
     /**
-     * Password for HTTP basic authentication
+     * @return Password for HTTP basic authentication
      * 
-    */
+     */
     public Optional<String> password() {
         return Optional.ofNullable(this.password);
     }
     /**
-     * Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
+     * @return Repository where to locate the requested chart. If is a URL the chart is installed without installing the repository.
      * 
-    */
+     */
     public Optional<String> repo() {
         return Optional.ofNullable(this.repo);
     }
     /**
-     * Username for HTTP basic authentication
+     * @return Username for HTTP basic authentication
      * 
-    */
+     */
     public Optional<String> username() {
         return Optional.ofNullable(this.username);
     }

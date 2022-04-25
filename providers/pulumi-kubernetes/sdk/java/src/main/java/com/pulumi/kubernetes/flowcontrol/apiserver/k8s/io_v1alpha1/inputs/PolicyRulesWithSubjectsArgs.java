@@ -29,6 +29,10 @@ public final class PolicyRulesWithSubjectsArgs extends com.pulumi.resources.Reso
     @Import(name="nonResourceRules")
     private @Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules;
 
+    /**
+     * @return `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.
+     * 
+     */
     public Optional<Output<List<NonResourcePolicyRuleArgs>>> nonResourceRules() {
         return Optional.ofNullable(this.nonResourceRules);
     }
@@ -40,6 +44,10 @@ public final class PolicyRulesWithSubjectsArgs extends com.pulumi.resources.Reso
     @Import(name="resourceRules")
     private @Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules;
 
+    /**
+     * @return `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty.
+     * 
+     */
     public Optional<Output<List<ResourcePolicyRuleArgs>>> resourceRules() {
         return Optional.ofNullable(this.resourceRules);
     }
@@ -51,6 +59,10 @@ public final class PolicyRulesWithSubjectsArgs extends com.pulumi.resources.Reso
     @Import(name="subjects", required=true)
     private Output<List<SubjectArgs>> subjects;
 
+    /**
+     * @return subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.
+     * 
+     */
     public Output<List<SubjectArgs>> subjects() {
         return this.subjects;
     }
@@ -81,41 +93,95 @@ public final class PolicyRulesWithSubjectsArgs extends com.pulumi.resources.Reso
             $ = new PolicyRulesWithSubjectsArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param nonResourceRules `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceRules(@Nullable Output<List<NonResourcePolicyRuleArgs>> nonResourceRules) {
             $.nonResourceRules = nonResourceRules;
             return this;
         }
 
+        /**
+         * @param nonResourceRules `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceRules(List<NonResourcePolicyRuleArgs> nonResourceRules) {
             return nonResourceRules(Output.of(nonResourceRules));
         }
 
+        /**
+         * @param nonResourceRules `nonResourceRules` is a list of NonResourcePolicyRules that identify matching requests according to their verb and the target non-resource URL.
+         * 
+         * @return builder
+         * 
+         */
         public Builder nonResourceRules(NonResourcePolicyRuleArgs... nonResourceRules) {
             return nonResourceRules(List.of(nonResourceRules));
         }
 
+        /**
+         * @param resourceRules `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRules(@Nullable Output<List<ResourcePolicyRuleArgs>> resourceRules) {
             $.resourceRules = resourceRules;
             return this;
         }
 
+        /**
+         * @param resourceRules `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRules(List<ResourcePolicyRuleArgs> resourceRules) {
             return resourceRules(Output.of(resourceRules));
         }
 
+        /**
+         * @param resourceRules `resourceRules` is a slice of ResourcePolicyRules that identify matching requests according to their verb and the target resource. At least one of `resourceRules` and `nonResourceRules` has to be non-empty.
+         * 
+         * @return builder
+         * 
+         */
         public Builder resourceRules(ResourcePolicyRuleArgs... resourceRules) {
             return resourceRules(List.of(resourceRules));
         }
 
+        /**
+         * @param subjects subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjects(Output<List<SubjectArgs>> subjects) {
             $.subjects = subjects;
             return this;
         }
 
+        /**
+         * @param subjects subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjects(List<SubjectArgs> subjects) {
             return subjects(Output.of(subjects));
         }
 
+        /**
+         * @param subjects subjects is the list of normal user, serviceaccount, or group that this rule cares about. There must be at least one member in this slice. A slice that includes both the system:authenticated and system:unauthenticated user groups matches every request. Required.
+         * 
+         * @return builder
+         * 
+         */
         public Builder subjects(SubjectArgs... subjects) {
             return subjects(List.of(subjects));
         }

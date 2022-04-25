@@ -28,6 +28,10 @@ public final class LoadBalancerIngressArgs extends com.pulumi.resources.Resource
     @Import(name="hostname")
     private @Nullable Output<String> hostname;
 
+    /**
+     * @return Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
+     * 
+     */
     public Optional<Output<String>> hostname() {
         return Optional.ofNullable(this.hostname);
     }
@@ -39,6 +43,10 @@ public final class LoadBalancerIngressArgs extends com.pulumi.resources.Resource
     @Import(name="ip")
     private @Nullable Output<String> ip;
 
+    /**
+     * @return IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
+     * 
+     */
     public Optional<Output<String>> ip() {
         return Optional.ofNullable(this.ip);
     }
@@ -50,6 +58,10 @@ public final class LoadBalancerIngressArgs extends com.pulumi.resources.Resource
     @Import(name="ports")
     private @Nullable Output<List<PortStatusArgs>> ports;
 
+    /**
+     * @return Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
+     * 
+     */
     public Optional<Output<List<PortStatusArgs>>> ports() {
         return Optional.ofNullable(this.ports);
     }
@@ -80,33 +92,75 @@ public final class LoadBalancerIngressArgs extends com.pulumi.resources.Resource
             $ = new LoadBalancerIngressArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param hostname Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(@Nullable Output<String> hostname) {
             $.hostname = hostname;
             return this;
         }
 
+        /**
+         * @param hostname Hostname is set for load-balancer ingress points that are DNS based (typically AWS load-balancers)
+         * 
+         * @return builder
+         * 
+         */
         public Builder hostname(String hostname) {
             return hostname(Output.of(hostname));
         }
 
+        /**
+         * @param ip IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(@Nullable Output<String> ip) {
             $.ip = ip;
             return this;
         }
 
+        /**
+         * @param ip IP is set for load-balancer ingress points that are IP based (typically GCE or OpenStack load-balancers)
+         * 
+         * @return builder
+         * 
+         */
         public Builder ip(String ip) {
             return ip(Output.of(ip));
         }
 
+        /**
+         * @param ports Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(@Nullable Output<List<PortStatusArgs>> ports) {
             $.ports = ports;
             return this;
         }
 
+        /**
+         * @param ports Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(List<PortStatusArgs> ports) {
             return ports(Output.of(ports));
         }
 
+        /**
+         * @param ports Ports is a list of records of service ports If used, every port defined in the service should have an entry in it
+         * 
+         * @return builder
+         * 
+         */
         public Builder ports(PortStatusArgs... ports) {
             return ports(List.of(ports));
         }

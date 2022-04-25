@@ -24,6 +24,10 @@ public final class IDRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="max", required=true)
     private Output<Integer> max;
 
+    /**
+     * @return max is the end of the range, inclusive.
+     * 
+     */
     public Output<Integer> max() {
         return this.max;
     }
@@ -35,6 +39,10 @@ public final class IDRangeArgs extends com.pulumi.resources.ResourceArgs {
     @Import(name="min", required=true)
     private Output<Integer> min;
 
+    /**
+     * @return min is the start of the range, inclusive.
+     * 
+     */
     public Output<Integer> min() {
         return this.min;
     }
@@ -64,20 +72,44 @@ public final class IDRangeArgs extends com.pulumi.resources.ResourceArgs {
             $ = new IDRangeArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param max max is the end of the range, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Output<Integer> max) {
             $.max = max;
             return this;
         }
 
+        /**
+         * @param max max is the end of the range, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder max(Integer max) {
             return max(Output.of(max));
         }
 
+        /**
+         * @param min min is the start of the range, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Output<Integer> min) {
             $.min = min;
             return this;
         }
 
+        /**
+         * @param min min is the start of the range, inclusive.
+         * 
+         * @return builder
+         * 
+         */
         public Builder min(Integer min) {
             return min(Output.of(min));
         }

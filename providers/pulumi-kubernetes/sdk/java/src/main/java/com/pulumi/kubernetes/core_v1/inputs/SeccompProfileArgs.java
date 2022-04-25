@@ -26,6 +26,10 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="localhostProfile")
     private @Nullable Output<String> localhostProfile;
 
+    /**
+     * @return localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet&#39;s configured seccomp profile location. Must only be set if type is &#34;Localhost&#34;.
+     * 
+     */
     public Optional<Output<String>> localhostProfile() {
         return Optional.ofNullable(this.localhostProfile);
     }
@@ -44,6 +48,17 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
     @Import(name="type", required=true)
     private Output<String> type;
 
+    /**
+     * @return type indicates which kind of seccomp profile will be applied. Valid options are:
+     * 
+     * Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
+     * 
+     * Possible enum values:
+     *  - `&#34;Localhost&#34;` indicates a profile defined in a file on the node should be used. The file&#39;s location relative to &lt;kubelet-root-dir&gt;/seccomp.
+     *  - `&#34;RuntimeDefault&#34;` represents the default container runtime seccomp profile.
+     *  - `&#34;Unconfined&#34;` indicates no seccomp profile is applied (A.K.A. unconfined).
+     * 
+     */
     public Output<String> type() {
         return this.type;
     }
@@ -73,20 +88,58 @@ public final class SeccompProfileArgs extends com.pulumi.resources.ResourceArgs 
             $ = new SeccompProfileArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param localhostProfile localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet&#39;s configured seccomp profile location. Must only be set if type is &#34;Localhost&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localhostProfile(@Nullable Output<String> localhostProfile) {
             $.localhostProfile = localhostProfile;
             return this;
         }
 
+        /**
+         * @param localhostProfile localhostProfile indicates a profile defined in a file on the node should be used. The profile must be preconfigured on the node to work. Must be a descending path, relative to the kubelet&#39;s configured seccomp profile location. Must only be set if type is &#34;Localhost&#34;.
+         * 
+         * @return builder
+         * 
+         */
         public Builder localhostProfile(String localhostProfile) {
             return localhostProfile(Output.of(localhostProfile));
         }
 
+        /**
+         * @param type type indicates which kind of seccomp profile will be applied. Valid options are:
+         * 
+         * Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
+         * 
+         * Possible enum values:
+         *  - `&#34;Localhost&#34;` indicates a profile defined in a file on the node should be used. The file&#39;s location relative to &lt;kubelet-root-dir&gt;/seccomp.
+         *  - `&#34;RuntimeDefault&#34;` represents the default container runtime seccomp profile.
+         *  - `&#34;Unconfined&#34;` indicates no seccomp profile is applied (A.K.A. unconfined).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(Output<String> type) {
             $.type = type;
             return this;
         }
 
+        /**
+         * @param type type indicates which kind of seccomp profile will be applied. Valid options are:
+         * 
+         * Localhost - a profile defined in a file on the node should be used. RuntimeDefault - the container runtime default profile should be used. Unconfined - no profile should be applied.
+         * 
+         * Possible enum values:
+         *  - `&#34;Localhost&#34;` indicates a profile defined in a file on the node should be used. The file&#39;s location relative to &lt;kubelet-root-dir&gt;/seccomp.
+         *  - `&#34;RuntimeDefault&#34;` represents the default container runtime seccomp profile.
+         *  - `&#34;Unconfined&#34;` indicates no seccomp profile is applied (A.K.A. unconfined).
+         * 
+         * @return builder
+         * 
+         */
         public Builder type(String type) {
             return type(Output.of(type));
         }

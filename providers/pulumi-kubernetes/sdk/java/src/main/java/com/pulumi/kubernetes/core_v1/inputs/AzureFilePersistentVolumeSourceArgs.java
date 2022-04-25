@@ -27,6 +27,10 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
     @Import(name="readOnly")
     private @Nullable Output<Boolean> readOnly;
 
+    /**
+     * @return Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+     * 
+     */
     public Optional<Output<Boolean>> readOnly() {
         return Optional.ofNullable(this.readOnly);
     }
@@ -38,6 +42,10 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
     @Import(name="secretName", required=true)
     private Output<String> secretName;
 
+    /**
+     * @return the name of secret that contains Azure Storage Account Name and Key
+     * 
+     */
     public Output<String> secretName() {
         return this.secretName;
     }
@@ -49,6 +57,10 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
     @Import(name="secretNamespace")
     private @Nullable Output<String> secretNamespace;
 
+    /**
+     * @return the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+     * 
+     */
     public Optional<Output<String>> secretNamespace() {
         return Optional.ofNullable(this.secretNamespace);
     }
@@ -60,6 +72,10 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
     @Import(name="shareName", required=true)
     private Output<String> shareName;
 
+    /**
+     * @return Share Name
+     * 
+     */
     public Output<String> shareName() {
         return this.shareName;
     }
@@ -91,38 +107,86 @@ public final class AzureFilePersistentVolumeSourceArgs extends com.pulumi.resour
             $ = new AzureFilePersistentVolumeSourceArgs(Objects.requireNonNull(defaults));
         }
 
+        /**
+         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(@Nullable Output<Boolean> readOnly) {
             $.readOnly = readOnly;
             return this;
         }
 
+        /**
+         * @param readOnly Defaults to false (read/write). ReadOnly here will force the ReadOnly setting in VolumeMounts.
+         * 
+         * @return builder
+         * 
+         */
         public Builder readOnly(Boolean readOnly) {
             return readOnly(Output.of(readOnly));
         }
 
+        /**
+         * @param secretName the name of secret that contains Azure Storage Account Name and Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(Output<String> secretName) {
             $.secretName = secretName;
             return this;
         }
 
+        /**
+         * @param secretName the name of secret that contains Azure Storage Account Name and Key
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretName(String secretName) {
             return secretName(Output.of(secretName));
         }
 
+        /**
+         * @param secretNamespace the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretNamespace(@Nullable Output<String> secretNamespace) {
             $.secretNamespace = secretNamespace;
             return this;
         }
 
+        /**
+         * @param secretNamespace the namespace of the secret that contains Azure Storage Account Name and Key default is the same as the Pod
+         * 
+         * @return builder
+         * 
+         */
         public Builder secretNamespace(String secretNamespace) {
             return secretNamespace(Output.of(secretNamespace));
         }
 
+        /**
+         * @param shareName Share Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(Output<String> shareName) {
             $.shareName = shareName;
             return this;
         }
 
+        /**
+         * @param shareName Share Name
+         * 
+         * @return builder
+         * 
+         */
         public Builder shareName(String shareName) {
             return shareName(Output.of(shareName));
         }

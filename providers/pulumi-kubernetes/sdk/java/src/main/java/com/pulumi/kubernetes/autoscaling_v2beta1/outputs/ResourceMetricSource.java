@@ -13,17 +13,17 @@ import javax.annotation.Nullable;
 @CustomType
 public final class ResourceMetricSource {
     /**
-     * name is the name of the resource in question.
+     * @return name is the name of the resource in question.
      * 
      */
     private final String name;
     /**
-     * targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+     * @return targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
      */
     private final @Nullable Integer targetAverageUtilization;
     /**
-     * targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type.
+     * @return targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type.
      * 
      */
     private final @Nullable String targetAverageValue;
@@ -39,23 +39,23 @@ public final class ResourceMetricSource {
     }
 
     /**
-     * name is the name of the resource in question.
+     * @return name is the name of the resource in question.
      * 
-    */
+     */
     public String name() {
         return this.name;
     }
     /**
-     * targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
+     * @return targetAverageUtilization is the target value of the average of the resource metric across all relevant pods, represented as a percentage of the requested value of the resource for the pods.
      * 
-    */
+     */
     public Optional<Integer> targetAverageUtilization() {
         return Optional.ofNullable(this.targetAverageUtilization);
     }
     /**
-     * targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type.
+     * @return targetAverageValue is the target value of the average of the resource metric across all relevant pods, as a raw value (instead of as a percentage of the request), similar to the &#34;pods&#34; metric source type.
      * 
-    */
+     */
     public Optional<String> targetAverageValue() {
         return Optional.ofNullable(this.targetAverageValue);
     }
