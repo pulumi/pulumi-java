@@ -909,7 +909,7 @@ func (pt *plainType) genNormalOutputType(ctx *classFileContext) error {
 			false, // inputless overload
 		)
 		genPropJavadoc(ctx, prop, propJavadocOptions{
-			indent:   indent + "    ",
+			indent:   indent,
 			isGetter: true,
 		})
 		fprintf(w, "    private final %s %s;\n", fieldType.ToCode(ctx.imports), fieldName)
